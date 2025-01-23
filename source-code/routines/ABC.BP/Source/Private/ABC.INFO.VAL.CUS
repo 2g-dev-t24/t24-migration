@@ -1,0 +1,39 @@
+*-----------------------------------------------------------------------------
+* <Rating>-13</Rating>
+*-----------------------------------------------------------------------------
+$PACKAGE ABC.BP
+    SUBROUTINE ABC.INFO.VAL.CUS
+*===============================================
+* Nombre de Programa:   ABC.INFO.VAL.CUS
+* Objetivo:             Tabla concat que almacenar información para la validación
+*                       de duplicidad de clientes.
+* Desarrollador:        CESAR MIRANDA - FYG Solutions
+* Compania:             ABC CAPITAL
+* Fecha Creacion:       2022/05/20
+* Modificaciones:
+*===============================================
+
+    $USING EB.SystemTables
+    $USING EB.Template
+    $USING AA.Framework
+    $USING EB.Interface
+    $USING ABC.BP
+*-----------------------------------------------------------------------------
+    EB.Template.setTableName('ABC.INFO.VAL.CUS')  ;* Full application name including product prefix
+    EB.Template.setTableTitle('Tabla concat info cliente')         ;* Screen title
+    EB.Template.setTableStereotype('L')       ;* H, U, L, W or T
+    EB.Template.setTableProduct('EB')      ;* Must be on EB.PRODUCT
+    EB.Template.setTableSubProduct('')        ;* Must be on EB.SUB.PRODUCT
+    EB.Template.setTableClassification('INT')     ;* As per FILE.CONTROL
+    EB.Template.setTableSystemClearFile('N')       ;* As per FILE.CONTROL
+    EB.Template.setTableRelatedFiles('')        ;* As per FILE.CONTROL
+    EB.Template.setTableIsPostClosingFile('')        ;* As per FILE.CONTROL
+    EB.Template.setTableEquatePrefix('VAL.CUS') ;* Use to create I_F.EB.LOG.PARAMETER
+*-----------------------------------------------------------------------------
+    EB.Template.setTableIdPrefix('')         ;* Used by EB.FORMAT.ID if set
+    EB.Template.setTableBlockedFunctions('')         ;* Space delimeted list of blocked functions
+    EB.Template.setTableTrigger('')         ;* Trigger field used for OPERATION style fields
+*-----------------------------------------------------------------------------
+
+    RETURN
+END
