@@ -5,13 +5,7 @@
     SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
 *-----------------------------------------------------------------------------
 *
-* MODIFICADO POR: CESAR MIRANDA FYG
-*
 * DETALLE: Valida que el cliente no se encuentre duplicado en base al RFC
-*-----------------------------------------------------------------------------
-* Modificado    : Jesus Hernandez JHF   - FyG
-* Fecha         : 12/01/2017
-* Descripcion   : Se corrige error de cte existente.
 *-----------------------------------------------------------------------------
 
     $USING EB.SystemTables
@@ -20,6 +14,7 @@
     $USING EB.DataAccess
     $USING EB.ErrorProcessing
     $USING ABC.BP
+    $USING EB.Display
 
     IF EB.SystemTables.getMessage() EQ 'VAL' THEN RETURN
 
@@ -53,7 +48,7 @@ GENERA.RFC.CURP:
         IF (RES = 0) AND (MENSAJE = "") THEN
         END ELSE
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusGender, "")
-            CALL REBUILD.SCREEN
+            EB.Display.RebuildScreen()
             EB.SystemTables.setE(MENSAJE)
             EB.ErrorProcessing.Err()
             RETURN

@@ -12,6 +12,7 @@ $PACKAGE ABC.BP
     $USING EB.ErrorProcessing
     $USING EB.SystemTables
     $USING ST.Customer
+    $USING EB.Display
 
     GOSUB INITIALIZE
     GOSUB PROCESS
@@ -37,7 +38,7 @@ PROCESS:
         EB.SystemTables.setEtext(Y.ERROR)
         EB.ErrorProcessing.StoreEndError()
 	END
-    CALL REBUILD.SCREEN
+    EB.Display.RebuildScreen()
     CALL REFRESH.GUI.OBJECTS
 RETURN
 END

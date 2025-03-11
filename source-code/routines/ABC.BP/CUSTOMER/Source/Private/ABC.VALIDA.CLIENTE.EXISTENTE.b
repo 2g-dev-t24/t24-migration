@@ -14,6 +14,7 @@
     $USING ST.Customer
     $USING EB.DataAccess
     $USING EB.ErrorProcessing
+    $USING EB.Display
 
     $USING ABC.BP
 
@@ -225,7 +226,7 @@ PROCESO:
     IF Y.RFC.BAN EQ '1' THEN
         Y.INSERT<1,1> = Y.RFC 
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
-        CALL REBUILD.SCREEN
+        EB.Display.RebuildScreen()
     END
 
     RETURN

@@ -69,38 +69,58 @@ private method VpmNumClienteUnicoChk ()
 {
     jBC: VPM.NUM.CLIENTE.UNICO.CHK
 }
-private method AbcValidaCusRelcode (INOUT IncomingArg string)
+private method AbcValidaCusRelcode (INOUT YRelcode string)
 {
     jBC: ABC.VALIDA.CUS.RELCODE
 }
 
-private method AbcValidaCusMarstatus (INOUT IncomingArg string)
+private method AbcValidaCusMarstatus (INOUT YEdoCivil string)
 {
     jBC: ABC.VALIDA.CUS.MARSTATUS
 }
-private method AbcValidaFimaElect (INOUT IncomingArg string)
+private method AbcValidaFimaElect (INOUT YTieneFirma string)
 {
     jBC: ABC.VALIDA.FIMA.ELECT
 }
 ***
-private method AbcValidaEmpleAbc (INOUT IncomingArg string)
+private method AbcValidaEmpleAbc (INOUT VStaffOff string)
 {
     jBC: ABC.VALIDA.EMPLE.ABC
 }
 
-private method AbcHabilitaOtraVivienda (INOUT IncomingArg string)
+private method AbcHabilitaOtraVivienda (INOUT YValor string)
 {
     jBC: ABC.HABILITA.OTRA.VIVIENDA
 }
 
-private method AbcCusValidaOrigRec (INOUT IncomingArg string)
+private method AbcCusValidaOrigRec (INOUT VOrigenRecursos string)
 {
     jBC: ABC.CUS.VALIDA.ORIG.REC
 }
 
-private method AbcCusValidaDestRec (INOUT IncomingArg string)
+private method AbcCusValidaDestRec (INOUT YDestinoRecursos string)
 {
     jBC: ABC.CUS.VALIDA.DEST.REC
+}
+
+private method AbcGeneraRfc(INOUT InIdCliente string, INOUT OutRfc string, INOUT OutError string)
+{
+    jBC: ABC.GENERA.RFC
+}
+
+private method AbcValTaxId ()
+{
+    jBC: ABC.VAL.TAX.ID
+}
+
+private method VPM.CANTIDAD.LETRA(INOUT InAmt string, INOUT OutAmt string, INOUT LineLength string, INOUT NoOfLines string, INOUT ErrMsg string)
+{
+    jBC: VPM.CANTIDAD.LETRA
+}
+
+private method VpmVCustomerName ()
+{
+    jBC: VPM.V.CUSTOMER.NAME
 }
 
 # ------------------ METHOD END ------------------

@@ -8,11 +8,6 @@
 * Nombre de Programa : ABC.VAL.CUS
 * Objetivo           : Rutina para validar la existencia del cliente y generar el RFC
 *                      en caso de que no sea recibido o no tenga la longitud correcta.
-* Desarrollador      : CAMB (FyG)
-* Fecha Creacion     : DIC-2020
-* Fecha Modificacion :
-* Desarrollador      :
-* Modificaciones     :
 *======================================================================================
 
     $USING EB.DataAccess
@@ -20,6 +15,7 @@
     $USING EB.SystemTables
     $USING ST.Customer
     $USING ABC.BP
+    $USING EB.Display
 
     GOSUB INICIO
     IF LEN(Y.CURP) EQ 18 THEN
@@ -174,7 +170,7 @@ BUSQUEDA:
         IF Y.RFC.ORI EQ '' THEN
             Y.INSERT<1,1> = V.RFC 
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
-            CALL REBUILD.SCREEN
+            EB.Display.RebuildScreen()
         END
     END
 

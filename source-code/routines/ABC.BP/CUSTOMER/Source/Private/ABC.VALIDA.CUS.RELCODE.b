@@ -3,13 +3,15 @@
 *-----------------------------------------------------------------------------
  $PACKAGE ABC.BP
     SUBROUTINE ABC.VALIDA.CUS.RELCODE(Y.RELCODE)
+    
      $USING EB.Reports
     $USING EB.SystemTables
     $USING EB.DataAccess
     $USING ST.Customer
+    $USING EB.Display
 
     GOSUB PROCESS
-	CALL REBUILD.SCREEN
+	EB.Display.RebuildScreen()
 RETURN
 
 ********

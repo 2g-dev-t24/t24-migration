@@ -11,9 +11,10 @@
     $USING EB.SystemTables
     $USING EB.Updates
     $USING ST.Customer
+    $USING EB.Display
 	
     GOSUB PROCESS
-	CALL REBUILD.SCREEN
+	EB.Display.RebuildScreen()
 RETURN
 
 ****************
