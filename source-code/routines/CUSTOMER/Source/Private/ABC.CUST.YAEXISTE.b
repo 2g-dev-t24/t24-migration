@@ -28,17 +28,17 @@ RETURN
 *********
 PROCESS:
 *********
-	*Y.NUM.CUSTOMER = EB.SystemTables.getComi()
-	Y.NUM.CUSTOMER = 100039
+	Y.NUM.CUSTOMER = EB.SystemTables.getComi()
+
 	R.CUSTOMER = ""
     R.CUSTOMER = ST.Customer.Customer.Read(Y.NUM.CUSTOMER,CUST.ERR)
 	
-	*IF R.CUSTOMER NE "" THEN
+	IF R.CUSTOMER NE "" THEN
         Y.ERROR = "CLIENTE " : Y.NUM.CUSTOMER : " YA EXISTE, USE OPCION DE ACTUALIZACION "
         EB.SystemTables.setEtext(Y.ERROR)
         EB.ErrorProcessing.StoreEndError()
-	*END
-    *CALL REBUILD.SCREEN
-    *CALL REFRESH.GUI.OBJECTS
+	END
+    CALL REBUILD.SCREEN
+    CALL REFRESH.GUI.OBJECTS
 RETURN
 END
