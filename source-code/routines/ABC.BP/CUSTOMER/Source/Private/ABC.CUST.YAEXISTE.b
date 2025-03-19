@@ -34,9 +34,8 @@ PROCESS:
     R.CUSTOMER = ST.Customer.Customer.Read(Y.NUM.CUSTOMER,CUST.ERR)
 	
 	IF R.CUSTOMER NE "" THEN
-        Y.ERROR = "CLIENTE " : Y.NUM.CUSTOMER : " YA EXISTE, USE OPCION DE ACTUALIZACION "
-        EB.SystemTables.setEtext(Y.ERROR)
-        EB.ErrorProcessing.StoreEndError()
+        EB.SystemTables.setE("CLIENTE " : Y.NUM.CUSTOMER : " YA EXISTE, USE OPCION DE ACTUALIZACION ")
+        EB.ErrorProcessing.Err()
         RETURN
 	END
     EB.Display.RebuildScreen()
