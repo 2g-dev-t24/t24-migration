@@ -1,5 +1,5 @@
-* @ValidationCode : MjoyNjA1OTIzMzpDcDEyNTI6MTc0MjQ5OTAwMDQxMjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 20 Mar 2025 16:30:00
+* @ValidationCode : MjotMjY4NjQ2NTk3OkNwMTI1MjoxNzQyNTAxNjYyMjIzOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 20 Mar 2025 17:14:22
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -163,7 +163,7 @@ REM >               GOSUB DELIVERY.PREVIEW   ; * Activate print preview
                 GOSUB CHECK.DELETE          ;* Special Deletion checks
             CASE Y.VFUNCTION EQ 'R'
                 GOSUB CHECK.REVERSAL        ;* Special Reversal checks
-            CASE OTHERWISE
+            CASE 1
                 GOSUB CROSS.VALIDATION      ;* Special Cross Validation
                 IF NOT(V$ERROR) THEN
                     GOSUB OVERRIDES
@@ -223,10 +223,10 @@ CHECK.RECORD:
 * times during a transaction lifecycle. Any validation that must only
 * run when the user first opens the contract must be put in the following
 * IF statement
-*
-    IF OFS$STATUS<STAT.FLAG.FIRST.TIME> THEN      ;* BG_100007114
+*TO- DO Revisar
+*   IF OFS$STATUS<STAT.FLAG.FIRST.TIME> THEN      ;* BG_100007114
 
-    END
+*  END
 
 RETURN
 
@@ -236,54 +236,54 @@ CHECK.FIELDS:
 REM > CALL XX.CHECK.FIELDS
     EB.SystemTables.setE('')
 
-    BEGIN CASE
-        CASE EB.SystemTables.getAf() EQ AespBankId
-            IF EB.SystemTables.getComi() NE '' THEN
-                Y.BANCO = ''
-                Y.COMI = EB.SystemTables.getComi()
-                EB.DataAccess.FRead(FN.VPM.BANCOS, Y.COMI, Y.BANCO, F.VPM.BANCOS, VPMB.ERR1)
-                IF VPMB.ERR1 THEN
-                    EB.SystemTables.setE('ERR.1 EL BANCO NO EXISTE')
-                    GOSUB SEND.ERROR
-                END
-                EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankCust, '')
-                EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankName, '')
-            END
-        CASE EB.SystemTables.getAf() EQ AEspBankCust
-            IF EB.SystemTables.getComi() NE '' THEN
-                EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankName, '')
-                EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankId, '')
-            END
-        CASE EB.SystemTables.getAf() EQ AEspBankName
-            IF EB.SystemTables.getComi() NE '' THEN
-                EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankCust, '')
-                EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankId, '')
-            END
+*  BEGIN CASE
+*      CASE EB.SystemTables.getAf() EQ AespBankId
+*          IF EB.SystemTables.getComi() NE '' THEN
+*              Y.BANCO = ''
+*             Y.COMI = EB.SystemTables.getComi()
+*             EB.DataAccess.FRead(FN.VPM.BANCOS, Y.COMI, Y.BANCO, F.VPM.BANCOS, VPMB.ERR1)
+*             IF VPMB.ERR1 THEN
+*                 EB.SystemTables.setE('ERR.1 EL BANCO NO EXISTE')
+*                 GOSUB SEND.ERROR
+*             END
+*            EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankCust, '')
+*             EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankName, '')
+*         END
+*    CASE EB.SystemTables.getAf() EQ AEspBankCust
+*        IF EB.SystemTables.getComi() NE '' THEN
+*            EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankName, '')
+*            EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankId, '')
+*        END
+*    CASE EB.SystemTables.getAf() EQ AEspBankName
+*        IF EB.SystemTables.getComi() NE '' THEN
+*            EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankCust, '')
+*            EB.SystemTables.setRNew(ABC.BP.AbcEmailSmsParameter.AEspBankId, '')
+*        END
 
 
-        CASE EB.SystemTables.getAf() EQ AEspEmailAccMin
-            IF NOT(NUM(EB.SystemTables.getComi())) OR EB.SystemTables.getComi() LE 0 THEN
-                EB.SystemTables.setE('EL VALOR DEBE SER NUMERICO MAYOR A CERO')
-                GOSUB SEND.ERROR
-            END
+*    CASE EB.SystemTables.getAf() EQ AEspEmailAccMin
+*        IF NOT(NUM(EB.SystemTables.getComi())) OR EB.SystemTables.getComi() LE 0 THEN
+*            EB.SystemTables.setE('EL VALOR DEBE SER NUMERICO MAYOR A CERO')
+*           GOSUB SEND.ERROR
+*        END
 
 
-        CASE EB.SystemTables.getAf() EQ AEspEmailDomMin
-            IF NOT(NUM(EB.SystemTables.getComi())) OR EB.SystemTables.getComi() LE 0  THEN
-                EB.SystemTables.setE('EL VALOR DEBE SER NUMERICO MAYOR A CERO')
-                GOSUB SEND.ERROR
-            END
+*   CASE EB.SystemTables.getAf() EQ AEspEmailDomMin
+*        IF NOT(NUM(EB.SystemTables.getComi())) OR EB.SystemTables.getComi() LE 0  THEN
+*            EB.SystemTables.setE('EL VALOR DEBE SER NUMERICO MAYOR A CERO')
+**            GOSUB SEND.ERROR
+*       END
 
 
-        CASE EB.SystemTables.getAf() EQ AEspEmailMaxDot
-            IF NOT(NUM(EB.SystemTables.getComi())) OR EB.SystemTables.getComi() LT 1 THEN
-                EB.SystemTables.setE('EL VALOR DEBE SER NUMERICO MAYOR A CERO')
-                GOSUB SEND.ERROR
-            END
+*   CASE EB.SystemTables.getAf() EQ AEspEmailMaxDot
+*       IF NOT(NUM(EB.SystemTables.getComi())) OR EB.SystemTables.getComi() LT 1 THEN
+*           EB.SystemTables.setE('EL VALOR DEBE SER NUMERICO MAYOR A CERO')
+*           GOSUB SEND.ERROR
+*       END
 
 
 
-    END CASE
+*END CASE
 
 
     EB.Display.RebuildScreen()
@@ -328,16 +328,16 @@ RETURN
 
 SEND.ERROR2:
 
-    IF END.ERROR THEN
-        EB.SystemTables.setAf(1)
-        Y.A = EB.SystemTables.getAf()
-        LOOP UNTIL T.ETEXT<Y.A> NE "" DO Y.A = Y.A+1 ; REPEAT
-        Y.T.SEQU = "D"
-        Y.T.SEQU<-1> = A
-        EB.SystemTables.setTSequ(Y.T.SEQU)
-        V$ERROR = 1
-        EB.SystemTables.setMessage('ERROR')
-    END
+*    IF END.ERROR THEN
+*        EB.SystemTables.setAf(1)
+*        Y.A = EB.SystemTables.getAf()
+*        LOOP UNTIL T.ETEXT<Y.A> NE "" DO Y.A = Y.A+1 ; REPEAT
+*        Y.T.SEQU = "D"
+*        Y.T.SEQU<-1> = A
+*        EB.SystemTables.setTSequ(Y.T.SEQU)
+*       V$ERROR = 1
+**       EB.SystemTables.setMessage('ERROR')
+*    END
 
 RETURN          ;* Back to field input via UNAUTH.RECORD.WRITE
 
@@ -445,7 +445,7 @@ RETURN
 *************************************************************************
 INITIALISE:
 
-    BROWSER.PREVIEW.ON = (OFS$MESSAGE='PREVIEW')
+*   BROWSER.PREVIEW.ON = (OFS$MESSAGE='PREVIEW')
 
     FN.VPM.BANCOS = 'F.VPM.BANCOS'
     F.VPM.BANCOS = ''
@@ -476,22 +476,22 @@ REM > CALL XX.FIELD.DEFINITIONS
     Z+= 1;      EB.SystemTables.setF(Z,"OFS.SOURCE");      EB.SystemTables.setN(Z, "15.3.C");  EB.SystemTables.setT(Z, "A")
     EB.SystemTables.setCheckfile(Z, "OFS.SOURCE":@FM:OFS.SRC.DESCRIPTION:@FM:'A.')
     Z+= 1;      EB.SystemTables.setF(Z,"NUM.MENSAJE");     EB.SystemTables.setN(Z, "4.1"); EB.SystemTables.setT(Z, "")
-    Z+= 1;      EB.SystemTables.setF(Z,"SMS.ACTIVO");      EB.SystemTables.setN(Z, "1.1"); EB.SystemTables.setT(Z, "A") ; tmp= EB.SystemTables.getT(); tmp<2>= @FM:"N_S" ; EB.SystemTables.setT(Z, tmp)
+    Z+= 1;      EB.SystemTables.setF(Z,"SMS.ACTIVO");      EB.SystemTables.setN(Z, "1.1"); EB.SystemTables.setT(Z, "A") ; tmp= EB.SystemTables.getT(Z); tmp<2>= @FM:"N_S" ; EB.SystemTables.setT(Z, tmp)
     Z+= 1;      EB.SystemTables.setF(Z,"BANK.ID");         EB.SystemTables.setN(Z, "3..C"); EB.SystemTables.setT(Z, "")
     Z+= 1;      EB.SystemTables.setF(Z,"BANK.CUST");       EB.SystemTables.setN(Z, "10..C");  EB.SystemTables.setT(Z, "")
     EB.SystemTables.setCheckfile(Z,"CUSTOMER":@FM:EB.CUS.SHORT.NAME:@FM:'A.')
     Z+= 1;      EB.SystemTables.setF(Z,"BANK.NAME");       EB.SystemTables.setN(Z, "100..C");  EB.SystemTables.setT(Z, "A")
-    Z+= 1;      EB.SystemTables.setF(Z,"XX<TRAN.TYPE");    EB.SystemTables.setN(Z, "4.2");  EB.SystemTables.setT(Z,"A"); tmp= EB.SystemTables.getT(); tmp<2>= @FM:"AC_ATM_BIAT_BIAI_BIMT_BIMI_BIBT_BIBI_BIAC_BIMC_BIBC_BIAD_BIMD_BIBD_CUEM_CUMO_POS_SPEI_BACE_BMCE_BBCE"; EB.SystemTables.setT(Z, tmp)
+    Z+= 1;      EB.SystemTables.setF(Z,"XX<TRAN.TYPE");    EB.SystemTables.setN(Z, "4.2");  EB.SystemTables.setT(Z,"A"); tmp= EB.SystemTables.getT(z); tmp<2>= @FM:"AC_ATM_BIAT_BIAI_BIMT_BIMI_BIBT_BIBI_BIAC_BIMC_BIBC_BIAD_BIMD_BIBD_CUEM_CUMO_POS_SPEI_BACE_BMCE_BBCE"; EB.SystemTables.setT(Z, tmp)
     Z+= 1;      EB.SystemTables.setF(Z,"XX-XX.TRANSACTION");  EB.SystemTables.setN(Z, "4..C");  EB.SystemTables.setT(Z,"A")
     EB.SystemTables.setCheckfile(Z,"FT.TXN.TYPE.CONDITION":@FM:FT6.DESCRIPTION:@FM:'A.')
     Z+= 1;      EB.SystemTables.setF(Z,"XX>SUBJECT");      EB.SystemTables.setN(Z, "150.10");  EB.SystemTables.setT(Z, "A")
     Z+= 1;      EB.SystemTables.setF(Z,"PHONE.1");         EB.SystemTables.setN(Z, "20.3");  EB.SystemTables.setT(Z, "A")
     Z+= 1;      EB.SystemTables.setF(Z,"PHONE.2");         EB.SystemTables.setN(Z, "20..");  EB.SystemTables.setT(Z, "A")
-    Z+= 1;      EB.SystemTables.setF(Z,"XX<TRAN.TYPE.2");     EB.SystemTables.setN(Z, "4.2");  EB.SystemTables.setT(Z,"A"); tmp= EB.SystemTables.getT(); tmp<2>= @FM:"AC_ATM_BIAT_BIAI_BIMT_BIMI_BIBT_BIBI_BIAC_BIMC_BIBC_BIAD_BIMD_BIBD_CUEM_CUMO_POS_SPEI_BACE_BMCE_BBCE"; EB.SystemTables.setT(Z, tmp)
-    Z+= 1;      EB.SystemTables.setF(Z,"XX>ENV.CAMBIO.EST");  EB.SystemTables.setN(Z, "1.1");  EB.SystemTables.setT(Z,"A"); tmp= EB.SystemTables.getT(); tmp<2>= @FM:"N_S"; EB.SystemTables.setT(Z, tmp)
+    Z+= 1;      EB.SystemTables.setF(Z,"XX<TRAN.TYPE.2");     EB.SystemTables.setN(Z, "4.2");  EB.SystemTables.setT(Z,"A"); tmp= EB.SystemTables.getT(Z); tmp<2>= @FM:"AC_ATM_BIAT_BIAI_BIMT_BIMI_BIBT_BIBI_BIAC_BIMC_BIBC_BIAD_BIMD_BIBD_CUEM_CUMO_POS_SPEI_BACE_BMCE_BBCE"; EB.SystemTables.setT(Z, tmp)
+    Z+= 1;      EB.SystemTables.setF(Z,"XX>ENV.CAMBIO.EST");  EB.SystemTables.setN(Z, "1.1");  EB.SystemTables.setT(Z,"A"); tmp= EB.SystemTables.getT(Z); tmp<2>= @FM:"N_S"; EB.SystemTables.setT(Z, tmp)
     Z+ =1;      EB.SystemTables.setF(Z,"EMAIL.USUARIO");      EB.SystemTables.setN(Z, "80");  EB.SystemTables.setT(Z,"A")
     Z+ =1;      EB.SystemTables.setF(Z,"EMAIL.OPERACION");    EB.SystemTables.setN(Z, "80.7");  EB.SystemTables.setT(Z,"A")
-    Z+ =1;      EB.SystemTables.setF(Z,"XX<EMAIL.ACC.MIN");         EB.SystemTables.setN(Z, "2.1.C");  EB.SystemTables.setT(Z,"A"); tmp= EB.SystemTables.getT(); tmp<8> = "NOEXPAND"; EB.SystemTables.setT(Z, tmp)
+    Z+ =1;      EB.SystemTables.setF(Z,"XX<EMAIL.ACC.MIN");         EB.SystemTables.setN(Z, "2.1.C");  EB.SystemTables.setT(Z,"A"); tmp= EB.SystemTables.getT(Z); tmp<8> = "NOEXPAND"; EB.SystemTables.setT(Z, tmp)
     Z+ =1;      EB.SystemTables.setF(Z,"XX-EMAIL.DOM.MIN");         EB.SystemTables.setN(Z, "2.1.C");  EB.SystemTables.setT(Z,"A")
     Z+ =1;      EB.SystemTables.setF(Z,"XX>EMAIL.MAX.DOT");         EB.SystemTables.setN(Z, "1.1.C");  EB.SystemTables.setT(Z,"A")
     Z+ =1;      EB.SystemTables.setF(Z,"XX.VAL.GEN.DOM");           EB.SystemTables.setN(Z, "5.4");  EB.SystemTables.setT(Z,"A")

@@ -1,8 +1,20 @@
+* @ValidationCode : MjoxNDg3NDg5OTYyOkNwMTI1MjoxNzQyNTAxNzg1MjU2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 20 Mar 2025 17:16:25
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>595</Rating>
 *-----------------------------------------------------------------------------
 $PACKAGE ABC.BP
-    SUBROUTINE ABC.VALIDA.EMAIL
+SUBROUTINE ABC.VALIDA.EMAIL
 *----------------------------------------------------------------
 * Descripcion  : Rutina para validar correo
 *----------------------------------------------------------------
@@ -125,7 +137,7 @@ $PACKAGE ABC.BP
         END
     END
 
-    RETURN
+RETURN
 
 
 OPEN.FILES:
@@ -143,9 +155,9 @@ OPEN.FILES:
 
     Y.NO = ''
     Y.ERR = ''
-    EB.DataAccess.ReadList(SEL.CMD,Y.DOM.TERR.LIST,'',Y.NO,Y.ERR)
+    EB.DataAccess.Readlist(SEL.CMD,Y.DOM.TERR.LIST,'',Y.NO,Y.ER)
 
-    RETURN
+RETURN
 
 INIT:
     Y.ABC.EMAIL.PARAM.REC = ''
@@ -171,5 +183,5 @@ INIT:
     Y.INVALID.CHAR = ''
 
 
-    RETURN
+RETURN
 END

@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNDEwOTQwMDU5OkNwMTI1MjoxNzQyNDk5MDQyNjc4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 20 Mar 2025 16:30:42
+* @ValidationCode : MjotMTkwMzA3MDA3ODpDcDEyNTI6MTc0MjUwMDc1NzIzNzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 20 Mar 2025 16:59:17
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -151,7 +151,7 @@ PROCESS.MESSAGE:
 REM >          GOSUB CHECK.DELETE              ;* Special Deletion checks
             CASE Y.VFUNCTION EQ 'R'
                 GOSUB CHECK.REVERSAL        ;* Special Reversal checks
-            CASE OTHERWISE
+            CASE 1
                 GOSUB CROSS.VALIDATION      ;* Special Cross Validation
         END CASE
         IF NOT(V$ERROR) THEN

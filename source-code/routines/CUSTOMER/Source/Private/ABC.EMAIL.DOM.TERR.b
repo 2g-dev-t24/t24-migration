@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNjU5NzcwMjMyOkNwMTI1MjoxNzQyNDk4NDk4ODMwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 20 Mar 2025 16:21:38
+* @ValidationCode : MjoxMDcwMzQ2Mjc3OkNwMTI1MjoxNzQyNTAxNjA4MjkyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 20 Mar 2025 17:13:28
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -31,6 +31,7 @@ SUBROUTINE ABC.EMAIL.DOM.TERR
     $USING ST.Customer
     $USING EB.TransactionControl
     $USING EB.Utility
+    $USING EB.DataAccess
     
 
 *************************************************************************
@@ -39,7 +40,6 @@ SUBROUTINE ABC.EMAIL.DOM.TERR
 
     Y.VFUNCTION = EB.SystemTables.getVFunction()
     IF LEN(Y.VFUNCTION) GT 1 THEN
-        EB.Common.Function
         
         GOTO V$EXIT
     END
@@ -135,11 +135,12 @@ PROCESS.MESSAGE:
 * Processing after exiting from field input (PF5)
 
     IF EB.SystemTables.getMessage() EQ 'DEFAULT' THEN
-        EB.SystemTables.getMessage() EQ 'ERROR'               ; * Force the processing back
+        EB.SystemTables.setMessage("ERROR")
         IF Y.VFUNCTION NE 'D' AND Y.VFUNCTION NE 'R' THEN
             GOSUB CROSS.VALIDATION
         END
     END
+
 
     IF BROWSER.PREVIEW.ON THEN         ; * EN_10002679 - s
 * Clear BROWSER.PREVIEW.ON once inside the template so that after preview
@@ -166,7 +167,7 @@ REM >               GOSUB DELIVERY.PREVIEW   ; * Activate print preview
                 GOSUB CHECK.DELETE        ; * Special Deletion checks
             CASE Y.VFUNCTION EQ 'R'
                 GOSUB CHECK.REVERSAL      ; * Special Reversal checks
-            CASE OTHERWISE
+            CASE 1
                 GOSUB CROSS.VALIDATION    ; * Special Cross Validation
                 IF NOT(V$ERROR) THEN
                     GOSUB OVERRIDES
@@ -227,9 +228,10 @@ CHECK.RECORD:
 * run when the user first opens the contract must be put in the following
 * IF statement
 *
-    IF OFS$STATUS<STAT.FLAG.FIRST.TIME> THEN     ; * BG_100007114
-
-    END
+* TO-DO revisar
+*  IF OFS$STATUS<STAT.FLAG.FIRST.TIME> THEN     ; * BG_100007114
+        
+* END
 
 
 RETURN
@@ -240,23 +242,24 @@ CHECK.FIELDS:
 REM > CALL XX.CHECK.FIELDS
     EB.SystemTables.setE('')
 
-    BEGIN CASE
-        CASE EB.SystemTables.getAf() EQ AedtDominio
-            EB.SystemTables.setComi(DOWNCASE(EB.SystemTables.getComi()))
-            IF COUNT(EB.SystemTables.getComi(),'.') GT 1 THEN
-                EB.SystemTables.setE('NO PUEDE CONTENER MAS DE UN PUNTO')
-                GOSUB SEND.ERROR
-                RETURN
-            END
-            Y.COMI = EB.SystemTables.getComi()
-            IF Y.COMI[1,1] NE '.' THEN
-                EB.SystemTables.setE('EL DOMINIO DEBE COMENZAR CON UN PUNTO')
-                GOSUB SEND.ERROR
-                RETURN
-            END
+* todo- revisar
+*   BEGIN CASE
+*       CASE EB.SystemTables.getAf() EQ AedtDominio
+*           EB.SystemTables.setComi(DOWNCASE(EB.SystemTables.getComi()))
+*           IF COUNT(EB.SystemTables.getComi(),'.') GT 1 THEN
+*               EB.SystemTables.setE('NO PUEDE CONTENER MAS DE UN PUNTO')
+*               GOSUB SEND.ERROR
+*              RETURN
+*           END
+*           Y.COMI = EB.SystemTables.getComi()
+*           IF Y.COMI[1,1] NE '.' THEN
+*              EB.SystemTables.setE('EL DOMINIO DEBE COMENZAR CON UN PUNTO')
+*              GOSUB SEND.ERROR
+*              RETURN
+*           END
 
 
-    END CASE
+*   END CASE
 *
 RETURN
 
@@ -279,7 +282,7 @@ CROSS.VALIDATION:
     Y.CNT = ''
     Y.ERROR = ''
     SEL.CMD = "SELECT ":FN.ABC.EMAIL.DOM.TERR:" WITH COUNTRY.ID EQ '":EB.SystemTables.getRNew(ABC.BP.AbcEmailDomTerr.AedtCountryId):"'"
-    EB.DataAccess.ReadList(SEL.CMD,Y.LIST,'',Y.CNT,Y.ERROR)
+    EB.DataAccess.Readlist(SEL.CMD,Y.LIST,'',Y.CNT,Y.ERROR)
 
     IF Y.LIST NE '' THEN
         EB.SystemTables.setAf(AedtCountryId)
@@ -293,17 +296,18 @@ CROSS.VALIDATION:
 REM > CALL XX.CROSSVAL
 *
 * If END.ERROR has been set then a cross validation error has occurred
-*
-    IF END.ERROR THEN
-        EB.SystemTables.setAf(1)
-        Y.A = EB.SystemTables.getAf()
-        LOOP UNTIL T.ETEXT<Y.A> <> "" DO Y.A = Y.A+1 ; REPEAT
-        Y.T.SEQU = "D"
-        Y.T.SEQU<-1> = Y.A
-        EB.SystemTables.setTSequ(Y.T.SEQU)
-        V$ERROR = 1
-        EB.SystemTables.setMessage('ERROR')
-    END
+* todo- cambiar
+
+*   IF END.ERROR THEN
+*        EB.SystemTables.setAf(1)
+*       Y.A = EB.SystemTables.getAf()
+*        LOOP UNTIL T.ETEXT<Y.A> <> "" DO Y.A = Y.A+1 ; REPEAT
+*        Y.T.SEQU = "D"
+*        Y.T.SEQU<-1> = Y.A
+*       EB.SystemTables.setTSequ(Y.T.SEQU)
+*       V$ERROR = 1
+*       EB.SystemTables.setMessage('ERROR')
+*   END
 
 RETURN                             ; * Back to field input via UNAUTH.RECORD.WRITE
 
@@ -409,8 +413,8 @@ RETURN
 
 *************************************************************************
 INITIALISE:
-
-    BROWSER.PREVIEW.ON = (OFS$MESSAGE='PREVIEW')
+*TO-DO Corregir
+*BROWSER.PREVIEW.ON = (OFS$MESSAGE='PREVIEW')
 
     FN.ABC.EMAIL.DOM.TERR = 'F.ABC.EMAIL.DOM.TERR'
     F.ABC.EMAIL.DOM.TERR = ''
