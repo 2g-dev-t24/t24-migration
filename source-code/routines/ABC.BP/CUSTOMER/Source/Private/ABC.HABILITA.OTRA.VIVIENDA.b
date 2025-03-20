@@ -36,6 +36,5 @@ $PACKAGE ABC.BP
     	T.LOCREF<Y.POS,7> = "NOINPUT"
     END
     EB.Display.RebuildScreen()
-    CALL REFRESH.GUI.OBJECTS
 RETURN
 END

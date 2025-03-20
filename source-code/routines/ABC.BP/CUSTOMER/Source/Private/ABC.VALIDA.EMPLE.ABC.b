@@ -35,7 +35,6 @@ $PACKAGE ABC.BP
         Y.LOCAL.REF<1,V.NO.EMP.POS> = ''
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
         EB.Display.RebuildScreen() 
-        CALL REFRESH.GUI.OBJECTS
         T.LOCREF<V.NO.EMP.POS,7> = "NOINPUT"
     END
     Y.LOCAL.REF<1,107> = ""

@@ -20,6 +20,30 @@ private method VpmEstado ()
 }
 
 # ------------------------------------
+# Tabla VPM.ESTADO
+# ------------------------------------
+private method VpmBancos ()
+{
+    jBC: VPM.BANCOS
+}
+
+# ------------------------------------
+# Tabla ABC.EMAIL.SMS.PARAMETER
+# ------------------------------------
+private method AbcEmailSmsParameter ()
+{
+    jBC: ABC.EMAIL.SMS.PARAMETER
+}
+
+# ------------------------------------
+# Tabla ABC.EMAIL.DOM.TERR
+# ------------------------------------
+private method AbcEmailDomTerr ()
+{
+    jBC: ABC.EMAIL.DOM.TERR
+}
+
+# ------------------------------------
 # Tabla ABC.INFO.VAL.CUS
 # ------------------------------------
 private method AbcInfoValCus ()
@@ -46,10 +70,44 @@ private method AbcBiometricosFields ()
 # ------------------ TABLE END ------------------
 
 # ------------------ METHOD START ------------------
+private method VAbcCusTaxid2Check ()
+{
+    jBC: V.ABC.CUS.TAXID2.CHECK
+}
+private method VAbcCusRelcodeCheck ()
+{
+    jBC: V.ABC.CUS.RELCODE.CHECK
+}
+private method VAbcCusOriRecChk ()
+{
+    jBC: V.ABC.CUS.ORI.REC.CHK
+}
+private method VAbcCusDesRecChk ()
+{
+    jBC: V.ABC.CUS.DES.REC.CHK
+}
+private method AbcValidaNacionalidad ()
+{
+    jBC: ABC.VALIDA.NACIONALIDAD
+}
+private method AbcValidaCusResiStatus ()
+{
+    jBC: ABC.VALIDA.CUS.RESI.STATUS
+}
+private method AbcValStaff ()
+{
+    jBC: ABC.VAL.STAFF
+}
+private method AbcCalcIngTotalCust ()
+{
+    jBC: ABC.CALC.ING.TOTAL.CUST
+}
+
 private method VAbcCusMarStatusChk ()
 {
     jBC: V.ABC.CUS.MAR.STATUS.CHK
 }
+
 private method VAbcCusDomAnosChk ()
 {
     jBC: V.ABC.CUS.DOM.ANOS.CHK
@@ -156,5 +214,10 @@ private method AbcCustValidaTodo(INOUT YValActual string, INOUT YOrigen string)
 private method AbcHabilitaDirCus (INOUT YNumAnios string)
 {
     jBC: ABC.HABILITA.DIR.CUS
+}
+
+private method AbcValidaEmail ()
+{
+    jBC: ABC.VALIDA.EMAIL
 }
 # ------------------ METHOD END ------------------

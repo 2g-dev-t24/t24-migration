@@ -1,0 +1,16 @@
+public table AbcEmailDomTerr {
+    t24: ABC.EMAIL.DOM.TERR
+    fields:{
+     AedtCountryId(AEDT.COUNTRY.ID) = 1
+     AedtDominio(AEDT.DOMINIO) = 2
+     AedtRecordStatus(AEDT.RECORD.STATUS) = 3
+     AedtCurrNo(AEDT.CURR.NO) = 4
+     AedtInputter(AEDT.INPUTTER) = 5
+     AedtDateTime(AEDT.DATE.TIME) = 6
+     AedtAuthoriser(AEDT.AUTHORISER) = 7
+     AedtCoCode(AEDT.CO.CODE) = 8
+     AedtDeptCode(AEDT.DEPT.CODE) = 9
+     AedtAuditorCode(AEDT.AUDITOR.CODE) = 10
+     AedtAuditDateTime(AEDT.AUDIT.DATE.TIME) = 11
+    }
+}

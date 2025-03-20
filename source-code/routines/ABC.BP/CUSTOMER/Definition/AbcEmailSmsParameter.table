@@ -1,0 +1,34 @@
+public table AbcEmailSmsParameter {
+    t24: ABC.EMAIL.SMS.PARAMETER
+    fields:{
+      AEspOfsSource(AESP.OFS.SOURCE) = 1 
+      AEspNumMensaje(AESP.NUM.MENSAJE) = 2 
+      AEspSmsActivo(AESP.SMS.ACTIVO) = 3
+      AEspBankId(AESP.BANK.ID) = 4 
+      AEspBankCust(AESP.BANK.CUST) = 5
+      AEspBankName(AESP.BANK.NAME) = 6
+      AEspTranType(AESP.TRAN.TYPE) = 7 
+      AEspTransaction(AESP.TRANSACTION) = 8 
+      AEspSubject(AESP.SUBJECT) = 9
+      AEspPhone1(AESP.PHONE.1) = 10
+      AEspPhone2(AESP.PHONE.2) = 11
+      AEspTranType2(AESP.TRAN.TYPE.2) = 12 
+      AEspEnvCambioEst(AESP.ENV.CAMBIO.EST) = 13
+      AEspEmailUsuario(AESP.EMAIL.USUARIO) = 14
+      AEspEmailOperacion(AESP.EMAIL.OPERACION) = 15
+      AEspEmailAccMin(AESP.EMAIL.ACC.MIN) = 16
+      AEspEmailDomMin(AESP.EMAIL.DOM.MIN) = 17
+      AEspEmailMaxDot(AESP.EMAIL.MAX.DOT) = 18
+      AEspValGenDom(AESP.VAL.GEN.DOM) = 19
+      AEspInvalidChar(AESP.INVALID.CHAR) = 20
+      AEspRecordStatus(AESP.RECORD.STATUS) = 21
+      AEspCurrNo(AESP.CURR.NO) = 22
+      AEspInputter(AESP.INPUTTER) = 23
+      AEspDateTime(AESP.DATE.TIME) = 24
+      AEspAuthoriser(AESP.AUTHORISER) = 25
+      AEspCoCode(AESP.CO.CODE) = 26
+      AEspDeptCode(AESP.DEPT.CODE) = 27
+      AEspAuditorCode(AESP.AUDITOR.CODE) = 28
+      AEspAuditDateTime(AESP.AUDIT.DATE.TIME) = 29
+    }
+}

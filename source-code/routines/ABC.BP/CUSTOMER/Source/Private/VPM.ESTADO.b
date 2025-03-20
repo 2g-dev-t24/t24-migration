@@ -14,6 +14,8 @@ $PACKAGE ABC.BP
     $USING AA.Framework
     $USING EB.Interface
     $USING EB.ErrorProcessing
+    $USING EB.Display
+    $USING EB.TransactionControl
     $USING ABC.BP
 
 
@@ -29,7 +31,7 @@ $PACKAGE ABC.BP
          GOTO V$EXIT
       END
 
-      CALL MATRIX.UPDATE
+      EB.Display.MatrixUpdate()
 
       GOSUB INITIALISE                   ; * Special Initialising
 
@@ -39,7 +41,7 @@ $PACKAGE ABC.BP
 
       LOOP
 
-         CALL RECORDID.INPUT
+         EB.TransactionControl.RecordidInput()
 
       UNTIL EB.SystemTables.getMessage() EQ 'RET' DO
 
@@ -50,7 +52,7 @@ $PACKAGE ABC.BP
             GOSUB CHECK.FUNCTION         ; * Special Editing of Function
 
             IF EB.SystemTables.getVFunction() EQ 'E' OR EB.SystemTables.getVFunction() EQ 'L' THEN
-               CALL FUNCTION.DISPLAY
+               EB.Display.FunctionDisplay()
                EB.SystemTables.setVFunction('')
             END
 
@@ -59,7 +61,7 @@ $PACKAGE ABC.BP
             GOSUB CHECK.ID               ; * Special Editing of ID
             IF V$ERROR THEN GOTO MAIN.REPEAT
 
-            CALL RECORD.READ
+            EB.TransactionControl.RecordRead()
 
 
             IF EB.SystemTables.getMessage() EQ 'REPEAT' THEN
@@ -70,7 +72,7 @@ $PACKAGE ABC.BP
             GOSUB CHECK.RECORD           ; * Special Editing of Record
             IF V$ERROR THEN GOTO MAIN.REPEAT
 
-            CALL MATRIX.ALTER
+            EB.Display.MatrixAlter()
 
             GOSUB PROCESS.DISPLAY        ; * For Display applications
 
@@ -102,15 +104,15 @@ PROCESS.FIELDS:
 
          IF EB.SystemTables.getScreenMode() EQ 'MULTI' THEN
             IF EB.SystemTables.getFileType() EQ 'I' THEN
-               CALL FIELD.MULTI.INPUT
+               EB.Display.FieldMultiInput()
             END ELSE
-               CALL FIELD.MULTI.DISPLAY
+               EB.Display.FieldMultiDisplay()
             END
          END ELSE
             IF EB.SystemTables.getFileType() EQ 'I' THEN
-               CALL FIELD.INPUT
+               EB.Display.FieldInput()
             END ELSE
-               CALL FIELD.DISPLAY
+               EB.Display.FieldDisplay()
             END
          END
 
@@ -144,7 +146,7 @@ REM >          GOSUB CHECK.DELETE              ;* Special Deletion checks
             GOSUB BEFORE.UNAU.WRITE      ; * Special Processing before write
          END
          IF NOT(V$ERROR) THEN
-            CALL UNAUTH.RECORD.WRITE
+            EB.TransactionControl.UnauthRecordWrite()
             IF EB.SystemTables.getMessage() NE "ERROR" THEN
                GOSUB AFTER.UNAU.WRITE    ; * Special Processing after write
             END
@@ -159,7 +161,7 @@ REM >          GOSUB CHECK.DELETE              ;* Special Deletion checks
 
          IF NOT(V$ERROR) THEN
 
-            CALL AUTH.RECORD.WRITE
+            EB.TransactionControl.AuthRecordWrite()
 
             IF EB.SystemTables.getMessage() NE "ERROR" THEN
                GOSUB AFTER.AUTH.WRITE    ; * Special Processing after write
