@@ -19,7 +19,9 @@ $PACKAGE ABC.BP
     Y.LOCAL.REF<1,Y.POS> = ""
     EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)  
     IF Y.VALOR EQ 6 OR Y.VALOR EQ "OTRA" THEN
-    	T.LOCREF<Y.POS,7> = ""
+    	tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS,7>=""
+        EB.SystemTables.setTLocref(tmp)
     END ELSE
 
     	IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS> NE "" THEN    
@@ -33,7 +35,10 @@ $PACKAGE ABC.BP
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
     		
     	END
-    	T.LOCREF<Y.POS,7> = "NOINPUT"
+    	
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
     END
     EB.Display.RebuildScreen()
     CALL REFRESH.GUI.OBJECTS

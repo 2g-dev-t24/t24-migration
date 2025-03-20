@@ -56,51 +56,74 @@ PROCESO:
     IF Y.NUM.ANIOS GE 2 THEN
 
         
-        LocalRef<1,Y.POS.CALLE.ANT> = ''
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
-        T.LOCREF<Y.POS.CALLE.ANT,7> = 'NOINPUT'
-
-        LocalRef<1,Y.POS.DIR.NUM.EXT.ANT> = ''
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
-        T.LOCREF<Y.POS.DIR.NUM.EXT.ANT,7> = 'NOINPUT'
-
-        LocalRef<1,Y.POS.DIR.NUM.INT.ANT> = ''
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
-        T.LOCREF<Y.POS.DIR.NUM.INT.ANT,7> = 'NOINPUT'
-
-        LocalRef<1,Y.POS.DIR.COD.POS.ANT> = ''
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
-        T.LOCREF<Y.POS.DIR.COD.POS.ANT,7> = 'NOINPUT'
-
-        LocalRef<1,Y.POS.DIR.COLONIA.ANT> = ''
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
-        T.LOCREF<Y.POS.DIR.COLONIA.ANT,7> = 'NOINPUT'
-
-        LocalRef<1,Y.POS.DIR.DEL.MUN.ANT> = ''
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
-        T.LOCREF<Y.POS.DIR.DEL.MUN.ANT,7> = 'NOINPUT'
-
-        LocalRef<1,Y.POS.DIR.CD.EDO.ANT> = ''
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
-        T.LOCREF<Y.POS.DIR.CD.EDO.ANT,7> = 'NOINPUT'
-
-        LocalRef<1,Y.POS.DIR.PAIS.ANT> = ''
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
-        T.LOCREF<Y.POS.DIR.PAIS.ANT,7> = 'NOINPUT'
-
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.CALLE.ANT,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
         
-        EB.CUS.TOWN.COUNTRY = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTownCountry)<1,2>
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.NUM.EXT.ANT,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
         
-        T(EB.CUS.TOWN.COUNTRY)<3> = 'NOINPUT'
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.NUM.INT.ANT,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
+        
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.COD.POS.ANT,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
+        
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.COLONIA.ANT,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
+        
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.DEL.MUN.ANT,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
+        
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.CD.EDO.ANT,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
+        
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.PAIS.ANT,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
+        
+        tmp=EB.SystemTables.getT(ST.Customer.Customer.EbCusTownCountry)<1,2>
+        tmp<3>="NOINPUT"
+        EB.SystemTables.setT(ST.Customer.Customer.EbCusTownCountry, tmp)
     END ELSE
-        T.LOCREF<Y.POS.CALLE.ANT,7>       = ''
-        T.LOCREF<Y.POS.DIR.NUM.EXT.ANT,7> = ''
-        T.LOCREF<Y.POS.DIR.NUM.INT.ANT,7> = ''
-        T.LOCREF<Y.POS.DIR.COD.POS.ANT,7> = ''
-        T.LOCREF<Y.POS.DIR.COLONIA.ANT,7> = ''
-        T.LOCREF<Y.POS.DIR.DEL.MUN.ANT,7> = ''
-        T.LOCREF<Y.POS.DIR.CD.EDO.ANT,7>  = ''
-        T.LOCREF<Y.POS.DIR.PAIS.ANT,7>    = ''
+
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.CALLE.ANT,7>=""
+        EB.SystemTables.setTLocref(tmp)
+    
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.NUM.EXT.ANT,7>=""
+        EB.SystemTables.setTLocref(tmp)
+
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.NUM.INT.ANT,7>=""
+        EB.SystemTables.setTLocref(tmp)
+    
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.COD.POS.ANT,7>=""
+        EB.SystemTables.setTLocref(tmp)
+
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.COLONIA.ANT,7>=""
+        EB.SystemTables.setTLocref(tmp)
+
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.DEL.MUN.ANT,7>=""
+        EB.SystemTables.setTLocref(tmp)
+
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.CD.EDO.ANT,7>=""
+        EB.SystemTables.setTLocref(tmp)
+      
+        tmp=EB.SystemTables.getTLocref()
+        tmp<Y.POS.DIR.PAIS.ANT,7>=""
+        EB.SystemTables.setTLocref(tmp)
     END
 
     IF Y.BANDERA = 1 THEN

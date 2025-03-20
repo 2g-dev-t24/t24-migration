@@ -1,27 +1,22 @@
 *-----------------------------------------------------------------------------
 * <Rating>-10</Rating>
 *-----------------------------------------------------------------------------
-*   Fecha: Mayo 2015
-*   Autor: Omar Basabe.
-*
-*-----------------------------------------------------------------------------
- $PACKAGE ABC.BP   
-    SUBROUTINE ABC.CUS.VALIDA.GENERICO
-
+$PACKAGE ABC.BP
+    SUBROUTINE ABC.VALIDA.CUS.RESI.STATUS
+    
     $USING EB.SystemTables
-    $USING EB.Updates
-    $USING ST.Customer
     $USING EB.Display
-	
-    GOSUB PROCESS
-	EB.Display.RebuildScreen()
+    $USING ABC.BP
+
+	GOSUB PROCESS
+    EB.Display.RebuildScreen()
 RETURN
 
-****************
+********
 PROCESS:
-****************
+********
 	Y.VAL.ACTUAL = EB.SystemTables.getComi()
-	Y.ORIGEN = "GENERICO"
+	Y.ORIGEN = "TIPO.CASA"
 	CALL ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
 RETURN
 END

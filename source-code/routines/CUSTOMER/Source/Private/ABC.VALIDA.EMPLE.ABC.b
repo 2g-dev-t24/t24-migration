@@ -4,9 +4,6 @@
 $PACKAGE ABC.BP
     SUBROUTINE ABC.VALIDA.EMPLE.ABC(V.STAFF.OFF)
 
-*   $INSERT I_COMMON
-*   $INSERT I_EQUATE
-*   $INSERT I_F.CUSTOMER
 
     $USING EB.Reports
     $USING EB.SystemTables
@@ -27,10 +24,9 @@ $PACKAGE ABC.BP
     V.STAFF.OFF = TRIM(V.STAFF.OFF)
 
     IF V.STAFF.OFF EQ "Y" THEN
-        Y.LOCAL.REF             = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
-        Y.LOCAL.REF<1,V.NO.EMP.POS> = ''
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
-        T.LOCREF<V.NO.EMP.POS,7> = ""
+        tmp=EB.SystemTables.getTLocref()
+        tmp<V.NO.EMP.POS,7>=""
+        EB.SystemTables.setTLocref(tmp)
     END
 
     IF V.STAFF.OFF EQ "N" THEN
@@ -39,7 +35,10 @@ $PACKAGE ABC.BP
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
         EB.Display.RebuildScreen() 
         CALL REFRESH.GUI.OBJECTS
-        T.LOCREF<V.NO.EMP.POS,7> = "NOINPUT"
+
+        tmp=EB.SystemTables.getTLocref()
+        tmp<V.NO.EMP.POS,7>="NOINPUT"
+        EB.SystemTables.setTLocref(tmp)
     END
     Y.LOCAL.REF<1,107> = ""
     EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)

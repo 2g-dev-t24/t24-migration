@@ -5,13 +5,7 @@
     SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
 *-----------------------------------------------------------------------------
 *
-* MODIFICADO POR: CESAR MIRANDA FYG
-*
 * DETALLE: Valida que el cliente no se encuentre duplicado en base al RFC
-*-----------------------------------------------------------------------------
-* Modificado    : Jesus Hernandez JHF   - FyG
-* Fecha         : 12/01/2017
-* Descripcion   : Se corrige error de cte existente.
 *-----------------------------------------------------------------------------
 
     $USING EB.SystemTables
@@ -20,6 +14,7 @@
     $USING EB.DataAccess
     $USING EB.ErrorProcessing
     $USING ABC.BP
+    $USING EB.Display
 
     IF EB.SystemTables.getMessage() EQ 'VAL' THEN RETURN
 
@@ -47,19 +42,20 @@ GENERA.RFC.CURP:
     ETEINC = 1; ETEOK = 0
     CLIENTE.UNICO = ''; CLIENTE.UNICO.RFC = ''; CLIENTE.UNICO.CURP = ''; RES = ETEOK; MENSAJE = ''; CLAVE.ALFA = ''
     Y.LOCAL.REF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
+    Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
 
-    IF ( Y.LOCAL.REF<1,Y.POS.CLASSIFICATION> = "1") OR ( Y.LOCAL.REF<1,Y.POS.CLASSIFICATION> = "2") THEN
+    IF ( Y.SECTOR = "1") OR ( Y.SECTOR = "2") THEN
         GOSUB VALIDA.DATOS
         IF (RES = 0) AND (MENSAJE = "") THEN
         END ELSE
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusGender, "")
-            CALL REBUILD.SCREEN
+            EB.Display.RebuildScreen()
             EB.SystemTables.setE(MENSAJE)
             EB.ErrorProcessing.Err()
             RETURN
         END
     END
-    IF Y.LOCAL.REF<1,Y.POS.CLASSIFICATION> = "3" THEN
+    IF Y.SECTOR = "3" THEN
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusGender, "")
         GOSUB VALIDA.DATOS.M
         IF (RES = 0) AND (MENSAJE = '') THEN
@@ -74,7 +70,7 @@ GENERA.RFC.CURP:
 
 CLIENTE.DUPLICADO:
 
-    IF Y.LOCAL.REF<1,Y.POS.CLASSIFICATION> GE "3" THEN
+    IF Y.SECTOR GE "3" THEN
         Y.RFC.AUX = Y.RFC[1,9]
     END ELSE
         Y.RFC.AUX = Y.RFC[1,10]
@@ -124,14 +120,12 @@ ABRE.TABLAS:
 *****************************************************************************
 *Campos Locales
     Y.APP.LOC = 'CUSTOMER'
-    Y.FIELD.LOC = 'CLASSIFICATION':@VM:'LUG.NAC':@VM:'NOM.PER.MORAL':@VM:'LUGAR.CONST'
+    Y.FIELD.LOC = 'NOM.PER.MORAL':@VM:'LUGAR.CONST'
     Y.POS.LOC = ''
     EB.Updates.MultiGetLocRef(Y.APP.LOC, Y.FIELD.LOC, Y.POS.LOC)
 
-    Y.POS.CLASSIFICATION = Y.POS.LOC<1,1>
-    Y.POS.LUG.NAC = Y.POS.LOC<1,2>
-    YPOS.NOM.PER.MORAL = Y.POS.LOC<1,3>
-    YPOS.LUGAR.CONST = Y.POS.LOC<1,4>
+    YPOS.NOM.PER.MORAL = Y.POS.LOC<1,1>
+    YPOS.LUGAR.CONST = Y.POS.LOC<1,2>
 *****************************************************************************
     RETURN
 
@@ -141,7 +135,7 @@ MANTEN.REGISTRO:
 
     Y.VAL.ACTUAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
     Y.ORIGEN = "GENERICO"
-    ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
+    CALL ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
     RETURN
 
 ***************
@@ -152,7 +146,7 @@ VALIDA.DATOS:
     APE.MATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne)
     NOMBRE      = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo)
     FEC.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
-    LUG.NAC     = Y.LOCAL.REF<1,Y.POS.LUG.NAC>
+    LUG.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
     GENERO      = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
 
     IF LEN(APE.PATERNO) = 0 THEN

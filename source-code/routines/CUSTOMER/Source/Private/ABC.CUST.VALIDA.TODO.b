@@ -30,7 +30,8 @@ $PACKAGE ABC.BP
 INIT.VARS:
 **********
     V.STAFF.OFF = ""
-    Y.ORIGEN.RECURSOS = ""
+    ;*SE OBTENDRA EL VALOR DE LA NEXT VERSION MXBASE.ADD.CUSTOMER.DETAILS
+    *Y.ORIGEN.RECURSOS = ""
     Y.DESTINO.RECURSOS = ""
     Y.COD.POS = ""
     Y.GENERICO = ""
@@ -49,9 +50,9 @@ PROCESS:
     BEGIN CASE
     CASE Y.ORIGEN EQ "EMPLEADO.ABC"
         V.STAFF.OFF = Y.VAL.ACTUAL
-
-    CASE Y.ORIGEN EQ "ORIGEN.RECS"
-        Y.ORIGEN.RECURSOS = Y.VAL.ACTUAL
+    ;*SE OBTENDRA EL VALOR DE LA NEXT VERSION MXBASE.ADD.CUSTOMER.DETAILS
+    *CASE Y.ORIGEN EQ "ORIGEN.RECS"
+    *    Y.ORIGEN.RECURSOS = Y.VAL.ACTUAL
 
     CASE Y.ORIGEN EQ "DESTINO.RECS"
         Y.DESTINO.RECURSOS = Y.VAL.ACTUAL
@@ -88,11 +89,10 @@ MANTEN.REGISTRO:
 ****************
 
     V.GENDER = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
-   
-*    R.NEW(EB.CUS.GENDER) = V.GENDER
+
 
     Y.POS = ""
-    EB.Updates.MultiGetLocRef("CUSTOMER","DOM.ANOS",Y.POS) ;* ANIOS EN LA VIVIENDA
+    EB.Updates.MultiGetLocRef("CUSTOMER","ABC.DOM.ANOS",Y.POS) ;* ANIOS EN LA VIVIENDA
     IF Y.NUM.ANIOS EQ "" THEN
         Y.NUM.ANIOS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
     END
@@ -115,7 +115,7 @@ MANTEN.REGISTRO:
     EB.SystemTables.setRNew(ST.Customer.Customer.EbCusMaritalStatus,Y.EDO.CIVIL)
 
     Y.POS = ""
-    EB.Updates.MultiGetLocRef("CUSTOMER","REGIMEN",Y.POS)  ;* REGIMEN DE CASADO
+    EB.Updates.MultiGetLocRef("CUSTOMER","ABC.REGIMEN",Y.POS)  ;* REGIMEN DE CASADO
 
     Y.REGIMEN = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
     
@@ -123,7 +123,7 @@ MANTEN.REGISTRO:
     EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
 
     Y.POS = ""
-    EB.Updates.MultiGetLocRef("CUSTOMER","TIENE.FIRMA.ELE",Y.POS)    ;* TIENE FIRMA ELECTRONICA S/N
+    EB.Updates.MultiGetLocRef("CUSTOMER","ABC.FIRMA.ELECT",Y.POS)    ;* TIENE FIRMA ELECTRONICA S/N
     IF Y.FIRMA EQ "" THEN
         Y.FIRMA = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
     END
@@ -150,15 +150,15 @@ MANTEN.REGISTRO:
     EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceStatus,Y.TIPO.CASA)
     
 
-
-    Y.POS = ""
-    EB.Updates.MultiGetLocRef("CUSTOMER","ORIGEN.RECURSOS",Y.POS)    ;* ORIGEN DE LOS RECURSOS
-    IF Y.ORIGEN.RECURSOS EQ "" THEN
-        Y.ORIGEN.RECURSOS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
-    END
-    ABC.BP.AbcCusValidaOrigRec(Y.ORIGEN.RECURSOS)
-    LocalRef<1,Y.POS> = Y.ORIGEN.RECURSOS
-    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
+    ;*SE OBTENDRA EL VALOR DE LA NEXT VERSION MXBASE.ADD.CUSTOMER.DETAILS
+    *Y.POS = ""
+    *EB.Updates.MultiGetLocRef("CUSTOMER","ORIGEN.RECURSOS",Y.POS)    ;* ORIGEN DE LOS RECURSOS
+    *IF Y.ORIGEN.RECURSOS EQ "" THEN
+    *    Y.ORIGEN.RECURSOS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
+    *END
+    *ABC.BP.AbcCusValidaOrigRec(Y.ORIGEN.RECURSOS)
+    *LocalRef<1,Y.POS> = Y.ORIGEN.RECURSOS
+    *EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
     
 
     Y.POS = ""

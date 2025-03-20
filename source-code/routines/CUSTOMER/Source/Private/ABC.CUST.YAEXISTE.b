@@ -12,6 +12,7 @@ $PACKAGE ABC.BP
     $USING EB.ErrorProcessing
     $USING EB.SystemTables
     $USING ST.Customer
+    $USING EB.Display
 
     GOSUB INITIALIZE
     GOSUB PROCESS
@@ -29,16 +30,15 @@ RETURN
 PROCESS:
 *********
 	Y.NUM.CUSTOMER = EB.SystemTables.getComi()
-
 	R.CUSTOMER = ""
     R.CUSTOMER = ST.Customer.Customer.Read(Y.NUM.CUSTOMER,CUST.ERR)
 	
 	IF R.CUSTOMER NE "" THEN
         Y.ERROR = "CLIENTE " : Y.NUM.CUSTOMER : " YA EXISTE, USE OPCION DE ACTUALIZACION "
-        EB.SystemTables.setEtext(Y.ERROR)
-        EB.ErrorProcessing.StoreEndError()
+        EB.SystemTables.setE(Y.ERROR)
+        EB.ErrorProcessing.Err()
+        RETURN
 	END
-    CALL REBUILD.SCREEN
-    CALL REFRESH.GUI.OBJECTS
+    EB.Display.RebuildScreen()
 RETURN
 END

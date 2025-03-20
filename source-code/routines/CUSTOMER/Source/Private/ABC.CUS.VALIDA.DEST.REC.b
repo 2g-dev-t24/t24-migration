@@ -35,7 +35,9 @@ $PACKAGE ABC.BP
                 EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
                 
             END
-            T.LOCREF<V.DESTINO.RECURSOS,7> = 'NOINPUT'
+            tmp=EB.SystemTables.getTLocref()
+            tmp<V.DESTINO.RECURSOS,7>="NOINPUT"
+            EB.SystemTables.setTLocref(tmp)
         END
     END
 

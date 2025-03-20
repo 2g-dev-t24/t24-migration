@@ -19,16 +19,16 @@ $PACKAGE ABC.BP
     EB.Template.setTableTitle('Tabla concat info cliente')         ;* Screen title
     EB.Template.setTableStereotype('L')       ;* H, U, L, W or T
     EB.Template.setTableProduct('EB')      ;* Must be on EB.PRODUCT
-    EB.Template.setTableSubProduct('')        ;* Must be on EB.SUB.PRODUCT
+    EB.Template.setTableSubproduct('')        ;* Must be on EB.SUB.PRODUCT
     EB.Template.setTableClassification('INT')     ;* As per FILE.CONTROL
-    EB.Template.setTableSystemClearFile('N')       ;* As per FILE.CONTROL
-    EB.Template.setTableRelatedFiles('')        ;* As per FILE.CONTROL
-    EB.Template.setTableIsPostClosingFile('')        ;* As per FILE.CONTROL
-    EB.Template.setTableEquatePrefix('VAL.CUS') ;* Use to create I_F.EB.LOG.PARAMETER
+    EB.Template.setTableSystemclearfile('N')       ;* As per FILE.CONTROL
+    EB.Template.setTableRelatedfiles('')        ;* As per FILE.CONTROL
+    EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL
+    EB.Template.setTableEquateprefix('VAL.CUS') ;* Use to create I_F.EB.LOG.PARAMETER
 *-----------------------------------------------------------------------------
-    EB.Template.setTableIdPrefix('')         ;* Used by EB.FORMAT.ID if set
-    EB.Template.setTableBlockedFunctions('')         ;* Space delimeted list of blocked functions
-    EB.Template.setTableTrigger('')         ;* Trigger field used for OPERATION style fields
+    EB.Template.setTableIdprefix('')         ;* Used by EB.FORMAT.ID if set
+    EB.Template.setTableBlockedfunctions('')         ;* Space delimeted list of blocked functions
+    EB.Template.setTableTriggerfield('')         ;* Trigger field used for OPERATION style fields
 *-----------------------------------------------------------------------------
 
     RETURN

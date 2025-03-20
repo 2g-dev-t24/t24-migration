@@ -16,6 +16,7 @@ $PACKAGE ABC.BP
     $USING EB.Updates
     $USING EB.ErrorProcessing
     $USING ABC.BP
+    $USING EB.LocalReferences
 
     GOSUB INICIALIZA
     GOSUB PROCESO
@@ -28,11 +29,13 @@ INICIALIZA:
     F.ABC.BIOM = ''
     EB.DataAccess.Opf(FN.ABC.BIOM, F.ABC.BIOM)
 
-    Y.IUB.BIO = ''
-    R.FOL.BIO = ''
-    BAND.IUB.VER = ''
 
-    EB.Updates.MultiGetLocRef('CUSTOMER', 'IUB', POS.IUB)
+    V.APP      = 'CUSTOMER'
+    V.FLD.NAME = 'IUB'
+    V.FLD.POS  = ''
+
+    EB.LocalReferences.GetLocRef(V.APP,V.FLD.NAME,V.FLD.POS)
+    POS.IUB = V.FLD.POS<1,1>
 
     RETURN
 *---------------------------------------------------------------
@@ -40,10 +43,10 @@ PROCESO:
 *---------------------------------------------------------------
     Y.LOCAL.REF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
     Y.IUB.BIO = Y.LOCAL.REF<1,POS.IUB>
-    Y.FNCTION = V$FUNCTION
+    Y.FNCTION = EB.SystemTables.getVFunction()
 
     EB.DataAccess.FRead(FN.ABC.BIOM, Y.IUB.BIO, R.FOL.BIO, F.ABC.BIOM, ERR.FOL)
-    Y.STA.IUB =  R.FOL.BIO<ABC.BIOM.VERIFICADO>
+    Y.STA.IUB =  R.FOL.BIO<ABC.BP.AbcBiometricos.AbcBiomVerificado>
 
 
     BEGIN CASE
@@ -64,11 +67,11 @@ VERIFICA.IUB:
 *---------------------------------------------------------------
 
     IF BAND.IUB.VER EQ 'SI' THEN
-        R.FOL.BIO<ABC.BIOM.VERIFICADO> = 'NO'
+        R.FOL.BIO<ABC.BP.AbcBiometricos.AbcBiomVerificado> = 'NO'
     END
 
     IF BAND.IUB.VER NE 'SI' THEN
-        R.FOL.BIO<ABC.BIOM.VERIFICADO> = 'SI'
+        R.FOL.BIO<ABC.BP.AbcBiometricos.AbcBiomVerificado> = 'SI'
     END
 
     WRITE R.FOL.BIO TO F.ABC.BIOM, Y.IUB.BIO

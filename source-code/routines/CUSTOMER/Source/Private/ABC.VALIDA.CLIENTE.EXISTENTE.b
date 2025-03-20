@@ -1,9 +1,12 @@
- $PACKAGE ABC.BP
+*-----------------------------------------------------------------------------
+* <Rating>1450</Rating>
+*-----------------------------------------------------------------------------
+  $PACKAGE ABC.BP  
     SUBROUTINE ABC.VALIDA.CLIENTE.EXISTENTE
 *===============================================
 * Nombre de Programa:   ABC.VALIDA.CLIENTE.EXISTENTE
 * Objetivo:             Rutina para validar si el cliente
-*                       ingresado ya est√° registrado.
+*                       ingresado ya est· registrado.
 *===============================================
 
     $USING EB.SystemTables
@@ -25,7 +28,7 @@ INICIO:
 *******
 
     Y.ID = ''
-    Y.CLASSIFICATION = ''
+    Y.SECTOR = ''
     Y.RFC = ''
     Y.RFC.OLD = ''
     Y.CURP = ''
@@ -45,15 +48,13 @@ INICIO:
     EB.DataAccess.Opf(FN.ABC.INFO.VAL.CUS,F.ABC.INFO.VAL.CUS)
 
     Y.APP.LOC = 'CUSTOMER'
-    Y.FIELD.LOC = 'CLASSIFICATION':@VM:'NOM.PER.MORAL':@VM:'LUG.NAC':@VM:'LUGAR.CONST':@VM:'CLASS.COTI'
+    Y.FIELD.LOC = 'NOM.PER.MORAL':@VM:'LUGAR.CONST':@VM:'CLASS.COTI'
     Y.POS.LOC = ''
     EB.Updates.MultiGetLocRef(Y.APP.LOC, Y.FIELD.LOC, Y.POS.LOC)
 
-    Y.POS.CLASSIFICATION = Y.POS.LOC<1,1>
-    Y.POS.NOM.PER.MORAL = Y.POS.LOC<1,2>
-    Y.POS.LUG.NAC = Y.POS.LOC<1,3>
-    Y.POS.LUGAR.CONST = Y.POS.LOC<1,4>
-    Y.POS.CLASS.COTI = Y.POS.LOC<1,5>
+    Y.POS.NOM.PER.MORAL = Y.POS.LOC<1,1>
+    Y.POS.LUGAR.CONST = Y.POS.LOC<1,2>
+    Y.POS.CLASS.COTI = Y.POS.LOC<1,3>
 
     RETURN
 
@@ -61,11 +62,11 @@ INICIO:
 ********
 PROCESO:
 ********
-
+    
     Y.LOCAL.REF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
-    Y.CLASSIFICATION = Y.LOCAL.REF<1,Y.POS.CLASSIFICATION>
-    IF Y.CLASSIFICATION EQ 'COT' THEN
-        Y.CLASSIFICATION = Y.LOCAL.REF<1,Y.POS.CLASS.COTI>
+    Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
+    IF Y.SECTOR EQ 'COT' THEN
+        Y.SECTOR = Y.LOCAL.REF<1,Y.POS.CLASS.COTI>
     END
     Y.RFC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,1>
     Y.RFC.OLD = EB.SystemTables.getROld(ST.Customer.Customer.EbCusTaxId)<1,1>
@@ -73,16 +74,16 @@ PROCESO:
     Y.DATE.BIRTH = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
 
     IF Y.RFC EQ '' THEN
-        CALL ABC.GENERA.RFC('', Y.RFC, '' )
+        CALL ABC.BP.AbcGeneraRfc('', Y.RFC, '' )
         Y.RFC.BAN = '1'
     END
 
-    IF Y.CLASSIFICATION LT 3 THEN
+    IF Y.SECTOR LT 3 THEN
         Y.GENDER = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
         Y.SHORT.NAME = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusShortName))
         Y.NAME.1 = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne))
         Y.NAME.2 = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo))
-        Y.ESTADO = Y.LOCAL.REF<1,Y.POS.LUG.NAC>
+        Y.ESTADO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
         Y.RFC.ID = Y.RFC[1,10]
         Y.RFC.OLD.ID = Y.RFC.OLD[1,10]
     END ELSE
@@ -150,7 +151,7 @@ PROCESO:
             Y.NOM.PER.MORAL.1 = Y.NOM.PER.MORAL.LIST<X>
             Y.ESTADO.1 = Y.ESTADO.LIST<X>
 
-            IF Y.CLASSIFICATION LT 3 THEN
+            IF Y.SECTOR LT 3 THEN
                 IF Y.GENDER EQ Y.GENDER.1 AND Y.DATE.BIRTH EQ Y.DATE.BIRTH.1 AND Y.SHORT.NAME EQ Y.SHORT.NAME.1 AND Y.NAME.1 EQ Y.NAME.1.1 AND Y.NAME.2 EQ Y.NAME.2.1 AND Y.ESTADO EQ Y.ESTADO.1 THEN
                     IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
                         Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
@@ -221,7 +222,7 @@ PROCESO:
     WRITE R.VAL.CUS TO F.ABC.INFO.VAL.CUS, Y.RFC.ID
 
     IF Y.RFC.BAN EQ '1' THEN
-        Y.INSERT<1,1> = Y.RFC
+        Y.INSERT<1,1> = Y.RFC 
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
         EB.Display.RebuildScreen()
     END

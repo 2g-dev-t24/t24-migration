@@ -20,6 +20,30 @@ private method VpmEstado ()
 }
 
 # ------------------------------------
+# Tabla VPM.ESTADO
+# ------------------------------------
+private method VpmBancos ()
+{
+    jBC: VPM.BANCOS
+}
+
+# ------------------------------------
+# Tabla ABC.EMAIL.SMS.PARAMETER
+# ------------------------------------
+private method AbcEmailSmsParameter ()
+{
+    jBC: ABC.EMAIL.SMS.PARAMETER
+}
+
+# ------------------------------------
+# Tabla ABC.EMAIL.DOM.TERR
+# ------------------------------------
+private method AbcEmailDomTerr ()
+{
+    jBC: ABC.EMAIL.DOM.TERR
+}
+
+# ------------------------------------
 # Tabla ABC.INFO.VAL.CUS
 # ------------------------------------
 private method AbcInfoValCus ()
@@ -31,9 +55,63 @@ private method AbcInfoValCusFields ()
     jBC: ABC.INFO.VAL.CUS.FIELDS
 }
 
+# ------------------------------------
+# Tabla ABC.BIOMETRICOS
+# ------------------------------------
+private method AbcBiometricos ()
+{
+    jBC: ABC.BIOMETRICOS
+}
+private method AbcBiometricosFields ()
+{
+    jBC: ABC.BIOMETRICOS.FIELDS
+}
+
 # ------------------ TABLE END ------------------
 
 # ------------------ METHOD START ------------------
+private method VAbcCusTaxid2Check ()
+{
+    jBC: V.ABC.CUS.TAXID2.CHECK
+}
+private method VAbcCusRelcodeCheck ()
+{
+    jBC: V.ABC.CUS.RELCODE.CHECK
+}
+private method VAbcCusOriRecChk ()
+{
+    jBC: V.ABC.CUS.ORI.REC.CHK
+}
+private method VAbcCusDesRecChk ()
+{
+    jBC: V.ABC.CUS.DES.REC.CHK
+}
+private method AbcValidaNacionalidad ()
+{
+    jBC: ABC.VALIDA.NACIONALIDAD
+}
+private method AbcValidaCusResiStatus ()
+{
+    jBC: ABC.VALIDA.CUS.RESI.STATUS
+}
+private method AbcValStaff ()
+{
+    jBC: ABC.VAL.STAFF
+}
+private method AbcCalcIngTotalCust ()
+{
+    jBC: ABC.CALC.ING.TOTAL.CUST
+}
+
+private method VAbcCusMarStatusChk ()
+{
+    jBC: V.ABC.CUS.MAR.STATUS.CHK
+}
+
+private method VAbcCusDomAnosChk ()
+{
+    jBC: V.ABC.CUS.DOM.ANOS.CHK
+}
 
 private method AbcCustYaexiste ()
 {
@@ -69,55 +147,77 @@ private method VpmNumClienteUnicoChk ()
 {
     jBC: VPM.NUM.CLIENTE.UNICO.CHK
 }
-private method AbcValidaCusRelcode (INOUT IncomingArg string)
+private method AbcValidaCusRelcode (INOUT YRelcode string)
 {
     jBC: ABC.VALIDA.CUS.RELCODE
 }
 
-private method AbcValidaCusMarstatus (INOUT IncomingArg string)
+private method AbcValidaCusMarstatus (INOUT YEdoCivil string)
 {
     jBC: ABC.VALIDA.CUS.MARSTATUS
 }
-private method AbcValidaFimaElect (INOUT IncomingArg string)
+private method AbcValidaFimaElect (INOUT YTieneFirma string)
 {
     jBC: ABC.VALIDA.FIMA.ELECT
 }
 ***
-private method AbcValidaEmpleAbc (INOUT IncomingArg string)
+private method AbcValidaEmpleAbc (INOUT VStaffOff string)
 {
     jBC: ABC.VALIDA.EMPLE.ABC
 }
 
-private method AbcHabilitaOtraVivienda (INOUT IncomingArg string)
+private method AbcHabilitaOtraVivienda (INOUT YValor string)
 {
     jBC: ABC.HABILITA.OTRA.VIVIENDA
 }
 
-private method AbcCusValidaOrigRec (INOUT IncomingArg string)
+private method AbcCusValidaOrigRec (INOUT VOrigenRecursos string)
 {
     jBC: ABC.CUS.VALIDA.ORIG.REC
 }
 
-private method AbcCusValidaDestRec (INOUT IncomingArg string)
+private method AbcCusValidaDestRec (INOUT YDestinoRecursos string)
 {
     jBC: ABC.CUS.VALIDA.DEST.REC
 }
 
-private method AbcHabilitaDirCus (INOUT IncomingArg string)
+private method AbcGeneraRfc(INOUT InIdCliente string, INOUT OutRfc string, INOUT OutError string)
 {
-    jBC: ABC.HABILITA.DIR.CUS
+    jBC: ABC.GENERA.RFC
 }
 
-private method AbcCustValidaTodo (
-    INOUT IncomingArg string,
-    INOUT DatosDos string,
-)
+private method AbcValTaxId ()
+{
+    jBC: ABC.VAL.TAX.ID
+}
+
+private method VpmCantidadLetra (INOUT InAmt string, INOUT OutAmt string, INOUT LineLength string, INOUT NoOfLines string, INOUT ErrMsg string)
+{
+    jBC: VPM.CANTIDAD.LETRA
+}
+
+private method VpmVCustomerName ()
+{
+    jBC: VPM.V.CUSTOMER.NAME
+}
+
+private method AbcVerificaFolioBiometrico ()
+{
+    jBC: ABC.VERIFICA.FOLIO.BIOMETRICO
+}
+
+private method AbcCustValidaTodo(INOUT YValActual string, INOUT YOrigen string)
 {
     jBC: ABC.CUST.VALIDA.TODO
 }
 
-private method AbcTestInput()
+private method AbcHabilitaDirCus (INOUT YNumAnios string)
 {
-    jBC: ABC.TEST.INPUT
+    jBC: ABC.HABILITA.DIR.CUS
+}
+
+private method AbcValidaEmail ()
+{
+    jBC: ABC.VALIDA.EMAIL
 }
 # ------------------ METHOD END ------------------
