@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTM0OTcyNTUzOkNwMTI1MjoxNzQyNzU4NjA0MDc2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 23 Mar 2025 16:36:44
+* @ValidationCode : Mjo3NDA4OTEyNDc6Q3AxMjUyOjE3NDI3NjA1MDUxMzE6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 23 Mar 2025 17:08:25
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -142,37 +142,37 @@ ARMA.CTE:
     Y.NAME.2            = REC.CUS<ST.Customer.Customer.EbCusNameTwo>
     Y.DATE.OF.BIRTH     = REC.CUS<ST.Customer.Customer.EbCusDateOfBirth>
     Y.GENDER            = REC.CUS<ST.Customer.Customer.EbCusGender>
-    Y.TAX.ID            = REC.CUS<EB.CUS.TAX.ID>
-    Y.EXTERN.CUS.ID     = REC.CUS<EB.CUS.EXTERN.CUS.ID>
-    Y.BIRTH.INCORP.DATE = REC.CUS<EB.CUS.BIRTH.INCORP.DATE>
-    Y.NATIONALITY       = REC.CUS<EB.CUS.NATIONALITY>
-    Y.RESIDENCE         = REC.CUS<EB.CUS.RESIDENCE>
-    Y.LEGAL.DOC.NAME    = REC.CUS<EB.CUS.LEGAL.DOC.NAME>
-    Y.LEGAL.ID          = REC.CUS<EB.CUS.LEGAL.ID>
-    Y.LEGAL.ISS.DATE    = REC.CUS<EB.CUS.LEGAL.ISS.DATE>
-    Y.LEGAL.EXP.DATE    = REC.CUS<EB.CUS.LEGAL.EXP.DATE>
-    Y.MARITAL.STATUS    = REC.CUS<EB.CUS.MARITAL.STATUS>
-    Y.EMPLOYMENT.STATUS = REC.CUS<EB.CUS.EMPLOYMENT.STATUS>
-    Y.EMPLOYERS.NAME    = REC.CUS<EB.CUS.EMPLOYERS.NAME>
-    Y.EMPLOYMENT.START  = REC.CUS<EB.CUS.EMPLOYMENT.START>
-    Y.SALARY            = REC.CUS<EB.CUS.SALARY>
-    Y.CUSTOMER.CURRENCY = REC.CUS<EB.CUS.CUSTOMER.CURRENCY>
-    Y.SECTOR            = REC.CUS<EB.CUS.SECTOR>
-    Y.INDUSTRY          = REC.CUS<EB.CUS.INDUSTRY>
-    Y.PHONE.1           = REC.CUS<EB.CUS.PHONE.1>
-    Y.OFF.PHONE         = REC.CUS<EB.CUS.OFF.PHONE>
-    Y.SMS.1             = REC.CUS<EB.CUS.SMS.1>
-    Y.EMAIL.1           = REC.CUS<EB.CUS.EMAIL.1>
-    Y.ACCOUNT.OFFICER   = REC.CUS<EB.CUS.ACCOUNT.OFFICER>
-    Y.STREET            = REC.CUS<EB.CUS.STREET>
-    Y.ADDRESS           = REC.CUS<EB.CUS.ADDRESS>
-    Y.TOWN.COUNTRY      = REC.CUS<EB.CUS.TOWN.COUNTRY>
-    Y.POST.CODE         = REC.CUS<EB.CUS.POST.CODE>
-    Y.COUNTRY           = REC.CUS<EB.CUS.COUNTRY>
-    Y.TARGET            = REC.CUS<EB.CUS.TARGET>
-    Y.LANGUAGE          = REC.CUS<EB.CUS.LANGUAGE>
-    Y.COMPANY.BOOK      = REC.CUS<EB.CUS.COMPANY.BOOK>
-    Y.CLS.CPARTY        = REC.CUS<EB.CUS.CLS.CPARTY>
+    Y.TAX.ID            = REC.CUS<ST.Customer.Customer.EbCusTaxId>
+    Y.EXTERN.CUS.ID     = REC.CUS<ST.Customer.Customer.EbCusExternCusId>
+    Y.BIRTH.INCORP.DATE = REC.CUS<ST.Customer.Customer.EbCusBirthIncorpDate>
+    Y.NATIONALITY       = REC.CUS<ST.Customer.Customer.EbCusNationality>
+    Y.RESIDENCE         = REC.CUS<ST.Customer.Customer.EbCusResidence>
+    Y.LEGAL.DOC.NAME    = REC.CUS<ST.Customer.Customer.EbCusLegalDocName>
+    Y.LEGAL.ID          = REC.CUS<ST.Customer.Customer.EbCusLegalId>
+    Y.LEGAL.ISS.DATE    = REC.CUS<ST.Customer.Customer.EbCusLegalIssDate>
+    Y.LEGAL.EXP.DATE    = REC.CUS<ST.Customer.Customer.EbCusLegalExpDate>
+    Y.MARITAL.STATUS    = REC.CUS<ST.Customer.Customer.EbCusMaritalStatus>
+    Y.EMPLOYMENT.STATUS = REC.CUS<ST.Customer.Customer.EbCusEmploymentStatus>
+    Y.EMPLOYERS.NAME    = REC.CUS<ST.Customer.Customer.EbCusEmployersName>
+    Y.EMPLOYMENT.START  = REC.CUS<ST.Customer.Customer.EbCusEmploymentStart>
+    Y.SALARY            = REC.CUS<ST.Customer.Customer.EbCusSalary>
+    Y.CUSTOMER.CURRENCY = REC.CUS<ST.Customer.Customer.EbCusCustomerCurrency>
+    Y.SECTOR            = REC.CUS<ST.Customer.Customer.EbCusSector>
+    Y.INDUSTRY          = REC.CUS<ST.Customer.Customer.EbCusIndustry>
+    Y.PHONE.1           = REC.CUS<ST.Customer.Customer.EbCusPhoneOne>
+    Y.OFF.PHONE         = REC.CUS<ST.Customer.Customer.EbCusOffPhone>
+    Y.SMS.1             = REC.CUS<ST.Customer.Customer.EbCusSmsOne>
+    Y.EMAIL.1           = REC.CUS<ST.Customer.Customer.EbCusEmailOne>
+    Y.ACCOUNT.OFFICER   = REC.CUS<ST.Customer.Customer.EbCusAccountOfficer>
+    Y.STREET            = REC.CUS<ST.Customer.Customer.EbCusStreet>
+    Y.ADDRESS           = REC.CUS<ST.Customer.Customer.EbCusAddress>
+    Y.TOWN.COUNTRY      = REC.CUS<ST.Customer.Customer.EbCusTownCountry>
+    Y.POST.CODE         = REC.CUS<ST.Customer.Customer.EbCusPostCode>
+    Y.COUNTRY           = REC.CUS<ST.Customer.Customer.EbCusCountry>
+    Y.TARGET            = REC.CUS<ST.Customer.Customer.EbCusTarget>
+    Y.LANGUAGE          = REC.CUS<ST.Customer.Customer.EbCusLanguage>
+    Y.COMPANY.BOOK      = REC.CUS<ST.Customer.Customer.EbCusCompanyBook>
+    Y.CLS.CPARTY        = REC.CUS<ST.Customer.Customer.EbCusClsCparty>
 
 * Armo la Cadena de Salida
     Y.ARR.ARCH.SALIDA.TMP  = ""
