@@ -1,0 +1,8 @@
+component ABC.COMPARATIVO
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+private method AbcComparativoCte ()
+{
+    jBC: ABC.COMPARATIVO.CTE
+}
