@@ -70,6 +70,11 @@ private method AbcBiometricosFields ()
 # ------------------ TABLE END ------------------
 
 # ------------------ METHOD START ------------------
+
+private method AbcCheckCamposLocales ()
+{
+    jBC: ABC.CHECK.CAMPOS.LOCALES
+}
 private method VAbcCusTaxid2Check ()
 {
     jBC: V.ABC.CUS.TAXID2.CHECK

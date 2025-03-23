@@ -12,9 +12,10 @@ $PACKAGE ABC.BP
     $USING EB.SystemTables
     $USING EB.DataAccess
     $USING ST.Customer
-	
+	$USING EB.Display
+
     GOSUB PROCESS
-	CALL REBUILD.SCREEN
+	EB.Display.RebuildScreen()
 RETURN
 
 ********
