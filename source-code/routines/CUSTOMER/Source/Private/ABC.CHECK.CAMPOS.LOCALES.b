@@ -1,13 +1,12 @@
 *-----------------------------------------------------------------------------
 * <Rating>-22</Rating>
 *-----------------------------------------------------------------------------
-*   Fecha: Mayo 2015
-*   Autor: Omar Basabe.
+*   Fecha: 
+*   Autor:
 *
 *-----------------------------------------------------------------------------
 $PACKAGE ABC.BP
-    SUBROUTINE ABC.HABILITA.DIR.CUS(Y.NUM.ANIOS)
-
+    SUBROUTINE ABC.CHECK.CAMPOS.LOCALES
     $USING EB.Reports
     $USING EB.SystemTables
     $USING EB.DataAccess
@@ -39,23 +38,13 @@ POS.LOCALES:
     Y.POS.DIR.DEL.MUN.ANT = POS.CAMP.LOCAL<1,5> 
     Y.POS.DIR.CD.EDO.ANT  = POS.CAMP.LOCAL<1,6> 
     Y.POS.DIR.PAIS.ANT    = POS.CAMP.LOCAL<1,7> 
-    Y.POS.ABC.NUM.INT.ANT = POS.CAMP.LOCAL<1,8>
+    Y.POS.ABC.NUM.INT.ANT = POS.CAMP.LOCAL<1,8> 
     RETURN
 
 *************
 PROCESO:
 **********************
 
-    Y.BANDERA = 0
-    IF Y.NUM.ANIOS = "" THEN
-        Y.BANDERA = 1
-        Y.NUM.ANIOS = 2
-    END
-
-
-    IF Y.NUM.ANIOS GE 2 THEN
-
-        
         tmp=EB.SystemTables.getTLocref()
         tmp<Y.POS.CALLE.ANT,7>="NOINPUT"
         tmp<Y.POS.DIR.NUM.EXT.ANT,7>="NOINPUT"
@@ -66,26 +55,6 @@ PROCESO:
         tmp<Y.POS.DIR.PAIS.ANT,7>="NOINPUT"
         tmp<Y.POS.ABC.NUM.INT.ANT,7>="NOINPUT"
         EB.SystemTables.setTLocref(tmp)
-        
-        tmp=EB.SystemTables.getT(ST.Customer.Customer.EbCusTownCountry)<1,2>
-        tmp<3>="NOINPUT"
-        EB.SystemTables.setT(ST.Customer.Customer.EbCusTownCountry, tmp)
 
-    END ELSE
-        tmp=EB.SystemTables.getTLocref()
-        tmp<Y.POS.CALLE.ANT,7>="INPUT"   
-        tmp<Y.POS.DIR.NUM.EXT.ANT,7>="INPUT"         
-        tmp<Y.POS.DIR.COD.POS.ANT,7>="INPUT"     
-        tmp<Y.POS.DIR.COLONIA.ANT,7>="INPUT"    
-        tmp<Y.POS.DIR.DEL.MUN.ANT,7>=""    
-        tmp<Y.POS.DIR.CD.EDO.ANT,7>=""       
-        tmp<Y.POS.DIR.PAIS.ANT,7>=""
-        tmp<Y.POS.ABC.NUM.INT.ANT,7>="INPUT"
-
-    END
-
-    IF Y.BANDERA = 1 THEN
-        Y.NUM.ANIOS = ""
-    END
     RETURN
 END

@@ -1,24 +1,12 @@
-* @ValidationCode : MjoxNDQwMjU4ODYxOkNwMTI1MjoxNzQyNTAxODQyOTYzOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 20 Mar 2025 17:17:22
-* @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
-* @ValidationInfo : Nb tests success  : N/A
-* @ValidationInfo : Nb tests failure  : N/A
-* @ValidationInfo : Rating            : N/A
-* @ValidationInfo : Coverage          : N/A
-* @ValidationInfo : Strict flag       : N/A
-* @ValidationInfo : Bypass GateKeeper : false
-* @ValidationInfo : Compiler Version  : R24_SP1.0
-* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *------------------------------------------------------------------------------------
 * <Rating>-26</Rating>
 *------------------------------------------------------------------------------------
 $PACKAGE ABC.BP
-SUBROUTINE ABC.VAL.TAX.ID
+    SUBROUTINE ABC.VAL.TAX.ID
 *------------------------------------------------------------------------------------
-* DESCRIPCION:
-* FECHA:
-* AUTOR:
+* DESCRIPCION: 
+* FECHA:       
+* AUTOR:       
 *
 *------------------------------------------------------------------------------------
 
@@ -33,19 +21,19 @@ SUBROUTINE ABC.VAL.TAX.ID
     GOSUB INICIALIZA
     GOSUB LEE.CAMPO
 
-RETURN
+    RETURN
 ***********
 INICIALIZA:
 ***********
 
-    FN.CLIENTE   = 'F.CUSTOMER'          ; F.CLIENTE   = '' ; EB.DataAccess.Opf(FN.CLIENTE,F.CLIENTE)
+    FN.CLIENTE   = 'F.CUSTOMER'          ; F.CLIENTE   = '' ; CALL OPF(FN.CLIENTE,F.CLIENTE)
 
     EB.LocalReferences.GetLocRef("CUSTOMER","ABC.FIRMA.ELECT",Y.POS.FIRMA.ELE)
     EB.LocalReferences.GetLocRef("CUSTOMER","CDNIA.RESID.EUA",Y.POS.CDNIA.EUA)
     EB.LocalReferences.GetLocRef("CUSTOMER","CLASSIFICATION",Y.POS.CLASSIFICATION)
     EB.LocalReferences.GetLocRef("CUSTOMER","TIPO.EMP.OTRO",Y.POS.TIPO.EMP.OTRO)
 
-RETURN
+    RETURN
 ************
 LEE.CAMPO:
 ************
@@ -127,6 +115,6 @@ LEE.CAMPO:
         END
     END
 
-RETURN
+    RETURN
 
 END

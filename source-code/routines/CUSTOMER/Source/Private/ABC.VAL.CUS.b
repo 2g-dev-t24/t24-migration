@@ -1,20 +1,9 @@
-* @ValidationCode : MjotMTQ4MTg5MDg2MDpDcDEyNTI6MTc0MjUwMDk5MjEwMjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 20 Mar 2025 17:03:12
-* @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
-* @ValidationInfo : Nb tests success  : N/A
-* @ValidationInfo : Nb tests failure  : N/A
-* @ValidationInfo : Rating            : N/A
-* @ValidationInfo : Coverage          : N/A
-* @ValidationInfo : Strict flag       : N/A
-* @ValidationInfo : Bypass GateKeeper : false
-* @ValidationInfo : Compiler Version  : R24_SP1.0
-* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>492</Rating>
 *-----------------------------------------------------------------------------
-$PACKAGE ABC.BP
-SUBROUTINE ABC.VAL.CUS
+  $PACKAGE ABC.BP  
+    SUBROUTINE ABC.VAL.CUS
+
 *======================================================================================
 * Nombre de Programa : ABC.VAL.CUS
 * Objetivo           : Rutina para validar la existencia del cliente y generar el RFC
@@ -40,7 +29,7 @@ SUBROUTINE ABC.VAL.CUS
                 EB.ErrorProcessing.StoreEndError()
                 RETURN
             END
-        END ELSE
+        END ELSE 
             Y.ERROR = MENSAJE
             EB.SystemTables.setEtext(Y.ERROR)
             EB.ErrorProcessing.StoreEndError()
@@ -52,7 +41,7 @@ SUBROUTINE ABC.VAL.CUS
         EB.ErrorProcessing.StoreEndError()
         RETURN
     END
-RETURN
+    RETURN
 
 *********
 INICIO:
@@ -69,7 +58,7 @@ INICIO:
     Y.SEXO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
     Y.RFC.ORI = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,1>
 
-RETURN
+    RETURN
 
 ******************
 LIMPIA.VARIABLES:
@@ -92,7 +81,7 @@ LIMPIA.VARIABLES:
     Y.LUG.NAC = ''
     Y.SEL = ''
 
-RETURN
+    RETURN
 *********
 BUSQUEDA:
 *********
@@ -179,13 +168,13 @@ BUSQUEDA:
         END
 
         IF Y.RFC.ORI EQ '' THEN
-            Y.INSERT<1,1> = V.RFC
+            Y.INSERT<1,1> = V.RFC 
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
             EB.Display.RebuildScreen()
         END
     END
 
-RETURN
+    RETURN
 
 *********************
 LIMPIA.VARIABLES.BUS:
@@ -200,7 +189,7 @@ LIMPIA.VARIABLES.BUS:
     Y.NOM.PER.MORAL.1 = ''
     Y.ESTADO.1 = ''
 
-RETURN
+    RETURN
 
 *************
 VALIDA.DATOS:
@@ -231,7 +220,7 @@ VALIDA.DATOS:
         RETURN
     END
 
-RETURN
+    RETURN
 
 *************
 OPEN.FILES:
@@ -241,6 +230,6 @@ OPEN.FILES:
     F.ABC.INFO.VAL.CUS = ''
     EB.DataAccess.Opf(FN.ABC.INFO.VAL.CUS,F.ABC.INFO.VAL.CUS)
 
-RETURN
+    RETURN
 
 END
