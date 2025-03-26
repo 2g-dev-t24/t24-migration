@@ -77,9 +77,9 @@ PROCESO:
         tmp<Y.POS.DIR.NUM.EXT.ANT,7>="INPUT"         
         tmp<Y.POS.DIR.COD.POS.ANT,7>="INPUT"     
         tmp<Y.POS.DIR.COLONIA.ANT,7>="INPUT"    
-        tmp<Y.POS.DIR.DEL.MUN.ANT,7>=""    
-        tmp<Y.POS.DIR.CD.EDO.ANT,7>=""       
-        tmp<Y.POS.DIR.PAIS.ANT,7>=""
+        tmp<Y.POS.DIR.DEL.MUN.ANT,7>="INPUT"    
+        tmp<Y.POS.DIR.CD.EDO.ANT,7>="INPUT"       
+        tmp<Y.POS.DIR.PAIS.ANT,7>="INPUT"
         tmp<Y.POS.ABC.NUM.INT.ANT,7>="INPUT"
 
     END

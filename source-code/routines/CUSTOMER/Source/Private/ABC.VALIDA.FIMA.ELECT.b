@@ -18,14 +18,15 @@ $PACKAGE ABC.BP
 PROCESS:
 ********
     IF Y.TIENE.FIRMA EQ 'NO' THEN
-         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusText,'')
-        tmp=EB.SystemTables.getT(ST.Customer.Customer.EbCusText)
+
+         Y.POS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
+         Y.POS<1,2> = ""
+         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId,Y.POS)
+
+    END 
+        tmp=EB.SystemTables.getT(ST.Customer.Customer.EbCusTaxId)
         tmp<3>=""
-        EB.SystemTables.setT(ST.Customer.Customer.EbCusText, tmp)
-    END ELSE
-        tmp=EB.SystemTables.getT(ST.Customer.Customer.EbCusText)
-        tmp<3>=""
-        EB.SystemTables.setT(ST.Customer.Customer.EbCusText, tmp)
-    END
+        EB.SystemTables.setT(ST.Customer.Customer.EbCusTaxId, tmp)
+    
     RETURN
 END

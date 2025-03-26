@@ -12,35 +12,28 @@ $PACKAGE ABC.BP
     $USING EB.LocalReferences
     $USING EB.Display
 
-    EB.LocalReferences.GetLocRef("CUSTOMER","T.VIVIENDA.OTRO",Y.POS)
 
+    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceType,'')  
 
-    Y.LOCAL.REF             = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
-    Y.LOCAL.REF<1,Y.POS> = ""
-    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)  
     IF Y.VALOR EQ 6 OR Y.VALOR EQ "OTRA" THEN
-    	tmp=EB.SystemTables.getTLocref()
-        tmp<Y.POS,7>=""
-        EB.SystemTables.setTLocref(tmp)
+    	tmp=EB.SystemTables.getT(ST.Customer.Customer.EbCusResidenceType)
+        tmp<3>=""
+        EB.SystemTables.setT(ST.Customer.Customer.EbCusResidenceType, tmp)
     END ELSE
 
-    	IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS> NE "" THEN    
-    		
-            Y.LOCAL.REF             = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
-            Y.LOCAL.REF<1,Y.POS> = ''
-            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
+    	IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusResidenceType) NE "" THEN    
+    		EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceType,'') 
     	END ELSE
-            Y.LOCAL.REF             = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
-            Y.LOCAL.REF<1,Y.POS> = 'NO APLICA'
-            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
+          EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceType,'')
+*            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceType,'Propia')
     		
     	END
     	
-        tmp=EB.SystemTables.getTLocref()
-        tmp<Y.POS,7>="NOINPUT"
-        EB.SystemTables.setTLocref(tmp)
+        tmp=EB.SystemTables.getT(ST.Customer.Customer.EbCusResidenceType)
+        tmp<3>="NOINPUT"
+        EB.SystemTables.setT(ST.Customer.Customer.EbCusResidenceType, tmp)
     END
     EB.Display.RebuildScreen()
-    CALL REFRESH.GUI.OBJECTS
+*    CALL REFRESH.GUI.OBJECTS
 RETURN
 END

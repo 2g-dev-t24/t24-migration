@@ -26,7 +26,7 @@ $PACKAGE ABC.BP
 INICIALIZA:
 ***********
 
-    FN.CLIENTE   = 'F.CUSTOMER'          ; F.CLIENTE   = '' ; CALL OPF(FN.CLIENTE,F.CLIENTE)
+    FN.CLIENTE   = 'F.CUSTOMER'          ; F.CLIENTE   = '' ; EB.DataAccess.Opf(FN.CLIENTE,F.CLIENTE)
 
     EB.LocalReferences.GetLocRef("CUSTOMER","ABC.FIRMA.ELECT",Y.POS.FIRMA.ELE)
     EB.LocalReferences.GetLocRef("CUSTOMER","CDNIA.RESID.EUA",Y.POS.CDNIA.EUA)
