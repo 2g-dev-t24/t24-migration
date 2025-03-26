@@ -1,0 +1,10 @@
+component ABC.BIOMETRICOS
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcNofileBiometricosAlta (INOUT RData string)
+{
+    jBC: ABC.NOFILE.BIOMETRICOS.ALTA
+}
+
+# ------------------ METHOD END ------------------
