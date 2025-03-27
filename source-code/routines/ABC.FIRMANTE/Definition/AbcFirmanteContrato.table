@@ -1,0 +1,23 @@
+public table AbcFirmanteContrato {
+    t24: ABC.FIRMANTE.CONTRATO
+    fields:{
+        AbcFirmanteContratoFrContNombre(ABC.FIR.CONT.NOMBRE.FIRMANTE)      = 1
+        AbcFirmanteContratoApellidoPaterno(ABC.FIR.CONT.APELLIDO.PATERNO)  = 2
+        AbcFirmanteContratoApellidoMaterno(ABC.FIR.CONT.APELLIDO.MATERNO)  = 3
+        AbcFirmanteContratoReserved4(ABC.FIR.CONT.RESERVED.4)              = 4
+        AbcFirmanteContratoReserved3(ABC.FIR.CONT.RESERVED.3)              = 5
+        AbcFirmanteContratoReserved2(ABC.FIR.CONT.RESERVED.2)              = 6
+        AbcFirmanteContratoReserved1(ABC.FIR.CONT.RESERVED.1)              = 7
+        AbcFirmanteContratoLocalRef(ABC.FIR.CONT.LOCAL.REF)                = 8
+        AbcFirmanteContratoOverride(ABC.FIR.CONT.OVERRIDE)                 = 9
+        AbcFirmanteContratoRecordStatus(ABC.FIR.CONT.RECORD.STATUS)        = 10
+        AbcFirmanteContratoCurrNo(ABC.FIR.CONT.CURR.NO)                    = 11
+        AbcFirmanteContratoInputter(ABC.FIR.CONT.INPUTTER)                 = 12
+        AbcFirmanteContratoDateTime(ABC.FIR.CONT.DATE.TIME)                = 13
+        AbcFirmanteContratoAuthoriser(ABC.FIR.CONT.AUTHORISER)             = 14
+        AbcFirmanteContratoCoCode(ABC.FIR.CONT.CO.CODE)                    = 15
+        AbcFirmanteContratoDeptCode(ABC.FIR.CONT.DEPT.CODE)                = 16
+        AbcFirmanteContratoAuditorCode(ABC.FIR.CONT.AUDITOR.CODE)          = 17
+        AbcFirmanteContratoAuditDateTime(ABC.FIR.CONT.AUDIT.DATE.TIME)     = 18
+    }
+}
