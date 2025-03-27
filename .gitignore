@@ -1,0 +1,6 @@
+# Ignorar la carpeta de configuración de IntelliJ IDEA
+.idea/
+
+# Ignorar archivos específicos
+.project
+.tafj
