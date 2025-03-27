@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo3NDA4OTEyNDc6Q3AxMjUyOjE3NDI3NjA1MDUxMzE6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 23 Mar 2025 17:08:25
+* @ValidationCode : MjoxNzIxMzk4NDQ6Q3AxMjUyOjE3NDMwODk2MzM5MzE6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 27 Mar 2025 12:33:53
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -24,7 +24,7 @@ PROGRAM ABC.COMPARATIVO.CTE
     $USING EB.DataAccess
     $USING EB.SystemTables
     $USING ST.Customer
-    
+    $USING EB.LocalReferences
     GOSUB INITIALIZE
     GOSUB PROCESS
 
@@ -371,7 +371,7 @@ ARMA.CTE:
     Y.FIELDS := "EMP.PUESTO"      : Y.SEPA1
     Y.FIELDS := "EMP.CALLE"
 
-    CALL GET.LOC.REFM("CUSTOMER",Y.FIELDS,LOCALPOS)
+    EB.LocalReferences.GetLocRef("CUSTOMER",Y.FIELDS,LOCALPOS)
 
     Y.POS.STAFF.OFFICIAL   = FIELD(LOCALPOS,Y.SEPA1,1)
     Y.POS.CLASSIFICATION   = FIELD(LOCALPOS,Y.SEPA1,2)

@@ -1,0 +1,14 @@
+component ABC.ATM
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcAtm ()
+{
+    jBC: ABC.ATM
+}
+
+private method AbcAtmFields ()
+{
+    jBC: ABC.ATM.FIELDS
+}
+# ------------------ METHOD END ------------------

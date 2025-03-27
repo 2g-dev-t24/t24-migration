@@ -1,0 +1,45 @@
+public table AbcAtm {
+    t24: ABC.ATM
+    fields:{
+        AbcAtmClavePuntoTrans(ABC.ATM.CLAVE.PUNTO.TRANS) = 1
+        AbcAtmDenomPuntoTrans(ABC.ATM.DENOM.PUNTO.TRANS) = 2
+        AbcAtmClaveTipoTrans(ABC.ATM.CLAVE.TIPO.TRANS)   = 3
+        AbcAtmClaveSituacion(ABC.ATM.CLAVE.SITUACION)    = 4
+        AbcAtmFechaSituacion(ABC.ATM.FECHA.SITUACION)    = 5
+        AbcAtmDirCalle(ABC.ATM.DIR.CALLE)                = 6
+        AbcAtmDirNumExt(ABC.ATM.DIR.NUM.EXT)             = 7
+        AbcAtmDirNumInt(ABC.ATM.DIR.NUM.INT)             = 8
+        AbcAtmColoniaCnbv(ABC.ATM.COLONIA.CNBV)          = 9
+        AbcAtmLocalidadBanxico(ABC.ATM.LOCALIDAD.BANXICO)= 10
+        AbcAtmLocalidadCnbv(ABC.ATM.LOCALIDAD.CNBV)      = 11
+        AbcAtmMunicipioCnbv(ABC.ATM.MUNICIPIO.CNBV)      = 12
+        AbcAtmDirEstado(ABC.ATM.DIR.ESTADO)              = 13 
+        AbcAtmVpmEstado(ABC.VPM.ESTADO)                  = 14
+
+        AbcAtmDirCodpos(ABC.ATM.DIR.CODPOS)              = 15
+        AbcAtmLatitud(ABC.ATM.LATITUD)                   = 16
+        AbcAtmLongitud(ABC.ATM.LONGITUD)                 = 17
+        AbcAtmHorarioCajero(ABC.ATM.HORARIO.CAJERO)      = 18
+        AbcAtmComisionRetiro(ABC.ATM.COMISION.RETIRO)    = 19
+        AbcAtmComisionConsulta(ABC.ATM.COMISION.CONSULTA = 20
+        AbcAtmCriterioComision(ABC.ATM.CRITERIO.COMISION)= 21
+        AbcAtmTipoAcceso(ABC.ATM.TIPO.ACCESO)            = 22
+        AbcAtmDisplensaBaja(ABC.ATM.DISPLENSA.BAJA)      = 23
+        AbcAtmIva(ABC.ATM.IVA)                           = 24
+        AbcAtmDenominacion(ABC.ATM.DENOMINACION)         = 25
+        AbcAtmPosicion(ABC.ATM.POSICION)                 = 26
+
+        AbcAtmReserved2(ABC.ATM.RESERVED.2)              = 27
+        AbcAtmReserved1(ABC.ATM.RESERVED.1)              = 28
+
+        AbcAtmRecordStatus(ABC.ATM.RECORD.STATUS)        = 29
+        AbcAtmCurrNo(ABC.ATM.CURR.NO)                    = 30
+        AbcAtmInputter(ABC.ATM.INPUTTER)                 = 31
+        AbcAtmDateTime(ABC.ATM.DATE.TIME)                = 32
+        AbcAtmAuthoriser(ABC.ATM.AUTHORISER)             = 33
+        AbcAtmCoCode(ABC.ATM.CO.CODE)                    = 34
+        AbcAtmDeptCode(ABC.ATM.DEPT.CODE)                = 35
+        AbcAtmAuditorCode(ABC.ATM.AUDITOR.CODE)          = 36
+        AbcAtmAuditDateTime(ABC.ATM.AUDIT.DATE.TIME)     = 37
+    }
+}
