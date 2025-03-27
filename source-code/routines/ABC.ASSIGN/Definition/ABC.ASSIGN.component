@@ -1,0 +1,20 @@
+component ABC.ASSIGN
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcAssignDaoAcct ()
+{
+    jBC: ABC.ASSIGN.DAO.ACCT
+}
+
+private method bcAssignDaoCust ()
+{
+    jBC: ABC.ASSIGN.DAO.CUST
+}
+
+private method AbcAsignaNombrePropietario ()
+{
+    jBC: ABC.ASIGNA.NOMBRE.PROPIETARIO
+}
+
+# ------------------ METHOD END ------------------
