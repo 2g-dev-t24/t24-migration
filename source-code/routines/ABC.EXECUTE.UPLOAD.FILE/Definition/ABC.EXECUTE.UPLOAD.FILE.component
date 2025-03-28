@@ -1,0 +1,10 @@
+component ABC.EXECUTE.UPLOAD.FILE
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcExecuteUploadFile (INOUT RData string)
+{
+    jBC: ABC.EXECUTE.UPLOAD.FILE
+}
+
+# ------------------ METHOD END ------------------

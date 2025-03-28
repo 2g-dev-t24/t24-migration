@@ -1,0 +1,10 @@
+component ABC.PARAM.FILE.UPLOAD.LOAD
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcParamFileUploadLoad (INOUT YIdAbcUploadFile string, INOUT ArrRespOfsAplica string)
+{
+    jBC: ABC.PARAM.FILE.UPLOAD.LOAD
+}
+
+# ------------------ METHOD END ------------------
