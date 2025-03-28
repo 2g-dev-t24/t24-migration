@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTU2ODQwNTkyNTpDcDEyNTI6MTc0MzA4NTM3MzU1NTpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 27 Mar 2025 11:22:53
+* @ValidationCode : Mjo3NjU0MjgzNDE6Q3AxMjUyOjE3NDMxMjY0NzU0NjE6THVpcyBDYXByYTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 27 Mar 2025 22:47:55
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -10,7 +10,7 @@
 * @ValidationInfo : Bypass GateKeeper : true
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
-$PACKAGE ABC.ATM
+$PACKAGE AbcAtm
 SUBROUTINE ABC.ATM.FIELDS
 *-----------------------------------------------------------------------------
 *

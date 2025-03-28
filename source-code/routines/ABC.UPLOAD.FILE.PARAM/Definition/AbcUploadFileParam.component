@@ -1,4 +1,4 @@
-component ABC.UPLOAD.FILE.PARAM
+component AbcUploadFileParam
 # Component Isolation Definition
 metamodelVersion 1.6
 

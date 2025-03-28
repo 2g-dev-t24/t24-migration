@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNzIxMzk4NDQ6Q3AxMjUyOjE3NDMwODk2MzM5MzE6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 27 Mar 2025 12:33:53
+* @ValidationCode : MjotMTU4ODQzODkzNDpDcDEyNTI6MTc0MzEyNjY3MzM2NDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 27 Mar 2025 22:51:13
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -11,7 +11,7 @@
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 
-$PACKAGE ABC.COMPARATIVO
+$PACKAGE AbcComparativo
 PROGRAM ABC.COMPARATIVO.CTE
 *-----------------------------------------------------------------------------
 *

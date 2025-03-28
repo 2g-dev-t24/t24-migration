@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTI2NTc4NjY6Q3AxMjUyOjE3NDMwOTA0ODk4MTU6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 27 Mar 2025 12:48:09
+* @ValidationCode : MjoyMjUzOTUzODg6Q3AxMjUyOjE3NDMxMjY1NjA1MzY6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 27 Mar 2025 22:49:20
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -11,7 +11,7 @@
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 
-$PACKAGE ABC.ASSIGN
+$PACKAGE AbcAssign
 SUBROUTINE ABC.ASSIGN.DAO.ACCT
 *-----------------------------------------------------------------------------
 *

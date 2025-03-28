@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNzI5NDUxMTE2OkNwMTI1MjoxNzQzMDkwNDYwNjkyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 27 Mar 2025 12:47:40
+* @ValidationCode : MjoxNTIwODk4NTg2OkNwMTI1MjoxNzQzMTI2NTQ2MjUzOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 27 Mar 2025 22:49:06
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -10,7 +10,7 @@
 * @ValidationInfo : Bypass GateKeeper : false
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
-$PACKAGE ABC.ASSIGN
+$PACKAGE AbcAssign
 SUBROUTINE ABC.ASIGNA.NOMBRE.PROPIETARIO
 *-----------------------------------------------------------------------------
 *

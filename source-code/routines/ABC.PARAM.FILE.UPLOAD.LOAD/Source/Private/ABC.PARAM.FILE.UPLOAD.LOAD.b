@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNDAyMDM4NzczOkNwMTI1MjoxNzQzMTIwOTc3NTEwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 27 Mar 2025 21:16:17
+* @ValidationCode : MjozNjI3ODcwMjE6Q3AxMjUyOjE3NDMxMjYxNzc5Njg6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 27 Mar 2025 22:42:57
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -10,7 +10,7 @@
 * @ValidationInfo : Bypass GateKeeper : false
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
-$PACKAGE ABC.PARAM.FILE.UPLOAD.LOAD
+$PACKAGE AbcParamFileUploadLoad
 SUBROUTINE ABC.PARAM.FILE.UPLOAD.LOAD(Y.ID.ABC.UPLOAD.FILE.PARAM,ARR.RESP.OFS.APLICA)
 
 *-----------------------------------------------------------------------------
@@ -24,6 +24,7 @@ SUBROUTINE ABC.PARAM.FILE.UPLOAD.LOAD(Y.ID.ABC.UPLOAD.FILE.PARAM,ARR.RESP.OFS.AP
     $USING ABC.EXECUTE.UPLOAD.FILE
     $USING EB.SystemTables
     $USING EB.DataAccess
+    $USING AbcUploadFileParam
     
     
     DEFFUN ABC.VALIDAR.DATOS.SS()
@@ -83,15 +84,15 @@ LEER.PARAMETROS:
     IF R.ABC.UPLOAD.FILE.PARAM NE '' THEN
 
 *       - PARAMETROS GENERALES PARA LEER EL ARCHIVO Y DE SEPARACION
-        Y.FILE.SEP                      =       R.ABC.UPLOAD.FILE.PARAM<AUFP.FILE.IN.SEP>
-        Y.FILE.MASK                     =       R.ABC.UPLOAD.FILE.PARAM<AUFP.FILE.IN.MASK>
-        Y.FILE.PATH                     =       R.ABC.UPLOAD.FILE.PARAM<AUFP.FILE.IN.PATH>
-        Y.FILE.EXT                      =       R.ABC.UPLOAD.FILE.PARAM<AUFP.FILE.IN.EXT>
+        Y.FILE.SEP                      =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileInSep>
+        Y.FILE.MASK                     =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileInMask>
+        Y.FILE.PATH                     =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileInPath>
+        Y.FILE.EXT                      =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileInExt>
 
-        Y.LINEA.INICIA.CARGA            =       R.ABC.UPLOAD.FILE.PARAM<AUFP.LINEA.INICIO>
+        Y.LINEA.INICIA.CARGA            =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpLineaInicio>
 
-        Y.FILE.MASK.OUT                     =       R.ABC.UPLOAD.FILE.PARAM<AUFP.FILE.OUT.MASK>
-        Y.FILE.PATH.OUT                     =       R.ABC.UPLOAD.FILE.PARAM<AUFP.FILE.OUT.PATH>
+        Y.FILE.MASK.OUT                     =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileOutMask>
+        Y.FILE.PATH.OUT                     =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileOutPath>
 
         Y.ARR.APLICACIONES.OFS          =      RAISE(R.ABC.UPLOAD.FILE.PARAM<AUFP.OFS.APLICACION>)
 

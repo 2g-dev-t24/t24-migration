@@ -1,4 +1,4 @@
-component ABC.EXECUTE.UPLOAD.FILE
+component AbcExecuteUploadFile
 # Component Isolation Definition
 metamodelVersion 1.6
 

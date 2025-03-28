@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNzM1NDAxMTM5OkNwMTI1MjoxNzQyNzU3MDMwMTQ1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 23 Mar 2025 16:10:30
+* @ValidationCode : MjotMTkzMjU4NjY0OTpDcDEyNTI6MTc0MzEyNjMzOTU1MjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 27 Mar 2025 22:45:39
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -10,7 +10,7 @@
 * @ValidationInfo : Bypass GateKeeper : true
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
-$PACKAGE ABC.CAUSA
+$PACKAGE AbcCausa
 SUBROUTINE ABC.CAUSA.BAJA.FIELDS
 *-----------------------------------------------------------------------------
 *
