@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNjYyODI0Njg3OkNwMTI1MjoxNzQzMTAwOTg5MTQ4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 27 Mar 2025 15:43:09
+* @ValidationCode : MjoxMzA2NzIwMTQ4OkNwMTI1MjoxNzQzMTIxODkzMTIzOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 27 Mar 2025 21:31:33
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -10,8 +10,8 @@
 * @ValidationInfo : Bypass GateKeeper : false
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
-$PACKAGE ABC.FIRMANTE
-SUBROUTINE ABC.FIRMANTE.CONTRATO
+$PACKAGE ABC.UPLOAD.FILE.PARAM
+SUBROUTINE ABC.UPLOAD.FILE.PARAM
     $USING EB.SystemTables
     $USING EB.Template
     $USING AA.Framework
@@ -24,8 +24,8 @@ SUBROUTINE ABC.FIRMANTE.CONTRATO
 
 *-----------------------------------------------------------------------------
 *-----------------------------------------------------------------------------
-    EB.Template.setTableName('ABC.FIRMANTE.CONTRATO')       ;* Full application name including product prefix
-    EB.Template.setTableTitle('Captura de firmantes')   ;* Screen title
+    EB.Template.setTableName('ABC.UPLOAD.FILE.PARAM')       ;* Full application name including product prefix
+    EB.Template.setTableTitle('Template param upload')   ;* Screen title
     EB.Template.setTableStereotype('H')    ;* H, U, L, W or T
     EB.Template.setTableProduct('EB')      ;* Must be on EB.PRODUCT
     EB.Template.setTableSubproduct('')     ;* Must be on EB.SUB.PRODUCT
@@ -33,7 +33,7 @@ SUBROUTINE ABC.FIRMANTE.CONTRATO
     EB.Template.setTableSystemclearfile('Y')         ;* As per FILE.CONTROL
     EB.Template.setTableRelatedfiles('')   ;* As per FILE.CONTROL
     EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL
-    EB.Template.setTableEquateprefix('ABC.FIR.CONT')          ;* Use to create I_F.EB.LOG.PARAMETER
+    EB.Template.setTableEquateprefix('AUFP')          ;* Use to create I_F.EB.LOG.PARAMETER
 *-----------------------------------------------------------------------------
     EB.Template.setTableIdprefix('')       ;* Used by EB.FORMAT.ID if set
     EB.Template.setTableBlockedfunctions('')         ;* Space delimeted list of blocked functions

@@ -1,15 +1,15 @@
-component ABC.FIRMANTE
+component ABC.UPLOAD.FILE.PARAM
 # Component Isolation Definition
 metamodelVersion 1.6
 
-private method AbcFirmanteContrato ()
+private method AbcUploadFileParam ()
 {
-    jBC: ABC.FIRMANTE.CONTRATO
+    jBC: ABC.UPLOAD.FILE.PARAM
 }
 
-private method AbcFirmanteContratoFields ()
+private method AbcUploadFileParamFields ()
 {
-    jBC: ABC.FIRMANTE.CONTRATO.FIELDS
+    jBC: ABC.UPLOAD.FILE.PARAM.FIELDS
 }
 
 # ------------------ METHOD END ------------------

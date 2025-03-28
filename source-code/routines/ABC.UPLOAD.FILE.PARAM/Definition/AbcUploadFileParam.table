@@ -1,23 +1,55 @@
-public table AbcFirmanteContrato {
-    t24: ABC.FIRMANTE.CONTRATO
+public table AbcUploadFileParam {
+    t24: ABC.UPLOAD.FILE.PARAM
     fields:{
-        AbcFirmanteContratoFrContNombre(ABC.FIR.CONT.NOMBRE.FIRMANTE)      = 1
-        AbcFirmanteContratoApellidoPaterno(ABC.FIR.CONT.APELLIDO.PATERNO)  = 2
-        AbcFirmanteContratoApellidoMaterno(ABC.FIR.CONT.APELLIDO.MATERNO)  = 3
-        AbcFirmanteContratoReserved4(ABC.FIR.CONT.RESERVED.4)              = 4
-        AbcFirmanteContratoReserved3(ABC.FIR.CONT.RESERVED.3)              = 5
-        AbcFirmanteContratoReserved2(ABC.FIR.CONT.RESERVED.2)              = 6
-        AbcFirmanteContratoReserved1(ABC.FIR.CONT.RESERVED.1)              = 7
-        AbcFirmanteContratoLocalRef(ABC.FIR.CONT.LOCAL.REF)                = 8
-        AbcFirmanteContratoOverride(ABC.FIR.CONT.OVERRIDE)                 = 9
-        AbcFirmanteContratoRecordStatus(ABC.FIR.CONT.RECORD.STATUS)        = 10
-        AbcFirmanteContratoCurrNo(ABC.FIR.CONT.CURR.NO)                    = 11
-        AbcFirmanteContratoInputter(ABC.FIR.CONT.INPUTTER)                 = 12
-        AbcFirmanteContratoDateTime(ABC.FIR.CONT.DATE.TIME)                = 13
-        AbcFirmanteContratoAuthoriser(ABC.FIR.CONT.AUTHORISER)             = 14
-        AbcFirmanteContratoCoCode(ABC.FIR.CONT.CO.CODE)                    = 15
-        AbcFirmanteContratoDeptCode(ABC.FIR.CONT.DEPT.CODE)                = 16
-        AbcFirmanteContratoAuditorCode(ABC.FIR.CONT.AUDITOR.CODE)          = 17
-        AbcFirmanteContratoAuditDateTime(ABC.FIR.CONT.AUDIT.DATE.TIME)     = 18
+        
+        AbcUploadFileParamAufpDescripcion(AUFP.DESCRIPCION)             = 1  
+        AbcUploadFileParamAufpFileInPath(AUFP.FILE.IN.PATH)             = 2
+        AbcUploadFileParamAufpFileInMask(AUFP.FILE.IN.MASK)             = 3
+        AbcUploadFileParamAufpFileInSep(AUFP.FILE.IN.SEP)               = 4
+        AbcUploadFileParamAufpFileInExt(AUFP.FILE.IN.EXT)               = 5
+        AbcUploadFileParamAufpLineaInicio(AUFP.LINEA.INICIO)            = 6
+        AbcUploadFileParamAufpFileOutPath(AUFP.FILE.OUT.PATH)           = 7
+        AbcUploadFileParamAufpFileOutMask(AUFP.FILE.OUT.MASK)           = 8
+        AbcUploadFileParamAufpOfsAplicacion(AUFP.OFS.APLICACION)        = 9
+        AbcUploadFileParamAufpFileControl(AUFP.FILE.CONTROL)            = 10
+        AbcUploadFileParamAufpFieldNameCrit(AUFP.FIELD.NAME.CRIT)       = 11
+        AbcUploadFileParamAufpValueCriterion(AUFP.VALUE.CRITERION)      = 12
+        AbcUploadFileParamAufpXxOfsVersion(AUFP.XX>OFS.VERSION)         = 13
+        AbcUploadFileParamAufpVersion(AUFP.VERSION)                     = 14
+        AbcUploadFileParamAufpOfsSource(AUFP.OFS.SOURCE)                = 15
+        AbcUploadFileParamAufpOfsSource(AUFP.OFS.SOURCE)                = 16
+        AbcUploadFileParamAufpOfsUsr(AUFP.OFS.USR)                      = 17
+        AbcUploadFileParamAufpUser(AUFP.USER)                           = 18
+        AbcUploadFileParamAufpOfsPwd(AUFP.OFS.PWD)                      = 19
+        AbcUploadFileParamAufpOfsUsrAut(AUFP.OFS.USR.AUT)               = 20
+        AbcUploadFileParamAufpUser(AUFP.USER)                           = 21
+        AbcUploadFileParamAufpOfsPwdAut(AUFP.OFS.PWD.AUT)               = 22
+        AbcUploadFileParamAufpIdRegT24(AUFP.ID.REG.T24)                 = 23
+        AbcUploadFileParamAufpFieldName(AUFP.FIELD.NAME)                = 24
+        AbcUploadFileParamAufpFieldPosLayout(AUFP.FIELD.POS.LAYOUT)     = 25
+        AbcUploadFileParamAufpFieldLenght(AUFP.FIELD.LENGHT)            = 26
+        AbcUploadFileParamAufpTipoLinea(AUFP.TIPO.LINEA)                = 27
+        AbcUploadFileParamAufpFieldMandatory(AUFP.FIELD.MANDATORY)      = 28
+        AbcUploadFileParamAufpFieldRtnVal(AUFP.FIELD.RTN.VAL)           = 29
+        AbcUploadFileParamAufpFieldRtnConv(AUFP.FIELD.RTN.CONV)         = 30
+        AbcUploadFileParamAufpFieldT24Table(AUFP.FIELD.T24.TABLE)       = 31
+        AbcUploadFileParamAufpFileControl(AUFP.FILE.CONTROL)            = 32
+        AbcUploadFileParamAufpFieldT24OfsName(AUFP.FIELD.T24.OFS.NAME)  = 33
+        
+        
+        
+        
+        AbcUploadFileParamReserved1(AUFP.RESERVED.1)                    = 34
+        AbcUploadFileParamLocalRef(AUFP.LOCAL.REF)                      = 35
+        AbcUploadFileParamOverride(AUFP.OVERRIDE)                       = 36
+        AbcUploadFileParamRecordStatus(AUFP.RECORD.STATUS)              = 37
+        AbcUploadFileParamCurrNo(AUFP.CURR.NO)                          = 38
+        AbcUploadFileParamInputter(AUFP.INPUTTER)                       = 39
+        AbcUploadFileParamDateTime(AUFP.DATE.TIME)                      = 40
+        AbcUploadFileParamAuthoriser(AUFP.AUTHORISER)                   = 41
+        AbcUploadFileParamCoCode(AUFP.CO.CODE)                          = 42
+        AbcUploadFileParamDeptCode(AUFP.DEPT.CODE)                      = 43
+        AbcUploadFileParamAuditorCode(AUFP.AUDITOR.CODE)                = 44
+        AbcUploadFileParamAuditDateTime(AUFP.AUDIT.DATE.TIME)           = 45
     }
 }
