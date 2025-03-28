@@ -1,0 +1,25 @@
+public table AbcUploadFileDetail {
+    t24: ABC.UPLOAD.FILE.DETAIL
+    fields:{
+        IdParam(AUFD.ID.PARAM)                        = 1
+        IdConcat(AUFD.ID.CONCAT)                      = 2  
+        NombreCampo(AUFD.NOMBRE.CAMPO)                = 3  
+        ValorValidacion(AUFD.VALOR.VALIDACION)        = 4
+        ValorCampo(AUFD.VALOR.CAMPO)                  = 5
+        LoadOk(AUFD.LOAD.OK)                          = 6
+        ArchivoLinea(AUFD.ARCHIVO.LINEA)              = 7
+        
+        Reserved1(AUFD.RESERVED.1)                    = 8
+        LocalRef(AUFD.LOCAL.REF)                      = 9
+        Override(AUFD.OVERRIDE)                       = 10
+        RecordStatus(AUFD.RECORD.STATUS)              = 11
+        CurrNo(AUFD.CURR.NO)                          = 12
+        Inputter(AUFD.INPUTTER)                       = 13
+        DateTime(AUFD.DATE.TIME)                      = 14
+        Authoriser(AUFD.AUTHORISER)                   = 15
+        CoCode(AUFD.CO.CODE)                          = 16
+        DeptCode(AUFD.DEPT.CODE)                      = 17
+        AuditorCode(AUFD.AUDITOR.CODE)                = 18
+        AuditDateTime(AUFD.AUDIT.DATE.TIME)           = 19
+    }
+}
