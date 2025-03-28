@@ -25,6 +25,7 @@ POS.LOCALES:
 **********************
 
      NOM.CAMPOS     = 'ABC.DIR.CALLE.A':@VM:'ABC.NUM.EXT.ANT':@VM:'ABC.COD.POS.ANT':@VM:'ABC.COLONIA.ANT':@VM:'ABC.DEL.MUN.ANT':@VM:'ABC.CD.EDO.ANT':@VM:'ABC.PAIS.ANT':@VM:'ABC.NUM.INT.ANT'
+*     :@VM:'ABC.FIRMA.ELECT'
     POS.CAMP.LOCAL = ""
 
 
@@ -38,7 +39,8 @@ POS.LOCALES:
     Y.POS.DIR.DEL.MUN.ANT = POS.CAMP.LOCAL<1,5> 
     Y.POS.DIR.CD.EDO.ANT  = POS.CAMP.LOCAL<1,6> 
     Y.POS.DIR.PAIS.ANT    = POS.CAMP.LOCAL<1,7> 
-    Y.POS.ABC.NUM.INT.ANT = POS.CAMP.LOCAL<1,8> 
+    Y.POS.ABC.NUM.INT.ANT = POS.CAMP.LOCAL<1,8>
+*    Y.POS.ABC.FIRMA.ELECT = POS.CAMP.LOCAL<1,9> 
     RETURN
 
 *************
@@ -55,6 +57,8 @@ PROCESO:
         tmp<Y.POS.DIR.PAIS.ANT,7>="NOINPUT"
         tmp<Y.POS.ABC.NUM.INT.ANT,7>="NOINPUT"
         EB.SystemTables.setTLocref(tmp)
+*        LocalRef<1,Y.POS.ABC.FIRMA.ELECT> = 'NO'
+*        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
 
     RETURN
 END

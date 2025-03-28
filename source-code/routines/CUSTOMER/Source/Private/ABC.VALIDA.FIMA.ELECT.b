@@ -20,7 +20,8 @@ PROCESS:
     IF Y.TIENE.FIRMA EQ 'NO' THEN
 
          Y.POS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
-         Y.POS<1,2> = ""
+*        Y.POS<1,2> = ""
+         Y.POS = ""
          EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId,Y.POS)
 
     END 

@@ -15,7 +15,7 @@ $PACKAGE ABC.BP
     $USING EB.Updates
     $USING EB.ErrorProcessing
     $USING EB.Display
-
+    $USING EB.LocalReferences
 
     GOSUB INIT.VARS
     GOSUB PROCESS
@@ -29,7 +29,7 @@ $PACKAGE ABC.BP
 **********
 INIT.VARS:
 **********
-    V.STAFF.OFF = ""
+*    V.STAFF.OFF = ""
     ;*SE OBTENDRA EL VALOR DE LA NEXT VERSION MXBASE.ADD.CUSTOMER.DETAILS
     *Y.ORIGEN.RECURSOS = ""
     Y.DESTINO.RECURSOS = ""
@@ -88,17 +88,17 @@ PROCESS:
 MANTEN.REGISTRO:
 ****************
 
-    V.GENDER = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
+*    V.GENDER = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
 
 
     Y.POS = ""
-    EB.Updates.MultiGetLocRef("CUSTOMER","ABC.DOM.ANOS",Y.POS) ;* ANIOS EN LA VIVIENDA
-    IF Y.NUM.ANIOS EQ "" THEN
-        Y.NUM.ANIOS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
-    END
+    EB.LocalReferences.GetLocRef("CUSTOMER","ABC.DOM.ANOS",Y.POS) ;* ANIOS EN LA VIVIENDA
+*    IF Y.NUM.ANIOS EQ "" THEN
+*        Y.NUM.ANIOS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
+*    END
     ABC.BP.AbcHabilitaDirCus(Y.NUM.ANIOS)
-    LocalRef<1,Y.POS> = Y.NUM.ANIOS 
-    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
+*    LocalRef<1,Y.POS> = Y.NUM.ANIOS 
+*    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
 *
 *    IF V.RELCODE EQ "" THEN
 *        V.RELCODE = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusRelationCode)   ;* VALIDA SI ES CLIENTE RELACIONADO
@@ -107,52 +107,52 @@ MANTEN.REGISTRO:
 *    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusRelationCode,V.RELCODE)
 
 
-    IF Y.EDO.CIVIL EQ "" THEN
-        Y.EDO.CIVIL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusMaritalStatus)          ;* ESTADO CIVIL
-    END
-     ABC.BP.AbcValidaCusMarstatus(Y.EDO.CIVIL)
+**    IF Y.EDO.CIVIL EQ "" THEN
+**        Y.EDO.CIVIL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusMaritalStatus)          ;* ESTADO CIVIL
+**    END
+      ABC.BP.AbcValidaCusMarstatus(Y.EDO.CIVIL)
 
-    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusMaritalStatus,Y.EDO.CIVIL)
+**    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusMaritalStatus,Y.EDO.CIVIL)
 
  *   Y.POS = ""
- *   EB.Updates.MultiGetLocRef("CUSTOMER","ABC.REGIMEN",Y.POS)  ;* REGIMEN DE CASADO
+ *   EB.LocalReferences.GetLocRef("CUSTOMER","ABC.REGIMEN",Y.POS)  ;* REGIMEN DE CASADO
 
  *   Y.REGIMEN = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
     
  *   LocalRef<1,Y.POS> = Y.REGIMEN 
  *   EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
 
-    Y.POS = ""
-    EB.Updates.MultiGetLocRef("CUSTOMER","ABC.FIRMA.ELECT",Y.POS)    ;* TIENE FIRMA ELECTRONICA S/N
-    IF Y.FIRMA EQ "" THEN
-        Y.FIRMA = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
-    END
-    ABC.BP.AbcValidaFimaElect(Y.FIRMA)
-     LocalRef<1,Y.POS> = Y.FIRMA 
-    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
+**    Y.POS = ""
+**    EB.LocalReferences.GetLocRef("CUSTOMER","ABC.FIRMA.ELECT",Y.POS)    ;* TIENE FIRMA ELECTRONICA S/N
+**    IF Y.FIRMA EQ "" THEN
+**        Y.FIRMA = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
+**    END
+      ABC.BP.AbcValidaFimaElect(Y.FIRMA)
+**     LocalRef<1,Y.POS> = Y.FIRMA 
+**    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
     
 
  *   Y.POS = ""
- *   EB.Updates.MultiGetLocRef("CUSTOMER","STAFF.OFFICIAL",Y.POS)     ;* ES EMPLEADO ABC S/N
+ *   EB.LocalReferences.GetLocRef("CUSTOMER","STAFF.OFFICIAL",Y.POS)     ;* ES EMPLEADO ABC S/N
  *   IF V.STAFF.OFF EQ "" THEN
 
  *    V.STAFF.OFF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
  *   END
- *   ABC.BP.AbcValidaEmpleAbc(V.STAFF.OFF)
+ *    ABC.BP.AbcValidaEmpleAbc(V.STAFF.OFF)
  *   LocalRef<1,Y.POS> = V.STAFF.OFF
  *   EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, LocalRef)
     
 
-    IF Y.TIPO.CASA EQ "" THEN
-        Y.TIPO.CASA = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusResidenceStatus)        ;* TIPO DE CASA
-    END
+**    IF Y.TIPO.CASA EQ "" THEN
+**        Y.TIPO.CASA = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusResidenceStatus)        ;* TIPO DE CASA
+**    END
     ABC.BP.AbcHabilitaOtraVivienda(Y.TIPO.CASA)
-    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceStatus,Y.TIPO.CASA)
+**    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceStatus,Y.TIPO.CASA)
     
 
     ;*SE OBTENDRA EL VALOR DE LA NEXT VERSION MXBASE.ADD.CUSTOMER.DETAILS
     *Y.POS = ""
-    *EB.Updates.MultiGetLocRef("CUSTOMER","ORIGEN.RECURSOS",Y.POS)    ;* ORIGEN DE LOS RECURSOS
+    *EB.LocalReferences.GetLocRef("CUSTOMER","ORIGEN.RECURSOS",Y.POS)    ;* ORIGEN DE LOS RECURSOS
     *IF Y.ORIGEN.RECURSOS EQ "" THEN
     *    Y.ORIGEN.RECURSOS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
     *END
@@ -162,7 +162,7 @@ MANTEN.REGISTRO:
     
 
 *    Y.POS = ""
-*    EB.Updates.MultiGetLocRef("CUSTOMER","DESTINO.RECURS",Y.POS)     ;* DESTINO DE LOS RECURSOS
+*    EB.LocalReferences.GetLocRef("CUSTOMER","DESTINO.RECURS",Y.POS)     ;* DESTINO DE LOS RECURSOS
 *    IF Y.DESTINO.RECURSOS EQ "" THEN
 *        Y.DESTINO.RECURSOS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS>
 *    END
