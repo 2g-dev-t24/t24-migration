@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMDM5MjUwMDI0OkNwMTI1MjoxNzQzMTk5MDYzNTM2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 28 Mar 2025 18:57:43
+* @ValidationCode : MjotMTI2OTI5ODM2NDpDcDEyNTI6MTc0MzI4OTkxNjk2OTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 29 Mar 2025 20:11:56
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -21,7 +21,6 @@ SUBROUTINE ABC.PARAM.FILE.UPLOAD.LOAD(Y.ID.ABC.UPLOAD.FILE.PARAM,ARR.RESP.OFS.AP
 
 *-----------------------------------------------------------------------------
     $USING EB.Reports
-    $USING ABC.EXECUTE.UPLOAD.FILE
     $USING EB.SystemTables
     $USING EB.DataAccess
     $USING AbcUploadFileParam

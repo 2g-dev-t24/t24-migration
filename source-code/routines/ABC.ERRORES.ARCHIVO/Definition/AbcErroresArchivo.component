@@ -1,0 +1,11 @@
+component AbcErroresArchivo
+
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcErroresArchivo (INOUT YIdDetail string)
+{
+    jBC: ABC.ERRORES.ARCHIVO
+}
+
+# ------------------ METHOD END ------------------
