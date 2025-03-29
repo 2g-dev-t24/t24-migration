@@ -1,0 +1,27 @@
+public table AbcComisionistasRelacion {
+    t24: ABC.COMISIONISTAS.RELACION
+    fields:{
+        
+        IdComisionista(ACR.ID.COMISIONISTA) = 1
+        FechaCarga(ACR.FECHA.CARGA)         = 2
+        Aplicacion(ACR.APLICACION)          = 3
+        ArchivosLinea(ACR.ARCHIVOS.LINEA)   = 4
+        AbcComisionistasFileDetail(ACR.ABC.COMISIONISTAS.FILE.DETAIL)= 5
+        EstatusOfs(ACR.ESTATUS.OFS)         = 6
+        IdT24Ofs(ACR.ID.T24.OFS)            = 7
+        RespuestaOfs(ACR.RESPUESTA.OFS)=8
+        
+        Reserved1(ACR.RESERVED.1)                    = 8
+        LocalRef(ACR.LOCAL.REF)                      = 9
+        Override(ACR.OVERRIDE)                       = 10
+        RecordStatus(ACR.RECORD.STATUS)              = 11
+        CurrNo(ACR.CURR.NO)                          = 12
+        Inputter(ACR.INPUTTER)                       = 13
+        DateTime(ACR.DATE.TIME)                      = 14
+        Authoriser(ACR.AUTHORISER)                   = 15
+        CoCode(ACR.CO.CODE)                          = 16
+        DeptCode(ACR.DEPT.CODE)                      = 17
+        AuditorCode(ACR.AUDITOR.CODE)                = 18
+        AuditDateTime(ACR.AUDIT.DATE.TIME)           = 19
+    }
+}
