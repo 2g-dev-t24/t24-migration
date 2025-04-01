@@ -1,0 +1,43 @@
+public table AbcComisionistas {
+    t24: ABC.COMISIONISTAS
+    fields:{
+        
+        AcFecMov(FEC.MOV) = 1
+        AcClaveIdentidad(CLAVE.ENTIDAD) = 2
+        AcClaveFormulario(CLAVE.FORMULARIO) = 3
+        AcOpAdmin(OP.ADMIN) = 4
+        AcIdAdministrador(ID.ADMINISTRADOR) = 5
+        AcComisionistasAdmin(COMISIONISTAS.ADMIN) = 6
+        AcFileControl(FILE.CONTROL) = 7
+        AcRfcAdmin(RFC.ADMIN) = 8
+        AcTipoMovimiento(TIPO.MOVIMIENTO) = 9
+        AcIdComisionista(ID.COMISIONISTA) = 10
+        AcNombreComi(NOMBRE.COMI) = 11
+        AcRfcComisionista(RFC.COMISIONISTA) = 12
+        AcPerJuriComi(PER.JURI.COMI) = 13
+        AcActComi(ACT.COMI) = 14
+        AcActividadComisionista(ACTIVIDAD.COMISIONISTA) = 15
+        AcOpContratadas(OP.CONTRATADAS) = 16
+        AcOperacionesContratadas(OPERACIONES.CONTRATADAS) = 17
+        AcCausaBaja(CAUSA.BAJA) = 18
+        AcAbcCausaBaja(ABC.CAUSA.BAJA) = 19
+        AcLocalidad(LOCALIDAD) = 20
+        AcVpmLocalidad(VPM.LOCALIDAD) = 21
+        AcMunicipio(MUNICIPIO) = 22
+        AcCodPostal(COD.POSTAL) = 23
+
+        
+        Reserved1(AC.RESERVED.1)                    = 24
+        LocalRef(AC.LOCAL.REF)                      = 25
+        Override(AC.OVERRIDE)                       = 26
+        RecordStatus(AC.RECORD.STATUS)              = 27
+        CurrNo(AC.CURR.NO)                          = 28
+        Inputter(AC.INPUTTER)                       = 29
+        DateTime(AC.DATE.TIME)                      = 30
+        Authoriser(AC.AUTHORISER)                   = 31
+        CoCode(AC.CO.CODE)                          = 32
+        DeptCode(AC.DEPT.CODE)                      = 33
+        AuditorCode(AC.AUDITOR.CODE)                = 34
+        AuditDateTime(AC.AUDIT.DATE.TIME)           = 35
+    }
+}
