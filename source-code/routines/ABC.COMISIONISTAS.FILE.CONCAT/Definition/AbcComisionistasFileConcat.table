@@ -1,0 +1,24 @@
+public table AbcComisionistasFileConcat {
+    t24: ABC.COMISIONISTAS.FILE.CONCAT
+    fields:{
+        NombreCampo(ACC.NOMBRE.CAMPO) = 1
+        ValorValidacion(ACC.VALOR.VALIDACION) = 2
+        ValorCampo(ACC.VALOR.CAMPO) = 3
+        LoadOk(ACC.LOAD.OK) = 4
+        ArchivoLinea(ACC.ARCHIVO.LINEA) = 5
+
+        
+        Reserved1(ACC.RESERVED.1)                    = 6
+        LocalRef(ACC.LOCAL.REF)                      = 7
+        Override(ACC.OVERRIDE)                       = 8
+        RecordStatus(ACC.RECORD.STATUS)              = 9
+        CurrNo(ACC.CURR.NO)                          = 10
+        Inputter(ACC.INPUTTER)                       = 11
+        DateTime(ACC.DATE.TIME)                      = 12
+        Authoriser(ACC.AUTHORISER)                   = 13
+        CoCode(ACC.CO.CODE)                          = 14
+        DeptCode(ACC.DEPT.CODE)                      = 15
+        AuditorCode(ACC.AUDITOR.CODE)                = 16
+        AuditDateTime(ACC.AUDIT.DATE.TIME)           = 17
+    }
+}

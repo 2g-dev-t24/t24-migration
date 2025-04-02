@@ -1,0 +1,15 @@
+component AbcComisionistasFileConcat
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcComisionistasFileConcat ()
+{
+    jBC: ABC.COMISIONISTAS.FILE.CONCAT
+}
+
+private method AbcComisionistasFileConcatFields ()
+{
+    jBC: ABC.COMISIONISTAS.FILE.CONCAT.FIELDS
+}
+
+# ------------------ METHOD END ------------------
