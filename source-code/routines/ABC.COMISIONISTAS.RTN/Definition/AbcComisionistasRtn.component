@@ -1,0 +1,35 @@
+component AbcComisionistasRtn
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcComisionistasValSexo (INOUT YValor string)
+{
+    jBC: ABC.COMISIONISTAS.VAL.SEXO
+}
+
+private method AbcComisionistasValPlazo (INOUT YValor string)
+{
+    jBC: ABC.COMISIONISTAS.VAL.PLAZO
+}
+
+private method AbcComisionistasValFecha (INOUT YValor string)
+{
+    jBC: ABC.COMISIONISTAS.VAL.FECHA
+}
+
+private method AbcComisionistasValClave (INOUT YValor string)
+{
+    jBC: ABC.COMISIONISTAS.VAL.CLAVE
+}
+
+private method AbcComisionistasObtTerm (INOUT YiDetail string)
+{
+    jBC: ABC.COMISIONISTAS.OBT.TERM
+}
+ 
+private method AbcComisionistasObtInversion (INOUT YiDetail string)
+{
+    jBC: ABC.COMISIONISTAS.OBT.INVERSION
+} 
+ 
+# ------------------ METHOD END ------------------
