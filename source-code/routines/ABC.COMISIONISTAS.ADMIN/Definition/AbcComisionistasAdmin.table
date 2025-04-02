@@ -1,0 +1,35 @@
+public table AbcComisionistasAdmin {
+    t24: ABC.COMISIONISTAS.ADMIN
+    fields:{
+        FecMov(ACA.FEC.MOV) = 1
+        ClaveIdentidad(ACA.CLAVE.ENTIDAD) = 2
+        ClaveFormulario(ACA.CLAVE.FORMULARIO) = 3
+        TipoMovimiento(ACA.TIPO.MOVIMIENTO) = 4
+        IdAdministrador(ACA.ID.ADMINISTRADOR) = 5
+        NombreComi(ACA.NOMBRE.ADMIN) = 6 
+        Rfc(ACA.RFC) = 7       
+        PerJuriAdmin(ACA.PER.JURI.ADMIN) = 8
+        CausaBaja(ACA.CAUSA.BAJA) = 9                
+        AbcCausaBaja(ACA.ABC.CAUSA.BAJA) = 10
+        Localidad(ACA.LOCALIDAD) = 11
+        VpmLocalidad(ACA.VPM.LOCALIDAD) = 12
+        Municipio(ACA.MUNICIPIO) = 13
+        CodPostal(ACA.COD.POSTAL) = 14                
+
+        
+        Reserved1(ACA.RESERVED.1)                    = 15
+        Reserved1(ACA.RESERVED.2)                    = 16
+        Reserved1(ACA.RESERVED.3)                    = 17
+        LocalRef(ACA.LOCAL.REF)                      = 18
+        Override(ACA.OVERRIDE)                       = 19
+        RecordStatus(ACA.RECORD.STATUS)              = 20
+        CurrNo(ACA.CURR.NO)                          = 21
+        Inputter(ACA.INPUTTER)                       = 22
+        DateTime(ACA.DATE.TIME)                      = 23
+        Authoriser(ACA.AUTHORISER)                   = 24
+        CoCode(ACA.CO.CODE)                          = 25
+        DeptCode(ACA.DEPT.CODE)                      = 26
+        AuditorCode(ACA.AUDITOR.CODE)                = 27
+        AuditDateTime(ACA.AUDIT.DATE.TIME)           = 28
+    }
+}
