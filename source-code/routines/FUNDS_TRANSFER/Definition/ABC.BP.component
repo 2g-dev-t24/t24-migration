@@ -1,0 +1,68 @@
+component ABC.BP
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+
+# -------------------------------------------------
+
+# ------------------ CONSTANT START ---------------
+
+# ------------------ CONSTANT END -----------------
+
+# ------------------ TABLE START ------------------
+
+# ------------------------------------
+# Tabla VPM.ESTADO
+# ------------------------------------
+private method VpmEstado ()
+{
+    jBC: VPM.ESTADO
+}
+
+# ------------------------------------
+# Tabla ABC.INFO.VAL.CUS
+# ------------------------------------
+private method AbcInfoValCus ()
+{
+    jBC: ABC.INFO.VAL.CUS
+}
+private method AbcInfoValCusFields ()
+{
+    jBC: ABC.INFO.VAL.CUS.FIELDS
+}
+
+# ------------------ TABLE END ------------------
+
+# ------------------ METHOD START ------------------
+
+
+private method abcValDefaultRfc (
+)
+{
+    jBC: ABC.VAL.DEFAULT.RFC
+}
+
+
+private method abcValTransType (
+)
+{
+    jBC: ABC.VAL.TRANS.TYPE
+}
+
+
+
+private method rtnFtCheckBalance (
+)
+{
+    jBC: RTN.FT.CHECK.BALANCE
+}
+
+
+
+private method abcValPostRest (
+    INOUT yIdAcct string
+)
+{
+    jBC: ABC.VAL.POST.REST
+}
+
