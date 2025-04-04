@@ -1,0 +1,13 @@
+component AbcGeneralParam
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+private method AbcGeneralParam ()
+{
+    jBC: ABC.GENERAL.PARAM
+}
+
+private method AbcGeneralParamFields ()
+{
+    jBC: ABC.GENERAL.PARAM.FIELDS
+}

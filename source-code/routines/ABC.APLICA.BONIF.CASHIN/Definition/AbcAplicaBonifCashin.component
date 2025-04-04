@@ -1,0 +1,37 @@
+component AbcAplicaBonifCashin
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+private method AbcAplicaBonifCashinLoad ()
+{
+    jBC: ABC.APLICA.BONIF.CASHIN.LOAD
+}
+
+private method AbcAplicaBonifCashinSelect ()
+{
+    jBC: ABC.APLICA.BONIF.CASHIN.SELECT
+}
+
+private method AbcAplicaBonifCashin (INOUT IdRegistroBon string)
+{
+    jBC: ABC.APLICA.BONIF.CASHIN
+}
+
+# -------------------------------------------------
+# Variables comunes
+# -------------------------------------------------
+
+public property readwrite FnAbcBonifCashin : string {
+}
+
+public property readwrite FAbcBonifCashin : string {
+}
+
+public property readwrite YOfsSource : string {
+}
+
+public property readwrite YUsr : string {
+}
+
+public property readwrite YPwd : string {
+}

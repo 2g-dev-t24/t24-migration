@@ -1,0 +1,19 @@
+public table AbcGeneralParam {
+    t24: PBS.GEN.PARAM.GENERAL.PARAM
+    fields:{
+     
+        Modulo(PBS.GEN.PARAM.MODULOMODULO) = 1
+        NombParametro(PBS.GEN.PARAM.NOMB.PARAMETRO) = 2
+        DatoParametro(PBS.GEN.PARAM.DATO.PARAMETRO) = 3
+        Comentario(PBS.GEN.PARAM.COMENTARIO) = 4
+        RecordStatus(PBS.GEN.PARAM.BIOM.RECORD.STATUS) = 5
+        CurrNo(PBS.GEN.PARAM.BIOM.CURR.NO) = 6
+        Inputter(PBS.GEN.PARAM.BIOM.INPUTTER) = 7
+        DateTime(PBS.GEN.PARAM.BIOM.DATE.TIME) = 8
+        Authoriser(PBS.GEN.PARAM.BIOM.AUTHORISER) = 9
+        CoCode(PBS.GEN.PARAM.BIOM.CO.CODE) = 10
+        DeptCode(PBS.GEN.PARAM.BIOM.DEPT.CODE) = 11
+        AuditorCode(PBS.GEN.PARAM.BIOM.AUDITOR.CODE) = 12
+        AuditDateTime(PBS.GEN.PARAM.BIOM.AUDIT.DATE.TIME) = 13
+    }
+}}

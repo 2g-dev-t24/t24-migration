@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNzkyNjE3Mzg2OkNwMTI1MjoxNzQzMTI1NzI2ODE5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 27 Mar 2025 22:35:26
+* @ValidationCode : MjoxMzUxMjQyNjYyOkNwMTI1MjoxNzQzNzI5MTc1MjM3Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 03 Apr 2025 22:12:55
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -26,13 +26,13 @@ SUBROUTINE ABC.UPLOAD.FILE.PARAM.FIELDS
 *-----------------------------------------------------------------------------
 
     
-    EB.Template.TableAddfield          ('DESCRIPCION', EB.Template.T24String   , Field_Mandatory, '')
-    EB.Template.TableAddfield          ('FILE.IN.PATH', EB.Template.T24BigString, Field_Mandatory, '')
+    EB.Template.TableAddfield          ('DESCRIPCION', EB.Template.T24String   , EB.Template.FieldMandatory, '')
+    EB.Template.TableAddfield          ('FILE.IN.PATH', EB.Template.T24BigString, EB.Template.FieldMandatory, '')
     EB.Template.TableAddfielddefinition('FILE.IN.MASK', '65'         , 'ANY'          , '')
     EB.Template.TableAddfielddefinition('FILE.IN.SEP', '2'          , 'ANY'          , '')
     EB.Template.TableAddfield          ('FILE.IN.EXT', EB.Template.T24String   , ''             , '')
-    EB.Template.TableAddfield          ('LINEA.INICIO', EB.Template.T24String   , Field_Mandatory, '')
-    EB.Template.TableAddfield          ('FILE.OUT.PATH', EB.Template.T24BigString, Field_Mandatory, '')
+    EB.Template.TableAddfield          ('LINEA.INICIO', EB.Template.T24String   , EB.Template.FieldMandatory, '')
+    EB.Template.TableAddfield          ('FILE.OUT.PATH', EB.Template.T24BigString, EB.Template.FieldMandatory, '')
     EB.Template.TableAddfielddefinition('FILE.OUT.MASK', '65'         , 'ANY'          , '')
     EB.Template.TableAddfield          ('OFS.APLICACION', EB.Template.T24String   , ''             , '')
     EB.Template.FieldSetcheckfile("FILE.CONTROL")
@@ -42,17 +42,17 @@ SUBROUTINE ABC.UPLOAD.FILE.PARAM.FIELDS
     EB.Template.FieldSetcheckfile      ("VERSION")
     EB.Template.TableAddfield          ('OFS.SOURCE', EB.Template.T24String   , ''             , '')
     EB.Template.FieldSetcheckfile      ("OFS.SOURCE")
-    EB.Template.TableAddfield          ('OFS.USR', EB.Template.T24String   , Field_Mandatory,'')
+    EB.Template.TableAddfield          ('OFS.USR', EB.Template.T24String   , EB.Template.FieldMandatory,'')
     EB.Template.FieldSetcheckfile      ("USER")
-    EB.Template.TableAddfield          ('OFS.PWD', EB.Template.T24String   , Field_Mandatory, '')
-    EB.Template.TableAddfield          ('OFS.USR.AUT', EB.Template.T24String   , Field_Mandatory, '')
+    EB.Template.TableAddfield          ('OFS.PWD', EB.Template.T24String   , EB.Template.FieldMandatory, '')
+    EB.Template.TableAddfield          ('OFS.USR.AUT', EB.Template.T24String   , EB.Template.FieldMandatory, '')
     EB.Template.FieldSetcheckfile      ("USER")
-    EB.Template.TableAddfield          ('OFS.PWD.AUT', EB.Template.T24String   , Field_Mandatory, '')
+    EB.Template.TableAddfield          ('OFS.PWD.AUT', EB.Template.T24String   , EB.Template.FieldMandatory, '')
     EB.Template.TableAddfield          ('ID.REG.T24', EB.Template.T24String   , ''             , '')
-    EB.Template.TableAddfield          ('XX<FIELD.NAME', EB.Template.T24String  , Field_Mandatory, '')
-    EB.Template.TableAddfield          ('XX-FIELD.POS.LAYOUT', EB.Template.T24String  , Field_Mandatory, '')
-    EB.Template.TableAddfield          ('XX-FIELD.LENGHT', EB.Template.T24String  , Field_Mandatory, '')
-    EB.Template.TableAddfield          ('XX-TIPO.LINEA', EB.Template.T24String  , Field_Mandatory, '')
+    EB.Template.TableAddfield          ('XX<FIELD.NAME', EB.Template.T24String  , EB.Template.FieldMandatory, '')
+    EB.Template.TableAddfield          ('XX-FIELD.POS.LAYOUT', EB.Template.T24String  , EB.Template.FieldMandatory, '')
+    EB.Template.TableAddfield          ('XX-FIELD.LENGHT', EB.Template.T24String  , EB.Template.FieldMandatory, '')
+    EB.Template.TableAddfield          ('XX-TIPO.LINEA', EB.Template.T24String  , EB.Template.FieldMandatory, '')
     EB.Template.TableAddoptionsfield   ("XX-FIELD.MANDATORY", 'Y_N'       , ''             , '')
     EB.Template.TableAddfield          ('XX-XX.FIELD.RTN.VAL', EB.Template.T24String  , ''             , '')
     EB.Template.TableAddfield          ('XX-XX.FIELD.RTN.CONV', EB.Template.T24String  , ''             , '')
