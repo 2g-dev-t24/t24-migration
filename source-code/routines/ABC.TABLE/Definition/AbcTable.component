@@ -182,3 +182,23 @@ private method AbcComisionistasEstablFields ()
 
 
 # -------------------------------------------------
+
+
+
+private method AbcComisionistasFileLayout ()
+{
+    jBC: ABC.COMISIONISTAS.FILE.LAYOUT
+}
+
+private method AbcComisionistasFileLayoutFields ()
+{
+    jBC: ABC.COMISIONISTAS.FILE.LAYOUT.FIELDS
+}
+
+# -------------------------------------------------
+
+# -------------------------------------------------
+
+# -------------------------------------------------
+
+# -------------------------------------------------
