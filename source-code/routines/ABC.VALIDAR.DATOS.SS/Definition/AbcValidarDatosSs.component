@@ -1,0 +1,14 @@
+component AbcValidarDatosSs
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcValidarDatosSs (INOUT YIdAplicacion string, 
+INOUT YNombreCamposSs string, 
+INOUT YNomCampoToMap string ,
+INOUT YValorCampo string, 
+INOUT YMensajeError string)
+{
+    jBC: ABC.VALIDAR.DATOS.SS
+}
+
+# ------------------ METHOD END ------------------
