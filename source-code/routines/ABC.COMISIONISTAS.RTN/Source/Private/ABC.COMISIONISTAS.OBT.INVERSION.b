@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNzI4NDc3NjY3OkNwMTI1MjoxNzQzNzM3NTQ0ODI1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 04 Apr 2025 00:32:24
+* @ValidationCode : MjoyMDgwNDM5NDUxOkNwMTI1MjoxNzQzNzgxNzgwMDAyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Apr 2025 12:49:40
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -53,8 +53,8 @@ PROCESS:
     Y.NO.INV.CTA = REC.REGISTRO<AbcTable.AbcRegistroComisionistas.NoInvCta>
     Y.NOMBRE.ARCHIVO = REC.REGISTRO<AbcTable.AbcRegistroComisionistas.NombreArchivo>
 
-* luis    CONVERT VM TO FM IN Y.NO.INV.CTA
-* luis    CONVERT VM TO FM IN Y.NOMBRE.ARCHIVO
+    CONVERT @VM TO @FM IN Y.NO.INV.CTA
+    CONVERT @VM TO @FM IN Y.NOMBRE.ARCHIVO
 
     FIND YI.DETAIL IN Y.NOMBRE.ARCHIVO SETTING AP, VP, SP THEN
         Y.INV.CTA = Y.NO.INV.CTA<AP>

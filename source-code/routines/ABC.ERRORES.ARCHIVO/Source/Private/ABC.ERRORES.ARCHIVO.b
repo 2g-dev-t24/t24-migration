@@ -1,5 +1,5 @@
-* @ValidationCode : MjoyMDI1ODQ1MDQ1OkNwMTI1MjoxNzQzNzM3NjEyNDA0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 04 Apr 2025 00:33:32
+* @ValidationCode : MjotMTY5NzEyNjc5NTpDcDEyNTI6MTc0Mzc4MTkzMzg0NTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 04 Apr 2025 12:52:13
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -127,10 +127,10 @@ RETURN
 
 
 FORMAT.CADENA:
-*luis    CONVERT VM TO " " IN Y.VALIDACIONES
-*luis    CONVERT VM TO " " IN Y.ERRORES.OFS
-*luis    CONVERT VM TO " " IN Y.VALIDACIONES.DIR
-*luis    CONVERT VM TO " " IN Y.ERRORES.OFS.DIR
+    CONVERT @VM TO " " IN Y.VALIDACIONES
+    CONVERT @VM TO " " IN Y.ERRORES.OFS
+    CONVERT @VM TO " " IN Y.VALIDACIONES.DIR
+    CONVERT @VM TO " " IN Y.ERRORES.OFS.DIR
     Y.ERRORES.OFS  = TRIM(Y.ERRORES.OFS)
     Y.VALIDACIONES = TRIM(Y.VALIDACIONES)
     Y.ERRORES.OFS.DIR  = TRIM(Y.ERRORES.OFS.DIR)

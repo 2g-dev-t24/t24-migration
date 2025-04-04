@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMDQ0NTEzNDg3OkNwMTI1MjoxNzQzNzM3ODQzMTcyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 04 Apr 2025 00:37:23
+* @ValidationCode : Mjo3NDE0OTIwOTE6Q3AxMjUyOjE3NDM3ODIwMzE2Mzc6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 04 Apr 2025 12:53:51
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -227,7 +227,7 @@ READ.FILE:
 
             IF Y.ARR.LINE NE '' THEN
                 Y.NUM.OF.LINE.LEE  += 1
-* luis                CONVERT Y.FILE.SEP TO FM IN Y.ARR.LINE
+                CONVERT Y.FILE.SEP TO @FM IN Y.ARR.LINE
                 Y.TOTAL.SEPARADORES.LINEA = DCOUNT(Y.ARR.LINE,@FM)
                 Y.TOTAL.SEPARADORES.PARAM = DCOUNT(Y.ARR.FIELD.POS,@FM)
 
@@ -340,7 +340,7 @@ READ.FILE:
 *      - Validacion por medio de Rutinas ligadas en tabla ABC.UPLOAD.FILE.PARAM
                         IF Y.NAME.RUTINA.VAL NE "" THEN
 *                          CONVERT VM TO FM IN Y.NAME.RUTINA.VAL
-*luis                          CONVERT SM TO FM IN Y.NAME.RUTINA.VAL
+                            CONVERT @SM TO @FM IN Y.NAME.RUTINA.VAL
                             Y.TOTAL.RTN.VAL = DCOUNT(Y.NAME.RUTINA.VAL,@FM)
                             Y.ARR.MSJ.CAMPO = ''
                             FOR I.RTN = 1 TO Y.TOTAL.RTN.VAL
@@ -368,7 +368,7 @@ READ.FILE:
                             Y.MESSAGE.LOG.ERR = "SI"
                         END
 
-* luis                        CONVERT FM TO "," IN Y.CADENA.ERRORES.CAMPO
+                        CONVERT @FM TO "," IN Y.CADENA.ERRORES.CAMPO
                         IF Y.TIPO.LINEA EQ "D" THEN
                             R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.NombreCampo,Y.CONTADOR.SEPARADORES.LINEA>     = Y.NOM.CAMPO.TO.MAP
                             R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.ValorCampo,Y.CONTADOR.SEPARADORES.LINEA>      = Y.VALOR.CAMPO.ORG
@@ -385,7 +385,7 @@ READ.FILE:
 
                 IF Y.MESSAGE.LOG.ERR THEN
                     Y.MESSAGE.LOG.ERR =Y.MESSAGE.LOG
-* luis                   CONVERT FM TO VM IN Y.MESSAGE.LOG.ERR
+                    CONVERT @FM TO @VM IN Y.MESSAGE.LOG.ERR
                     IF Y.TIPO.LINEA EQ "D" THEN
                         R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.LoadOk> = "NO"
                     END ELSE

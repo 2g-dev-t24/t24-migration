@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTE3MzEzMjEyNjpDcDEyNTI6MTc0MzczNzY0NzI5ODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 04 Apr 2025 00:34:07
+* @ValidationCode : MjotNTUzMDcxNDM1OkNwMTI1MjoxNzQzNzgxOTcxNzU5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Apr 2025 12:52:51
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -93,7 +93,7 @@ READ.FILE:
 
             IF Y.ARR.LINE NE '' THEN
                 Y.NUM.OF.LINE.LEE  += 1
-*luis               CONVERT Y.FILE.SEP TO FM IN Y.ARR.LINE
+                CONVERT Y.FILE.SEP TO @FM IN Y.ARR.LINE
                 Y.TOTAL.SEPARADORES.LINEA = DCOUNT(Y.ARR.LINE,@FM)
 
                 Y.ID.EMISION=TRIM(Y.ARR.LINE<1>)
