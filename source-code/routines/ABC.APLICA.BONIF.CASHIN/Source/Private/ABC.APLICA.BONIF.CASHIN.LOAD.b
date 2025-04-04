@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo3MTIxNTQ1MTg6Q3AxMjUyOjE3NDM3MzE5NjA4ODc6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 03 Apr 2025 22:59:20
+* @ValidationCode : MjoxOTAzMjI4Mzc0OkNwMTI1MjoxNzQzNzM3NTA2OTMwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Apr 2025 00:31:46
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -21,7 +21,7 @@ SUBROUTINE ABC.APLICA.BONIF.CASHIN.LOAD
 *-----------------------------------------------------------------------------
     $USING EB.DataAccess
     $USING EB.API
-    $USING AbcBonificacionCashIn
+    $USING AbcTable
     $USING AbcGetGeneralParam
 
 

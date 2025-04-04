@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTIyMjE4MzE0MTpDcDEyNTI6MTc0MzI4OTkzMjQwNTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 29 Mar 2025 20:12:12
+* @ValidationCode : MjoyMDI1ODQ1MDQ1OkNwMTI1MjoxNzQzNzM3NjEyNDA0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Apr 2025 00:33:32
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -23,9 +23,7 @@ SUBROUTINE ABC.ERRORES.ARCHIVO(YI.DETAIL)
     $USING EB.Reports
     $USING EB.SystemTables
     $USING EB.DataAccess
-    $USING AbcComisionistasFileDetail
-    $USING AbcComisionistasRelacion
-    $USING AbcRegistroComisionistas
+    $USING AbcTable
 
     
     FN.ABC.COMISIONISTAS.FILE.DETAIL= "F.ABC.COMISIONISTAS.FILE.DETAIL"
@@ -49,17 +47,17 @@ SUBROUTINE ABC.ERRORES.ARCHIVO(YI.DETAIL)
         YI.DETAIL.DIR = TRIM(EREPLACE(YI.DETAIL.DIR, "CTE", "DIR"))
         YI.DETAIL.DIR = TRIM(EREPLACE(YI.DETAIL.DIR,"-":YI.NUMERO.LINEA , ""))
         YI.DETAIL.DIR =YI.DETAIL.DIR:"-":YI.NUMERO.LINEA.DIR
-        Y.ID.RELACION = REC.DETAIL<AbcComisionistasFileDetail.AbcComisionistasFileDetail.IdRelacion>         ;*MGS F&G
+        Y.ID.RELACION = REC.DETAIL<AbcTable.AbcComisionistasFileDetail.IdRelacion>         ;*MGS F&G
         EB.DataAccess.FRead(FN.ABC.COMISIONISTAS.FILE.DETAIL,YI.DETAIL.DIR,REC.DETAIL.DIR,F.ABC.COMISIONISTAS.FILE.DETAIL,ERR.DETAIL.DIR)
     END
 
-    Y.VALIDACIONES = REC.DETAIL<AbcComisionistasFileDetail.AbcComisionistasFileDetail.ValorValidacion>
-    Y.ERRORES.OFS  = REC.DETAIL<AbcComisionistasFileDetail.AbcComisionistasFileDetail.LoadErrors>
-    Y.APLICO.CARGA = REC.DETAIL<AbcComisionistasFileDetail.AbcComisionistasFileDetail.LoadOk>
-    Y.VALIDACIONES.DIR = REC.DETAIL.DIR<AbcComisionistasFileDetail.AbcComisionistasFileDetail.ValorValidacion>
-    Y.ERRORES.OFS.DIR  = REC.DETAIL.DIR<AbcComisionistasFileDetail.AbcComisionistasFileDetail.LoadErrors>
-    Y.APLICO.CARGA.DIR = REC.DETAIL.DIR<AbcComisionistasFileDetail.AbcComisionistasFileDetail.LoadOk>
-    YID.CLIENTE.VEC= REC.DETAIL<AbcComisionistasFileDetail.AbcComisionistasFileDetail.IdRelacion>
+    Y.VALIDACIONES = REC.DETAIL<AbcTable.AbcComisionistasFileDetail.ValorValidacion>
+    Y.ERRORES.OFS  = REC.DETAIL<AbcTable.AbcComisionistasFileDetail.LoadErrors>
+    Y.APLICO.CARGA = REC.DETAIL<AbcTable.AbcComisionistasFileDetail.LoadOk>
+    Y.VALIDACIONES.DIR = REC.DETAIL.DIR<AbcTable.AbcComisionistasFileDetail.ValorValidacion>
+    Y.ERRORES.OFS.DIR  = REC.DETAIL.DIR<AbcTable.AbcComisionistasFileDetail.LoadErrors>
+    Y.APLICO.CARGA.DIR = REC.DETAIL.DIR<AbcTable.AbcComisionistasFileDetail.LoadOk>
+    YID.CLIENTE.VEC= REC.DETAIL<AbcTable.AbcComisionistasFileDetail.IdRelacion>
     EB.DataAccess.FRead(FN.ABC.REGISTRO.COMISIONISTAS,YID.CLIENTE.VEC,REC.CLIENTE.VEC,F.ABC.REGISTRO.COMISIONISTAS,ERR.CLIENTE.VEC)
 *    IF YI.DETAIL EQ "VEC_CTE_20190401_121558-13" THEN DEBUG
     Y.ID.COM.FILE.DET = YI.DETAIL
@@ -77,12 +75,12 @@ SUBROUTINE ABC.ERRORES.ARCHIVO(YI.DETAIL)
             END
         END
         EB.DataAccess.FRead(FN.ABC.COMISIONISTAS.RELACION,Y.ID.RELACION,REC.RELACION,F.ABC.COMISIONISTAS.RELACION,ERR.RELACION)
-        Y.ESTATUS = REC.RELACION<AbcComisionistasRelacion.AbcComisionistasRelacion.EstatusOfs,1>
+        Y.ESTATUS = REC.RELACION<AbcTable.AbcComisionistasRelacion.EstatusOfs,1>
         IF Y.ESTATUS EQ 'FALLIDO' THEN
-            Y.RES.OFS = REC.RELACION<AbcComisionistasRelacion.AbcComisionistasRelacion.RespuestaOfs>
+            Y.RES.OFS = REC.RELACION<AbcTable.AbcComisionistasRelacion.RespuestaOfs>
             Y.RESP    = FIELD(Y.RES.OFS, '/',4)
-            REC.DETAIL<AbcComisionistasFileDetail.AbcComisionistasFileDetail.LoadOk> = 'NO'
-            REC.DETAIL<AbcComisionistasFileDetail.AbcComisionistasFileDetail.LoadErrors> = Y.RESP
+            REC.DETAIL<AbcTable.AbcComisionistasFileDetail.LoadOk> = 'NO'
+            REC.DETAIL<AbcTable.AbcComisionistasFileDetail.LoadErrors> = Y.RESP
             WRITE REC.DETAIL TO F.ABC.COMISIONISTAS.FILE.DETAIL,Y.ID.COM.FILE.DET
             YI.DETAIL = Y.RESP
         END
@@ -91,7 +89,7 @@ RETURN
 
 DATO.RETORNO:
     IF Y.APLICO.CARGA EQ "SI" THEN
-        Y.AUTORIZA.CTE = REC.CLIENTE.VEC<AbcRegistroComisionistas.AbcRegistroComisionistas.AutorizacionCte>
+        Y.AUTORIZA.CTE = REC.CLIENTE.VEC<AbcTable.AbcRegistroComisionistas.AutorizacionCte>
         IF Y.AUTORIZA.CTE EQ 'NO' THEN
             YI.DETAIL  = "RECHAZADO POR PLD"
         END ELSE
@@ -105,7 +103,7 @@ DATO.RETORNO:
     END ELSE
         GOSUB FORMAT.CADENA
 
-        Y.CTE = REC.CLIENTE.VEC<AbcRegistroComisionistas.AbcRegistroComisionistas.NoCliente>
+        Y.CTE = REC.CLIENTE.VEC<AbcTable.AbcRegistroComisionistas.NoCliente>
 
         IF Y.CTE NE '' THEN
             IF Y.AUTORIZA.CTE EQ 'NO' THEN

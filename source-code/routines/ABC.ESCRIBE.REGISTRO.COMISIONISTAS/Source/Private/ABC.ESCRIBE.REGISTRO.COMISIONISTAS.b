@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNjQ5NzY5OTU0OkNwMTI1MjoxNzQzMjAyMzc1OTY4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 28 Mar 2025 19:52:55
+* @ValidationCode : MjotMTE3MzEzMjEyNjpDcDEyNTI6MTc0MzczNzY0NzI5ODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 04 Apr 2025 00:34:07
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -23,7 +23,7 @@ SUBROUTINE ABC.ESCRIBE.REGISTRO.COMISIONISTAS
     $USING EB.Reports
     $USING EB.SystemTables
     $USING EB.DataAccess
-    $USING AbcRegistroComisionistas
+    $USING AbcTable
 
     
     GOSUB INICIO
@@ -97,18 +97,18 @@ READ.FILE:
                 Y.TOTAL.SEPARADORES.LINEA = DCOUNT(Y.ARR.LINE,@FM)
 
                 Y.ID.EMISION=TRIM(Y.ARR.LINE<1>)
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.IdComisionista> =TRIM(Y.ARR.LINE<2>)
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.NoCliente>  = TRIM(Y.ARR.LINE<3>)
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.IdComisionista> =TRIM(Y.ARR.LINE<2>)
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.NoCliente>  = TRIM(Y.ARR.LINE<3>)
                 Y.CUENTA = TRIM(Y.ARR.LINE<4>)
                 Y.CUENTA = FMT(Y.CUENTA,"11'0'R")
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.NoCuenta>  = Y.CUENTA
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.NoFt>  = TRIM(Y.ARR.LINE<5>)
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.NoInvCta>  = TRIM(Y.ARR.LINE<6>)
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.FechaApeCta>  = TRIM(Y.ARR.LINE<7>)
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.FechaInv>  = TRIM(Y.ARR.LINE<8>)
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.FechaVencimiento>  = TRIM(Y.ARR.LINE<9>)
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.NombreArchivo>  = TRIM(Y.ARR.LINE<10>)
-                ARR.REG.COMI<AbcRegistroComisionistas.AbcRegistroComisionistas.Comisionista>  = 'VECTOR'
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.NoCuenta>  = Y.CUENTA
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.NoFt>  = TRIM(Y.ARR.LINE<5>)
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.NoInvCta>  = TRIM(Y.ARR.LINE<6>)
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.FechaApeCta>  = TRIM(Y.ARR.LINE<7>)
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.FechaInv>  = TRIM(Y.ARR.LINE<8>)
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.FechaVencimiento>  = TRIM(Y.ARR.LINE<9>)
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.NombreArchivo>  = TRIM(Y.ARR.LINE<10>)
+                ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.Comisionista>  = 'VECTOR'
 
                 WRITE ARR.REG.COMI TO F.ABC.REGISTRO.COMISIONISTAS,Y.ID.EMISION
 
@@ -127,7 +127,7 @@ ELIMINA.REGISTROS:
     FOR REC.REG = 1 TO Y.NO.REG
         Y.ID.REGISTRO.COMISIONISTA = Y.LIST.REG<REC.REG>
         EB.DataAccess.FRead(FN.ABC.REGISTRO.COMISIONISTAS,Y.ID.REGISTRO.COMISIONISTA,R.REGISTRO,F.ABC.REGISTRO.COMISIONISTAS,ERR.RELACION)
-        Y.CURR.NO = R.REGISTRO<AbcRegistroComisionistas.AbcRegistroComisionistas.CurrNo>
+        Y.CURR.NO = R.REGISTRO<AbcTable.AbcRegistroComisionistas.CurrNo>
         IF Y.CURR.NO EQ '' THEN
             Y.ID.REGISTRO.COMISIONISTA.HIS = Y.LIST.REG<REC.REG> : ";1"
         END ELSE

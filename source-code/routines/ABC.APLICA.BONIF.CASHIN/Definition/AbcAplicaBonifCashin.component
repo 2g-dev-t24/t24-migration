@@ -6,7 +6,7 @@ private method AbcAplicaBonifCashinLoad ()
 {
     jBC: ABC.APLICA.BONIF.CASHIN.LOAD
 }
-
+ 
 private method AbcAplicaBonifCashinSelect ()
 {
     jBC: ABC.APLICA.BONIF.CASHIN.SELECT

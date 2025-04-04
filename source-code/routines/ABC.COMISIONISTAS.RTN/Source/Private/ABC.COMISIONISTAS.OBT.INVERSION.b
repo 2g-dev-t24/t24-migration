@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo1MjAyMTk1MDE6Q3AxMjUyOjE3NDM2MzE1MzM5MjI6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 02 Apr 2025 19:05:33
+* @ValidationCode : MjotNzI4NDc3NjY3OkNwMTI1MjoxNzQzNzM3NTQ0ODI1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Apr 2025 00:32:24
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -20,8 +20,8 @@ SUBROUTINE ABC.COMISIONISTAS.OBT.INVERSION(YI.DETAIL)
 
 *-----------------------------------------------------------------------------
     $USING EB.DataAccess
-    $USING AbcComisionistasFileDetail
-    $USING AbcRegistroComisionistas
+    $USING AbcTable
+
 
     GOSUB INITIALIZE
     GOSUB PROCESS
@@ -47,11 +47,11 @@ PROCESS:
 ***
 
     EB.DataAccess.FRead(FN.ABC.COMISIONISTAS.FILE.DETAIL,YI.DETAIL,REC.DETAIL,F.ABC.COMISIONISTAS.FILE.DETAIL,ERR.DETAIL)
-    Y.REL.ID = REC.DETAIL<AbcComisionistasFileDetail.AbcComisionistasFileDetail.IdRelacion>
+    Y.REL.ID = REC.DETAIL<AbcTable.AbcComisionistasFileDetail.IdRelacion>
 
     EB.DataAccess.FRead(FN.ABC.REGISTRO.COMISIONISTAS,Y.REL.ID,REC.REGISTRO,F.ABC.REGISTRO.COMISIONISTAS,ERR.D)
-    Y.NO.INV.CTA = REC.REGISTRO<AbcRegistroComisionistas.AbcRegistroComisionistas.NoInvCta>
-    Y.NOMBRE.ARCHIVO = REC.REGISTRO<AbcRegistroComisionistas.AbcRegistroComisionistas.NombreArchivo>
+    Y.NO.INV.CTA = REC.REGISTRO<AbcTable.AbcRegistroComisionistas.NoInvCta>
+    Y.NOMBRE.ARCHIVO = REC.REGISTRO<AbcTable.AbcRegistroComisionistas.NombreArchivo>
 
 * luis    CONVERT VM TO FM IN Y.NO.INV.CTA
 * luis    CONVERT VM TO FM IN Y.NOMBRE.ARCHIVO

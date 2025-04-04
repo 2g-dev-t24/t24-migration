@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTI2OTI5ODM2NDpDcDEyNTI6MTc0MzI4OTkxNjk2OTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 29 Mar 2025 20:11:56
+* @ValidationCode : MjoxMDQ0NTEzNDg3OkNwMTI1MjoxNzQzNzM3ODQzMTcyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Apr 2025 00:37:23
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -23,9 +23,8 @@ SUBROUTINE ABC.PARAM.FILE.UPLOAD.LOAD(Y.ID.ABC.UPLOAD.FILE.PARAM,ARR.RESP.OFS.AP
     $USING EB.Reports
     $USING EB.SystemTables
     $USING EB.DataAccess
-    $USING AbcUploadFileParam
-    $USING AbcUploadFileConcat
-    $USING AbcUploadFileDetail
+    $USING AbcTable
+
     
     DEFFUN ABC.VALIDAR.DATOS.SS()
 ******************************************************************************
@@ -84,15 +83,15 @@ LEER.PARAMETROS:
     IF R.ABC.UPLOAD.FILE.PARAM NE '' THEN
 
 *       - PARAMETROS GENERALES PARA LEER EL ARCHIVO Y DE SEPARACION
-        Y.FILE.SEP                      =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileInSep>
-        Y.FILE.MASK                     =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileInMask>
-        Y.FILE.PATH                     =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileInPath>
-        Y.FILE.EXT                      =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileInExt>
+        Y.FILE.SEP                      =       R.ABC.UPLOAD.FILE.PARAM<AbcTable.AbcUploadFileParam.AufpFileInSep>
+        Y.FILE.MASK                     =       R.ABC.UPLOAD.FILE.PARAM<AbcTable.AbcUploadFileParam.AufpFileInMask>
+        Y.FILE.PATH                     =       R.ABC.UPLOAD.FILE.PARAM<AbcTable.AbcUploadFileParam.AufpFileInPath>
+        Y.FILE.EXT                      =       R.ABC.UPLOAD.FILE.PARAM<AbcTable.AbcUploadFileParam.AufpFileInExt>
 
-        Y.LINEA.INICIA.CARGA            =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpLineaInicio>
+        Y.LINEA.INICIA.CARGA            =       R.ABC.UPLOAD.FILE.PARAM<AbcTable.AbcUploadFileParam.AufpLineaInicio>
 
-        Y.FILE.MASK.OUT                 =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileOutMask>
-        Y.FILE.PATH.OUT                 =       R.ABC.UPLOAD.FILE.PARAM<AbcUploadFileParam.AbcUploadFileParam.AufpFileOutPath>
+        Y.FILE.MASK.OUT                 =       R.ABC.UPLOAD.FILE.PARAM<AbcTable.AbcUploadFileParam.AufpFileOutMask>
+        Y.FILE.PATH.OUT                 =       R.ABC.UPLOAD.FILE.PARAM<AbcTable.AbcUploadFileParam.AufpFileOutPath>
 
         Y.ARR.APLICACIONES.OFS          =      RAISE(R.ABC.UPLOAD.FILE.PARAM<AUFP.OFS.APLICACION>)
 
@@ -177,9 +176,9 @@ PROCESA.ARCHIVOS:
             IF R.ABC.UPLOAD.FILE.CONCAT EQ '' THEN
                 GOSUB READ.FILE
 *            -Actualiza o graba EN TABLA ABC.UPLOAD.FILE.CONCAT
-                Y.VALOR.OK.CONCAT = R.ABC.UPLOAD.FILE.CONCAT<AbcUploadFileConcat.AbcUploadFileConcat.LoadOk>
+                Y.VALOR.OK.CONCAT = R.ABC.UPLOAD.FILE.CONCAT<AbcTable.AbcUploadFileConcat.LoadOk>
                 IF Y.VALOR.OK.CONCAT EQ '' THEN
-                    R.ABC.UPLOAD.FILE.CONCAT<AbcUploadFileConcat.AbcUploadFileConcat.LoadOk> = 'SI'
+                    R.ABC.UPLOAD.FILE.CONCAT<AbcTable.AbcUploadFileConcat.LoadOk> = 'SI'
                 END
                 WRITE R.ABC.UPLOAD.FILE.CONCAT TO F.ABC.UPLOAD.FILE.CONCAT, Y.ABC.UPLOAD.FILE.CONCAT.ID
                 Y.ARCHIVO.PROCESADO += 1
@@ -371,13 +370,13 @@ READ.FILE:
 
 * luis                        CONVERT FM TO "," IN Y.CADENA.ERRORES.CAMPO
                         IF Y.TIPO.LINEA EQ "D" THEN
-                            R.ABC.UPLOAD.FILE.DETAIL<AbcUploadFileDetail.AbcUploadFileDetail.NombreCampo,Y.CONTADOR.SEPARADORES.LINEA>     = Y.NOM.CAMPO.TO.MAP
-                            R.ABC.UPLOAD.FILE.DETAIL<AbcUploadFileDetail.AbcUploadFileDetail.ValorCampo,Y.CONTADOR.SEPARADORES.LINEA>      = Y.VALOR.CAMPO.ORG
-                            R.ABC.UPLOAD.FILE.DETAIL<AbcUploadFileDetail.AbcUploadFileDetail.ValorValidacion,Y.CONTADOR.SEPARADORES.LINEA> = Y.CADENA.ERRORES.CAMPO
+                            R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.NombreCampo,Y.CONTADOR.SEPARADORES.LINEA>     = Y.NOM.CAMPO.TO.MAP
+                            R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.ValorCampo,Y.CONTADOR.SEPARADORES.LINEA>      = Y.VALOR.CAMPO.ORG
+                            R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.ValorValidacion,Y.CONTADOR.SEPARADORES.LINEA> = Y.CADENA.ERRORES.CAMPO
                         END ELSE
-                            R.ABC.UPLOAD.FILE.CONCAT<AbcUploadFileConcat.AbcUploadFileConcat.NombreCampo,Y.CONTADOR.SEPARADORES.LINEA>     = Y.NOM.CAMPO.TO.MAP
-                            R.ABC.UPLOAD.FILE.CONCAT<AbcUploadFileConcat.AbcUploadFileConcat.ValorCampo,Y.CONTADOR.SEPARADORES.LINEA>      = Y.VALOR.CAMPO.ORG
-                            R.ABC.UPLOAD.FILE.CONCAT<AbcUploadFileConcat.AbcUploadFileConcat.ValorValidacion,Y.CONTADOR.SEPARADORES.LINEA> = Y.CADENA.ERRORES.CAMPO
+                            R.ABC.UPLOAD.FILE.CONCAT<AbcTable.AbcUploadFileConcat.NombreCampo,Y.CONTADOR.SEPARADORES.LINEA>     = Y.NOM.CAMPO.TO.MAP
+                            R.ABC.UPLOAD.FILE.CONCAT<AbcTable.AbcUploadFileConcat.ValorCampo,Y.CONTADOR.SEPARADORES.LINEA>      = Y.VALOR.CAMPO.ORG
+                            R.ABC.UPLOAD.FILE.CONCAT<AbcTable.AbcUploadFileConcat.ValorValidacion,Y.CONTADOR.SEPARADORES.LINEA> = Y.CADENA.ERRORES.CAMPO
                         END
                         YARR.CADENA.CAMPOS.OFS<-1> = YARR.CAMPOS.VALIDAR.OFS
                     END
@@ -388,16 +387,16 @@ READ.FILE:
                     Y.MESSAGE.LOG.ERR =Y.MESSAGE.LOG
 * luis                   CONVERT FM TO VM IN Y.MESSAGE.LOG.ERR
                     IF Y.TIPO.LINEA EQ "D" THEN
-                        R.ABC.UPLOAD.FILE.DETAIL<AbcUploadFileDetail.AbcUploadFileDetail.LoadOk> = "NO"
+                        R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.LoadOk> = "NO"
                     END ELSE
-                        R.ABC.UPLOAD.FILE.CONCAT<AbcUploadFileDetail.AbcUploadFileDetail.LoadOk> = "NO"
+                        R.ABC.UPLOAD.FILE.CONCAT<AbcTable.AbcUploadFileDetail.LoadOk> = "NO"
                     END
                     ARR.LOG.VALIDACION <-1>= Y.MESSAGE.LOG
                 END ELSE
                     IF Y.TIPO.LINEA EQ "D" THEN
-                        R.ABC.UPLOAD.FILE.DETAIL<AbcUploadFileDetail.AbcUploadFileDetail.LoadOk> = "SI"
+                        R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.LoadOk> = "SI"
                     END ELSE
-                        R.ABC.UPLOAD.FILE.CONCAT<AbcUploadFileDetail.AbcUploadFileDetail.LoadOk> = "SI"
+                        R.ABC.UPLOAD.FILE.CONCAT<AbcTable.AbcUploadFileDetail.LoadOk> = "SI"
                     END
                     ARR.LOG.VALIDACION<-1>=Y.MESSAGE.LOG
                     ARR.LOG.VALIDACION<-1>= "OK"
@@ -408,8 +407,8 @@ READ.FILE:
                 IF Y.TIPO.LINEA EQ "D" THEN
 
                     ARCHIVO.LINEA = ARCHIVO.LINEA + 1
-                    R.ABC.UPLOAD.FILE.DETAIL<AbcUploadFileDetail.AbcUploadFileDetail.IdParam>    = Y.ID.ABC.UPLOAD.FILE.PARAM
-                    R.ABC.UPLOAD.FILE.DETAIL<AbcUploadFileDetail.AbcUploadFileDetail.IdConcat>   = Y.ABC.UPLOAD.FILE.CONCAT.ID
+                    R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.IdParam>    = Y.ID.ABC.UPLOAD.FILE.PARAM
+                    R.ABC.UPLOAD.FILE.DETAIL<AbcTable.AbcUploadFileDetail.IdConcat>   = Y.ABC.UPLOAD.FILE.CONCAT.ID
 
                     Y.RESP.OFS = ''
                     IF Y.MESSAGE.LOG.ERR EQ '' THEN
@@ -429,7 +428,7 @@ READ.FILE:
 
                     LOCATE Y.ABC.UPLOAD.FILE.DETAIL.ID IN R.ABC.UPLOAD.FILE.CONCAT SETTING Y.POS.CONCAT THEN
                     END ELSE
-                        R.ABC.UPLOAD.FILE.CONCAT<AbcUploadFileConcat.AbcUploadFileConcat.ArchivoLinea,ARCHIVO.LINEA> = Y.ABC.UPLOAD.FILE.DETAIL.ID
+                        R.ABC.UPLOAD.FILE.CONCAT<AbcTable.AbcUploadFileConcat.ArchivoLinea,ARCHIVO.LINEA> = Y.ABC.UPLOAD.FILE.DETAIL.ID
                     END
                 END
             END

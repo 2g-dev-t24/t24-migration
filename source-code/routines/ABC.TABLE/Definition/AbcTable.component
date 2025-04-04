@@ -1,0 +1,175 @@
+component AbcTable
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+private method AbcAtm ()
+{
+    jBC: ABC.ATM
+}
+
+private method AbcAtmFields ()
+{
+    jBC: ABC.ATM.FIELDS
+}
+
+# -------------------------------------------------
+
+private method AbcBonificacionCashIn ()
+{
+    jBC: ABC.BONIFICACION.CASH.IN
+}
+
+private method AbcBonificacionCashInFields ()
+{
+    jBC: ABC.BONIFICACION.CASH.IN.FIELDS
+}
+
+# -------------------------------------------------
+private method AbcCausaBaja ()
+{
+    jBC: ABC.CAUSA.BAJA
+}
+
+private method AbcCausaBajaFields ()
+{
+    jBC: ABC.CAUSA.BAJA.FIELDS
+}
+
+
+# -------------------------------------------------
+private method AbcComisionistas ()
+{
+    jBC: ABC.COMISIONISTAS
+}
+
+private method AbcComisionistasFields ()
+{
+    jBC: ABC.COMISIONISTAS.FIELDS
+}
+
+
+
+# -------------------------------------------------
+private method AbcComisionistasAdmin ()
+{
+    jBC: ABC.COMISIONISTAS.ADMIN
+}
+
+private method AbcComisionistasAdminFields ()
+{
+    jBC: ABC.COMISIONISTAS.ADMIN.FIELDS
+}
+
+
+
+# -------------------------------------------------
+private method AbcComisionistasFileConcat ()
+{
+    jBC: ABC.COMISIONISTAS.FILE.CONCAT
+}
+
+private method AbcComisionistasFileConcatFields ()
+{
+    jBC: ABC.COMISIONISTAS.FILE.CONCAT.FIELDS
+}
+
+
+
+# -------------------------------------------------
+private method AbcComisionistasFileDetail ()
+{
+    jBC: ABC.COMISIONISTAS.FILE.DETAIL
+}
+
+private method AbcComisionistasFileDetailFields ()
+{
+    jBC: ABC.COMISIONISTAS.FILE.DETAIL.FIELDS
+}
+
+
+# -------------------------------------------------
+
+private method AbcComisionistasRelacion ()
+{
+    jBC: ABC.COMISIONISTAS.RELACION
+}
+
+private method AbcComisionistasRelacionFields ()
+{
+    jBC: ABC.COMISIONISTAS.RELACION.FIELDS
+}
+
+
+
+# -------------------------------------------------
+private method AbcFirmanteContrato ()
+{
+    jBC: ABC.FIRMANTE.CONTRATO
+}
+
+private method AbcFirmanteContratoFields ()
+{
+    jBC: ABC.FIRMANTE.CONTRATO.FIELDS
+}
+
+# -------------------------------------------------
+private method AbcGeneralParam ()
+{
+    jBC: ABC.GENERAL.PARAM
+}
+
+private method AbcGeneralParamFields ()
+{
+    jBC: ABC.GENERAL.PARAM.FIELDS
+}
+
+# -------------------------------------------------
+private method AbcRegistroComisionistas ()
+{
+    jBC: ABC.REGISTRO.COMISIONISTAS
+}
+
+private method AbcRegistroComisionistasFields ()
+{
+    jBC: ABC.REGISTRO.COMISIONISTAS.FIELDS
+}
+
+# -------------------------------------------------
+
+private method AbcUploadFileConcat ()
+{
+    jBC: ABC.UPLOAD.FILE.CONCAT
+}
+
+private method AbcUploadFileConcatFields ()
+{
+    jBC: ABC.UPLOAD.FILE.CONCAT.FIELDS
+}
+
+
+# -------------------------------------------------
+private method AbcUploadFileDetail ()
+{
+    jBC: ABC.UPLOAD.FILE.DETAIL
+}
+
+private method AbcUploadFileDetailFields ()
+{
+    jBC: ABC.UPLOAD.FILE.DETAIL.FIELDS
+}
+
+# -------------------------------------------------
+private method AbcUploadFileParam ()
+{
+    jBC: ABC.UPLOAD.FILE.PARAM
+}
+
+private method AbcUploadFileParamFields ()
+{
+    jBC: ABC.UPLOAD.FILE.PARAM.FIELDS
+}
+
+# -------------------------------------------------
+
+
+# -------------------------------------------------

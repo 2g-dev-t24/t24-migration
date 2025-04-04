@@ -1,5 +1,5 @@
-* @ValidationCode : MjozNDU0NTI0MDY6Q3AxMjUyOjE3NDM2MzE1OTk5MDQ6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 02 Apr 2025 19:06:39
+* @ValidationCode : MjotMTMyNTEzNjEwMDpDcDEyNTI6MTc0MzczNzU3MDI4NzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 04 Apr 2025 00:32:50
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -21,9 +21,7 @@ SUBROUTINE ABC.COMISIONISTAS.OBT.TERM(YI.DETAIL)
 *-----------------------------------------------------------------------------
     $USING EB.DataAccess
     $USING EB.API
-    $USING AbcComisionistasFileDetail
-    $USING AbcRegistroComisionistas
-    $USING AbcComisionistasRelacion
+    $USING AbcTable
     $USING AA.PaymentSchedule
 
 
@@ -59,16 +57,16 @@ RETURN
 PROCESA:
 
     EB.DataAccess.FRead(FN.ABC.DETAIL,Y.ID,R.DETAIL,F.ABC.DETAIL,Y.ERR.F.DETAIL)
-    Y.ID.RELACION = R.DETAIL<AbcComisionistasFileDetail.AbcComisionistasFileDetail.IdRelacion>
+    Y.ID.RELACION = R.DETAIL<AbcTable.AbcComisionistasFileDetail.IdRelacion>
 
     EB.DataAccess.FRead(FN.ABC.RELACION,Y.ID.RELACION,R.RELACION,F.ABC.RELACION,Y.ERR.REL)
-    Y.TOT.APLI = DCOUNT(R.RELACION<AbcComisionistasRelacion.AbcComisionistasRelacion.Aplicacion>,VM)
+    Y.TOT.APLI = DCOUNT(R.RELACION<AbcTable.AbcComisionistasRelacion.Aplicacion>,VM)
     FOR RE = 1 TO Y.TOT.APLI
-        R.RELACION1 := FIELD (R.RELACION<AbcComisionistasRelacion.AbcComisionistasRelacion.Aplicacion,RE>,"_",1):VM
+        R.RELACION1 := FIELD (R.RELACION<AbcTable.AbcComisionistasRelacion.Aplicacion,RE>,"_",1):VM
     NEXT RE
 
     FIND "AA.ARRANGEMENT.ACTIVITY" IN R.RELACION1 SETTING AP, VP, SP THEN
-        Y.ID.T24 = R.RELACION<AbcComisionistasRelacion.AbcComisionistasRelacion.IdT24Ofs><1,VP>
+        Y.ID.T24 = R.RELACION<AbcTable.AbcComisionistasRelacion.IdT24Ofs><1,VP>
     END
 
 *---CRM SI NO TRAE INFORMACION --------------

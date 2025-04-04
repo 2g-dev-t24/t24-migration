@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo1NTYyMzI2MzM6Q3AxMjUyOjE3NDM3MzI1MDYyMDk6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 03 Apr 2025 23:08:26
+* @ValidationCode : Mjo1MjA3NDY4MTQ6Q3AxMjUyOjE3NDM3MzY3MzkwMzY6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 04 Apr 2025 00:18:59
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -24,7 +24,7 @@ SUBROUTINE ABC.APLICA.BONIF.CASHIN(ID.REGISTRO.BON)
     $USING EB.Service
     $USING EB.API
     $USING EB.Interface
-    $USING AbcBonificacionCashIn
+    $USING AbcTable
 
 
 
@@ -63,7 +63,7 @@ PROCESS:
     
     EB.DataAccess.FRead(FN.ABC.BONIF.CASHIN, Y.ID.BONIFICACION, REG.BONIFICACION, F.ABC.BONIF.CASHIN, Y.ERR.BON)
     
-    Y.MONTO.A.BONIFICAR = REG.BONIFICACION<AbcBonificacionCashIn.AbcGeneralParam.MontoABonificar>
+    Y.MONTO.A.BONIFICAR = REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.MontoABonificar>
 
     IF Y.MONTO.A.BONIFICAR NE '' THEN
         GOSUB ARMA.OFS
@@ -108,8 +108,8 @@ RETURN
 MARCA.REG.APLICADO:
 *---------------------------------------------------------------
 
-    REG.BONIFICACION<AbcBonificacionCashIn.AbcGeneralParam.Bonificado> = "SI"
-    REG.BONIFICACION<AbcBonificacionCashIn.AbcGeneralParam.IdBonificacion> = Y.ID.BONIF
+    REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.Bonificado> = "SI"
+    REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.IdBonificacion> = Y.ID.BONIF
 
     WRITE REG.BONIFICACION TO F.ABC.BONIF.CASHIN, Y.ID.BONIFICACION
 

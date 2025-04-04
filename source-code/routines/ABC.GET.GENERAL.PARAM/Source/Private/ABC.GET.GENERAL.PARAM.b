@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTk0NDQzMzk4MDpDcDEyNTI6MTc0MzczMDE5NjI5NzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 03 Apr 2025 22:29:56
+* @ValidationCode : MjozMDA4NjE3Mzc6Q3AxMjUyOjE3NDM3Mzc3OTExMjI6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 04 Apr 2025 00:36:31
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -19,7 +19,7 @@ SUBROUTINE ABC.GET.GENERAL.PARAM(Y.ID.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
 *-----------------------------------------------------------------------------
 
 *-----------------------------------------------------------------------------
-    $USING AbcGeneralParam
+    $USING AbcTable
     $USING EB.DataAccess
 
     GOSUB INITIALIZE
@@ -46,8 +46,8 @@ PROCESS:
 *---------------------------------------------------
 
     EB.DataAccess.FRead(FN.ABC.GENERAL.PARAM,Y.ID.PARAM,R.PARAMETROS,F.ABC.GENERAL.PARAM,GRL.ERR)
-    Y.LIST.PARAMS = RAISE(R.PARAMETROS<AbcGeneralParam.AbcGeneralParam.NombParametro>)
-    Y.LIST.VALUES = RAISE(R.PARAMETROS<AbcGeneralParam.AbcGeneralParam.DatoParametro>)
+    Y.LIST.PARAMS = RAISE(R.PARAMETROS<AbcTable.AbcGeneralParam.NombParametro>)
+    Y.LIST.VALUES = RAISE(R.PARAMETROS<AbcTable.AbcGeneralParam.DatoParametro>)
 
 RETURN
 END
