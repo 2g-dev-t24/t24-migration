@@ -32,4 +32,13 @@ private method AbcComisionistasObtInversion (INOUT YiDetail string)
     jBC: ABC.COMISIONISTAS.OBT.INVERSION
 } 
  
+private method AbcComisionistasEjecuta (INOUT RData string)
+{
+    jBC: ABC.COMISIONISTAS.EJECUTA
+} 
+
+private method AbcComisionistasCreaLayout (INOUT YIdRegistroLayout string, INOUT YListRegistro string, INOUT YNoRegistros string)
+{
+    jBC: ABC.COMISIONISTAS.CREA.LAYOUT
+} 
 # ------------------ METHOD END ------------------

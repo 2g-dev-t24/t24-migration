@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNTUzMDcxNDM1OkNwMTI1MjoxNzQzNzgxOTcxNzU5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 04 Apr 2025 12:52:51
+* @ValidationCode : Mjo1NzkxNzE4NzU6Q3AxMjUyOjE3NDM3OTMwMzIxMDA6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 04 Apr 2025 15:57:12
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -110,7 +110,8 @@ READ.FILE:
                 ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.NombreArchivo>  = TRIM(Y.ARR.LINE<10>)
                 ARR.REG.COMI<AbcTable.AbcRegistroComisionistas.Comisionista>  = 'VECTOR'
 
-                WRITE ARR.REG.COMI TO F.ABC.REGISTRO.COMISIONISTAS,Y.ID.EMISION
+                EB.DataAccess.FWrite(FN.ABC.REGISTRO.COMISIONISTAS,Y.ID.EMISION,ARR.REG.COMI)
+*WRITE ARR.REG.COMI TO F.ABC.REGISTRO.COMISIONISTAS,Y.ID.EMISION
 
             END
         REPEAT

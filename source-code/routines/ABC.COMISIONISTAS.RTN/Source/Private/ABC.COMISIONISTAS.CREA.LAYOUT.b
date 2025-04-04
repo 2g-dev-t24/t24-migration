@@ -1,0 +1,506 @@
+* @ValidationCode : MjoxNzk0NjQ1NDI5OkNwMTI1MjoxNzQzNzkwNjAyNjI0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Apr 2025 15:16:42
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
+$PACKAGE AbcComisionistasRtn
+SUBROUTINE ABC.COMISIONISTAS.CREA.LAYOUT(Y.ID.REGISTRO.LAYOUT,Y.LIST.REGISTROS,YNO.REGISTROS)
+*-----------------------------------------------------------------------------
+*
+*-----------------------------------------------------------------------------
+* Modification History :
+*-----------------------------------------------------------------------------
+    $USING EB.DataAccess
+
+    GOSUB DATOS.INCIO
+    GOSUB PARAMETROS
+
+RETURN
+
+*================
+DATOS.INCIO:
+*================
+
+*   -ID de Registro de Tabla a ejecutar
+    Y.CADENA.SALIDA      = ''
+    Y.LISTA.ARCHIVOS     = ''
+    Y.ARR.EMISION=''
+    Y.ARR.INVERSIONES=''
+    Y.EMI=0
+*   -Tabla en donde se parametrizan los campos a consultar
+    FN.ABC.COMISIONISTAS.FILE.LAYOUT = "F.ABC.COMISIONISTAS.FILE.LAYOUT"
+    F.ABC.COMISIONISTAS.FILE.LAYOUT  = ""
+    EB.DataAccess.Opf(FN.ABC.COMISIONISTAS.FILE.LAYOUT,F.ABC.COMISIONISTAS.FILE.LAYOUT)
+
+*   -Tabal de Standard a consultar
+    FN.STANDARD.SELECTION = "F.STANDARD.SELECTION"
+    F.STANDARD.SELECTION  = ""
+    EB.DataAccess.Opf(FN.STANDARD.SELECTION,F.STANDARD.SELECTION)
+
+RETURN
+
+*============
+PARAMETROS:
+*============
+
+*   -Se extraen lo datos de la tabla de parametros
+***    DISPLAY FN.ABC.COMISIONISTAS.FILE.LAYOUT
+    EB.DataAccess.FRead(FN.ABC.COMISIONISTAS.FILE.LAYOUT,Y.ID.REGISTRO.LAYOUT,R.ENQUIRY.LAYOUT,F.ABC.COMISIONISTAS.FILE.LAYOUT,ERR.ENQUIRY.LAYOUT)
+
+    IF R.ENQUIRY.LAYOUT THEN
+*       Parametros para creacion de archivo
+        Y.RUTA.ARCHIVO       = R.ENQUIRY.LAYOUT<ACL.FILE.IN.PATH>
+        Y.NOMBRE.ARCHIVO     = R.ENQUIRY.LAYOUT<ACL.FILE.IN.MASK>
+        Y.NOMBRE.ARCHIVO     = UPCASE(Y.NOMBRE.ARCHIVO)     ;*SBS-F&G CONVIERTE EL NOMBRE DEL ARCHIVO A MAYUSCULAS
+        DISPLAY "NOMBRE DEL ARCHIVO: ":Y.NOMBRE.ARCHIVO     ;*SBS-F&G
+        Y.SEPARADOR.ARCHIVO  = R.ENQUIRY.LAYOUT<ACL.FILE.IN.SEP>
+        Y.EXTENCION.ARCHIVO  = R.ENQUIRY.LAYOUT<ACL.FILE.IN.EXT>
+        Y.ARR.RECIBIDO       = Y.LIST.REGISTROS
+        Y.CONSECUTIVO.ARC    = FIELD(Y.ARR.RECIBIDO,"|",3)
+*        Y.NOMBRE.ARCHIVO    = Y.NOMBRE.ARCHIVO:Y.CONSECUTIVO.ARC:Y.EXTENCION.ARCHIVO
+        Y.NOMBRE.ARCHIVO     = Y.NOMBRE.ARCHIVO:Y.CONSECUTIVO.ARC
+        IF Y.RUTA.ARCHIVO EQ '' THEN
+            TEXT = "NO EXISTE RUTA PARAMETRIZADA"
+            CALL REM
+            RETURN
+        END ELSE
+            OPEN Y.RUTA.ARCHIVO TO F.RUTA.ARCHIVO THEN
+            END ELSE
+                TEXT = "RUTA INVALIDA EN ":Y.ID.REGISTRO.LAYOUT
+                CALL REM
+                RETURN
+            END
+        END
+
+*---CRM 31 AGOSTO 2016 -------------------------------
+*       Y.VALOR.EVALUAR  = Y.NOMBRE.ARCHIVO
+*       GOSUB CONVERSION.GRAL
+*       Y.NOMBRE.ARCHIVO = Y.VALOR.EVALUADO
+        Y.POS.FECHA = ''
+        FINDSTR 'AAAA' IN Y.NOMBRE.ARCHIVO SETTING Y.POS.FECHA THEN
+            IF Y.POS.FECHA NE '' THEN
+                Y.VALOR.EVALUAR  = Y.NOMBRE.ARCHIVO
+                GOSUB CONVERSION.GRAL
+                Y.NOMBRE.ARCHIVO = Y.VALOR.EVALUADO
+            END
+        END
+*-----------------------------------------------------
+
+*       -Parametros de Select
+        Y.ID.TABLA.SELECT    = R.ENQUIRY.LAYOUT<ACL.APLICACION>
+        YARR.CAMPOS.SELECT   = R.ENQUIRY.LAYOUT<ACL.CAMPO.CRITERIO>
+        YARR.OPERADOR.SELECT = R.ENQUIRY.LAYOUT<ACL.OPERADOR.CRITERIO>
+        YARR.VALORES.SELECT  = R.ENQUIRY.LAYOUT<ACL.VALOR.CRITERIO>
+*       -Se convierten a FM los Valores
+        CONVERT VM TO FM IN YARR.CAMPOS.SELECT
+        CONVERT VM TO FM IN YARR.OPERADOR.SELECT
+        CONVERT VM TO FM IN YARR.VALORES.SELECT
+
+*       Paramtros para Archivo de Salida
+        YARR.POSICIONES.ARCH     = R.ENQUIRY.LAYOUT<ACL.POSICION>
+        YARR.ENCABEZADO.ARCH     = R.ENQUIRY.LAYOUT<ACL.ENCABEZADO>
+        YARR.LONGITUD.ARCH       = R.ENQUIRY.LAYOUT<ACL.LONGITUD>
+        YARR.CAMPO.ARCH          = R.ENQUIRY.LAYOUT<ACL.CAMPO>
+        YARR.CONVERSION.ARCH     = R.ENQUIRY.LAYOUT<ACL.CONVERSION>
+        YARR.TIPO.LINEA.ARCHIVO  = R.ENQUIRY.LAYOUT<ACL.ENCABEZADO>
+*       -Se convierte en fm
+        CONVERT VM TO FM IN YARR.POSICIONES.ARCH
+        CONVERT VM TO Y.SEPARADOR.ARCHIVO IN YARR.ENCABEZADO.ARCH
+        CONVERT VM TO FM IN YARR.LONGITUD.ARCH
+        CONVERT VM TO FM IN YARR.CAMPO.ARCH
+        CONVERT VM TO FM IN YARR.CONVERSION.ARCH
+        CONVERT VM TO FM IN YARR.TIPO.LINEA.ARCHIVO
+
+*       -Se identifica la tabla que se va a leer
+        FN.TABLA.SELECT = "F.":Y.ID.TABLA.SELECT
+        F.TABLA.SELECT  = ''
+        EB.DataAccess.Opf(FN.TABLA.SELECT,F.TABLA.SELECT)
+
+*       -Campos de STANDAR de tabla que se consulta
+*******        DISPLAY FN.STANDARD.SELECTION
+*******        DISPLAY Y.ID.TABLA.SELECT
+        EB.DataAccess.FRead(FN.STANDARD.SELECTION,Y.ID.TABLA.SELECT,R.APLICACION,F.STANDARD.SELECTION,ERR.APLICACION)
+        Y.ARR.CAMPOS.SYS.STANDARD = R.APLICACION<SSL.SYS.FIELD.NAME>
+        Y.ARR.POSICION.CAMPOS.SYS = R.APLICACION<SSL.SYS.FIELD.NO>
+
+        FIND "LOCAL.REF" IN Y.ARR.CAMPOS.SYS.STANDARD SETTING AP, VP, SP THEN
+            Y.POSICION.LOCAL.REF = Y.ARR.POSICION.CAMPOS.SYS<1,VP>
+        END
+        Y.ARR.CAMPOS.LOC.STANDARD = R.APLICACION<SSL.USR.FIELD.NAME>
+        Y.ARR.POSICION.CAMPOS.LOC = R.APLICACION<SSL.USR.FIELD.NO>
+*        IF Y.ID.REGISTRO.LAYOUT EQ "LIQUIDACION.INVS" THEN  ;*SBS-F&G
+        GOSUB SELECT.TABLA
+*        IF Y.ID.REGISTRO.LAYOUT EQ "LIQUIDACION.INVS" THEN  ;*SBS-F&E
+    END ELSE
+        TEXT = "NO EXISTE PARAMETRIZACION DE : ":Y.ID.REGISTRO.LAYOUT :" EN ABC.COMISIONISTAS.FILE.LAYOUT"
+        CALL REM
+    END
+
+RETURN
+*============
+OBTEN.EMISIONES:
+*============
+
+    Y.NO.EMI=0
+    Y.NO.ID= YNO.REGISTROS
+    FOR Y.REG = 1 TO  Y.NO.ID
+        Y.ID.EMI=''
+        Y.ID.EMI=FIELD(Y.LIST.REGISTROS<Y.REG>,"-",1)
+
+        FIND Y.ID.EMI IN Y.ARR.EMISION SETTING POS.ID THEN
+            Y.NO.ARR=(DCOUNT(Y.ARR.INVERSIONES<POS.ID>,VM))+1
+            Y.ARR.INVERSIONES<POS.ID,Y.NO.ARR> = Y.LIST.REGISTROS<Y.REG>
+        END ELSE
+            Y.ARR.EMISION<-1> = Y.ID.EMI
+            Y.NO.EMI=DCOUNT(Y.ARR.EMISION,FM)
+            Y.ARR.INVERSIONES<Y.NO.EMI,1> = Y.LIST.REGISTROS<Y.REG>
+        END
+
+    NEXT Y.REG
+
+    Y.NO.ARR.EMI = DCOUNT(Y.ARR.INVERSIONES,FM)
+
+    FOR Y.LOOP.EMI =1 TO Y.NO.ARR.EMI
+
+        Y.TOTAL.REG.PROCESA=''
+        Y.LIST.REGISTROS.INV=''
+        YNO.REGISTROS=0
+        Y.TOTAL.REG.PROCESA = DCOUNT(Y.ARR.INVERSIONES<Y.LOOP.EMI>,VM)
+        YNO.REGISTROS=Y.TOTAL.REG.PROCESA
+        Y.LIST.REGISTROS.INV=Y.ARR.INVERSIONES<Y.LOOP.EMI>
+        CONVERT VM TO FM IN Y.LIST.REGISTROS.INV
+        Y.NOMBRE.ARCHIVO = Y.ARR.EMISION<Y.LOOP.EMI>
+        GOSUB LEE.REGISTRO
+    NEXT Y.LOOP.EMI
+
+RETURN
+*============
+SELECT.TABLA:
+*============
+
+*---CRM 31 AGOSTO 2016 -------------------------------
+*   Y.VALOR.EVALUAR     = YARR.VALORES.SELECT
+*   GOSUB CONVERSION.GRAL
+*   YARR.VALORES.SELECT = Y.VALOR.EVALUADO
+    Y.POS.FECHA = ''
+    FINDSTR 'AAAA' IN YARR.VALORES.SELECT SETTING Y.POS.FECHA THEN
+        IF Y.POS.FECHA NE '' THEN
+            Y.VALOR.EVALUAR     = YARR.VALORES.SELECT
+            GOSUB CONVERSION.GRAL
+            YARR.VALORES.SELECT = Y.VALOR.EVALUADO
+        END
+    END
+*-----------------------------------------------------
+
+    IF Y.LIST.REGISTROS EQ '' AND YNO.REGISTROS EQ '' THEN
+
+*   -SELECT que se ejecuta en base a los parametros Ingresado
+        Y.TOTAL.ARR = DCOUNT(YARR.CAMPOS.SELECT,@VM)
+        COMANDO.SELECT = 'SSELECT ' : FN.TABLA.SELECT : ' WITH @ID NE "" '
+        FOR I.CAMPOS = 1 TO Y.TOTAL.ARR
+            Y.CAMPO.CRITERIO = YARR.CAMPOS.SELECT<I.CAMPOS>
+            Y.OPERADOR.CRITE = YARR.OPERADOR.SELECT<I.CAMPOS>
+            Y.VALOR.CRITERIO = YARR.VALORES.SELECT<I.CAMPOS>
+            IF Y.CAMPO.CRITERIO NE '' THEN
+                COMANDO.SELECT:= ' AND ':Y.CAMPO.CRITERIO:' ':Y.OPERADOR.CRITE:' ':DQUOTE(Y.VALOR.CRITERIO)  ;*ITSS-NYADAV-20220131
+            END
+        NEXT I.CAMPOS
+        CALL EB.READLIST(COMANDO.SELECT,Y.LIST.REGISTROS,'',YNO.REGISTROS,ERR.REG)
+        IF YNO.REGISTROS GT 0 THEN
+            GOSUB OBTEN.EMISIONES
+        END ELSE
+            YNO.REGISTROS = 0
+        END
+    END ELSE
+        Y.ARR.RECIBIDO   = Y.LIST.REGISTROS
+        Y.LIST.REGISTROS.INV = FIELD(Y.ARR.RECIBIDO,"|",1)
+        Y.LISTA.ARCHIVOS = FIELD(Y.ARR.RECIBIDO,"|",2)
+        Y.CONSECUTIVO.ARC= FIELD(Y.ARR.RECIBIDO,"|",3)
+        IF YNO.REGISTROS GT 0 THEN
+            GOSUB LEE.REGISTRO
+        END
+    END
+
+RETURN
+*==============
+LEE.REGISTRO:
+*==============
+
+*   -Inicia la Lectura de los registros para procesar
+    FOR I.REG = 1 TO YNO.REGISTROS
+
+        Y.ID.REG.PROCESA = Y.LIST.REGISTROS.INV<I.REG>      ;*ID AA
+        Y.ID.ARCH.DETAIL = Y.LISTA.ARCHIVOS<I.REG>
+***        DISPLAY FN.TABLA.SELECT:"ID ... ":Y.ID.REG.PROCESA  ;*SBS-F&G
+        IF Y.ID.REGISTRO.LAYOUT EQ "LIQUIDACION.INVS" OR Y.ID.REGISTRO.LAYOUT EQ "REPORTE.INVERSIONES" THEN   ;*SBS-F&G
+            SEL.CMD.AAACT = "SELECT ":FN.TABLA.SELECT:" WITH ARRANGEMENT EQ ":DQUOTE(Y.ID.REG.PROCESA):" AND ACTIVITY EQ 'DEPOSITS-NEW-ARRANGEMENT'"   ;*SBS-F&G  ; * ITSS - ANJALI - Added DQUOTE / '
+            CALL EB.READLIST(SEL.CMD.AAACT,YLIST.2,'',Y.NO.IDS,Y.SEL.ERROR)     ;*SBS-F&G
+            Y.ID.REG.PROCESA = YLIST.2<1>         ;*SBS-F&G
+        END         ;*SBS-F&G
+
+        EB.DataAccess.FRead(FN.TABLA.SELECT,Y.ID.REG.PROCESA,R.TABLA.SELECT,F.TABLA.SELECT,ERR.TABLA.SELECT)
+        IF R.TABLA.SELECT THEN
+            IF I.REG EQ 1 THEN
+                Y.VALOR.ARCHIVO      = ''
+                Y.TIPO.LINEA = "E"
+                GOSUB PROCESO.CAMPOS
+                Y.CADENA.SALIDA  = Y.VALOR.ARCHIVO
+            END
+            Y.VALOR.ARCHIVO      = ''
+            Y.TIPO.LINEA = "D"
+            GOSUB PROCESO.CAMPOS
+            Y.CADENA.SALIDA <-1> = Y.VALOR.ARCHIVO
+        END
+    NEXT I.REG
+    GOSUB ESCRIBE.ARCHIVO
+
+
+RETURN
+*==============
+ESCRIBE.ARCHIVO:
+*==============
+
+    Y.NOMBRE.ARCHIVO.W= EREPLACE(Y.NOMBRE.ARCHIVO,"VEC","ABC"):Y.EXTENCION.ARCHIVO
+*   -Apertua de Ruta de Archivo
+    OPEN Y.RUTA.ARCHIVO TO F.RUTA.ARCHIVO ELSE Y.RESPUES = "ERROR AL ABRIR RUTA"
+    WRITE Y.CADENA.SALIDA TO F.RUTA.ARCHIVO,Y.NOMBRE.ARCHIVO.W
+    IF Y.NO.EMI GT 0 THEN
+        YNO.REGISTROS = Y.NO.EMI
+    END
+RETURN
+*==============
+PROCESO.CAMPOS:
+*==============
+
+    Y.TOT.CAMPOS   = DCOUNT(YARR.POSICIONES.ARCH,@FM)
+    FOR Y.NO.CAMPO = 1 TO Y.TOT.CAMPOS
+        Y.POSICION.CAMPO     = ""
+        Y.CAMPO.ARCHIVO      = YARR.CAMPO.ARCH<Y.NO.CAMPO>
+        Y.LONGITUD.ARCHIVO   = YARR.LONGITUD.ARCH<Y.NO.CAMPO>
+        Y.CONVERSION.ARCHIVO = YARR.CONVERSION.ARCH<Y.NO.CAMPO>
+        Y.TIPO.LINEA.ARCHIVO = YARR.TIPO.LINEA.ARCHIVO<Y.NO.CAMPO>
+        IF Y.TIPO.LINEA.ARCHIVO EQ Y.TIPO.LINEA THEN
+*       -Se busca el campo que se parametrizo
+            FIND Y.CAMPO.ARCHIVO IN Y.ARR.CAMPOS.SYS.STANDARD SETTING AP.CAMPO, VP.CAMPO, SP.CAMPO THEN
+                Y.POSICION.CAMPO = Y.ARR.POSICION.CAMPOS.SYS<1,VP.CAMPO>
+            END ELSE
+                FIND Y.CAMPO.ARCHIVO IN Y.ARR.CAMPOS.LOC.STANDARD SETTING AP.CAMPO, VP.CAMPO, SP.CAMPO THEN
+                    Y.POSICION.CAMPO = Y.ARR.POSICION.CAMPOS.LOC<1,VP.CAMPO>
+                    Y.POSICION.CAMPO = EREPLACE(Y.POSICION.CAMPO,"LOCAL.REF","")
+                    Y.POSICION.CAMPO = EREPLACE(Y.POSICION.CAMPO,"<","")
+                    Y.POSICION.CAMPO = EREPLACE(Y.POSICION.CAMPO,">","")
+                    Y.POSICION.CAMPO = FIELD(Y.POSICION.CAMPO,",",2)
+                    Y.POSICION.MULVA = Y.POSICION.CAMPO
+                    Y.POSICION.CAMPO = Y.POSICION.LOCAL.REF
+                END
+            END
+*       -Si el Valor es 0 quiere decir que se pone el mismo ID de registro
+            IF Y.POSICION.CAMPO EQ 0 THEN
+                Y.DATOS.ARCHIVO = Y.ID.REG.PROCESA
+            END ELSE
+                IF  Y.POSICION.CAMPO GT 0 THEN
+*                   -Se busca que no halla conversiones en el campo
+                    Y.DATOS.ARCHIVO    = R.TABLA.SELECT<Y.POSICION.CAMPO>
+                END ELSE
+                    IF Y.CAMPO.ARCHIVO[1,9] EQ "CONSTANTE" THEN
+                        Y.DATOS.ARCHIVO = FIELD(Y.CAMPO.ARCHIVO,"-",2)
+                    END
+                    IF Y.CAMPO.ARCHIVO[1,8] EQ "POSICION" THEN
+                        Y.DATOS.ARCHIVO  = I.REG
+                    END
+                    IF Y.CAMPO.ARCHIVO[1,7] EQ "ARREGLO" THEN
+                        IF Y.TIPO.LINEA = "D" THEN          ;*SBS-F&G
+                            Y.DATOS.ARCHIVO = Y.LIST.REGISTROS.INV<I.REG>       ;*SBS-F&G
+                        END ELSE        ;*SBS-F&G
+                            Y.DATOS.ARCHIVO   = Y.LIST.REGISTROS.INV
+                        END   ;*SBS-F&G
+                    END
+                    IF Y.CAMPO.ARCHIVO[1,9] EQ "ID.DETAIL" THEN
+                        Y.DATOS.ARCHIVO   = Y.ID.ARCH.DETAIL
+                    END
+                    IF Y.CAMPO.ARCHIVO[1,9] EQ "TOTALES" THEN
+                        Y.DATOS.ARCHIVO   = Y.TOTAL.REG.PROCESA
+                    END
+                END
+            END
+
+            IF Y.CONVERSION.ARCHIVO NE '' THEN
+                GOSUB PROCESOS.CONVERSION
+            END
+            CONVERT VM TO " " IN Y.DATOS.ARCHIVO
+            DISPLAY "DATOS" : Y.DATOS.ARCHIVO
+            Y.DATOS.ARCHIVO  = Y.DATOS.ARCHIVO:STR(" ",Y.LONGITUD.ARCHIVO - LEN(Y.DATOS.ARCHIVO))
+            Y.DATOS.ARCHIVO  = Y.DATOS.ARCHIVO[1,Y.LONGITUD.ARCHIVO]
+
+*---CRM 31 AGOSTO 2016 -------------------------------
+*           Y.VALOR.EVALUAR     = Y.DATOS.ARCHIVO
+*           GOSUB CONVERSION.GRAL
+*           Y.DATOS.ARCHIVO     = Y.VALOR.EVALUADO
+            Y.POS.FECHA = ''
+            FINDSTR 'AAAA' IN Y.DATOS.ARCHIVO SETTING Y.POS.FECHA THEN
+                IF Y.POS.FECHA NE '' THEN
+                    Y.VALOR.EVALUAR     = Y.DATOS.ARCHIVO
+                    GOSUB CONVERSION.GRAL
+                    Y.DATOS.ARCHIVO     = Y.VALOR.EVALUADO
+                END
+            END
+*-----------------------------------------------------
+
+            Y.VALOR.ARCHIVO<-1>= Y.DATOS.ARCHIVO
+*           DISPLAY "CADENA...  ":Y.VALOR.ARCHIVO
+
+        END
+    NEXT Y.NO.CAMPO
+    CONVERT FM TO Y.SEPARADOR.ARCHIVO IN Y.VALOR.ARCHIVO
+RETURN
+
+*===================
+PROCESOS.CONVERSION:
+*===================
+
+    Y.TOT.CONVERSIONES = DCOUNT(Y.CONVERSION.ARCHIVO,@SM)
+    FOR YNO.CONVERSION = 1 TO Y.TOT.CONVERSIONES
+        Y.CONVERSION   = FIELD(Y.CONVERSION.ARCHIVO,@SM,YNO.CONVERSION)
+
+        Y.TIPO.CONVERSION.APLICA = FIELD(Y.CONVERSION,"-",1)
+        BEGIN CASE
+            CASE Y.TIPO.CONVERSION.APLICA EQ "LINK"
+                DISPLAY "LINK"
+                Y.PARAM.LINK = FIELD(Y.CONVERSION,"-",2)
+                Y.APLICACION.LINK = FIELD(Y.PARAM.LINK,",",1)
+                Y.CAMPO.APLI.LINK = FIELD(Y.PARAM.LINK,",",2)
+
+*           -Se identifica la tabla que se va a leer para LINK
+                FN.TABLA.LINK = "F.":Y.APLICACION.LINK
+                F.TABLA.LINK  = ''
+                EB.DataAccess.Opf(FN.TABLA.LINK,F.TABLA.LINK)
+
+*           -Campos de STANDAR de tabla que se consulta en LINK
+                DISPLAY FN.STANDARD.SELECTION
+                EB.DataAccess.FRead(FN.STANDARD.SELECTION,Y.APLICACION.LINK,R.APLICACION.LINK,F.STANDARD.SELECTION,ERR.APLICACION)
+                YARR.CAMPOS.SYS.LINK     = R.APLICACION.LINK<SSL.SYS.FIELD.NAME>
+                YARR.POS.CAMPOS.SYS.LINK = R.APLICACION.LINK<SSL.SYS.FIELD.NO>
+
+                FIND Y.CAMPO.APLI.LINK IN YARR.CAMPOS.SYS.LINK SETTING AP.LINK, VP.LINK, SP.LINK THEN
+                    Y.POSICION.CAMPO.LINK = YARR.POS.CAMPOS.SYS.LINK<1,VP.LINK>
+*               Y.POSICION.MULVA.LINK = "1"
+*                DISPLAY FN.TABLA.LINK
+                    EB.DataAccess.FRead(FN.TABLA.LINK,Y.DATOS.ARCHIVO,R.TABLA.LINK,F.TABLA.LINK,ERR.TABLA.LINK)
+                    IF R.TABLA.LINK EQ "" AND (Y.ID.REGISTRO.LAYOUT EQ "LIQUIDACION.INVS" OR Y.ID.REGISTRO.LAYOUT EQ "REPORTE.INVERSIONES") AND FIELD(FN.TABLA.LINK,".",2) EQ "ABC" THEN          ;*SBS-F&G
+*                 AL NO ENCONTRAR EL DATO EN LA TABLA VIVA SE PROCEDE A LEER LA HISTORICA
+                        FN.TABLA.LINK = "F.":Y.APLICACION.LINK:"$HIS"     ;*SBS-F&G
+                        F.TABLA.LINK  = ''  ;*SBS-F&G
+                        EB.DataAccess.Opf(FN.TABLA.LINK,F.TABLA.LINK)    ;*SBS-F&G
+                        Y.DATOS.ARCHIVO = FIELD(Y.DATOS.ARCHIVO,";",1)    ;*SBS-F&G
+                        Y.DATOS.ARCHIVO = Y.DATOS.ARCHIVO:";1"  ;*SBS-F&G
+                        EB.DataAccess.FRead(FN.TABLA.LINK,Y.DATOS.ARCHIVO,R.TABLA.LINK,F.TABLA.LINK,ERR.TABLA.LINK)       ;*SBS-F&G
+                    END ;*SBS-F&G
+                    Y.DATOS.ARCHIVO = R.TABLA.LINK<Y.POSICION.CAMPO.LINK>
+                END ELSE
+                    FIND "LOCAL.REF" IN YARR.CAMPOS.SYS.LINK SETTING AP.LINK, VP.LINK, SP.LINK THEN
+                        Y.POSICION.CAMPO.LINK = YARR.POS.CAMPOS.SYS.LINK<1,VP.LINK>
+
+                        YARR.CAMP.LOC.LINK   = R.APLICACION.LINK<SSL.USR.FIELD.NAME>
+                        YARR.POS.LOC.LINK    = R.APLICACION.LINK<SSL.USR.FIELD.NO>
+
+                        FIND Y.CAMPO.APLI.LINK IN YARR.CAMP.LOC.LINK SETTING AP.LINK, VP.LINK, SP.LINK THEN
+                            Y.POSICION.MULVA.LINK = YARR.POS.LOC.LINK<1,VP.LINK>
+                            Y.POSICION.MULVA.LINK = EREPLACE(Y.POSICION.MULVA.LINK,"LOCAL.REF","")
+                            Y.POSICION.MULVA.LINK = EREPLACE(Y.POSICION.MULVA.LINK,"<","")
+                            Y.POSICION.MULVA.LINK = EREPLACE(Y.POSICION.MULVA.LINK,">","")
+                            Y.POSICION.MULVA.LINK = FIELD(Y.POSICION.MULVA.LINK,",",2)
+                        END
+*                   DISPLAY FN.TABLA.LINK
+                        EB.DataAccess.FRead(FN.TABLA.LINK,Y.DATOS.ARCHIVO,R.TABLA.LINK,F.TABLA.LINK,ERR.TABLA.LINK)
+                        Y.DATOS.ARCHIVO = R.TABLA.LINK<Y.POSICION.CAMPO.LINK><1,Y.POSICION.MULVA.LINK>
+                    END
+                END
+            CASE Y.TIPO.CONVERSION.APLICA EQ "VALUE"
+                Y.VALOR.LINK = FIELD(Y.CONVERSION,"-",2)
+                CONVERT @VM TO @FM IN Y.DATOS.ARCHIVO
+                CONVERT @SM TO @FM IN Y.DATOS.ARCHIVO
+                Y.DATOS.ARCHIVO = Y.DATOS.ARCHIVO<Y.VALOR.LINK>
+            CASE Y.TIPO.CONVERSION.APLICA EQ "EXTRAE"
+                Y.EXTRAE.LINK = FIELD(Y.CONVERSION,"-",2)
+                Y.POSICION.INI.EXT = FIELD(Y.EXTRAE.LINK,",",1)
+                Y.TOT.CARAC.EXTRAE = FIELD(Y.EXTRAE.LINK,",",2)
+                Y.DATOS.ARCHIVO = Y.DATOS.ARCHIVO[Y.POSICION.INI.EXT,Y.TOT.CARAC.EXTRAE]
+            CASE Y.TIPO.CONVERSION.APLICA EQ "RTN"
+                DISPLAY "RUTINA " :Y.CONVERSION
+                Y.NOMBRE.RUTINA = FIELD(Y.CONVERSION,"-",2)
+*---CRM PARA INSERTAR LA CUENTA EN EL ARCHIVO DE SALIDA-----------------------
+*IF Y.NOMBRE.RUTINA EQ 'ABC.COMISIONISTAS.OBT.CLIENTE' OR Y.NOMBRE.RUTINA EQ 'ABC.COMISIONISTAS.OBT.CUENTA' OR Y.NOMBRE.RUTINA EQ 'ABC.COMISIONISTAS.OBT.TERM' THEN
+*DEBUG
+*END
+                CALL @Y.NOMBRE.RUTINA(Y.DATOS.ARCHIVO)
+            CASE Y.TIPO.CONVERSION.APLICA EQ "CONCATENA"
+                Y.DATOS.CONCATENAR =  FIELD(Y.CONVERSION,"-",2)
+                Y.DATOS.ARCHIVO = Y.DATOS.ARCHIVO:Y.DATOS.CONCATENAR
+            CASE Y.TIPO.CONVERSION.APLICA EQ "CONTAR"
+                Y.CONTADOR.VAL = 0
+                CONVERT VM TO FM IN Y.DATOS.ARCHIVO
+                CONVERT SM TO FM IN Y.DATOS.ARCHIVO
+                I.TOT.VAL = DCOUNT(Y.DATOS.ARCHIVO,@FM)
+                FOR I.VAL = 1 TO I.TOT.VAL
+                    Y.VALOR.DATO = Y.DATOS.ARCHIVO<I.VAL>
+                    IF Y.VALOR.DATO NE '' THEN
+                        Y.CONTADOR.VAL + = 1
+                    END
+                NEXT I.VAL
+                Y.DATOS.ARCHIVO = Y.CONTADOR.VAL
+        END CASE
+    NEXT YNO.CONVERSION
+RETURN
+*================
+CONVERSION.GRAL:
+*================
+**    DISPLAY "DATO A EVALUAR " : Y.VALOR.EVALUAR
+    Y.VALOR.EVALUADO    = ''
+*   Se remplaza del arreglo actual las AAAA por Anio, MM por el Mes y DD por dia Actual
+
+    Y.FECHA.ACTUAL = TODAY
+    Y.ANIO.FECHA   = Y.FECHA.ACTUAL[1,4]
+    Y.MES.FECHA    = Y.FECHA.ACTUAL[5,2]
+    Y.DIA.FECHA    = Y.FECHA.ACTUAL[7,2]
+
+    Y.FECHA.1      = Y.ANIO.FECHA:"-":Y.MES.FECHA:"-":Y.DIA.FECHA
+    Y.FECHA.11     = Y.ANIO.FECHA:"_":Y.MES.FECHA:"_":Y.DIA.FECHA
+    Y.FECHA.2      = Y.ANIO.FECHA:Y.MES.FECHA:Y.DIA.FECHA
+    Y.FECHA.3      = Y.ANIO.FECHA:Y.MES.FECHA
+    Y.FECHA.4      = Y.ANIO.FECHA
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'AAAA-MM-DD',Y.FECHA.1)
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'AAAA_MM_DD',Y.FECHA.11)
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'AAAAMMDD',Y.FECHA.2)
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'AAAAMM',Y.FECHA.3)
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'AAAA',Y.FECHA.4)
+
+*   Remplaza HH:MM:SS
+    Y.HORA.ACTUAL.VAL = TIMEDATE()
+    Y.HORA.ACTUAL    = Y.HORA.ACTUAL.VAL[1,2]:"-":Y.HORA.ACTUAL.VAL[4,2]:"-":Y.HORA.ACTUAL.VAL[7,2]
+    Y.HORA.ACTUAL.01 = Y.HORA.ACTUAL.VAL[1,2]:"_":Y.HORA.ACTUAL.VAL[4,2]:"_":Y.HORA.ACTUAL.VAL[7,2]
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'hh-mm-ss',Y.HORA.ACTUAL)
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'hh_mm_ss',Y.HORA.ACTUAL.01)
+
+    Y.HORA = Y.HORA.ACTUAL.VAL[1,2]     ;*SBS-F&G
+    Y.MINS = Y.HORA.ACTUAL.VAL[4,2]     ;*SBS-F&G
+    Y.SEGS = Y.HORA.ACTUAL.VAL[7,2]     ;*SBS-F&G
+
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'HH',Y.HORA) ;*SBS-F&G
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'MM',Y.MINS) ;*SBS-F&G
+    Y.VALOR.EVALUAR = EREPLACE(Y.VALOR.EVALUAR,'SS',Y.SEGS) ;*SBS-F&G
+
+*   Se remplazan los Guiones medios por Guiones Bajos
+*   Y.VALOR.EVALUAR  = EREPLACE(Y.VALOR.EVALUAR,'-','_')
+
+    Y.VALOR.EVALUADO = Y.VALOR.EVALUAR
+***    DISPLAY "DATO EVALUADO " :Y.VALOR.EVALUADO
+RETURN
+END
+

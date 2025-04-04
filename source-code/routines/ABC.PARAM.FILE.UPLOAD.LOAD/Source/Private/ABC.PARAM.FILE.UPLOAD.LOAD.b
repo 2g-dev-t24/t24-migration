@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo3NDE0OTIwOTE6Q3AxMjUyOjE3NDM3ODIwMzE2Mzc6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 04 Apr 2025 12:53:51
+* @ValidationCode : MjoyMDk0NTEzOTk4OkNwMTI1MjoxNzQzNzkzMTkyMTExOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Apr 2025 15:59:52
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -180,7 +180,8 @@ PROCESA.ARCHIVOS:
                 IF Y.VALOR.OK.CONCAT EQ '' THEN
                     R.ABC.UPLOAD.FILE.CONCAT<AbcTable.AbcUploadFileConcat.LoadOk> = 'SI'
                 END
-                WRITE R.ABC.UPLOAD.FILE.CONCAT TO F.ABC.UPLOAD.FILE.CONCAT, Y.ABC.UPLOAD.FILE.CONCAT.ID
+                EB.DataAccess.FWrite(FN.ABC.UPLOAD.FILE.CONCAT,Y.ABC.UPLOAD.FILE.CONCAT.ID,R.ABC.UPLOAD.FILE.CONCAT)
+* WRITE R.ABC.UPLOAD.FILE.CONCAT TO F.ABC.UPLOAD.FILE.CONCAT, Y.ABC.UPLOAD.FILE.CONCAT.ID
                 Y.ARCHIVO.PROCESADO += 1
             END ELSE
 
@@ -422,7 +423,8 @@ READ.FILE:
                     END
 *               - Escribe el registro en la tabla ABC.UPLOAD.FILE.DETAIL ( un registro equivale a una linea)
 
-                    WRITE R.ABC.UPLOAD.FILE.DETAIL TO F.ABC.UPLOAD.FILE.DETAIL, Y.ABC.UPLOAD.FILE.DETAIL.ID
+                    EB.DataAccess.FWrite(FN.ABC.UPLOAD.FILE.DETAILT,Y.ABC.UPLOAD.FILE.DETAIL.ID,R.ABC.UPLOAD.FILE.DETAIL)
+* WRITE R.ABC.UPLOAD.FILE.DETAIL TO F.ABC.UPLOAD.FILE.DETAIL, Y.ABC.UPLOAD.FILE.DETAIL.ID
 
 *               - Valida que el arreglo de CONCAT no contenga aun la Linea que se lee
 
