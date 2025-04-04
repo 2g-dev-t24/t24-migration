@@ -170,6 +170,15 @@ private method AbcUploadFileParamFields ()
 }
 
 # -------------------------------------------------
+private method AbcComisionistasEstabl ()
+{
+    jBC: ABC.COMISIONISTAS.ESTABL
+}
+
+private method AbcComisionistasEstablFields ()
+{
+    jBC: ABC.COMISIONISTAS.ESTABL.FIELDS
+}
 
 
 # -------------------------------------------------
