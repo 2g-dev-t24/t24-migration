@@ -18,8 +18,8 @@ public table AbcComisionistasAdmin {
 
         
         Reserved1(ACA.RESERVED.1)                    = 15
-        Reserved1(ACA.RESERVED.2)                    = 16
-        Reserved1(ACA.RESERVED.3)                    = 17
+        Reserved2(ACA.RESERVED.2)                    = 16
+        Reserved3(ACA.RESERVED.3)                    = 17
         LocalRef(ACA.LOCAL.REF)                      = 18
         Override(ACA.OVERRIDE)                       = 19
         RecordStatus(ACA.RECORD.STATUS)              = 20

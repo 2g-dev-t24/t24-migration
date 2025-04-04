@@ -1,4 +1,5 @@
 component AbcTable
+
 # Component Isolation Definition
 metamodelVersion 1.6
 # -------------------------------------------------
@@ -196,9 +197,17 @@ private method AbcComisionistasFileLayoutFields ()
 }
 
 # -------------------------------------------------
+private method AbcComisionistasFileParam ()
+{
+    jBC: ABC.COMISIONISTAS.FILE.PARAM
+}
 
-# -------------------------------------------------
+private method AbcComisionistasFileParamFields()
+{
+    jBC: ABC.COMISIONISTAS.FILE.PARAM.FIELDS
+}
 
-# -------------------------------------------------
-
-# -------------------------------------------------
+private method AbcComisionistasFileParamValidate()
+{
+    jBC: ABC.COMISIONISTAS.FILE.PARAM.VALIDATE
+}
