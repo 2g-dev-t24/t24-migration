@@ -61,6 +61,12 @@ INOUT YMensaje string)
     jBC: ABC.COMISIONISTAS.APLICA.OFS
 }
 
+
+
+private method AbcComisionistasCarga (INOUT Respuesta string)
+{
+    jBC: ABC.COMISIONISTAS.CARGA
+}
 # ------------------ METHOD END ------------------
 
 
