@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNTU5MDU0MTM6Q3AxMjUyOjE3NDM3OTAxNDE3Mjg6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 04 Apr 2025 15:09:01
+* @ValidationCode : MjotMTk3NTQzNDQ1MjpDcDEyNTI6MTc0NDA1Nzc5MTczMjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 07 Apr 2025 17:29:51
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -57,23 +57,25 @@ EJECUTA.PROCESO:
         CASE PROCESO.EJECTUA EQ "CARGA"
 
             Y.ARR.MENSAJES <1>= 'Ejecutando  proceso de Validacion '
-            CALL ABC.COMISIONISTAS.CARGA(Y.MESNAJE.RESP)
+            AbcComisionistasRtn.AbcComisionistasCarga(Y.MESNAJE.RESP)
+            
         CASE PROCESO.EJECTUA EQ "CLIENTES"
 
             Y.ARR.MENSAJES <-1>= 'Ejecutando  proceso de Carga de Clientes '
-            CALL ABC.COMISIONISTAS.CARGA.CTES(Y.MESNAJE.RESP)
+            AbcComisionistasRtn.AbcComisionistasCargaCtes(Y.MESNAJE.RESP)
+       
         CASE PROCESO.EJECTUA EQ "CUENTAS"
 
             Y.ARR.MENSAJES <-1>= 'Ejecutando  proceso de Carga de Cuentas'
-            CALL ABC.COMISIONISTAS.CARGA.CTAS(Y.MESNAJE.RESP)
+            AbcComisionistasRtn.AbcComisionistasCargaCtas(Y.MESNAJE.RESP)
         CASE PROCESO.EJECTUA EQ "TRASPASO"
 
             Y.ARR.MENSAJES <-1>= 'Ejecutando  proceso de Carga Fondeo'
-            CALL ABC.COMISIONISTAS.CARGA.FTES(Y.MESNAJE.RESP)
+            AbcComisionistasRtn.AbcComisionistasCargaFtes(Y.MESNAJE.RESP)
         CASE PROCESO.EJECTUA EQ "INVERSION"
 
             Y.ARR.MENSAJES <-1>= 'Ejecutando  proceso de Carga Inversiones'
-            CALL ABC.COMISIONISTAS.CARGA.INVS(Y.MESNAJE.RESP)
+            AbcComisionistasRtn.AbcComisionistasCargaInvs(Y.MESNAJE.RESP)
 
 
     END CASE
