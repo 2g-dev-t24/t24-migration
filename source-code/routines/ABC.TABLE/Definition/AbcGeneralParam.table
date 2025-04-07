@@ -2,7 +2,7 @@ public table AbcGeneralParam {
     t24: PBS.GEN.PARAM.GENERAL.PARAM
     fields:{
      
-        Modulo(PBS.GEN.PARAM.MODULOMODULO) = 1
+        Modulo(PBS.GEN.PARAM.MODULO) = 1
         NombParametro(PBS.GEN.PARAM.NOMB.PARAMETRO) = 2
         DatoParametro(PBS.GEN.PARAM.DATO.PARAMETRO) = 3
         Comentario(PBS.GEN.PARAM.COMENTARIO) = 4

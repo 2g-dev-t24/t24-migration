@@ -41,4 +41,21 @@ private method AbcComisionistasCreaLayout (INOUT YIdRegistroLayout string, INOUT
 {
     jBC: ABC.COMISIONISTAS.CREA.LAYOUT
 } 
+private method AbcComisionistasValidacion ()
+{
+    jBC: ABC.COMISIONISTAS.VALIDACION
+} 
+private method AbcComisionistasFileLoad (INOUT YIdComisionista string, INOUT YMensaje string)
+{
+    jBC: ABC.COMISIONISTAS.FILE.LOAD
+} 
+
+
+
 # ------------------ METHOD END ------------------
+
+
+
+
+
+

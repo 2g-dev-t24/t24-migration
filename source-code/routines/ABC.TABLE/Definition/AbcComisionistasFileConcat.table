@@ -1,4 +1,4 @@
-public table AbcComisionistasFileConcat {
+loadpublic table AbcComisionistasFileConcat {
     t24: ABC.COMISIONISTAS.FILE.CONCAT
     fields:{
         NombreCampo(ACC.NOMBRE.CAMPO) = 1
