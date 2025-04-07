@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTg0NjQyMTIwNzpDcDEyNTI6MTc0MzEyNjIyODc0NjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 27 Mar 2025 22:43:48
+* @ValidationCode : MjotMzY1NjgzNzM0OkNwMTI1MjoxNzQ0MDU5MDQ1Mzg2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 07 Apr 2025 17:50:45
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -20,6 +20,7 @@ SUBROUTINE ABC.EXECUTE.UPLOAD.FILE(R.DATA)
 
 *-----------------------------------------------------------------------------
     $USING EB.Reports
+    $USING AbcParamFileUploadLoad
     
 
 
@@ -58,6 +59,7 @@ EJECUTA.PROCESO:
 *=================
 
     Y.ARR.MENSAJES     = 'Ejecutando Carga a T24'
+    AbcParamFileUploadLoad.AbcParamFileUploadLoad(PROCESO.EJECTUA,Y.MESNAJE.RESP)
 *   CALL ABC.PARAM.FILE.UPLOAD.LOAD(PROCESO.EJECTUA,Y.MESNAJE.RESP)
 
     Y.ARR.MENSAJES <-1>= "Procesando...."
