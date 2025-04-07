@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTY0NzcxMzc1NzpDcDEyNTI6MTc0NDA1MzM3NjQ4NTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 07 Apr 2025 16:16:16
+* @ValidationCode : MjotOTA4MjM4NTU3OkNwMTI1MjoxNzQ0MDUzNTMwNDE4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 07 Apr 2025 16:18:50
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -342,6 +342,7 @@ APLICACION.OFS:
     Y.CADENA.ORG.ENVIADA = Y.CADENA.OFS.ENVIA.CTE
     
     EB.Interface.OfsBulkManager(Y.ID.OFS.SOURCE,Y.CADENA.OFS.ENVIA.CTE)
+    
     
     EB.TransactionControl.JournalUpdate("")
     DISPLAY "CADENA DE OFS RECIBIDO " : Y.CADENA.OFS.ENVIA.CTE
