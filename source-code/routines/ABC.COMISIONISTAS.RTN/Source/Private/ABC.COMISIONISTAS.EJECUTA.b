@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTk3NTQzNDQ1MjpDcDEyNTI6MTc0NDA1Nzc5MTczMjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 07 Apr 2025 17:29:51
+* @ValidationCode : Mjo0MDc5NjAwNjY6Q3AxMjUyOjE3NDQwNTgwNDkzODM6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 07 Apr 2025 17:34:09
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -71,7 +71,7 @@ EJECUTA.PROCESO:
         CASE PROCESO.EJECTUA EQ "TRASPASO"
 
             Y.ARR.MENSAJES <-1>= 'Ejecutando  proceso de Carga Fondeo'
-            AbcComisionistasRtn.AbcComisionistasCargaFtes(Y.MESNAJE.RESP)
+            AbcComisionistasRtn.AbcComisionistasCargaFtes()
         CASE PROCESO.EJECTUA EQ "INVERSION"
 
             Y.ARR.MENSAJES <-1>= 'Ejecutando  proceso de Carga Inversiones'

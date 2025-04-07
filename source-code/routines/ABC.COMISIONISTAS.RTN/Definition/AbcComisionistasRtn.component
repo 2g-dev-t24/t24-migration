@@ -94,6 +94,10 @@ private method AbcComisionistasCargaInvs (INOUT YMensaje string)
     jBC: ABC.COMISIONISTAS.CARGA.INVS
 }
 
+private method AbcComisionistasObtCliente (INOUT YIDetail string)
+{
+    jBC: ABC.COMISIONISTAS.OBT.CLIENTE
+}
 
 
 
