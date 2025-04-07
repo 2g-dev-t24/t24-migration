@@ -72,6 +72,12 @@ private method AbcComisionistasCargaCtas (INOUT YMensaje string)
 {
     jBC: ABC.COMISIONISTAS.CARGA.CTAS
 }
+
+private method AbcComisionistasCargaCtes (INOUT YMensaje string)
+{
+    jBC: ABC.COMISIONISTAS.CARGA.CTES
+}
+
 # ------------------ METHOD END ------------------
 
 
