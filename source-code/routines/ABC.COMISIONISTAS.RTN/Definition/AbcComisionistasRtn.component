@@ -67,6 +67,11 @@ private method AbcComisionistasCarga (INOUT Respuesta string)
 {
     jBC: ABC.COMISIONISTAS.CARGA
 }
+
+private method AbcComisionistasCargaCtas (INOUT YMensaje string)
+{
+    jBC: ABC.COMISIONISTAS.CARGA.CTAS
+}
 # ------------------ METHOD END ------------------
 
 
