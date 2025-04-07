@@ -1,0 +1,9 @@
+public table AbcVecCusAcc {
+    t24: ABC.VEC.CUS.ACC
+    fields:{
+        
+        NoCliente(VCA.NO.CLIENTE) = 1
+        NoCuenta(VCA.NO.CUENTA)= 2
+
+    }
+}

@@ -211,3 +211,19 @@ private method AbcComisionistasFileParamValidate()
 {
     jBC: ABC.COMISIONISTAS.FILE.PARAM.VALIDATE
 }
+
+# -------------------------------------------------
+
+
+
+private method AbcVecCusAcc ()
+{
+    jBC: ABC.VEC.CUS.ACC
+}
+
+private method AbcVecCusAccFields ()
+{
+    jBC: ABC.VEC.CUS.ACC.FIELDS
+}
+
+

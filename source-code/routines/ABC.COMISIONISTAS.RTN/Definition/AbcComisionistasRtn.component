@@ -37,7 +37,9 @@ private method AbcComisionistasEjecuta (INOUT RData string)
     jBC: ABC.COMISIONISTAS.EJECUTA
 } 
 
-private method AbcComisionistasCreaLayout (INOUT YIdRegistroLayout string, INOUT YListRegistro string, INOUT YNoRegistros string)
+private method AbcComisionistasCreaLayout (INOUT YIdRegistroLayout string, 
+INOUT YListRegistro string, 
+INOUT YNoRegistros string)
 {
     jBC: ABC.COMISIONISTAS.CREA.LAYOUT
 } 
@@ -50,7 +52,14 @@ private method AbcComisionistasFileLoad (INOUT YIdComisionista string, INOUT YMe
     jBC: ABC.COMISIONISTAS.FILE.LOAD
 } 
 
-
+private method AbcComisionistasAplicaOfs (INOUT YClienteComisionista string, 
+INOUT YFechaProceso string,
+INOUT YAplicacionOfs string,
+INOUT ArrAplicacionDep string,
+INOUT YMensaje string)
+{
+    jBC: ABC.COMISIONISTAS.APLICA.OFS
+}
 
 # ------------------ METHOD END ------------------
 
