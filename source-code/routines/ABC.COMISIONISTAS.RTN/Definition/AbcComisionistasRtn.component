@@ -109,6 +109,14 @@ private method AbcComisionistasServicioInvs ()
     jBC: ABC.COMISIONISTAS.SERVICIO.INVS
 }
 
+
+private method AbcComisionistasArrOfs (INOUT YArrIdsDetal string, 
+INOUT YIdAplicacion string,
+INOUT ArrAplicacionDep string,
+INOUT YEnvioOfsAplicacion string)
+{
+    jBC: ABC.COMISIONISTAS.ARR.OFS
+}
 # ------------------ METHOD END ------------------
 
 
