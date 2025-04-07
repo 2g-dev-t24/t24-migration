@@ -99,7 +99,10 @@ private method AbcComisionistasObtCliente (INOUT YIDetail string)
     jBC: ABC.COMISIONISTAS.OBT.CLIENTE
 }
 
-
+private method AbcComisionistasObtCuenta (INOUT YIDetail string)
+{
+    jBC: ABC.COMISIONISTAS.OBT.CUENTA
+}
 
 # ------------------ METHOD END ------------------
 
