@@ -225,5 +225,17 @@ private method AbcVecCusAccFields ()
 {
     jBC: ABC.VEC.CUS.ACC.FIELDS
 }
+# -------------------------------------------------
 
+
+
+private method AbcGeneralMapping ()
+{
+    jBC: ABC.GENERAL.MAPPING
+}
+
+private method AbcGeneralMappingFields ()
+{
+    jBC: ABC.GENERAL.MAPPING.FIELDS
+}
 
