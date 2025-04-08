@@ -67,6 +67,18 @@ private method AbcBiometricosFields ()
     jBC: ABC.BIOMETRICOS.FIELDS
 }
 
+# ------------------------------------
+# Tabla ABC.LOCALIDAD
+# ------------------------------------
+private method AbcLocalidad ()
+{
+    jBC: ABC.LOCALIDAD
+}
+private method AbcLocalidadFields ()
+{
+    jBC: ABC.LOCALIDAD.FIELDS
+}
+
 # ------------------ TABLE END ------------------
 
 # ------------------ METHOD START ------------------

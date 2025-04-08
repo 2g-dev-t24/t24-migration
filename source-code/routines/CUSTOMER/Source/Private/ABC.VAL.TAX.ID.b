@@ -49,7 +49,7 @@ LEE.CAMPO:
         EB.ErrorProcessing.StoreEndError()
         RETURN
     END ELSE
-        IF Y.CLASSIFICATION GE 3 THEN
+        IF Y.CLASSIFICATION GE 2001 THEN
             IF LEN(Y.RFC.VAL) NE 12 THEN
                 EB.SystemTables.setEtext("EL RFC NO TIENE LA LONGITUD CORRECTA")
                 EB.ErrorProcessing.StoreEndError()

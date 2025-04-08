@@ -65,7 +65,8 @@ PROCESO:
 *---------------------------------------------------------------
 VERIFICA.IUB:
 *---------------------------------------------------------------
-
+    EB.SystemTables.setTSequ(BAND.IUB.VER)
+    EB.ErrorProcessing.Err()
     IF BAND.IUB.VER EQ 'SI' THEN
         R.FOL.BIO<ABC.BP.AbcBiometricos.AbcBiomVerificado> = 'NO'
     END
@@ -73,9 +74,8 @@ VERIFICA.IUB:
     IF BAND.IUB.VER NE 'SI' THEN
         R.FOL.BIO<ABC.BP.AbcBiometricos.AbcBiomVerificado> = 'SI'
     END
-
-    WRITE R.FOL.BIO TO F.ABC.BIOM, Y.IUB.BIO
-
+*    WRITE R.FOL.BIO TO F.ABC.BIOM, Y.IUB.BIO
+    EB.DataAccess.FWrite(FN.ABC.BIOM, Y.IUB.BIO, R.FOL.BIO)
     BAND.IUB.VER = ''
 
     RETURN
