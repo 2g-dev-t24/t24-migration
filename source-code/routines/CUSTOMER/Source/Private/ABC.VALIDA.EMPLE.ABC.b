@@ -15,7 +15,7 @@ $PACKAGE ABC.BP
     $USING EB.Display
 
     V.APP      = "CUSTOMER"
-    V.FLD.NAME = "NO.EMPL"
+    V.FLD.NAME = "L.ABC.NO.EMPL"
     V.FLD.POS  = ""
 
     EB.LocalReferences.GetLocRef(V.APP,V.FLD.NAME,V.FLD.POS)

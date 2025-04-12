@@ -28,7 +28,7 @@
         EB.SystemTables.setTLocref(tmp)
     END 
     ELSE
-       
+
         Y.LOCAL.REF             = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
         
         IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,V.ABC.NOMBRE.CONY.POS> NE '' THEN

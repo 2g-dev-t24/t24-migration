@@ -65,8 +65,8 @@ PROCESO:
 *---------------------------------------------------------------
 VERIFICA.IUB:
 *---------------------------------------------------------------
-    EB.SystemTables.setTSequ(BAND.IUB.VER)
-    EB.ErrorProcessing.Err()
+*    EB.SystemTables.setTSequ(BAND.IUB.VER)
+*    EB.ErrorProcessing.Err()
     IF BAND.IUB.VER EQ 'SI' THEN
         R.FOL.BIO<ABC.BP.AbcBiometricos.AbcBiomVerificado> = 'NO'
     END

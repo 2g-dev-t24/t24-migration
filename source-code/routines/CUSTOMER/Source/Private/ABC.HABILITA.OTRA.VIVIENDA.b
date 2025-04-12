@@ -24,8 +24,8 @@ $PACKAGE ABC.BP
     	IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusResidenceType) NE "" THEN    
     		EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceType,'') 
     	END ELSE
-          EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceType,'')
-*            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceType,'Propia')
+       
+            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidenceType,'NO APLICA')
     		
     	END
     	
@@ -33,7 +33,7 @@ $PACKAGE ABC.BP
         tmp<3>="NOINPUT"
         EB.SystemTables.setT(ST.Customer.Customer.EbCusResidenceType, tmp)
     END
-    EB.Display.RebuildScreen()
+*    EB.Display.RebuildScreen()
 *    CALL REFRESH.GUI.OBJECTS
 RETURN
 END

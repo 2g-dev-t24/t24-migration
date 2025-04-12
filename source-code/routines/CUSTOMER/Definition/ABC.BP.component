@@ -35,6 +35,11 @@ private method AbcEmailSmsParameter ()
     jBC: ABC.EMAIL.SMS.PARAMETER
 }
 
+private method AbcEmailSmsParameterFields ()
+{
+    jBC: ABC.EMAIL.SMS.PARAMETER.FIELDS
+}
+
 # ------------------------------------
 # Tabla ABC.EMAIL.DOM.TERR
 # ------------------------------------
@@ -42,7 +47,10 @@ private method AbcEmailDomTerr ()
 {
     jBC: ABC.EMAIL.DOM.TERR
 }
-
+private method AbcEmailDomTerrFields ()
+{
+    jBC: ABC.EMAIL.DOM.TERR.FIELDS
+}
 # ------------------------------------
 # Tabla ABC.INFO.VAL.CUS
 # ------------------------------------

@@ -31,8 +31,8 @@ INICIALIZA:
 
     Y.POS.CLASSIFICATION = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
     EB.LocalReferences.GetLocRef("CUSTOMER","ABC.FIRMA.ELECT",Y.POS.FIRMA.ELE)
-*    EB.LocalReferences.GetLocRef("CUSTOMER","CDNIA.RESID.EUA",Y.POS.CDNIA.EUA)
-*    EB.LocalReferences.GetLocRef("CUSTOMER","TIPO.EMP.OTRO",Y.POS.TIPO.EMP.OTRO)
+    EB.LocalReferences.GetLocRef("CUSTOMER","L.CDNIA.RESID.EUA",Y.POS.CDNIA.EUA)
+    EB.LocalReferences.GetLocRef("CUSTOMER","L.TIPO.EMP.OTRO",Y.POS.TIPO.EMP.OTRO)
 
     RETURN
 ************
@@ -45,8 +45,8 @@ LEE.CAMPO:
 
 * Valido que Tenga RFC
     IF Y.RFC.VAL EQ '' THEN
-        EB.SystemTables.setEtext("EL RFC NO TIENE DATO")
-        EB.ErrorProcessing.StoreEndError()
+*        EB.SystemTables.setEtext("EL RFC NO TIENE DATO")
+*        EB.ErrorProcessing.StoreEndError()
         RETURN
     END ELSE
         IF Y.CLASSIFICATION GE 2001 THEN
@@ -88,20 +88,20 @@ LEE.CAMPO:
     END
 
 * Valido que el Valor Ingresado sea para la Posicion del Registro Fiscal
-**    Y.CDNIA.EUA = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.CDNIA.EUA>
-**    Y.CDNIA.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,3>
+    Y.CDNIA.EUA = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.CDNIA.EUA>
+    Y.CDNIA.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,3>
 
 * Valido que Tenga Firma Electronica en el Campo Local "CDNIA.RESID.EUA"
-**    IF Y.CDNIA.EUA EQ "SI" THEN
-**        IF Y.CDNIA.VAL EQ '' THEN
-**            EB.SystemTables.setEtext("EL NUMERO  DE REGISTRO FISCAL NO TIENE DATO")
-**            EB.ErrorProcessing.StoreEndError()
-**            RETURN
-**        END
-**    END
+    IF Y.CDNIA.EUA EQ "SI" THEN
+        IF Y.CDNIA.VAL EQ '' THEN
+            EB.SystemTables.setEtext("EL NUMERO  DE REGISTRO FISCAL NO TIENE DATO")
+            EB.ErrorProcessing.StoreEndError()
+            RETURN
+        END
+    END
 
-**    Y.OTRO.EMP.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.TIPO.EMP.OTRO>
-**    Y.OCUPACION.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusOccupation)<1,1>
+    Y.OTRO.EMP.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.TIPO.EMP.OTRO>
+    Y.OCUPACION.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusOccupation)<1,1>
 
     IF Y.CLASSIFICATION LT 3 THEN
         IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusExternCusId)<1,1> EQ '' THEN
@@ -109,11 +109,11 @@ LEE.CAMPO:
             EB.ErrorProcessing.StoreEndError()
             RETURN
         END
-**        IF Y.OCUPACION.VAL EQ '13' AND Y.OTRO.EMP.VAL EQ '' THEN
-**            EB.SystemTables.setEtext("NO SE ESPECIFICA OTRO TIPO DE EMPLEO")
-**            EB.ErrorProcessing.StoreEndError()
-**            RETURN
-**        END
+        IF Y.OCUPACION.VAL EQ '13' AND Y.OTRO.EMP.VAL EQ '' THEN
+            EB.SystemTables.setEtext("NO SE ESPECIFICA OTRO TIPO DE EMPLEO")
+            EB.ErrorProcessing.StoreEndError()
+            RETURN
+        END
     END
     
     RETURN
