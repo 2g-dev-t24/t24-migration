@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMzgzNjc1MTQ5OkNwMTI1MjoxNzQ0NjM2NjcwMzg5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 14 Apr 2025 10:17:50
+* @ValidationCode : MjotMTkxMzI5NTM0MTpDcDEyNTI6MTc0NDY2Mzk0OTgwNDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 14 Apr 2025 17:52:29
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -10,8 +10,8 @@
 * @ValidationInfo : Bypass GateKeeper : false
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
-$PACKAGE PbsGetAdress
-SUBROUTINE PBS.DIRECCION.SEPOMEX(Y.COD.POST,Y.CAD.SALIDA)
+$PACKAGE AbcGetAdress
+SUBROUTINE ABC.DIRECCION.SEPOMEX(Y.COD.POST,Y.CAD.SALIDA)
 *-----------------------------------------------------------------------------
 *
 *-----------------------------------------------------------------------------

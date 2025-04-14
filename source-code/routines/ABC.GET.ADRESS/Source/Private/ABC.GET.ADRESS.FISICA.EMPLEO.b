@@ -1,5 +1,5 @@
-* @ValidationCode : MjozOTMyNjI2MDM6Q3AxMjUyOjE3NDQzMjMwMDAyNTE6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 10 Apr 2025 19:10:00
+* @ValidationCode : Mjo3MTQ1ODkzODc6Q3AxMjUyOjE3NDQ2NjQwNzg2MzM6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 14 Apr 2025 17:54:38
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -10,8 +10,8 @@
 * @ValidationInfo : Bypass GateKeeper : false
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
-$PACKAGE PbsGetAdress
-SUBROUTINE PBS.GET.ADRESS.FISICA.EMPLEO
+$PACKAGE AbcGetAdress
+SUBROUTINE ABC.GET.ADRESS.FISICA.EMPLEO
 *-----------------------------------------------------------------------------
 *
 *-----------------------------------------------------------------------------
@@ -69,7 +69,7 @@ PROCESS:
     END ELSE
 
         Y.CADENA.DIRECCION = ''
-        PbsGetAdress.PbsDireccionSepomex(Y.COD.POS, Y.CADENA.DIRECCION)
+        AbcGetAdress.AbcDireccionSepomex(Y.COD.POS, Y.CADENA.DIRECCION)
 
         Y.ESTADO    = FIELD(Y.CADENA.DIRECCION, Y.SEP, 1)
         Y.CD.COMP   = FIELD(Y.CADENA.DIRECCION, Y.SEP, 2)

@@ -250,4 +250,10 @@ private method AbcLlenaIubCusUser ()
 {
     jBC: ABC.LLENA.IUB.CUS.USER
 }
+
+private method AbcNofileBiometricosAlta (INOUT RData string)
+{
+    jBC: ABC.NOFILE.BIOMETRICOS.ALTA
+}
+
 # ------------------ METHOD END ------------------
