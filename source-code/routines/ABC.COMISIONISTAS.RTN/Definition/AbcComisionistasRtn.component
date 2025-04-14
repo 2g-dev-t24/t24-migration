@@ -117,7 +117,16 @@ INOUT YEnvioOfsAplicacion string)
 {
     jBC: ABC.COMISIONISTAS.ARR.OFS
 }
+
+private method AbcComisionistasCargaCatalogo ()
+{
+    jBC: ABC.COMISIONISTAS.CARGA.CATALOGO
+}
+
+
+
 # ------------------ METHOD END ------------------
+
 
 
 

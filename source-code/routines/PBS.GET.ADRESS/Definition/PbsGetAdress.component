@@ -1,0 +1,28 @@
+component PbsGetAdress
+
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method PbsGetAdressFisica ()
+{
+    jBC: PBS.GET.ADRESS.FISICA
+}
+
+
+private method PbsDireccionSepomex (INOUT YCodPost string, INOUT YCadSalida string)
+{
+    jBC: PBS.DIRECCION.SEPOMEX
+}
+
+private method PbsGetAdressFisicaAnt ()
+{
+    jBC: PBS.GET.ADRESS.FISICA.ANT
+}
+
+private method PbsGetAdressFisicaEmpleo ()
+{
+    jBC: PBS.GET.ADRESS.FISICA.EMPLEO
+}
+
+# ------------------ METHOD END ------------------
+ 

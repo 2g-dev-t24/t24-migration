@@ -1,0 +1,9 @@
+public table AbcCodigoPostal {
+    t24: ABC.CODIGO.POSTAL
+    fields:{
+        Estado(ABC.COD.POS.ESTADO) = 1
+        Ciudad(ABC.COD.POS.CIUDAD) = 2
+        Municipio(ABC.COD.POS.MUNICIPIO)   = 3
+        Colonia(ABC.COD.POS.COLONIA)    = 4
+    }
+}

@@ -245,4 +245,9 @@ private method AbcValidaEmail ()
 {
     jBC: ABC.VALIDA.EMAIL
 }
+
+private method AbcLlenaIubCusUser ()
+{
+    jBC: ABC.LLENA.IUB.CUS.USER
+}
 # ------------------ METHOD END ------------------

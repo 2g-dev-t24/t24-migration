@@ -239,3 +239,47 @@ private method AbcGeneralMappingFields ()
     jBC: ABC.GENERAL.MAPPING.FIELDS
 }
 
+# -------------------------------------------------
+
+
+
+private method AbcLocalidad ()
+{
+    jBC: ABC.LOCALIDAD
+}
+
+private method AbcLocalidadFields ()
+{
+    jBC: ABC.LOCALIDAD.FIELDS
+}
+
+
+# -------------------------------------------------
+
+
+
+private method AbcCodigoPostal ()
+{
+    jBC: ABC.CODIGO.POSTAL
+}
+
+private method AbcCodigoPostalFields ()
+{
+    jBC: ABC.CODIGO.POSTAL.FIELDS
+}
+
+
+# -------------------------------------------------
+
+
+
+private method AbcCiudad ()
+{
+    jBC: ABC.CIUDAD
+}
+
+private method AbcCiudadFields ()
+{
+    jBC: ABC.CIUDAD.FIELDS
+}
+
