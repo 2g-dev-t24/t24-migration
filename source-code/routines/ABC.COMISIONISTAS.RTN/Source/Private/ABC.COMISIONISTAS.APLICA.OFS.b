@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo0MzIxOTA0NzpDcDEyNTI6MTc0NDA1MzY0MDAyNjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 07 Apr 2025 16:20:40
+* @ValidationCode : MjoxMzExMTIxNTQ6Q3AxMjUyOjE3NDQ2NjU3MTQ3NTg6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 14 Apr 2025 18:21:54
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -234,7 +234,7 @@ REGISTROS.PROSESAR:
                                 END
 *-------------------------------------------------------------------------------------------------------------------------------------
 
-                                CALL ABC.COMISIONISTAS.ARR.OFS(YARR.IDS.DETAIL,Y.APLICACION.OFS,ARR.APLICACION.DEP,Y.ENVIO.OFS.APLICACION)
+*luis                                CALL ABC.COMISIONISTAS.ARR.OFS(YARR.IDS.DETAIL,Y.APLICACION.OFS,ARR.APLICACION.DEP,Y.ENVIO.OFS.APLICACION)
 *---CRM DEBUG
                                 IF Y.ENVIO.OFS.APLICACION NE '' THEN
                                     IF Y.APLICACION.OFS EQ "AA.ARRANGEMENT.ACTIVITY" THEN
