@@ -84,13 +84,6 @@ INICIALIZA:
 
 RETURN
 
-**---------------------------------------------------------------
-*PROCESA:
-**---------------------------------------------------------------
-*    GOSUB LEE.BIOMETRICO
-*    GOSUB ARMA.ARREGLO
-*
-*RETURN
 *---------------------------------------------------------------
 PROCESA:
 *---------------------------------------------------------------
@@ -148,9 +141,9 @@ LEE.BIOMETRICO:
         R.EST.NAC = ESTADO.NAC
         R.SEXO    = SEXO
         R.TIP.IDE = R.BIOM.CUST<ABC.BP.AbcBiometricos.AbcBiomIdIdentificacion>
-        
+
         GOSUB OBTEN.TIPO.IDEN
-        
+
         R.NUM.ID     = R.BIOM.CUST<ABC.BP.AbcBiometricos.AbcBiomOcr>
         R.FEC.EMI    = R.BIOM.CUST<ABC.BP.AbcBiometricos.AbcBiomFechaEmision>
         R.FEC.VEN    = R.BIOM.CUST<ABC.BP.AbcBiometricos.AbcBiomFechaVencimiento>
@@ -213,17 +206,23 @@ RETURN
 OBTEN.TIPO.IDEN:
 *---------------------------------------------------------------
 
-    Y.SEL.CMD = "SELECT " : FN.LOOKUP : " WITH @ID LIKE 'CUS.LEGAL.DOC.NAME' AND DESCRIPTION LIKE '" : R.TIP.IDE : "'"
+    Y.SEL.CMD = "SELECT " : FN.LOOKUP : " @ID LIKE CUS.LEGAL.DOC.NAME*..."
     Y.REG.LIST = '' ; Y.NO.REG = ''
     EB.DataAccess.Readlist(Y.SEL.CMD, Y.REG.LIST, '', Y.NO.REG, Y.ERROR)
-    IF Y.NO.REG EQ 1 THEN
-        Y.ID.IDEN = Y.REG.LIST<1>
-        CALL EB.DataAccess.FRead(FN.LOOKUP, Y.ID.IDEN, R.LOOKUP, F.LOOKUP, ERR.LOOK)
-        IF R.LOOKUP THEN
-            R.TIP.IDE = R.LOOKUP<EB.Template.Lookup.LuLookupId>
+    Y.I = 1
+    LOOP
+    WHILE Y.I LE Y.NO.REG
+        Y.REG.ACT = Y.REG.LIST<Y.I>
+        Y.R.EB.LOOKUP	= EB.Template.Lookup.Read(Y.REG.ACT, Y.READ.ERROR)
+        IF Y.R.EB.LOOKUP NE '' THEN
+            Y.DESCRIPCION = Y.R.EB.LOOKUP<EB.Template.Lookup.LuDescription,1>
+            IF Y.DESCRIPCION MATCHES R.TIP.IDE THEN
+                R.TIP.IDE = FIELDS(Y.REG.ACT,'*',2)
+                RETURN
+            END
         END
-    END
-    
+        Y.I++
+    REPEAT
 
 RETURN
 
