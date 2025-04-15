@@ -34,7 +34,6 @@ INIT.VARS:
 *    Y.DESTINO.RECURSOS = ""
 *    Y.COD.POS = ""
 *    Y.GENERICO = ""
-*    Y.INGRESOS = ""
     Y.FIRMA = ""
     Y.NUM.ANIOS = ""
 *    V.RELCODE = ""
@@ -58,9 +57,6 @@ PROCESS:
 
 *    CASE Y.ORIGEN EQ "DIRECCION"
 *        Y.COD.POS = Y.VAL.ACTUAL
-
-*    CASE Y.ORIGEN EQ "INGRESOS"
-*        Y.INGRESOS = Y.VAL.ACTUAL
 
 *    CASE Y.ORIGEN EQ "GENERICO"
 *        Y.GENERICO = Y.VAL.ACTUAL

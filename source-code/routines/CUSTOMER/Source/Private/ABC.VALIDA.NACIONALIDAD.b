@@ -36,7 +36,7 @@ SUBROUTINE ABC.VALIDA.NACIONALIDAD
             Y.COUNTRY.REC = ST.Config.Country.Read(Y.ID.COUNTRY,ERR.COUNTRY)
             IF Y.COUNTRY.REC THEN
                 Y.BLOQUEO = Y.COUNTRY.REC<ST.Config.Country.EbCouHighRisk>
-                IF Y.BLOQUEO EQ 'SI' THEN
+                IF Y.BLOQUEO EQ 'YES' THEN
                     Y.ERROR = 'EL PAIS SELECCIONADO NO ES PERMITIDO'
                     EB.SystemTables.setEtext(Y.ERROR)
                     EB.ErrorProcessing.StoreEndError()

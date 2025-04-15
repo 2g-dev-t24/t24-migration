@@ -245,15 +245,14 @@ private method AbcValidaEmail ()
 {
     jBC: ABC.VALIDA.EMAIL
 }
-
-private method AbcLlenaIubCusUser ()
+private method AbcNumClienteUnico ()
 {
-    jBC: ABC.LLENA.IUB.CUS.USER
+    jBC: ABC.NUM.CLIENTE.UNICO
+}
+private method AbcGetRazonSocial (INOUT YRazonSocial string)
+{
+    jBC: ABC.GET.RAZON.SOCIAL
 }
 
-private method AbcNofileBiometricosAlta (INOUT RData string)
-{
-    jBC: ABC.NOFILE.BIOMETRICOS.ALTA
-}
 
 # ------------------ METHOD END ------------------
