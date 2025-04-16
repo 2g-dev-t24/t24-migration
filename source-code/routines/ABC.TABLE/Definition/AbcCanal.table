@@ -1,0 +1,29 @@
+public table AbcCanal {
+    t24: ABC.CANAL
+    fields:{
+        Descripcion(ABC.CNL.DESCRIPCION) = 1
+        Usuario(ABC.CNL.USUARIO) = 2
+        Mnemonic(ABC.CNL.MNEMONIC) = 3
+        Reserved10(ABC.CNL.RESERVED.10) = 4
+        Reserved9(ABC.CNL.RESERVED.9) = 5
+        Reserved8(ABC.CNL.RESERVED.8) = 6
+        Reserved7(ABC.CNL.RESERVED.7) = 7
+        Reserved6(ABC.CNL.RESERVED.6) = 8
+        Reserved5(ABC.CNL.RESERVED.5) = 9
+        Reserved4(ABC.CNL.RESERVED.4) = 10
+        Reserved3(ABC.CNL.RESERVED.3) = 11
+        Reserved2(ABC.CNL.RESERVED.2) = 12
+        Reserved1(ABC.CNL.RESERVED.1) = 13
+        LocalRef(ABC.CNL.LOCAL.REF) = 14
+        Override(ABC.CNL.OVERRIDE) = 15
+        RecordStatus(ABC.CNL.RECORD.STATUS) = 16
+        CurrNo(ABC.CNL.CURR.NO) = 17
+        Inputter(ABC.CNL.INPUTTER) = 18
+        DateTime(ABC.CNL.DATE.TIME) = 19
+        Authoriser(ABC.CNL.AUTHORISER) = 20
+        CoCode(ABC.CNL.CO.CODE) = 21
+        DeptCode(ABC.CNL.DEPT.CODE) = 22
+        AuditorCode(ABC.CNL.AUDITOR.CODE) = 23
+        AuditDateTime(ABC.CNL.AUDIT.DATE.TIME) = 24
+    }
+}
