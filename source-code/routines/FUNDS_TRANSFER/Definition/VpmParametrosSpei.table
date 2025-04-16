@@ -1,0 +1,31 @@
+private table VpmParametrosSpei {
+    t24: VPM.PARAMETROS.SPEI
+    fields:{
+        MontoMinimo(VPM.SPEI.MONTO.MINIMO) = 1
+        MontoSAut(VPM.SPEI.MONTO.S.AUT) = 2
+        Envio(VPM.SPEI.TXN.ENVIO) = 3
+        TxnMenores(VPM.SPEI.TXN.MENORES) = 4
+        TxnRecibidos(VPM.SPEI.TXN.RECIBIDOS) = 5
+        TxnDevol(VPM.SPEI.TXN.DEVOL) = 6
+        RutaEnvio(VPM.SPEI.RUTA.ENVIO) = 7
+        RutaRec(VPM.SPEI.RUTA.REC) = 8
+        RutaDevol(VPM.SPEI.RUTA.DEVOL) = 9
+        CtaMenores(VPM.SPEI.CTA.MENORES) = 10
+        CtaBanxico(VPM.SPEI.CTA.BANXICO) = 11
+        OfsSource(VPM.SPEI.OFS.SOURCE) = 12
+        FxVersion(VPM.SPEI.FX.VERSION) = 13
+        DispPath(VPM.SPEI.DISP.PATH) = 14
+        DispErrPath(VPM.SPEI.DISP.ERR.PATH) = 15
+        DispAmt(VPM.SPEI.DISP.AMT) = 16
+        NumDiasDisp(VPM.SPEI.NUM.DIAS.DISP) = 17
+        OfsSourceDisp(VPM.SPEI.OFS.SOURCE.DISP) = 18
+        OfsDispVersion(VPM.SPEI.OFS.DISP.VERSION) = 19
+        OfsDispIntVer(VPM.SPEI.OFS.DISP.INT.VER) = 20
+        DispIntTxn(VPM.SPEI.DISP.INT.TXN) = 21
+        TipoTercTerc(VPM.SPEI.TIPO.TERC.TERC) = 22
+        TipoBcoTercero(VPM.SPEI.TIPO.BCO.TERCERO) = 23
+        CommFtMasiv(VPM.SPEI.COMM.FT.MASIV) = 24
+        DaysToHis(VPM.SPEI.DAYS.TO.HIS) = 25
+        DaysToDel(VPM.SPEI.DAYS.TO.DEL) = 26
+    }
+}

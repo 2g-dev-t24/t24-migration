@@ -31,6 +31,106 @@ private method AbcInfoValCusFields ()
     jBC: ABC.INFO.VAL.CUS.FIELDS
 }
 
+# ------------------------------------
+# Tabla ABC.BONIFICACION.CASH.IN
+# ------------------------------------
+
+private method abcBonificacionCashIn (
+)
+{
+    jBC: ABC.BONIFICACION.CASH.IN
+}
+
+private method abcBonificacionCashInFields (
+)
+{
+    jBC: ABC.BONIFICACION.CASH.IN.FIELDS
+}
+
+# ------------------------------------
+# Tabla ABC.UPLOAD.FILE.PARAM
+# ------------------------------------
+private method abcUploadFileParam (
+)
+{
+    jBC: ABC.UPLOAD.FILE.PARAM
+}
+
+private method abcUploadFileParamFields (
+)
+{
+    jBC: ABC.UPLOAD.FILE.PARAM.FIELDS
+}
+
+# ------------------------------------
+# Tabla ABC.L.FT.TXN.DETAIL
+# ------------------------------------
+private method abcLFtTxnDetail (
+)
+{
+   jBC: ABC.L.FT.TXN.DETAIL
+}
+
+
+private method abcLFtTxnDetailFields (
+)
+{
+   jBC: ABC.L.FT.TXN.DETAIL.FIELDS
+}
+
+# ------------------------------------
+# Tabla ABC.MOVS.CTA.COMISIONISTA
+# ------------------------------------
+
+private method abcMovsCtaComisionista (
+)
+{
+   jBC: ABC.MOVS.CTA.COMISIONISTA
+}
+
+
+private method abcMovsCtaComisionistaFields (
+)
+{
+   jBC: ABC.MOVS.CTA.COMISIONISTA.FIELDS
+}
+
+# ------------------------------------
+# Tabla ABC.CANAL
+# ------------------------------------
+private method abcCanal (
+)
+{
+   jBC: ABC.CANAL
+}
+
+
+private method abcCanalFields (
+)
+{
+   jBC: ABC.CANAL.FIELDS
+}
+
+# ------------------------------------
+# Tabla ABC.GENERAL.PARAM
+# ------------------------------------
+private method abcGeneralParam (
+)
+{
+   jBC: ABC.GENERAL.PARAM
+}
+
+
+# ------------------------------------
+# Tabla VPM.PARAMETROS.SPEI
+# ------------------------------------
+private method vpmParametrosSpei (
+)
+{
+   jBC: VPM.PARAMETROS.SPEI
+}
+
+
 # ------------------ TABLE END ------------------
 
 # ------------------ METHOD START ------------------
@@ -58,11 +158,212 @@ private method rtnFtCheckBalance (
 }
 
 
-
 private method abcValPostRest (
     INOUT yIdAcct string
 )
 {
     jBC: ABC.VAL.POST.REST
+}
+
+
+
+private method abcCallRtnsGenFt (
+)
+{
+    jBC: ABC.CALL.RTNS.GEN.FT
+}
+
+
+
+private method abcGetGeneralParam (
+    INOUT yIdParam string,
+    INOUT yListParams string,
+    INOUT yListValues string
+)
+{
+    jBC: ABC.GET.GENERAL.PARAM
+}
+
+
+
+private method bmvIdCaja (
+)
+{
+    jBC: BMV.ID.CAJA
+}
+
+
+
+private method abcValidaCanalFt (
+)
+{
+    jBC: ABC.VALIDA.CANAL.FT
+}
+
+
+
+private method abcValidaCanal (
+    INOUT yCanal string,
+    INOUT yError string
+)
+{
+    jBC: ABC.VALIDA.CANAL
+}
+
+
+
+
+private method stoChkPostRestr (
+)
+{
+    jBC: STO.CHK.POST.RESTR
+}
+
+
+private method abcMontoBloqueado (
+    INOUT yNoAcc string,
+    INOUT ySaldoBloq string
+)
+{
+    jBC: ABC.MONTO.BLOQUEADO
+}
+
+
+
+private method abcAplicaBonifCashin (
+    INOUT idRegistroBon string
+)
+{
+    jBC: ABC.APLICA.BONIF.CASHIN
+}
+
+
+private method abcAplicaBonifCashinLoad (
+)
+{
+    jBC: ABC.APLICA.BONIF.CASHIN.LOAD
+}
+
+
+
+private method abcAplicaBonifCashinSelect (
+)
+{
+    jBC: ABC.APLICA.BONIF.CASHIN.SELECT
+}
+
+
+
+
+private method abcInsertFtDetsConcat (
+)
+{
+    jBC: ABC.INSERT.FT.DETS.CONCAT
+}
+
+private method abcValidaOpenDateAcct (
+)
+{
+   jBC: ABC.VALIDA.OPEN.DATE.ACCT
+}
+
+
+
+private method vpmVCustomerName (
+)
+{
+   jBC: VPM.V.CUSTOMER.NAME
+}
+
+
+
+private method vFtGicDbAcct (
+)
+{
+   jBC: V.FT.GIC.DB.ACCT
+}
+
+private method abcValLimitAcCashin (
+)
+{
+   jBC: ABC.VAL.LIMIT.AC.CASHIN
+}
+
+
+private method abcValLimitMovsAcComi (
+   INOUT yIdMovsAcComi string,
+   INOUT yMontoTrans string,
+   INOUT yMontoLimitParam string,
+   INOUT yIdNewFt string,
+   INOUT yIdAdmin string,
+   INOUT yIdComi string,
+   INOUT yIdEstab string,
+   INOUT yCliente string
+)
+{
+   jBC: ABC.VAL.LIMIT.MOVS.AC.COMI
+}
+
+
+
+private method abcRegistraOperCashin (
+)
+{
+   jBC: ABC.REGISTRA.OPER.CASHIN
+}
+
+
+private method abcValMontoTraspasoExpress (
+)
+{
+   jBC: ABC.VAL.MONTO.TRASPASO.EXPRESS
+}
+
+
+
+private method vpm2brRtnValidaRfc (
+)
+{
+   jBC: VPM.2BR.RTN.VALIDA.RFC
+}
+
+
+
+private method abcValCtaBenef (
+)
+{
+   jBC: ABC.VAL.CTA.BENEF
+}
+
+
+
+private method abcValidaExtId (
+)
+{
+   jBC: ABC.VALIDA.EXT.ID
+}
+
+
+
+private method vpm2brChkLimamt (
+)
+{
+   jBC: VPM.2BR.CHK.LIMAMT
+}
+
+
+
+private method abcValDatBenPrn (
+)
+{
+   jBC: ABC.VAL.DAT.BEN.PRN
+}
+
+
+
+private method vpmValidaAutSpei (
+)
+{
+   jBC: VPM.VALIDA.AUT.SPEI
 }
 

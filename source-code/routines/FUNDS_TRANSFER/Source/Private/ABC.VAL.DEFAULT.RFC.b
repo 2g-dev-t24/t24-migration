@@ -1,7 +1,7 @@
-* @ValidationCode : MjotNTk5NzkxNDg2OkNwMTI1MjoxNzQzNTMwMjEyMTI5Om1hcmNvOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 01 Apr 2025 11:56:52
+* @ValidationCode : MjoxNDY2ODk4MTQwOkNwMTI1MjoxNzQ0MTMxMDEyNTI1OkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 08 Apr 2025 11:50:12
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : marco
+* @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -31,9 +31,7 @@ SUBROUTINE ABC.VAL.DEFAULT.RFC
     $USING FT.Contract
     $USING EB.Updates
     $USING EB.Display
-    
-
-    $USING ABC.BP
+    $USING EB.LocalReferences
 
     GOSUB INITIALIZE
     GOSUB PROCESS
@@ -48,7 +46,15 @@ INITIALIZE:
     Y.RFC.BENEF.SPEI = ''
     Y.POS.RFC.BENEF.SPEI = ''
     Y.VAL.DEF.RFC = 'ND'
-    CALL GET.LOC.REF("FUNDS.TRANSFER","RFC.BENEF.SPEI",Y.POS.RFC.BENEF.SPEI)
+*    CALL GET.LOC.REF("FUNDS.TRANSFER","RFC.BENEF.SPEI",Y.POS.RFC.BENEF.SPEI)
+*    EB.LocalReferences.GetLocRef("FUNDS.TRANSFER","RFC.BENEF.SPEI",Y.POS.RFC.BENEF.SPEI)
+    applications     = ""
+    fields           = ""
+    applications<1>  = "FUNDS.TRANSFER"
+    fields<1,1>      = "RFC.BENEF.SPEI"
+    field_Positions  = ""
+    EB.Updates.MultiGetLocRef(applications, fields, field_Positions)
+    Y.POS.RFC.BENEF.SPEI     = field_Positions<1,1>
 
 RETURN
 
@@ -56,10 +62,11 @@ RETURN
 PROCESS:
 *-------------------------------------------------------------------------------
 
-    Y.RFC.BENEF.SPEI = R.NEW(FT.LOCAL.REF)<1,Y.POS.RFC.BENEF.SPEI>
-    IF Y.RFC.BENEF.SPEI EQ "" THEN
-        R.NEW(FT.LOCAL.REF)<1,Y.POS.RFC.BENEF.SPEI> = Y.VAL.DEF.RFC
-*        EB.SystemTables.setRNew(FT.Contract , Y.INSERT)
+    Y.RFC.BENEF.SPEI = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.LocalRef);* R.NEW(FT.LOCAL.REF)<1,Y.POS.RFC.BENEF.SPEI>
+    IF Y.RFC.BENEF.SPEI<1,Y.POS.RFC.BENEF.SPEI> EQ "" THEN
+        Y.RFC.BENEF.SPEI<1,Y.POS.RFC.BENEF.SPEI> = Y.VAL.DEF.RFC
+        EB.SystemTables.setRNew(FT.Contract.FundsTransfer.LocalRef,Y.RFC.BENEF.SPEI)
+*        R.NEW(FT.LOCAL.REF)<1,Y.POS.RFC.BENEF.SPEI> = Y.VAL.DEF.RFC
         EB.Display.RebuildScreen()
     END
 

@@ -1,0 +1,18 @@
+private table AbcGeneralParam {
+    t24: ABC.GENERAL.PARAM
+    fields:{
+        PbsGenParamModulo(PBS.GEN.PARAM.MODULO) = 1
+        PbsGenParamNombParametro(PBS.GEN.PARAM.NOMB.PARAMETRO) = 2
+        PbsGenParamDatoParametro(PBS.GEN.PARAM.DATO.PARAMETRO) = 3
+        PbsGenParamComentario(PBS.GEN.PARAM.COMENTARIO) = 4
+        PbsGenParamRecordStatus(PBS.GEN.PARAM.RECORD.STATUS) = 5
+        PbsGenParamCurrNo(PBS.GEN.PARAM.CURR.NO) = 6
+        PbsGenParamInputter(PBS.GEN.PARAM.INPUTTER) = 7
+        PbsGenParamDateTime(PBS.GEN.PARAM.DATE.TIME) = 8
+        PbsGenParamAuthoriser(PBS.GEN.PARAM.AUTHORISER) = 9
+        PbsGenParamCoCode(PBS.GEN.PARAM.CO.CODE) = 10
+        PbsGenParamDeptCode(PBS.GEN.PARAM.DEPT.CODE) = 11
+        PbsGenParamAuditorCode(PBS.GEN.PARAM.AUDITOR.CODE) = 12
+        PbsGenParamAuditDateTime(PBS.GEN.PARAM.AUDIT.DATE.TIME) = 13
+    }
+}

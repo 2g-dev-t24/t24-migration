@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNDc5NDA2MTk3OkNwMTI1MjoxNzQzNTMyNTg2NDM4OkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 01 Apr 2025 12:36:26
+* @ValidationCode : Mjo2NjMxNzYwMzU6Q3AxMjUyOjE3NDM4MTAwOTM3Nzk6RWRnYXI6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Apr 2025 17:41:33
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -29,7 +29,6 @@ SUBROUTINE ABC.VAL.TRANS.TYPE
 *    $INSERT ../T24_BP I_F.FUNDS.TRANSFER
     $USING EB.SystemTables
     $USING EB.ErrorProcessing
-    $USING ABC.BP
 
     GOSUB INICIALIZA
     GOSUB VAL.TRANS.TYPE
@@ -41,8 +40,6 @@ INICIALIZA:
 
     Y.TRANS.TYPE = ''
     Y.TRANS.TRAS = "ACMI"
-
-*    Y.TRANS.TYPE = COMI
     Y.TRANS.TYPE = EB.SystemTables.getComi()
 
 RETURN

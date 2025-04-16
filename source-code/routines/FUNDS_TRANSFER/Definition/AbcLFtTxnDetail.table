@@ -1,0 +1,34 @@
+private table AbcLFtTxnDetail {
+    t24: ABC.L.FT.TXN.DETAIL
+    fields:{
+        AbcLFtTxnDetailIdFt(FT.TXN.DET.ID.FT) = 1
+        AbcLFtTxnDetailDebitAcctNo(FT.TXN.DET.DEBIT.ACCT.NO) = 2
+        AbcLFtTxnDetailCreditAcctNo(FT.TXN.DET.CREDIT.ACCT.NO) = 3
+        AbcLFtTxnDetailReserved15(FT.TXN.DET.RESERVED.15) = 4
+        AbcLFtTxnDetailReserved14(FT.TXN.DET.RESERVED.14) = 5
+        AbcLFtTxnDetailReserved13(FT.TXN.DET.RESERVED.13) = 6
+        AbcLFtTxnDetailReserved12(FT.TXN.DET.RESERVED.12) = 7
+        AbcLFtTxnDetailReserved11(FT.TXN.DET.RESERVED.11) = 8
+        AbcLFtTxnDetailReserved10(FT.TXN.DET.RESERVED.10) = 9
+        AbcLFtTxnDetailReserved9(FT.TXN.DET.RESERVED.9) = 10
+        AbcLFtTxnDetailReserved8(FT.TXN.DET.RESERVED.8) = 11
+        AbcLFtTxnDetailReserved7(FT.TXN.DET.RESERVED.7) = 12
+        AbcLFtTxnDetailReserved6(FT.TXN.DET.RESERVED.6) = 13
+        AbcLFtTxnDetailReserved5(FT.TXN.DET.RESERVED.5) = 14
+        AbcLFtTxnDetailReserved4(FT.TXN.DET.RESERVED.4) = 15
+        AbcLFtTxnDetailReserved3(FT.TXN.DET.RESERVED.3) = 16
+        AbcLFtTxnDetailReserved2(FT.TXN.DET.RESERVED.2) = 17
+        AbcLFtTxnDetailReserved1(FT.TXN.DET.RESERVED.1) = 18
+        AbcLFtTxnDetailLocalRef(FT.TXN.DET.LOCAL.REF) = 19
+        AbcLFtTxnDetailOverride(FT.TXN.DET.OVERRIDE) = 20
+        AbcLFtTxnDetailRecordStatus(FT.TXN.DET.RECORD.STATUS) = 21
+        AbcLFtTxnDetailCurrNo(FT.TXN.DET.CURR.NO) = 22
+        AbcLFtTxnDetailInputter(FT.TXN.DET.INPUTTER) = 23
+        AbcLFtTxnDetailDateTime(FT.TXN.DET.DATE.TIME) = 24
+        AbcLFtTxnDetailAuthoriser(FT.TXN.DET.AUTHORISER) = 25
+        AbcLFtTxnDetailCoCode(FT.TXN.DET.CO.CODE) = 26
+        AbcLFtTxnDetailDeptCode(FT.TXN.DET.DEPT.CODE) = 27
+        AbcLFtTxnDetailAuditorCode(FT.TXN.DET.AUDITOR.CODE) = 28
+        AbcLFtTxnDetailAuditDateTime(FT.TXN.DET.AUDIT.DATE.TIME) = 29
+    }
+}

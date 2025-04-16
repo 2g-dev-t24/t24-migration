@@ -1,0 +1,42 @@
+private table AbcBonificacionCashIn {
+    t24: ABC.BONIFICACION.CASH.IN
+    fields:{
+        AbcBonificacionCashInCustomer(CASH.IN.CUSTOMER) = 1
+        AbcBonificacionCashInIdOperacion(CASH.IN.ID.OPERACION) = 2
+        AbcBonificacionCashInMontoMov(CASH.IN.MONTO.MOV) = 3
+        AbcBonificacionCashInIdOperCancela(CASH.IN.ID.OPER.CANCELA) = 4
+        AbcBonificacionCashInFechaMov(CASH.IN.FECHA.MOV) = 5
+        AbcBonificacionCashInNumOperaciones(CASH.IN.NUM.OPERACIONES) = 6
+        AbcBonificacionCashInMontoTotal(CASH.IN.MONTO.TOTAL) = 7
+        AbcBonificacionCashInNumOperBonifican(CASH.IN.NUM.OPER.BONIFICAN) = 8
+        AbcBonificacionCashInMontoABonificar(CASH.IN.MONTO.A.BONIFICAR) = 9
+        AbcBonificacionCashInBonificado(CASH.IN.BONIFICADO) = 10
+        AbcBonificacionCashInIdBonificacion(CASH.IN.ID.BONIFICACION) = 11
+        AbcBonificacionCashInReserved15(CASH.IN.RESERVED.15) = 12
+        AbcBonificacionCashInReserved14(CASH.IN.RESERVED.14) = 13
+        AbcBonificacionCashInReserved13(CASH.IN.RESERVED.13) = 14
+        AbcBonificacionCashInReserved12(CASH.IN.RESERVED.12) = 15
+        AbcBonificacionCashInReserved11(CASH.IN.RESERVED.11) = 16
+        AbcBonificacionCashInReserved10(CASH.IN.RESERVED.10) = 17
+        AbcBonificacionCashInReserved9(CASH.IN.RESERVED.9) = 18
+        AbcBonificacionCashInReserved8(CASH.IN.RESERVED.8) = 19
+        AbcBonificacionCashInReserved7(CASH.IN.RESERVED.7) = 20
+        AbcBonificacionCashInReserved6(CASH.IN.RESERVED.6) = 21
+        AbcBonificacionCashInReserved5(CASH.IN.RESERVED.5) = 22
+        AbcBonificacionCashInReserved4(CASH.IN.RESERVED.4) = 23
+        AbcBonificacionCashInReserved3(CASH.IN.RESERVED.3) = 24
+        AbcBonificacionCashInReserved2(CASH.IN.RESERVED.2) = 25
+        AbcBonificacionCashInReserved1(CASH.IN.RESERVED.1) = 26
+        AbcBonificacionCashInLocalRef(CASH.IN.LOCAL.REF) = 27
+        AbcBonificacionCashInOverride(CASH.IN.OVERRIDE) = 28
+        AbcBonificacionCashInRecordStatus(CASH.IN.RECORD.STATUS) = 29
+        AbcBonificacionCashInCurrNo(CASH.IN.CURR.NO) = 30
+        AbcBonificacionCashInInputter(CASH.IN.INPUTTER) = 31
+        AbcBonificacionCashInDateTime(CASH.IN.DATE.TIME) = 32
+        AbcBonificacionCashInAuthoriser(CASH.IN.AUTHORISER) = 33
+        AbcBonificacionCashInCoCode(CASH.IN.CO.CODE) = 34
+        AbcBonificacionCashInDeptCode(CASH.IN.DEPT.CODE) = 35
+        AbcBonificacionCashInAuditorCode(CASH.IN.AUDITOR.CODE) = 36
+        AbcBonificacionCashInAuditDateTime(CASH.IN.AUDIT.DATE.TIME) = 37
+    }
+}

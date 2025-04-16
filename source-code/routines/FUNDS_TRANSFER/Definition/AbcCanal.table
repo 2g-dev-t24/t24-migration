@@ -1,0 +1,27 @@
+private table AbcCanal {
+    t24: ABC.CANAL
+    fields:{
+        AbcCanalDescripcion(ABC.CNL.DESCRIPCION) = 1
+        AbcCanalUsuario(ABC.CNL.USUARIO) = 2
+        AbcCanalMnemonic(ABC.CNL.MNEMONIC) = 3
+        AbcCanalReserved10(ABC.CNL.RESERVED.10) = 4
+        AbcCanalReserved9(ABC.CNL.RESERVED.9) = 5
+        AbcCanalReserved8(ABC.CNL.RESERVED.8) = 6
+        AbcCanalReserved7(ABC.CNL.RESERVED.7) = 7
+        AbcCanalReserved6(ABC.CNL.RESERVED.6) = 8
+        AbcCanalReserved5(ABC.CNL.RESERVED.5) = 9
+        AbcCanalReserved4(ABC.CNL.RESERVED.4) = 10
+        AbcCanalReserved3(ABC.CNL.RESERVED.3) = 11
+        AbcCanalReserved2(ABC.CNL.RESERVED.2) = 12
+        AbcCanalReserved1(ABC.CNL.RESERVED.1) = 13
+        AbcCanalRecordStatus(ABC.CNL.RECORD.STATUS) = 14
+        AbcCanalCurrNo(ABC.CNL.CURR.NO) = 15
+        AbcCanalInputter(ABC.CNL.INPUTTER) = 16
+        AbcCanalDateTime(ABC.CNL.DATE.TIME) = 17
+        AbcCanalAuthoriser(ABC.CNL.AUTHORISER) = 18
+        AbcCanalCoCode(ABC.CNL.CO.CODE) = 19
+        AbcCanalDeptCode(ABC.CNL.DEPT.CODE) = 20
+        AbcCanalAuditorCode(ABC.CNL.AUDITOR.CODE) = 21
+        AbcCanalAuditDateTime(ABC.CNL.AUDIT.DATE.TIME) = 22
+    }
+}

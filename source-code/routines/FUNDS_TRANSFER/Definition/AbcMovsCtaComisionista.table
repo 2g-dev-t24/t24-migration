@@ -1,0 +1,52 @@
+private table AbcMovsCtaComisionista{
+    t24:ABC.MOVS.CTA.COMISIONISTA
+    fields:{
+        AbcMovsCtaComisionistaCustomer(MOVS.AC.COMI.CUSTOMER) = 1
+        AbcMovsCtaComisionistaOperacionIn(MOVS.AC.COMI.OPERACION.IN) = 2
+        AbcMovsCtaComisionistaMontoIn(MOVS.AC.COMI.MONTO.IN) = 3
+        AbcMovsCtaComisionistaFechaMovIn(MOVS.AC.COMI.FECHA.MOV.IN) = 4
+        AbcMovsCtaComisionistaCancelacionIn(MOVS.AC.COMI.CANCELACION.IN) = 5
+        AbcMovsCtaComisionistaAdminComisIn(MOVS.AC.COMI.ADMIN.COMIS.IN) = 6
+        AbcMovsCtaComisionistaIdComiIn(MOVS.AC.COMI.ID.COMI.IN) = 7
+        AbcMovsCtaComisionistaComiEstabIn(MOVS.AC.COMI.COMI.ESTAB.IN) = 8
+        AbcMovsCtaComisionistaMontoTotalIn(MOVS.AC.COMI.MONTO.TOTAL.IN) = 9
+        AbcMovsCtaComisionistaOperacionOut(MOVS.AC.COMI.OPERACION.OUT) = 10
+        AbcMovsCtaComisionistaMontoOut(MOVS.AC.COMI.MONTO.OUT) = 11
+        AbcMovsCtaComisionistaFechaMovOut(MOVS.AC.COMI.FECHA.MOV.OUT) = 12
+        AbcMovsCtaComisionistaCancelacionOut(MOVS.AC.COMI.CANCELACION.OUT) = 13
+        AbcMovsCtaComisionistaAdminComisOut(MOVS.AC.COMI.ADMIN.COMIS.OUT) = 14
+        AbcMovsCtaComisionistaIdComiOut(MOVS.AC.COMI.ID.COMI.OUT) = 15
+        AbcMovsCtaComisionistaComiEstabOut(MOVS.AC.COMI.COMI.ESTAB.OUT) = 16
+        AbcMovsCtaComisionistaMontoTotalOut(MOVS.AC.COMI.MONTO.TOTAL.OUT) = 17
+        AbcMovsCtaComisionistaReserved20(MOVS.AC.COMI.RESERVED.20) = 18
+        AbcMovsCtaComisionistaReserved19(MOVS.AC.COMI.RESERVED.19) = 19
+        AbcMovsCtaComisionistaReserved18(MOVS.AC.COMI.RESERVED.18) = 20
+        AbcMovsCtaComisionistaReserved17(MOVS.AC.COMI.RESERVED.17) = 21
+        AbcMovsCtaComisionistaReserved16(MOVS.AC.COMI.RESERVED.16) = 22
+        AbcMovsCtaComisionistaReserved15(MOVS.AC.COMI.RESERVED.15) = 23
+        AbcMovsCtaComisionistaReserved14(MOVS.AC.COMI.RESERVED.14) = 24
+        AbcMovsCtaComisionistaReserved13(MOVS.AC.COMI.RESERVED.13) = 25
+        AbcMovsCtaComisionistaReserved12(MOVS.AC.COMI.RESERVED.12) = 26
+        AbcMovsCtaComisionistaReserved11(MOVS.AC.COMI.RESERVED.11) = 27
+        AbcMovsCtaComisionistaReserved10(MOVS.AC.COMI.RESERVED.10) = 28
+        AbcMovsCtaComisionistaReserved9(MOVS.AC.COMI.RESERVED.9) = 29
+        AbcMovsCtaComisionistaReserved8(MOVS.AC.COMI.RESERVED.8) = 30
+        AbcMovsCtaComisionistaReserved7(MOVS.AC.COMI.RESERVED.7) = 31
+        AbcMovsCtaComisionistaReserved6(MOVS.AC.COMI.RESERVED.6) = 32
+        AbcMovsCtaComisionistaReserved5(MOVS.AC.COMI.RESERVED.5) = 33
+        AbcMovsCtaComisionistaReserved4(MOVS.AC.COMI.RESERVED.4) = 34
+        AbcMovsCtaComisionistaReserved3(MOVS.AC.COMI.RESERVED.3) = 35
+        AbcMovsCtaComisionistaReserved2(MOVS.AC.COMI.RESERVED.2) = 36
+        AbcMovsCtaComisionistaReserved1(MOVS.AC.COMI.RESERVED.1) = 37
+        AbcMovsCtaComisionistaOverride(MOVS.AC.COMI.OVERRIDE) = 38
+        AbcMovsCtaComisionistaRecordStatus(MOVS.AC.COMI.RECORD.STATUS) = 39
+        AbcMovsCtaComisionistaCurrNo(MOVS.AC.COMI.CURR.NO) = 40
+        AbcMovsCtaComisionistaInputter(MOVS.AC.COMI.INPUTTER) = 41
+        AbcMovsCtaComisionistaDateTime(MOVS.AC.COMI.DATE.TIME) = 42
+        AbcMovsCtaComisionistaAuthoriser(MOVS.AC.COMI.AUTHORISER) = 43
+        AbcMovsCtaComisionistaCoCode(MOVS.AC.COMI.CO.CODE) = 44
+        AbcMovsCtaComisionistaDeptCode(MOVS.AC.COMI.DEPT.CODE) = 45
+        AbcMovsCtaComisionistaAuditorCode(MOVS.AC.COMI.AUDITOR.CODE) = 46
+        AbcMovsCtaComisionistaAuditDateTime(MOVS.AC.COMI.AUDIT.DATE.TIME) = 47
+    }
+}

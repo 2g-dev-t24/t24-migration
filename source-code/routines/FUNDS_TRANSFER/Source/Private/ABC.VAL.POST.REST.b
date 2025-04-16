@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNTM0NjU1MjUzOkNwMTI1MjoxNzQzNTUzMzc0NTc5OlVzaWFyaW86LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 01 Apr 2025 18:22:54
+* @ValidationCode : MjotMTU2OTYzMTExOkNwMTI1MjoxNzQ0MTYwMzY2Mjc4OlVzaWFyaW86LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 08 Apr 2025 19:59:26
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Usiario
 * @ValidationInfo : Nb tests success  : N/A
@@ -71,18 +71,18 @@ PROCESS:
     ERR.POST=''
     Y.REST.TYPE=''
 
-    EB.DataAccess.FRead(FN.ACCT, Y.ID.ACCT, REC.ACCT, F.ACCT, ERR.ACCT)
-;*Y.POST.REST = REC.ACCT<AC.POSTING.RESTRICT>
+    REC.ACCT = AC.AccountOpening.Account.Read(Y.ID.ACCT, ERR.ACCT)
+*Y.POST.REST = REC.ACCT<AC.POSTING.RESTRICT>
     Y.AVAIL.BAL = REC.ACCT<AC.AccountOpening.Account.PostingRestrict>
     IF Y.POST.REST NE "" THEN
 
         EB.DataAccess.FRead(FN.POST, Y.POST.REST, R.POST, F.POST, ERR.POST)
-;*Y.REST.TYPE = R.POST<AC.POS.RESTRICTION.TYPE>
+*Y.REST.TYPE = R.POST<AC.POS.RESTRICTION.TYPE>
         Y.REST.TYPE = R.POST<AC.Config.PostingRestrict.PosRestrictionType>
         IF Y.REST.TYPE EQ 'ALL' THEN
-;*COMI = ""
+*COMI = ""
             EB.SystemTables.setComi("");
-;*ETEXT = "La Cuenta: ":Y.ID.ACCT:" tiene restricciones"
+*ETEXT = "La Cuenta: ":Y.ID.ACCT:" tiene restricciones"
             EB.SystemTables.setEtext("La Cuenta: ":Y.ID.ACCT:" tiene restricciones")
             EB.ErrorProcessing.StoreEndError()
         END
