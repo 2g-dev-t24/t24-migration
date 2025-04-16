@@ -256,3 +256,20 @@ private method AbcGetRazonSocial (INOUT YRazonSocial string)
 
 
 # ------------------ METHOD END ------------------
+
+
+private method abcNofileBiometricosAlta (
+   INOUT rData string
+)
+{
+   jBC: ABC.NOFILE.BIOMETRICOS.ALTA
+}
+
+
+
+private method abcLlenaIubCusUser (
+)
+{
+   jBC: ABC.LLENA.IUB.CUS.USER
+}
+
