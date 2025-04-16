@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNjUyNjc0MTA2OkNwMTI1MjoxNzQ0ODI2MDgxNTM0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 16 Apr 2025 14:54:41
+* @ValidationCode : Mjo2Mzc0MzQwMzg6Q3AxMjUyOjE3NDQ4MzI1MDE1NTA6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 16 Apr 2025 16:41:41
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -153,7 +153,7 @@ BUSCA.COLONIA:
     IF Y.TOT.ESPACIOS GT 1 THEN
         Y.NOMBRE.COL=EREPLACE(Y.NOMBRE.COL," ","...")
         SEL.CMD= "SELECT " : FN.ABC.COLONIA : " WITH COLONIA LIKE ":DQUOTE(Y.NOMBRE.COL):" AND @ID LIKE ":DQUOTE(SQUOTE(Y.ESTADO):"...")    ;* ITSS - BINDHU - Added DQUOTE / SQUOTE
-        CALL EB.DataAccess.Readlist(SEL.CMD,Y.LIST.REG,'',Y.NO.REGISTROS,Y.SELECT.CMD.ERR)
+        EB.DataAccess.Readlist(SEL.CMD,Y.LIST.REG,'',Y.NO.REGISTROS,Y.SELECT.CMD.ERR)
         IF Y.LIST.REG EQ '' THEN
             Y.NOMBRE.FMT=EREPLACE(Y.NOMBRE.FMT," ","...")
             SEL.CMD= "SELECT " : FN.ABC.COLONIA : " WITH COLONIA LIKE ":DQUOTE('...':SQUOTE(Y.NOMBRE.FMT)):" AND @ID LIKE ":DQUOTE(SQUOTE(Y.ESTADO):"...")      ;* ITSS - BINDHU - Added DQUOTE / SQUOTE
@@ -169,7 +169,7 @@ BUSCA.COLONIA:
         END
     END ELSE
         SEL.CMD= "SELECT " : FN.ABC.COLONIA : " WITH COLONIA EQ ":DQUOTE(Y.NOMBRE.COL):" AND @ID LIKE ":DQUOTE(SQUOTE(Y.ESTADO):"...")      ;* ITSS - BINDHU - Added DQUOTE / SQUOTE
-        CALL EB.DataAccess.Readlist(SEL.CMD,Y.LIST.REG,'',Y.NO.REGISTROS,Y.SELECT.CMD.ERR)
+        EB.DataAccess.Readlist(SEL.CMD,Y.LIST.REG,'',Y.NO.REGISTROS,Y.SELECT.CMD.ERR)
     END
 
 

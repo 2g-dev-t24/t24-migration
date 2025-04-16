@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo0MDEyMDQ0NzU6Q3AxMjUyOjE3NDQwNDkxNjU3Nzk6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 07 Apr 2025 15:06:05
+* @ValidationCode : MjoxNzc2ODgzMTgwOkNwMTI1MjoxNzQ0ODMyNDM3MTI5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 16 Apr 2025 16:40:37
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -20,12 +20,14 @@ SUBROUTINE ABC.COMISIONISTAS.VALIDACION
 
 *-----------------------------------------------------------------------------
     $USING AbcComisionistasRtn
+    $USING EB.Display
 
     MENSAJE = "ABC Capital"
     MENSAJE:= " Inicia Validacion de Carga"
 
     TEXT = MENSAJE
-    CALL REM
+    EB.Display.Rem();
+    
 
     Y.PROCESO.APLICA  = "VALIDA"
     Y.ID.COMISIONISTA = "VECTOR"
@@ -33,6 +35,6 @@ SUBROUTINE ABC.COMISIONISTAS.VALIDACION
 
     MENSAJE = "El Proceso de Validacion ha concluido"
     TEXT = MENSAJE
-    CALL REM
+    EB.Display.Rem();
 RETURN
 END
