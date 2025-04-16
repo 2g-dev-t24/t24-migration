@@ -328,11 +328,37 @@ private method AbcBaOccamMastCodeTemp (
    jBC: ABC.BA.OCCAM.MAST.CODE.TEMP
 }
 
-
-
 private method AbcBaOccamMastCodeTempFields (
 )
 {
    jBC: ABC.BA.OCCAM.MAST.CODE.TEMP.FIELDS
+}
+
+private method AbcEstado (
+)
+{
+   jBC: ABC.ESTADO
+}
+
+private method AbcEstadoFields (
+)
+{
+   jBC: ABC.ESTADO.FIELDS
+}
+
+
+
+private method AbcBancos (
+)
+{
+   jBC: ABC.BANCOS
+}
+
+
+
+private method AbcBancosFields (
+)
+{
+   jBC: ABC.BANCOS.FIELDS
 }
 
