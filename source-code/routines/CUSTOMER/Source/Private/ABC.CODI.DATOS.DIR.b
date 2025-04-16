@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo5ODk0MDM3NjY6Q3AxMjUyOjE3NDQ4MTczNjM1MDk6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 16 Apr 2025 12:29:23
+* @ValidationCode : Mjo3NzM3NTY5NTY6Q3AxMjUyOjE3NDQ4MjYxMTAwMjg6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 16 Apr 2025 14:55:10
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -77,7 +77,7 @@ VALIDA.DATOS:
 *************
     ABC.BP.abcIdColonia(Y.CODIGO.POSTAL,Y.COLONIA,ID.COLONIA,Y.MESSAGE)
 *   CALL ABC.ID.COLONIA(Y.CODIGO.POSTAL,Y.COLONIA,ID.COLONIA,Y.MESSAGE)
-
+ 
        
     AbcGetAdress.AbcDireccionSepomex(Y.CODIGO.POSTAL, Y.CADENA.DIRECCION)
 

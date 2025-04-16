@@ -310,19 +310,29 @@ private method AbcMunicipioFields (
    jBC: ABC.MUNICIPIO.FIELDS
 }
 
-
-
 private method AbcColonia (
 )
 {
    jBC: ABC.COLONIA
 }
 
-
-
 private method AbcColoniaFields (
 )
 {
    jBC: ABC.COLONIA.FIELDS
+}
+
+private method AbcBaOccamMastCodeTemp (
+)
+{
+   jBC: ABC.BA.OCCAM.MAST.CODE.TEMP
+}
+
+
+
+private method AbcBaOccamMastCodeTempFields (
+)
+{
+   jBC: ABC.BA.OCCAM.MAST.CODE.TEMP.FIELDS
 }
 
