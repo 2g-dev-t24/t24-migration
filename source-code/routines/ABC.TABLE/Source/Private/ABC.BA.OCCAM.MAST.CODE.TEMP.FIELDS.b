@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMzY3MTU0OTY0OkNwMTI1MjoxNzQ0ODIzNzU1ODQ2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 16 Apr 2025 14:15:55
+* @ValidationCode : MjoxNTI0NTU5MDMyOkNwMTI1MjoxNzQ0ODI2OTE1NDU5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 16 Apr 2025 15:08:35
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -19,27 +19,21 @@ SUBROUTINE ABC.BA.OCCAM.MAST.CODE.TEMP.FIELDS
 *-----------------------------------------------------------------------------
 
 *-----------------------------------------------------------------------------
-
     $USING EB.SystemTables
     $USING EB.Template
-    MAT F = "" ; MAT N = "" ; MAT T = ""
-    MAT CHECKFILE = "" ; MAT CONCATFILE = ""
-    ID.CHECKFILE = ""; ID.CONCATFILE = ""
-
+*-----------------------------------------------------------------------------
+    EB.Template.TableDefineid('ID', EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
 
-    ID.F = "ID";       ID.N = "50.18.C";       ID.T = "A";
-
-    Z = 0
-
-    Z+ =1;      F(Z) = "FEC.CREACION";   N(Z) = "11";     T(Z)<1> = "D";  T(Z)<3> = 'NOINPUT'
-    Z+ =1;      F(Z) = "FEC.ENVIO";      N(Z) = "11";     T(Z)<1> = "D";  T(Z)<3> = 'NOINPUT'
-    Z+ =1;      F(Z) = "XX<TIPO.ARCH";   N(Z) = "20";     T(Z)<1> = "A";  T(Z)<3> = 'NOINPUT'
-    Z+ =1;      F(Z) = "XX-CODIGO";      N(Z) = "20";     T(Z)<1> = "A";  T(Z)<3> = 'NOINPUT'
-    Z+ =1;      F(Z) = "XX>DESC.ARCH";   N(Z) = "180";    T(Z)<1> = "A";  T(Z)<3> = 'NOINPUT'
-
-    V = Z + 9;   PREFIX = "MCT"
-
+    
+    EB.Template.TableAddfielddefinition('FEC.CREACION'            ,'6', 'D', '')
+    EB.Template.TableAddfielddefinition('FEC.ENVIO'               ,'4', 'D', '')
+    EB.Template.TableAddfielddefinition('XX<TIPO.ARCH'            ,'24', 'A', '')
+    EB.Template.TableAddfielddefinition('XX-CODIGO'               ,'100', 'A', '')
+    EB.Template.TableAddfielddefinition('XX>DESC.ARCH'            ,'13', 'A', '')
+    
+    EB.Template.TableSetauditposition()
 
 END
+
 

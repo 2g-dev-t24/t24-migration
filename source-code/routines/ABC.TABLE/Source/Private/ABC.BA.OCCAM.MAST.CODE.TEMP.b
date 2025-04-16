@@ -1,5 +1,5 @@
-* @ValidationCode : MjotODA0OTExNTc2OkNwMTI1MjoxNzQ0ODIzMjk3MjYwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 16 Apr 2025 14:08:17
+* @ValidationCode : MjotMTc1MjE1OTM1NjpDcDEyNTI6MTc0NDgyNzAzMDkzODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 16 Apr 2025 15:10:30
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -41,7 +41,7 @@ SUBROUTINE ABC.BA.OCCAM.MAST.CODE.TEMP
     EB.Template.setTableSystemclearfile('Y')         ;* As per FILE.CONTROL
     EB.Template.setTableRelatedfiles('')   ;* As per FILE.CONTROL
     EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL
-    EB.Template.setTableEquateprefix('ABC.ATM')          ;* Use to create I_F.EB.LOG.PARAMETER
+    EB.Template.setTableEquateprefix('MCT')          ;* Use to create I_F.EB.LOG.PARAMETER
 *-----------------------------------------------------------------------------
     EB.Template.setTableIdprefix('')       ;* Used by EB.FORMAT.ID if set
     EB.Template.setTableBlockedfunctions('')         ;* Space delimeted list of blocked functions
