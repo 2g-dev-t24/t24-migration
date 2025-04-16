@@ -295,3 +295,34 @@ private method AbcCanalFields ()
 {
     jBC: ABC.CANAL.FIELDS
 }
+
+private method AbcMunicipio (
+)
+{
+   jBC: ABC.MUNICIPIO
+}
+
+
+
+private method AbcMunicipioFields (
+)
+{
+   jBC: ABC.MUNICIPIO.FIELDS
+}
+
+
+
+private method AbcColonia (
+)
+{
+   jBC: ABC.COLONIA
+}
+
+
+
+private method AbcColoniaFields (
+)
+{
+   jBC: ABC.COLONIA.FIELDS
+}
+

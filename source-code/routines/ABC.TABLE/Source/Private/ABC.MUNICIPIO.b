@@ -1,5 +1,5 @@
-* @ValidationCode : MjotOTI5MDk4MzU5OkNwMTI1MjoxNzQ0ODE1NzIzMDA1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 16 Apr 2025 12:02:03
+* @ValidationCode : MjoyNTgzMzAxNzQ6Q3AxMjUyOjE3NDQ4MTM5MzEwMTI6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 16 Apr 2025 11:32:11
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -11,7 +11,14 @@
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE AbcTable
-SUBROUTINE ABC.ATM
+SUBROUTINE ABC.MUNICIPIO
+*-----------------------------------------------------------------------------
+*
+*-----------------------------------------------------------------------------
+* Modification History :
+*-----------------------------------------------------------------------------
+
+*-----------------------------------------------------------------------------
     $USING EB.SystemTables
     $USING EB.Template
     $USING AA.Framework
@@ -24,8 +31,8 @@ SUBROUTINE ABC.ATM
 
 *-----------------------------------------------------------------------------
 *-----------------------------------------------------------------------------
-    EB.Template.setTableName('ABC.ATM')       ;* Full application name including product prefix
-    EB.Template.setTableTitle('Cajeros ATM')   ;* Screen title
+    EB.Template.setTableName('ABC.MUNICIPIO')       ;* Full application name including product prefix
+    EB.Template.setTableTitle('ABC.MUNICIPIO')   ;* Screen title
     EB.Template.setTableStereotype('H')    ;* H, U, L, W or T
     EB.Template.setTableProduct('EB')      ;* Must be on EB.PRODUCT
     EB.Template.setTableSubproduct('')     ;* Must be on EB.SUB.PRODUCT
@@ -33,7 +40,7 @@ SUBROUTINE ABC.ATM
     EB.Template.setTableSystemclearfile('Y')         ;* As per FILE.CONTROL
     EB.Template.setTableRelatedfiles('')   ;* As per FILE.CONTROL
     EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL
-    EB.Template.setTableEquateprefix('ABC.ATM')          ;* Use to create I_F.EB.LOG.PARAMETER
+    EB.Template.setTableEquateprefix('ABC.MUNICIPIO')          ;* Use to create I_F.EB.LOG.PARAMETER
 *-----------------------------------------------------------------------------
     EB.Template.setTableIdprefix('')       ;* Used by EB.FORMAT.ID if set
     EB.Template.setTableBlockedfunctions('')         ;* Space delimeted list of blocked functions

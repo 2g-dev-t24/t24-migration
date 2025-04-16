@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo4NTY3MjcwNzk6Q3AxMjUyOjE3NDM3MzU2NjQ1MTA6THVpcyBDYXByYTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 04 Apr 2025 00:01:04
+* @ValidationCode : MjoxMjkzNjY1ODEyOkNwMTI1MjoxNzQ0ODEzOTkxMjU2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 16 Apr 2025 11:33:11
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -61,5 +61,5 @@ SUBROUTINE ABC.BONIFICACION.CASH.IN.FIELDS
     EB.Template.TableAddoverridefield()
     EB.Template.TableSetauditposition()
 
-END
+
 END
