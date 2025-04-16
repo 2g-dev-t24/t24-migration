@@ -27,6 +27,7 @@ $PACKAGE ABC.BP
         tmp=EB.SystemTables.getTLocref()
         tmp<V.NO.EMP.POS,7>=""
         EB.SystemTables.setTLocref(tmp)
+
     END
 
     IF V.STAFF.OFF EQ "N" THEN
@@ -34,11 +35,10 @@ $PACKAGE ABC.BP
         Y.LOCAL.REF<1,V.NO.EMP.POS> = ''
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
         EB.Display.RebuildScreen() 
-*        CALL REFRESH.GUI.OBJECTS
-
         tmp=EB.SystemTables.getTLocref()
         tmp<V.NO.EMP.POS,7>="NOINPUT"
         EB.SystemTables.setTLocref(tmp)
+
     END
     Y.LOCAL.REF<1,107> = ""
     EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
