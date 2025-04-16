@@ -294,3 +294,16 @@ private method abcIdColonia (
     jBC: ABC.ID.COLONIA
 }
 
+private method AbcESelColEmpleo (
+    INOUT EnqParam string
+)
+{
+    jBC: ABC.E.SEL.COL.EMPLEO
+}
+
+private method AbcNofGetColonia (
+    INOUT RData string
+)
+{
+    jBC: ABC.NOF.GET.COLONIA
+}
