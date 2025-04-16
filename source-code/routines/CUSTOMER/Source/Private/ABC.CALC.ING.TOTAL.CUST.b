@@ -42,13 +42,13 @@ RETURN
 PROCESO:
 **********************
 
-    IF EB.SystemTables.getAf() EQ EB.SystemTables.getRNew(ST.Customer.Customer.EbCusAnnualBonus) THEN
+    IF EB.SystemTables.getAf() EQ ST.Customer.Customer.EbCusAnnualBonus THEN
         Y.ING.CAMPO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSalary)
         Y.TOT.ING = Y.ING.COMI + Y.ING.CAMPO
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusNetMonthlyIn, Y.TOT.ING)
     END
 
-    IF EB.SystemTables.getAf() EQ EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSalary) THEN
+    IF EB.SystemTables.getAf() EQ ST.Customer.Customer.EbCusSalary THEN
         Y.ING.CAMPO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusAnnualBonus)
         Y.TOT.ING = Y.ING.COMI + Y.ING.CAMPO
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusNetMonthlyIn, Y.TOT.ING)
