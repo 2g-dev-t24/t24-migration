@@ -68,14 +68,14 @@ private method abcUploadFileParamFields (
 private method abcLFtTxnDetail (
 )
 {
-   jBC: ABC.L.FT.TXN.DETAIL
+    jBC: ABC.L.FT.TXN.DETAIL
 }
 
 
 private method abcLFtTxnDetailFields (
 )
 {
-   jBC: ABC.L.FT.TXN.DETAIL.FIELDS
+    jBC: ABC.L.FT.TXN.DETAIL.FIELDS
 }
 
 # ------------------------------------
@@ -85,14 +85,14 @@ private method abcLFtTxnDetailFields (
 private method abcMovsCtaComisionista (
 )
 {
-   jBC: ABC.MOVS.CTA.COMISIONISTA
+    jBC: ABC.MOVS.CTA.COMISIONISTA
 }
 
 
 private method abcMovsCtaComisionistaFields (
 )
 {
-   jBC: ABC.MOVS.CTA.COMISIONISTA.FIELDS
+    jBC: ABC.MOVS.CTA.COMISIONISTA.FIELDS
 }
 
 # ------------------------------------
@@ -101,14 +101,14 @@ private method abcMovsCtaComisionistaFields (
 private method abcCanal (
 )
 {
-   jBC: ABC.CANAL
+    jBC: ABC.CANAL
 }
 
 
 private method abcCanalFields (
 )
 {
-   jBC: ABC.CANAL.FIELDS
+    jBC: ABC.CANAL.FIELDS
 }
 
 # ------------------------------------
@@ -117,7 +117,7 @@ private method abcCanalFields (
 private method abcGeneralParam (
 )
 {
-   jBC: ABC.GENERAL.PARAM
+    jBC: ABC.GENERAL.PARAM
 }
 
 
@@ -127,10 +127,77 @@ private method abcGeneralParam (
 private method vpmParametrosSpei (
 )
 {
-   jBC: VPM.PARAMETROS.SPEI
+    jBC: VPM.PARAMETROS.SPEI
+
+}  
+
+# ------------------------------------
+# Tabla ABC.SMS.EMAIL.ENVIAR
+# ------------------------------------
+private method abcSmsEmailEnviar (
+)
+{
+    jBC: ABC.SMS.EMAIL.ENVIAR
 }
 
 
+
+private method abcSmsEmailEnviarFields (
+)
+{
+    jBC: ABC.SMS.EMAIL.ENVIAR.FIELDS
+}
+
+# ------------------------------------
+# Tabla ABC.COMISIONISTAS
+# ------------------------------------
+private method abcComisionistas (
+)
+{
+    jBC: ABC.COMISIONISTAS
+}
+
+
+
+private method abcComisionistasFields (
+)
+{
+    jBC: ABC.COMISIONISTAS.FIELDS
+}
+
+# ------------------------------------
+# Tabla VPM.PARAMETROS.BANXICO
+# ------------------------------------
+private method vpmParametrosBanxico (
+)
+{
+    jBC: VPM.PARAMETROS.BANXICO
+}
+# ------------------------------------
+# Tabla ET.SAP.TARJETA
+# ------------------------------------
+private method etSapTarjeta (
+)
+{
+    jBC: ET.SAP.TARJETA
+}
+
+# ------------------------------------
+# Tabla VPM.2BR.CC.MORAL
+# ------------------------------------
+private method vpm2brCcMoral (
+)
+{
+    jBC: VPM.2BR.CC.MORAL
+}
+# ------------------------------------
+# Tabla VPM.PARAM.PROCESO
+# ------------------------------------
+private method vpmParamProceso (
+)
+{
+    jBC: VPM.PARAM.PROCESO
+}
 # ------------------ TABLE END ------------------
 
 # ------------------ METHOD START ------------------
@@ -264,7 +331,7 @@ private method abcInsertFtDetsConcat (
 private method abcValidaOpenDateAcct (
 )
 {
-   jBC: ABC.VALIDA.OPEN.DATE.ACCT
+    jBC: ABC.VALIDA.OPEN.DATE.ACCT
 }
 
 
@@ -272,7 +339,7 @@ private method abcValidaOpenDateAcct (
 private method vpmVCustomerName (
 )
 {
-   jBC: VPM.V.CUSTOMER.NAME
+    jBC: VPM.V.CUSTOMER.NAME
 }
 
 
@@ -280,28 +347,28 @@ private method vpmVCustomerName (
 private method vFtGicDbAcct (
 )
 {
-   jBC: V.FT.GIC.DB.ACCT
+    jBC: V.FT.GIC.DB.ACCT
 }
 
 private method abcValLimitAcCashin (
 )
 {
-   jBC: ABC.VAL.LIMIT.AC.CASHIN
+    jBC: ABC.VAL.LIMIT.AC.CASHIN
 }
 
 
 private method abcValLimitMovsAcComi (
-   INOUT yIdMovsAcComi string,
-   INOUT yMontoTrans string,
-   INOUT yMontoLimitParam string,
-   INOUT yIdNewFt string,
-   INOUT yIdAdmin string,
-   INOUT yIdComi string,
-   INOUT yIdEstab string,
-   INOUT yCliente string
+    INOUT yIdMovsAcComi string,
+    INOUT yMontoTrans string,
+    INOUT yMontoLimitParam string,
+    INOUT yIdNewFt string,
+    INOUT yIdAdmin string,
+    INOUT yIdComi string,
+    INOUT yIdEstab string,
+    INOUT yCliente string
 )
 {
-   jBC: ABC.VAL.LIMIT.MOVS.AC.COMI
+    jBC: ABC.VAL.LIMIT.MOVS.AC.COMI
 }
 
 
@@ -309,14 +376,14 @@ private method abcValLimitMovsAcComi (
 private method abcRegistraOperCashin (
 )
 {
-   jBC: ABC.REGISTRA.OPER.CASHIN
+    jBC: ABC.REGISTRA.OPER.CASHIN
 }
 
 
 private method abcValMontoTraspasoExpress (
 )
 {
-   jBC: ABC.VAL.MONTO.TRASPASO.EXPRESS
+    jBC: ABC.VAL.MONTO.TRASPASO.EXPRESS
 }
 
 
@@ -324,7 +391,7 @@ private method abcValMontoTraspasoExpress (
 private method vpm2brRtnValidaRfc (
 )
 {
-   jBC: VPM.2BR.RTN.VALIDA.RFC
+    jBC: VPM.2BR.RTN.VALIDA.RFC
 }
 
 
@@ -332,7 +399,7 @@ private method vpm2brRtnValidaRfc (
 private method abcValCtaBenef (
 )
 {
-   jBC: ABC.VAL.CTA.BENEF
+    jBC: ABC.VAL.CTA.BENEF
 }
 
 
@@ -340,7 +407,7 @@ private method abcValCtaBenef (
 private method abcValidaExtId (
 )
 {
-   jBC: ABC.VALIDA.EXT.ID
+    jBC: ABC.VALIDA.EXT.ID
 }
 
 
@@ -348,7 +415,7 @@ private method abcValidaExtId (
 private method vpm2brChkLimamt (
 )
 {
-   jBC: VPM.2BR.CHK.LIMAMT
+    jBC: VPM.2BR.CHK.LIMAMT
 }
 
 
@@ -356,7 +423,7 @@ private method vpm2brChkLimamt (
 private method abcValDatBenPrn (
 )
 {
-   jBC: ABC.VAL.DAT.BEN.PRN
+    jBC: ABC.VAL.DAT.BEN.PRN
 }
 
 
@@ -364,6 +431,201 @@ private method abcValDatBenPrn (
 private method vpmValidaAutSpei (
 )
 {
-   jBC: VPM.VALIDA.AUT.SPEI
+    jBC: VPM.VALIDA.AUT.SPEI
+}
+                     
+
+private method abcValidaCuentasFt (
+)
+{
+    jBC: ABC.VALIDA.CUENTAS.FT
 }
 
+
+
+private method abcEnvEmailTrasAc2 (
+)
+{
+    jBC: ABC.ENV.EMAIL.TRAS.AC.2
+}
+
+private method abcFillInfCashin (
+)
+{
+    jBC: ABC.FILL.INF.CASHIN
+}
+
+
+private method vpmValidateIvaSpei (
+)
+{
+    jBC: VPM.VALIDATE.IVA.SPEI
+}
+
+
+
+private method vpmEExtractName (
+)
+{
+    jBC: VPM.E.EXTRACT.NAME
+}
+
+
+
+private method vpmClearCtaExternaSpei (
+)
+{
+    jBC: VPM.CLEAR.CTA.EXTERNA.SPEI
+}
+
+
+
+private method abcEnvEmailMigracion (
+)
+{
+    jBC: ABC.ENV.EMAIL.MIGRACION
+}
+
+
+
+private method vpmHoraCaptura (
+)
+{
+    jBC: VPM.HORA.CAPTURA
+}
+
+
+
+private method vpm2brVCheckSpeiType (
+)
+{
+    jBC: VPM.2BR.V.CHECK.SPEI.TYPE
+}
+
+
+
+private method abcLlenaDebitAccMig (
+)
+{
+    jBC: ABC.LLENA.DEBIT.ACC.MIG
+}
+
+
+private method abcEnvEmailTrasAcBen2 (
+)
+{
+    jBC: ABC.ENV.EMAIL.TRAS.AC.BEN.2
+}
+
+
+
+private method abcAcTdRegistraEmail (
+)
+{
+    jBC: ABC.AC.TD.REGISTRA.EMAIL
+}
+
+
+
+private method abcSpeiExpressTxnOutgoing (
+)
+{
+    jBC: ABC.SPEI.EXPRESS.TXN.OUTGOING
+}
+
+
+
+private method abcSpeiExpressPreparaRequest (
+    INOUT yStringEscribir string,
+    INOUT yResponse string
+)
+{
+    jBC: ABC.SPEI.EXPRESS.PREPARA.REQUEST
+}
+
+
+
+private method abcSpeiInterpretaResponse (
+    INOUT yResponse string,
+    INOUT yMessageOut string
+)
+{
+    jBC: ABC.SPEI.INTERPRETA.RESPONSE
+}
+
+
+
+private method abcSpeiExpressGetdataRequest (
+    INOUT yStringOriginal string,
+    INOUT yCadenaDatos string
+)
+{
+    jBC: ABC.SPEI.EXPRESS.GETDATA.REQUEST
+}
+
+
+
+private method abcSpeiArmaRequest (
+    INOUT yTagS string,
+    INOUT yTagI string,
+    INOUT yValores string,
+    INOUT yCadenaSalida string
+)
+{
+    jBC: ABC.SPEI.ARMA.REQUEST
+}
+
+
+
+private method abcSpeiSendRequest (
+    INOUT yCdShell string,
+    INOUT yDatosEnvio string,
+    INOUT yReturnval string
+)
+{
+    jBC: ABC.SPEI.SEND.REQUEST
+}
+
+
+
+private method pbsInslog (
+    INOUT yArchivoGuardar string,
+    INOUT yMensaje string,
+    INOUT yIniciando string
+)
+{
+    jBC: PBS.INSLOG
+}
+
+
+
+private method abcTraeGeneralParam (
+    INOUT yIdMod string,
+    INOUT yCadenaParam string,
+    INOUT yCadenaDatos string
+)
+{
+    jBC: ABC.TRAE.GENERAL.PARAM
+}
+
+private method vpmVFtToday (
+)
+{
+    jBC: VPM.V.FT.TODAY
+}
+
+
+
+private method vpmCcCheckCustnoDr (
+)
+{
+    jBC: VPM.CC.CHECK.CUSTNO.DR
+}
+
+private method vpmValidaRfc (
+    INOUT yRfc string,
+    INOUT yErr string
+)
+{
+    jBC: VPM.VALIDA.RFC
+}

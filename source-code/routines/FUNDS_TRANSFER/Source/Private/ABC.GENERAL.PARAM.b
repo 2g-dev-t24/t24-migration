@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMzA5OTUwOTcyOkNwMTI1MjoxNzQ0NjQ5MTk5MTc0OkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 14 Apr 2025 11:46:39
+* @ValidationCode : MjotMTQ3Nzk4ODc2MzpDcDEyNTI6MTc0NDczMzg2NzkxMDpFZGdhcjotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 15 Apr 2025 11:17:47
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -31,6 +31,7 @@ SUBROUTINE ABC.GENERAL.PARAM
     $USING EB.SystemTables
     $USING EB.TransactionControl
     $USING EB.Display
+    $USING EB.Template
 *-----------------------------------------------------------------------------
     GOSUB DEFINE.PARAMETERS
 
@@ -208,16 +209,24 @@ DEFINE.PARAMETERS:
 REM "DEFINE PARAMETERS - SEE 'I_RULES'-DESCRIPTION:
 *
     ID.F = "ID" ; ID.N = "40.1" ; ID.T = "A"
-    ID.T<4>= ""
-    Z = 0
+*    EB.Template.TableDefineid("ID", T24_String)    ;* Define Table id
+*    ID.T<4>= ""
+*    Z = 0
+*
+*    Z += 1 ; F(Z) = "MODULO"                  ; N(Z) = "100.1"         ; T(Z) = "A"
+*    Z += 1 ; F(Z) = "XX<NOMB.PARAMETRO"       ; N(Z) = "80.1"         ; T(Z) = "A"
+*    Z += 1 ; F(Z) = "XX-DATO.PARAMETRO"       ; N(Z) = "80.1"         ; T(Z) = "A"
+*    Z += 1 ; F(Z) = "XX>COMENTARIO"           ; N(Z) = "80"           ; T(Z) = "A"
 
-    Z += 1 ; F(Z) = "MODULO"                          ; N(Z) = "100.1"         ; T(Z) = "A"
-    Z += 1 ; F(Z) = "XX<NOMB.PARAMETRO"       ; N(Z) = "80.1"         ; T(Z) = "A"
-    Z += 1 ; F(Z) = "XX-DATO.PARAMETRO"       ; N(Z) = "80.1"         ; T(Z) = "A"
-    Z += 1 ; F(Z) = "XX>COMENTARIO"           ; N(Z) = "80"           ; T(Z) = "A"
+*    V = Z+9 ; PREFIX = "PBS.GEN.PARAM."
 
-    V = Z+9 ; PREFIX = "PBS.GEN.PARAM."
-
+    EB.Template.TableAddfielddefinition("MODULO", '100.1', 'ANY', '')
+    EB.Template.TableAddfielddefinition("XX<NOMB.PARAMETRO", '80.1', 'ANY', '')
+    EB.Template.TableAddfielddefinition("XX-DATO.PARAMETRO", '80.1', 'ANY', '')
+    EB.Template.TableAddfielddefinition("XX>COMENTARIO", '80', 'ANY', '')
+    EB.Template.TableSetauditposition()         ;* Populate audit information
+    
+    EB.Template.setTableEquateprefix('PBS.GEN.PARAM')     ;* Use to create I_F.EB.LOG.PARAMETER
 *
 RETURN
 **********************************************************************

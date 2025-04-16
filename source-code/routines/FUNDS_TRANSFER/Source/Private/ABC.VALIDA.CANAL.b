@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTU2Mzg1OTA1OkNwMTI1MjoxNzQ0NDE4ODg5MzA3OkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 11 Apr 2025 19:48:09
+* @ValidationCode : Mjo3ODAzNjYzMTg6Q3AxMjUyOjE3NDQ3NTQ4NDk3NzY6RWRnYXI6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 15 Apr 2025 17:07:29
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -53,7 +53,7 @@ VALIDA.USUARIO:
 ***************
 
 *    CALL F.READ(FN.ABC.CANAL,Y.CANAL,R.ABC.CANAL,F.ABC.CANAL,ERR.CANAL)
-    EB.DataAccess.FRead(FN.ABC.CANAL,Y.CANAL,R.ABC.CANAL,F.ABC.CANAL,ERR.CANAL)
+    R.ABC.CANAL = ABC.BP.AbcCanal.Read(Y.CANAL, ERR.CANAL)
     IF R.ABC.CANAL NE '' THEN
         Y.USUARIO.LISTA = R.ABC.CANAL<ABC.BP.AbcCanal.AbcCanalUsuario> ;*R.ABC.CANAL<ABC.CNL.USUARIO>
         Y.USUARIO.LISTA = RAISE(Y.USUARIO.LISTA)

@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTk2NDYxNDE4MzpDcDEyNTI6MTc0NDU2OTk3MTU1ODpFZGdhcjotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 13 Apr 2025 13:46:11
+* @ValidationCode : Mjo0MzczOTk3Mzc6Q3AxMjUyOjE3NDQ3NTc2MzYwOTU6RWRnYXI6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 15 Apr 2025 17:53:56
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -16,7 +16,7 @@
 *-----------------------------------------------------------------------------
 $PACKAGE ABC.BP
 SUBROUTINE VPM.VALIDA.AUT.SPEI
-
+* Componente T24     : FUNDS.TRANSFER,ABC.SPEI.EXPRESS.PRN.2
 
 *    $INSERT I_COMMON
 *    $INSERT I_EQUATE

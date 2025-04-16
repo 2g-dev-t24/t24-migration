@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo4NzU2OTU0Nzc6Q3AxMjUyOjE3NDQ0MTk2MzIxNTE6RWRnYXI6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 11 Apr 2025 20:00:32
+* @ValidationCode : MjoxMjczNTU0OTEzOkNwMTI1MjoxNzQ0NzU0MzA1NzIyOkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 15 Apr 2025 16:58:25
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -23,6 +23,7 @@ SUBROUTINE BMV.ID.CAJA
 * Descripcion    : Se cambio la llamada directa a los campos locales,
 *                  por la funcion que regresa la posicion del campo local
 *                  proporcionando el nombre del campo
+* Componente T24 : FUNDS.TRANSFER,ABC.SPEI.EXPRESS.PRN.2
 *-----------------------------------------------------------------------
 *    First Release :             14/11/2006
 *    Developed for :     BANCO MULTIVA
@@ -55,7 +56,7 @@ SUBROUTINE BMV.ID.CAJA
 *    F.TELLER.USER = ""
 **    CALL OPF(FN.TELLER.USER, F.TELLER.USER)
 *    EB.DataAccess.Opf(FN.TELLER.USER, F.TELLER.USER)
-    EB.LocalReferences.GetLocRef("FUNDS.TRANSFER","CHQ.ISSUE.ID",CHQ.ISSUE.ID.POS)
+*    EB.LocalReferences.GetLocRef("FUNDS.TRANSFER","CHQ.ISSUE.ID",CHQ.ISSUE.ID.POS)
     applications     = ""
     fields           = ""
     applications<1>  = "FUNDS.TRANSFER"

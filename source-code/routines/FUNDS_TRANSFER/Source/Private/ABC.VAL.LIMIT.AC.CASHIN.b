@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMjg2NzM5ODk6Q3AxMjUyOjE3NDQzOTI0MTEwOTE6RWRnYXI6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 11 Apr 2025 12:26:51
+* @ValidationCode : Mjo4MjM1MTk4ODc6Q3AxMjUyOjE3NDQ3MzcyNjQwNzU6RWRnYXI6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 15 Apr 2025 12:14:24
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -22,6 +22,7 @@ SUBROUTINE ABC.VAL.LIMIT.AC.CASHIN
 * Desarrollador      :  Alexis Almaraz Robles - F&G Solutions
 * Compania           :  ABC Capital Banco
 * Fecha Creacion     :  10/Abril/2023
+* T24 component      : FUNDS.TRANSFER,ABC.COMISIONISTA.CASH.IN
 *===============================================================================
 * Modificaciones:
 *===============================================================================
@@ -32,13 +33,14 @@ SUBROUTINE ABC.VAL.LIMIT.AC.CASHIN
 *    $INCLUDE ../T24_BP I_F.ACCOUNT
 *    $INCLUDE ../T24_BP I_F.FUNDS.TRANSFER
 *    $INSERT ABC.BP I_F.ABC.MOVS.CTA.COMISIONISTA
-
+*-----------------------------------------------------------------------------
     $USING EB.DataAccess
     $USING EB.SystemTables
     $USING EB.Updates
     $USING FT.Contract
     $USING AC.AccountOpening
     $USING ST.CurrencyConfig
+*-----------------------------------------------------------------------------
     
     GOSUB INITIALIZE
 *    GOSUB OPEN.FILES
@@ -194,7 +196,8 @@ BORRA.MOVS.AC.COMI:
     Y.ERR.MOVS.AC.COMI = ''
     Y.MOVIMIENTOS.AC.COMI = ''
     Y.ID.OPERACION = ID.NEW
-    EB.DataAccess.FRead(FN.ABC.MOVS.CTA.COMISIONISTA, Y.ID.MOVS.AC.COMI, R.ABC.MOVS.CTA.COMISIONISTA, F.ABC.MOVS.CTA.COMISIONISTA, Y.ERR.MOVS.AC.COMI)
+*    EB.DataAccess.FRead(FN.ABC.MOVS.CTA.COMISIONISTA, Y.ID.MOVS.AC.COMI, R.ABC.MOVS.CTA.COMISIONISTA, F.ABC.MOVS.CTA.COMISIONISTA, Y.ERR.MOVS.AC.COMI)
+    R.ABC.MOVS.CTA.COMISIONISTA = ABC.BP.AbcMovsCtaComisionista.Read(Y.ID.MOVS.AC.COMI, Y.ERR.MOVS.AC.COMI)
     IF R.ABC.MOVS.CTA.COMISIONISTA THEN
         Y.MOVIMIENTOS.AC.COMI = R.ABC.MOVS.CTA.COMISIONISTA<ABC.BP.AbcMovsCtaComisionista.AbcMovsCtaComisionistaOperacionIn>     ;*<MOVS.AC.COMI.OPERACION.IN>
         CHANGE @VM TO @FM IN Y.MOVIMIENTOS.AC.COMI

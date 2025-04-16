@@ -1,0 +1,17 @@
+private table Vpm2brCcMoral {
+    t24: VPM.2BR.CC.MORAL
+    fields:{
+        Vpm2brCcMoralMnemonic(CC.MORAL.MNEMONIC) = 1
+        Vpm2brCcMoralAccount(CC.MORAL.ACCOUNT) = 2
+        Vpm2brCcMoralTransaction(CC.MORAL.TRANSACTION) = 3
+        Vpm2brCcMoralRecordStatus(CC.MORAL.RECORD.STATUS) = 4
+        Vpm2brCcMoralCurrNo(CC.MORAL.CURR.NO) = 5
+        Vpm2brCcMoralInputter(CC.MORAL.INPUTTER) = 6
+        Vpm2brCcMoralDateTime(CC.MORAL.DATE.TIME) = 7
+        Vpm2brCcMoralAuthoriser(CC.MORAL.AUTHORISER) = 8
+        Vpm2brCcMoralCoCode(CC.MORAL.CO.CODE) = 9
+        Vpm2brCcMoralDeptCode(CC.MORAL.DEPT.CODE) = 10
+        Vpm2brCcMoralAuditorCode(CC.MORAL.AUDITOR.CODE) = 11
+        Vpm2brCcMoralAuditDateTime(CC.MORAL.AUDIT.DATE.TIME) = 12
+    }
+}

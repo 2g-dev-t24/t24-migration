@@ -1,5 +1,5 @@
-* @ValidationCode : MjotODcxNjIwMzMzOkNwMTI1MjoxNzQzODA4MzE5NTY5OkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 04 Apr 2025 17:11:59
+* @ValidationCode : MjotNDE4OTUyMTg5OkNwMTI1MjoxNzQ0NzczMjc5NDUyOkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 15 Apr 2025 22:14:39
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -33,6 +33,7 @@ SUBROUTINE ABC.VALIDA.CANAL.FT
     $USING EB.LocalReferences
     $USING EB.SystemTables
     $USING FT.Contract
+    $USING EB.Updates
 
     GOSUB INICIALIZA
     GOSUB VALIDA.USUARIO
@@ -45,7 +46,14 @@ INICIALIZA:
 
     Y.CANAL = ''
     Y.ERROR = ''
-    EB.LocalReferences.GetLocRef("FUNDS.TRANSFER","CANAL.ENTIDAD",YPOS.CANAL)
+*    EB.LocalReferences.GetLocRef("FUNDS.TRANSFER","CANAL.ENTIDAD",YPOS.CANAL)
+    applications     = ""
+    fields           = ""
+    applications<1>  = "FUNDS.TRANSFER"
+    fields<1,1>      = "CANAL.ENTIDAD"
+    field_Positions  = ""
+    EB.Updates.MultiGetLocRef(applications, fields, field_Positions)
+    YPOS.CANAL       = field_Positions<1,1>
 
 RETURN
 

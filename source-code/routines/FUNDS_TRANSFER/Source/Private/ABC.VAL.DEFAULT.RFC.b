@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNDY2ODk4MTQwOkNwMTI1MjoxNzQ0MTMxMDEyNTI1OkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 08 Apr 2025 11:50:12
+* @ValidationCode : MjoxNTcwNzI3NDg0OkNwMTI1MjoxNzQ0NzU4MzIyNTYxOkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 15 Apr 2025 18:05:22
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -22,6 +22,7 @@ SUBROUTINE ABC.VAL.DEFAULT.RFC
 * Desarrollador      :  Alexis Almaraz Robles - F&G Solutions
 * Compania           :  ABC Capital Banco
 * Fecha Creacion     :  23/Junio/2020
+* Componente T24     : FUNDS.TRANSFER,ABC.SPEI.EXPRESS.PRN.2
 *===============================================================================
 * Modificaciones:
 *===============================================================================

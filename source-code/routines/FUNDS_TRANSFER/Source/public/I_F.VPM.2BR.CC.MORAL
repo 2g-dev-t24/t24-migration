@@ -1,0 +1,14 @@
+* File Layout for VPM.2BR.CC.MORAL Created 02 MAR 15 at 11:43PM by bamit24
+*      PREFIX[CC.MORAL.]      SUFFIX[]
+    EQU CC.MORAL.MNEMONIC TO 1, Vpm2brCcMoral_Mnemonic TO 1, 
+         CC.MORAL.ACCOUNT TO 2, Vpm2brCcMoral_Account TO 2, 
+     CC.MORAL.TRANSACTION TO 3, Vpm2brCcMoral_Transaction TO 3, 
+   CC.MORAL.RECORD.STATUS TO 4, Vpm2brCcMoral_RecordStatus TO 4, 
+         CC.MORAL.CURR.NO TO 5, Vpm2brCcMoral_CurrNo TO 5, 
+        CC.MORAL.INPUTTER TO 6, Vpm2brCcMoral_Inputter TO 6, 
+       CC.MORAL.DATE.TIME TO 7, Vpm2brCcMoral_DateTime TO 7, 
+      CC.MORAL.AUTHORISER TO 8, Vpm2brCcMoral_Authoriser TO 8, 
+         CC.MORAL.CO.CODE TO 9, Vpm2brCcMoral_CoCode TO 9, 
+      CC.MORAL.DEPT.CODE TO 10, Vpm2brCcMoral_DeptCode TO 10, 
+   CC.MORAL.AUDITOR.CODE TO 11, Vpm2brCcMoral_AuditorCode TO 11, 
+CC.MORAL.AUDIT.DATE.TIME TO 12, Vpm2brCcMoral_AuditDateTime TO 12

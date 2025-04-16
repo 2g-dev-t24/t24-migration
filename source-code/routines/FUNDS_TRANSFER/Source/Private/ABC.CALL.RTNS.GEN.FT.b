@@ -1,5 +1,5 @@
-* @ValidationCode : MjotODI3MzgyMTE6Q3AxMjUyOjE3NDQzOTI2MjI1MjA6RWRnYXI6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 11 Apr 2025 12:30:22
+* @ValidationCode : MjoyMDgxMzQ5MTE4OkNwMTI1MjoxNzQ0NzM1MTIxMzAwOkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 15 Apr 2025 11:38:41
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -21,17 +21,19 @@ SUBROUTINE ABC.CALL.RTNS.GEN.FT
 * Fecha:                2022-12-20
 * Descripci�n:          Rutina de proposito general para ejecutar rutinas parametrizadas
 *                       sobre versiones de FT
+* Componente T24     : FUNDS.TRANSFER,ABC.COMISIONISTA.CASH.IN
 *===============================================================================
 
 *    $INCLUDE ../T24_BP I_COMMON
 *    $INCLUDE ../T24_BP I_EQUATE
 *    $INCLUDE ../T24_BP I_F.FUNDS.TRANSFER
 *    $INCLUDE ABC.BP I_F.ABC.GENERAL.PARAM
+*-----------------------------------------------------------------------------
     $USING EB.SystemTables
     $USING FT.Contract
     $USING EB.DataAccess
     $USING EB.API
-    
+*-----------------------------------------------------------------------------
     
     GOSUB INICIO
     GOSUB OBTEN.RTNS.PARAM

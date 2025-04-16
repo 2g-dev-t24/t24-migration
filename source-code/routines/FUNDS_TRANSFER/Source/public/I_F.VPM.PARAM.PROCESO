@@ -1,0 +1,22 @@
+* File Layout for VPM.PARAM.PROCESO Created 13 MAR 15 at 05:41PM by bamit24
+*      PREFIX[VPM.]      SUFFIX[]
+  EQU VPM.APLICACION TO 1, VpmParamProceso_Aplicacion TO 1, 
+       VPM.CATEGORIA TO 2, VpmParamProceso_Categoria TO 2, 
+        VPM.HORA.INI TO 3, VpmParamProceso_HoraIni TO 3, 
+        VPM.HORA.FIN TO 4, VpmParamProceso_HoraFin TO 4, 
+       VPM.NARRATIVA TO 5, VpmParamProceso_Narrativa TO 5, 
+         VPM.ESTATUS TO 6, VpmParamProceso_Estatus TO 6, 
+      VPM.RESERVED.5 TO 7, VpmParamProceso_Reserved5 TO 7, 
+      VPM.RESERVED.4 TO 8, VpmParamProceso_Reserved4 TO 8, 
+      VPM.RESERVED.3 TO 9, VpmParamProceso_Reserved3 TO 9, 
+     VPM.RESERVED.2 TO 10, VpmParamProceso_Reserved2 TO 10, 
+     VPM.RESERVED.1 TO 11, VpmParamProceso_Reserved1 TO 11, 
+  VPM.RECORD.STATUS TO 12, VpmParamProceso_RecordStatus TO 12, 
+        VPM.CURR.NO TO 13, VpmParamProceso_CurrNo TO 13, 
+       VPM.INPUTTER TO 14, VpmParamProceso_Inputter TO 14, 
+      VPM.DATE.TIME TO 15, VpmParamProceso_DateTime TO 15, 
+     VPM.AUTHORISER TO 16, VpmParamProceso_Authoriser TO 16, 
+        VPM.CO.CODE TO 17, VpmParamProceso_CoCode TO 17, 
+      VPM.DEPT.CODE TO 18, VpmParamProceso_DeptCode TO 18, 
+   VPM.AUDITOR.CODE TO 19, VpmParamProceso_AuditorCode TO 19, 
+VPM.AUDIT.DATE.TIME TO 20, VpmParamProceso_AuditDateTime TO 20

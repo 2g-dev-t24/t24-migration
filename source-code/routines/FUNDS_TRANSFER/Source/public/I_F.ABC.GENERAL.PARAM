@@ -1,0 +1,15 @@
+* File Layout for ABC.GENERAL.PARAM Created 15 OCT 14 at 01:36PM by desadev
+*      PREFIX[PBS.GEN.PARAM.]      SUFFIX[]
+      EQU PBS.GEN.PARAM.MODULO          TO 1,
+          PBS.GEN.PARAM.NOMB.PARAMETRO  TO 2,
+          PBS.GEN.PARAM.DATO.PARAMETRO  TO 3,
+          PBS.GEN.PARAM.COMENTARIO      TO 4,
+          PBS.GEN.PARAM.RECORD.STATUS   TO 5,
+          PBS.GEN.PARAM.CURR.NO         TO 6,
+          PBS.GEN.PARAM.INPUTTER        TO 7,
+          PBS.GEN.PARAM.DATE.TIME       TO 8,
+          PBS.GEN.PARAM.AUTHORISER      TO 9,
+          PBS.GEN.PARAM.CO.CODE         TO 10,
+          PBS.GEN.PARAM.DEPT.CODE       TO 11,
+          PBS.GEN.PARAM.AUDITOR.CODE    TO 12,
+          PBS.GEN.PARAM.AUDIT.DATE.TIME TO 13

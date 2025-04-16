@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxODA1MzYwNzQ1OkNwMTI1MjoxNzQ0NDE5MzgwNTExOkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 11 Apr 2025 19:56:20
+* @ValidationCode : MjoxNTM1NDEzNTUzOkNwMTI1MjoxNzQ0NzU1OTAyNDA3OkVkZ2FyOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 15 Apr 2025 17:25:02
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Edgar
 * @ValidationInfo : Nb tests success  : N/A
@@ -99,7 +99,6 @@ RETURN
 PROCESA:
 ********
 
-    EB.SystemTables.getComi()
     YCOMI = EB.SystemTables.getComi() * 1;* COMI * 1
     IF YCOMI AND NUM(YCOMI) THEN
         YCTA = EB.SystemTables.getComi()

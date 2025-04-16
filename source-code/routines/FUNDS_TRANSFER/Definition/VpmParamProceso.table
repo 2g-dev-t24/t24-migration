@@ -1,0 +1,25 @@
+private table VpmParamProceso {
+    t24: VPM.PARAM.PROCESO
+    fields:{
+        VpmParamProcesoAplicacion(VPM.APLICACION) = 1
+        VpmParamProcesoCategoria(VPM.CATEGORIA) = 2
+        VpmParamProcesoHoraIni(VPM.HORA.INI) = 3
+        VpmParamProcesoHoraFin(VPM.HORA.FIN) = 4
+        VpmParamProcesoNarrativa(VPM.NARRATIVA) = 5
+        VpmParamProcesoEstatus(VPM.ESTATUS) = 6
+        VpmParamProcesoReserved5(VPM.RESERVED.5) = 7
+        VpmParamProcesoReserved4(VPM.RESERVED.4) = 8
+        VpmParamProcesoReserved3(VPM.RESERVED.3) = 9
+        VpmParamProcesoReserved2(VPM.RESERVED.2) = 10
+        VpmParamProcesoReserved1(VPM.RESERVED.1) = 11
+        VpmParamProcesoRecordStatus(VPM.RECORD.STATUS) = 12
+        VpmParamProcesoCurrNo(VPM.CURR.NO) = 13
+        VpmParamProcesoInputter(VPM.INPUTTER) = 14
+        VpmParamProcesoDateTime(VPM.DATE.TIME) = 15
+        VpmParamProcesoAuthoriser(VPM.AUTHORISER) = 16
+        VpmParamProcesoCoCode(VPM.CO.CODE) = 17
+        VpmParamProcesoDeptCode(VPM.DEPT.CODE) = 18
+        VpmParamProcesoAuditorCode(VPM.AUDITOR.CODE) = 19
+        VpmParamProcesoAuditDateTime(VPM.AUDIT.DATE.TIME) = 20
+    }
+}
