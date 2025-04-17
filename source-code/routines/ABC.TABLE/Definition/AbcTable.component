@@ -299,7 +299,7 @@ private method AbcCanalFields ()
 private method AbcMunicipio (
 )
 {
-   jBC: ABC.MUNICIPIO
+    jBC: ABC.MUNICIPIO
 }
 
 
@@ -307,43 +307,43 @@ private method AbcMunicipio (
 private method AbcMunicipioFields (
 )
 {
-   jBC: ABC.MUNICIPIO.FIELDS
+    jBC: ABC.MUNICIPIO.FIELDS
 }
 
 private method AbcColonia (
 )
 {
-   jBC: ABC.COLONIA
+    jBC: ABC.COLONIA
 }
 
 private method AbcColoniaFields (
 )
 {
-   jBC: ABC.COLONIA.FIELDS
+    jBC: ABC.COLONIA.FIELDS
 }
 
 private method AbcBaOccamMastCodeTemp (
 )
 {
-   jBC: ABC.BA.OCCAM.MAST.CODE.TEMP
+    jBC: ABC.BA.OCCAM.MAST.CODE.TEMP
 }
 
 private method AbcBaOccamMastCodeTempFields (
 )
 {
-   jBC: ABC.BA.OCCAM.MAST.CODE.TEMP.FIELDS
+    jBC: ABC.BA.OCCAM.MAST.CODE.TEMP.FIELDS
 }
 
 private method AbcEstado (
 )
 {
-   jBC: ABC.ESTADO
+    jBC: ABC.ESTADO
 }
 
 private method AbcEstadoFields (
 )
 {
-   jBC: ABC.ESTADO.FIELDS
+    jBC: ABC.ESTADO.FIELDS
 }
 
 
@@ -351,7 +351,7 @@ private method AbcEstadoFields (
 private method AbcBancos (
 )
 {
-   jBC: ABC.BANCOS
+    jBC: ABC.BANCOS
 }
 
 
@@ -359,6 +359,42 @@ private method AbcBancos (
 private method AbcBancosFields (
 )
 {
-   jBC: ABC.BANCOS.FIELDS
+    jBC: ABC.BANCOS.FIELDS
+}
+
+
+private method AbcAaBulkAuthorise (){
+    jBC: ABC.AA.BULK.AUTHORISE
+}
+private method AbcAaBulkAuthoriseFields (){
+    jBC: ABC.AA.BULK.AUTHORISE.FIELDS
+}
+
+private method AbcActividadComisionasta (){
+    jBC: ABC.ACTIVIDAD.COMISIONISTA
+}
+private method AbcActividadComisionastaFields (){
+    jBC: ABC.ACTIVIDAD.COMISIONISTA.FIELDS
+}
+
+private method AbcActividadComisionista (){
+    jBC: ABC.ACTIVIDAD.COMISIONISTA
+}
+private method AbcActividadComisionistaFields (){
+    jBC: ABC.ACTIVIDAD.COMISIONISTA.FIELDS
+}
+
+private method AbcAccCfdiInfo (
+)
+{
+    jBC: ABC.ACC.CFDI.INFO
+}
+
+
+
+private method AbcAccCfdiInfoFields (
+)
+{
+    jBC: ABC.ACC.CFDI.INFO.FIELDS
 }
 

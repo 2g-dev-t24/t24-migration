@@ -1,0 +1,25 @@
+public table AbcActividadComisionista {
+    t24: ABC.ACTIVIDAD.COMISIONISTA
+    fields:{
+        Comi(AAC.ACT.COMI) = 1
+        Descripcion(AAC.DESCRIPCION) = 2
+        Reserved6(AAC.RESERVED.6) = 3
+        Reserved5(AAC.RESERVED.5) = 4
+        Reserved4(AAC.RESERVED.4) = 5
+        Reserved3(AAC.RESERVED.3) = 6
+        Reserved2(AAC.RESERVED.2) = 7
+        Reserved1(AAC.RESERVED.1) = 8
+        LocalRef(AAC.LOCAL.REF) = 9
+        Override(AAC.OVERRIDE) = 10
+        RecordStatus(AAC.RECORD.STATUS) = 11
+        CurrNo(AAC.CURR.NO) = 12
+        Inputter(AAC.INPUTTER) = 13
+        DateTime(AAC.DATE.TIME) = 14
+        Authoriser(AAC.AUTHORISER) = 15
+        CoCode(AAC.CO.CODE) = 16
+        DeptCode(AAC.DEPT.CODE) = 17
+        AuditorCode(AAC.AUDITOR.CODE) = 18
+        AuditDateTime(AAC.AUDIT.DATE.TIME) = 19
+
+    }
+}
