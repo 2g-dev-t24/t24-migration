@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMzEyMzA4NDk3OkNwMTI1MjoxNzQ0NzQ4MDkyODYwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 15 Apr 2025 17:14:52
+* @ValidationCode : MjoxMTAxMDI1NjEwOkNwMTI1MjoxNzQ0ODQ5NDEwNzc2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 16 Apr 2025 21:23:30
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -30,6 +30,7 @@ SUBROUTINE ABC.NUM.CLIENTE.UNICO
     $USING EB.Display
     $USING EB.LocalReferences
     $USING EB.Updates
+    $USING AbcTable
     $USING ABC.BP
 
     MESSAGE = EB.SystemTables.getMessage()
@@ -232,7 +233,7 @@ CALCULA.NUM.CTE:
     EB.DataAccess.FRead(FN.VPM.ESTADO, LUG.NAC, REC.LUGNAC, F.VPM.ESTADO, Y.ERR.BON)
     
     IF REC.LUGNAC NE '' THEN
-        CLAVE.ALFA = REC.LUGNAC<ABC.BP.VpmEstado.VpmEstadoClave>
+        CLAVE.ALFA = REC.LUGNAC<AbcTable.AbcEstado.Clave>
     END
     CLIENTE.UNICO.CURP[12,2] = CLAVE.ALFA
 

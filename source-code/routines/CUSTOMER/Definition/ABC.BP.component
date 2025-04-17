@@ -11,21 +11,6 @@ metamodelVersion 1.6
 
 # ------------------ TABLE START ------------------
 
-# ------------------------------------
-# Tabla VPM.ESTADO
-# ------------------------------------
-private method VpmEstado ()
-{
-    jBC: VPM.ESTADO
-}
-
-# ------------------------------------
-# Tabla VPM.ESTADO
-# ------------------------------------
-private method VpmBancos ()
-{
-    jBC: VPM.BANCOS
-}
 
 # ------------------------------------
 # Tabla ABC.EMAIL.SMS.PARAMETER
