@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMTAxMDI1NjEwOkNwMTI1MjoxNzQ0ODQ5NDEwNzc2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 16 Apr 2025 21:23:30
+* @ValidationCode : MjotMTU1NTMwMjE3OTpDcDEyNTI6MTc0NDg1MDI3NDcxMjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 16 Apr 2025 21:37:54
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -230,7 +230,7 @@ CALCULA.NUM.CTE:
 *..MUEVE LUGAR DE NACIMIENTO
     LUG.NAC = EB.SystemTables.getRNew(EB.CUS.LOCAL.REF)<1,Y.POS.LUG.NAC>; REC.LUGNAC = ''
     
-    EB.DataAccess.FRead(FN.VPM.ESTADO, LUG.NAC, REC.LUGNAC, F.VPM.ESTADO, Y.ERR.BON)
+    EB.DataAccess.FRead(FN.ABC.ESTADO, LUG.NAC, REC.LUGNAC, F.ABC.ESTADO, Y.ERR.BON)
     
     IF REC.LUGNAC NE '' THEN
         CLAVE.ALFA = REC.LUGNAC<AbcTable.AbcEstado.Clave>
@@ -688,9 +688,9 @@ RETURN
 
 ABRE.TABLAS:
 
-    F.VPM.ESTADO  = ""
-    FN.VPM.ESTADO = "F.VPM.ESTADO"
-    EB.DataAccess.Opf(FN.VPM.ESTADO, F.VPM.ESTADO)
+    F.ABC.ESTADO  = ""
+    FN.ABC.ESTADO = "F.ABC.ESTADO"
+    EB.DataAccess.Opf(FN.ABC.ESTADO, F.ABC.ESTADO)
 
     F.CUST$NAU  = ""
     FN.CUST$NAU = "F.CUSTOMER$NAU"
