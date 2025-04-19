@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxODY3OTU5NTI0OkNwMTI1MjoxNzQ0NjM1Mjk2NTI2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 14 Apr 2025 09:54:56
+* @ValidationCode : MjoyMTE2Mjg2NDUwOkNwMTI1MjoxNzQ1MDMxNDMxMTQ4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 18 Apr 2025 23:57:11
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -25,7 +25,7 @@ SUBROUTINE ABC.LOCALIDAD.FIELDS
     EB.Template.TableDefineid("ID", EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
 
-    EB.Template.TableAddfielddefinition('ID CODE',12,'A','')
+    EB.Template.TableAddfielddefinition('ID.CODE',12,'A','')
     EB.Template.TableAddfielddefinition('ID.DESCRIPTION',100, 'A', '')
 
     EB.Template.TableAddreservedfield("RESERVED.4")
