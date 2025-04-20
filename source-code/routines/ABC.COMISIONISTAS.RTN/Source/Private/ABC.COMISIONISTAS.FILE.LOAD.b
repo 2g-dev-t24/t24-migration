@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxODIyMzA4ODA4OkNwMTI1MjoxNzQ0MDQ5MDk4NzQ3Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 07 Apr 2025 15:04:58
+* @ValidationCode : MjoxNDc3MTU1MzkzOkNwMTI1MjoxNzQ1MTg3MzQwNTc4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 20 Apr 2025 19:15:40
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -240,7 +240,9 @@ PROCESA.ARCHIVOS:
                 IF Y.VALOR.OK.CONCAT EQ '' THEN
                     R.ABC.COMISIONISTAS.FILE.CONCAT<AbcTable.AbcComisionistasFileConcat.LoadOk> = 'SI'
                 END
-                EB.DataAccess.FWrite(FN.ABC.COMISIONISTAS.FILE.CONCAT,Y.ABC.COMISIONISTAS.FILE.CONCAT.ID,R.ABC.COMISIONISTAS.FILE.CONCAT)
+* EB.DataAccess.FWrite(FN.ABC.COMISIONISTAS.FILE.CONCAT,Y.ABC.COMISIONISTAS.FILE.CONCAT.ID,R.ABC.COMISIONISTAS.FILE.CONCAT)
+                R.ABC.COMISIONISTAS = AbcTable.AbcComisionistasFileConcat.Write(Y.ABC.COMISIONISTAS.FILE.CONCAT.ID,R.ABC.COMISIONISTAS.FILE.CONCAT)
+                
 *WRITE R.ABC.COMISIONISTAS.FILE.CONCAT TO F.ABC.COMISIONISTAS.FILE.CONCAT, Y.ABC.COMISIONISTAS.FILE.CONCAT.ID
                 Y.ARCHIVO.PROCESADO += 1
             END ELSE
