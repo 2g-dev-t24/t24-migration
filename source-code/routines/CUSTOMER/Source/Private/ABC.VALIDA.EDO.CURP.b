@@ -1,0 +1,87 @@
+* @ValidationCode : MjotNzA4MzM0OTk4OkNwMTI1MjoxNzQ1MTAyOTQ0MTYyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 19 Apr 2025 19:49:04
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
+$PACKAGE ABC.BP
+SUBROUTINE ABC.VALIDA.EDO.CURP
+*-----------------------------------------------------------------------------
+*
+*-----------------------------------------------------------------------------
+* Modification History :
+*-----------------------------------------------------------------------------
+
+*-----------------------------------------------------------------------------
+    $USING EB.SystemTables
+    $USING EB.ErrorProcessing
+    $USING EB.Display
+    $USING EB.Interface
+    $USING ST.Customer
+    $USING EB.DataAccess
+    $USING EB.Updates
+    
+    GOSUB INIT
+    GOSUB OPEN.FILES
+
+    Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.LUG.NAC>
+
+    IF Y.LUG.NAC NE '' THEN
+
+        Y.LUG.NAC.CURP = Y.CURP[12,2]
+        SEL.CMD = 'SELECT ':FN.ABC.ESTADO:' WITH CLAVE EQ ':DQUOTE(Y.LUG.NAC.CURP):" BY @ID"  ; * ITSS - SUNDRAM - Added DQUOTE
+        EB.DataAccess.Readlist(SEL.CMD,Y.LIST,'',Y.NO,Y.ERROR)
+
+        IF Y.LIST EQ ''THEN
+            ETEXT = "LA CLAVE DE LA ENTIDAD DE NACIMIENTO NO ES VALIDA"
+            EB.SystemTables.setEtext(ETEXT)
+            EB.ErrorProcessing.StoreEndError()
+            RETURN
+        END ELSE
+            IF Y.LIST NE Y.LUG.NAC THEN
+                ETEXT = "LA ENTIDAD DE NACIMIENTO DEL CURP NO COINCIDE CON EL ESTADO DE NACIMIENTO"
+                EB.SystemTables.setEtext(ETEXT)
+                EB.ErrorProcessing.StoreEndError()
+                RETURN
+            END
+        END
+    END ELSE
+        ETEXT = "FAVOR DE LLENAR EL ESTADO DE NACIMIENTO"
+        EB.SystemTables.setEtext(ETEXT)
+        EB.ErrorProcessing.StoreEndError()
+        RETURN
+    END
+
+*
+RETURN
+
+***********
+OPEN.FILES:
+***********
+
+    FN.ABC.ESTADO = 'F.ABC.ESTADO'
+    F.ABC.ESTADO = ''
+    EB.DataAccess.Opf(FN.ABC.ESTADO,F.ABC.ESTADO)
+
+RETURN
+
+*****
+INIT:
+*****
+    V.APP      = 'CUSTOMER'
+    V.FLD.NAME = 'LUG.NAC'
+    V.FLD.POS  = ''
+
+    EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, Y.POS.LUG.NAC)
+    
+    Y.CURP = EB.SystemTables.getComi()
+
+RETURN
+
+END

@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTM4MTY1NzYwNDpDcDEyNTI6MTc0NDYzMzExMDc1NzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 14 Apr 2025 09:18:30
+* @ValidationCode : MjoxOTMyNDkyNzUwOkNwMTI1MjoxNzQ1MDkxMzYxNTM4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 19 Apr 2025 16:36:01
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -29,7 +29,7 @@ SUBROUTINE ABC.LOCALIDAD
     EB.Template.setTableStereotype('H')    ;* H, U, L, W or T
     EB.Template.setTableProduct('EB')      ;* Must be on EB.PRODUCT
     EB.Template.setTableSubproduct('')     ;* Must be on EB.SUB.PRODUCT
-    EB.Template.setTableClassification('INT')        ;* As per FILE.CONTROL
+    EB.Template.setTableClassification('CUS')        ;* As per FILE.CONTROL
     EB.Template.setTableSystemclearfile('Y')         ;* As per FILE.CONTROL
     EB.Template.setTableRelatedfiles('')   ;* As per FILE.CONTROL
     EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL

@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTg0NTM0ODgwMjpDcDEyNTI6MTc0NDgxNTc4OTc4MjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 16 Apr 2025 12:03:09
+* @ValidationCode : MjozMDc4MTgxMjg6Q3AxMjUyOjE3NDUwOTE4MTEwODY6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 19 Apr 2025 16:43:31
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -37,7 +37,7 @@ SUBROUTINE ABC.COLONIA
     EB.Template.setTableStereotype('H')    ;* H, U, L, W or T
     EB.Template.setTableProduct('EB')      ;* Must be on EB.PRODUCT
     EB.Template.setTableSubproduct('')     ;* Must be on EB.SUB.PRODUCT
-    EB.Template.setTableClassification('INT')        ;* As per FILE.CONTROL
+    EB.Template.setTableClassification('CUS')        ;* As per FILE.CONTROL
     EB.Template.setTableSystemclearfile('Y')         ;* As per FILE.CONTROL
     EB.Template.setTableRelatedfiles('')   ;* As per FILE.CONTROL
     EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL

@@ -292,3 +292,38 @@ private method AbcNofGetColonia (
 {
     jBC: ABC.NOF.GET.COLONIA
 }
+
+private method AbcOfsGetMnemonic (
+)
+{
+   jBC: ABC.OFS.GET.MNEMONIC
+}
+
+
+
+
+
+
+
+private method AbcRtnFechaMenorHoy (
+)
+{
+   jBC: ABC.RTN.FECHA.MENOR.HOY
+}
+
+
+
+private method AbcOfsCustFechaNac (
+)
+{
+   jBC: ABC.OFS.CUST.FECHA.NAC
+}
+
+
+
+private method AbcValidaEdoCurp (
+)
+{
+   jBC: ABC.VALIDA.EDO.CURP
+}
+
