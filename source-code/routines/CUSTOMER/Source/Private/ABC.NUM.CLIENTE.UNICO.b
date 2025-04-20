@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTU1NTMwMjE3OTpDcDEyNTI6MTc0NDg1MDI3NDcxMjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 16 Apr 2025 21:37:54
+* @ValidationCode : MjoxNTY0MTQxNDMwOkNwMTI1MjoxNzQ1MTg2NTIwNTA5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 20 Apr 2025 19:02:00
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -73,7 +73,7 @@ GENERA.RFC.CURP:
             RETURN
         END ELSE
             EB.SystemTables.setRNew(EB.CUS.GENDER,"")
-            COMI = ""
+            EB.SystemTables.setComi("")
             EB.Display.RebuildScreen()
             ETEXT = MENSAJE
             EB.ErrorProcessing.StoreEndError()
@@ -219,7 +219,7 @@ CALCULA.NUM.CTE:
 *..MUEVE GENERO
 
 
-    SEXO = COMI
+    SEXO = EB.SystemTables.getComi()
     SEXO = UPCASE(SEXO)
     IF (SEXO = "MASCULINO") THEN
         CLIENTE.UNICO.CURP[11,1] = "H"
@@ -733,7 +733,7 @@ RETURN
 ****************
 MANTEN.REGISTRO:
 ****************
-    Y.VAL.ACTUAL = COMI
+    Y.VAL.ACTUAL = EB.SystemTables.getComi()
     Y.ORIGEN = "GENERICO"
     ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
 RETURN
@@ -779,7 +779,7 @@ VALIDA.DATOS:
     END
 
     IF LEN(GENERO) = 0 THEN
-        IF LEN(COMI) = 0 THEN
+        IF LEN(EB.SystemTables.getComi()) = 0 THEN
             RES = ETEINC
             MENSAJE = "FALTA SEXO"
             RETURN
@@ -799,7 +799,7 @@ VALIDA.DATOS.M:
     END
 
     IF LEN(FEC.CONSTI) = 0 THEN
-        IF LEN(COMI) = 0 THEN
+        IF LEN(EB.SystemTables.getComi()) = 0 THEN
             RES = ETEINC
             MENSAJE = "FALTA FECHA DE CONSTITUCION DE EMPRESA"
             RETURN
