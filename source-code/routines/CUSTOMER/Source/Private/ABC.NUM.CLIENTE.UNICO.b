@@ -39,8 +39,8 @@ SUBROUTINE ABC.NUM.CLIENTE.UNICO
 
 
 
-    EB.SystemTables.setRNew((ST.Customer.Customer.EbCusTaxId)<1,1>,"")
-    EB.SystemTables.setRNew((ST.Customer.Customer.EbCusExternCusId)<1,1>,"")
+    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId,"")
+    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,"")
 
 
 
@@ -67,7 +67,7 @@ GENERA.RFC.CURP:
             V.RFC = ""
             ABC.BP.AbcGeneraRfc('', '', '' )
 
-            EB.SystemTables.setRNew((ST.Customer.Customer.EbCusExternCusId)<1,1>,CLIENTE.UNICO.CURP)
+            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,CLIENTE.UNICO.CURP)
 
             EB.Display.RebuildScreen()
             RETURN
@@ -87,8 +87,8 @@ GENERA.RFC.CURP:
         IF (RES EQ 0) AND (MENSAJE EQ '') THEN
             GOSUB CALCULA.NUM.CTE.M
 
-            EB.SystemTables.setRNew((ST.Customer.Customer.EbCusTaxId)<1,1>,CLIENTE.UNICO)
-            EB.SystemTables.setRNew((ST.Customer.Customer.EbCusExternCusId)<1,1>,"")
+            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId,CLIENTE.UNICO)
+            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,"")
             EB.Display.RebuildScreen()
             RETURN
         END ELSE
@@ -638,7 +638,7 @@ VALIDA.CLIENTE.PF:
         LOCATE Y.CURP IN Y.CURP.LIST SETTING POS THEN
             Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
             IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
-                EB.SystemTables.setEtext('Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ' :Y.CLIENTE.1     ;* ABC Capital. ':Y.CLIENTE.1) ;*20241029_RZN.SCL - S - E
+                EB.SystemTables.setEtext('Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ' :Y.CLIENTE.1)     ;* ABC Capital. ':Y.CLIENTE.1 ;*20241029_RZN.SCL - S - E
                 EB.ErrorProcessing.StoreEndError()
                 RETURN
             END
@@ -660,7 +660,7 @@ VALIDA.CLIENTE.PF:
 
             IF Y.DATE.BIRTH EQ Y.DATE.BIRTH.1 AND Y.SHORT.NAME EQ Y.SHORT.NAME.1 AND Y.NAME.1 EQ Y.NAME.1.1 AND Y.NAME.2 EQ Y.NAME.2.1 AND Y.ESTADO EQ Y.ESTADO.1 THEN
                 IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
-                    EB.SystemTables.setEtext('Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ' :Y.CLIENTE.1 ;* ABC Capital. ':Y.CLIENTE.1) ;*20241029_RZN.SCL - S - E
+                    EB.SystemTables.setEtext('Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ' :Y.CLIENTE.1) ;* ABC Capital. ':Y.CLIENTE.1 ;*20241029_RZN.SCL - S - E
                     EB.ErrorProcessing.StoreEndError()
                     RETURN
                 END
