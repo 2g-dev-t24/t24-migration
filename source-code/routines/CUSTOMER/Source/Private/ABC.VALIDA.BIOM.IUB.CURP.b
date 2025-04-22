@@ -1,7 +1,7 @@
 * @ValidationCode : MjotNDk4NTAxNTMzOkNwMTI1MjoxNzQ1MzQzNjQzMjY4Om1hdXViOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
 * @ValidationInfo : Timestamp         : 22 Apr 2025 14:40:43
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : mauub
+* @ValidationInfo : User Name         : 
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -81,28 +81,28 @@ PROCESA:
 *VALIDAMOS SI EL CURP DE CUSTOMER COINCIDE CON EL DE BIOMETRICOS
             IF Y.CURP.BIO THEN
                 IF Y.CURP.CUS NE Y.CURP.BIO THEN
-                    EB.SystemTables.setAf(EB.CUS.EXTERN.CUS.ID)
+                    EB.SystemTables.setAf(ST.Customer.Customer.EbCusExternCusId)
                     EB.SystemTables.setAv(0)
                     EB.SystemTables.setE("CURP NO COINCIDE CON EL REGISTRADO EN BIOMETRICOS")
                     EB.ErrorProcessing.Err()  ;*STORE.END.ERROR
                 END
             END ELSE
-                EB.SystemTables.setAf(EB.CUS.EXTERN.CUS.ID)
+                EB.SystemTables.setAf(ST.Customer.Customer.EbCusExternCusId)
                 EB.SystemTables.setAv(0)
                 EB.SystemTables.setE("NO SE REGISTRO CURP EN BIOMETRICOS")
                 EB.ErrorProcessing.Err()      ;*STORE.END.ERROR
             END
         END ELSE
-            EB.SystemTables.setAf(EB.CUS.LOCAL.REF)
+            EB.SystemTables.setAf(ST.Customer.Customer.EbCusLocalRef)
             EB.SystemTables.setAv(POS.IUB)
             EB.SystemTables.setAs(0)
             EB.SystemTables.setE("NO EXISTE REGISTRO CON IUB INGRESADO")
             EB.ErrorProcessing.Err()          ;*STORE.END.ERROR
         END
     END ELSE
-        EB.SystemTables.setAf(EB.CUS.LOCAL.REF)
-        AV = POS.IUB
-        AS = 0
+        EB.SystemTables.setAf(ST.Customer.Customer.EbCusLocalRef)
+        EB.SystemTables.setAv(POS.IUB)
+        EB.SystemTables.setAs(0)
         EB.SystemTables.setE("NO SE ENCONTRO IUB PARA ESTE CLIENTE")
         EB.ErrorProcessing.Err()    ;*STORE.END.ERROR
     END
