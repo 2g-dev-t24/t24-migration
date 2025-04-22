@@ -1,9 +1,9 @@
 #!/bin/ksh
 
 # Archivo de salida
-OUTPUT_FILE="campos_vpm_estado.txt"
+OUTPUT_FILE="campos_vpm_municipio.txt"
 
-LIST FBNK.VPM.ESTADO > "$OUTPUT_FILE"
+LIST FBNK.VPM.MUNICIPIO > "$OUTPUT_FILE"
 
 # Verificar si se generó correctamente
 if [ -s "$OUTPUT_FILE" ]; then

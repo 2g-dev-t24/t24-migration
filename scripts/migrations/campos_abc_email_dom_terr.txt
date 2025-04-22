@@ -1,0 +1,2141 @@
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE    1 10:49:29  22 APR 2025
+
+@ID............. VC                                                            
+@ID............. VC                                                            
+COUNTRY.ID...... VC                                                            
+DOMINIO......... .vc                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031828                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. VN                                                            
+@ID............. VN                                                            
+COUNTRY.ID...... VN                                                            
+DOMINIO......... .vn                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031828                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE    2 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. YT                                                            
+@ID............. YT                                                            
+COUNTRY.ID...... YT                                                            
+DOMINIO......... .yt                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031830                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. CR                                                            
+@ID............. CR                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE    3 10:49:29  22 APR 2025
+
+COUNTRY.ID...... CR                                                            
+DOMINIO......... .lat                                                          
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 5_VCOARASAH.ID__OFS_BROWSERTC                                 
+DATE.TIME....... 1811221706                                                    
+AUTHORISER...... 5_VCOARASAH.ID_OFS_BROWSERTC                                  
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 901031003101023                                               
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. ME                                                            
+@ID............. ME                                                            
+COUNTRY.ID...... ME                                                            
+DOMINIO......... .me                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 100_APEREZQ.ID__OFS_BROWSERTC                                 
+DATE.TIME....... 2409191351                                                    
+AUTHORISER...... 62_SMAYORAL.ID_OFS_BROWSERTC                                  
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE    4 10:49:29  22 APR 2025
+
+DEPT.CODE....... 90150                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. AR                                                            
+@ID............. AR                                                            
+COUNTRY.ID...... AR                                                            
+DOMINIO......... .ar                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 12_J.ORTEGA                                                   
+DATE.TIME....... 1206211830                                                    
+AUTHORISER...... 12_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. IO                                                            
+@ID............. IO                                                            
+COUNTRY.ID...... IO                                                            
+DOMINIO......... .io                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE    5 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031551                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. JM                                                            
+@ID............. JM                                                            
+COUNTRY.ID...... JM                                                            
+DOMINIO......... .jm                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031552                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE    6 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. JP                                                            
+@ID............. JP                                                            
+COUNTRY.ID...... JP                                                            
+DOMINIO......... .jp                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031552                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. KE                                                            
+@ID............. KE                                                            
+COUNTRY.ID...... KE                                                            
+DOMINIO......... .ke                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE    7 10:49:29  22 APR 2025
+
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031553                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. KI                                                            
+@ID............. KI                                                            
+COUNTRY.ID...... KI                                                            
+DOMINIO......... .ki                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031553                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE    8 10:49:29  22 APR 2025
+
+@ID............. KR                                                            
+@ID............. KR                                                            
+COUNTRY.ID...... KR                                                            
+DOMINIO......... .kr                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031554                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LB                                                            
+@ID............. LB                                                            
+COUNTRY.ID...... LB                                                            
+DOMINIO......... .lb                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031555                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE    9 10:49:29  22 APR 2025
+
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LK                                                            
+@ID............. LK                                                            
+COUNTRY.ID...... LK                                                            
+DOMINIO......... .lk                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031556                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LR                                                            
+@ID............. LR                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   10 10:49:29  22 APR 2025
+
+COUNTRY.ID...... LR                                                            
+DOMINIO......... .lr                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031556                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LT                                                            
+@ID............. LT                                                            
+COUNTRY.ID...... LT                                                            
+DOMINIO......... .lt                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031556                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   11 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MC                                                            
+@ID............. MC                                                            
+COUNTRY.ID...... MC                                                            
+DOMINIO......... .mc                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031557                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MQ                                                            
+@ID............. MQ                                                            
+COUNTRY.ID...... MQ                                                            
+DOMINIO......... .mq                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   12 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031600                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MT                                                            
+@ID............. MT                                                            
+COUNTRY.ID...... MT                                                            
+DOMINIO......... .mt                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031601                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   13 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MW                                                            
+@ID............. MW                                                            
+COUNTRY.ID...... MW                                                            
+DOMINIO......... .mw                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031817                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MX                                                            
+@ID............. MX                                                            
+COUNTRY.ID...... MX                                                            
+DOMINIO......... .mx                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   14 10:49:29  22 APR 2025
+
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1206211823                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NA                                                            
+@ID............. NA                                                            
+COUNTRY.ID...... NA                                                            
+DOMINIO......... .na                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031817                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   15 10:49:29  22 APR 2025
+
+@ID............. NG                                                            
+@ID............. NG                                                            
+COUNTRY.ID...... NG                                                            
+DOMINIO......... .ng                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031818                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NP                                                            
+@ID............. NP                                                            
+COUNTRY.ID...... NP                                                            
+DOMINIO......... .np                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031819                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   16 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NU                                                            
+@ID............. NU                                                            
+COUNTRY.ID...... NU                                                            
+DOMINIO......... .nu                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031819                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PE                                                            
+@ID............. PE                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   17 10:49:29  22 APR 2025
+
+COUNTRY.ID...... PE                                                            
+DOMINIO......... .pe                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031819                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PH                                                            
+@ID............. PH                                                            
+COUNTRY.ID...... PH                                                            
+DOMINIO......... .ph                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031820                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   18 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PK                                                            
+@ID............. PK                                                            
+COUNTRY.ID...... PK                                                            
+DOMINIO......... .pk                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031820                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PN                                                            
+@ID............. PN                                                            
+COUNTRY.ID...... PN                                                            
+DOMINIO......... .pn                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   19 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031821                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PY                                                            
+@ID............. PY                                                            
+COUNTRY.ID...... PY                                                            
+DOMINIO......... .py                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031821                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   20 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. QA                                                            
+@ID............. QA                                                            
+COUNTRY.ID...... QA                                                            
+DOMINIO......... .qa                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031822                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. RW                                                            
+@ID............. RW                                                            
+COUNTRY.ID...... RW                                                            
+DOMINIO......... .rw                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   21 10:49:29  22 APR 2025
+
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031822                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SC                                                            
+@ID............. SC                                                            
+COUNTRY.ID...... SC                                                            
+DOMINIO......... .sc                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031823                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   22 10:49:29  22 APR 2025
+
+@ID............. SE                                                            
+@ID............. SE                                                            
+COUNTRY.ID...... SE                                                            
+DOMINIO......... .se                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031823                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SH                                                            
+@ID............. SH                                                            
+COUNTRY.ID...... SH                                                            
+DOMINIO......... .sh                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031823                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   23 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SO                                                            
+@ID............. SO                                                            
+COUNTRY.ID...... SO                                                            
+DOMINIO......... .so                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031824                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SR                                                            
+@ID............. SR                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   24 10:49:29  22 APR 2025
+
+COUNTRY.ID...... SR                                                            
+DOMINIO......... .sr                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031824                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. ST                                                            
+@ID............. ST                                                            
+COUNTRY.ID...... ST                                                            
+DOMINIO......... .st                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031824                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   25 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TD                                                            
+@ID............. TD                                                            
+COUNTRY.ID...... TD                                                            
+DOMINIO......... .td                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031825                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TG                                                            
+@ID............. TG                                                            
+COUNTRY.ID...... TG                                                            
+DOMINIO......... .tg                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   26 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031825                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TN                                                            
+@ID............. TN                                                            
+COUNTRY.ID...... TN                                                            
+DOMINIO......... .tn                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031826                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   27 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TP                                                            
+@ID............. TP                                                            
+COUNTRY.ID...... TP                                                            
+DOMINIO......... .tp                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031832                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TZ                                                            
+@ID............. TZ                                                            
+COUNTRY.ID...... TZ                                                            
+DOMINIO......... .tz                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   28 10:49:29  22 APR 2025
+
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031827                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. UA                                                            
+@ID............. UA                                                            
+COUNTRY.ID...... UA                                                            
+DOMINIO......... .ua                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031827                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   29 10:49:29  22 APR 2025
+
+@ID............. UG                                                            
+@ID............. UG                                                            
+COUNTRY.ID...... UG                                                            
+DOMINIO......... .ug                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031827                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. UM                                                            
+@ID............. UM                                                            
+COUNTRY.ID...... UM                                                            
+DOMINIO......... .um                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031827                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   30 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. VE                                                            
+@ID............. VE                                                            
+COUNTRY.ID...... VE                                                            
+DOMINIO......... .ve                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031828                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. VI                                                            
+@ID............. VI                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   31 10:49:29  22 APR 2025
+
+COUNTRY.ID...... VI                                                            
+DOMINIO......... .vi                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031828                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. VU                                                            
+@ID............. VU                                                            
+COUNTRY.ID...... VU                                                            
+DOMINIO......... .vu                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031829                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   32 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. WS                                                            
+@ID............. WS                                                            
+COUNTRY.ID...... WS                                                            
+DOMINIO......... .ws                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031829                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. YE                                                            
+@ID............. YE                                                            
+COUNTRY.ID...... YE                                                            
+DOMINIO......... .ye                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   33 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031829                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. ZA                                                            
+@ID............. ZA                                                            
+COUNTRY.ID...... ZA                                                            
+DOMINIO......... .za                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031830                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   34 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. ZM                                                            
+@ID............. ZM                                                            
+COUNTRY.ID...... ZM                                                            
+DOMINIO......... .zm                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031830                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. ES                                                            
+@ID............. ES                                                            
+COUNTRY.ID...... ES                                                            
+DOMINIO......... .es                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   35 10:49:29  22 APR 2025
+
+INPUTTER........ 127_SFIGUEROA.ID__OFS_BROWSERTC                               
+DATE.TIME....... 1607291706                                                    
+AUTHORISER...... 127_SFIGUEROA.ID_OFS_BROWSERTC                                
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 90103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. BV                                                            
+@ID............. BV                                                            
+COUNTRY.ID...... BV                                                            
+DOMINIO......... .bv                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031830                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   36 10:49:29  22 APR 2025
+
+@ID............. EU                                                            
+@ID............. EU                                                            
+COUNTRY.ID...... EU                                                            
+DOMINIO......... .eu                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031827                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. GB                                                            
+@ID............. GB                                                            
+COUNTRY.ID...... GB                                                            
+DOMINIO......... .gb                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031831                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   37 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. IS                                                            
+@ID............. IS                                                            
+COUNTRY.ID...... IS                                                            
+DOMINIO......... .is                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031551                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. IT                                                            
+@ID............. IT                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   38 10:49:29  22 APR 2025
+
+COUNTRY.ID...... IT                                                            
+DOMINIO......... .it                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031552                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. JE                                                            
+@ID............. JE                                                            
+COUNTRY.ID...... JE                                                            
+DOMINIO......... .je                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031552                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   39 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. JO                                                            
+@ID............. JO                                                            
+COUNTRY.ID...... JO                                                            
+DOMINIO......... .jo                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031552                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. KH                                                            
+@ID............. KH                                                            
+COUNTRY.ID...... KH                                                            
+DOMINIO......... .kh                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   40 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031553                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. KP                                                            
+@ID............. KP                                                            
+COUNTRY.ID...... KP                                                            
+DOMINIO......... .kp                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031554                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   41 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. KW                                                            
+@ID............. KW                                                            
+COUNTRY.ID...... KW                                                            
+DOMINIO......... .kw                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031554                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LC                                                            
+@ID............. LC                                                            
+COUNTRY.ID...... LC                                                            
+DOMINIO......... .lc                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   42 10:49:29  22 APR 2025
+
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031555                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LI                                                            
+@ID............. LI                                                            
+COUNTRY.ID...... LI                                                            
+DOMINIO......... .li                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031555                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   43 10:49:29  22 APR 2025
+
+@ID............. LS                                                            
+@ID............. LS                                                            
+COUNTRY.ID...... LS                                                            
+DOMINIO......... .ls                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031556                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LU                                                            
+@ID............. LU                                                            
+COUNTRY.ID...... LU                                                            
+DOMINIO......... .lu                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031556                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   44 10:49:29  22 APR 2025
+
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LY                                                            
+@ID............. LY                                                            
+COUNTRY.ID...... LY                                                            
+DOMINIO......... .ly                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031557                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. ML                                                            
+@ID............. ML                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   45 10:49:29  22 APR 2025
+
+COUNTRY.ID...... ML                                                            
+DOMINIO......... .ml                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031558                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MO                                                            
+@ID............. MO                                                            
+COUNTRY.ID...... MO                                                            
+DOMINIO......... .mo                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031559                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   46 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MP                                                            
+@ID............. MP                                                            
+COUNTRY.ID...... MP                                                            
+DOMINIO......... .mp                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031600                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MS                                                            
+@ID............. MS                                                            
+COUNTRY.ID...... MS                                                            
+DOMINIO......... .ms                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   47 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031600                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MV                                                            
+@ID............. MV                                                            
+COUNTRY.ID...... MV                                                            
+DOMINIO......... .mv                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031817                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   48 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MZ                                                            
+@ID............. MZ                                                            
+COUNTRY.ID...... MZ                                                            
+DOMINIO......... .mz                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031817                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NC                                                            
+@ID............. NC                                                            
+COUNTRY.ID...... NC                                                            
+DOMINIO......... .nc                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   49 10:49:29  22 APR 2025
+
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031817                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NI                                                            
+@ID............. NI                                                            
+COUNTRY.ID...... NI                                                            
+DOMINIO......... .ni                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031818                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   50 10:49:29  22 APR 2025
+
+@ID............. NO                                                            
+@ID............. NO                                                            
+COUNTRY.ID...... NO                                                            
+DOMINIO......... .no                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031818                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NR                                                            
+@ID............. NR                                                            
+COUNTRY.ID...... NR                                                            
+DOMINIO......... .nr                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031819                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   51 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. OM                                                            
+@ID............. OM                                                            
+COUNTRY.ID...... OM                                                            
+DOMINIO......... .om                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031819                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PF                                                            
+@ID............. PF                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   52 10:49:29  22 APR 2025
+
+COUNTRY.ID...... PF                                                            
+DOMINIO......... .pf                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031820                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PL                                                            
+@ID............. PL                                                            
+COUNTRY.ID...... PL                                                            
+DOMINIO......... .pl                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031820                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   53 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PT                                                            
+@ID............. PT                                                            
+COUNTRY.ID...... PT                                                            
+DOMINIO......... .pt                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031821                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PW                                                            
+@ID............. PW                                                            
+COUNTRY.ID...... PW                                                            
+DOMINIO......... .pw                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   54 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031821                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. RO                                                            
+@ID............. RO                                                            
+COUNTRY.ID...... RO                                                            
+DOMINIO......... .ro                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031822                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   55 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SA                                                            
+@ID............. SA                                                            
+COUNTRY.ID...... SA                                                            
+DOMINIO......... .sa                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031822                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SB                                                            
+@ID............. SB                                                            
+COUNTRY.ID...... SB                                                            
+DOMINIO......... .sb                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   56 10:49:29  22 APR 2025
+
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031822                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SD                                                            
+@ID............. SD                                                            
+COUNTRY.ID...... SD                                                            
+DOMINIO......... .sd                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031823                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   57 10:49:29  22 APR 2025
+
+@ID............. SK                                                            
+@ID............. SK                                                            
+COUNTRY.ID...... SK                                                            
+DOMINIO......... .sk                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031823                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SM                                                            
+@ID............. SM                                                            
+COUNTRY.ID...... SM                                                            
+DOMINIO......... .sm                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031823                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   58 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SN                                                            
+@ID............. SN                                                            
+COUNTRY.ID...... SN                                                            
+DOMINIO......... .sn                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031824                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TC                                                            
+@ID............. TC                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   59 10:49:29  22 APR 2025
+
+COUNTRY.ID...... TC                                                            
+DOMINIO......... .tc                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031825                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TJ                                                            
+@ID............. TJ                                                            
+COUNTRY.ID...... TJ                                                            
+DOMINIO......... .tj                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031825                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   60 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TO                                                            
+@ID............. TO                                                            
+COUNTRY.ID...... TO                                                            
+DOMINIO......... .to                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031826                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TV                                                            
+@ID............. TV                                                            
+COUNTRY.ID...... TV                                                            
+DOMINIO......... .tv                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   61 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031826                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. US                                                            
+@ID............. US                                                            
+COUNTRY.ID...... US                                                            
+DOMINIO......... .us                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031827                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   62 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. UY                                                            
+@ID............. UY                                                            
+COUNTRY.ID...... UY                                                            
+DOMINIO......... .uy                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031828                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. UZ                                                            
+@ID............. UZ                                                            
+COUNTRY.ID...... UZ                                                            
+DOMINIO......... .uz                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   63 10:49:29  22 APR 2025
+
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031828                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. VA                                                            
+@ID............. VA                                                            
+COUNTRY.ID...... VA                                                            
+DOMINIO......... .va                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031828                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   64 10:49:29  22 APR 2025
+
+@ID............. VG                                                            
+@ID............. VG                                                            
+COUNTRY.ID...... VG                                                            
+DOMINIO......... .vg                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031828                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. WF                                                            
+@ID............. WF                                                            
+COUNTRY.ID...... WF                                                            
+DOMINIO......... .wf                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031829                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   65 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. ZW                                                            
+@ID............. ZW                                                            
+COUNTRY.ID...... ZW                                                            
+DOMINIO......... .zw                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031830                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. CO                                                            
+@ID............. CO                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   66 10:49:29  22 APR 2025
+
+COUNTRY.ID...... CO                                                            
+DOMINIO......... .co                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 21_SMAYORAL.ID__OFS_BROWSERTC                                 
+DATE.TIME....... 2105121137                                                    
+AUTHORISER...... 21_SMAYORAL.ID_OFS_BROWSERTC                                  
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 901031003002003                                               
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. EH                                                            
+@ID............. EH                                                            
+COUNTRY.ID...... EH                                                            
+DOMINIO......... .eh                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031831                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   67 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. IQ                                                            
+@ID............. IQ                                                            
+COUNTRY.ID...... IQ                                                            
+DOMINIO......... .iq                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031551                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. IR                                                            
+@ID............. IR                                                            
+COUNTRY.ID...... IR                                                            
+DOMINIO......... .ir                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   68 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031551                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. KG                                                            
+@ID............. KG                                                            
+COUNTRY.ID...... KG                                                            
+DOMINIO......... .kg                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031553                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   69 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. KM                                                            
+@ID............. KM                                                            
+COUNTRY.ID...... KM                                                            
+DOMINIO......... .km                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031553                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. KN                                                            
+@ID............. KN                                                            
+COUNTRY.ID...... KN                                                            
+DOMINIO......... .kn                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   70 10:49:29  22 APR 2025
+
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031554                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. KY                                                            
+@ID............. KY                                                            
+COUNTRY.ID...... KY                                                            
+DOMINIO......... .ky                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031555                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   71 10:49:29  22 APR 2025
+
+@ID............. KZ                                                            
+@ID............. KZ                                                            
+COUNTRY.ID...... KZ                                                            
+DOMINIO......... .kz                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031555                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LA                                                            
+@ID............. LA                                                            
+COUNTRY.ID...... LA                                                            
+DOMINIO......... .la                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031555                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   72 10:49:29  22 APR 2025
+
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. LV                                                            
+@ID............. LV                                                            
+COUNTRY.ID...... LV                                                            
+DOMINIO......... .lv                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031556                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MA                                                            
+@ID............. MA                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   73 10:49:29  22 APR 2025
+
+COUNTRY.ID...... MA                                                            
+DOMINIO......... .ma                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031557                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MD                                                            
+@ID............. MD                                                            
+COUNTRY.ID...... MD                                                            
+DOMINIO......... .md                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031557                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   74 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MG                                                            
+@ID............. MG                                                            
+COUNTRY.ID...... MG                                                            
+DOMINIO......... .mg                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031558                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MH                                                            
+@ID............. MH                                                            
+COUNTRY.ID...... MH                                                            
+DOMINIO......... .mh                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   75 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031558                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MK                                                            
+@ID............. MK                                                            
+COUNTRY.ID...... MK                                                            
+DOMINIO......... .mk                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031558                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   76 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MN                                                            
+@ID............. MN                                                            
+COUNTRY.ID...... MN                                                            
+DOMINIO......... .mn                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031559                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MR                                                            
+@ID............. MR                                                            
+COUNTRY.ID...... MR                                                            
+DOMINIO......... .mr                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   77 10:49:29  22 APR 2025
+
+INPUTTER........ 32_J.ORTEGA                                                   
+DATE.TIME....... 1207031600                                                    
+AUTHORISER...... 32_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. MU                                                            
+@ID............. MU                                                            
+COUNTRY.ID...... MU                                                            
+DOMINIO......... .mu                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031816                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   78 10:49:29  22 APR 2025
+
+@ID............. MY                                                            
+@ID............. MY                                                            
+COUNTRY.ID...... MY                                                            
+DOMINIO......... .my                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031817                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NE                                                            
+@ID............. NE                                                            
+COUNTRY.ID...... NE                                                            
+DOMINIO......... .ne                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031818                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   79 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NF                                                            
+@ID............. NF                                                            
+COUNTRY.ID...... NF                                                            
+DOMINIO......... .nf                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031818                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NL                                                            
+@ID............. NL                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   80 10:49:29  22 APR 2025
+
+COUNTRY.ID...... NL                                                            
+DOMINIO......... .nl                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031818                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. NZ                                                            
+@ID............. NZ                                                            
+COUNTRY.ID...... NZ                                                            
+DOMINIO......... .nz                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031819                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   81 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PA                                                            
+@ID............. PA                                                            
+COUNTRY.ID...... PA                                                            
+DOMINIO......... .pa                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031819                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PG                                                            
+@ID............. PG                                                            
+COUNTRY.ID...... PG                                                            
+DOMINIO......... .pg                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   82 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031820                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PM                                                            
+@ID............. PM                                                            
+COUNTRY.ID...... PM                                                            
+DOMINIO......... .pm                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031820                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   83 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. PR                                                            
+@ID............. PR                                                            
+COUNTRY.ID...... PR                                                            
+DOMINIO......... .pr                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031821                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. RE                                                            
+@ID............. RE                                                            
+COUNTRY.ID...... RE                                                            
+DOMINIO......... .re                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   84 10:49:29  22 APR 2025
+
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031822                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. RU                                                            
+@ID............. RU                                                            
+COUNTRY.ID...... RU                                                            
+DOMINIO......... .ru                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031822                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   85 10:49:29  22 APR 2025
+
+@ID............. SG                                                            
+@ID............. SG                                                            
+COUNTRY.ID...... SG                                                            
+DOMINIO......... .sg                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031823                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SI                                                            
+@ID............. SI                                                            
+COUNTRY.ID...... SI                                                            
+DOMINIO......... .si                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031823                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   86 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SJ                                                            
+@ID............. SJ                                                            
+COUNTRY.ID...... SJ                                                            
+DOMINIO......... .sj                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031831                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SL                                                            
+@ID............. SL                                                            [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   87 10:49:29  22 APR 2025
+
+COUNTRY.ID...... SL                                                            
+DOMINIO......... .sl                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031823                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SV                                                            
+@ID............. SV                                                            
+COUNTRY.ID...... SV                                                            
+DOMINIO......... .sv                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031824                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   88 10:49:29  22 APR 2025
+
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SY                                                            
+@ID............. SY                                                            
+COUNTRY.ID...... SY                                                            
+DOMINIO......... .sy                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031824                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. SZ                                                            
+@ID............. SZ                                                            
+COUNTRY.ID...... SZ                                                            
+DOMINIO......... .sz                                                           [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   89 10:49:29  22 APR 2025
+
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031825                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TF                                                            
+@ID............. TF                                                            
+COUNTRY.ID...... TF                                                            
+DOMINIO......... .tf                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031825                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   90 10:49:29  22 APR 2025
+
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TH                                                            
+@ID............. TH                                                            
+COUNTRY.ID...... TH                                                            
+DOMINIO......... .th                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031825                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TK                                                            
+@ID............. TK                                                            
+COUNTRY.ID...... TK                                                            
+DOMINIO......... .tk                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   91 10:49:29  22 APR 2025
+
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031825                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TM                                                            
+@ID............. TM                                                            
+COUNTRY.ID...... TM                                                            
+DOMINIO......... .tm                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031826                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+[H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   92 10:49:29  22 APR 2025
+
+@ID............. TR                                                            
+@ID............. TR                                                            
+COUNTRY.ID...... TR                                                            
+DOMINIO......... .tr                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031826                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TT                                                            
+@ID............. TT                                                            
+COUNTRY.ID...... TT                                                            
+DOMINIO......... .tt                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031826                                                    [H[2JLIST F.ABC.EMAIL.DOM.TERR                  PAGE   93 10:49:29  22 APR 2025
+
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+@ID............. TW                                                            
+@ID............. TW                                                            
+COUNTRY.ID...... TW                                                            
+DOMINIO......... .tw                                                           
+RECORD.STATUS...                                                               
+CURR.NO......... 1                                                             
+INPUTTER........ 11_J.ORTEGA                                                   
+DATE.TIME....... 1207031827                                                    
+AUTHORISER...... 11_J.ORTEGA                                                   
+CO.CODE......... MX0010001                                                     
+DEPT.CODE....... 10103                                                         
+AUDITOR.CODE....                                                               
+AUDIT.DATE.TIME.                                                               
+
+
+ 146 Records Listed 
+
