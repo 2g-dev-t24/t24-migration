@@ -126,7 +126,6 @@ BUSCA.IUB.BIO:
         Y.IUB.BIO = Y.LST.BIO<1>
         Y.IUB.CUS = Y.IUB.BIO
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, Y.IUB.CUS)
-        EB.SystemTables.setRNew(idx, Value)
     END
 
 RETURN
