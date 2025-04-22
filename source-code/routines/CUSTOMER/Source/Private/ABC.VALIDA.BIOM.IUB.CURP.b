@@ -1,7 +1,7 @@
-* @ValidationCode : Mjo3NTk3NDcxMDE6Q3AxMjUyOjE3NDUzMzcyOTE5Mjk6bWF1dWI6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 22 Apr 2025 12:54:51
+* @ValidationCode : MjotNDk4NTAxNTMzOkNwMTI1MjoxNzQ1MzQzNjQzMjY4Om1hdXViOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 22 Apr 2025 14:40:43
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         :
+* @ValidationInfo : User Name         : mauub
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -125,7 +125,8 @@ BUSCA.IUB.BIO:
     IF Y.NO.BIOM EQ 1 THEN
         Y.IUB.BIO = Y.LST.BIO<1>
         Y.IUB.CUS = Y.IUB.BIO
-        EB.SystemTables.setRNew((ST.Customer.Customer.EbCusLocalRef)<1, POS.IUB>, Y.IUB.CUS)
+        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef, Y.IUB.CUS)
+        EB.SystemTables.setRNew(idx, Value)
     END
 
 RETURN
