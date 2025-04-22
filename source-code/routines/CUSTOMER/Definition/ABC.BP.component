@@ -337,3 +337,14 @@ private method AbcValidaCanal (
     jBC: ABC.VALIDA.CANAL
 }
 
+private method AbcCustNoExistePfs (
+)
+{
+    jBC: ABC.CUST.NOEXISTE.PFS
+}
+
+private method AbcValidaBiomIubCurp (
+)
+{
+    jBC: ABC.VALIDA.BIOM.IUB.CURP
+}
