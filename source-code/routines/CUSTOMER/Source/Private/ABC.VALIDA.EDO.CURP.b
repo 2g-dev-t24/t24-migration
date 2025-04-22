@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNzA4MzM0OTk4OkNwMTI1MjoxNzQ1MTAyOTQ0MTYyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 19 Apr 2025 19:49:04
+* @ValidationCode : MjotNjAxOTA5NjEzOkNwMTI1MjoxNzQ1Mjc3NjQ2NDkyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 21 Apr 2025 20:20:46
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -30,7 +30,7 @@ SUBROUTINE ABC.VALIDA.EDO.CURP
     GOSUB INIT
     GOSUB OPEN.FILES
 
-    Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.LUG.NAC>
+    Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
 
     IF Y.LUG.NAC NE '' THEN
 

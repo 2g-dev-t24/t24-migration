@@ -296,7 +296,7 @@ private method AbcNofGetColonia (
 private method AbcOfsGetMnemonic (
 )
 {
-   jBC: ABC.OFS.GET.MNEMONIC
+    jBC: ABC.OFS.GET.MNEMONIC
 }
 
 
@@ -308,7 +308,7 @@ private method AbcOfsGetMnemonic (
 private method AbcRtnFechaMenorHoy (
 )
 {
-   jBC: ABC.RTN.FECHA.MENOR.HOY
+    jBC: ABC.RTN.FECHA.MENOR.HOY
 }
 
 
@@ -316,7 +316,7 @@ private method AbcRtnFechaMenorHoy (
 private method AbcOfsCustFechaNac (
 )
 {
-   jBC: ABC.OFS.CUST.FECHA.NAC
+    jBC: ABC.OFS.CUST.FECHA.NAC
 }
 
 
@@ -324,6 +324,16 @@ private method AbcOfsCustFechaNac (
 private method AbcValidaEdoCurp (
 )
 {
-   jBC: ABC.VALIDA.EDO.CURP
+    jBC: ABC.VALIDA.EDO.CURP
+}
+
+
+
+private method AbcValidaCanal (
+    INOUT yCanal string,
+    INOUT yError string
+)
+{
+    jBC: ABC.VALIDA.CANAL
 }
 
