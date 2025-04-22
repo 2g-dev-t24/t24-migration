@@ -59,7 +59,7 @@ GENERA.RFC.CURP:
     CLIENTE.UNICO = ''; CLIENTE.UNICO.RFC = ''; CLIENTE.UNICO.CURP = ''; RES = ETEOK; MENSAJE = ''; CLAVE.ALFA = ''
 
 
-    IF ( EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) EQ "1") OR ( EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) EQ "2") THEN
+    IF ( EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) EQ "1001") OR ( EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) EQ "1100") THEN
         GOSUB VALIDA.DATOS
         IF (RES EQ 0) AND (MENSAJE EQ "") THEN
             GOSUB CALCULA.NUM.CTE
@@ -81,7 +81,7 @@ GENERA.RFC.CURP:
         END
     END
 
-    IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) EQ "3" THEN
+    IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) EQ "2001" THEN
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusGender,'')
         GOSUB VALIDA.DATOS.M
         IF (RES EQ 0) AND (MENSAJE EQ '') THEN
@@ -525,7 +525,7 @@ CLIENTE.DUPLICADO:
     Y.DATE.BIRTH = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
     Y.CURP = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusExternCusId)
 
-    IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) GE "3" THEN
+    IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) GE "2001" THEN
         Y.RFC.AUX = Y.RFC[1,9]
         Y.ESTADO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,YPOS.LUGAR.CONST>
         Y.NOM.PER.MORAL = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,YPOS.NOM.PER.MORAL>)
