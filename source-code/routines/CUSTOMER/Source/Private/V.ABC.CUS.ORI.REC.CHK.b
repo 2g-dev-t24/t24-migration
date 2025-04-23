@@ -20,6 +20,6 @@ PROCESS:
 ********
 	Y.VAL.ACTUAL = EB.SystemTables.getComi()
 	Y.ORIGEN = "ORIGEN.RECS"
-	CALL ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
+	ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
 RETURN
 END

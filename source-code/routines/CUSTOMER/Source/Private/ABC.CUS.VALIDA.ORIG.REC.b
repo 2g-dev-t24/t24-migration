@@ -12,31 +12,18 @@ $PACKAGE ABC.BP
     $USING EB.ErrorProcessing
     $USING EB.LocalReferences
     $USING EB.Display
+    $USING MXBASE.CustomerRegulatory
 
 
-    IF EB.SystemTables.getMessage() EQ 'VAL' THEN
-        RETURN
-    END ELSE
-
-        *V.APP      = 'CUSTOMER'
-        *V.FLD.NAME = 'ORIGEN.REC'
-        *V.FLD.POS  = ''
-
-        *EB.LocalReferences.GetLocRef(V.APP,V.FLD.NAME,V.FLD.POS)
-        *V.OR.POS= V.FLD.POS<1,1>
-
-        *IF V.ORIGEN.RECURSOS EQ 'Otro' THEN
-        *    Y.LOCAL.REF             = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
-        *    Y.LOCAL.REF<1,V.FLD.POS> = ''
-        *    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
-        *    T.LOCREF<V.OR.POS,7> = ''
-        *END ELSE
-        *    Y.LOCAL.REF             = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
-        *    Y.LOCAL.REF<1,V.OR.POS> = ''
-        *    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
-        *    T.LOCREF<V.OR.POS,7> = 'NOINPUT'
-        *END
-    *END
+        IF V.ORIGEN.RECURSOS EQ 'Otro' THEN
+           tmp=EB.SystemTables.getT(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.OtherSource)
+           tmp<3>=""
+           EB.SystemTables.setT(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.OtherSource, tmp)
+        END ELSE
+          tmp=EB.SystemTables.getT(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.OtherSource)
+          tmp<3>="NOINPUT"
+          EB.SystemTables.setT(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.OtherSource, tmp)
+        END
 
     RETURN
 END
