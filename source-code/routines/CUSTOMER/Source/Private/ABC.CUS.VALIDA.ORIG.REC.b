@@ -20,6 +20,7 @@ $PACKAGE ABC.BP
            tmp<3>=""
            EB.SystemTables.setT(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.OtherSource, tmp)
         END ELSE
+		  EB.SystemTables.setRNew(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.OtherSource,'')
           tmp=EB.SystemTables.getT(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.OtherSource)
           tmp<3>="NOINPUT"
           EB.SystemTables.setT(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.OtherSource, tmp)
