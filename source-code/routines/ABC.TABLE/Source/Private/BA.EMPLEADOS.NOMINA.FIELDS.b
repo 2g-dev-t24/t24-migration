@@ -1,0 +1,73 @@
+$PACKAGE AbcTable
+SUBROUTINE BA.EMPLEADOS.NOMINA.FIELDS
+*-----------------------------------------------------------------------------
+    $USING EB.Template
+    $USING EB.SystemTables
+*-----------------------------------------------------------------------------
+    EB.Template.TableDefineid("@ID", EB.Template.T24String)
+    EB.SystemTables.setIdF('@ID')
+    EB.SystemTables.setIdN('5')
+    EB.SystemTables.setIdT('A')
+*-----------------------------------------------------------------------------
+
+    EB.Template.TableAddfielddefinition('PRI.NOMBRE' ,'35', 'A', '')
+    EB.Template.TableAddfielddefinition('SEG.NOMBRE' ,'35', 'A', '')
+    EB.Template.TableAddfielddefinition('TER.NOMBRE' ,'35', 'A', '')
+    EB.Template.TableAddfielddefinition('AP.PATERNO' ,'35', 'A', '')
+    EB.Template.TableAddfielddefinition('AP.MATERNO' ,'35', 'ANY', '')
+    EB.Template.TableAddfielddefinition('FEC.NACIMIENTO' ,'8', 'D', '')
+    EB.Template.TableAddfielddefinition('RFC' ,'15', 'A', '')
+    EB.Template.TableAddfielddefinition('CURP' ,'20', 'A', '')
+    EB.Template.TableAddoptionsfield('SEXO' ,'F_M', '', '')
+    EB.Template.TableAddfielddefinition('ESTADO.CIVIL' ,'3', 'A', '')
+    EB.Template.FieldSetcheckfile("VPM.MARITAL.STATUS":FM:VPM.MARITAL.STATUS.DESCRIPTION:FM:"L.A")
+    EB.Template.TableAddfielddefinition('XX.TEL.CASA' ,'20', 'A', '')
+    EB.Template.TableAddfielddefinition('XX.TEL.CEL' ,'30', 'A', '')
+    EB.Template.TableAddfielddefinition('XX.EMAIL' ,'50', 'A', '')
+    EB.Template.TableAddfielddefinition('PROFESION' ,'5', 'A', '')
+    EB.Template.TableAddoptionsfield('OCUPACION' ,'ESTUDIANTE_EMPLEADO_OTRO', '', '')
+    EB.Template.TableAddfielddefinition('PUESTO' ,'5', 'A', '')
+    EB.Template.FieldSetcheckfile("BA.CARGOS.NOMINA":FM:BA.CN.NOM.CARGO:FM:"L.A")
+    EB.Template.TableAddfielddefinition('DEPARTAMENTO' ,'5', 'ANY', '')
+    EB.Template.FieldSetcheckfile("BA.DEPTOS.NOMINA":FM:BA.DN.NOM.DEPTO:FM:'L.A')
+    EB.Template.TableAddfielddefinition('FEC.ASIG.PUESTO' ,'8', 'D', '')
+    EB.Template.TableAddfielddefinition('SUCURSAL' ,'15', 'A', '')
+    EB.Template.FieldSetcheckfile("BA.AC.SUCURSALES":FM:BA.AC.SUC.NOM.SUCURSAL:FM:"L.A")
+    EB.Template.TableAddfielddefinition('FEC.ALTA' ,'8', 'D', '')
+    EB.Template.TableAddfielddefinition('FEC.BAJA' ,'8', 'D', '')
+    EB.Template.TableAddfielddefinition('ESTATUS' ,'3', 'A', '')
+    EB.Template.FieldSetcheckfile("BA.ESTATUS.EMP":FM:BA.EE.DESCRIPCION:FM:"L.A")
+    EB.Template.TableAddfielddefinition('TIPO.EMPLEADO' ,'3', 'A', '')
+    EB.Template.FieldSetcheckfile("VPM.EMPLOYMENT.STATUS":FM:GIC.EMP.STATUS.DESCRIPTION:FM:"L.A")
+    EB.Template.TableAddfielddefinition('PAIS.NACIMIENTO' ,'5', 'A', '')
+    EB.Template.FieldSetcheckfile("COUNTRY":FM:EB.COU.COUNTRY.NAME:FM:"L.A")
+    EB.Template.TableAddfielddefinition('PAIS.NACIONALIDAD' ,'5', 'A', '')
+    EB.Template.FieldSetcheckfile("COUNTRY":FM:EB.COU.COUNTRY.NAME:FM:"L.A")
+    EB.Template.TableAddfielddefinition('DIR.PAIS' ,'6', 'A', '')
+    EB.Template.FieldSetcheckfile("COUNTRY":FM:EB.COU.COUNTRY.NAME:FM:"L.A")
+    EB.Template.TableAddfielddefinition('DIR.ESTADO' ,'6', 'A', '')
+    EB.Template.FieldSetcheckfile("VPM.ESTADO":FM:ESTADO:FM:'L.A')
+    EB.Template.TableAddfielddefinition('DIR.MUNICIPIO' ,'6', 'A', '')
+    EB.Template.FieldSetcheckfile("VPM.MUNICIPIO":FM:VPM.MUNICIPIO:FM:'L.A')
+    EB.Template.TableAddfielddefinition('DIR.COLONIA' ,'6', 'A', '')
+    EB.Template.FieldSetcheckfile("VPM.COLONIA":FM:VPM.COLONIA:FM:'L.A')
+    EB.Template.TableAddfielddefinition('DIR.CIUDAD' ,'6', 'A', '')
+    EB.Template.FieldSetcheckfile("VPM.CIUDAD":FM:VPM.CIUDAD:FM:'L.A')
+    EB.Template.TableAddfielddefinition('DIR.CALLE' ,'60', 'A', '')
+    EB.Template.TableAddfielddefinition('DIR.NUM.EXT' ,'30', 'A', '')
+    EB.Template.TableAddfielddefinition('DIR.NUM.INT' ,'30', 'A', '')
+    EB.Template.TableAddfielddefinition('DIR.CODPOS' ,'6', 'A', '')
+    EB.Template.TableAddfielddefinition('NUM.NOMINA' ,'8', 'A', '')
+    EB.Template.TableAddfielddefinition('XX.NUM.CLIENTE' ,'15', 'A', '')
+    EB.Template.FieldSetcheckfile("CUSTOMER":FM:EB.CUS.SHORT.NAME:FM:"L.A")
+    EB.Template.TableAddfielddefinition('XX.USR.T24' ,'25', 'A', '')
+    EB.Template.FieldSetcheckfile("USER":FM:EB.USE.USER.NAME:FM:'L.A')
+    EB.Template.TableAddoptionsfield('CREA.ARCHIVO','SI_NO', '', '')
+
+
+    EB.Template.TableAddlocalreferencefield('')
+    EB.Template.TableAddoverridefield()
+    EB.Template.TableSetauditposition()
+*-----------------------------------------------------------------------------
+
+END

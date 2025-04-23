@@ -402,3 +402,16 @@ private method AbcLocalidadesFields (
     jBC: ABC.LOCALIDADES.FIELDS
 }
 
+
+private method BaEmpleadosNomina (
+)
+{
+    jBC: BA.EMPLEADOS.NOMINA
+}
+
+
+private method BaEmpleadosNominaFields (
+)
+{
+    jBC: BA.EMPLEADOS.NOMINA.FIELDS
+}
