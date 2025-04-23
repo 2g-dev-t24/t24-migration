@@ -242,18 +242,6 @@ private method AbcGeneralMappingFields ()
 # -------------------------------------------------
 
 
-
-private method AbcLocalidad ()
-{
-    jBC: ABC.LOCALIDAD
-}
-
-private method AbcLocalidadFields ()
-{
-    jBC: ABC.LOCALIDAD.FIELDS
-}
-
-
 # -------------------------------------------------
 
 
@@ -396,5 +384,21 @@ private method AbcAccCfdiInfoFields (
 )
 {
     jBC: ABC.ACC.CFDI.INFO.FIELDS
+}
+
+
+
+private method AbcLocalidades (
+)
+{
+    jBC: ABC.LOCALIDADES
+}
+
+
+
+private method AbcLocalidadesFields (
+)
+{
+    jBC: ABC.LOCALIDADES.FIELDS
 }
 

@@ -1,5 +1,5 @@
-* @ValidationCode : MjozMzAyMjc2MDg6Q3AxMjUyOjE3NDQ2MzY0OTcyMDQ6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 14 Apr 2025 10:14:57
+* @ValidationCode : MjoxOTg1ODM5NDMwOkNwMTI1MjoxNzQ1NDIyMjUyNDI0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 23 Apr 2025 12:30:52
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -41,7 +41,7 @@ INITIALIZE:
 ******************
     Y.PAIS = "484"
 
-    FN.LOC = "F.ABC.LOCALIDAD"
+    FN.LOC = "F.ABC.LOCALIDADES"
     F.LOC = ""
     EB.DataAccess.Opf(FN.LOC,F.LOC)
 

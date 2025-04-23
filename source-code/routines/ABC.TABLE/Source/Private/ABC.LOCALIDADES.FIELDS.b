@@ -1,5 +1,5 @@
-* @ValidationCode : MjoyMTE2Mjg2NDUwOkNwMTI1MjoxNzQ1MDMxNDMxMTQ4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 18 Apr 2025 23:57:11
+* @ValidationCode : MjotMTUyOTIyODA2NDpDcDEyNTI6MTc0NTQyMDM1MDk2ODpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 23 Apr 2025 11:59:10
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -11,7 +11,8 @@
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE AbcTable
-SUBROUTINE ABC.LOCALIDAD.FIELDS
+SUBROUTINE ABC.LOCALIDADES.FIELDS
+    
 *-----------------------------------------------------------------------------
 *
 *-----------------------------------------------------------------------------
