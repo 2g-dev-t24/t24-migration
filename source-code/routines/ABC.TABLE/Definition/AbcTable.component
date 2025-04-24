@@ -4,15 +4,6 @@ component AbcTable
 metamodelVersion 1.6
 # -------------------------------------------------
 
-private method AbcValidacionBiometricos ()
-{
-    jBC: ABC.VALIDACION.BIOMETRICOS
-}
-
-private method AbcValidacionBiometricosFields ()
-{
-    jBC: ABC.VALIDACION.BIOMETRICOS.FIELDS
-}
 # -------------------------------------------------
 private method AbcAtm ()
 {
@@ -426,3 +417,19 @@ private method BaEmpleadosNominaFields (
 {
     jBC: BA.EMPLEADOS.NOMINA.FIELDS
 }
+
+
+private method AbcValidacionBiometricos (
+)
+{
+    jBC: ABC.VALIDACION.BIOMETRICOS
+}
+
+
+
+private method AbcValidacionBiometricosFields (
+)
+{
+    jBC: ABC.VALIDACION.BIOMETRICOS.FIELDS
+}
+
