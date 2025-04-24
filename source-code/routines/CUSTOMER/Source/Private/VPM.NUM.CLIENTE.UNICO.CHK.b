@@ -40,11 +40,16 @@
 GENERA.RFC.CURP:
 
     ETEINC = 1; ETEOK = 0
-    CLIENTE.UNICO = ''; CLIENTE.UNICO.RFC = ''; CLIENTE.UNICO.CURP = ''; RES = ETEOK; MENSAJE = ''; CLAVE.ALFA = ''
+    CLIENTE.UNICO = ''
+     CLIENTE.UNICO.RFC = ''
+     CLIENTE.UNICO.CURP = ''
+     RES = ETEOK
+     MENSAJE = ''
+     CLAVE.ALFA = ''
     Y.LOCAL.REF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
     Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
 
-    IF ( Y.SECTOR = "1") OR ( Y.SECTOR = "2") THEN
+    IF ( Y.SECTOR = "1001") OR ( Y.SECTOR = "1100") THEN
         GOSUB VALIDA.DATOS
         IF (RES = 0) AND (MENSAJE = "") THEN
         END ELSE
@@ -55,7 +60,7 @@ GENERA.RFC.CURP:
             RETURN
         END
     END
-    IF Y.SECTOR = "3" THEN
+    IF Y.SECTOR = "2001" THEN
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusGender, "")
         GOSUB VALIDA.DATOS.M
         IF (RES = 0) AND (MENSAJE = '') THEN
@@ -70,7 +75,7 @@ GENERA.RFC.CURP:
 
 CLIENTE.DUPLICADO:
 
-    IF Y.SECTOR GE "3" THEN
+    IF Y.SECTOR GE "2001" THEN
         Y.RFC.AUX = Y.RFC[1,9]
     END ELSE
         Y.RFC.AUX = Y.RFC[1,10]

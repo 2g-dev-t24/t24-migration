@@ -65,7 +65,7 @@ PROCESO:
     
     Y.LOCAL.REF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
     Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
-    IF Y.SECTOR EQ 'COT' THEN
+    IF Y.SECTOR EQ '1300' THEN
         Y.SECTOR = Y.LOCAL.REF<1,Y.POS.CLASS.COTI>
     END
     Y.RFC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,1>
@@ -78,7 +78,7 @@ PROCESO:
         Y.RFC.BAN = '1'
     END
 
-    IF Y.SECTOR LT 3 THEN
+    IF Y.SECTOR EQ '2001' THEN
         Y.GENDER = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
         Y.SHORT.NAME = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusShortName))
         Y.NAME.1 = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne))
@@ -151,7 +151,7 @@ PROCESO:
             Y.NOM.PER.MORAL.1 = Y.NOM.PER.MORAL.LIST<X>
             Y.ESTADO.1 = Y.ESTADO.LIST<X>
 
-            IF Y.SECTOR LT 3 THEN
+            IF Y.SECTOR EQ '2001' THEN
                 IF Y.GENDER EQ Y.GENDER.1 AND Y.DATE.BIRTH EQ Y.DATE.BIRTH.1 AND Y.SHORT.NAME EQ Y.SHORT.NAME.1 AND Y.NAME.1 EQ Y.NAME.1.1 AND Y.NAME.2 EQ Y.NAME.2.1 AND Y.ESTADO EQ Y.ESTADO.1 THEN
                     IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
                         Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
