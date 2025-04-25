@@ -30,21 +30,17 @@ SUBROUTINE ABC.VALIDA.EDO.CURP
     GOSUB INIT
     GOSUB OPEN.FILES
 
-    Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
+    Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>
 
     IF Y.LUG.NAC NE '' THEN
-
         Y.LUG.NAC.CURP = Y.CURP[12,2]
-        SEL.CMD = 'SELECT ':FN.ABC.ESTADO:' WITH CLAVE EQ ':DQUOTE(Y.LUG.NAC.CURP):" BY @ID"  ; * ITSS - SUNDRAM - Added DQUOTE
-        EB.DataAccess.Readlist(SEL.CMD,Y.LIST,'',Y.NO,Y.ERROR)
-
-        IF Y.LIST EQ ''THEN
+        IF Y.LUG.NAC.CURP EQ '' THEN
             ETEXT = "LA CLAVE DE LA ENTIDAD DE NACIMIENTO NO ES VALIDA"
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
             RETURN
         END ELSE
-            IF Y.LIST NE Y.LUG.NAC THEN
+            IF Y.LUG.NAC.CURP NE Y.LUG.NAC THEN 
                 ETEXT = "LA ENTIDAD DE NACIMIENTO DEL CURP NO COINCIDE CON EL ESTADO DE NACIMIENTO"
                 EB.SystemTables.setEtext(ETEXT)
                 EB.ErrorProcessing.StoreEndError()
@@ -58,7 +54,6 @@ SUBROUTINE ABC.VALIDA.EDO.CURP
         RETURN
     END
 
-*
 RETURN
 
 ***********
@@ -75,10 +70,11 @@ RETURN
 INIT:
 *****
     V.APP      = 'CUSTOMER'
-    V.FLD.NAME = 'LUG.NAC'
+    V.FLD.NAME = 'BIRTH.PROVINCE'
     V.FLD.POS  = ''
 
     EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, Y.POS.LUG.NAC)
+    Y.POS.BIRTH.PROV = Y.POS.LUG.NAC<1,1> 
     
     Y.CURP = EB.SystemTables.getComi()
 
