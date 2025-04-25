@@ -1,8 +1,20 @@
+* @ValidationCode : MjotNjYzMTI0Nzk5OkNwMTI1MjoxNzQ1NTkyMzI2NDYyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 25 Apr 2025 11:45:26
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>155</Rating>
 *-----------------------------------------------------------------------------
-  $PACKAGE ABC.BP  
-    SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
+$PACKAGE ABC.BP
+SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
 *-----------------------------------------------------------------------------
 *
 * DETALLE: Valida que el cliente no se encuentre duplicado en base al RFC
@@ -24,8 +36,8 @@
     IF Y.COMI THEN
         Y.RFC = Y.COMI
     END ELSE
-         Y.REF.GET = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
-         Y.RFC = Y.REF.GET<1,1>
+        Y.REF.GET = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
+        Y.RFC = Y.REF.GET<1,1>
     END
 
     Y.ID.CUS = EB.SystemTables.getIdNew()
@@ -34,18 +46,18 @@
     GOSUB MANTEN.REGISTRO
     GOSUB GENERA.RFC.CURP
     IF Y.RFC NE '' THEN GOSUB CLIENTE.DUPLICADO
-    RETURN
+RETURN
 
 
 GENERA.RFC.CURP:
 
     ETEINC = 1; ETEOK = 0
     CLIENTE.UNICO = ''
-     CLIENTE.UNICO.RFC = ''
-     CLIENTE.UNICO.CURP = ''
-     RES = ETEOK
-     MENSAJE = ''
-     CLAVE.ALFA = ''
+    CLIENTE.UNICO.RFC = ''
+    CLIENTE.UNICO.CURP = ''
+    RES = ETEOK
+    MENSAJE = ''
+    CLAVE.ALFA = ''
     Y.LOCAL.REF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
     Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
 
@@ -70,7 +82,7 @@ GENERA.RFC.CURP:
             RETURN
         END
     END
-    RETURN
+RETURN
 
 
 CLIENTE.DUPLICADO:
@@ -101,7 +113,7 @@ CLIENTE.DUPLICADO:
         END
     END
 
-    RETURN
+RETURN
 
 ABRE.TABLAS:
 
@@ -132,7 +144,7 @@ ABRE.TABLAS:
     YPOS.NOM.PER.MORAL = Y.POS.LOC<1,1>
     YPOS.LUGAR.CONST = Y.POS.LOC<1,2>
 *****************************************************************************
-    RETURN
+RETURN
 
 ****************
 MANTEN.REGISTRO:
@@ -140,8 +152,8 @@ MANTEN.REGISTRO:
 
     Y.VAL.ACTUAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
     Y.ORIGEN = "GENERICO"
-    CALL ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
-    RETURN
+    ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
+RETURN
 
 ***************
 VALIDA.DATOS:
@@ -191,7 +203,7 @@ VALIDA.DATOS:
             RETURN
         END
     END
-    RETURN
+RETURN
 
 VALIDA.DATOS.M:
     NOMBRE.EMP = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne)
@@ -210,6 +222,6 @@ VALIDA.DATOS.M:
             RETURN
         END
     END
-    RETURN
+RETURN
 
 END
