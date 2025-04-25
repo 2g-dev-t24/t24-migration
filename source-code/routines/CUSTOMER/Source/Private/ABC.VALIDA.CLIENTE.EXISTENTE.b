@@ -1,12 +1,24 @@
+* @ValidationCode : MjoxMzkxNjU0Mjk2OkNwMTI1MjoxNzQ1NjEzNDA2MTIxOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 25 Apr 2025 17:36:46
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>1450</Rating>
 *-----------------------------------------------------------------------------
-  $PACKAGE ABC.BP  
-    SUBROUTINE ABC.VALIDA.CLIENTE.EXISTENTE
+$PACKAGE ABC.BP
+SUBROUTINE ABC.VALIDA.CLIENTE.EXISTENTE
 *===============================================
 * Nombre de Programa:   ABC.VALIDA.CLIENTE.EXISTENTE
 * Objetivo:             Rutina para validar si el cliente
-*                       ingresado ya está registrado.
+*                       ingresado ya estï¿½ registrado.
 *===============================================
 
     $USING EB.SystemTables
@@ -21,7 +33,7 @@
     GOSUB INICIO
     GOSUB PROCESO
 
-    RETURN
+RETURN
 
 *******
 INICIO:
@@ -56,7 +68,7 @@ INICIO:
     Y.POS.LUGAR.CONST = Y.POS.LOC<1,2>
     Y.POS.CLASS.COTI = Y.POS.LOC<1,3>
 
-    RETURN
+RETURN
 
 
 ********
@@ -74,7 +86,7 @@ PROCESO:
     Y.DATE.BIRTH = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
 
     IF Y.RFC EQ '' THEN
-        CALL ABC.BP.AbcGeneraRfc('', Y.RFC, '' )
+        ABC.BP.AbcGeneraRfc('', Y.RFC, '' )
         Y.RFC.BAN = '1'
     END
 
@@ -222,12 +234,12 @@ PROCESO:
     WRITE R.VAL.CUS TO F.ABC.INFO.VAL.CUS, Y.RFC.ID
 
     IF Y.RFC.BAN EQ '1' THEN
-        Y.INSERT<1,1> = Y.RFC 
+        Y.INSERT<1,1> = Y.RFC
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
         EB.Display.RebuildScreen()
     END
 
-    RETURN
+RETURN
 
 **********************
 ELIMINA.INFO.ANTERIOR:
@@ -300,7 +312,7 @@ ELIMINA.INFO.ANTERIOR:
         END
     END
 
-    RETURN
+RETURN
 
 *****************
 LIMPIA.VARIABLES:
@@ -315,6 +327,6 @@ LIMPIA.VARIABLES:
     Y.NOM.PER.MORAL.1 = ''
     Y.ESTADO.1 = ''
 
-    RETURN
+RETURN
 
 END

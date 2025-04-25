@@ -1,10 +1,22 @@
+* @ValidationCode : MjotNDcxMzc2NDpDcDEyNTI6MTc0NTYxMzMzNDY2ODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 25 Apr 2025 17:35:34
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>-28</Rating>
 * Descripcion: Reporte que genera el RFC, En caso de usar la rutina en un
 *              proceso de alta, asignar al parametro IN.ID.CLIENTE vac
 ******************************************************************************************
 $PACKAGE ABC.BP
-    SUBROUTINE ABC.GENERA.RFC (IN.ID.CLIENTE, OUT.RFC, OUT.ERROR)
+SUBROUTINE ABC.GENERA.RFC (IN.ID.CLIENTE, OUT.RFC, OUT.ERROR)
 
     $USING EB.SystemTables
     $USING EB.Updates
@@ -17,7 +29,7 @@ $PACKAGE ABC.BP
     GOSUB ABRIR.ARCHIVOS
     GOSUB PROCESO
 
-    RETURN
+RETURN
 
 INICIALIZACION:
 
@@ -38,13 +50,13 @@ INICIALIZACION:
 
     OUT.ERROR = ''
 
-    RETURN
+RETURN
 
 ABRIR.ARCHIVOS:
 
     EB.DataAccess.Opf(FN.CTE, F.CTE)
 
-    RETURN
+RETURN
 
 PROCESO:
 
@@ -132,7 +144,7 @@ PROCESO:
 
 
 
-    RETURN
+RETURN
 
 PROCESO.PER.FIS:
 
@@ -170,7 +182,7 @@ PROCESO.PER.FIS:
 
     GOSUB SET.PER.FIS.REGLA.9
 
-    RETURN
+RETURN
 
 SET.INF.PER.FIS:
 
@@ -190,7 +202,7 @@ SET.INF.PER.FIS:
         A.FIS.NOMBRE = TRIM(A.FIS.NOMBRE)
     END
 
-    RETURN
+RETURN
 
 SET.PER.FIS.REGLA.6:
 
@@ -218,7 +230,7 @@ SET.PER.FIS.REGLA.6:
 
     A.FIS.NOMBRE = TRIM(A.FIS.NOMBRE)
 
-    RETURN
+RETURN
 
 SET.PER.FIS.ANEXO.V:
 
@@ -234,7 +246,7 @@ SET.PER.FIS.ANEXO.V:
     GOSUB PROCESO.PER.FIS.ANEXO.V
     A.FIS.NOMBRE = A.PARTE.NOMBRE
 
-    RETURN
+RETURN
 
 PROCESO.PER.FIS.ANEXO.V:
 
@@ -260,7 +272,7 @@ PROCESO.PER.FIS.ANEXO.V:
 
     A.PARTE.NOMBRE = A.NEW.NOMBRE
 
-    RETURN
+RETURN
 
 SET.LISTA.PER.FIS.ANEXO.V:
 
@@ -277,7 +289,7 @@ SET.LISTA.PER.FIS.ANEXO.V:
     A.FIS.LISTA<-1> = 'VAN'
     A.FIS.LISTA<-1> = 'MI'
 
-    RETURN
+RETURN
 
 SET.PER.FIS.REGLA.5:
 
@@ -287,19 +299,19 @@ SET.PER.FIS.REGLA.5:
     A.FIS.APE.MATERNO = FIELD(A.FIS.APE.MATERNO, ' ', 1)
     A.FIS.APE.MATERNO = TRIM(A.FIS.APE.MATERNO)
 
-    RETURN
+RETURN
 
 SET.PER.FIS.REGLA.4:
 
     OUT.RFC = A.FIS.APE.PATERNO[1, 1] : A.FIS.APE.MATERNO[1, 1] : A.FIS.NOMBRE[1, 2]
 
-    RETURN
+RETURN
 
 SET.PER.FIS.REGLA.7:
 
     OUT.RFC = A.APELLIDOS[1, 2] : A.FIS.NOMBRE[1, 2]
 
-    RETURN
+RETURN
 
 SET.PER.FIS.REGLA.1:
 
@@ -317,7 +329,7 @@ SET.PER.FIS.REGLA.1:
 
     OUT.RFC = A.FIS.APE.PATERNO[1, 1] : A.VOCAL : A.FIS.APE.MATERNO[1, 1] : A.FIS.NOMBRE[1, 1]
 
-    RETURN
+RETURN
 
 SET.PER.FIS.REGLA.9:
 
@@ -327,7 +339,7 @@ SET.PER.FIS.REGLA.9:
         OUT.RFC = A.LISTA.PAL.ALT<Ap,2>
     END
 
-    RETURN
+RETURN
 
 SET.LISTA.PER.FIS.REG.9:
 
@@ -372,7 +384,7 @@ SET.LISTA.PER.FIS.REG.9:
     A.LISTA.PAL.ALT := 'KRUIN' : VM : 'RUIX' : FM
 
 
-    RETURN
+RETURN
 
 PROCESO.PER.MORAL:
 
@@ -400,7 +412,7 @@ PROCESO.PER.MORAL:
         END
     END
 
-    RETURN
+RETURN
 
 
 SET.NOMBRE.CLIENTE:
@@ -425,7 +437,7 @@ SET.NOMBRE.CLIENTE:
         A.BAK.COMI = EB.SystemTables.getComi()
         Y.NEW.COMI = IN.ID.CLIENTE :'*':'1'
         EB.SystemTables.setComi(Y.NEW.COMI)
-        CALL ABC.BP.VpmVCustomerName()
+        ABC.BP.VpmVCustomerName()
         EB.SystemTables.setComi(A.BAK.COMI)
 
         A.CLIENTE = EB.SystemTables.getComiEnri()
@@ -438,7 +450,7 @@ SET.NOMBRE.CLIENTE:
 
     A.NOM.CLIENTE.ORIG = A.CLIENTE
 
-    RETURN
+RETURN
 
 SET.PER.MOR.ANEXO.V:
 
@@ -469,7 +481,7 @@ SET.PER.MOR.ANEXO.V:
     A.NEW.NOMBRE = TRIM(A.NEW.NOMBRE)
     A.CLIENTE = A.NEW.NOMBRE
 
-    RETURN
+RETURN
 
 SET.LISTA.PER.MOR.ANEXO.V:
 
@@ -581,7 +593,7 @@ SET.LISTA.PER.MOR.ANEXO.V:
     A.MOR.PALABRAS.SENC<-1> = 'A'
 
 
-    RETURN
+RETURN
 
 SET.PER.MOR.ANEXO.VI:
 
@@ -603,7 +615,7 @@ SET.PER.MOR.ANEXO.VI:
     A.NEW.NOMBRE = TRIM(A.NEW.NOMBRE)
     A.CLIENTE = A.NEW.NOMBRE
 
-    RETURN
+RETURN
 
 SET.LISTA.PER.MOR.ANEXO.VI:
 
@@ -621,7 +633,7 @@ SET.LISTA.PER.MOR.ANEXO.VI:
     A.MOR.CAR.ESP := '(' : VM : 'ABRE PARENTESIS'  : FM
     A.MOR.CAR.ESP := ')' : VM : 'CIERRA PARENTESIS' : FM
 
-    RETURN
+RETURN
 
 SET.MOR.REGLA.4:
 
@@ -644,7 +656,7 @@ SET.MOR.REGLA.4:
 
     A.CLIENTE = A.NEW.NOMBRE.CTE
 
-    RETURN
+RETURN
 
 SET.MOR.REGLA.10:
 
@@ -658,7 +670,7 @@ SET.MOR.REGLA.10:
 
         IF ISDIGIT(A.PALABRA) THEN
 
-            CALL ABC.BP.VpmCantidadLetra(A.PALABRA, A.PALABRA, '', '', Y.ERR.LETRA)
+            ABC.BP.VpmCantidadLetra(A.PALABRA, A.PALABRA, '', '', Y.ERR.LETRA)
 
             A.PALABRA = UPCASE(A.PALABRA[1, LEN(A.PALABRA) - 16])
 
@@ -673,7 +685,7 @@ SET.MOR.REGLA.10:
     A.CLIENTE = A.NEW.NOMBRE.CTE
 
 
-    RETURN
+RETURN
 
 SET.MOR.REGLA.7.Y.8:
 
@@ -689,7 +701,7 @@ SET.MOR.REGLA.7.Y.8:
 
     END
 
-    RETURN
+RETURN
 
 SET.MOR.REGLA.6:
 
@@ -702,7 +714,7 @@ SET.MOR.REGLA.6:
     OUT.RFC := A.PALABRA[1, 2]
 
 
-    RETURN
+RETURN
 
 SET.MOR.REGLA.1:
 
@@ -717,7 +729,7 @@ SET.MOR.REGLA.1:
     NEXT I.PALABRAS
 
 
-    RETURN
+RETURN
 
 SET.HOMONIMIA:
 
@@ -764,7 +776,7 @@ SET.HOMONIMIA:
 
     OUT.RFC := A.COC.HOM : A.RES.HOM
 
-    RETURN
+RETURN
 
 SET.LISTA.ANEXO.1:
 
@@ -808,7 +820,7 @@ SET.LISTA.ANEXO.1:
     A.ANEXO.1 := 'KZ' : VM : '39' : FM
     A.ANEXO.1 := 'K':Y.MAYUS : VM : '40'
 
-    RETURN
+RETURN
 
 SET.LISTA.ANEXO.2:
 
@@ -847,7 +859,7 @@ SET.LISTA.ANEXO.2:
     A.ANEXO.2 := 'K32' : VM : 'Y' : FM
     A.ANEXO.2 := 'K33' : VM : 'Z' : FM
 
-    RETURN
+RETURN
 
 SET.DIGITO.VER:
 
@@ -875,9 +887,9 @@ SET.DIGITO.VER:
 
     OUT.RFC := A.RES.DIG
 
-   EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, OUT.RFC)
+    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, OUT.RFC)
 
-    RETURN
+RETURN
 
 SET.LISTA.ANEXO.3:
 
@@ -921,5 +933,5 @@ SET.LISTA.ANEXO.3:
     A.ANEXO.3 := 'K '  : VM : '37' : FM
     A.ANEXO.3 := 'K':Y.MAYUS  : VM : '38' : FM
 
-    RETURN
+RETURN
 END
