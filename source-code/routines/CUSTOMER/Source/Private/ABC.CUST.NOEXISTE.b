@@ -1,5 +1,5 @@
-* @ValidationCode : MjoyNzQzMDcxMTE6Q3AxMjUyOjE3NDU1OTExODA1MTI6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 25 Apr 2025 11:26:20
+* @ValidationCode : MjotMTUxOTA4NzEzMzpDcDEyNTI6MTc0NTU5MzY4MTEzMTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 25 Apr 2025 12:08:01
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -51,7 +51,7 @@ PROCESS:
         EB.SystemTables.setEtext(ETEXT)
         EB.ErrorProcessing.StoreEndError()
     END
-    EB.Display.RebuildScreen()
+*  EB.Display.RebuildScreen()
 *  CALL REFRESH.GUI.OBJECTS
 RETURN
 END
