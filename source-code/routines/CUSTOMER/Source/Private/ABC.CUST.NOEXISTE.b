@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTg2MzQxMzA4NDpDcDEyNTI6MTc0NTU5MDkxMDY5MDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 25 Apr 2025 11:21:50
+* @ValidationCode : MjoyNzQzMDcxMTE6Q3AxMjUyOjE3NDU1OTExODA1MTI6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 25 Apr 2025 11:26:20
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -49,7 +49,7 @@ PROCESS:
     IF R.CUSTOMER EQ "" THEN
         ETEXT = "CLIENTE " : Y.NUM.CUSTOMER : " NO EXISTE, USE OPCION DE ALTA"
         EB.SystemTables.setEtext(ETEXT)
-        EB.ErrorProcessing.StoreEndError()OR
+        EB.ErrorProcessing.StoreEndError()
     END
     EB.Display.RebuildScreen()
 *  CALL REFRESH.GUI.OBJECTS
