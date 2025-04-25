@@ -78,7 +78,7 @@ PROCESO:
         Y.RFC.BAN = '1'
     END
 
-    IF Y.SECTOR EQ '2001' THEN
+    IF Y.SECTOR LT '2001' THEN
         Y.GENDER = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
         Y.SHORT.NAME = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusShortName))
         Y.NAME.1 = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne))
