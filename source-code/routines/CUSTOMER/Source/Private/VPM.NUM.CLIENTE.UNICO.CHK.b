@@ -43,9 +43,9 @@ SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
     Y.ID.CUS = EB.SystemTables.getIdNew()
 
     GOSUB ABRE.TABLAS
-    GOSUB MANTEN.REGISTRO
-    GOSUB GENERA.RFC.CURP
-    IF Y.RFC NE '' THEN GOSUB CLIENTE.DUPLICADO
+*    GOSUB MANTEN.REGISTRO
+**    GOSUB GENERA.RFC.CURP
+**    IF Y.RFC NE '' THEN GOSUB CLIENTE.DUPLICADO
 RETURN
 
 
@@ -118,9 +118,9 @@ RETURN
 ABRE.TABLAS:
 
 
-    F.VPM.ESTADO  = ""
-    FN.VPM.ESTADO = "F.VPM.ESTADO"
-    EB.DataAccess.Opf(FN.VPM.ESTADO, F.VPM.ESTADO)
+    F.ABC.ESTADO  = ""
+    FN.ABC.ESTADO = "F.ABC.ESTADO"
+    EB.DataAccess.Opf(FN.ABC.ESTADO, F.ABC.ESTADO)
 
     F.CUST$NAU  = ""
     FN.CUST$NAU = "F.CUSTOMER$NAU"
@@ -149,10 +149,10 @@ RETURN
 ****************
 MANTEN.REGISTRO:
 ****************
-
-    Y.VAL.ACTUAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
-    Y.ORIGEN = "GENERICO"
-    ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
+* GENERICO NO HACE NADA
+*    Y.VAL.ACTUAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
+*    Y.ORIGEN = "GENERICO"
+*    ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
 RETURN
 
 ***************
