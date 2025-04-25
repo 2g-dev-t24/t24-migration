@@ -336,3 +336,10 @@ private method AbcValidaBiomIubCurp (
 {
     jBC: ABC.VALIDA.BIOM.IUB.CURP
 }
+
+private method AbcCustNoexiste (
+)
+{
+   jBC: ABC.CUST.NOEXISTE
+}
+
