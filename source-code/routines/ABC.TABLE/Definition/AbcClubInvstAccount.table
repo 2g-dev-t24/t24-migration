@@ -1,0 +1,18 @@
+public table AbcClubInvstAccount {
+    t24: ABC.CLUB.INVST.ACCOUNT
+    fields:{
+        ArrangementId(ABC.CLUB.ARRANGEMENT.ID) = 1
+        TotalAmt(ABC.CLUB.TOTAL.AMT) = 2
+        LocalRef(ABC.CLUB.LOCAL.REF) = 3
+        Override(ABC.CLUB.OVERRIDE) = 4
+        RecordStatus(ABC.CLUB.RECORD.STATUS) = 5
+        CurrNo(ABC.CLUB.CURR.NO) = 6
+        Inputter(ABC.CLUB.INPUTTER) = 7
+        DateTime(ABC.CLUB.DATE.TIME) = 8
+        Authoriser(ABC.CLUB.AUTHORISER) = 9
+        CoCode(ABC.CLUB.CO.CODE) = 10
+        DeptCode(ABC.CLUB.DEPT.CODE) = 11
+        AuditorCode(ABC.CLUB.AUDITOR.CODE) = 12
+        AuditDateTime(ABC.CLUB.AUDIT.DATE.TIME) = 13
+    }
+}

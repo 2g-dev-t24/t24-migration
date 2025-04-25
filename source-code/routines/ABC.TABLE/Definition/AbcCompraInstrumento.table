@@ -1,0 +1,40 @@
+public table AbcCompraInstrumento {
+    t24: ABC.COMPRA.INSTRUMENTO
+    fields:{
+        ArrangementId(COM.INS.ABC.COM.INS.ID) = 1
+        Instrumento(COM.INS.INSTRUMENTO) = 2
+        AbcInstrumentoGubernamental(COM.INS.ABC.INSTRUMENTO.GUBERNAMENTAL) = 3
+        Transaccion(COM.INS.TRANSACCION) = 4
+        Category(COM.INS.CATEGORY) = 5
+        Institucion(COM.INS.INSTITUCION) = 6
+        Customer(COM.INS.CUSTOMER) = 7
+        Monto(COM.INS.MONTO) = 8
+        Tasa(COM.INS.TASA) = 9
+        Plazo(COM.INS.PLAZO) = 10
+        Ext(COM.INS.EXT) = 11
+        Pacto(COM.INS.PACTO) = 12
+        Confirmo(COM.INS.CONFIRMO) = 13
+        Contraparte(COM.INS.OPERO.CONTRAPARTE) = 14
+        ConfirmoContrapar(COM.INS.CONFIRMO.CONTRAPAR) = 15
+        IdTransaccion(COM.INS.ID.TRANSACCION) = 16
+        StatusIdTransac(COM.INS.STATUS.ID.TRANSAC) = 17
+        AcSysLiq(COM.INS.AC.SYS.LIQ) = 18
+        Account(COM.INS.ACCOUNT) = 19
+        Asignaciones(COM.INS.ASIGNACIONES) = 20
+        Precio(COM.INS.PRECIO) = 21
+        Titulos(COM.INS.TITULOS) = 22
+        Emisora(COM.INS.EMISORA) = 23
+        Serie(COM.INS.SERIE) = 24
+        LocalRef(COM.INS.LOCAL.REF) = 25
+        Override(COM.INS.OVERRIDE) = 26
+        RecordStatus(COM.INS.RECORD.STATUS) = 27
+        CurrNo(COM.INS.CURR.NO) = 28
+        Inputter(COM.INS.INPUTTER) = 29
+        DateTime(COM.INS.DATE.TIME) = 30
+        Authoriser(COM.INS.AUTHORISER) = 31
+        CoCode(COM.INS.CO.CODE) = 32
+        DeptCode(COM.INS.DEPT.CODE) = 33
+        AuditorCode(COM.INS.AUDITOR.CODE) = 34
+        AuditDateTime(COM.INS.AUDIT.DATE.TIME) = 35
+    }
+}

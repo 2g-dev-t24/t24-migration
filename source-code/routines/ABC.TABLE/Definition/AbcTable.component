@@ -433,3 +433,30 @@ private method AbcValidacionBiometricosFields (
     jBC: ABC.VALIDACION.BIOMETRICOS.FIELDS
 }
 
+
+private method AbcClubInvstAccount (
+)
+{
+    jBC: ABC.CLUB.INVST.ACCOUNT
+}
+
+
+private method AbcClubInvstAccountFields (
+)
+{
+    jBC: ABC.CLUB.INVST.ACCOUNT.FIELDS
+}
+
+private method AbcCompraInstrumento (
+)
+{
+    jBC: ABC.COMPRA.INSTRUMENTO
+}
+
+
+
+private method AbcCompraInstrumentoFields (
+)
+{
+    jBC: ABC.COMPRA.INSTRUMENTO.FIELDS
+}
