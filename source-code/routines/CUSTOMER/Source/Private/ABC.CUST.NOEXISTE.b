@@ -44,14 +44,18 @@ PROCESS:
 *********
     Y.NUM.CUSTOMER = EB.SystemTables.getComi()
     R.CUSTOMER = ""
-    EB.DataAccess.FRead(FN.CUSTOMER, Y.NUM.CUSTOMER, R.CUSTOMER, F.CUSTOMER, CUST.ERR)
+
+    R.CUSTOMER = ST.Customer.Customer.Read(Y.NUM.CUSTOMER,CUST.ERR)
+*    EB.DataAccess.FRead(FN.CUSTOMER, Y.NUM.CUSTOMER, R.CUSTOMER, F.CUSTOMER, CUST.ERR)
     
     IF R.CUSTOMER EQ "" THEN
         ETEXT = "CLIENTE " : Y.NUM.CUSTOMER : " NO EXISTE, USE OPCION DE ALTA"
-        EB.SystemTables.setEtext(ETEXT)
-        EB.ErrorProcessing.StoreEndError()
+*        EB.SystemTables.setEtext(ETEXT)
+*        EB.ErrorProcessing.StoreEndError()
+        EB.SystemTables.setE(ETEXT)
+        EB.ErrorProcessing.Err()
     END
-*  EB.Display.RebuildScreen()
+    EB.Display.RebuildScreen()
 *  CALL REFRESH.GUI.OBJECTS
 RETURN
 END
