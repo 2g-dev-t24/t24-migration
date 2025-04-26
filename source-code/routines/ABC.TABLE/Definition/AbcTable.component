@@ -460,3 +460,18 @@ private method AbcCompraInstrumentoFields (
 {
     jBC: ABC.COMPRA.INSTRUMENTO.FIELDS
 }
+
+private method AbcCustomerFisicaNv4Api (
+)
+{
+   jBC: ABC.CUSTOMER.FISICA.NV4.API
+}
+
+
+
+private method AbcCustomerFisicaNv4ApiFields (
+)
+{
+   jBC: ABC.CUSTOMER.FISICA.NV4.API.FIELDS
+}
+
