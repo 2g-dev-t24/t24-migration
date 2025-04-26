@@ -18,7 +18,7 @@ $PACKAGE ABC.BP
     $USING EB.SystemTables
     $USING EB.Updates
     $USING ST.Customer
-
+    $USING EB.ErrorProcessing
 
     IF EB.SystemTables.getMessage() NE 'VAL' THEN
         GOSUB VALIDA

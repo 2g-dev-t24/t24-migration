@@ -10,18 +10,18 @@ $PACKAGE ABC.BP
     $USING EB.ErrorProcessing
     $USING EB.LocalReferences
     $USING ABC.BP
-
-    IF R.OLD(EB.CUS.INPUTTER) <> '' THEN
+    $USING EB.Display
+*    IF R.OLD(EB.CUS.INPUTTER) <> '' THEN
         GOSUB PROCESS
         CALL VPM.RTN.FECHA.MENOR.HOY
         RETURN
-    END
+*    END
 
 *------ Main Processing Section
     GOSUB PROCESS
-    ABC.BP.AbcRtnFechaMenorHoy
+*       ABC.BP.AbcRtnFechaMenorHoy
     IF EB.SystemTables.getMessage() NE 'VAL' THEN
-      ABC.BP.AbcVCustFechaNac
+*      ABC.BP.AbcVCustFechaNac
     END
     RETURN
 

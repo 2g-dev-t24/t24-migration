@@ -12,7 +12,9 @@ $PACKAGE ABC.BP
     $USING EB.SystemTables
     $USING EB.Updates
     $USING ST.Customer
-
+    $USING EB.DataAccess
+    $USING EB.ErrorProcessing
+    $USING EB.Display
     GOSUB INICIALIZA
     GOSUB PROCESO
     RETURN
