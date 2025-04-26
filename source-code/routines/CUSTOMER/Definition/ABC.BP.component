@@ -226,8 +226,30 @@ private method AbcGetRazonSocial (INOUT YRazonSocial string)
 {
     jBC: ABC.GET.RAZON.SOCIAL
 }
+private method VAbcGetMnemonic ()
+{
+    jBC: V.ABC.GET.MNEMONIC
+}
 
+private method AbcVCustFechaNac ()
+{
+    jBC: ABC.V.CUST.FECHA.NAC
+}
 
+private method AbcValFmtCurpCliente ()
+{
+    jBC: ABC.VAL.FMT.CURP.CLIENTE
+}
+
+private method AbcValTipoPersona ()
+{
+    jBC: ABC.VAL.TIPO.PERSONA
+}
+
+private method AbcValidaRfcCurp(INOUT YRfc string, INOUT YCurp string, INOUT TipoPersona string, INOUT YErr string)
+{
+    jBC: ABC.VALIDA.RFC.CURP
+}
 # ------------------ METHOD END ------------------
 
 
