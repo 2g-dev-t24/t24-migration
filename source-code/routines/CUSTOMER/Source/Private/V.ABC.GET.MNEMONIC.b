@@ -13,11 +13,11 @@ $PACKAGE ABC.BP
     $USING EB.Display
     $USING ST.CompanyCreation
     
-*    IF R.OLD(EB.CUS.INPUTTER) <> '' THEN
+    IF IF EB.SystemTables.getROld(ST.Customer.Customer.EbCusInputter) <> '' THEN
         GOSUB PROCESS
-        CALL VPM.RTN.FECHA.MENOR.HOY
+        ABC.BP.AbcRtnFechaMenorHoy()
         RETURN
-*    END
+    END
 
 *------ Main Processing Section
     GOSUB PROCESS
