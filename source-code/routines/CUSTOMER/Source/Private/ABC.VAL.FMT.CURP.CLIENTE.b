@@ -41,7 +41,7 @@ PROCESO:
 
     IF Y.CURP.CLIENTE NE '' THEN
 
-        CALL ABC.BP.AbcValidaRfcCurp('', Y.CURP.CLIENTE, Y.TIPO.PERSONA, Y.ERR)
+        ABC.BP.AbcValidaRfcCurp('', Y.CURP.CLIENTE, Y.TIPO.PERSONA, Y.ERR)
         IF Y.ERR NE '' THEN
 *            AF = EB.CUS.EXTERN.CUS.ID ; AV = 1; AS = 0
 *            E = Y.ERR

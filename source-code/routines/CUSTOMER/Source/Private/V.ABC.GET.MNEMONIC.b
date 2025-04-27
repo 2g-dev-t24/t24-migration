@@ -19,9 +19,9 @@ $PACKAGE ABC.BP
 
 *------ Main Processing Section
     GOSUB PROCESS
-*       ABC.BP.AbcRtnFechaMenorHoy
+       ABC.BP.AbcRtnFechaMenorHoy()
     IF EB.SystemTables.getMessage() NE 'VAL' THEN
-*      ABC.BP.AbcVCustFechaNac
+      ABC.BP.AbcVCustFechaNac()
     END
     RETURN
 
@@ -30,18 +30,20 @@ PROCESS:
 *-------
 
 
+    Y.COMPANY = EB.SystemTables.getIdCompany()
+    R.COMPANY              = ST.CompanyCreation.Company.Read(Y.COMPANY, COMP.ERR)
 
     IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthIncorpDate)  = '' THEN
       TODAY = EB.SystemTables.getToday()
       EB.SystemTables.setRNew(ST.Customer.Customer.EbCusBirthIncorpDate,TODAY)
     END
-
-    IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNationality) = '' THEN 
-*      R.NEW(EB.CUS.NATIONALITY) = R.COMPANY(EB.COM.LOCAL.COUNTRY)[1,2]
+    Y.COUNTRY = R.COMPANY(ST.CompanyCreation.Company.EbComLocalCountry)[1,2] 
+    IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNationality) = '' THEN
+      EB.SystemTables.setRNew(ST.Customer.Customer.EbCusNationality,Y.COUNTRY)
     END
 
     IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusResidence) = '' THEN
-*      R.NEW(EB.CUS.RESIDENCE) = R.COMPANY(EB.COM.LOCAL.COUNTRY)[1,2]
+      EB.SystemTables.setRNew(ST.Customer.Customer.EbCusResidence,Y.COUNTRY)
     END 
 
     EB.Display.RebuildScreen()
