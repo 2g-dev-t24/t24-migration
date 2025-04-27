@@ -11,6 +11,8 @@ $PACKAGE ABC.BP
     $USING EB.LocalReferences
     $USING ABC.BP
     $USING EB.Display
+    $USING ST.CompanyCreation
+    
 *    IF R.OLD(EB.CUS.INPUTTER) <> '' THEN
         GOSUB PROCESS
         CALL VPM.RTN.FECHA.MENOR.HOY
@@ -21,7 +23,7 @@ $PACKAGE ABC.BP
     GOSUB PROCESS
        ABC.BP.AbcRtnFechaMenorHoy()
     IF EB.SystemTables.getMessage() NE 'VAL' THEN
-      ABC.BP.AbcVCustFechaNac()
+       ABC.BP.AbcVCustFechaNac()
     END
     RETURN
 
