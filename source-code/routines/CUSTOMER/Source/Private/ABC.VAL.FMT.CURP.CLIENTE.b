@@ -46,8 +46,8 @@ PROCESO:
 *            AF = EB.CUS.EXTERN.CUS.ID ; AV = 1; AS = 0
 *            E = Y.ERR
 *            CALL ERR
-             ETEXT= "EB.CUS.EXTERN.CUS.ID"
-             EB.SystemTables.setEtext(ETEXT)
+*             ETEXT= "EB.CUS.EXTERN.CUS.ID"
+             EB.SystemTables.setEtext(Y.ERR)
              EB.ErrorProcessing.StoreEndError()
         END
     END
