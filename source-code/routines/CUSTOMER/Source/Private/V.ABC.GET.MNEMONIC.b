@@ -13,7 +13,7 @@ $PACKAGE ABC.BP
     $USING EB.Display
     $USING ST.CompanyCreation
     
-    IF IF EB.SystemTables.getROld(ST.Customer.Customer.EbCusInputter) <> '' THEN
+    IF EB.SystemTables.getROld(ST.Customer.Customer.EbCusInputter) <> '' THEN
         GOSUB PROCESS
         ABC.BP.AbcRtnFechaMenorHoy()
         RETURN
