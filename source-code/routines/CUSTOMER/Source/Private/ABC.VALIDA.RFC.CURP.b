@@ -54,7 +54,7 @@ OBTIENE.DATO.VAL:
 VALIDA.RFC:
 ***********
 
-    IF TIPO.PERSONA LE 2 THEN
+    IF TIPO.PERSONA LE 1100 THEN
         IF (LEN(Y.RFC) EQ 13) THEN
 
             Y.INI.RFC = Y.RFC[1,4]
@@ -91,7 +91,7 @@ VALIDA.RFC:
 VALIDA.CURP:
 ************
 
-    IF TIPO.PERSONA LE 2 THEN
+    IF TIPO.PERSONA LE 1100 THEN
         IF (LEN(Y.CURP) EQ 18) THEN
 
             Y.INI = Y.CURP[1,4]
