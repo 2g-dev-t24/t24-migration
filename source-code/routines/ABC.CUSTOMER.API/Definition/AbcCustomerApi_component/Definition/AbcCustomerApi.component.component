@@ -1,0 +1,12 @@
+component AbcCustomerApi.component
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+
+
+private method AbcCreateCustomerFisNv4 (
+)
+{
+    jBC: ABC.CREATE.CUSTOMER.FIS.NV4
+}
+
