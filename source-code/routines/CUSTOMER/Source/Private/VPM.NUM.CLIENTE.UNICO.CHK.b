@@ -27,8 +27,9 @@ SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
     $USING EB.ErrorProcessing
     $USING ABC.BP
     $USING EB.Display
+    $USING AbcTable
 
-    IF EB.SystemTables.getMessage() EQ 'VAL' THEN RETURN
+*    IF EB.SystemTables.getMessage() EQ 'VAL' THEN RETURN
 
     Y.RFC = ''
 
