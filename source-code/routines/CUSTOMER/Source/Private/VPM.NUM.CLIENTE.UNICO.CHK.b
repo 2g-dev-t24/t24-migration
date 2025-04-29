@@ -29,8 +29,9 @@ SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
     $USING EB.Display
     $USING AbcTable
 
-*    IF EB.SystemTables.getMessage() EQ 'VAL' THEN RETURN
-
+*    IF EB.SystemTables.getMessage() EQ 'VAL' THEN
+*       RETURN
+*     END
     Y.RFC = ''
 
     Y.COMI = EB.SystemTables.getComi()
@@ -44,9 +45,11 @@ SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
     Y.ID.CUS = EB.SystemTables.getIdNew()
 
     GOSUB ABRE.TABLAS
-*    GOSUB MANTEN.REGISTRO
+    GOSUB MANTEN.REGISTRO
     GOSUB GENERA.RFC.CURP
-    IF Y.RFC NE '' THEN GOSUB CLIENTE.DUPLICADO
+    IF Y.RFC NE '' THEN
+     GOSUB CLIENTE.DUPLICADO
+    END 
 RETURN
 
 
