@@ -362,22 +362,29 @@ private method AbcValidaBiomIubCurp (
 private method AbcCustNoexiste (
 )
 {
-   jBC: ABC.CUST.NOEXISTE
+    jBC: ABC.CUST.NOEXISTE
 }
 
 private method AbcValDatosCot (
 )
 {
-   jBC: ABC.VAL.DATOS.COT
+    jBC: ABC.VAL.DATOS.COT
 }
 private method AbcCustNoexisteCot (
 )
 {
-   jBC: ABC.CUST.NOEXISTE.COT
+    jBC: ABC.CUST.NOEXISTE.COT
 }
 
 private method AbcCustNoexistePfae (
 )
 {
-   jBC: ABC.CUST.NOEXISTE.PFAE
+    jBC: ABC.CUST.NOEXISTE.PFAE
+}
+
+private method AbcESelCol (
+    INOUT EnqParam string
+)
+{
+    jBC: ABC.E.SEL.COL
 }
