@@ -1,0 +1,13 @@
+component BaValListaCol
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+
+
+private method BaValListaCol (
+    INOUT enqParam string
+)
+{
+    jBC: BA.VAL.LISTA.COL
+}
+

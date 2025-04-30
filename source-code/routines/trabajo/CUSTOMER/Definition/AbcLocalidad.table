@@ -1,0 +1,21 @@
+public table AbcLocalidad {
+    t24: ABC.LOCALIDAD
+    fields:{
+        AbcLocalidadNombre(ABC.LOCALIDAD.ID.DESCRIPTION) = 1
+        AbcLocalidadReserved4(ABC.LOCALIDAD.RESERVED.4) = 2
+        AbcLocalidadReserved3(ABC.LOCALIDAD.RESERVED.3) = 3
+        AbcLocalidadReserved2(ABC.LOCALIDAD.RESERVED.2) = 4
+        AbcLocalidadReserved1(ABC.LOCALIDAD.RESERVED.1) = 5
+        AbcLocalidadLocalRef(ABC.LOCALIDAD.LOCAL.REF) = 6
+        AbcLocalidadOverride(ABC.LOCALIDAD.OVERRIDE) = 7
+        AbcLocalidadRecordStatus(ABC.LOCALIDAD.RECORD.STATUS) = 8
+        AbcLocalidadCurrNo(ABC.LOCALIDAD.CURR.NO) = 9
+        AbcLocalidadInputter(ABC.LOCALIDAD.INPUTTER) = 10
+        AbcLocalidadDateTime(ABC.LOCALIDAD.DATE.TIME) = 11
+        AbcLocalidadAuthoriser(ABC.LOCALIDAD.AUTHORISER) = 12
+        AbcLocalidadCoCode(ABC.LOCALIDAD.CO.CODE) = 13
+        AbcLocalidadDeptCode(ABC.LOCALIDAD.DEPT.CODE) = 14
+        AbcLocalidadAuditorCode(ABC.LOCALIDAD.AUDITOR.CODE) = 15
+        AbcLocalidadAuditDateTime(ABC.LOCALIDAD.AUDIT.DATE.TIME) = 16
+    }
+}

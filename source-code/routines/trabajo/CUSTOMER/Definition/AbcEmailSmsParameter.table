@@ -1,0 +1,43 @@
+public table AbcEmailSmsParameter {
+    t24: ABC.EMAIL.SMS.PARAMETER
+    fields:{
+        AbcAespOfsSource(ABC.AESP.OFS.SOURCE) = 1
+        AbcAespNumMensaje(ABC.AESP.NUM.MENSAJE) = 2
+        AbcAespSmsActivo(ABC.AESP.SMS.ACTIVO) = 3
+        AbcAespBankId(ABC.AESP.BANK.ID) = 4
+        AbcAespBankCust(ABC.AESP.BANK.CUST) = 5
+        AbcAespFechaEmision(ABC.AESP.FECHA.EMISION) = 6
+        AbcAespFechaVencimiento(ABC.AESP.FECHA.VENCIMIENTO) = 7
+        AbcAespBankName(ABC.AESP.BANK.NAME) = 8
+        AbcAespTranType(ABC.AESP.TRAN.TYPE) = 9
+        AbcAespTransaction(ABC.AESP.TRANSACTION) = 10
+        AbcAespSubject(ABC.AESP.SUBJECT) = 11
+        AbcAespSubject(ABC.AESP.SUBJECT) = 12
+        AbcAespPhoneOne(ABC.AESP.PHONE.1) = 13
+        AbcAespPhoneTwo(ABC.AESP.PHONE.2) = 14
+        AbcAespTranTypeTwo(ABC.AESP.TRAN.TYPE.2) = 15
+        AbcAespEnvCambioEst(ABC.AESP.ENV.CAMBIO.EST) = 16
+        AbcAespEmailUsuario(ABC.AESP.EMAIL.USUARIO) = 17
+        AbcAespEmailOperacion(ABC.AESP.EMAIL.OPERACION) = 18
+        AbcAespEmailAccMin(ABC.AESP.EMAIL.ACC.MIN) = 19
+        AbcAespEmailDomMin(ABC.AESP.EMAIL.DOM.MIN) = 20
+        AbcAespEmailMaxDot(ABC.AESP.EMAIL.MAX.DOT) = 21
+        AbcAespEmailValGenDom(ABC.AESP.EMAIL.VAL.GEN.DOM) = 22
+        AbcAespInvalidChar(ABC.AESP.INVALID.CHAR) = 23
+        AbcAespReserved4(ABC.AESP.RESERVED.4) = 24
+        AbcAespReserved3(ABC.AESP.RESERVED.3) = 25
+        AbcAespReserved2(ABC.AESP.RESERVED.2) = 26
+        AbcAespReserved1(ABC.AESP.RESERVED.1) = 27
+        AbcAespLocalRef(ABC.AESP.LOCAL.REF) = 28
+        AbcAespOverride(ABC.AESP.OVERRIDE) = 29
+        AbcAespRecordStatus(ABC.AESP.RECORD.STATUS) = 30
+        AbcAespCurrNo(ABC.AESP.CURR.NO) = 31
+        AbcAespInputter(ABC.AESP.INPUTTER) = 32
+        AbcAespDateTime(ABC.AESP.DATE.TIME) = 33
+        AbcAespAuthoriser(ABC.AESP.AUTHORISER) = 34
+        AbcAespCoCode(ABC.AESP.CO.CODE) = 35
+        AbcAespDeptCode(ABC.AESP.DEPT.CODE) = 36
+        AbcAespAuditorCode(ABC.AESP.AUDITOR.CODE) = 37
+        AbcAespAuditDateTime(ABC.AESP.AUDIT.DATE.TIME) = 38
+    }
+}

@@ -1,0 +1,8 @@
+component AbcGetGeneralParam
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+private method AbcGetGeneralParam (INOUT YIdParam string,INOUT YListParams string,INOUT YListvaluese string)
+{
+    jBC: ABC.GET.GENERAL.PARAM
+}

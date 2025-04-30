@@ -1,0 +1,45 @@
+public table AbcAtm {
+    t24: ABC.ATM
+    fields:{
+        ClavePuntoTrans(ABC.ATM.CLAVE.PUNTO.TRANS) = 1
+        DenomPuntoTrans(ABC.ATM.DENOM.PUNTO.TRANS) = 2
+        ClaveTipoTrans(ABC.ATM.CLAVE.TIPO.TRANS)   = 3
+        ClaveSituacion(ABC.ATM.CLAVE.SITUACION)    = 4
+        FechaSituacion(ABC.ATM.FECHA.SITUACION)    = 5
+        DirCalle(ABC.ATM.DIR.CALLE)                = 6
+        DirNumExt(ABC.ATM.DIR.NUM.EXT)             = 7
+        DirNumInt(ABC.ATM.DIR.NUM.INT)             = 8
+        ColoniaCnbv(ABC.ATM.COLONIA.CNBV)          = 9
+        LocalidadBanxico(ABC.ATM.LOCALIDAD.BANXICO)= 10
+        LocalidadCnbv(ABC.ATM.LOCALIDAD.CNBV)      = 11
+        MunicipioCnbv(ABC.ATM.MUNICIPIO.CNBV)      = 12
+        DirEstado(ABC.ATM.DIR.ESTADO)              = 13 
+        VpmEstado(ABC.VPM.ESTADO)                  = 14
+
+        DirCodpos(ABC.ATM.DIR.CODPOS)              = 15
+        Latitud(ABC.ATM.LATITUD)                   = 16
+        Longitud(ABC.ATM.LONGITUD)                 = 17
+        HorarioCajero(ABC.ATM.HORARIO.CAJERO)      = 18
+        ComisionRetiro(ABC.ATM.COMISION.RETIRO)    = 19
+        ComisionConsulta(ABC.ATM.COMISION.CONSULTA = 20
+        CriterioComision(ABC.ATM.CRITERIO.COMISION)= 21
+        TipoAcceso(ABC.ATM.TIPO.ACCESO)            = 22
+        DisplensaBaja(ABC.ATM.DISPLENSA.BAJA)      = 23
+        Iva(ABC.ATM.IVA)                           = 24
+        Denominacion(ABC.ATM.DENOMINACION)         = 25
+        Posicion(ABC.ATM.POSICION)                 = 26
+
+        Reserved2(ABC.ATM.RESERVED.2)              = 27
+        Reserved1(ABC.ATM.RESERVED.1)              = 28
+
+        RecordStatus(ABC.ATM.RECORD.STATUS)        = 29
+        CurrNo(ABC.ATM.CURR.NO)                    = 30
+        Inputter(ABC.ATM.INPUTTER)                 = 31
+        DateTime(ABC.ATM.DATE.TIME)                = 32
+        Authoriser(ABC.ATM.AUTHORISER)             = 33
+        CoCode(ABC.ATM.CO.CODE)                    = 34
+        DeptCode(ABC.ATM.DEPT.CODE)                = 35
+        AuditorCode(ABC.ATM.AUDITOR.CODE)          = 36
+        AuditDateTime(ABC.ATM.AUDIT.DATE.TIME)     = 37
+    }
+}

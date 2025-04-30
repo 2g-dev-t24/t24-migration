@@ -1,0 +1,19 @@
+public table AbcBancos {
+    t24: ABC.BANCOS
+    fields:{
+        ClavePuntoTrans(ABC.BANCOS.BANCO) = 1
+        DenomPuntoTrans(ABC.BANCOS.TIPO) = 2
+        LocalRef(ACB.LOCAL.REF) = 3
+        ClaveSituacion(ABC.BANCOS.XX.BINES)    = 4
+        
+        RecordStatus(ABC.BANCOS.RECORD.STATUS)        = 5
+        CurrNo(ABC.BANCOS.CURR.NO)                    = 6
+        Inputter(ABC.BANCOS.INPUTTER)                 = 7
+        DateTime(ABC.BANCOS.DATE.TIME)                = 8
+        Authoriser(ABC.BANCOS.AUTHORISER)             = 9
+        CoCode(ABC.BANCOS.CO.CODE)                    = 10
+        DeptCode(ABC.BANCOS.DEPT.CODE)                = 11
+        AuditorCode(ABC.BANCOS.AUDITOR.CODE)          = 12
+        AuditDateTime(ABC.BANCOS.AUDIT.DATE.TIME)     = 13
+    }
+}

@@ -1,0 +1,24 @@
+public table AbcUploadFileConcat {
+    t24: ABC.UPLOAD.FILE.CONCAT
+    fields:{
+        
+        NombreCampo(AUFC.NOMBRE.CAMPO)                = 1  
+        ValorValidacion(AUFC.VALOR.VALIDACION)        = 2
+        ValorCampo(AUFC.VALOR.CAMPO)                  = 3
+        LoadOk(AUFC.LOAD.OK)                          = 4
+        ArchivoLinea(AUFC.ARCHIVO.LINEA)              = 5
+        
+        Reserved1(AUFC.RESERVED.1)                    = 6
+        LocalRef(AUFC.LOCAL.REF)                      = 7
+        Override(AUFC.OVERRIDE)                       = 8
+        RecordStatus(AUFC.RECORD.STATUS)              = 9
+        CurrNo(AUFC.CURR.NO)                          = 10
+        Inputter(AUFC.INPUTTER)                       = 11
+        DateTime(AUFC.DATE.TIME)                      = 12
+        Authoriser(AUFC.AUTHORISER)                   = 13
+        CoCode(AUFC.CO.CODE)                          = 14
+        DeptCode(AUFC.DEPT.CODE)                      = 15
+        AuditorCode(AUFC.AUDITOR.CODE)                = 16
+        AuditDateTime(AUFC.AUDIT.DATE.TIME)           = 17
+    }
+}

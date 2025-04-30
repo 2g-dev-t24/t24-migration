@@ -1,0 +1,33 @@
+public table AbcAccCfdiInfo {
+    t24: ABC.ACC.CFDI.INFO
+    fields:{
+        Uuid(ACC.CFDI.UUID) = 1
+        Saldo(ACC.CFDI.SALDO) = 2
+        Reserved15(ACC.CFDI.RESERVED.15) = 3
+        Reserved14(ACC.CFDI.RESERVED.14) = 4
+        Reserved13(ACC.CFDI.RESERVED.13) = 5
+        Reserved12(ACC.CFDI.RESERVED.12) = 6
+        Reserved11(ACC.CFDI.RESERVED.11) = 7
+        Reserved10(ACC.CFDI.RESERVED.10) = 8
+        Reserved9(ACC.CFDI.RESERVED.9) = 9
+        Reserved8(ACC.CFDI.RESERVED.8) = 10
+        Reserved7(ACC.CFDI.RESERVED.7) = 11
+        Reserved6(ACC.CFDI.RESERVED.6) = 12
+        Reserved5(ACC.CFDI.RESERVED.5) = 13
+        Reserved4(ACC.CFDI.RESERVED.4) = 14
+        Reserved3(ACC.CFDI.RESERVED.3) = 15
+        Reserved2(ACC.CFDI.RESERVED.2) = 16
+        Reserved1(ACC.CFDI.RESERVED.1) = 17
+        LocalRef(ACC.CFDI.LOCAL.REF) = 18
+        Override(ACC.CFDI.OVERRIDE) = 19
+        RecordStatus(ACC.CFDI.RECORD.STATUS) = 20
+        CurrNo(ACC.CFDI.CURR.NO) = 21
+        Inputter(ACC.CFDI.INPUTTER) = 22
+        DateTime(ACC.CFDI.DATE.TIME) = 23
+        Authoriser(ACC.CFDI.AUTHORISER) = 24
+        CoCode(ACC.CFDI.CO.CODE) = 25
+        DeptCode(ACC.CFDI.DEPT.CODE) = 26
+        AuditorCode(ACC.CFDI.AUDITOR.CODE) = 27
+        AuditDateTime(ACC.CFDI.AUDIT.DATE.TIME) = 28
+    }
+}

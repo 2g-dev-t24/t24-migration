@@ -1,0 +1,367 @@
+component ABC.BP
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+
+# -------------------------------------------------
+
+# ------------------ CONSTANT START ---------------
+
+# ------------------ CONSTANT END -----------------
+
+# ------------------ TABLE START ------------------
+
+
+# ------------------------------------
+# Tabla ABC.EMAIL.SMS.PARAMETER
+# ------------------------------------
+private method AbcEmailSmsParameter ()
+{
+    jBC: ABC.EMAIL.SMS.PARAMETER
+}
+
+private method AbcEmailSmsParameterFields ()
+{
+    jBC: ABC.EMAIL.SMS.PARAMETER.FIELDS
+}
+
+# ------------------------------------
+# Tabla ABC.EMAIL.DOM.TERR
+# ------------------------------------
+private method AbcEmailDomTerr ()
+{
+    jBC: ABC.EMAIL.DOM.TERR
+}
+private method AbcEmailDomTerrFields ()
+{
+    jBC: ABC.EMAIL.DOM.TERR.FIELDS
+}
+# ------------------------------------
+# Tabla ABC.INFO.VAL.CUS
+# ------------------------------------
+private method AbcInfoValCus ()
+{
+    jBC: ABC.INFO.VAL.CUS
+}
+private method AbcInfoValCusFields ()
+{
+    jBC: ABC.INFO.VAL.CUS.FIELDS
+}
+
+# ------------------------------------
+# Tabla ABC.BIOMETRICOS
+# ------------------------------------
+private method AbcBiometricos ()
+{
+    jBC: ABC.BIOMETRICOS
+}
+private method AbcBiometricosFields ()
+{
+    jBC: ABC.BIOMETRICOS.FIELDS
+}
+
+# ------------------ TABLE END ------------------
+
+# ------------------ METHOD START ------------------
+
+private method AbcCheckCamposLocales ()
+{
+    jBC: ABC.CHECK.CAMPOS.LOCALES
+}
+private method VAbcCusTaxid2Check ()
+{
+    jBC: V.ABC.CUS.TAXID2.CHECK
+}
+private method VAbcCusRelcodeCheck ()
+{
+    jBC: V.ABC.CUS.RELCODE.CHECK
+}
+private method VAbcCusOriRecChk ()
+{
+    jBC: V.ABC.CUS.ORI.REC.CHK
+}
+private method VAbcCusDesRecChk ()
+{
+    jBC: V.ABC.CUS.DES.REC.CHK
+}
+private method AbcValidaNacionalidad ()
+{
+    jBC: ABC.VALIDA.NACIONALIDAD
+}
+private method AbcValidaCusResiStatus ()
+{
+    jBC: ABC.VALIDA.CUS.RESI.STATUS
+}
+private method AbcValStaff ()
+{
+    jBC: ABC.VAL.STAFF
+}
+private method AbcCalcIngTotalCust ()
+{
+    jBC: ABC.CALC.ING.TOTAL.CUST
+}
+
+private method VAbcCusMarStatusChk ()
+{
+    jBC: V.ABC.CUS.MAR.STATUS.CHK
+}
+
+private method VAbcCusDomAnosChk ()
+{
+    jBC: V.ABC.CUS.DOM.ANOS.CHK
+}
+
+private method AbcCustYaexiste ()
+{
+    jBC: ABC.CUST.YAEXISTE
+}
+
+private method AbcCusValidaGenerico ()
+{
+    jBC: ABC.CUS.VALIDA.GENERICO
+}
+
+private method AbcGeneraMnemonic ()
+{
+    jBC: ABC.GENERA.MNEMONIC
+}
+
+private method AbcValCus ()
+{
+    jBC: ABC.VAL.CUS
+}
+
+private method AbcValidaCanalCus ()
+{
+    jBC: ABC.VALIDA.CANAL.CUS
+}
+
+private method AbcValidaClienteExistente ()
+{
+    jBC: ABC.VALIDA.CLIENTE.EXISTENTE
+}
+
+private method VpmNumClienteUnicoChk ()
+{
+    jBC: VPM.NUM.CLIENTE.UNICO.CHK
+}
+private method AbcValidaCusRelcode (INOUT YRelcode string)
+{
+    jBC: ABC.VALIDA.CUS.RELCODE
+}
+
+private method AbcValidaCusMarstatus (INOUT YEdoCivil string)
+{
+    jBC: ABC.VALIDA.CUS.MARSTATUS
+}
+private method AbcValidaFimaElect (INOUT YTieneFirma string)
+{
+    jBC: ABC.VALIDA.FIMA.ELECT
+}
+***
+private method AbcValidaEmpleAbc (INOUT VStaffOff string)
+{
+    jBC: ABC.VALIDA.EMPLE.ABC
+}
+
+private method AbcHabilitaOtraVivienda (INOUT YValor string)
+{
+    jBC: ABC.HABILITA.OTRA.VIVIENDA
+}
+
+private method AbcCusValidaOrigRec (INOUT VOrigenRecursos string)
+{
+    jBC: ABC.CUS.VALIDA.ORIG.REC
+}
+
+private method AbcCusValidaDestRec (INOUT YDestinoRecursos string)
+{
+    jBC: ABC.CUS.VALIDA.DEST.REC
+}
+
+private method AbcGeneraRfc(INOUT InIdCliente string, INOUT OutRfc string, INOUT OutError string)
+{
+    jBC: ABC.GENERA.RFC
+}
+
+private method AbcValTaxId ()
+{
+    jBC: ABC.VAL.TAX.ID
+}
+
+private method VpmCantidadLetra (INOUT InAmt string, INOUT OutAmt string, INOUT LineLength string, INOUT NoOfLines string, INOUT ErrMsg string)
+{
+    jBC: VPM.CANTIDAD.LETRA
+}
+
+private method VpmVCustomerName ()
+{
+    jBC: VPM.V.CUSTOMER.NAME
+}
+
+private method AbcVerificaFolioBiometrico ()
+{
+    jBC: ABC.VERIFICA.FOLIO.BIOMETRICO
+}
+
+private method AbcCustValidaTodo(INOUT YValActual string, INOUT YOrigen string)
+{
+    jBC: ABC.CUST.VALIDA.TODO
+}
+
+private method AbcHabilitaDirCus (INOUT YNumAnios string)
+{
+    jBC: ABC.HABILITA.DIR.CUS
+}
+
+private method AbcValidaEmail ()
+{
+    jBC: ABC.VALIDA.EMAIL
+}
+private method AbcNumClienteUnico ()
+{
+    jBC: ABC.NUM.CLIENTE.UNICO
+}
+private method AbcGetRazonSocial (INOUT YRazonSocial string)
+{
+    jBC: ABC.GET.RAZON.SOCIAL
+}
+private method VAbcGetMnemonic ()
+{
+    jBC: V.ABC.GET.MNEMONIC
+}
+
+private method AbcVCustFechaNac ()
+{
+    jBC: ABC.V.CUST.FECHA.NAC
+}
+
+private method AbcValFmtCurpCliente ()
+{
+    jBC: ABC.VAL.FMT.CURP.CLIENTE
+}
+
+private method AbcValTipoPersona ()
+{
+    jBC: ABC.VAL.TIPO.PERSONA
+}
+
+private method AbcValidaRfcCurp(INOUT YRfc string, INOUT YCurp string, INOUT TipoPersona string, INOUT YErr string)
+{
+    jBC: ABC.VALIDA.RFC.CURP
+}
+# ------------------ METHOD END ------------------
+
+
+private method abcNofileBiometricosAlta (
+    INOUT rData string
+)
+{
+    jBC: ABC.NOFILE.BIOMETRICOS.ALTA
+}
+
+
+
+private method abcLlenaIubCusUser (
+)
+{
+    jBC: ABC.LLENA.IUB.CUS.USER
+}
+
+
+
+private method abcCodiDatosDir (
+    INOUT datos string
+)
+{
+    jBC: ABC.CODI.DATOS.DIR
+}
+
+
+
+private method abcIdColonia (
+    INOUT codigoPostal string,
+    INOUT nombreColonia string,
+    INOUT idColonia string,
+    INOUT yMessage string
+)
+{
+    jBC: ABC.ID.COLONIA
+}
+
+private method AbcESelColEmpleo (
+    INOUT EnqParam string
+)
+{
+    jBC: ABC.E.SEL.COL.EMPLEO
+}
+
+private method AbcNofGetColonia (
+    INOUT RData string
+)
+{
+    jBC: ABC.NOF.GET.COLONIA
+}
+
+private method AbcOfsGetMnemonic (
+)
+{
+    jBC: ABC.OFS.GET.MNEMONIC
+}
+
+
+
+
+
+
+
+private method AbcRtnFechaMenorHoy (
+)
+{
+    jBC: ABC.RTN.FECHA.MENOR.HOY
+}
+
+
+
+private method AbcOfsCustFechaNac (
+)
+{
+    jBC: ABC.OFS.CUST.FECHA.NAC
+}
+
+
+
+private method AbcValidaEdoCurp (
+)
+{
+    jBC: ABC.VALIDA.EDO.CURP
+}
+
+
+
+private method AbcValidaCanal (
+    INOUT yCanal string,
+    INOUT yError string
+)
+{
+    jBC: ABC.VALIDA.CANAL
+}
+
+private method AbcCustNoExistePfs (
+)
+{
+    jBC: ABC.CUST.NOEXISTE.PFS
+}
+
+private method AbcValidaBiomIubCurp (
+)
+{
+    jBC: ABC.VALIDA.BIOM.IUB.CURP
+}
+
+private method AbcCustNoexiste (
+)
+{
+   jBC: ABC.CUST.NOEXISTE
+}
+

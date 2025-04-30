@@ -1,0 +1,18 @@
+public table AbcAaBulkAuthorise {
+    t24: ABC.AA.BULK.AUTHORISE
+    fields:{
+        ArrangementId(ABC.BA.XX.ARRANGEMENT.ID) = 1
+        Contador(ABC.BA.CONTADOR) = 2
+        LocalRef(ABC.BA.LOCAL.REF) = 3
+        Override(ABC.BA.OVERRIDE) = 4
+        RecordStatus(ABC.BA.RECORD.STATUS) = 5
+        CurrNo(ABC.BA.CURR.NO) = 6
+        Inputter(ABC.BA.INPUTTER) = 7
+        DateTime(ABC.BA.DATE.TIME) = 8
+        Authoriser(ABC.BA.AUTHORISER) = 9
+        CoCode(ABC.BA.CO.CODE) = 10
+        DeptCode(ABC.BA.DEPT.CODE) = 11
+        AuditorCode(ABC.BA.AUDITOR.CODE) = 12
+        AuditDateTime(ABC.BA.AUDIT.DATE.TIME) = 13
+    }
+}

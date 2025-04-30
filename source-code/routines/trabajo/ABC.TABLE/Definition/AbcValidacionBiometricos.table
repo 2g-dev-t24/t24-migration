@@ -1,0 +1,28 @@
+public table AbcValidacionBiometricos {
+    t24: ABC.VALIDACION.BIOMETRICOS
+    fields:{
+        Cuc(ABC.VAL.BIO.CUS) = 1
+        Respuesta(ABC.VAL.BIO.RESPUESTA) = 2
+        Verificado(ABC.VAL.BIO.VERIFICADO) = 3
+        Reserved9(ABC.VAL.BIO.RESERVED.9) = 4
+        Reserved8(ABC.VAL.BIO.RESERVED.8) = 5
+        Reserved7(ABC.VAL.BIO.RESERVED.7) = 6
+        Reserved6(ABC.VAL.BIO.RESERVED.6) = 7
+        Reserved5(ABC.VAL.BIO.RESERVED.5) = 8
+        Reserved4(ABC.VAL.BIO.RESERVED.4) = 9
+        Reserved3(ABC.VAL.BIO.RESERVED.3) = 10
+        Reserved2(ABC.VAL.BIO.RESERVED.2) = 11
+        Reserved1(ABC.VAL.BIO.RESERVED.1) = 12
+        LocalRef(ABC.VAL.BIO.LOCAL.REF) = 13
+        Override(ABC.VAL.BIO.OVERRIDE) = 14
+        RecordStatus(ABC.VAL.BIO.RECORD.STATUS) = 15
+        CurrNo(ABC.VAL.BIO.CURR.NO) = 16
+        Inputter(ABC.VAL.BIO.INPUTTER) = 17
+        DateTime(ABC.VAL.BIO.DATE.TIME) = 18
+        Authoriser(ABC.VAL.BIO.AUTHORISER) = 19
+        CoCode(ABC.VAL.BIO.CO.CODE) = 20
+        DeptCode(ABC.VAL.BIO.DEPT.CODE) = 21
+        AuditorCode(ABC.VAL.BIO.AUDITOR.CODE) = 22
+        AuditDateTime(ABC.VAL.BIO.AUDIT.DATE.TIME) = 23
+    }
+}

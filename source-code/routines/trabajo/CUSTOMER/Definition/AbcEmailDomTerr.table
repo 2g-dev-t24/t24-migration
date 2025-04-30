@@ -1,0 +1,22 @@
+public table AbcEmailDomTerr {
+    t24: ABC.EMAIL.DOM.TERR
+    fields:{
+    AbcAespCountryId(ABC.AESP.COUNTRY.ID) = 1
+    AbcAespDominio(ABC.AESP.DOMINIO) = 2
+    AbcAespReserved4(ABC.AESP.RESERVED.4) = 3
+    AbcAespReserved3(ABC.AESP.RESERVED.3) = 4
+    AbcAespReserved2(ABC.AESP.RESERVED.2) = 5
+    AbcAespReserved1(ABC.AESP.RESERVED.1) = 6
+    AbcAespLocalRef(ABC.AESP.LOCAL.REF) = 7
+    AbcAespOverride(ABC.AESP.OVERRIDE) = 8
+    AbcAespRecordStatus(ABC.AESP.RECORD.STATUS) = 9
+    AbcAespCurrNo(ABC.AESP.CURR.NO) = 10
+    AbcAespInputter(ABC.AESP.INPUTTER) = 11
+    AbcAespDateTime(ABC.AESP.DATE.TIME) = 12
+    AbcAespAuthoriser(ABC.AESP.AUTHORISER) = 13
+    AbcAespCoCode(ABC.AESP.CO.CODE) = 14
+    AbcAespDeptCode(ABC.AESP.DEPT.CODE) = 15
+    AbcAespAuditorCode(ABC.AESP.AUDITOR.CODE) = 16
+    AbcAespAuditDateTime(ABC.AESP.AUDIT.DATE.TIME) = 17
+    }
+}

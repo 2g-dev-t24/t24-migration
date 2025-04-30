@@ -1,0 +1,24 @@
+public table AbcCausaBaja {
+    t24: ABC.CAUSA.BAJA
+    fields:{
+        Clave(ACB.CLAVE) = 1
+        Descripcion(ACB.DESCRIPCION) = 2
+        Reserved6(ACB.RESERVED.6) = 3
+        Reserved5(ACB.RESERVED.5) = 4
+        Reserved4(ACB.RESERVED.4) = 5
+        Reserved3(ACB.RESERVED.3) = 6
+        Reserved2(ACB.RESERVED.2) = 7
+        Reserved1(ACB.RESERVED.1) = 8
+        LocalRef(ACB.LOCAL.REF) = 9
+        Override(ACB.OVERRIDE) = 10
+        RecordStatus(ACB.RECORD.STATUS) = 11
+        CurrNo(ACB.CURR.NO) = 12
+        Inputter(ACB.INPUTTER) = 13
+        DateTime(ACB.DATE.TIME) = 14
+        Authoriser(ACB.AUTHORISER) = 15
+        CoCode(ACB.CO.CODE) = 16
+        DeptCode(ACB.DEPT.CODE) = 17
+        AuditorCode(ACB.AUDITOR.CODE) = 18
+        AuditDateTime(ACB.AUDIT.DATE.TIME) = 19
+    }
+}

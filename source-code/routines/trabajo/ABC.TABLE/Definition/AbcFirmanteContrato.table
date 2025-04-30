@@ -1,0 +1,23 @@
+public table AbcFirmanteContrato {
+    t24: ABC.FIRMANTE.CONTRATO
+    fields:{
+        FrContNombre(ABC.FIR.CONT.NOMBRE.FIRMANTE)      = 1
+        ApellidoPaterno(ABC.FIR.CONT.APELLIDO.PATERNO)  = 2
+        ApellidoMaterno(ABC.FIR.CONT.APELLIDO.MATERNO)  = 3
+        Reserved4(ABC.FIR.CONT.RESERVED.4)              = 4
+        Reserved3(ABC.FIR.CONT.RESERVED.3)              = 5
+        Reserved2(ABC.FIR.CONT.RESERVED.2)              = 6
+        Reserved1(ABC.FIR.CONT.RESERVED.1)              = 7
+        LocalRef(ABC.FIR.CONT.LOCAL.REF)                = 8
+        Override(ABC.FIR.CONT.OVERRIDE)                 = 9
+        RecordStatus(ABC.FIR.CONT.RECORD.STATUS)        = 10
+        CurrNo(ABC.FIR.CONT.CURR.NO)                    = 11
+        Inputter(ABC.FIR.CONT.INPUTTER)                 = 12
+        DateTime(ABC.FIR.CONT.DATE.TIME)                = 13
+        Authoriser(ABC.FIR.CONT.AUTHORISER)             = 14
+        CoCode(ABC.FIR.CONT.CO.CODE)                    = 15
+        DeptCode(ABC.FIR.CONT.DEPT.CODE)                = 16
+        AuditorCode(ABC.FIR.CONT.AUDITOR.CODE)          = 17
+        AuditDateTime(ABC.FIR.CONT.AUDIT.DATE.TIME)     = 18
+    }
+}

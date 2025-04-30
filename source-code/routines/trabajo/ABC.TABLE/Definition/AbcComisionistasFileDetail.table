@@ -1,0 +1,27 @@
+public table AbcComisionistasFileDetail {
+    t24: ABC.COMISIONISTAS.FILE.DETAIL
+    fields:{
+        
+        idParam(ACD.ID.PARAM) = 1
+        IdRelacion(ACD.ID.RELACION) = 2
+        IdConcat(ACD.ID.CONCAT) = 3
+        NombreCampo(ACD.NOMBRE.CAMPO) = 4
+        ValorValidacion(ACD.VALOR.VALIDACION) = 5
+        ValorCampo(ACD.VALOR.CAMPO) = 6
+        LoadOk(ACD.LOAD.OK) = 7
+        LoadErrors(ACD.LOAD.ERRORS) = 8
+        
+        Reserved1(ACD.RESERVED.1)                    = 9
+        LocalRef(ACD.LOCAL.REF)                      = 10
+        Override(ACD.OVERRIDE)                       = 11
+        RecordStatus(ACD.RECORD.STATUS)              = 12
+        CurrNo(ACD.CURR.NO)                          = 13
+        Inputter(ACD.INPUTTER)                       = 14
+        DateTime(ACD.DATE.TIME)                      = 15
+        Authoriser(ACD.AUTHORISER)                   = 16
+        CoCode(ACD.CO.CODE)                          = 17
+        DeptCode(ACD.DEPT.CODE)                      = 18
+        AuditorCode(ACD.AUDITOR.CODE)                = 19
+        AuditDateTime(ACD.AUDIT.DATE.TIME)           = 20
+    }
+}
