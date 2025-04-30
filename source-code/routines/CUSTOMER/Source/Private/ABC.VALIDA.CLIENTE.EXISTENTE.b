@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMzkxNjU0Mjk2OkNwMTI1MjoxNzQ1NjEzNDA2MTIxOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 25 Apr 2025 17:36:46
+* @ValidationCode : MjotMTczNTM0NjM2NDpDcDEyNTI6MTc0NjA0MzM3MDc5ODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 30 Apr 2025 17:02:50
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -231,7 +231,9 @@ PROCESO:
         R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusNomPerMoral> = Y.NOM.PER.MORAL
         R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusEstado> = Y.ESTADO
     END
-    WRITE R.VAL.CUS TO F.ABC.INFO.VAL.CUS, Y.RFC.ID
+
+    ABC.BP.AbcInfoValCus.Write(Y.RFC.ID, R.VAL.CUS)
+
 
     IF Y.RFC.BAN EQ '1' THEN
         Y.INSERT<1,1> = Y.RFC
@@ -306,7 +308,8 @@ ELIMINA.INFO.ANTERIOR:
                         END
                     NEXT Y
 
-                    WRITE R.VAL.CUS.NEW TO F.ABC.INFO.VAL.CUS, Y.RFC.OLD.ID
+                    ABC.BP.AbcInfoValCus.Write(Y.RFC.OLD.ID, R.VAL.CUS.NEW)
+
                 END
             END
         END
