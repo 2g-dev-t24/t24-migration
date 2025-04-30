@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo4Nzg4MTg1MDQ6Q3AxMjUyOjE3NDU0NjExNjQxMDc6THVpcyBDYXByYTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 23 Apr 2025 23:19:24
+* @ValidationCode : MjotMTQ2MzU3NzcwNjpDcDEyNTI6MTc0NTk2NDEyNjA0MjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 29 Apr 2025 19:02:06
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -24,11 +24,9 @@ SUBROUTINE ABC.VALIDACION.BIOMETRICOS.FIELDS
     $USING EB.SystemTables
 
 *-----------------------------------------------------------------------------
-    ID.F = "ID"
-    ID.T = 'A'
-    ID.N = '36'
+
  
-    EB.Template.TableDefineid("ID", EB.Template.T24String)
+    EB.Template.TableDefineid("ID", EB.Template.T24BigString)
 *-----------------------------------------------------------------------------
 
     fieldName = 'CUC'
@@ -58,8 +56,9 @@ SUBROUTINE ABC.VALIDACION.BIOMETRICOS.FIELDS
     EB.Template.TableAddreservedfield("RESERVED.3")
     EB.Template.TableAddreservedfield("RESERVED.2")
     EB.Template.TableAddreservedfield("RESERVED.1")
-    EB.Template.TableAddlocalreferencefield(neighbour)
+    EB.Template.TableAddlocalreferencefield('')
     EB.Template.TableAddoverridefield()
+    EB.Template.TableSetauditposition()
 
 
 RETURN
