@@ -1,0 +1,79 @@
+$PACKAGE ABC.BP
+    SUBROUTINE ABC.CUST.NOEXISTE.PFAE
+*================================================================================================================
+* Rutina que VALIDA SI YA EXISTE UN CLIENTE
+* 
+*================================================================================================================
+    $USING EB.DataAccess
+    $USING EB.ErrorProcessing
+    $USING EB.SystemTables
+    $USING ST.Customer
+    $USING EB.Security
+    $USING EB.Display
+    $USING EB.LocalReferences
+    $USING EB.Updates
+    $USING ABC.BP
+
+    GOSUB INITIALIZE
+    GOSUB PROCESS
+
+    RETURN
+
+***********
+INITIALIZE:
+***********
+
+    FN.CUSTOMER = "F.CUSTOMER"
+    F.CUSTOMER = ""
+    EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
+
+    Y.NUM.CUSTOMER = COMI
+    Y.MENSAJE = ""
+    Y.EXISTE.ERROR = 0
+    Y.SECTOR = ""
+    R.CUSTOMER = ""
+
+    Y.CLASS.COTI.POS = ""
+    EB.LocalReferences.GetLocRef("CUSTOMER","CLASS.COTI",Y.CLASS.COTI.POS)
+
+    RETURN
+
+*********
+PROCESS:
+*********
+
+    EB.DataAccess.FRead(FN.CUSTOMER, Y.NUM.CUSTOMER, R.CUSTOMER, F.CUSTOMER, CUST.ERR)
+
+    IF R.CUSTOMER EQ "" THEN
+        Y.EXISTE.ERROR = 1
+        Y.MENSAJE = "CLIENTE " : Y.NUM.CUSTOMER : " NO EXISTE, USE OPCION DE ALTA "
+    END ELSE
+        Y.SECTOR = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
+        Y.CLASS.COTI = R.CUSTOMER<EB.CUS.LOCAL.REF,Y.CLASS.COTI.POS>
+
+        IF Y.SECTOR EQ '1300' THEN 
+          Y.SECTOR = Y.CLASS.COTI
+        
+        IF Y.SECTOR EQ '2001' THEN
+            Y.EXISTE.ERROR = 1
+            Y.MENSAJE = "UTILICE LA OPCION DE MANTENIMIENTO PARA PERSONA MORAL PARA EL CLIENTE " : Y.NUM.CUSTOMER
+        END
+
+        IF Y.SECTOR EQ '1001' THEN
+            Y.EXISTE.ERROR = 1
+            Y.MENSAJE = "UTILICE LA OPCION DE MANTENIMIENTO PARA PERSONA FISICA PARA EL CLIENTE " : Y.NUM.CUSTOMER
+        END
+    END
+
+    IF Y.EXISTE.ERROR EQ 1 THEN
+        ETEXT = Y.MENSAJE
+        E = ETEXT
+        EB.SystemTables.setEtext(E)
+        EB.ErrorProcessing.StoreEndError()
+    END
+
+    EB.Display.RebuildScreen()
+
+    RETURN
+
+END

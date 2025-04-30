@@ -376,3 +376,8 @@ private method AbcCustNoexisteCot (
    jBC: ABC.CUST.NOEXISTE.COT
 }
 
+private method AbcCustNoexistePfae (
+)
+{
+   jBC: ABC.CUST.NOEXISTE.PFAE
+}
