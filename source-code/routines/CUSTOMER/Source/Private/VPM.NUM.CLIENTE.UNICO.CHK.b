@@ -194,11 +194,11 @@ VALIDA.DATOS:
         RETURN
     END
 
-    IF LEN(LUG.NAC) = 0 THEN
-        RES = ETEINC
-        MENSAJE = "FALTA LUGAR DE NACIMIENTO"
-        RETURN
-    END
+*    IF NOT(LUG.NAC) THEN
+*        RES = ETEINC
+*        MENSAJE = "FALTA LUGAR DE NACIMIENTO"
+*        RETURN
+*    END
 
     IF LEN(GENERO) = 0 THEN
         IF LEN(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)) = 0 THEN
