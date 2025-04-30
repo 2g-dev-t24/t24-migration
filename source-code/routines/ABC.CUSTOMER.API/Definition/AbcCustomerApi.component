@@ -1,0 +1,23 @@
+component AbcCustomerApi
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+
+
+
+
+
+private method AbcCreateCustomerAbcAltaDigitalApi (
+)
+{
+    jBC: ABC.CREATE.CUSTOMER.ABC.ALTA.DIGITAL.API
+}
+
+
+
+private method AbcCreateCustomerFisNv4 (
+)
+{
+    jBC: ABC.CREATE.CUSTOMER.FIS.NV4
+}
+

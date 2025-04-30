@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMjAxMTc2NjQ4MzpDcDEyNTI6MTc0NTcwNTU0NTM4MTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 26 Apr 2025 19:12:25
+* @ValidationCode : MjotMTAzMDIxODQ3MTpDcDEyNTI6MTc0NjAzMTA0MjY4OTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 30 Apr 2025 13:37:22
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -10,7 +10,8 @@
 * @ValidationInfo : Bypass GateKeeper : false
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
-$PACKAGE AbcCustomerApi.component
+
+$PACKAGE AbcCustomerApi
 SUBROUTINE ABC.CREATE.CUSTOMER.FIS.NV4
 *-----------------------------------------------------------------------------
 *
@@ -119,18 +120,13 @@ CREAR.OFS.CUSTOMER:
 
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'CUSTOMER'
-    Y.OFS.VERSION   = 'CUSTOMER,ABC.FISICA.DIR.NIVEL4L'
+    Y.OFS.VERSION   = 'CUSTOMER,ALTA.DIGITAL'
     Y.ID            = ''
-    Y.RECORD        = ''
     Y.NO.OF.AUTH    = 0
-    Y.OFS.RECORD    = ''
     Y.GTSMODE       = ''
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID,R.CUSTOMER,Y.OFS.REQUEST)
 
-
-    options = ''
-    options<1> = "AA.COB"
-    EB.Interface.OfsCallBulkManager(options,Y.OFS.REQUEST,theResponse,txnCommitted)
+    EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
 
 RETURN
 
@@ -141,7 +137,7 @@ CREAR.OFS.MXBASE:
 *-----------------------------------------------------------------------------
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'MXBASE.ADD.CUSTOMER.DETAILS'
-    Y.OFS.VERSION   = 'MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.CON.CTE.NIVEL4L'
+    Y.OFS.VERSION   = 'MXBASE.ADD.CUSTOMER.DETAILS,ALTA.DIGITAL'
     Y.ID            = ''
     Y.RECORD        = ''
     Y.NO.OF.AUTH    = 0
@@ -149,14 +145,11 @@ CREAR.OFS.MXBASE:
     Y.GTSMODE       = ''
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID,R.MAP.MXBASE,Y.OFS.REQUEST)
 
-    options = ''
-    options<1> = "AA.COB"
-    EB.Interface.OfsCallBulkManager(options,Y.OFS.REQUEST,theResponse,txnCommitted)
+    EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
 
 
 
 RETURN
-
 END
 
 

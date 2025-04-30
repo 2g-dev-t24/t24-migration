@@ -1,0 +1,144 @@
+* @ValidationCode : MjoxMzY5MTIyODE4OkNwMTI1MjoxNzQ2MDMxMDM0MTk4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 30 Apr 2025 13:37:14
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
+$PACKAGE AbcCustomerApi
+
+SUBROUTINE ABC.CREATE.CUSTOMER.ABC.ALTA.DIGITAL.API
+*-----------------------------------------------------------------------------
+*
+*-----------------------------------------------------------------------------
+* Modification History :
+*-----------------------------------------------------------------------------
+
+*-----------------------------------------------------------------------------
+    $USING EB.DataAccess
+    $USING EB.SystemTables
+    $USING EB.Service
+    $USING EB.API
+    $USING EB.Interface
+    $USING ST.Customer
+    $USING AbcTable
+    $USING EB.Updates
+    $USING MXBASE.CustomerRegulatory
+    $USING EB.Foundation
+    
+    
+    GOSUB CARGAR.LOCAL.FIELDS ; *obtiene los campos locales de CUSTOMER
+    GOSUB MAP.CUSTOMER ; *Mapea los campos de CUSTOMER enviados en la request
+    GOSUB MAP.MXBASE ; *Mapeo campos MXBASE
+    GOSUB CREAR.OFS.CUSTOMER ; *Crea y ejecuta el OFS de CUSTOMER
+    GOSUB CREAR.OFS.MXBASE ; *Crea y ejecuta el OFS de MXBASE
+
+
+*-----------------------------------------------------------------------------
+MAP.CUSTOMER:
+*** <desc>Mapea los campos de CUSTOMER enviados en la request </desc>
+*-----------------------------------------------------------------------------
+
+    R.CUSTOMER = ''
+    R.CUSTOMER<ST.Customer.Customer.EbCusShortName>             = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.shortName)
+    R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>               = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.name1)
+    R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>               = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.name2)
+    R.CUSTOMER<ST.Customer.Customer.EbCusDateOfBirth>           = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.dateOfBirth)
+    R.CUSTOMER<ST.Customer.Customer.EbCusBirthProvince>         = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.lugNac)
+    R.CUSTOMER<ST.Customer.Customer.EbCusGender>                = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.gender)
+    R.CUSTOMER<ST.Customer.Customer.EbCusExternCusId>           = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.externCusId)
+    R.CUSTOMER<ST.Customer.Customer.EbCusSmsOne>                = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.sms1)
+    R.CUSTOMER<ST.Customer.Customer.EbCusEmailOne>              = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.email1)
+    R.CUSTOMER<ST.Customer.Customer.EbCusStreet>                = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.street)
+    R.CUSTOMER<ST.Customer.Customer.EbCusBuildingNumber>        = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.address11)
+    R.CUSTOMER<ST.Customer.Customer.EbCusFlatNumber>            = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.address12)
+    R.CUSTOMER<ST.Customer.Customer.EbCusPostCode>              = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.postCode)
+    R.CUSTOMER<ST.Customer.Customer.EbCusSubDepartment>         = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.dirColonia)
+    R.CUSTOMER<ST.Customer.Customer.EbCusLegalDocName>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legaDocName)
+    R.CUSTOMER<ST.Customer.Customer.EbCusLegalId>               = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalId)
+    R.CUSTOMER<ST.Customer.Customer.EbCusLegalIssDate>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalIssDate)
+    R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalExpDate)
+    R.CUSTOMER<ST.Customer.Customer.EbCusTaxId>                 = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.taxId)
+    R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef>              = Y.LOCAL.REF
+    
+
+RETURN
+*-----------------------------------------------------------------------------
+CARGAR.LOCAL.FIELDS:
+*** <desc>obtiene los campos locales de CUSTOMER </desc>
+*-----------------------------------------------------------------------------
+
+    V.APP      = 'CUSTOMER'
+    V.FLD.NAME = 'L.DOM.FISC' : @VM : 'L.USO.CFDI' : @VM : 'L.CANAL'
+    V.FLD.POS  = ''
+
+    EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, V.FLD.POS)
+    
+    Y.POS.L.DOM.FISC    = V.FLD.POS<1,1>
+    Y.POS.L.USO.CFDI    = V.FLD.POS<1,2>
+    Y.POS.L.CANAL       = V.FLD.POS<1,3>
+
+    Y.LOCAL.REF         = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
+    
+    Y.LOCAL.REF<1,Y.POS.L.DOM.FISC>  = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.domFisc)
+    Y.LOCAL.REF<1,Y.POS.L.USO.CFDI>  = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.usoCfdi)
+    Y.LOCAL.REF<1,Y.POS.L.CANAL>     = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.canal)
+
+RETURN
+
+*-----------------------------------------------------------------------------
+MAP.MXBASE:
+*** <desc>Mapeo campos MXBASE </desc>
+*-----------------------------------------------------------------------------
+    R.MAP.MXBASE = ''
+    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.SatTaxRegime> = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.regFiscal)
+    
+
+RETURN
+
+*-----------------------------------------------------------------------------
+CREAR.OFS.CUSTOMER:
+*** <desc>Crea y ejecuta el OFS de CUSTOMER </desc>
+*-----------------------------------------------------------------------------
+
+    Y.OFS.REQUEST   = ''
+    Y.OFS.APP       = 'CUSTOMER'
+    Y.OFS.VERSION   = 'CUSTOMER,ALTA.DIGITAL'
+    Y.ID            = ''
+    Y.NO.OF.AUTH    = 0
+    Y.GTSMODE       = ''
+    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID,R.CUSTOMER,Y.OFS.REQUEST)
+
+    EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
+
+RETURN
+
+
+*-----------------------------------------------------------------------------
+CREAR.OFS.MXBASE:
+*** <desc>Crea y ejecuta el OFS de MXBASE </desc>
+*-----------------------------------------------------------------------------
+    Y.OFS.REQUEST   = ''
+    Y.OFS.APP       = 'MXBASE.ADD.CUSTOMER.DETAILS'
+    Y.OFS.VERSION   = 'MXBASE.ADD.CUSTOMER.DETAILS,ALTA.DIGITAL'
+    Y.ID            = ''
+    Y.RECORD        = ''
+    Y.NO.OF.AUTH    = 0
+    Y.OFS.RECORD    = ''
+    Y.GTSMODE       = ''
+    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID,R.MAP.MXBASE,Y.OFS.REQUEST)
+
+    EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
+
+
+
+RETURN
+
+
+
+END
