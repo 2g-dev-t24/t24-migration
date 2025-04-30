@@ -63,7 +63,7 @@ LEE.CAMPO:
             EB.ErrorProcessing.StoreEndError()
         RETURN
     END ELSE
-        IF Y.SECTOR GE 3 THEN
+        IF Y.SECTOR GE 1300 THEN
                ETEXT = "NO SE PERMITE EL INGRESO DE ESTA PERSONALIDAD"
                EB.SystemTables.setEtext(ETEXT)
                EB.ErrorProcessing.StoreEndError()
@@ -103,9 +103,9 @@ VALIDA.DUPLICADO:
         Y.CURP.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCurp>
         Y.CLIENTE.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCliente>
 
-        CHANGE VM TO FM IN Y.RFC.LIST
-        CHANGE VM TO FM IN Y.CURP.LIST
-        CHANGE VM TO FM IN Y.CLIENTE.LIST
+        CHANGE @VM TO @FM IN Y.RFC.LIST
+        CHANGE @VM TO @FM IN Y.CURP.LIST
+        CHANGE @VM TO @FM IN Y.CLIENTE.LIST
 
         LOCATE Y.CURP IN Y.CURP.LIST SETTING POS THEN
             Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
