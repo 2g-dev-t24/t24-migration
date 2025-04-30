@@ -1,10 +1,22 @@
+* @ValidationCode : Mjo0Mjc4NTEyNjpDcDEyNTI6MTc0NjA0MzYyMzk0MTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 30 Apr 2025 17:07:03
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE ABC.BP
 *------------------------------------------------------------------------------------
-    SUBROUTINE ABC.VAL.DATOS.COT
+SUBROUTINE ABC.VAL.DATOS.COT
 *------------------------------------------------------------------------------------
-* DESCRIPCION: 
-* FECHA:       
-* AUTOR:       
+* DESCRIPCION:
+* FECHA:
+* AUTOR:
 *
 *===============================================================================
 
@@ -22,7 +34,7 @@ $PACKAGE ABC.BP
     GOSUB INICIALIZA
     GOSUB LEE.CAMPO
 
-    RETURN
+RETURN
 
 ***********
 INICIALIZA:
@@ -40,12 +52,12 @@ INICIALIZA:
     Y.ID.CUS = EB.SystemTables.getIdNew()
 
     Y.RAZON.SOCIAL.ARG = "SHORT" ;
-     Y.RAZON.SOCIAL = ''
+    Y.RAZON.SOCIAL = ''
     
     ABC.BP.AbcGetRazonSocial(Y.RAZON.SOCIAL.ARG)
     Y.RAZON.SOCIAL = Y.RAZON.SOCIAL.ARG
 
-    RETURN
+RETURN
 
 ************
 LEE.CAMPO:
@@ -58,21 +70,28 @@ LEE.CAMPO:
 
 * Valido que Tenga RFC
     IF Y.RFC.VAL EQ '' THEN
-            ETEXT = "EL RFC NO TIENE DATO"
-            EB.SystemTables.setEtext(ETEXT)
-            EB.ErrorProcessing.StoreEndError()
+        ETEXT = "EL RFC NO TIENE DATO"
+        EB.SystemTables.setEtext(ETEXT)
+        EB.ErrorProcessing.StoreEndError()
         RETURN
     END ELSE
+<<<<<<< HEAD
         IF Y.SECTOR GE 1300 THEN
                ETEXT = "NO SE PERMITE EL INGRESO DE ESTA PERSONALIDAD"
                EB.SystemTables.setEtext(ETEXT)
                EB.ErrorProcessing.StoreEndError()
+=======
+        IF Y.SECTOR GE 3 THEN
+            ETEXT = "NO SE PERMITE EL INGRESO DE ESTA PERSONALIDAD"
+            EB.SystemTables.setEtext(ETEXT)
+            EB.ErrorProcessing.StoreEndError()
+>>>>>>> 9eb0162ee2266210057b4b31508405c7e336172b
             RETURN
         END ELSE
             IF LEN(Y.RFC.VAL) NE 13 THEN
-                  ETEXT = "EL RFC NO TIENE LA LONGITUD CORRECTA"
-                  EB.SystemTables.setEtext(ETEXT)
-                  EB.ErrorProcessing.StoreEndError()
+                ETEXT = "EL RFC NO TIENE LA LONGITUD CORRECTA"
+                EB.SystemTables.setEtext(ETEXT)
+                EB.ErrorProcessing.StoreEndError()
                 RETURN
             END
             IF NOT(ALPHA(Y.RFC.VAL[1,4])) OR NOT(NUM(Y.RFC.VAL[5,6])) THEN
@@ -91,7 +110,7 @@ LEE.CAMPO:
         END
     END
 
-    RETURN
+RETURN
 
 *****************
 VALIDA.DUPLICADO:
@@ -119,6 +138,6 @@ VALIDA.DUPLICADO:
         END
     END
 
-    RETURN
+RETURN
 
 END
