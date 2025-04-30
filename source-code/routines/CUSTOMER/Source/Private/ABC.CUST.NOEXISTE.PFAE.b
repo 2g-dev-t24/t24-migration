@@ -27,7 +27,7 @@ INITIALIZE:
     F.CUSTOMER = ""
     EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
 
-    Y.NUM.CUSTOMER = COMI
+    Y.NUM.CUSTOMER = EB.SystemTables.getComi()
     Y.MENSAJE = ""
     Y.EXISTE.ERROR = 0
     Y.SECTOR = ""
@@ -49,7 +49,7 @@ PROCESS:
         Y.MENSAJE = "CLIENTE " : Y.NUM.CUSTOMER : " NO EXISTE, USE OPCION DE ALTA "
     END ELSE
         Y.SECTOR = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
-        Y.CLASS.COTI = R.CUSTOMER<EB.CUS.LOCAL.REF,Y.CLASS.COTI.POS>
+        Y.CLASS.COTI = R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef,Y.CLASS.COTI.POS>
 
         IF Y.SECTOR EQ '1300' THEN 
           Y.SECTOR = Y.CLASS.COTI
