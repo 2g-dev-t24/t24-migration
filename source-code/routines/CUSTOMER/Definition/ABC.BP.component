@@ -370,4 +370,9 @@ private method AbcValDatosCot (
 {
    jBC: ABC.VAL.DATOS.COT
 }
+private method AbcCustNoexisteCot (
+)
+{
+   jBC: ABC.CUST.NOEXISTE.COT
+}
 
