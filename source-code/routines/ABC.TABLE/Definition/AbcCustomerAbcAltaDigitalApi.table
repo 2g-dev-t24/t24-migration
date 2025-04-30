@@ -24,5 +24,6 @@ private table AbcCustomerAbcAltaDigitalApi {
         usoCfdi(ABC.ALTA.DIGITAL.USO.CFDI) = 21
         canal(ABC.ALTA.DIGITAL.CANAL) = 22
         regFiscal(ABC.ALTA.DIGITAL.REG.FISCAL) = 23
+        idCustomer(ABC.ALTA.DIGITAL.ID.CUSTOMER) = 24
     }
 }
