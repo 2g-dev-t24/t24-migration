@@ -20,9 +20,9 @@ SUBROUTINE ABC.VALIDA.EMAIL
         IF Y.EMAIL THEN
             EB.DataAccess.FRead(FN.ABC.EMAIL.SMS.PARAMETER, 'SYSTEM', Y.ABC.EMAIL.PARAM.REC, F.ABC.EMAIL.SMS.PARAMETER, AESP.ERR1)
             IF Y.ABC.EMAIL.PARAM.REC THEN
-                Y.EMAIL.ACC.MIN = Y.ABC.EMAIL.PARAM.REC<ABC.BP.AbcEmailSmsParameter.AbcAespEmailAccMin>
-                Y.EMAIL.DOM.MIN = Y.ABC.EMAIL.PARAM.REC<ABC.BP.AbcEmailSmsParameter.AbcAespEmailDomMin>
-                Y.EMAIL.MAX.DOT = Y.ABC.EMAIL.PARAM.REC<ABC.BP.AbcEmailSmsParameter.AbcAespEmailMaxDot>
+                Y.EMAIL.ACC.MIN = Y.ABC.EMAIL.PARAM.REC<ABC.BP.AbcEmailSmsParameter.AbcAespEmailAccMin><1,1>
+                Y.EMAIL.DOM.MIN = Y.ABC.EMAIL.PARAM.REC<ABC.BP.AbcEmailSmsParameter.AbcAespEmailDomMin><1,1>
+                Y.EMAIL.MAX.DOT = Y.ABC.EMAIL.PARAM.REC<ABC.BP.AbcEmailSmsParameter.AbcAespEmailMaxDot><1,1>
                 VAL.GEN.DOM = Y.ABC.EMAIL.PARAM.REC<ABC.BP.AbcEmailSmsParameter.AbcAespEmailValGenDom>
                 Y.INVALID.CHAR = Y.ABC.EMAIL.PARAM.REC<ABC.BP.AbcEmailSmsParameter.AbcAespInvalidChar>
 
