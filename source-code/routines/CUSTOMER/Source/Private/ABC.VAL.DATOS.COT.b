@@ -75,17 +75,11 @@ LEE.CAMPO:
         EB.ErrorProcessing.StoreEndError()
         RETURN
     END ELSE
-<<<<<<< HEAD
-        IF Y.SECTOR GE 1300 THEN
+
+        IF Y.SECTOR GE "1300" THEN
                ETEXT = "NO SE PERMITE EL INGRESO DE ESTA PERSONALIDAD"
                EB.SystemTables.setEtext(ETEXT)
                EB.ErrorProcessing.StoreEndError()
-=======
-        IF Y.SECTOR GE 3 THEN
-            ETEXT = "NO SE PERMITE EL INGRESO DE ESTA PERSONALIDAD"
-            EB.SystemTables.setEtext(ETEXT)
-            EB.ErrorProcessing.StoreEndError()
->>>>>>> 9eb0162ee2266210057b4b31508405c7e336172b
             RETURN
         END ELSE
             IF LEN(Y.RFC.VAL) NE 13 THEN
