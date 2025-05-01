@@ -11,12 +11,7 @@ $PACKAGE ABC.BP
     $USING EB.ErrorProcessing
     $USING EB.SystemTables
     $USING ST.Customer
-    $USING EB.Security
     $USING EB.Display
-    $USING EB.LocalReferences
-    $USING EB.Updates
-    $USING ABC.BP
-    $USING AbcTable
 
     GOSUB INITIALIZE
     GOSUB PROCESS
@@ -26,12 +21,12 @@ $PACKAGE ABC.BP
 ***********
 INITIALIZE:
 ***********
+
     FN.CUSTOMER = "F.CUSTOMER"
     F.CUSTOMER = ""
     EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
 
-*    Y.NUM.CUSTOMER = EB.SystemTables.getComi()
-    Y.NUM.CUSTOMER = EB.SystemTables.getIdNew()
+    Y.NUM.CUSTOMER = EB.SystemTables.getComi()
     Y.MENSAJE = ""
     Y.EXISTE.ERROR = 0
     Y.SECTOR = ""
@@ -42,7 +37,8 @@ INITIALIZE:
 *********
 PROCESS:
 *********
-    EB.DataAccess.FRead(FN.CUSTOMER, Y.NUM.CUSTOMER, R.CUSTOMER, F.CUSTOMER, CUST.ERR)
+
+    R.CUSTOMER = ST.Customer.Customer.Read(Y.NUM.CUSTOMER,Y.ERROR)
 
     IF R.CUSTOMER EQ "" THEN
         Y.EXISTE.ERROR = 1
@@ -58,10 +54,9 @@ PROCESS:
     END
 
     IF Y.EXISTE.ERROR EQ 1 THEN
-        ETEXT = Y.MENSAJE
-        E = ETEXT
-        EB.SystemTables.setEtext(E)
-        EB.ErrorProcessing.StoreEndError()
+ 
+        EB.SystemTables.setE(Y.MENSAJE)
+        EB.ErrorProcessing.Err()
     END
 
     EB.Display.RebuildScreen()
