@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTc2MDQ0NjcxNzpDcDEyNTI6MTc0NjAzNTA1ODM3MDpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 30 Apr 2025 14:44:18
+* @ValidationCode : MjotMjA2NjY0NTQ2NzpDcDEyNTI6MTc0NjEyNjg4NzI1MjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 01 May 2025 16:14:47
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -51,6 +51,7 @@ SUBROUTINE ABC.CUSTOMER.ABC.ALTA.DIGITAL.API.FIELDS
     EB.Template.TableAddfielddefinition('CANAL'             ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('REG.FISCAL'        ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('ID.CUSTOMER'       ,'100', 'A', '')
+    EB.Template.TableSetauditposition()
     
 END
 

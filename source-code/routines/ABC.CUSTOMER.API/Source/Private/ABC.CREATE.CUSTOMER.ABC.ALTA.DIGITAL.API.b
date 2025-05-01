@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMzY5MTIyODE4OkNwMTI1MjoxNzQ2MDMxMDM0MTk4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 30 Apr 2025 13:37:14
+* @ValidationCode : MjoxNjUxMTIwMTk6Q3AxMjUyOjE3NDYxMjY3NzU4MDY6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 01 May 2025 16:12:55
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -30,6 +30,7 @@ SUBROUTINE ABC.CREATE.CUSTOMER.ABC.ALTA.DIGITAL.API
     $USING EB.Updates
     $USING MXBASE.CustomerRegulatory
     $USING EB.Foundation
+    $USING EB.TransactionControl
     
     
     GOSUB CARGAR.LOCAL.FIELDS ; *obtiene los campos locales de CUSTOMER
@@ -112,7 +113,11 @@ CREAR.OFS.CUSTOMER:
     Y.ID            = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
-    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID,R.CUSTOMER,Y.OFS.REQUEST)
+    
+    GOSUB OBTENER.ID.CUSTOMER ; *Genera un nuevo id de customer para poder  guardarlo en la tabla como resultado
+    
+    
+    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.CUSTOMER,Y.OFS.REQUEST)
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
 
@@ -126,12 +131,11 @@ CREAR.OFS.MXBASE:
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'MXBASE.ADD.CUSTOMER.DETAILS'
     Y.OFS.VERSION   = 'MXBASE.ADD.CUSTOMER.DETAILS,ALTA.DIGITAL'
-    Y.ID            = ''
     Y.RECORD        = ''
     Y.NO.OF.AUTH    = 0
     Y.OFS.RECORD    = ''
     Y.GTSMODE       = ''
-    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID,R.MAP.MXBASE,Y.OFS.REQUEST)
+    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.MAP.MXBASE,Y.OFS.REQUEST)
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
 
@@ -141,4 +145,42 @@ RETURN
 
 
 
+
+*-----------------------------------------------------------------------------
+OBTENER.ID.CUSTOMER:
+*** <desc>Genera un nuevo id de customer para poder  guardarlo en la tabla como resultado </desc>
+*-----------------------------------------------------------------------------
+
+
+    Y.FULL.NAME     = EB.SystemTables.getFullFname()
+    Y.V.FUNCTION    = EB.SystemTables.getVFunction()
+    Y.PGM           = EB.SystemTables.getPgmType()
+    Y.ID.CONCATFILE = EB.SystemTables.getIdConcatfile()
+    Y.SAVE.COMI     = EB.SystemTables.getComi()
+    Y.APPLICATION   = EB.SystemTables.getApplication()
+    
+    EB.SystemTables.setFullFname('FBNK.CUSTOMER')
+    EB.SystemTables.setVFunction('I')
+    EB.SystemTables.setPgmType('.IDA')
+    EB.SystemTables.setIdConcatfile('')
+    EB.SystemTables.setComi('')
+    EB.SystemTables.setApplication('CUSTOMER')
+    
+    EB.TransactionControl.GetNextId('','F')
+
+    Y.ID.CUSTOMER        = EB.SystemTables.getComi()
+    EB.SystemTables.setFullFname(Y.FULL.NAME)
+    EB.SystemTables.setVFunction(Y.V.FUNCTION)
+    EB.SystemTables.setPgmType(Y.PGM)
+    EB.SystemTables.setIdConcatfile(Y.ID.CONCATFILE)
+    EB.SystemTables.setComi(Y.SAVE.COMI)
+    EB.SystemTables.setApplication(Y.APPLICATION)
+
+
+
+
+RETURN
+*** </region>
+
 END
+

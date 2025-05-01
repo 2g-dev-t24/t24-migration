@@ -25,5 +25,14 @@ private table AbcCustomerAbcAltaDigitalApi {
         canal(ABC.ALTA.DIGITAL.CANAL) = 22
         regFiscal(ABC.ALTA.DIGITAL.REG.FISCAL) = 23
         idCustomer(ABC.ALTA.DIGITAL.ID.CUSTOMER) = 24
+        RecordStatus(ABC.ALTA.DIGITAL.RECORD.STATUS)              = 25
+        CurrNo(ABC.ALTA.DIGITAL.CURR.NO)                          = 26
+        Inputter(ABC.ALTA.DIGITAL.INPUTTER)                       = 27
+        DateTime(ABC.ALTA.DIGITAL.DATE.TIME)                      = 28
+        Authoriser(ABC.ALTA.DIGITAL.AUTHORISER)                   = 29
+        CoCode(ABC.ALTA.DIGITAL.CO.CODE)                          = 30
+        DeptCode(ABC.ALTA.DIGITAL.DEPT.CODE)                      = 31
+        AuditorCode(ABC.ALTA.DIGITAL.AUDITOR.CODE)                = 32
+        AuditDateTime(ABC.ALTA.DIGITAL.AUDIT.DATE.TIME)           = 33        
     }
 }
