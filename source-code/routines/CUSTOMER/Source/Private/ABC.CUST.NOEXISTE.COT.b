@@ -30,7 +30,8 @@ INITIALIZE:
     F.CUSTOMER = ""
     EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
 
-    Y.NUM.CUSTOMER = EB.SystemTables.getComi()
+*    Y.NUM.CUSTOMER = EB.SystemTables.getComi()
+    Y.NUM.CUSTOMER = EB.SystemTables.getIdNew()
     Y.MENSAJE = ""
     Y.EXISTE.ERROR = 0
     Y.SECTOR = ""
