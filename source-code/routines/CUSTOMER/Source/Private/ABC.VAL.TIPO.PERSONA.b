@@ -26,14 +26,12 @@ INICIALIZA:
     F.CUSTOMER   = ''
     EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
 
-*   CALL GET.LOC.REF("CUSTOMER", "CLASSIFICATION", POS.CLASSIFICATION)
-
     Y.TIPO.PERSONA = ''
 
     Y.NUM.CUSTOMER = EB.SystemTables.getComi()
     Y.MENSAJE = ""
     Y.EXISTE.ERROR = 0
-    Y.CLASSIFICATION = ""
+    Y.SECTOR = ""
     R.CUSTOMER = ""
 
     RETURN
@@ -47,9 +45,9 @@ PROCESO:
         Y.MENSAJE = " USE OPCION DE ALTA "
     END ELSE
 
-*        Y.CLASSIFICATION = R.CUSTOMER<EB.CUS.LOCAL.REF, POS.CLASSIFICATION>
-        Y.CLASSIFICATION = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
-        IF (Y.CLASSIFICATION NE 1) AND (Y.CLASSIFICATION NE 2) THEN
+
+        Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
+        IF (Y.SECTOR NE '1001') AND (Y.SECTOR NE '1100') THEN
             Y.EXISTE.ERROR = 1
             Y.MENSAJE = "SOLO PERSONA FISICA Y PERSONA FISICA CON ACTIVIDAD EMPRESARIAL"
         END
@@ -62,6 +60,6 @@ PROCESO:
     END
 
     EB.Display.RebuildScreen()
-*    CALL REFRESH.GUI.OBJECTS
+
 
     RETURN

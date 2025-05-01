@@ -77,7 +77,7 @@ PROCESO:
     
     Y.LOCAL.REF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
     Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
-    IF Y.SECTOR EQ '1300' THEN
+    IF Y.SECTOR GE '1300' AND Y.SECTOR GE '1304' THEN
         Y.SECTOR = Y.LOCAL.REF<1,Y.POS.CLASS.COTI>
     END
     Y.RFC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,1>
