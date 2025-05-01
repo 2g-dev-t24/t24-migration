@@ -51,7 +51,7 @@ PROCESS:
         Y.SECTOR = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
         Y.CLASS.COTI = R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef,Y.CLASS.COTI.POS>
 
-        IF Y.SECTOR EQ '1300' THEN 
+        IF Y.SECTOR GE '1300' AND Y.SECTOR LE '1304' THEN 
           Y.SECTOR = Y.CLASS.COTI
         
         IF Y.SECTOR EQ '2001' THEN

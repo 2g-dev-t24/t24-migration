@@ -29,9 +29,9 @@ SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
     $USING EB.Display
     $USING AbcTable
 
-*    IF EB.SystemTables.getMessage() EQ 'VAL' THEN
-*       RETURN
-*     END
+    IF EB.SystemTables.getMessage() EQ 'VAL' THEN
+       RETURN
+     END
     Y.RFC = ''
 
     Y.COMI = EB.SystemTables.getComi()
@@ -65,7 +65,7 @@ GENERA.RFC.CURP:
     Y.LOCAL.REF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
     Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
 
-    IF ( Y.SECTOR = "1001") OR ( Y.SECTOR = "1100") THEN
+    IF ( Y.SECTOR EQ "1001") OR ( Y.SECTOR EQ "1100") THEN
         GOSUB VALIDA.DATOS
         IF (RES = 0) AND (MENSAJE = "") THEN
         END ELSE
@@ -76,7 +76,7 @@ GENERA.RFC.CURP:
             RETURN
         END
     END
-    IF Y.SECTOR = "2001" THEN
+    IF Y.SECTOR EQ "2001" THEN
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusGender, "")
         GOSUB VALIDA.DATOS.M
         IF (RES = 0) AND (MENSAJE = '') THEN
