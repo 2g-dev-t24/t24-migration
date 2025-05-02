@@ -388,3 +388,9 @@ private method AbcESelCol (
 {
     jBC: ABC.E.SEL.COL
 }
+
+private method AbcVerificaFolioBiometricoCot ()
+{
+    jBC: ABC.VERIFICA.FOLIO.BIOMETRICO.COT
+}
+
