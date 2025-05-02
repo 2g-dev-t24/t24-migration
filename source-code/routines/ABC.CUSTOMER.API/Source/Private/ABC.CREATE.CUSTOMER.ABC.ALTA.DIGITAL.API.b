@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNjUxMTIwMTk6Q3AxMjUyOjE3NDYxMjY3NzU4MDY6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 01 May 2025 16:12:55
+* @ValidationCode : MjotNTQ1NDQ2MjgzOkNwMTI1MjoxNzQ2MjE2ODM4Mzg5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 02 May 2025 17:13:58
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -109,7 +109,7 @@ CREAR.OFS.CUSTOMER:
 
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'CUSTOMER'
-    Y.OFS.VERSION   = 'CUSTOMER,ALTA.DIGITAL'
+    Y.OFS.VERSION   = 'CUSTOMER,'
     Y.ID            = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
