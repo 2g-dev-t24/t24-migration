@@ -394,3 +394,7 @@ private method AbcVerificaFolioBiometricoCot ()
     jBC: ABC.VERIFICA.FOLIO.BIOMETRICO.COT
 }
 
+private method AbcValDepExImpuesto ()
+{
+    jBC: ABC.VAL.DEP.EX.IMPUESTO
+}
