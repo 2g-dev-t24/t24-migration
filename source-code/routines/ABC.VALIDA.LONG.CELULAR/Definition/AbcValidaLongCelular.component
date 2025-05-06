@@ -3,10 +3,6 @@ component AbcValidaLongCelular
 # Component Isolation Definition
 metamodelVersion 1.6
 
-
-# ------------------ METHOD END ------------------
-
-
 private method AbcValidaLongCelular (
 )
 {
