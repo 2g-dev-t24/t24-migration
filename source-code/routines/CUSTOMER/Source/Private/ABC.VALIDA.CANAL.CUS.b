@@ -40,7 +40,7 @@ INICIALIZA:
 ***********
 
     Y.APP.LOC = 'CUSTOMER'
-    Y.FIELD.LOC = 'CANAL'
+    Y.FIELD.LOC = 'L.CANAL'
     Y.POS.LOC = ''
     EB.Updates.MultiGetLocRef(Y.APP.LOC, Y.FIELD.LOC, Y.POS.LOC)
 
