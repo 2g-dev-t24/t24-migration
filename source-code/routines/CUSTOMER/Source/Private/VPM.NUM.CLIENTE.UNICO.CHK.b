@@ -32,16 +32,9 @@ SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
     IF EB.SystemTables.getMessage() EQ 'VAL' THEN
        RETURN
      END
-    Y.RFC = ''
 
-    Y.COMI = EB.SystemTables.getComi()
-    IF Y.COMI THEN
-        Y.RFC = Y.COMI
-    END ELSE
-        Y.REF.GET = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
-        Y.RFC = Y.REF.GET<1,1>
-    END
-
+    Y.REF.GET = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
+    Y.RFC = Y.REF.GET<1,1>
     Y.ID.CUS = EB.SystemTables.getIdNew()
 
     GOSUB ABRE.TABLAS
@@ -62,7 +55,7 @@ GENERA.RFC.CURP:
     RES = ETEOK
     MENSAJE = ''
     CLAVE.ALFA = ''
-    Y.LOCAL.REF = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
+
     Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
 
     IF ( Y.SECTOR EQ "1001") OR ( Y.SECTOR EQ "1100") THEN
@@ -200,13 +193,13 @@ VALIDA.DATOS:
 *        RETURN
 *    END
 
-    IF LEN(GENERO) = 0 THEN
-        IF LEN(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)) = 0 THEN
-            RES = ETEINC
-            MENSAJE = "FALTA SEXO"
-            RETURN
-        END
-    END
+*    IF LEN(GENERO) = 0 THEN
+*        IF LEN(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)) = 0 THEN
+*            RES = ETEINC
+*            MENSAJE = "FALTA SEXO"
+*            RETURN
+*        END
+*    END
 RETURN
 
 VALIDA.DATOS.M:
