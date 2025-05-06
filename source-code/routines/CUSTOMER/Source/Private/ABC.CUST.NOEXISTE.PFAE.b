@@ -53,7 +53,7 @@ PROCESS:
 
         IF Y.SECTOR GE '1300' AND Y.SECTOR LE '1304' THEN 
           Y.SECTOR = Y.CLASS.COTI
-        
+        END
         IF Y.SECTOR EQ '2001' THEN
             Y.EXISTE.ERROR = 1
             Y.MENSAJE = "UTILICE LA OPCION DE MANTENIMIENTO PARA PERSONA MORAL PARA EL CLIENTE " : Y.NUM.CUSTOMER
@@ -66,9 +66,8 @@ PROCESS:
     END
 
     IF Y.EXISTE.ERROR EQ 1 THEN
-        ETEXT = Y.MENSAJE
-        E = ETEXT
-        EB.SystemTables.setEtext(E)
+        EB.SystemTables.setEtext(Y.MENSAJE)
+        EB.SystemTables.setE(EB.SystemTables.getEtext())
         EB.ErrorProcessing.StoreEndError()
     END
 
