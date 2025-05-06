@@ -76,7 +76,7 @@ LEE.CAMPO:
         RETURN
     END ELSE
 
-        IF Y.SECTOR GE "1300" AND Y.SECTOR LE "1304" THEN
+        IF Y.SECTOR NE "1300" AND Y.SECTOR NE "1301" AND Y.SECTOR NE "1302" AND Y.SECTOR NE "1303" AND Y.SECTOR NE "1304" THEN
                ETEXT = "NO SE PERMITE EL INGRESO DE ESTA PERSONALIDAD"
                EB.SystemTables.setEtext(ETEXT)
                EB.ErrorProcessing.StoreEndError()
