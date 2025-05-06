@@ -398,3 +398,10 @@ private method AbcValDepExImpuesto ()
 {
     jBC: ABC.VAL.DEP.EX.IMPUESTO
 }
+
+private method AbcESelCol2 (
+    INOUT EnqParam string
+)
+{
+    jBC: ABC.E.SEL.COL2
+}
