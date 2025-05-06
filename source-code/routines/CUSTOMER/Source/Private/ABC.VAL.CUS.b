@@ -207,30 +207,30 @@ RETURN
 VALIDA.DATOS:
 *************
 
-    IF LEN(Y.APE.PAT) = 0 THEN
-        MENSAJE = "FALTA APELLIDO PATERNO"
-        RETURN
-    END
+*    IF LEN(Y.APE.PAT) = 0 THEN
+*        MENSAJE = "FALTA APELLIDO PATERNO"
+*        RETURN
+*    END
 
-    IF LEN(Y.APE.MAT) = 0 THEN
-        MENSAJE = "FALTA APELLIDO MATERNO"
-        RETURN
-    END
+*    IF LEN(Y.APE.MAT) = 0 THEN
+*        MENSAJE = "FALTA APELLIDO MATERNO"
+*        RETURN
+*    END
 
-    IF LEN(Y.NOMBRE) = 0 THEN
-        MENSAJE = "FALTA PRIMER NOMBRE"
-        RETURN
-    END
+*    IF LEN(Y.NOMBRE) = 0 THEN
+*        MENSAJE = "FALTA PRIMER NOMBRE"
+*        RETURN
+*    END
 
-    IF LEN(Y.FEC.NAC) = 0 THEN
-        MENSAJE = "FALTA FECHA DE NACIMIENTO"
-        RETURN
-    END
+*    IF LEN(Y.FEC.NAC) = 0 THEN
+*        MENSAJE = "FALTA FECHA DE NACIMIENTO"
+*        RETURN
+*    END
 
-    IF LEN(Y.SEXO) = 0 THEN
-        MENSAJE = "FALTA SEXO"
-        RETURN
-    END
+*    IF LEN(Y.SEXO) = 0 THEN
+*        MENSAJE = "FALTA SEXO"
+*        RETURN
+*    END
 
 RETURN
 
