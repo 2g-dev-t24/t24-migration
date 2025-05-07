@@ -776,14 +776,14 @@ VALIDA.DATOS:
 *        RETURN
 *    END
 
-    IF LEN(GENERO) EQ 0 THEN
-        IF LEN(COMI) EQ 0 THEN
-            RES = ETEINC
-            MENSAJE = "FALTA SEXO"
-            RETURN
-        END
-
-    END
+*    IF LEN(GENERO) EQ 0 THEN
+*        IF LEN(COMI) EQ 0 THEN
+*            RES = ETEINC
+*            MENSAJE = "FALTA SEXO"
+*            RETURN
+*        END
+*
+*    END
 RETURN
 
 VALIDA.DATOS.M:
