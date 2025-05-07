@@ -7,10 +7,10 @@ metamodelVersion 1.6
 
 
 
-private method AbcCreateCustomerAbcAltaDigitalApi (
+private method AbcCreateCustomerADigApi (
 )
 {
-    jBC: ABC.CREATE.CUSTOMER.ABC.ALTA.DIGITAL.API
+    jBC: ABC.CREATE.CUSTOMER.A.DIG.API
 }
 
 
