@@ -1,11 +1,23 @@
+* @ValidationCode : Mjo2NTE5NzM3NTQ6Q3AxMjUyOjE3NDY1ODg1OTY3Nzk6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 07 May 2025 00:29:56
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : mauricio.lopez
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE ABC.BP
-    SUBROUTINE ABC.VAL.TIPO.PERSONA
+SUBROUTINE ABC.VAL.TIPO.PERSONA
 *===============================================================================
 * Nombre de Programa : ABC.VAL.TIPO.PERSONA
 * Objetivo           : ID RTN para validar que el registro de CUSTOMER sea de
 *                      persona fisica o fisica con actividad empresarial
-* Desarrollador      : 
-* Fecha Creacion     : 
+* Desarrollador      :
+* Fecha Creacion     :
 * Modificaciones:
 *===============================================================================
 
@@ -17,7 +29,7 @@ $PACKAGE ABC.BP
     $USING EB.Display
     GOSUB INICIALIZA
     GOSUB PROCESO
-    RETURN
+RETURN
 
 *---------------------------------------------------------------
 INICIALIZA:
@@ -34,7 +46,7 @@ INICIALIZA:
     Y.SECTOR = ""
     R.CUSTOMER = ""
 
-    RETURN
+RETURN
 *---------------------------------------------------------------
 PROCESO:
 *---------------------------------------------------------------
@@ -46,7 +58,7 @@ PROCESO:
     END ELSE
 
 
-        Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
+        Y.SECTOR = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
         IF (Y.SECTOR NE '1001') AND (Y.SECTOR NE '1100') THEN
             Y.EXISTE.ERROR = 1
             Y.MENSAJE = "SOLO PERSONA FISICA Y PERSONA FISICA CON ACTIVIDAD EMPRESARIAL"
@@ -55,11 +67,11 @@ PROCESO:
 
     IF Y.EXISTE.ERROR EQ 1 THEN
         ETEXT = Y.MENSAJE
-        EB.SystemTables.setEtext(ETEXT)
+        EB.SystemTables.setE(ETEXT)
         EB.ErrorProcessing.StoreEndError()
     END
 
     EB.Display.RebuildScreen()
 
 
-    RETURN
+RETURN
