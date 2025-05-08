@@ -50,6 +50,7 @@ SUBROUTINE ABC.CUSTOMER.ABC.ALTA.DIGITAL.API.FIELDS
     EB.Template.TableAddfielddefinition('USO.CFDI'          ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('CANAL'             ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('REG.FISCAL'        ,'100', 'A', '')
+    EB.Template.TableAddfielddefinition('MNEMONIC'          ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('ID.CUSTOMER'       ,'100', 'A', '')
     EB.Template.TableSetauditposition()
     
