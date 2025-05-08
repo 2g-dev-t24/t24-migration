@@ -48,16 +48,22 @@ SUBROUTINE ABC.NUM.CLIENTE.UNICO
     GOSUB ABRE.TABLAS
     GOSUB MANTEN.REGISTRO
     GOSUB GENERA.RFC.CURP
-    GOSUB CLIENTE.DUPLICADO
+*    GOSUB CLIENTE.DUPLICADO
     EB.Display.RebuildScreen()
 RETURN
 
 
 GENERA.RFC.CURP:
 *.. INDICA EL TIPO DE INFORMACION 1 PARA LA INF. INCORRECTA Y 0 PARA LA INF. CORRECTA
-    ETEINC = 1; ETEOK = 0
+    ETEINC = 1
+    ETEOK = 0
 *.. INICIALIZA VARIABLES
-    CLIENTE.UNICO = ''; CLIENTE.UNICO.RFC = ''; CLIENTE.UNICO.CURP = ''; RES = ETEOK; MENSAJE = ''; CLAVE.ALFA = ''
+    CLIENTE.UNICO = ''
+    CLIENTE.UNICO.RFC = ''
+    CLIENTE.UNICO.CURP = ''
+    RES = ETEOK
+    MENSAJE = ''
+    CLAVE.ALFA = ''
 
 
     IF ( EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) EQ "1001") OR ( EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector) EQ "1100") THEN
@@ -127,9 +133,14 @@ CALCULA.NUM.CTE:
 ******************************************************************************************************************
 
     Y.APE.PAT  = DCOUNT(APE.PATERNO, ' ')
-    IF Y.APE.PAT GT 1 THEN; GOSUB VALIDA.APE; END
+    IF Y.APE.PAT GT 1 THEN
+     GOSUB VALIDA.APE
+    END
+
     Y.APE.MAT = DCOUNT(APE.MATERNO, ' ')
-    IF Y.APE.MAT GT 1 THEN; GOSUB VALIDA.APE.2; END
+    IF Y.APE.MAT GT 1 THEN
+     GOSUB VALIDA.APE.2
+    END
 
     LONG.NOM  = LEN(NOM.COMPLETO)
     FOR POS.CARACTER = 1 TO LONG.NOM
