@@ -72,32 +72,9 @@ GENERA.RFC.CURP:
             GOSUB CALCULA.NUM.CTE
 
             V.RFC = ""
-            *ABC.BP.AbcGeneraRfc('', '', '' )
-            *GOSUB SET.LISTA.ANEXO.3
-            *CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP[1,10]
-            *A.SUM.DIG = 0
-            *A.FACTOR = 13
+            ABC.BP.AbcGeneraRfc('', '', '' )
 
-            *AUX.RFC = CLIENTE.UNICO.RFC
-
-            *IF LEN(AUX.RFC) EQ 11 THEN AUX.RFC = ' ' : AUX.RFC
-
-            *FOR A.I.NOM = 1 TO 12
-
-            *    FIND ('K' : AUX.RFC[A.I.NOM, 1]) IN A.ANEXO.3 SETTING Ap,Vp THEN
-            *        A.SUM.DIG += A.ANEXO.3<Ap, 2> * A.FACTOR
-            *        A.FACTOR -= 1
-            *    END
-            *NEXT A.I.NOM
-
-            *A.RES.DIG = MOD(A.SUM.DIG, 11)
-
-            *IF A.RES.DIG GT 0 THEN
-            *    A.RES.DIG = 11 - A.RES.DIG
-            *    IF A.RES.DIG EQ 10 THEN A.RES.DIG = 'A'
-            *END
-
-            CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP<1,1>[1,10] ;*:A.RES.DIG
+            CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP<1,1>[1,10]
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, CLIENTE.UNICO.RFC)
 
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,CLIENTE.UNICO.CURP<1,1>)
@@ -131,49 +108,7 @@ GENERA.RFC.CURP:
         END
     END
 RETURN
-SET.LISTA.ANEXO.3:
 
-    A.ANEXO.3  = 'K0'  : VM : '00' : FM
-    A.ANEXO.3 := 'K1'  : VM : '01' : FM
-    A.ANEXO.3 := 'K2'  : VM : '02' : FM
-    A.ANEXO.3 := 'K3'  : VM : '03' : FM
-    A.ANEXO.3 := 'K4'  : VM : '04' : FM
-    A.ANEXO.3 := 'K5'  : VM : '05' : FM
-    A.ANEXO.3 := 'K6'  : VM : '06' : FM
-    A.ANEXO.3 := 'K7'  : VM : '07' : FM
-    A.ANEXO.3 := 'K8'  : VM : '08' : FM
-    A.ANEXO.3 := 'K9'  : VM : '09' : FM
-    A.ANEXO.3 := 'KA'  : VM : '10' : FM
-    A.ANEXO.3 := 'KB'  : VM : '11' : FM
-    A.ANEXO.3 := 'KC'  : VM : '12' : FM
-    A.ANEXO.3 := 'KD'  : VM : '13' : FM
-    A.ANEXO.3 := 'KE'  : VM : '14' : FM
-    A.ANEXO.3 := 'KF'  : VM : '15' : FM
-    A.ANEXO.3 := 'KG'  : VM : '16' : FM
-    A.ANEXO.3 := 'KH'  : VM : '17' : FM
-    A.ANEXO.3 := 'KI'  : VM : '18' : FM
-    A.ANEXO.3 := 'KJ'  : VM : '19' : FM
-    A.ANEXO.3 := 'KK'  : VM : '20' : FM
-    A.ANEXO.3 := 'KL'  : VM : '21' : FM
-    A.ANEXO.3 := 'KM'  : VM : '22' : FM
-    A.ANEXO.3 := 'KN'  : VM : '23' : FM
-    A.ANEXO.3 := 'K&'  : VM : '24' : FM
-    A.ANEXO.3 := 'KO'  : VM : '25' : FM
-    A.ANEXO.3 := 'KP'  : VM : '26' : FM
-    A.ANEXO.3 := 'KQ'  : VM : '27' : FM
-    A.ANEXO.3 := 'KR'  : VM : '28' : FM
-    A.ANEXO.3 := 'KS'  : VM : '29' : FM
-    A.ANEXO.3 := 'KT'  : VM : '30' : FM
-    A.ANEXO.3 := 'KU'  : VM : '31' : FM
-    A.ANEXO.3 := 'KV'  : VM : '32' : FM
-    A.ANEXO.3 := 'KW'  : VM : '33' : FM
-    A.ANEXO.3 := 'KX'  : VM : '34' : FM
-    A.ANEXO.3 := 'KY'  : VM : '35' : FM
-    A.ANEXO.3 := 'KZ'  : VM : '36' : FM
-    A.ANEXO.3 := 'K '  : VM : '37' : FM
-    A.ANEXO.3 := 'K':Y.MAYUS  : VM : '38' : FM
-
-RETURN
 ***************************************
 *     CALCULA A PERSONA FISICA        *
 ***************************************
