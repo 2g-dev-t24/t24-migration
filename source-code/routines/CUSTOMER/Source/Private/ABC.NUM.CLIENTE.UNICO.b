@@ -219,7 +219,7 @@ CALCULA.NUM.CTE:
 *..MUEVE GENERO
 
 
-    SEXO = COMI
+    SEXO = EB.SystemTables.getComi()
     SEXO = UPCASE(SEXO)
     IF (SEXO EQ "MASCULINO") THEN
         CLIENTE.UNICO.CURP[11,1] = "H"
