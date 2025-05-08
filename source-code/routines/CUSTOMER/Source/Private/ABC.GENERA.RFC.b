@@ -42,7 +42,7 @@ INICIALIZACION:
 
     CTE.CAMPOS.LOCALES = ""
     POS.CLASSIFICATION = 0
-    CTE.CLASSIFICATION = ""
+    Y.SECTOR = ""
 
     GOSUB SET.LISTA.ANEXO.1
     GOSUB SET.LISTA.ANEXO.2
@@ -74,9 +74,9 @@ PROCESO:
 
 
     IF IN.ID.CLIENTE NE "" THEN
-        CTE.CLASSIFICATION = CTE.RS<ST.Customer.Customer.EbCusSector>
+        Y.SECTOR = CTE.RS<ST.Customer.Customer.EbCusSector>
     END ELSE
-        CTE.CLASSIFICATION = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
+        Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
     END
 
 ***
@@ -102,7 +102,7 @@ PROCESO:
 
     GOSUB SET.NOMBRE.CLIENTE
 
-    IF CTE.CLASSIFICATION LT 3 THEN
+    IF Y.SECTOR LT 1001 THEN
 
         GOSUB PROCESO.PER.FIS
 
@@ -428,7 +428,7 @@ SET.NOMBRE.CLIENTE:
         A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,"  "," ")
         A.FIS.NOMBRE = TRIM(A.FIS.NOMBRE)
 
-        IF CTE.CLASSIFICATION LT 3 THEN
+        IF Y.SECTOR LT 1300 THEN
             A.CLIENTE = A.FIS.APE.PATERNO : ' ' : A.FIS.APE.MATERNO : ' ' : A.FIS.NOMBRE
         END ELSE
             A.CLIENTE = A.FIS.APE.MATERNO
