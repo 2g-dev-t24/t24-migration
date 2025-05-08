@@ -72,7 +72,33 @@ GENERA.RFC.CURP:
             GOSUB CALCULA.NUM.CTE
 
             V.RFC = ""
-            ABC.BP.AbcGeneraRfc('', '', '' )
+            *ABC.BP.AbcGeneraRfc('', '', '' )
+
+            CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP[1,10]
+            A.SUM.DIG = 0
+            A.FACTOR = 13
+
+            AUX.RFC = CLIENTE.UNICO.RFC
+
+            IF LEN(AUX.RFC) EQ 11 THEN AUX.RFC = ' ' : AUX.RFC
+
+            FOR A.I.NOM = 1 TO 12
+
+                FIND ('K' : AUX.RFC[A.I.NOM, 1]) IN A.ANEXO.3 SETTING Ap,Vp THEN
+                    A.SUM.DIG += A.ANEXO.3<Ap, 2> * A.FACTOR
+                    A.FACTOR -= 1
+                END
+            NEXT A.I.NOM
+
+            A.RES.DIG = MOD(A.SUM.DIG, 11)
+
+            IF A.RES.DIG GT 0 THEN
+                A.RES.DIG = 11 - A.RES.DIG
+                IF A.RES.DIG EQ 10 THEN A.RES.DIG = 'A'
+            END
+
+            CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP[1,10]:A.RES.DIG
+            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, CLIENTE.UNICO.RFC)
 
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,CLIENTE.UNICO.CURP)
 
