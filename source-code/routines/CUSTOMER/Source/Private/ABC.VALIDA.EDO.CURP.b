@@ -30,7 +30,7 @@ SUBROUTINE ABC.VALIDA.EDO.CURP
     GOSUB INIT
     GOSUB OPEN.FILES
 
-    Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>
+*    Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>
 
     IF Y.LUG.NAC NE '' THEN
         Y.LUG.NAC.CURP = Y.CURP[12,2]
@@ -69,15 +69,15 @@ RETURN
 *****
 INIT:
 *****
-    V.APP      = 'CUSTOMER'
-    V.FLD.NAME = 'BIRTH.PROVINCE'
-    V.FLD.POS  = ''
+*    V.APP      = 'CUSTOMER'
+*    V.FLD.NAME = 'BIRTH.PROVINCE'
+*    V.FLD.POS  = ''
 
-    EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, Y.POS.LUG.NAC)
-    Y.POS.BIRTH.PROV = Y.POS.LUG.NAC<1,1> 
+*    EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, Y.POS.LUG.NAC)
+*    Y.POS.BIRTH.PROV = Y.POS.LUG.NAC<1,1> 
     
     Y.CURP = EB.SystemTables.getComi()
-
+    Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
 RETURN
 
 END
