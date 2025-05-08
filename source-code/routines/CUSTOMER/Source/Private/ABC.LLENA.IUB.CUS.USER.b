@@ -1,3 +1,15 @@
+* @ValidationCode : MjotMTc1NTcyNDM3NzpDcDEyNTI6MTc0Njc0MTczNjkzNzptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 08 May 2025 19:02:16
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : mauricio.lopez
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE ABC.BP
 SUBROUTINE ABC.LLENA.IUB.CUS.USER
 *===============================================================================
@@ -19,7 +31,7 @@ SUBROUTINE ABC.LLENA.IUB.CUS.USER
 
     GOSUB INICIALIZA
     GOSUB PROCESO
-    RETURN
+RETURN
 
 *---------------------------------------------------------------
 INICIALIZA:
@@ -46,7 +58,7 @@ INICIALIZA:
     R.CSTOMER = ''
     R.USR.EJE = ''
 
-    RETURN
+RETURN
 *---------------------------------------------------------------
 PROCESO:
 *---------------------------------------------------------------
@@ -108,7 +120,7 @@ PROCESO:
         END
     END
 
-    RETURN
+RETURN
 *---------------------------------------------------------------
 LEE.CLIENTE:
 *---------------------------------------------------------------
@@ -125,7 +137,7 @@ LEE.CLIENTE:
         END
     END
 
-    RETURN
+RETURN
 *---------------------------------------------------------------
 LEE.EJECUTIVO:
 *---------------------------------------------------------------
@@ -152,17 +164,17 @@ LEE.EJECUTIVO:
         EB.SystemTables.setE('EJECUTIVO NO ENCONTRADO')
     END
 
-    RETURN
+RETURN
 *---------------------------------------------------------------
 ACTUALIZA.EJECUTIVO:
 *---------------------------------------------------------------
 
     R.USR.EJE<EB.Security.User.UseLocalRef,POS.IUB.USER> = Y.IUB.BIO
-    R.USR.EJE<EB.Security.User.UseLocalRef,POS.IUB.USER> = Y.ROL.USE
+    R.USR.EJE<EB.Security.User.UseLocalRef,POS.ROL.USER> = Y.ROL.USE
 
     EB.DataAccess.FWrite(FN.USER,Y.ID.USER,R.USR.EJE)
 
-    RETURN
+RETURN
 *---------------------------------------------------------------
 ACTUALIZA.CLIENTE:
 *---------------------------------------------------------------
@@ -170,4 +182,4 @@ ACTUALIZA.CLIENTE:
     R.CSTOMER<ST.Customer.Customer.EbCusLocalRef,POS.IUB.CUS> = Y.IUB.BIO
     EB.DataAccess.FWrite(FN.CUSTOMER,Y.ID.CUST,R.CSTOMER)
 
-    RETURN
+RETURN
