@@ -732,9 +732,9 @@ RETURN
 ****************
 MANTEN.REGISTRO:
 ****************
-    Y.VAL.ACTUAL = COMI
-    Y.ORIGEN = "GENERICO"
-    ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
+*    Y.VAL.ACTUAL = EB.SystemTables.getComi()
+*    Y.ORIGEN = "GENERICO"
+*    ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
 RETURN
 
 ***************
