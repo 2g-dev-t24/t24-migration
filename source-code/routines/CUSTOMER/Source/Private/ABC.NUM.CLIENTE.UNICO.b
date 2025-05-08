@@ -73,7 +73,7 @@ GENERA.RFC.CURP:
 
             V.RFC = ""
             *ABC.BP.AbcGeneraRfc('', '', '' )
-
+            GOSUB SET.LISTA.ANEXO.3
             CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP[1,10]
             A.SUM.DIG = 0
             A.FACTOR = 13
@@ -131,7 +131,49 @@ GENERA.RFC.CURP:
         END
     END
 RETURN
+SET.LISTA.ANEXO.3:
 
+    A.ANEXO.3  = 'K0'  : VM : '00' : FM
+    A.ANEXO.3 := 'K1'  : VM : '01' : FM
+    A.ANEXO.3 := 'K2'  : VM : '02' : FM
+    A.ANEXO.3 := 'K3'  : VM : '03' : FM
+    A.ANEXO.3 := 'K4'  : VM : '04' : FM
+    A.ANEXO.3 := 'K5'  : VM : '05' : FM
+    A.ANEXO.3 := 'K6'  : VM : '06' : FM
+    A.ANEXO.3 := 'K7'  : VM : '07' : FM
+    A.ANEXO.3 := 'K8'  : VM : '08' : FM
+    A.ANEXO.3 := 'K9'  : VM : '09' : FM
+    A.ANEXO.3 := 'KA'  : VM : '10' : FM
+    A.ANEXO.3 := 'KB'  : VM : '11' : FM
+    A.ANEXO.3 := 'KC'  : VM : '12' : FM
+    A.ANEXO.3 := 'KD'  : VM : '13' : FM
+    A.ANEXO.3 := 'KE'  : VM : '14' : FM
+    A.ANEXO.3 := 'KF'  : VM : '15' : FM
+    A.ANEXO.3 := 'KG'  : VM : '16' : FM
+    A.ANEXO.3 := 'KH'  : VM : '17' : FM
+    A.ANEXO.3 := 'KI'  : VM : '18' : FM
+    A.ANEXO.3 := 'KJ'  : VM : '19' : FM
+    A.ANEXO.3 := 'KK'  : VM : '20' : FM
+    A.ANEXO.3 := 'KL'  : VM : '21' : FM
+    A.ANEXO.3 := 'KM'  : VM : '22' : FM
+    A.ANEXO.3 := 'KN'  : VM : '23' : FM
+    A.ANEXO.3 := 'K&'  : VM : '24' : FM
+    A.ANEXO.3 := 'KO'  : VM : '25' : FM
+    A.ANEXO.3 := 'KP'  : VM : '26' : FM
+    A.ANEXO.3 := 'KQ'  : VM : '27' : FM
+    A.ANEXO.3 := 'KR'  : VM : '28' : FM
+    A.ANEXO.3 := 'KS'  : VM : '29' : FM
+    A.ANEXO.3 := 'KT'  : VM : '30' : FM
+    A.ANEXO.3 := 'KU'  : VM : '31' : FM
+    A.ANEXO.3 := 'KV'  : VM : '32' : FM
+    A.ANEXO.3 := 'KW'  : VM : '33' : FM
+    A.ANEXO.3 := 'KX'  : VM : '34' : FM
+    A.ANEXO.3 := 'KY'  : VM : '35' : FM
+    A.ANEXO.3 := 'KZ'  : VM : '36' : FM
+    A.ANEXO.3 := 'K '  : VM : '37' : FM
+    A.ANEXO.3 := 'K':Y.MAYUS  : VM : '38' : FM
+
+RETURN
 ***************************************
 *     CALCULA A PERSONA FISICA        *
 ***************************************
