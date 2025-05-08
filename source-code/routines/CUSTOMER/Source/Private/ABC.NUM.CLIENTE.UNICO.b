@@ -73,31 +73,31 @@ GENERA.RFC.CURP:
 
             V.RFC = ""
             *ABC.BP.AbcGeneraRfc('', '', '' )
-            GOSUB SET.LISTA.ANEXO.3
-            CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP[1,10]
-            A.SUM.DIG = 0
-            A.FACTOR = 13
+            *GOSUB SET.LISTA.ANEXO.3
+            *CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP[1,10]
+            *A.SUM.DIG = 0
+            *A.FACTOR = 13
 
-            AUX.RFC = CLIENTE.UNICO.RFC
+            *AUX.RFC = CLIENTE.UNICO.RFC
 
-            IF LEN(AUX.RFC) EQ 11 THEN AUX.RFC = ' ' : AUX.RFC
+            *IF LEN(AUX.RFC) EQ 11 THEN AUX.RFC = ' ' : AUX.RFC
 
-            FOR A.I.NOM = 1 TO 12
+            *FOR A.I.NOM = 1 TO 12
 
-                FIND ('K' : AUX.RFC[A.I.NOM, 1]) IN A.ANEXO.3 SETTING Ap,Vp THEN
-                    A.SUM.DIG += A.ANEXO.3<Ap, 2> * A.FACTOR
-                    A.FACTOR -= 1
-                END
-            NEXT A.I.NOM
+            *    FIND ('K' : AUX.RFC[A.I.NOM, 1]) IN A.ANEXO.3 SETTING Ap,Vp THEN
+            *        A.SUM.DIG += A.ANEXO.3<Ap, 2> * A.FACTOR
+            *        A.FACTOR -= 1
+            *    END
+            *NEXT A.I.NOM
 
-            A.RES.DIG = MOD(A.SUM.DIG, 11)
+            *A.RES.DIG = MOD(A.SUM.DIG, 11)
 
-            IF A.RES.DIG GT 0 THEN
-                A.RES.DIG = 11 - A.RES.DIG
-                IF A.RES.DIG EQ 10 THEN A.RES.DIG = 'A'
-            END
+            *IF A.RES.DIG GT 0 THEN
+            *    A.RES.DIG = 11 - A.RES.DIG
+            *    IF A.RES.DIG EQ 10 THEN A.RES.DIG = 'A'
+            *END
 
-            CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP<1,1>[1,10]:A.RES.DIG
+            CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP<1,1>[1,10] ;*:A.RES.DIG
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, CLIENTE.UNICO.RFC)
 
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,CLIENTE.UNICO.CURP<1,1>)
