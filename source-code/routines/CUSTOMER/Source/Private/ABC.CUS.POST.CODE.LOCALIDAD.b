@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTEyMjQzOTUyMDpDcDEyNTI6MTc0Njc1MzAwMDkzNjpMdWNhc0ZlcnJhcmk6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 08 May 2025 22:10:00
+* @ValidationCode : MjotMTE4NDM2Nzk5MzpDcDEyNTI6MTc0Njc1NDY0MDQzNjpMdWNhc0ZlcnJhcmk6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 08 May 2025 22:37:20
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : LucasFerrari
 * @ValidationInfo : Nb tests success  : N/A
@@ -35,6 +35,7 @@ RETURN
 INITIALIZE:
 ******************
     Y.PAIS = "484"
+    Y.POST.CODE.CUS = ''
 
     FN.ABC.LOCALIDADES = "F.ABC.LOCALIDADES"
     F.ABC.LOCALIDADES = ""
@@ -57,12 +58,21 @@ RETURN
 PROCESS:
 ******************
     Y.POST.CODE.CUS = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusPostCode)
+    
+    IF (Y.POST.CODE.CUS EQ '') THEN
+        RETURN
+    END
+    
     R.ABC.CODIGO.POSTAL = ''
     
     EB.DataAccess.FRead(FN.ABC.CODIGO.POSTAL, Y.POST.CODE.CUS, R.ABC.CODIGO.POSTAL, F.ABC.CODIGO.POSTAL, Y.ERR.READ)
 
     Y.MUNICIPIO = Y.PAIS
     Y.MUNICIPIO := R.ABC.CODIGO.POSTAL<AbcTable.AbcCodigoPostal.Municipio>
+    
+    IF (Y.MUNICIPIO EQ Y.PAIS) THEN
+        RETURN
+    END
     
     CMD.SEL.LOC = ""
     LIST.ID.LOC = ""
