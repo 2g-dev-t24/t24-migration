@@ -37,7 +37,7 @@ SUBROUTINE ABC.NUM.CLIENTE.UNICO
     
     IF MESSAGE EQ 'VAL' THEN
      RETURN
-    RETURN
+    END
 
 
     EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId,"")
@@ -72,13 +72,15 @@ GENERA.RFC.CURP:
             GOSUB CALCULA.NUM.CTE
 
             V.RFC = ""
-            ABC.BP.AbcGeneraRfc('', '', '' )
+            *ABC.BP.AbcGeneraRfc('', '', '' )
 
-            CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP<1,1>[1,10]
+            CLIENTE.UNICO.RFC = CLIENTE.UNICO.CURP[1,10]
+            GOSUB SET.LISTA.ANEXO.3
+            GOSUB SET.DIGITO.VER
             EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, CLIENTE.UNICO.RFC)
 
-            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,CLIENTE.UNICO.CURP<1,1>)
-
+            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,CLIENTE.UNICO.CURP)
+            
             EB.Display.RebuildScreen()
             RETURN
         END ELSE
@@ -108,7 +110,75 @@ GENERA.RFC.CURP:
         END
     END
 RETURN
+SET.DIGITO.VER:
 
+    A.SUM.DIG = 0
+    A.FACTOR = 13
+
+    AUX.RFC = CLIENTE.UNICO.RFC
+
+    IF LEN(AUX.RFC) EQ 11 THEN AUX.RFC = ' ' : AUX.RFC
+
+    FOR A.I.NOM = 1 TO 12
+
+        FIND ('K' : AUX.RFC[A.I.NOM, 1]) IN A.ANEXO.3 SETTING Ap,Vp THEN
+            A.SUM.DIG += A.ANEXO.3<Ap, 2> * A.FACTOR
+            A.FACTOR -= 1
+        END
+    NEXT A.I.NOM
+
+    A.RES.DIG = MOD(A.SUM.DIG, 11)
+
+    IF A.RES.DIG GT 0 THEN
+        A.RES.DIG = 11 - A.RES.DIG
+        IF A.RES.DIG EQ 10 THEN A.RES.DIG = 'A'
+    END
+
+    CLIENTE.UNICO.RFC := A.RES.DIG
+RETURN
+SET.LISTA.ANEXO.3:
+
+    A.ANEXO.3  = 'K0'  : VM : '00' : FM
+    A.ANEXO.3 := 'K1'  : VM : '01' : FM
+    A.ANEXO.3 := 'K2'  : VM : '02' : FM
+    A.ANEXO.3 := 'K3'  : VM : '03' : FM
+    A.ANEXO.3 := 'K4'  : VM : '04' : FM
+    A.ANEXO.3 := 'K5'  : VM : '05' : FM
+    A.ANEXO.3 := 'K6'  : VM : '06' : FM
+    A.ANEXO.3 := 'K7'  : VM : '07' : FM
+    A.ANEXO.3 := 'K8'  : VM : '08' : FM
+    A.ANEXO.3 := 'K9'  : VM : '09' : FM
+    A.ANEXO.3 := 'KA'  : VM : '10' : FM
+    A.ANEXO.3 := 'KB'  : VM : '11' : FM
+    A.ANEXO.3 := 'KC'  : VM : '12' : FM
+    A.ANEXO.3 := 'KD'  : VM : '13' : FM
+    A.ANEXO.3 := 'KE'  : VM : '14' : FM
+    A.ANEXO.3 := 'KF'  : VM : '15' : FM
+    A.ANEXO.3 := 'KG'  : VM : '16' : FM
+    A.ANEXO.3 := 'KH'  : VM : '17' : FM
+    A.ANEXO.3 := 'KI'  : VM : '18' : FM
+    A.ANEXO.3 := 'KJ'  : VM : '19' : FM
+    A.ANEXO.3 := 'KK'  : VM : '20' : FM
+    A.ANEXO.3 := 'KL'  : VM : '21' : FM
+    A.ANEXO.3 := 'KM'  : VM : '22' : FM
+    A.ANEXO.3 := 'KN'  : VM : '23' : FM
+    A.ANEXO.3 := 'K&'  : VM : '24' : FM
+    A.ANEXO.3 := 'KO'  : VM : '25' : FM
+    A.ANEXO.3 := 'KP'  : VM : '26' : FM
+    A.ANEXO.3 := 'KQ'  : VM : '27' : FM
+    A.ANEXO.3 := 'KR'  : VM : '28' : FM
+    A.ANEXO.3 := 'KS'  : VM : '29' : FM
+    A.ANEXO.3 := 'KT'  : VM : '30' : FM
+    A.ANEXO.3 := 'KU'  : VM : '31' : FM
+    A.ANEXO.3 := 'KV'  : VM : '32' : FM
+    A.ANEXO.3 := 'KW'  : VM : '33' : FM
+    A.ANEXO.3 := 'KX'  : VM : '34' : FM
+    A.ANEXO.3 := 'KY'  : VM : '35' : FM
+    A.ANEXO.3 := 'KZ'  : VM : '36' : FM
+    A.ANEXO.3 := 'K '  : VM : '37' : FM
+    A.ANEXO.3 := 'K':Y.MAYUS  : VM : '38' : FM
+
+RETURN
 ***************************************
 *     CALCULA A PERSONA FISICA        *
 ***************************************
@@ -147,7 +217,7 @@ CALCULA.NUM.CTE:
 
     LONG.NOM  = LEN(NOM.COMPLETO)
     FOR POS.CARACTER = 1 TO LONG.NOM
-        IF NOM.COMPLETO[LONG.NOM,1] = ' ' THEN
+        IF NOM.COMPLETO[LONG.NOM,1] EQ ' ' THEN
             NOM.COMPLETO[LONG.NOM,1] = ''
             POS.CARACTER = LONG.NOM - 1
         END
@@ -164,14 +234,14 @@ CALCULA.NUM.CTE:
     END
 
     IF (Y.APELLIDO.1 EQ 0) THEN
-        CLIENTE.UNICO.RFC[1,2] = Y.APELLIDO.2[1,2]; CLIENTE.UNICO.CURP<1,1>[1,2] = Y.APELLIDO.2[1,2]; BAND = 1
+        CLIENTE.UNICO.RFC[1,2] = Y.APELLIDO.2[1,2]; CLIENTE.UNICO.CURP[1,2] = Y.APELLIDO.2[1,2]; BAND = 1
     END ELSE
         IF (Y.APELLIDO.2 EQ 0) THEN
-            CLIENTE.UNICO.RFC[1,2] = Y.APELLIDO.1[1,2]; CLIENTE.UNICO.CURP<1,1>[1,2] = Y.APELLIDO.1[1,2]; BAND = 1
+            CLIENTE.UNICO.RFC[1,2] = Y.APELLIDO.1[1,2]; CLIENTE.UNICO.CURP[1,2] = Y.APELLIDO.1[1,2]; BAND = 1
         END ELSE
 *..MUEVE PRIMER LETRA DE PRIMER APELLIDO
             IF NOT((LONG.APE.1 EQ 1) OR (LONG.APE.1 EQ 2)) THEN
-                CLIENTE.UNICO.RFC[1,1] = Y.APELLIDO.1[1,1]; CLIENTE.UNICO.CURP<1,1>[1,1] = Y.APELLIDO.1[1,1]
+                CLIENTE.UNICO.RFC[1,1] = Y.APELLIDO.1[1,1]; CLIENTE.UNICO.CURP[1,1] = Y.APELLIDO.1[1,1]
 *..BUSCA PRIMERA VOCAL DEL PRIMER APELLIDO
                 V1 = 1
                 LOOP
@@ -181,20 +251,20 @@ CALCULA.NUM.CTE:
 
                 IF (V1 LE LEN(Y.APELLIDO.1) ) THEN
 *..MUEVE PRIMER VOCAL DEL PRIMER APELLIDO
-                    CLIENTE.UNICO.RFC[2,1] = Y.APELLIDO.1[V1,1]; CLIENTE.UNICO.CURP<1,1>[2,1] = Y.APELLIDO.1[V1,1]
+                    CLIENTE.UNICO.RFC[2,1] = Y.APELLIDO.1[V1,1]; CLIENTE.UNICO.CURP[2,1] = Y.APELLIDO.1[V1,1]
                 END ELSE
-                    CLIENTE.UNICO.RFC[2,1] = "X"; CLIENTE.UNICO.CURP<1,1>[2,1] = "X"
+                    CLIENTE.UNICO.RFC[2,1] = "X"; CLIENTE.UNICO.CURP[2,1] = "X"
                 END
 
 *..MUEVE PRIMER LETRA DE SEGUNDO APELLIDO
                 IF ( LEN(Y.APELLIDO.2 ) GT 0) THEN
-                    CLIENTE.UNICO.RFC[3,1] = Y.APELLIDO.2[1,1]; CLIENTE.UNICO.CURP<1,1>[3,1] = Y.APELLIDO.2[1,1]
+                    CLIENTE.UNICO.RFC[3,1] = Y.APELLIDO.2[1,1]; CLIENTE.UNICO.CURP[3,1] = Y.APELLIDO.2[1,1]
                 END ELSE
-                    CLIENTE.UNICO.RFC[3,1] = "X"; CLIENTE.UNICO.CURP<1,1>[3,1] = "X"
+                    CLIENTE.UNICO.RFC[3,1] = "X"; CLIENTE.UNICO.CURP[3,1] = "X"
                 END
             END ELSE
-                CLIENTE.UNICO.RFC[1,1] = Y.APELLIDO.1[1,1]; CLIENTE.UNICO.CURP<1,1>[1,1] = Y.APELLIDO.1[1,1]
-                CLIENTE.UNICO.RFC[2,1] = Y.APELLIDO.2[1,1]; CLIENTE.UNICO.CURP<1,1>[2,1] = Y.APELLIDO.2[1,1]; BAND = 1
+                CLIENTE.UNICO.RFC[1,1] = Y.APELLIDO.1[1,1]; CLIENTE.UNICO.CURP[1,1] = Y.APELLIDO.1[1,1]
+                CLIENTE.UNICO.RFC[2,1] = Y.APELLIDO.2[1,1]; CLIENTE.UNICO.CURP[2,1] = Y.APELLIDO.2[1,1]; BAND = 1
             END
         END
     END
@@ -206,11 +276,11 @@ CALCULA.NUM.CTE:
     IF NOMBRE GT 1 THEN
         GOSUB NOMBRE.INVALIDO
     END ELSE
-        CLIENTE.UNICO.RFC[4,1] = Y.NOMBRE[1,1]; CLIENTE.UNICO.CURP<1,1>[4,1] = Y.NOMBRE[1,1]
+        CLIENTE.UNICO.RFC[4,1] = Y.NOMBRE[1,1]; CLIENTE.UNICO.CURP[4,1] = Y.NOMBRE[1,1]
     END
 
     IF (BAND EQ 1) THEN
-        CLIENTE.UNICO.RFC[3,2] = Y.NOMBRE[1,2]; CLIENTE.UNICO.CURP<1,1>[3,2] = Y.NOMBRE[1,2]
+        CLIENTE.UNICO.RFC[3,2] = Y.NOMBRE[1,2]; CLIENTE.UNICO.CURP[3,2] = Y.NOMBRE[1,2]
     END
 
 *..VALIDANDO QUE LAS PRIMERAS 4 POSICIONES
@@ -223,23 +293,23 @@ CALCULA.NUM.CTE:
             IF CLIENTE.UNICO.RFC[1,4] EQ POS.RFC[1,4] THEN
                 CAMBIO.RFC = FIELD(POS.RFC, '*', 2)
                 CAMBIO.CURP = FIELD(POS.RFC, '*', 3)
-                CLIENTE.UNICO.RFC[1,4] = CAMBIO.RFC; CLIENTE.UNICO.CURP<1,1>[1,4] = CAMBIO.CURP
+                CLIENTE.UNICO.RFC[1,4] = CAMBIO.RFC; CLIENTE.UNICO.CURP[1,4] = CAMBIO.CURP
             END
         END
     END
 
 *..MUEVA FECHA DE NACIMIENTO
     CLIENTE.UNICO.RFC[5,6]  = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)[3,6]
-    CLIENTE.UNICO.CURP<1,1>[5,6] = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)[3,6]
+    CLIENTE.UNICO.CURP[5,6] = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)[3,6]
 *..MUEVE GENERO
 
 
     SEXO = EB.SystemTables.getComi()
     SEXO = UPCASE(SEXO)
     IF (SEXO EQ "MASCULINO") THEN
-        CLIENTE.UNICO.CURP<1,1>[11,1] = "H"
+        CLIENTE.UNICO.CURP[11,1] = "H"
     END ELSE
-        CLIENTE.UNICO.CURP<1,1>[11,1] = "M"
+        CLIENTE.UNICO.CURP[11,1] = "M"
     END
 
 *..MUEVE LUGAR DE NACIMIENTO
@@ -250,7 +320,7 @@ CALCULA.NUM.CTE:
     IF REC.LUGNAC NE '' THEN
         CLAVE.ALFA = REC.LUGNAC<AbcTable.AbcEstado.Clave>
     END
-    CLIENTE.UNICO.CURP<1,1>[12,2] = CLAVE.ALFA
+    CLIENTE.UNICO.CURP[12,2] = CLAVE.ALFA
 
 *..MUEVE PRIMERA CONSONANTE DE PRIMER APELLIDO
     V1 = 1
@@ -258,7 +328,7 @@ CALCULA.NUM.CTE:
         V1 = V1 + 1
     UNTIL (((Y.APELLIDO.1[V1,1] NE 'A') AND (Y.APELLIDO.1[V1,1] NE 'E') AND (Y.APELLIDO.1[V1,1] NE 'I') AND (Y.APELLIDO.1[V1,1] NE 'O') AND (Y.APELLIDO.1[V1,1] NE 'U')) OR (V1 GT LEN(Y.APELLIDO.1)))
     REPEAT
-    CLIENTE.UNICO.CURP<1,1>[14,1] = Y.APELLIDO.1[V1,1]
+    CLIENTE.UNICO.CURP[14,1] = Y.APELLIDO.1[V1,1]
 
 *..MUEVE PRIMERA CONSONANTE DE SEGUNDO APELLIDO
     V1 = 1
@@ -266,7 +336,7 @@ CALCULA.NUM.CTE:
         V1 = V1 + 1
     UNTIL (((Y.APELLIDO.2[V1,1] NE 'A') AND (Y.APELLIDO.2[V1,1] NE "E") AND (Y.APELLIDO.2[V1,1] NE "I") AND (Y.APELLIDO.2[V1,1] NE "O") AND (Y.APELLIDO.2[V1,1] NE "U")) OR (V1 GT LEN(Y.APELLIDO.2)))
     REPEAT
-    CLIENTE.UNICO.CURP<1,1>[15,1] = Y.APELLIDO.2[V1,1]
+    CLIENTE.UNICO.CURP[15,1] = Y.APELLIDO.2[V1,1]
 
 *..MUEVE PRIMERA CONSONANTE DE PRIMER NOMBRE
     V1 = 1
@@ -274,12 +344,12 @@ CALCULA.NUM.CTE:
         V1 = V1 + 1
     UNTIL ((Y.NOMBRE[V1,1] NE 'A') AND (Y.NOMBRE[V1,1] NE "E") AND (Y.NOMBRE[V1,1] NE "I") AND (Y.NOMBRE[V1,1] NE "O") AND (Y.NOMBRE[V1,1] NE "U")) OR (V1 GT LEN(Y.NOMBRE))
     REPEAT
-    CLIENTE.UNICO.CURP<1,1>[16,1] = Y.NOMBRE[V1,1]
+    CLIENTE.UNICO.CURP[16,1] = Y.NOMBRE[V1,1]
 
     FOR CON.POS = 1 TO 16
         Y.MAYUS = CHAR(165)
-        IF (CLIENTE.UNICO.CURP<1,1>[CON.POS,1] EQ Y.MAYUS) OR (CLIENTE.UNICO.CURP<1,1>[CON.POS,1] EQ ' ') OR (CLIENTE.UNICO.CURP<1,1>[CON.POS,1] EQ '') THEN
-            CLIENTE.UNICO.CURP<1,1>[CON.POS,1] = 'X'
+        IF (CLIENTE.UNICO.CURP[CON.POS,1] EQ Y.MAYUS) OR (CLIENTE.UNICO.CURP[CON.POS,1] EQ ' ') OR (CLIENTE.UNICO.CURP[CON.POS,1] EQ '') THEN
+            CLIENTE.UNICO.CURP[CON.POS,1] = 'X'
         END
     NEXT CON.POS
 
@@ -290,7 +360,7 @@ CALCULA.NUM.CTE:
     NEXT CON.POS
 
 *..PONE CONSECUTIVO INCIA EN 00
-    CLIENTE.UNICO.CURP<1,1>[17,2] = "00"
+    CLIENTE.UNICO.CURP[17,2] = "00"
 RETURN
 
 
@@ -357,12 +427,12 @@ NOMBRE.INVALIDO:
         Y.NOM = DCOUNT(Y.NOMBRE, ' ')
         IF Y.NOM GT 1 THEN
             GOSUB VALIDA.NOM
-            CLIENTE.UNICO.CURP<1,1>[4,1] = Y.NOMBRE[1,1]
+            CLIENTE.UNICO.CURP[4,1] = Y.NOMBRE[1,1]
         END ELSE
-            CLIENTE.UNICO.CURP<1,1>[4,1] = Y.NOMBRE[1,1]
+            CLIENTE.UNICO.CURP[4,1] = Y.NOMBRE[1,1]
         END
     END ELSE
-        CLIENTE.UNICO.CURP<1,1>[4,1] = Y.NOMBRE[1,1]
+        CLIENTE.UNICO.CURP[4,1] = Y.NOMBRE[1,1]
     END
 RETURN
 
