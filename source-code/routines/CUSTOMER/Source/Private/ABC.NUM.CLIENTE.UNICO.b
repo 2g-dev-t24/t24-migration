@@ -61,7 +61,7 @@ GENERA.RFC.CURP:
     CLIENTE.UNICO = ''
     CLIENTE.UNICO.RFC = ''
     CLIENTE.UNICO.CURP = ''
-    RES = ETEOKf
+    RES = ETEOK
     MENSAJE = ''
     CLAVE.ALFA = ''
 
