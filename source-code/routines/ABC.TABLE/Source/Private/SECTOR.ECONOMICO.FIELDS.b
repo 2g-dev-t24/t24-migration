@@ -11,7 +11,7 @@ SUBROUTINE SECTOR.ECONOMICO.FIELDS
     EB.Template.TableDefineid("ID", EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
 
-    fieldName = ''DESCRIPTION'
+    fieldName = 'DESCRIPTION'
     fieldLength = '150'
     fieldType = 'A'
     neighbour = ''
