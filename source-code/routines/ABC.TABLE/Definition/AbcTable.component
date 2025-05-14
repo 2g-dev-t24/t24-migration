@@ -3,6 +3,17 @@ component AbcTable
 # Component Isolation Definition
 metamodelVersion 1.6
 # -------------------------------------------------
+private method AbcActividadEconomica ()
+{
+    jBC: ABC.ACTIVIDAD.ECONOMICA
+}
+
+private method AbcActividadEconomicaFields ()
+{
+    jBC: ABC.ACTIVIDAD.ECONOMICA.FIELDS
+}
+
+# -------------------------------------------------
 private method SectorEconomico ()
 {
     jBC: SECTOR.ECONOMICO
