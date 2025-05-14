@@ -61,7 +61,7 @@ GENERA.RFC.CURP:
     CLIENTE.UNICO = ''
     CLIENTE.UNICO.RFC = ''
     CLIENTE.UNICO.CURP = ''
-    RES = ETEOK
+    RES = ETEOKf
     MENSAJE = ''
     CLAVE.ALFA = ''
 
@@ -306,6 +306,10 @@ CALCULA.NUM.CTE:
 
     SEXO = EB.SystemTables.getComi()
     SEXO = UPCASE(SEXO)
+*PRUEBA - I  
+    EB.SystemTables.setEtext(SEXO)
+    EB.ErrorProcessing.StoreEndError()
+*PRUEBA - F  
     IF (SEXO EQ "MASCULINO") THEN
         CLIENTE.UNICO.CURP[11,1] = "H"
     END ELSE
@@ -314,7 +318,10 @@ CALCULA.NUM.CTE:
 
 *..MUEVE LUGAR DE NACIMIENTO
     LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince); REC.LUGNAC = ''
-    
+*PRUEBA - I  
+    EB.SystemTables.setEtext(LUG.NAC)
+    EB.ErrorProcessing.StoreEndError()
+*PRUEBA - F  
     EB.DataAccess.FRead(FN.ABC.ESTADO, LUG.NAC, REC.LUGNAC, F.ABC.ESTADO, Y.ERR.BON)
     
     IF REC.LUGNAC NE '' THEN
