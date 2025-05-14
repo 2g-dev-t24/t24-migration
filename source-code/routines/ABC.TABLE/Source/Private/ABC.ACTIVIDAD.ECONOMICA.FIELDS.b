@@ -23,7 +23,7 @@ SUBROUTINE ABC.ACTIVIDAD.ECONOMICA.FIELDS
     
     fieldName = 'SECTOR.ECONOMICO'
     fieldLength = '3'
-    fieldType = ""
+    fieldType = "ANY"
     neighbour = ''
     EB.Template.TableAddfielddefinition(fieldName, fieldLength, fieldType, neighbour)
     EB.Template.FieldSetcheckfile('SECTOR.ECONOMICO')
