@@ -2,9 +2,9 @@ public table AbcActividadEconomica {
     t24: ABC.ACTIVIDAD.ECONOMICA
     fields:{
         Descripcion(ABC.ACTIVIDAD.ECONOMICA.DESCRIPCION) = 1
-        DenomPuntoTrans(ABC.ACTIVIDAD.ECONOMICA.VULNERABLE) = 2
-        Colonia(ABC.ACTIVIDAD.ECONOMICA.SECTOR.ECONOMICO) = 3
-        Colonia(ABC.ACTIVIDAD.ECONOMICA.PROHIB.OPERAR) = 4
+        Vulnerable(ABC.ACTIVIDAD.ECONOMICA.VULNERABLE) = 2
+        SectorEconomico(ABC.ACTIVIDAD.ECONOMICA.SECTOR.ECONOMICO) = 3
+        ProhibOpera(ABC.ACTIVIDAD.ECONOMICA.PROHIB.OPERAR) = 4
         Reserved1(ABC.ACTIVIDAD.ECONOMICA.RESERVED.1)              = 5
         RecordStatus(ABC.ACTIVIDAD.ECONOMICA.RECORD.STATUS)        = 6
         CurrNo(ABC.ACTIVIDAD.ECONOMICA.CURR.NO)                    = 7

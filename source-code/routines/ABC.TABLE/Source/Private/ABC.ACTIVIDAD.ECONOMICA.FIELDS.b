@@ -21,8 +21,8 @@ SUBROUTINE ABC.ACTIVIDAD.ECONOMICA.FIELDS
     neighbour = ''
     EB.Template.TableAddoptionsfield(fieldName, fieldType, '', neighbour)
     
-    fieldName = SECTOR.ECONOMICO'
-    fieldLength = 3
+    fieldName = 'SECTOR.ECONOMICO'
+    fieldLength = '3'
     fieldType = ""
     neighbour = ''
     EB.Template.TableAddfielddefinition(fieldName, fieldLength, fieldType, neighbour)
