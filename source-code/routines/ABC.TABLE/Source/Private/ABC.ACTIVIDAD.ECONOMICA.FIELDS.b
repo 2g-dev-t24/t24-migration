@@ -10,6 +10,11 @@ SUBROUTINE ABC.ACTIVIDAD.ECONOMICA.FIELDS
     $USING EB.SystemTables
     $USING EB.Template
 *-----------------------------------------------------------------------------
+    ID.F = "ID"
+    ID.T = 'A'
+    ID.N = '7.1'
+    EB.Template.TableDefineid("ID", EB.Template.T24String)        ;* Define Table id
+*-----------------------------------------------------------------------------
     fieldName = 'DESCRIPTION'
     fieldLength = '200'
     fieldType = 'A'
@@ -22,8 +27,8 @@ SUBROUTINE ABC.ACTIVIDAD.ECONOMICA.FIELDS
     EB.Template.TableAddoptionsfield(fieldName, fieldType, '', neighbour)
     
     fieldName = 'SECTOR.ECONOMICO'
-    fieldLength = '3'
-    fieldType = "ANY"
+    fieldLength = '5'
+    fieldType = ""
     neighbour = ''
     EB.Template.TableAddfielddefinition(fieldName, fieldLength, fieldType, neighbour)
     EB.Template.FieldSetcheckfile('SECTOR.ECONOMICO')
