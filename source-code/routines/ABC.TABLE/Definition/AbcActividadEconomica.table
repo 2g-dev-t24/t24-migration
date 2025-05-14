@@ -1,0 +1,19 @@
+public table AbcActividadEconomica {
+    t24: ABC.ACTIVIDAD.ECONOMICA
+    fields:{
+        Descripcion(ABC.ACTIVIDAD.ECONOMICA.DESCRIPCION) = 1
+        DenomPuntoTrans(ABC.ACTIVIDAD.ECONOMICA.VULNERABLE) = 2
+        Colonia(ABC.ACTIVIDAD.ECONOMICA.SECTOR.ECONOMICO) = 3
+        Colonia(ABC.ACTIVIDAD.ECONOMICA.PROHIB.OPERAR) = 4
+        Reserved1(ABC.ACTIVIDAD.ECONOMICA.RESERVED.1)              = 5
+        RecordStatus(ABC.ACTIVIDAD.ECONOMICA.RECORD.STATUS)        = 6
+        CurrNo(ABC.ACTIVIDAD.ECONOMICA.CURR.NO)                    = 7
+        Inputter(ABC.ACTIVIDAD.ECONOMICA.INPUTTER)                 = 8
+        DateTime(ABC.ACTIVIDAD.ECONOMICA.DATE.TIME)                = 9
+        Authoriser(ABC.ACTIVIDAD.ECONOMICA.AUTHORISER)             = 10
+        CoCode(ABC.ACTIVIDAD.ECONOMICA.CO.CODE)                    = 11
+        DeptCode(ABC.ACTIVIDAD.ECONOMICA.DEPT.CODE)                = 12
+        AuditorCode(ABC.ACTIVIDAD.ECONOMICA.AUDITOR.CODE)          = 13
+        AuditDateTime(ABC.ACTIVIDAD.ECONOMICA.AUDIT.DATE.TIME)     = 14
+    }
+}
