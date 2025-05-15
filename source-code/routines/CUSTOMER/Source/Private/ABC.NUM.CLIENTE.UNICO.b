@@ -316,7 +316,7 @@ CALCULA.NUM.CTE:
 *..MUEVE LUGAR DE NACIMIENTO
     LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince); REC.LUGNAC = ''
 *PRUEBA - I  
-    EB.SystemTables.setEtext(LUG.NAC)
+    EB.SystemTables.setEtext('DATO ':LUG.NAC)
     EB.ErrorProcessing.StoreEndError()
 *PRUEBA - F  
     EB.DataAccess.FRead(FN.ABC.ESTADO, LUG.NAC, REC.LUGNAC, F.ABC.ESTADO, Y.ERR.BON)
