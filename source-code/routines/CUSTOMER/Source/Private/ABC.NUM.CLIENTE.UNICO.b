@@ -314,12 +314,9 @@ CALCULA.NUM.CTE:
     END
 
 *..MUEVE LUGAR DE NACIMIENTO
-*    LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince); REC.LUGNAC = ''
+
      LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>; REC.LUGNAC = ''
-*PRUEBA - I  
-    EB.SystemTables.setEtext('DATO ':LUG.NAC)
-    EB.ErrorProcessing.StoreEndError()
-*PRUEBA - F  
+ 
     EB.DataAccess.FRead(FN.ABC.ESTADO, LUG.NAC, REC.LUGNAC, F.ABC.ESTADO, Y.ERR.BON)
     
     IF REC.LUGNAC NE '' THEN
@@ -622,7 +619,7 @@ CLIENTE.DUPLICADO:
         GOSUB VALIDA.CLIENTE.PM
     END ELSE
         Y.RFC.AUX = Y.RFC[1,10]
-        Y.ESTADO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
+        Y.ESTADO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>
         Y.SHORT.NAME = TRIM(Y.APE.PAT)
         Y.NAME.1 = TRIM(Y.APE.MAT)
         Y.NAME.2 = TRIM(Y.NOMBRE)
@@ -833,7 +830,7 @@ VALIDA.DATOS:
     APE.MATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne)
     NOMBRE      = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo)
     FEC.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
-    LUG.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
+    LUG.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>
     GENERO      = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
 
     IF LEN(APE.PATERNO) EQ 0 THEN
