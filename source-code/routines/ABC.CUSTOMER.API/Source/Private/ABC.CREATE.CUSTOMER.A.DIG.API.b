@@ -1,7 +1,7 @@
-* @ValidationCode : MjoxNTE1OTczNTQzOkNwMTI1MjoxNzQ2NDc5OTA5MDM3Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 05 May 2025 18:18:29
+* @ValidationCode : MjotMTk5NDU3ODQ4MTpDcDEyNTI6MTc0Njc0MDgxNjMxNjptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 08 May 2025 18:46:56
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -31,6 +31,7 @@ SUBROUTINE ABC.CREATE.CUSTOMER.A.DIG.API
     $USING MXBASE.CustomerRegulatory
     $USING EB.Foundation
     $USING EB.TransactionControl
+    $USING EB.ErrorProcessing
     
     
     GOSUB CARGAR.LOCAL.FIELDS ; *obtiene los campos locales de CUSTOMER
@@ -65,9 +66,9 @@ MAP.CUSTOMER:
     R.CUSTOMER<ST.Customer.Customer.EbCusLegalIssDate>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalIssDate)
     R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalExpDate)
     R.CUSTOMER<ST.Customer.Customer.EbCusTaxId>                 = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.taxId)
+    R.CUSTOMER<ST.Customer.Customer.EbCusMnemonic>              = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.mnemonic)
+    R.CUSTOMER<ST.Customer.Customer.EbCusCountry>               = 'MX'
     R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef>              = Y.LOCAL.REF
-    R.CUSTOMER<ST.Customer.Customer.EbCusMnemonic>              = "A"
-    
 
 RETURN
 *-----------------------------------------------------------------------------
@@ -76,20 +77,22 @@ CARGAR.LOCAL.FIELDS:
 *-----------------------------------------------------------------------------
 
     V.APP      = 'CUSTOMER'
-    V.FLD.NAME = 'L.DOM.FISC' : @VM : 'L.USO.CFDI' : @VM : 'L.CANAL'
+    V.FLD.NAME = 'L.DOM.FISC' : @VM : 'L.USO.CFDI' : @VM : 'L.CANAL' : @VM : 'BIRTH.PROVINCE'
     V.FLD.POS  = ''
 
     EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, V.FLD.POS)
     
-    Y.POS.L.DOM.FISC    = V.FLD.POS<1,1>
-    Y.POS.L.USO.CFDI    = V.FLD.POS<1,2>
-    Y.POS.L.CANAL       = V.FLD.POS<1,3>
+    Y.POS.L.DOM.FISC        = V.FLD.POS<1,1>
+    Y.POS.L.USO.CFDI        = V.FLD.POS<1,2>
+    Y.POS.L.CANAL           = V.FLD.POS<1,3>
+    Y.POS.BIRTH.PROVINCE    = V.FLD.POS<1,4>
 
     Y.LOCAL.REF         = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
     
-    Y.LOCAL.REF<1,Y.POS.L.DOM.FISC>  = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.domFisc)
-    Y.LOCAL.REF<1,Y.POS.L.USO.CFDI>  = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.usoCfdi)
-    Y.LOCAL.REF<1,Y.POS.L.CANAL>     = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.canal)
+    Y.LOCAL.REF<1,Y.POS.L.DOM.FISC>     = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.domFisc)
+    Y.LOCAL.REF<1,Y.POS.L.USO.CFDI>     = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.usoCfdi)
+    Y.LOCAL.REF<1,Y.POS.L.CANAL>        = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.canal)
+    Y.LOCAL.REF<1,Y.POS.BIRTH.PROVINCE> = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.lugNac)
 
 RETURN
 
@@ -111,18 +114,21 @@ CREAR.OFS.CUSTOMER:
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'CUSTOMER'
     Y.OFS.VERSION   = 'CUSTOMER,ABC.ALTA.DIGITAL'
-    Y.ID            = ''
+    Y.ID.CUSTOMER   = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
     
     GOSUB OBTENER.ID.CUSTOMER ; *Genera un nuevo id de customer para poder  guardarlo en la tabla como resultado
     
-    R.CUSTOMER<ST.Customer.Customer.EbCusMnemonic>              := Y.ID.CUSTOMER
-    
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.CUSTOMER,Y.OFS.REQUEST)
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
-
+    IF Error THEN
+        EB.SystemTables.setEtext(Error)
+        EB.ErrorProcessing.StoreEndError()
+    END ELSE
+        EB.SystemTables.setRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.idCustomer, Y.ID.CUSTOMER)
+    END
 RETURN
 
 
@@ -137,12 +143,15 @@ CREAR.OFS.MXBASE:
     Y.NO.OF.AUTH    = 0
     Y.OFS.RECORD    = ''
     Y.GTSMODE       = ''
+    Error           = ''
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.MAP.MXBASE,Y.OFS.REQUEST)
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
 
-
-
+    IF Error THEN
+        EB.SystemTables.setEtext(Error)
+        EB.ErrorProcessing.StoreEndError()
+    END 
 RETURN
 
 
@@ -177,9 +186,6 @@ OBTENER.ID.CUSTOMER:
     EB.SystemTables.setIdConcatfile(Y.ID.CONCATFILE)
     EB.SystemTables.setComi(Y.SAVE.COMI)
     EB.SystemTables.setApplication(Y.APPLICATION)
-
-
-
 
 RETURN
 *** </region>
