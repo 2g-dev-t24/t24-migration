@@ -104,6 +104,7 @@ PROCESS:
         Y.CUS.TOWN.COUNTRY<1,2> = Y.CIUDAD.ANT
       
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTownCountry,Y.CUS.TOWN.COUNTRY)
+        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusAddressCountry,Y.PAIS)
  
 
 * Con el valor del Municipio, obtengo el valor de la localidad Banxico.
