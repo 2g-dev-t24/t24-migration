@@ -26,7 +26,6 @@ SUBROUTINE ABC.CUSTOMER.FISICA.NV4.API.FIELDS
     EB.Template.TableDefineid('ID', EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
 
-    
     EB.Template.TableAddfielddefinition('OTHER.NATIONALITY','100', 'A', '')
     EB.Template.TableAddfielddefinition('NATIONALITY'      ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('TAX.ID'           ,'100', 'A', '')
@@ -58,6 +57,6 @@ SUBROUTINE ABC.CUSTOMER.FISICA.NV4.API.FIELDS
     EB.Template.TableAddfielddefinition('NOM.PER.POL.EXP'  ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('TIPO.PER.POL.EXP' ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('CANAL'            ,'100', 'A', '')
-    
+    EB.Template.TableAddfielddefinition('ID.CUSTOMER'      ,'100', 'A', '')
     
 END

@@ -33,7 +33,8 @@ private table AbcCustomerFisicaNv4Api {
         RelPersonaExp(ABC.NV4.API.REL.PERSONA.EXP)      = 28
         NomPerPolExp(ABC.NV4.API.NOM.PER.POL.EXP)       = 29
         TipoPerPolExp(ABC.NV4.API.TIPO.PER.POL.EXP)     = 30
-        Canal(ABC.NV4.API.CANAL)                        = 31                
+        Canal(ABC.NV4.API.CANAL)                        = 31
+        IdCustomer(ABC.NV4.API.ID.CUSTOMER)             = 32 
         
     }
 }
