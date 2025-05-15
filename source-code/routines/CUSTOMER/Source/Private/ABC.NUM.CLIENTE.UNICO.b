@@ -314,7 +314,8 @@ CALCULA.NUM.CTE:
     END
 
 *..MUEVE LUGAR DE NACIMIENTO
-    LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince); REC.LUGNAC = ''
+*    LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince); REC.LUGNAC = ''
+     LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>; REC.LUGNAC = ''
 *PRUEBA - I  
     EB.SystemTables.setEtext('DATO ':LUG.NAC)
     EB.ErrorProcessing.StoreEndError()
@@ -798,14 +799,14 @@ ABRE.TABLAS:
     
     
     V.APP      = 'CUSTOMER'
-    V.FLD.NAME = 'NOM.PER.MORAL': @VM : 'LUGAR.CONST'
+    V.FLD.NAME = 'NOM.PER.MORAL': @VM : 'LUGAR.CONST':@VM:'BIRTH.PROVINCE'
     V.FLD.POS  = ''
 
     EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, V.FLD.POS)
     
     YPOS.NOM.PER.MORAL   = V.FLD.POS<1,1>
     YPOS.LUGAR.CONST     = V.FLD.POS<1,2>
-    
+    Y.POS.BIRTH.PROV = Y.POS.LUG.NAC<1,3> 
     
 *****************************************************************************
 
