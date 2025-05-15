@@ -806,7 +806,7 @@ ABRE.TABLAS:
     
     YPOS.NOM.PER.MORAL   = V.FLD.POS<1,1>
     YPOS.LUGAR.CONST     = V.FLD.POS<1,2>
-    Y.POS.BIRTH.PROV = Y.POS.LUG.NAC<1,3> 
+    Y.POS.BIRTH.PROV     = V.FLD.POS<1,3> 
     
 *****************************************************************************
 
