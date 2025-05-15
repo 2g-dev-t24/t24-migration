@@ -306,10 +306,7 @@ CALCULA.NUM.CTE:
 
     SEXO = EB.SystemTables.getComi()
     SEXO = UPCASE(SEXO)
-*PRUEBA - I  
-    EB.SystemTables.setEtext(SEXO)
-    EB.ErrorProcessing.StoreEndError()
-*PRUEBA - F  
+ 
     IF (SEXO EQ "MASCULINO") THEN
         CLIENTE.UNICO.CURP[11,1] = "H"
     END ELSE
