@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMjExMzg5MzQ1MjpDcDEyNTI6MTc0NzUxMTQxMDcxMTpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 17 May 2025 16:50:10
+* @ValidationCode : MjoyMDQyMDgwMTgwOkNwMTI1MjoxNzQ3NTEyMDUzODc1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 17 May 2025 17:00:53
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -26,7 +26,7 @@ SUBROUTINE ABC.RELACION.CLIENTES.FIELDS
     EB.Template.TableDefineid('ID', EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
    
-    EB.Template.TableAddfielddefinition('DESCRIPCION'             ,'6', 'ANY', '')
+    EB.Template.TableAddfielddefinition('DESCRIPCION'             ,'35', 'ANY', '')
     
     EB.Template.TableAddreservedfield("RESERVED.3")
     EB.Template.TableAddreservedfield("RESERVED.2")
