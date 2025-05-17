@@ -1,7 +1,7 @@
-* @ValidationCode : MjotMTE4NDM2Nzk5MzpDcDEyNTI6MTc0Njc1NDY0MDQzNjpMdWNhc0ZlcnJhcmk6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 08 May 2025 22:37:20
+* @ValidationCode : MjotMTY2ODA1OTQyMTpDcDEyNTI6MTc0NzUwNjUyNDA2NjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 17 May 2025 15:28:44
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : LucasFerrari
+* @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -17,7 +17,7 @@
 $PACKAGE ABC.BP
 SUBROUTINE ABC.CUS.POST.CODE.LOCALIDAD
 *-----------------------------------------------------------------------------
-*
+
 *-----------------------------------------------------------------------------
 * Modification History :
 *-----------------------------------------------------------------------------

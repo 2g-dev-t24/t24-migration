@@ -405,3 +405,10 @@ private method AbcESelCol2 (
 {
     jBC: ABC.E.SEL.COL2
 }
+
+private method abcCusPostCodeLocalidad (
+)
+{
+    jBC: ABC.CUS.POST.CODE.LOCALIDAD
+}
+
