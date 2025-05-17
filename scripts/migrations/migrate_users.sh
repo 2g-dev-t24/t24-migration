@@ -3,7 +3,7 @@
 # Archivo de salida
 OUTPUT_FILE="campos_users.txt"
 
-LIST FBNK.USER > "$OUTPUT_FILE"
+LIST F.USER > "$OUTPUT_FILE"
 
 # Verificar si se generó correctamente
 if [ -s "$OUTPUT_FILE" ]; then

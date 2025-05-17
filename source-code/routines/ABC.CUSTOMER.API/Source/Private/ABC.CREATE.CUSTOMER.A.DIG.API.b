@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNTE1OTczNTQzOkNwMTI1MjoxNzQ2NDc5OTA5MDM3Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 05 May 2025 18:18:29
+* @ValidationCode : MjotNTA0ODIxMzI6Q3AxMjUyOjE3NDY5OTU0NjQ3ODU6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 11 May 2025 17:31:04
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -66,7 +66,7 @@ MAP.CUSTOMER:
     R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalExpDate)
     R.CUSTOMER<ST.Customer.Customer.EbCusTaxId>                 = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.taxId)
     R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef>              = Y.LOCAL.REF
-    R.CUSTOMER<ST.Customer.Customer.EbCusMnemonic>              = "A"
+*    R.CUSTOMER<ST.Customer.Customer.EbCusMnemonic>              = "A"
     
 
 RETURN
@@ -110,7 +110,7 @@ CREAR.OFS.CUSTOMER:
 
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'CUSTOMER'
-    Y.OFS.VERSION   = 'CUSTOMER,ABC.ALTA.DIGITAL'
+    Y.OFS.VERSION   = 'CUSTOMER,ABC.API.ALTA.DIGITAL.1.0.0'
     Y.ID            = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
