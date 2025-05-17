@@ -1,0 +1,7 @@
+public table SectorEconomico {
+    t24: SECTOR.ECONOMICO
+    fields:{
+        Descripcion(SEC.ECO.DESCRIPCION) = 1
+
+    }
+}

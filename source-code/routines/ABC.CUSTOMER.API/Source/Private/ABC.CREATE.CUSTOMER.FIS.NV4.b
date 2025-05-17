@@ -1,7 +1,7 @@
-* @ValidationCode : MjotOTkwNjQ5ODk2OkNwMTI1MjoxNzQ2MjA5MDE2MDgxOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 02 May 2025 15:03:36
+* @ValidationCode : MjotMTEwOTc0MjUyODpDcDEyNTI6MTc0NzE5NDc5MjI3MjptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 14 May 2025 00:53:12
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -31,6 +31,7 @@ SUBROUTINE ABC.CREATE.CUSTOMER.FIS.NV4
     $USING MXBASE.CustomerRegulatory
     $USING EB.Foundation
     $USING EB.TransactionControl
+    $USING EB.ErrorProcessing
     
     GOSUB CARGAR.LOCAL.FIELDS ; *obtiene los campos locales de CUSTOMER
     GOSUB MAP.CUSTOMER ; *Mapea los campos de CUSTOMER enviados en la request
@@ -122,16 +123,22 @@ CREAR.OFS.CUSTOMER:
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'CUSTOMER'
     Y.OFS.VERSION   = 'CUSTOMER,ALTA.DIGITAL'
-    Y.ID            = ''
+    Y.ID.CUSTOMER   = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
     
     GOSUB OBTENER.ID.CUSTOMER ; *Genera un nuevo id de customer para poder  guardarlo en la tabla como resultado
     
-    
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.CUSTOMER,Y.OFS.REQUEST)
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
+    
+    IF Error THEN
+        EB.SystemTables.setEtext(Error)
+        EB.ErrorProcessing.StoreEndError()
+    END ELSE
+        EB.SystemTables.setRNew(AbcTable.AbcCustomerFisicaNv4Api.IdCustomer, Y.ID.CUSTOMER)
+    END
 
 RETURN
 
