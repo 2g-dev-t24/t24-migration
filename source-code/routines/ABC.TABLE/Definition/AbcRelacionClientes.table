@@ -1,0 +1,19 @@
+private table AbcRelacionClientes {
+    t24: ABC.RELACION.CLIENTES
+    fields:{
+        Descripcion(VPM.DESCRIPCION) = 1
+
+        Reserved3(VPM.RESERVED.3)              = 2
+        Reserved2(VPM.RESERVED.2)              = 3
+        Reserved1(VPM.RESERVED.1)              = 4
+        RecordStatus(VPM.RECORD.STATUS)        = 5
+        CurrNo(VPM.CURR.NO)                    = 6
+        Inputter(VPM.INPUTTER)                 = 7
+        DateTime(VPM.DATE.TIME)                = 8
+        Authoriser(VPM.AUTHORISER)             = 9
+        CoCode(VPM.CO.CODE)                    = 10
+        DeptCode(VPM.DEPT.CODE)                = 11
+        AuditorCode(VPM.AUDITOR.CODE)          = 12
+        AuditDateTime(VPM.AUDIT.DATE.TIME)     = 13
+    }
+}

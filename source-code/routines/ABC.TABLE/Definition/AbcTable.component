@@ -484,7 +484,7 @@ private method AbcCompraInstrumentoFields (
 private method AbcCustomerFisicaNv4Api (
 )
 {
-   jBC: ABC.CUSTOMER.FISICA.NV4.API
+    jBC: ABC.CUSTOMER.FISICA.NV4.API
 }
 
 
@@ -492,7 +492,7 @@ private method AbcCustomerFisicaNv4Api (
 private method AbcCustomerFisicaNv4ApiFields (
 )
 {
-   jBC: ABC.CUSTOMER.FISICA.NV4.API.FIELDS
+    jBC: ABC.CUSTOMER.FISICA.NV4.API.FIELDS
 }
 
 
@@ -500,7 +500,7 @@ private method AbcCustomerFisicaNv4ApiFields (
 private method AbcCustomerAbcAltaDigitalApi (
 )
 {
-   jBC: ABC.CUSTOMER.ABC.ALTA.DIGITAL.API
+    jBC: ABC.CUSTOMER.ABC.ALTA.DIGITAL.API
 }
 
 
@@ -508,6 +508,22 @@ private method AbcCustomerAbcAltaDigitalApi (
 private method AbcCustomerAbcAltaDigitalApiFields (
 )
 {
-   jBC: ABC.CUSTOMER.ABC.ALTA.DIGITAL.API.FIELDS
+    jBC: ABC.CUSTOMER.ABC.ALTA.DIGITAL.API.FIELDS
+}
+
+
+
+private method AbcRelacionClientes (
+)
+{
+    jBC: ABC.RELACION.CLIENTES
+}
+
+
+
+private method AbcRelacionClientesFields (
+)
+{
+    jBC: ABC.RELACION.CLIENTES.FIELDS
 }
 
