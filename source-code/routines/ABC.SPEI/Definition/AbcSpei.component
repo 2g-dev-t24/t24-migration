@@ -1,0 +1,13 @@
+component AbcSpei
+
+# Component Isolation Definition
+metamodelVersion 1.6
+
+ 
+
+private method bmvIdCaja (
+)
+{
+    jBC: BMV.ID.CAJA
+}
+
