@@ -23,17 +23,21 @@ private table AbcCustomerAbcAltaDigitalApi {
         domFisc(ABC.ALTA.DIGITAL.DOM.FISC) = 20
         usoCfdi(ABC.ALTA.DIGITAL.USO.CFDI) = 21
         canal(ABC.ALTA.DIGITAL.CANAL) = 22
-        regFiscal(ABC.ALTA.DIGITAL.REG.FISCAL) = 23
-        mnemonic(ABC.ALTA.DIGITAL.MNEMONIC) = 24
-        idCustomer(ABC.ALTA.DIGITAL.ID.CUSTOMER) = 25
-        RecordStatus(ABC.ALTA.DIGITAL.RECORD.STATUS)              = 26
-        CurrNo(ABC.ALTA.DIGITAL.CURR.NO)                          = 27
-        Inputter(ABC.ALTA.DIGITAL.INPUTTER)                       = 28
-        DateTime(ABC.ALTA.DIGITAL.DATE.TIME)                      = 29
-        Authoriser(ABC.ALTA.DIGITAL.AUTHORISER)                   = 30
-        CoCode(ABC.ALTA.DIGITAL.CO.CODE)                          = 31
-        DeptCode(ABC.ALTA.DIGITAL.DEPT.CODE)                      = 32
-        AuditorCode(ABC.ALTA.DIGITAL.AUDITOR.CODE)                = 33
-        AuditDateTime(ABC.ALTA.DIGITAL.AUDIT.DATE.TIME)           = 34        
+        occupation(ABC.ALTA.DIGITAL.OCCUPATION-1) = 23
+        otherNationality(ABC.ALTA.DIGITAL.OTHER.NATIONALITY) = 24
+        nationality(ABC.ALTA.DIGITAL.NATIONALITY) = 25
+        regFiscal(ABC.ALTA.DIGITAL.REG.FISCAL) = 26
+        actividadEcono(ABC.ALTA.DIGITAL.ACTIVIDAD.ECONO) = 27
+        idCustomer(ABC.ALTA.DIGITAL.ID.CUSTOMER) = 28
+
+        RecordStatus(ABC.ALTA.DIGITAL.RECORD.STATUS)              = 29
+        CurrNo(ABC.ALTA.DIGITAL.CURR.NO)                          = 30
+        Inputter(ABC.ALTA.DIGITAL.INPUTTER)                       = 31
+        DateTime(ABC.ALTA.DIGITAL.DATE.TIME)                      = 32
+        Authoriser(ABC.ALTA.DIGITAL.AUTHORISER)                   = 33
+        CoCode(ABC.ALTA.DIGITAL.CO.CODE)                          = 34
+        DeptCode(ABC.ALTA.DIGITAL.DEPT.CODE)                      = 35
+        AuditorCode(ABC.ALTA.DIGITAL.AUDITOR.CODE)                = 36
+        AuditDateTime(ABC.ALTA.DIGITAL.AUDIT.DATE.TIME)           = 37        
     }
 }

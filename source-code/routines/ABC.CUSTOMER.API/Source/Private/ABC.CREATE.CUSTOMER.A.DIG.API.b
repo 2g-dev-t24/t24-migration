@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTkwMjE0NzE5NzpDcDEyNTI6MTc0NzUwNjM4NTc0ODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 17 May 2025 15:26:25
+* @ValidationCode : MjotOTQ0OTIwMTQwOkNwMTI1MjoxNzQ3NTMwODUxODAwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 17 May 2025 22:14:11
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -66,11 +66,11 @@ MAP.CUSTOMER:
     R.CUSTOMER<ST.Customer.Customer.EbCusLegalIssDate>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalIssDate)
     R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalExpDate)
     R.CUSTOMER<ST.Customer.Customer.EbCusTaxId>                 = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.taxId)
-    R.CUSTOMER<ST.Customer.Customer.EbCusMnemonic>              = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.mnemonic)
-    R.CUSTOMER<ST.Customer.Customer.EbCusCountry>               = 'MX'
+    R.CUSTOMER<ST.Customer.Customer.EbCusOccupation>            = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.occupation)
+    R.CUSTOMER<ST.Customer.Customer.EbCusOtherNationality>      = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.otherNationality)
+    R.CUSTOMER<ST.Customer.Customer.EbCusNationality>           = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.nationality)
     R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef>              = Y.LOCAL.REF
 
-*    R.CUSTOMER<ST.Customer.Customer.EbCusMnemonic>              = "A"
    
 
 RETURN
@@ -104,7 +104,8 @@ MAP.MXBASE:
 *** <desc>Mapeo campos MXBASE </desc>
 *-----------------------------------------------------------------------------
     R.MAP.MXBASE = ''
-    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.SatTaxRegime> = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.regFiscal)
+    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.SatTaxRegime>     = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.regFiscal)
+    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.EconomicActivity> = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.actividadEcono)
     
 
 RETURN

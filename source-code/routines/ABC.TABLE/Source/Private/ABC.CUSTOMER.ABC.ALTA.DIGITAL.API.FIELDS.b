@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMjA2NjY0NTQ2NzpDcDEyNTI6MTc0NjEyNjg4NzI1MjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 01 May 2025 16:14:47
+* @ValidationCode : MjoxMjMxOTk2Mjg3OkNwMTI1MjoxNzQ3NTMwMjAzMzYxOkx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 17 May 2025 22:03:23
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -49,8 +49,11 @@ SUBROUTINE ABC.CUSTOMER.ABC.ALTA.DIGITAL.API.FIELDS
     EB.Template.TableAddfielddefinition('DOM.FISC'          ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('USO.CFDI'          ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('CANAL'             ,'100', 'A', '')
+    EB.Template.TableAddfielddefinition('OCCUPATION-1'      ,'100', 'A', '')
+    EB.Template.TableAddfielddefinition('OTHER.NATIONALITY' ,'100', 'A', '')
+    EB.Template.TableAddfielddefinition('NATIONALITY'       ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('REG.FISCAL'        ,'100', 'A', '')
-    EB.Template.TableAddfielddefinition('MNEMONIC'          ,'100', 'A', '')
+    EB.Template.TableAddfielddefinition('ACTIVIDAD.ECONO'   ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('ID.CUSTOMER'       ,'100', 'A', '')
     EB.Template.TableSetauditposition()
     
