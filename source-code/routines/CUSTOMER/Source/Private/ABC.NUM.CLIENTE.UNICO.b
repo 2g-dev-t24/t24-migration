@@ -125,8 +125,8 @@ SET.DIGITO.VER:
     FOR A.I.NOM = 1 TO 12
 
         FIND ('K' : AUX.RFC[A.I.NOM, 1]) IN A.ANEXO.3 SETTING Ap,Vp THEN
-            A.SUM.DIG += A.ANEXO.3<Ap, 2> * A.FACTOR
-            A.FACTOR -= 1
+            A.SUM.DIG = A.SUM.DIG + A.ANEXO.3<Ap, 2> * A.FACTOR
+            A.FACTOR = A.FACTOR - 1
         END
     NEXT A.I.NOM
 
