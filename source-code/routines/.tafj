@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Properties>
-<Property key="temn.tafj.config.file" value="C:\Uala\TAFJ\conf\routines.properties"/>
-<Property key="tafj.home" value="C:\Uala\TAFJ"/>
+<Property key="temn.tafj.config.file" value="C:\Bancar\DesignStudioT24-R24.21\TAFJ\conf\routines.properties"/>
+<Property key="tafj.home" value="C:\Bancar\DesignStudioT24-R24.21\TAFJ"/>
 </Properties>

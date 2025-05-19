@@ -527,3 +527,19 @@ private method AbcRelacionClientesFields (
     jBC: ABC.RELACION.CLIENTES.FIELDS
 }
 
+
+private method AbcCnbvGrpEconomico (
+)
+{
+    jBC: ABC.CNBV.GRP.ECONOMICO
+}
+
+
+
+private method AbcCnbvGrpEconomicoFields (
+)
+{
+    jBC: ABC.CNBV.GRP.ECONOMICO.FIELDS
+}
+
+
