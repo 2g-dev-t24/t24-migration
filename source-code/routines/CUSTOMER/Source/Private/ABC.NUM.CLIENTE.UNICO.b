@@ -58,6 +58,7 @@ GENERA.RFC.CURP:
     ETEINC = 1
     ETEOK = 0
 *.. INICIALIZA VARIABLES
+    Y.MAYUS  = CHAR(165)
     CLIENTE.UNICO = ''
     CLIENTE.UNICO.RFC = ''
     CLIENTE.UNICO.CURP = ''
@@ -123,9 +124,9 @@ SET.DIGITO.VER:
     IF LEN(AUX.RFC) EQ 11 THEN AUX.RFC = ' ' : AUX.RFC
 
     FOR A.I.NOM = 1 TO 12
-
-        FIND ('K' : AUX.RFC[A.I.NOM, 1]) IN A.ANEXO.3 SETTING Ap,Vp THEN
-            A.SUM.DIG = A.SUM.DIG + A.ANEXO.3<Ap, 2> * A.FACTOR
+        Y.FIND4 = 'K' : AUX.RFC[A.I.NOM, 1]
+        LOCATE Y.FIND4  IN A.ANEXO.3 SETTING ANEXO3.POS THEN
+            A.SUM.DIG = A.SUM.DIG + A.ANEXO.3<ANEXO3.POS, 2> * A.FACTOR
             A.FACTOR = A.FACTOR - 1
         END
     NEXT A.I.NOM
@@ -141,17 +142,16 @@ SET.DIGITO.VER:
 RETURN
 SET.HOMONIMIA:
 
-    A.NUM.NOMBRE = '0'
-    A.CLIENTE = APE.PATERNO : ' ' : APE.MATERNO : ' ' : NOMBRE
+    A.NUM.NOMBRE = 0
+    A.CLIENTE = APE.PATERNO : APE.MATERNO : NOMBRE
     A.CLIENTE = UPCASE(A.CLIENTE)
-    A.CLIENTE = TRIM(A.CLIENTE)
 
     A.NOM.CLIENTE.ORIG = A.CLIENTE
     FOR A.I.NOM = 1 TO LEN(A.NOM.CLIENTE.ORIG)
+        Y.FIND1 = 'K' : A.NOM.CLIENTE.ORIG[A.I.NOM, 1]
+        LOCATE Y.FIND1 IN A.ANEXO.1 SETTING ANEXO.1.POS THEN
 
-        LOCATE ('K' : A.NOM.CLIENTE.ORIG[A.I.NOM, 1]) IN A.ANEXO.1 SETTING Ap,Vp THEN
-
-            A.NUM.NOMBRE := A.ANEXO.1<Ap,2>
+            A.NUM.NOMBRE := A.ANEXO.1<ANEXO.1.POS,2>
 
         END
 
@@ -174,15 +174,16 @@ SET.HOMONIMIA:
 
     A.COC.HOM = (A.SUM.HOM-A.RES.HOM) / 34
 
-    FIND ('K' : A.COC.HOM) IN A.ANEXO.2 SETTING Ap,Vp THEN
+    Y.FIND2 = 'K' : A.COC.HOM
+    LOCATE Y.FIND2 IN A.ANEXO.2 SETTING ANEXO.2.POS THEN
 
-        A.COC.HOM = A.ANEXO.2<Ap,2>
+        A.COC.HOM = A.ANEXO.2<ANEXO.2.POS,2>
 
     END
+    Y.FIND3 = 'K' : A.RES.HOM
+    LOCATE Y.FIND3 IN A.ANEXO.2 SETTING ANEXO.3.POS THEN
 
-    FIND ('K' : A.RES.HOM) IN A.ANEXO.2 SETTING Ap,Vp THEN
-
-        A.RES.HOM = A.ANEXO.2<Ap,2>
+        A.RES.HOM = A.ANEXO.2<ANEXO.3.POS,2>
 
     END
 
@@ -191,126 +192,126 @@ SET.HOMONIMIA:
 RETURN
 SET.LISTA.ANEXO.1:
 
-    A.ANEXO.1  = 'K ' : VM : '00' : FM
-    A.ANEXO.1 := 'K0' : VM : '00' : FM
-    A.ANEXO.1 := 'K1' : VM : '01' : FM
-    A.ANEXO.1 := 'K2' : VM : '02' : FM
-    A.ANEXO.1 := 'K3' : VM : '03' : FM
-    A.ANEXO.1 := 'K4' : VM : '04' : FM
-    A.ANEXO.1 := 'K5' : VM : '05' : FM
-    A.ANEXO.1 := 'K6' : VM : '06' : FM
-    A.ANEXO.1 := 'K7' : VM : '07' : FM
-    A.ANEXO.1 := 'K8' : VM : '08' : FM
-    A.ANEXO.1 := 'K9' : VM : '09' : FM
-    A.ANEXO.1 := 'K&' : VM : '10' : FM
-    A.ANEXO.1 := 'KA' : VM : '11' : FM
-    A.ANEXO.1 := 'KB' : VM : '12' : FM
-    A.ANEXO.1 := 'KC' : VM : '13' : FM
-    A.ANEXO.1 := 'KD' : VM : '14' : FM
-    A.ANEXO.1 := 'KE' : VM : '15' : FM
-    A.ANEXO.1 := 'KF' : VM : '16' : FM
-    A.ANEXO.1 := 'KG' : VM : '17' : FM
-    A.ANEXO.1 := 'KH' : VM : '18' : FM
-    A.ANEXO.1 := 'KI' : VM : '19' : FM
-    A.ANEXO.1 := 'KJ' : VM : '21' : FM
-    A.ANEXO.1 := 'KK' : VM : '22' : FM
-    A.ANEXO.1 := 'KL' : VM : '23' : FM
-    A.ANEXO.1 := 'KM' : VM : '24' : FM
-    A.ANEXO.1 := 'KN' : VM : '25' : FM
-    A.ANEXO.1 := 'KO' : VM : '26' : FM
-    A.ANEXO.1 := 'KP' : VM : '27' : FM
-    A.ANEXO.1 := 'KQ' : VM : '28' : FM
-    A.ANEXO.1 := 'KR' : VM : '29' : FM
-    A.ANEXO.1 := 'KS' : VM : '32' : FM
-    A.ANEXO.1 := 'KT' : VM : '33' : FM
-    A.ANEXO.1 := 'KU' : VM : '34' : FM
-    A.ANEXO.1 := 'KV' : VM : '35' : FM
-    A.ANEXO.1 := 'KW' : VM : '36' : FM
-    A.ANEXO.1 := 'KX' : VM : '37' : FM
-    A.ANEXO.1 := 'KY' : VM : '38' : FM
-    A.ANEXO.1 := 'KZ' : VM : '39' : FM
-    A.ANEXO.1 := 'K':Y.MAYUS : VM : '40'
+    A.ANEXO.1  = 'K ' : @VM : '00' : @FM
+    A.ANEXO.1 := 'K0' : @VM : '00' : @FM
+    A.ANEXO.1 := 'K1' : @VM : '01' : @FM
+    A.ANEXO.1 := 'K2' : @VM : '02' : @FM
+    A.ANEXO.1 := 'K3' : @VM : '03' : @FM
+    A.ANEXO.1 := 'K4' : @VM : '04' : @FM
+    A.ANEXO.1 := 'K5' : @VM : '05' : @FM
+    A.ANEXO.1 := 'K6' : @VM : '06' : @FM
+    A.ANEXO.1 := 'K7' : @VM : '07' : @FM
+    A.ANEXO.1 := 'K8' : @VM : '08' : @FM
+    A.ANEXO.1 := 'K9' : @VM : '09' : @FM
+    A.ANEXO.1 := 'K&' : @VM : '10' : @FM
+    A.ANEXO.1 := 'KA' : @VM : '11' : @FM
+    A.ANEXO.1 := 'KB' : @VM : '12' : @FM
+    A.ANEXO.1 := 'KC' : @VM : '13' : @FM
+    A.ANEXO.1 := 'KD' : @VM : '14' : @FM
+    A.ANEXO.1 := 'KE' : @VM : '15' : @FM
+    A.ANEXO.1 := 'KF' : @VM : '16' : @FM
+    A.ANEXO.1 := 'KG' : @VM : '17' : @FM
+    A.ANEXO.1 := 'KH' : @VM : '18' : @FM
+    A.ANEXO.1 := 'KI' : @VM : '19' : @FM
+    A.ANEXO.1 := 'KJ' : @VM : '21' : @FM
+    A.ANEXO.1 := 'KK' : @VM : '22' : @FM
+    A.ANEXO.1 := 'KL' : @VM : '23' : @FM
+    A.ANEXO.1 := 'KM' : @VM : '24' : @FM
+    A.ANEXO.1 := 'KN' : @VM : '25' : @FM
+    A.ANEXO.1 := 'KO' : @VM : '26' : @FM
+    A.ANEXO.1 := 'KP' : @VM : '27' : @FM
+    A.ANEXO.1 := 'KQ' : @VM : '28' : @FM
+    A.ANEXO.1 := 'KR' : @VM : '29' : @FM
+    A.ANEXO.1 := 'KS' : @VM : '32' : @FM
+    A.ANEXO.1 := 'KT' : @VM : '33' : @FM
+    A.ANEXO.1 := 'KU' : @VM : '34' : @FM
+    A.ANEXO.1 := 'KV' : @VM : '35' : @FM
+    A.ANEXO.1 := 'KW' : @VM : '36' : @FM
+    A.ANEXO.1 := 'KX' : @VM : '37' : @FM
+    A.ANEXO.1 := 'KY' : @VM : '38' : @FM
+    A.ANEXO.1 := 'KZ' : @VM : '39' : @FM
+    A.ANEXO.1 := 'K':Y.MAYUS : @VM : '40'
 
 RETURN
 SET.LISTA.ANEXO.2:
 
-    A.ANEXO.2  = 'K0'  : VM : '1' : FM
-    A.ANEXO.2 := 'K1'  : VM : '2' : FM
-    A.ANEXO.2 := 'K2'  : VM : '3' : FM
-    A.ANEXO.2 := 'K3'  : VM : '4' : FM
-    A.ANEXO.2 := 'K4'  : VM : '5' : FM
-    A.ANEXO.2 := 'K5'  : VM : '6' : FM
-    A.ANEXO.2 := 'K6'  : VM : '7' : FM
-    A.ANEXO.2 := 'K7'  : VM : '8' : FM
-    A.ANEXO.2 := 'K8'  : VM : '9' : FM
-    A.ANEXO.2 := 'K9'  : VM : 'A' : FM
-    A.ANEXO.2 := 'K10' : VM : 'B' : FM
-    A.ANEXO.2 := 'K11' : VM : 'C' : FM
-    A.ANEXO.2 := 'K12' : VM : 'D' : FM
-    A.ANEXO.2 := 'K13' : VM : 'E' : FM
-    A.ANEXO.2 := 'K14' : VM : 'F' : FM
-    A.ANEXO.2 := 'K15' : VM : 'G' : FM
-    A.ANEXO.2 := 'K16' : VM : 'H' : FM
-    A.ANEXO.2 := 'K17' : VM : 'I' : FM
-    A.ANEXO.2 := 'K18' : VM : 'J' : FM
-    A.ANEXO.2 := 'K19' : VM : 'K' : FM
-    A.ANEXO.2 := 'K20' : VM : 'L' : FM
-    A.ANEXO.2 := 'K21' : VM : 'M' : FM
-    A.ANEXO.2 := 'K22' : VM : 'N' : FM
-    A.ANEXO.2 := 'K23' : VM : 'P' : FM
-    A.ANEXO.2 := 'K24' : VM : 'Q' : FM
-    A.ANEXO.2 := 'K25' : VM : 'R' : FM
-    A.ANEXO.2 := 'K26' : VM : 'S' : FM
-    A.ANEXO.2 := 'K27' : VM : 'T' : FM
-    A.ANEXO.2 := 'K28' : VM : 'U' : FM
-    A.ANEXO.2 := 'K29' : VM : 'V' : FM
-    A.ANEXO.2 := 'K30' : VM : 'W' : FM
-    A.ANEXO.2 := 'K31' : VM : 'X' : FM
-    A.ANEXO.2 := 'K32' : VM : 'Y' : FM
-    A.ANEXO.2 := 'K33' : VM : 'Z' : FM
+    A.ANEXO.2  = 'K0'  : @VM : '1' : @FM
+    A.ANEXO.2 := 'K1'  : @VM : '2' : @FM
+    A.ANEXO.2 := 'K2'  : @VM : '3' : @FM
+    A.ANEXO.2 := 'K3'  : @VM : '4' : @FM
+    A.ANEXO.2 := 'K4'  : @VM : '5' : @FM
+    A.ANEXO.2 := 'K5'  : @VM : '6' : @FM
+    A.ANEXO.2 := 'K6'  : @VM : '7' : @FM
+    A.ANEXO.2 := 'K7'  : @VM : '8' : @FM
+    A.ANEXO.2 := 'K8'  : @VM : '9' : @FM
+    A.ANEXO.2 := 'K9'  : @VM : 'A' : @FM
+    A.ANEXO.2 := 'K10' : @VM : 'B' : @FM
+    A.ANEXO.2 := 'K11' : @VM : 'C' : @FM
+    A.ANEXO.2 := 'K12' : @VM : 'D' : @FM
+    A.ANEXO.2 := 'K13' : @VM : 'E' : @FM
+    A.ANEXO.2 := 'K14' : @VM : 'F' : @FM
+    A.ANEXO.2 := 'K15' : @VM : 'G' : @FM
+    A.ANEXO.2 := 'K16' : @VM : 'H' : @FM
+    A.ANEXO.2 := 'K17' : @VM : 'I' : @FM
+    A.ANEXO.2 := 'K18' : @VM : 'J' : @FM
+    A.ANEXO.2 := 'K19' : @VM : 'K' : @FM
+    A.ANEXO.2 := 'K20' : @VM : 'L' : @FM
+    A.ANEXO.2 := 'K21' : @VM : 'M' : @FM
+    A.ANEXO.2 := 'K22' : @VM : 'N' : @FM
+    A.ANEXO.2 := 'K23' : @VM : 'P' : @FM
+    A.ANEXO.2 := 'K24' : @VM : 'Q' : @FM
+    A.ANEXO.2 := 'K25' : @VM : 'R' : @FM
+    A.ANEXO.2 := 'K26' : @VM : 'S' : @FM
+    A.ANEXO.2 := 'K27' : @VM : 'T' : @FM
+    A.ANEXO.2 := 'K28' : @VM : 'U' : @FM
+    A.ANEXO.2 := 'K29' : @VM : 'V' : @FM
+    A.ANEXO.2 := 'K30' : @VM : 'W' : @FM
+    A.ANEXO.2 := 'K31' : @VM : 'X' : @FM
+    A.ANEXO.2 := 'K32' : @VM : 'Y' : @FM
+    A.ANEXO.2 := 'K33' : @VM : 'Z' : @FM
 
 RETURN
 SET.LISTA.ANEXO.3:
 
-    A.ANEXO.3  = 'K0'  : VM : '00' : FM
-    A.ANEXO.3 := 'K1'  : VM : '01' : FM
-    A.ANEXO.3 := 'K2'  : VM : '02' : FM
-    A.ANEXO.3 := 'K3'  : VM : '03' : FM
-    A.ANEXO.3 := 'K4'  : VM : '04' : FM
-    A.ANEXO.3 := 'K5'  : VM : '05' : FM
-    A.ANEXO.3 := 'K6'  : VM : '06' : FM
-    A.ANEXO.3 := 'K7'  : VM : '07' : FM
-    A.ANEXO.3 := 'K8'  : VM : '08' : FM
-    A.ANEXO.3 := 'K9'  : VM : '09' : FM
-    A.ANEXO.3 := 'KA'  : VM : '10' : FM
-    A.ANEXO.3 := 'KB'  : VM : '11' : FM
-    A.ANEXO.3 := 'KC'  : VM : '12' : FM
-    A.ANEXO.3 := 'KD'  : VM : '13' : FM
-    A.ANEXO.3 := 'KE'  : VM : '14' : FM
-    A.ANEXO.3 := 'KF'  : VM : '15' : FM
-    A.ANEXO.3 := 'KG'  : VM : '16' : FM
-    A.ANEXO.3 := 'KH'  : VM : '17' : FM
-    A.ANEXO.3 := 'KI'  : VM : '18' : FM
-    A.ANEXO.3 := 'KJ'  : VM : '19' : FM
-    A.ANEXO.3 := 'KK'  : VM : '20' : FM
-    A.ANEXO.3 := 'KL'  : VM : '21' : FM
-    A.ANEXO.3 := 'KM'  : VM : '22' : FM
-    A.ANEXO.3 := 'KN'  : VM : '23' : FM
-    A.ANEXO.3 := 'K&'  : VM : '24' : FM
-    A.ANEXO.3 := 'KO'  : VM : '25' : FM
-    A.ANEXO.3 := 'KP'  : VM : '26' : FM
-    A.ANEXO.3 := 'KQ'  : VM : '27' : FM
-    A.ANEXO.3 := 'KR'  : VM : '28' : FM
-    A.ANEXO.3 := 'KS'  : VM : '29' : FM
-    A.ANEXO.3 := 'KT'  : VM : '30' : FM
-    A.ANEXO.3 := 'KU'  : VM : '31' : FM
-    A.ANEXO.3 := 'KV'  : VM : '32' : FM
-    A.ANEXO.3 := 'KW'  : VM : '33' : FM
-    A.ANEXO.3 := 'KX'  : VM : '34' : FM
-    A.ANEXO.3 := 'KY'  : VM : '35' : FM
-    A.ANEXO.3 := 'KZ'  : VM : '36' : FM
-    A.ANEXO.3 := 'K '  : VM : '37' : FM
-    A.ANEXO.3 := 'K':Y.MAYUS  : VM : '38' : FM
+    A.ANEXO.3  = 'K0'  : @VM : '00' : @FM
+    A.ANEXO.3 := 'K1'  : @VM : '01' : @FM
+    A.ANEXO.3 := 'K2'  : @VM : '02' : @FM
+    A.ANEXO.3 := 'K3'  : @VM : '03' : @FM
+    A.ANEXO.3 := 'K4'  : @VM : '04' : @FM
+    A.ANEXO.3 := 'K5'  : @VM : '05' : @FM
+    A.ANEXO.3 := 'K6'  : @VM : '06' : @FM
+    A.ANEXO.3 := 'K7'  : @VM : '07' : @FM
+    A.ANEXO.3 := 'K8'  : @VM : '08' : @FM
+    A.ANEXO.3 := 'K9'  : @VM : '09' : @FM
+    A.ANEXO.3 := 'KA'  : @VM : '10' : @FM
+    A.ANEXO.3 := 'KB'  : @VM : '11' : @FM
+    A.ANEXO.3 := 'KC'  : @VM : '12' : @FM
+    A.ANEXO.3 := 'KD'  : @VM : '13' : @FM
+    A.ANEXO.3 := 'KE'  : @VM : '14' : @FM
+    A.ANEXO.3 := 'KF'  : @VM : '15' : @FM
+    A.ANEXO.3 := 'KG'  : @VM : '16' : @FM
+    A.ANEXO.3 := 'KH'  : @VM : '17' : @FM
+    A.ANEXO.3 := 'KI'  : @VM : '18' : @FM
+    A.ANEXO.3 := 'KJ'  : @VM : '19' : @FM
+    A.ANEXO.3 := 'KK'  : @VM : '20' : @FM
+    A.ANEXO.3 := 'KL'  : @VM : '21' : @FM
+    A.ANEXO.3 := 'KM'  : @VM : '22' : @FM
+    A.ANEXO.3 := 'KN'  : @VM : '23' : @FM
+    A.ANEXO.3 := 'K&'  : @VM : '24' : @FM
+    A.ANEXO.3 := 'KO'  : @VM : '25' : @FM
+    A.ANEXO.3 := 'KP'  : @VM : '26' : @FM
+    A.ANEXO.3 := 'KQ'  : @VM : '27' : @FM
+    A.ANEXO.3 := 'KR'  : @VM : '28' : @FM
+    A.ANEXO.3 := 'KS'  : @VM : '29' : @FM
+    A.ANEXO.3 := 'KT'  : @VM : '30' : @FM
+    A.ANEXO.3 := 'KU'  : @VM : '31' : @FM
+    A.ANEXO.3 := 'KV'  : @VM : '32' : @FM
+    A.ANEXO.3 := 'KW'  : @VM : '33' : @FM
+    A.ANEXO.3 := 'KX'  : @VM : '34' : @FM
+    A.ANEXO.3 := 'KY'  : @VM : '35' : @FM
+    A.ANEXO.3 := 'KZ'  : @VM : '36' : @FM
+    A.ANEXO.3 := 'K '  : @VM : '37' : @FM
+    A.ANEXO.3 := 'K':Y.MAYUS  : @VM : '38' : @FM
 
 RETURN
 ***************************************
