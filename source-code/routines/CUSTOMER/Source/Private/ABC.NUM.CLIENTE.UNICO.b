@@ -35,13 +35,13 @@ SUBROUTINE ABC.NUM.CLIENTE.UNICO
 
     MESSAGE = EB.SystemTables.getMessage()
     
-*    IF MESSAGE EQ 'VAL' THEN
-*     RETURN
-*    END
+    IF MESSAGE EQ 'VAL' THEN
+     RETURN
+    END
 
 
-*    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId,"")
-*    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,"")
+    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId,"")
+    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusExternCusId,"")
 
 
 
