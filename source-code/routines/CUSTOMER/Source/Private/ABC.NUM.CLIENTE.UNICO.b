@@ -664,9 +664,14 @@ CALCULA.NUM.CTE:
 
 *..MUEVE LUGAR DE NACIMIENTO
 
-    LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>
-       
-    CLAVE.ALFA = LUG.NAC
+
+    LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDistrictName); REC.LUGNAC = ''
+    
+    EB.DataAccess.FRead(FN.ABC.ESTADO, LUG.NAC, R.ABC.ESTADO, F.ABC.ESTADO, CUST.ERR)
+    IF R.ABC.ESTADO NE '' THEN
+        CLAVE.ALFA = R.ABC.ESTADO<Clave>
+    END
+    
    
     CLIENTE.UNICO.CURP[12,2] = CLAVE.ALFA
 
@@ -965,7 +970,7 @@ CLIENTE.DUPLICADO:
         GOSUB VALIDA.CLIENTE.PM
     END ELSE
         Y.RFC.AUX = Y.RFC[1,10]
-        Y.ESTADO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>
+        Y.ESTADO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDistrictName)
         Y.SHORT.NAME = TRIM(Y.APE.PAT)
         Y.NAME.1 = TRIM(Y.APE.MAT)
         Y.NAME.2 = TRIM(Y.NOMBRE)
@@ -1149,7 +1154,7 @@ ABRE.TABLAS:
     
     YPOS.NOM.PER.MORAL   = V.FLD.POS<1,1>
     YPOS.LUGAR.CONST     = V.FLD.POS<1,2>
-    Y.POS.BIRTH.PROV     = V.FLD.POS<1,3> 
+ *   Y.POS.BIRTH.PROV     = V.FLD.POS<1,3> 
     
 *****************************************************************************
 
@@ -1176,7 +1181,7 @@ VALIDA.DATOS:
     APE.MATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne)
     NOMBRE      = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo)
     FEC.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
-    LUG.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>
+    LUG.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDistrictName)
     GENERO      = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
 
     IF LEN(APE.PATERNO) EQ 0 THEN
