@@ -664,13 +664,10 @@ CALCULA.NUM.CTE:
 
 *..MUEVE LUGAR DE NACIMIENTO
 
-     LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>; REC.LUGNAC = ''
- 
-    EB.DataAccess.FRead(FN.ABC.ESTADO, LUG.NAC, REC.LUGNAC, F.ABC.ESTADO, Y.ERR.BON)
-    
-    IF REC.LUGNAC NE '' THEN
-        CLAVE.ALFA = REC.LUGNAC<AbcTable.AbcEstado.Clave>
-    END
+    LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.BIRTH.PROV>
+       
+    CLAVE.ALFA = LUG.NAC
+   
     CLIENTE.UNICO.CURP[12,2] = CLAVE.ALFA
 
 *..MUEVE PRIMERA CONSONANTE DE PRIMER APELLIDO
