@@ -669,7 +669,7 @@ CALCULA.NUM.CTE:
     
     EB.DataAccess.FRead(FN.ABC.ESTADO, LUG.NAC, R.ABC.ESTADO, F.ABC.ESTADO, CUST.ERR)
     IF R.ABC.ESTADO NE '' THEN
-        CLAVE.ALFA = R.ABC.ESTADO<Clave>
+        CLAVE.ALFA = R.ABC.ESTADO<AbcTable.AbcEstado.Clave>
     END
     
    
