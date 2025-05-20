@@ -26,12 +26,17 @@ SUBROUTINE ABC.VALIDA.EDO.CURP
     $USING ST.Customer
     $USING EB.DataAccess
     $USING EB.Updates
-    
+    $USING AbcTable
+
     GOSUB INIT
     GOSUB OPEN.FILES
 
     Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDistrictName)
-
+        
+    EB.DataAccess.FRead(FN.ABC.ESTADO, LUG.NAC, R.ABC.ESTADO, F.ABC.ESTADO, CUST.ERR)
+    IF R.ABC.ESTADO NE '' THEN
+        Y.LUG.NAC = R.ABC.ESTADO<AbcTable.AbcEstado.Clave>
+    END
     IF Y.LUG.NAC NE '' THEN
         Y.LUG.NAC.CURP = Y.CURP[12,2]
         IF Y.LUG.NAC.CURP EQ '' THEN
