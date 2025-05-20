@@ -412,3 +412,21 @@ private method abcCusPostCodeLocalidad (
     jBC: ABC.CUS.POST.CODE.LOCALIDAD
 }
 
+private method AbcEIndustry (INOUT EnqParam string)
+{
+    jBC: ABC.E.INDUSTRY
+}
+
+
+private method AbcConvIndustryId (INOUT YValue string, INOUT IndustryCode string)
+{
+    jBC: ABC.CONV.INDUSTRY.ID
+}
+
+
+private method AbcNofGetIndustry (
+    INOUT RData string
+)
+{
+    jBC: ABC.NOF.GET.INDUSTRY
+}
