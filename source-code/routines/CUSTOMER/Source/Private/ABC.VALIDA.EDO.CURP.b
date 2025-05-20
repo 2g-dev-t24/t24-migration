@@ -33,7 +33,7 @@ SUBROUTINE ABC.VALIDA.EDO.CURP
 
     Y.LUG.NAC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDistrictName)
         
-    EB.DataAccess.FRead(FN.ABC.ESTADO, LUG.NAC, R.ABC.ESTADO, F.ABC.ESTADO, CUST.ERR)
+    EB.DataAccess.FRead(FN.ABC.ESTADO, Y.LUG.NAC, R.ABC.ESTADO, F.ABC.ESTADO, CUST.ERR)
     IF R.ABC.ESTADO NE '' THEN
         Y.LUG.NAC = R.ABC.ESTADO<AbcTable.AbcEstado.Clave>
     END
