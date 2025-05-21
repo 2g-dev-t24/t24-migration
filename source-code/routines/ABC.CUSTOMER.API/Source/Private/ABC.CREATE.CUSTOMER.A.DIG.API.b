@@ -1,5 +1,5 @@
-* @ValidationCode : MjotOTQ0OTIwMTQwOkNwMTI1MjoxNzQ3NTMwODUxODAwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 17 May 2025 22:14:11
+* @ValidationCode : MjozMDkzMjAzMTQ6Q3AxMjUyOjE3NDc4NjQzMjA4OTY6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 21 May 2025 18:52:00
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -51,7 +51,7 @@ MAP.CUSTOMER:
     R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>               = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.name1)
     R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>               = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.name2)
     R.CUSTOMER<ST.Customer.Customer.EbCusDateOfBirth>           = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.dateOfBirth)
-    R.CUSTOMER<ST.Customer.Customer.EbCusBirthProvince>         = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.lugNac)
+    R.CUSTOMER<ST.Customer.Customer.EbCusDistrictName>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.lugNac)
     R.CUSTOMER<ST.Customer.Customer.EbCusGender>                = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.gender)
     R.CUSTOMER<ST.Customer.Customer.EbCusExternCusId>           = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.externCusId)
     R.CUSTOMER<ST.Customer.Customer.EbCusSmsOne>                = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.sms1)
@@ -119,7 +119,6 @@ CREAR.OFS.CUSTOMER:
     Y.OFS.APP       = 'CUSTOMER'
     Y.OFS.VERSION   = 'CUSTOMER,ABC.API.ALTA.DIGITAL.1.0.0'
     Y.ID            = ''
-    Y.OFS.VERSION   = 'CUSTOMER,ABC.ALTA.DIGITAL'
     Y.ID.CUSTOMER   = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''

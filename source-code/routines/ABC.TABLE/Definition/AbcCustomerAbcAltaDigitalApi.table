@@ -23,7 +23,7 @@ private table AbcCustomerAbcAltaDigitalApi {
         domFisc(ABC.ALTA.DIGITAL.DOM.FISC) = 20
         usoCfdi(ABC.ALTA.DIGITAL.USO.CFDI) = 21
         canal(ABC.ALTA.DIGITAL.CANAL) = 22
-        occupation(ABC.ALTA.DIGITAL.OCCUPATION-1) = 23
+        occupation(ABC.ALTA.DIGITAL.OCCUPATION) = 23
         otherNationality(ABC.ALTA.DIGITAL.OTHER.NATIONALITY) = 24
         nationality(ABC.ALTA.DIGITAL.NATIONALITY) = 25
         regFiscal(ABC.ALTA.DIGITAL.REG.FISCAL) = 26
