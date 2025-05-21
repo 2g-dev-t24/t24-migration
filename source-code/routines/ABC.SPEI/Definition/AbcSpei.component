@@ -11,3 +11,11 @@ private method bmvIdCaja (
     jBC: BMV.ID.CAJA
 }
 
+
+
+private method abcValidateIvaSpei (
+)
+{
+   jBC: ABC.VALIDATE.IVA.SPEI
+}
+
