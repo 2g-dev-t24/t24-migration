@@ -1,5 +1,5 @@
-* @ValidationCode : MjozMDkzMjAzMTQ6Q3AxMjUyOjE3NDc4NjQzMjA4OTY6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 21 May 2025 18:52:00
+* @ValidationCode : Mjo0ODkxMjM2NTA6Q3AxMjUyOjE3NDc4NjYxODc5MTk6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 21 May 2025 19:23:07
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -104,7 +104,7 @@ MAP.MXBASE:
 *** <desc>Mapeo campos MXBASE </desc>
 *-----------------------------------------------------------------------------
     R.MAP.MXBASE = ''
-    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.SatTaxRegime>     = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.regFiscal)
+    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.SatTaxRegime>     = 'BANXICO.ECO.ACTIVITY*':EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.regFiscal)
     R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.EconomicActivity> = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.actividadEcono)
     
 
