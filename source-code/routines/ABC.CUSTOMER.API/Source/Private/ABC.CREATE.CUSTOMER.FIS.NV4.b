@@ -122,7 +122,7 @@ CREAR.OFS.CUSTOMER:
 
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'CUSTOMER'
-    Y.OFS.VERSION   = 'CUSTOMER,ALTA.DIGITAL'
+    Y.OFS.VERSION   = 'CUSTOMER,ABC.API.ALTA.DIGITAL.1.0.0'
     Y.ID.CUSTOMER   = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
@@ -132,7 +132,7 @@ CREAR.OFS.CUSTOMER:
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.CUSTOMER,Y.OFS.REQUEST)
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
-    
+   
     IF Error THEN
         EB.SystemTables.setEtext(Error)
         EB.ErrorProcessing.StoreEndError()
