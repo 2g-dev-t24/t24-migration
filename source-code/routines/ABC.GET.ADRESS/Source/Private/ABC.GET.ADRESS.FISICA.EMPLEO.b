@@ -41,11 +41,11 @@ INITIALIZE:
     Y.SEP      = "|"
     LREF.TABLE = "CUSTOMER"
     LREF.FIELD = ""
-    LREF.FIELD := "L.EMP.ENTIDAD"  : @VM
+    LREF.FIELD := "EMP.ENTIDAD"  : @VM
 * LREF.FIELD := "CIUDAD"       : VM TOWN.COUNTRY-1
-    LREF.FIELD := "L.EMP.DEL.MUNI" : @VM
-    LREF.FIELD := "L.EMP.COL"      : @VM
-    LREF.FIELD := "L.EMP.PAIS"     : @VM
+    LREF.FIELD := "EMP.DEL.MUNI" : @VM
+    LREF.FIELD := "EMP.COL"      : @VM
+    LREF.FIELD := "EMP.PAIS"     : @VM
     LREF.POS = ""
 
     EB.Updates.MultiGetLocRef(LREF.TABLE, LREF.FIELD, LREF.POS)
