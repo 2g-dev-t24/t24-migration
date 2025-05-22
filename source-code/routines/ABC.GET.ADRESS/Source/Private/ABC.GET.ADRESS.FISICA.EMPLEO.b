@@ -42,7 +42,7 @@ INITIALIZE:
     LREF.TABLE = "CUSTOMER"
     LREF.FIELD = ""
     LREF.FIELD := "EMP.ENTIDAD"  : @VM
-* LREF.FIELD := "CIUDAD"       : VM TOWN.COUNTRY-1
+    LREF.FIELD := "EMP.CIUDAD"   : @VM
     LREF.FIELD := "EMP.DEL.MUNI" : @VM
     LREF.FIELD := "EMP.COL"      : @VM
     LREF.FIELD := "EMP.PAIS"     : @VM
@@ -51,10 +51,10 @@ INITIALIZE:
     EB.Updates.MultiGetLocRef(LREF.TABLE, LREF.FIELD, LREF.POS)
 
     Y.POS.DIR.CD.EDO   = LREF.POS<1,1>
-*Y.POS.DIR.CIUDAD   = LREF.POS<1,2>
-    Y.POS.DIR.DEL.MUNI = LREF.POS<1,2>
-    Y.POS.DIR.COLONIA  = LREF.POS<1,3>
-    Y.POS.DIR.PAIS     = LREF.POS<1,4>
+    Y.POS.DIR.CIUDAD   = LREF.POS<1,2>
+    Y.POS.DIR.DEL.MUNI = LREF.POS<1,3>
+    Y.POS.DIR.COLONIA  = LREF.POS<1,4>
+    Y.POS.DIR.PAIS     = LREF.POS<1,5>
     
     Y.COD.POS = EB.SystemTables.getComi()
     
@@ -91,13 +91,14 @@ PROCESS:
 
         Y.CAMPOS.LOCALES<1,Y.POS.DIR.CD.EDO>   = Y.ESTADO
         Y.CAMPOS.LOCALES<1,Y.POS.DIR.DEL.MUNI> = Y.MUNICIPIO
-        
+        Y.CAMPOS.LOCALES<1,Y.POS.DIR.CIUDAD>   = Y.CIUDAD
+
         Y.CAMPOS.LOCALES<1,Y.POS.DIR.COLONIA>  = Y.COLONIA
         Y.CAMPOS.LOCALES<1,Y.POS.DIR.PAIS>     = Y.PAIS
         
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.CAMPOS.LOCALES)
 
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTownCountry,Y.CIUDAD)
+        
 
         EB.Display.RebuildScreen()
 *CALL REFRESH.GUI.OBJECTS
