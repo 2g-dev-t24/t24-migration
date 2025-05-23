@@ -60,7 +60,7 @@ PROCESA:
     EB.DataAccess.FRead(FN.CUSTOMER,Y.ID.CUSTOMER,R.CUSTOMER,F.CUSTOMER,Y.ERR.CUSTOMER)
     IF Y.ERR.CUSTOMER EQ '' THEN
         Y.EXPEDIENTE.DIGI = R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef,YPOS.EXPEDIENTE.DIGI>
-        IF Y.EXPEDIENTE.DIGI NE 'SI'THEN
+        IF Y.EXPEDIENTE.DIGI NE 'SI' THEN
             ETEXT = 'El cliente no tiene expediente digital'
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
