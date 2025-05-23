@@ -13,7 +13,7 @@ SUBROUTINE ABC.RANGO.SUCURSALES
 *-----------------------------------------------------------------------------
 *-----------------------------------------------------------------------------
     EB.Template.setTableName('ABC.RANGO.SUCURSALES')       ;* Full application name including product prefix
-    EB.Template.setTableTitle('Template para Comisionistas')   ;* Screen title
+    EB.Template.setTableTitle('ABC.RANGO.SUCURSALES')   ;* Screen title
     EB.Template.setTableStereotype('H')    ;* H, U, L, W or T
     EB.Template.setTableProduct('EB')      ;* Must be on EB.PRODUCT
     EB.Template.setTableSubproduct('')     ;* Must be on EB.SUB.PRODUCT
