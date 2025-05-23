@@ -432,3 +432,11 @@ private method AbcNofGetSectorEconomico (
 {
     jBC: ABC.NOF.GET.SECTOR.ECONOMICO
 }
+
+
+private method AbcExpDigCus (
+)
+{
+   jBC: ABC.EXP.DIG.CUS
+}
+
