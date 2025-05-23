@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMjAyNjgyNzY3MjpDcDEyNTI6MTc0Nzk2MDg1MjgwMTptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 22 May 2025 21:40:52
+* @ValidationCode : Mjo3NjM1NzgzOTA6Q3AxMjUyOjE3NDc5NzAwNzA4NDc6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 23 May 2025 00:14:30
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -29,7 +29,7 @@ SUBROUTINE ABC.EXP.DIG.CUS
     $USING EB.ErrorProcessing
     $USING EB.LocalReferences
     $USING AA.Account
-    
+    $USING AA.Framework
     GOSUB INICIO
     GOSUB OPEN.FILES
     GOSUB PROCESA
@@ -40,14 +40,13 @@ RETURN
 INICIO:
 *----------*
 
-    Y.ID.CUSTOMER = EB.SystemTables.getRNew(AA.Account.Account.AcCustomerReference)
+    Y.ID.CUSTOMER = EB.SystemTables.getRNew(AA.Framework.Arrangement.ArrCustomer)
 
 RETURN
 
 *----------*
 OPEN.FILES:
 *----------*
-
     FN.CUSTOMER = 'F.CUSTOMER'
     F.CUSTOMER  = ''
     EB.DataAccess.Opf(FN.CUSTOMER,F.CUSTOMER)
