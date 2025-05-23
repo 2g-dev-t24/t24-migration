@@ -1,0 +1,45 @@
+public table AbcParametrosSpei {
+    t24: ABC.PARAMETROS.SPEI
+    fields:{
+        SpeiPriNombre(ABC.SPEI.SPEI.PRI.NOMBRE) = 1
+        SpeiMontoMax(ABC.SPEI.SPEI.MONTO.MAX)= 2
+        TxnTipoEnv(ABC.SPEI.TXN.TIPO.ENV)= 3
+        TxnTipoMen(ABC.SPEI.TXN.TIPO.MEN)= 4
+        TxnTipoRec(ABC.SPEI.TXN.TIPO.REC)= 5
+        TxnTipoDev(ABC.SPEI.TXN.TIPO.DEV)= 6
+        SpeiDevolRec(ABC.SPEI.SPEI.DEVOL.REC)= 7
+        SpeiOrdRec(ABC.SPEI.SPEI.ORD.REC)= 8
+        SpeiOrdRecDevol(ABC.SPEI.SPEI.ORD.REC.DEVOL)= 9
+        SpeiCtaMenores(ABC.SPEI.SPEI.CTA.MENORES)= 10
+        SpeiCtaBanxico(ABC.SPEI.SPEI.CTA.BANXICO)= 11
+        OfsSource(ABC.SPEI.OFS.SOURCE)= 12
+        OfsFxVersion(ABC.SPEI.OFS.FX.VERSION)= 13
+        DispPath(ABC.SPEI.DISP.PATH)= 14
+        DispErrPath(ABC.SPEI.DISP.ERR.PATH)= 15
+        DispAmt(ABC.SPEI.DISP.AMT)= 16
+        NumDiasDisp(ABC.SPEI.NUM.DIAS.DISP)= 17
+        OfsSourceDisp(ABC.SPEI.OFS.SOURCE.DISP)= 18
+        OfsDispVersion(ABC.SPEI.OFS.DISP.VERSION)= 19
+        OfsDispIntVer(ABC.SPEI.OFS.DISP.INT.VER)= 20
+        DispIntTxn(ABC.SPEI.DISP.INT.TXN)= 21
+        TipoTercTerc(ABC.SPEI.TIPO.TERC.TERC)= 22
+        TipoBcoTercero(ABC.SPEI.TIPO.BCO.TERCERO)= 23
+        CommFtMasiv(ABC.SPEI.COMM.FT.MASIV)= 24
+        DaysToHis(ABC.SPEI.DAYS.TO.HIS)= 25
+        DaysToDel(ABC.SPEI.DAYS.TO.DEL)= 26
+        Reserved3(ABC.SPEI.RESERVED.3) = 27
+        Reserved2(ABC.SPEI.RESERVED.2) = 28
+        Reserved1(ABC.SPEI.RESERVED.1) = 29
+        LocalRef(ABC.SPEI.LOCAL.REF) = 30
+        Override(ABC.SPEI.OVERRIDE) = 31
+        RecordStatus(ABC.SPEI.RECORD.STATUS) = 32
+        CurrNo(ABC.SPEI.CURR.NO) = 33
+        Inputter(ABC.SPEI.INPUTTER) = 34
+        DateTime(ABC.SPEI.DATE.TIME) = 35
+        Authoriser(ABC.SPEI.AUTHORISER) = 36
+        CoCode(ABC.SPEI.CO.CODE) = 37
+        DeptCode(ABC.SPEI.DEPT.CODE) = 38
+        AuditorCode(ABC.SPEI.AUDITOR.CODE) = 39
+        AuditDateTime(ABC.SPEI.AUDIT.DATE.TIME) = 40
+    }
+}
