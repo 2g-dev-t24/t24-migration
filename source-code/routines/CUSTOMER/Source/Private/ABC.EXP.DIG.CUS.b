@@ -28,7 +28,6 @@ SUBROUTINE ABC.EXP.DIG.CUS
     $USING EB.DataAccess
     $USING EB.ErrorProcessing
     $USING EB.LocalReferences
-    $USING AA.Account
     $USING AA.Framework
     GOSUB INICIO
     GOSUB OPEN.FILES
