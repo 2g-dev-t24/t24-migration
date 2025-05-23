@@ -443,3 +443,7 @@ private method AbcExpDigCus (
 {
    jBC: ABC.EXP.DIG.CUS
 }
+private method AbcOnlyNumeric ()
+{
+    jBC: ABC.ONLY.NUMERIC
+}
