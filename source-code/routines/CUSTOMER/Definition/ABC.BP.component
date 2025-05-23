@@ -447,3 +447,10 @@ private method AbcOnlyNumeric ()
 {
     jBC: ABC.ONLY.NUMERIC
 }
+
+private method AbcNofGetAbcEstado (
+    INOUT RData string
+)
+{
+    jBC: ABC.NOF.GET.ABC.ESTADO
+}
