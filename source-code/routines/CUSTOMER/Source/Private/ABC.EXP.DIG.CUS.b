@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo3NjM1NzgzOTA6Q3AxMjUyOjE3NDc5NzAwNzA4NDc6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 23 May 2025 00:14:30
+* @ValidationCode : Mjo1MzIzODg5MzI6Q3AxMjUyOjE3NDc5NzA2NTcwMTY6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 23 May 2025 00:24:17
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -62,9 +62,8 @@ PROCESA:
         Y.EXPEDIENTE.DIGI = R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef,YPOS.EXPEDIENTE.DIGI>
         IF Y.EXPEDIENTE.DIGI NE 'SI'THEN
             ETEXT = 'El cliente no tiene expediente digital'
-            EB.SystemTables.setE(ETEXT)
+            EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
-            EB.ErrorProcessing.Err()
         END
     END
 
