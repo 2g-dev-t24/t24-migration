@@ -39,3 +39,4 @@ PROCESO:
     EB.SystemTables.setRNew(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.CnbvEcoActivityCode, Y.SECTOR.ECONOMICO)
 
     RETURN
+END
