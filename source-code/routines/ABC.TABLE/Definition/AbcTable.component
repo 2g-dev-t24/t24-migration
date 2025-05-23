@@ -3,6 +3,17 @@ component AbcTable
 # Component Isolation Definition
 metamodelVersion 1.6
 # -------------------------------------------------
+private method AbcRangoSucursales ()
+{
+    jBC: ABC.RANGO.SUCURSALES
+}
+
+private method AbcRangoSucursalesFields ()
+{
+    jBC: ABC.RANGO.SUCURSALES.FIELDS
+}
+
+# -------------------------------------------------
 private method AbcParametrosSpei ()
 {
     jBC: ABC.PARAMETROS.SPEI
