@@ -1,5 +1,5 @@
 $PACKAGE AbcTable
-SUBROUTINE BA.EMPLEADOS.NOMINA.FIELDS
+SUBROUTINE ABC.PARAMETROS.SPEI.FIELDS
 *-----------------------------------------------------------------------------
     $USING EB.Template
     $USING EB.SystemTables
