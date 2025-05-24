@@ -19,3 +19,23 @@ private method abcValidateIvaSpei (
    jBC: ABC.VALIDATE.IVA.SPEI
 }
 
+
+
+private method abcRfcCep (
+)
+{
+   jBC: ABC.RFC.CEP
+}
+
+
+
+
+
+private method abcVCustomerName (
+   INOUT yComi string,
+   INOUT yNombre string
+)
+{
+   jBC: ABC.V.CUSTOMER.NAME
+}
+
