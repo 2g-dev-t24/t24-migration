@@ -123,11 +123,13 @@ PROCESO:
             END
         END
     END ELSE
-        Y.NOM.PER.MORAL = Y.LOCAL.REF<1,Y.POS.NOM.PER.MORAL>
-        Y.ESTADO = Y.LOCAL.REF<1,Y.POS.LUGAR.CONST>
-        Y.RFC.ID = Y.RFC[1,9]
-        Y.RFC.OLD.ID = Y.RFC.OLD[1,9]
-        GOSUB VALIDA.CLIENTE.PM
+        IF Y.SECTOR LE '2014' THEN
+            Y.NOM.PER.MORAL = Y.LOCAL.REF<1,Y.POS.NOM.PER.MORAL>
+            Y.ESTADO = Y.LOCAL.REF<1,Y.POS.LUGAR.CONST>
+            Y.RFC.ID = Y.RFC[1,9]
+            Y.RFC.OLD.ID = Y.RFC.OLD[1,9]
+            GOSUB VALIDA.CLIENTE.PM
+        END
     END
 RETURN
 ******************
