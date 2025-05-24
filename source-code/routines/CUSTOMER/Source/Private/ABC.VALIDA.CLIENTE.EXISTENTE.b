@@ -68,6 +68,9 @@ INICIO:
     Y.POS.LUGAR.CONST = Y.POS.LOC<1,2>
     Y.POS.CLASS.COTI = Y.POS.LOC<1,3>
 
+    Y.RAZON.SOCIAL.ARG = "SHORT" ; Y.RAZON.SOCIAL = ''
+    ABC.BP.AbcGetRazonSocial(Y.RAZON.SOCIAL.ARG)
+    Y.RAZON.SOCIAL = Y.RAZON.SOCIAL.ARG
 RETURN
 
 
@@ -83,6 +86,7 @@ PROCESO:
     Y.RFC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,1>
     Y.RFC.OLD = EB.SystemTables.getROld(ST.Customer.Customer.EbCusTaxId)<1,1>
     Y.CURP = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusExternCusId)
+    Y.CURP.OLD = EB.SystemTables.getROld(ST.Customer.Customer.EbCusExternCusId)
     Y.DATE.BIRTH = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
 
     IF Y.RFC EQ '' THEN
@@ -98,13 +102,37 @@ PROCESO:
         Y.ESTADO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
         Y.RFC.ID = Y.RFC[1,10]
         Y.RFC.OLD.ID = Y.RFC.OLD[1,10]
+        Y.CURP.ID = Y.CURP[1,10]
+        Y.CURP.OLD.ID = Y.CURP.OLD[1,10]
+
+        GOSUB VALIDA.CLIENTE.PF
+        IF Y.ERROR EQ '' THEN
+            R.VAL.CUS.RFC = R.VAL.CUS
+            Y.VAL.ID = Y.CURP.ID
+            Y.ERROR = ''
+            R.VAL.CUS = ''
+            GOSUB VALIDA.CLIENTE.PF
+        END
+        IF Y.ERROR EQ '' THEN
+            ABC.BP.AbcInfoValCus.Write(Y.RFC.ID, R.VAL.CUS)
+
+            IF Y.RFC.BAN EQ '1' THEN
+                Y.INSERT<1,1> = Y.RFC
+                EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
+                EB.Display.RebuildScreen()
+            END
+        END
     END ELSE
         Y.NOM.PER.MORAL = Y.LOCAL.REF<1,Y.POS.NOM.PER.MORAL>
         Y.ESTADO = Y.LOCAL.REF<1,Y.POS.LUGAR.CONST>
         Y.RFC.ID = Y.RFC[1,9]
         Y.RFC.OLD.ID = Y.RFC.OLD[1,9]
+        GOSUB VALIDA.CLIENTE.PM
     END
-
+RETURN
+******************
+VALIDA.CLIENTE.PM:
+******************
     EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.RFC.ID,R.VAL.CUS,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS)
     IF R.VAL.CUS THEN
         Y.RFC.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc>
@@ -132,17 +160,7 @@ PROCESO:
         LOCATE Y.RFC IN Y.RFC.LIST SETTING POS THEN
             Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
             IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
-                Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
-                EB.SystemTables.setEtext(Y.ERROR)
-                EB.ErrorProcessing.StoreEndError()
-                RETURN
-            END
-        END
-
-        LOCATE Y.CURP IN Y.CURP.LIST SETTING POS THEN
-            Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
-            IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
-                Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
+                Y.ERROR = 'Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ':Y.CLIENTE.1
                 EB.SystemTables.setEtext(Y.ERROR)
                 EB.ErrorProcessing.StoreEndError()
                 RETURN
@@ -155,33 +173,20 @@ PROCESO:
             GOSUB LIMPIA.VARIABLES
 
             Y.CLIENTE.1 = Y.CLIENTE.LIST<X>
-            Y.GENDER.1 = Y.GENDER.LIST<X>
             Y.DATE.BIRTH.1 = Y.DATE.BIRTH.LIST<X>
-            Y.SHORT.NAME.1 = Y.SHORT.NAME.LIST<X>
-            Y.NAME.1.1 = Y.NAME.1.LIST<X>
-            Y.NAME.2.1 = Y.NAME.2.LIST<X>
             Y.NOM.PER.MORAL.1 = Y.NOM.PER.MORAL.LIST<X>
             Y.ESTADO.1 = Y.ESTADO.LIST<X>
 
-            IF Y.SECTOR EQ '2001' THEN
-                IF Y.GENDER EQ Y.GENDER.1 AND Y.DATE.BIRTH EQ Y.DATE.BIRTH.1 AND Y.SHORT.NAME EQ Y.SHORT.NAME.1 AND Y.NAME.1 EQ Y.NAME.1.1 AND Y.NAME.2 EQ Y.NAME.2.1 AND Y.ESTADO EQ Y.ESTADO.1 THEN
-                    IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
-                        Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
-                        EB.SystemTables.setEtext(Y.ERROR)
-                        EB.ErrorProcessing.StoreEndError()
-                        RETURN
-                    END
-                END
-            END ELSE
-                IF Y.DATE.BIRTH EQ Y.DATE.BIRTH.1 AND Y.NOM.PER.MORAL EQ Y.NOM.PER.MORAL.1 AND Y.ESTADO EQ Y.ESTADO.1 THEN
-                    IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
-                        Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
-                        EB.SystemTables.setEtext(Y.ERROR)
-                        EB.ErrorProcessing.StoreEndError()
-                        RETURN
-                    END
+            
+            IF Y.DATE.BIRTH EQ Y.DATE.BIRTH.1 AND Y.NOM.PER.MORAL EQ Y.NOM.PER.MORAL.1 AND Y.ESTADO EQ Y.ESTADO.1 THEN
+                IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
+                    Y.ERROR = 'Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ':Y.CLIENTE.1
+                    EB.SystemTables.setEtext(Y.ERROR)
+                    EB.ErrorProcessing.StoreEndError()
+                    RETURN
                 END
             END
+            
         NEXT X
 
         IF Y.RFC.OLD.ID NE '' THEN
@@ -242,7 +247,105 @@ PROCESO:
     END
 
 RETURN
+******************
+VALIDA.CLIENTE.PF:
+******************
+EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.RFC.ID,R.VAL.CUS,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS)
+    IF R.VAL.CUS THEN
+        Y.RFC.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc>
+        Y.CURP.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCurp>
+        Y.CLIENTE.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCliente>
+        Y.GENDER.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusGender>
+        Y.DATE.BIRTH.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusDateOfBirth>
+        Y.SHORT.NAME.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusShortName>
+        Y.NAME.1.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusName1>
+        Y.NAME.2.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusName2>
+        Y.NOM.PER.MORAL.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusNomPerMoral>
+        Y.ESTADO.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusEstado>
 
+        CHANGE @VM TO @FM IN Y.RFC.LIST
+        CHANGE @VM TO @FM IN Y.CURP.LIST
+        CHANGE @VM TO @FM IN Y.CLIENTE.LIST
+        CHANGE @VM TO @FM IN Y.GENDER.LIST
+        CHANGE @VM TO @FM IN Y.DATE.BIRTH.LIST
+        CHANGE @VM TO @FM IN Y.SHORT.NAME.LIST
+        CHANGE @VM TO @FM IN Y.NAME.1.LIST
+        CHANGE @VM TO @FM IN Y.NAME.2.LIST
+        CHANGE @VM TO @FM IN Y.NOM.PER.MORAL.LIST
+        CHANGE @VM TO @FM IN Y.ESTADO.LIST
+
+        LOCATE Y.CURP IN Y.CURP.LIST SETTING POS THEN
+            Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
+            IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
+                Y.ERROR = 'Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ':Y.CLIENTE.1
+                EB.SystemTables.setEtext(Y.ERROR)
+                EB.ErrorProcessing.StoreEndError()
+                RETURN
+            END
+        END
+
+        NUM.RFC = DCOUNT(Y.RFC.LIST, FM)
+
+        FOR X = 1 TO NUM.RFC
+            GOSUB LIMPIA.VARIABLES
+
+            Y.CLIENTE.1 = Y.CLIENTE.LIST<X>
+            Y.GENDER.1 = Y.GENDER.LIST<X>
+            Y.DATE.BIRTH.1 = Y.DATE.BIRTH.LIST<X>
+            Y.SHORT.NAME.1 = Y.SHORT.NAME.LIST<X>
+            Y.NAME.1.1 = Y.NAME.1.LIST<X>
+            Y.NAME.2.1 = Y.NAME.2.LIST<X>
+            Y.NOM.PER.MORAL.1 = Y.NOM.PER.MORAL.LIST<X>
+            Y.ESTADO.1 = Y.ESTADO.LIST<X>
+
+            
+            IF Y.GENDER EQ Y.GENDER.1 AND Y.DATE.BIRTH EQ Y.DATE.BIRTH.1 AND Y.SHORT.NAME EQ Y.SHORT.NAME.1 AND Y.NAME.1 EQ Y.NAME.1.1 AND Y.NAME.2 EQ Y.NAME.2.1 AND Y.ESTADO EQ Y.ESTADO.1 THEN
+                IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
+                    Y.ERROR = 'Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ':Y.CLIENTE.1
+                    EB.SystemTables.setEtext(Y.ERROR)
+                    EB.ErrorProcessing.StoreEndError()
+                    RETURN
+                END
+            END
+        NEXT X
+
+        LOCATE Y.ID.CLIENTE IN Y.CLIENTE.LIST SETTING POS THEN
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc,POS> = Y.RFC
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCurp,POS> = Y.CURP
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCliente,POS> = EB.SystemTables.getIdNew()
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusGender,POS> = Y.GENDER
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusDateOfBirth,POS> = Y.DATE.BIRTH
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusShortName,POS> = Y.SHORT.NAME
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusName1,POS> = Y.NAME.1
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusName2,POS> = Y.NAME.2
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusNomPerMoral,POS> = Y.NOM.PER.MORAL
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusEstado,POS> = Y.ESTADO
+        END ELSE
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc> := @VM:Y.RFC
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCurp> := @VM:Y.CURP
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCliente> := @VM:EB.SystemTables.getIdNew()
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusGender> := @VM:Y.GENDER
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusDateOfBirth> := @VM:Y.DATE.BIRTH
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusShortName> := @VM:Y.SHORT.NAME
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusName1> := @VM:Y.NAME.1
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusName2> := @VM:Y.NAME.2
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusNomPerMoral> := @VM:Y.NOM.PER.MORAL
+            R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusEstado> := @VM:Y.ESTADO
+        END
+    END ELSE
+
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc> = Y.RFC
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCurp> = Y.CURP
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCliente> = EB.SystemTables.getIdNew()
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusGender> = Y.GENDER
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusDateOfBirth> = Y.DATE.BIRTH
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusShortName> = Y.SHORT.NAME
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusName1> = Y.NAME.1
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusName2> = Y.NAME.2
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusNomPerMoral> = Y.NOM.PER.MORAL
+        R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusEstado> = Y.ESTADO
+    END
+RETURN
 **********************
 ELIMINA.INFO.ANTERIOR:
 **********************

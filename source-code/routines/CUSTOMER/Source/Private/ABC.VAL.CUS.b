@@ -70,6 +70,10 @@ INICIO:
     Y.SEXO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
     Y.RFC.ORI = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,1>
 
+    Y.RAZON.SOCIAL.ARG = "SHORT" ; Y.RAZON.SOCIAL = ''
+    ABC.BP.AbcGetRazonSocial(Y.RAZON.SOCIAL.ARG)
+    Y.RAZON.SOCIAL = Y.RAZON.SOCIAL.ARG
+
 RETURN
 
 ******************
@@ -110,6 +114,20 @@ BUSQUEDA:
 
         Y.ID.CLIENTE = EB.SystemTables.getIdNew()
 
+        GOSUB VALIDA.CLIENTE
+        
+
+        IF Y.RFC.ORI EQ '' THEN
+            Y.INSERT<1,1> = V.RFC
+            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
+            EB.Display.RebuildScreen()
+        END
+    END
+
+RETURN
+*************
+VALIDA.CLIENTE:
+*************
         EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.RFC,R.VAL.CUS,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS)
         IF R.VAL.CUS THEN
             Y.RFC.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc>
@@ -134,20 +152,20 @@ BUSQUEDA:
             CHANGE @VM TO @FM IN Y.NOM.PER.MORAL.LIST
             CHANGE @VM TO @FM IN Y.ESTADO.LIST
 
-            LOCATE V.RFC IN Y.RFC.LIST SETTING POS THEN
-                Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
-                IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
-                    Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
-                    EB.SystemTables.setEtext(Y.ERROR)
-                    EB.ErrorProcessing.StoreEndError()
-                END
-                RETURN
-            END
+            *LOCATE V.RFC IN Y.RFC.LIST SETTING POS THEN
+            *    Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
+            *    IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
+            *        Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
+            *        EB.SystemTables.setEtext(Y.ERROR)
+            *        EB.ErrorProcessing.StoreEndError()
+            *    END
+            *    RETURN
+            *END
 
             LOCATE Y.CURP IN Y.CURP.LIST SETTING POS THEN
                 Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
                 IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
-                    Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
+                    Y.ERROR = 'Tenemos registrado que ya eres cliente de ': Y.RAZON.SOCIAL :'. ':Y.CLIENTE.1
                     EB.SystemTables.setEtext(Y.ERROR)
                     EB.ErrorProcessing.StoreEndError()
                 END
@@ -170,7 +188,7 @@ BUSQUEDA:
 
                 IF Y.SEXO EQ Y.GENDER.1 AND Y.FEC.NAC EQ Y.DATE.BIRTH.1 AND Y.APE.PAT EQ Y.SHORT.NAME.1 AND Y.APE.MAT EQ Y.NAME.1.1 AND Y.NOMBRE EQ Y.NAME.2.1 THEN
                     IF Y.ID.CLIENTE NE Y.CLIENTE.1 THEN
-                        Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
+                        Y.ERROR = 'Tenemos registrado que ya eres cliente de ': Y.RAZON.SOCIAL :'. ':Y.CLIENTE.1
                         EB.SystemTables.setEtext(Y.ERROR)
                         EB.ErrorProcessing.StoreEndError()
                     END
@@ -178,16 +196,7 @@ BUSQUEDA:
                 END
             NEXT X
         END
-
-        IF Y.RFC.ORI EQ '' THEN
-            Y.INSERT<1,1> = V.RFC
-            EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
-            EB.Display.RebuildScreen()
-        END
-    END
-
 RETURN
-
 *********************
 LIMPIA.VARIABLES.BUS:
 *********************

@@ -102,7 +102,7 @@ CLIENTE.DUPLICADO:
         LOCATE Y.RFC IN Y.RFC.LIST SETTING POS THEN
             Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
             IF Y.ID.CUS NE Y.CLIENTE.1 THEN
-                Y.ERROR = 'Tenemos registrado que ya eres cliente de ABC Capital. ':Y.CLIENTE.1
+                Y.ERROR = 'Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ':Y.CLIENTE.1
                 EB.SystemTables.setEtext(Y.ERROR)
                 EB.ErrorProcessing.StoreEndError()
             END
@@ -141,6 +141,9 @@ ABRE.TABLAS:
     YPOS.NOM.PER.MORAL = Y.POS.LOC<1,1>
     YPOS.LUGAR.CONST = Y.POS.LOC<1,2>
 *****************************************************************************
+    Y.RAZON.SOCIAL.ARG = "SHORT" ; Y.RAZON.SOCIAL = ''
+    ABC.BP.AbcGetRazonSocial(Y.RAZON.SOCIAL.ARG)
+    Y.RAZON.SOCIAL = Y.RAZON.SOCIAL.ARG
 RETURN
 
 ****************
