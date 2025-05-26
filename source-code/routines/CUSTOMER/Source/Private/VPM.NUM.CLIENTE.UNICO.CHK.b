@@ -21,9 +21,9 @@ SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
      END
 
 
-    
+    COMI = EB.SystemTables.getComi()
     IF COMI THEN
-        Y.RFC = EB.SystemTables.getComi()
+        Y.RFC = COMI
     END ELSE
         Y.RFC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
     END
@@ -84,7 +84,7 @@ CLIENTE.DUPLICADO:
     END ELSE
         Y.RFC.AUX = Y.RFC[1,10]
         GOSUB VALIDA.CLIENTE.PF
-        IF ETEXT EQ '' THEN
+        IF Y.ERROR EQ '' THEN
             Y.RFC.AUX = Y.CURP[1,10]
             GOSUB VALIDA.CLIENTE.PF
         END
