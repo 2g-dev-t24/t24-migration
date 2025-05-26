@@ -27,7 +27,7 @@ jobs:
 
       - name: Update kubeconfig for EKS
         run: |
-          aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }} --region ${{ secrets.AWS_REGION }}
+          aws eks update-kubeconfig --name transact-dev-cluster --region us-east-1
 
       - name: Get Transact Pod Name
         id: getpod
