@@ -1,16 +1,3 @@
-* @ValidationCode : MjotNjYzMTI0Nzk5OkNwMTI1MjoxNzQ1NTkyMzI2NDYyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 25 Apr 2025 11:45:26
-* @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
-* @ValidationInfo : Nb tests success  : N/A
-* @ValidationInfo : Nb tests failure  : N/A
-* @ValidationInfo : Rating            : N/A
-* @ValidationInfo : Coverage          : N/A
-* @ValidationInfo : Strict flag       : N/A
-* @ValidationInfo : Bypass GateKeeper : false
-* @ValidationInfo : Compiler Version  : R24_SP1.0
-* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
-*-----------------------------------------------------------------------------
 * <Rating>155</Rating>
 *-----------------------------------------------------------------------------
 $PACKAGE ABC.BP
@@ -33,8 +20,15 @@ SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
        RETURN
      END
 
-    Y.REF.GET = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
-    Y.RFC = Y.REF.GET<1,1>
+
+    
+    IF COMI THEN
+        Y.RFC = EB.SystemTables.getComi()
+    END ELSE
+        Y.RFC = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
+    END
+    
+    Y.CURP   = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusExternCusId)
     Y.ID.CUS = EB.SystemTables.getIdNew()
 
     GOSUB ABRE.TABLAS
@@ -45,9 +39,9 @@ SUBROUTINE VPM.NUM.CLIENTE.UNICO.CHK
     END 
 RETURN
 
-
+***********************************************************************************************************
 GENERA.RFC.CURP:
-
+***********************************************************************************************************
     ETEINC = 1; ETEOK = 0
     CLIENTE.UNICO = ''
     CLIENTE.UNICO.RFC = ''
@@ -81,14 +75,27 @@ GENERA.RFC.CURP:
     END
 RETURN
 
-
+***********************************************************************************************************
 CLIENTE.DUPLICADO:
-
+***********************************************************************************************************
     IF Y.SECTOR GE "2001" AND Y.SECTOR LE "2014" THEN
         Y.RFC.AUX = Y.RFC[1,9]
+        GOSUB VALIDA.CLIENTE.PM
     END ELSE
         Y.RFC.AUX = Y.RFC[1,10]
+        GOSUB VALIDA.CLIENTE.PF
+        IF ETEXT EQ '' THEN
+            Y.RFC.AUX = Y.CURP[1,10]
+            GOSUB VALIDA.CLIENTE.PF
+        END
     END
+
+    RETURN
+
+***********************************************************************************************************
+VALIDA.CLIENTE.PM:
+***********************************************************************************************************
+
     EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.RFC.AUX,R.VAL.CUS,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS)
     IF R.VAL.CUS THEN
         Y.RFC.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc>
@@ -111,9 +118,33 @@ CLIENTE.DUPLICADO:
     END
 
 RETURN
+***********************************************************************************************************
+VALIDA.CLIENTE.PF:
+***********************************************************************************************************
+    EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.RFC.AUX,R.VAL.CUS,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS)
+    IF R.VAL.CUS THEN
+        Y.RFC.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc>
+        Y.CURP.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCurp>
+        Y.CLIENTE.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCliente>
 
+        CHANGE @VM TO @FM IN Y.RFC.LIST
+        CHANGE @VM TO @FM IN Y.CURP.LIST
+        CHANGE @VM TO @FM IN Y.CLIENTE.LIST
+
+        LOCATE Y.CURP IN Y.CLIENTE.LIST SETTING POS THEN
+            Y.CLIENTE.1 = Y.CLIENTE.LIST<POS>
+            IF Y.ID.CUS NE Y.CLIENTE.1 THEN
+                Y.ERROR = 'Tenemos registrado que ya eres cliente de ' : Y.RAZON.SOCIAL : '. ':Y.CLIENTE.1
+                EB.SystemTables.setEtext(Y.ERROR)
+                EB.ErrorProcessing.StoreEndError()
+            END
+            RETURN
+        END
+    END
+
+***********************************************************************************************************
 ABRE.TABLAS:
-
+***********************************************************************************************************
 
     F.ABC.ESTADO  = ""
     FN.ABC.ESTADO = "F.ABC.ESTADO"
@@ -131,7 +162,7 @@ ABRE.TABLAS:
     F.ABC.INFO.VAL.CUS = ''
     EB.DataAccess.Opf(FN.ABC.INFO.VAL.CUS,F.ABC.INFO.VAL.CUS)
 
-*****************************************************************************
+
 *Campos Locales
     Y.APP.LOC = 'CUSTOMER'
     Y.FIELD.LOC = 'NOM.PER.MORAL':@VM:'LUGAR.CONST'
@@ -140,24 +171,25 @@ ABRE.TABLAS:
 
     YPOS.NOM.PER.MORAL = Y.POS.LOC<1,1>
     YPOS.LUGAR.CONST = Y.POS.LOC<1,2>
-*****************************************************************************
+
     Y.RAZON.SOCIAL.ARG = "SHORT" ; Y.RAZON.SOCIAL = ''
     ABC.BP.AbcGetRazonSocial(Y.RAZON.SOCIAL.ARG)
     Y.RAZON.SOCIAL = Y.RAZON.SOCIAL.ARG
+
 RETURN
 
-****************
+***********************************************************************************************************
 MANTEN.REGISTRO:
-****************
+***********************************************************************************************************
 * GENERICO NO HACE NADA
 *    Y.VAL.ACTUAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
 *    Y.ORIGEN = "GENERICO"
 *    ABC.BP.AbcCustValidaTodo(Y.VAL.ACTUAL, Y.ORIGEN)
 RETURN
 
-***************
+***********************************************************************************************************
 VALIDA.DATOS:
-********************
+***********************************************************************************************************
     
     APE.PATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusShortName)
     APE.MATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne)
@@ -204,8 +236,9 @@ VALIDA.DATOS:
 *        END
 *    END
 RETURN
-
+***********************************************************************************************************
 VALIDA.DATOS.M:
+***********************************************************************************************************
     NOMBRE.EMP = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne)
     FEC.CONSTI = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
 
@@ -223,5 +256,5 @@ VALIDA.DATOS.M:
         END
     END
 RETURN
-
+***********************************************************************************************************
 END
