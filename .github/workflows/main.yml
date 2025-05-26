@@ -19,15 +19,11 @@ jobs:
           aws configure set aws_secret_access_key m7Q/WvZOL/gZOWfKLqRs5CiLZoUwMRPhF8cHWyb3
           aws configure set aws_session_token "IQoJb3JpZ2luX2VjEHEaCXVzLWVhc3QtMSJGMEQCIFZ7LaLoV2H/AMRJrxdC0frpyo+LK530ir3SYvqlahs+AiBM7juC9GgET4XuaQnxObG3gH9yLcrbreOHdJ+680eCpyqNAwg6EAAaDDQ3MTExMjYwNTAxMCIMSWUYAOfYRUVpW8kOKuoC7+kEBsCDUrdtchq9F9re90gWmZVoWCxOis60oLquuyDrf7JYeEwt5S8/SgC6jEIZNgY9XlUSNtAwnOohCN26iEkNk79RRlRFKKI63zhqmt3t0cAfWwVFdkRxHIjIotP9xNIUJma1GTIovolu2LMhb0DsRBOjBrZ6hwXVLBmO/p4Y/QvKdrSuiCp0jl3GE/c2dEtkx9uNKw+S9ewUnpHMGe6uOc5OE3mXV6kPUVVkjhh9Yc3ArtbmqK3UKydhjsDjGXMc/suTQlDnb9NJR74Z1O1MPNUA9Ywtr/fa2L6V5IT3zEyR+khp+7gPtCujGzgMU+W+c6vnPdA9V2HGMkDm6qEbxAzdc/iNrj0Zw7/bhcxxb8hYy0p7ezFhxniIOuel3BSqShFI7Tflw89MZtuk6lOkqvld6CjbgyTQioJ4G4BYE94k4LSFsVU6hBcLv8BNtxLddhkM/yuSRan0k1MceiZYeQnfJmXbd84wtPbOwQY6pwGOWEyOVEK3p7JLI9moTKkwX/BUzHuW7CF6kLBZV1w2ex2j2a6RQq2tBpvmdWXCUzPvG+gxoez1WTw5d0LAXYdEb7upW8rn5G1qKWUDcMGIoXdATHJt4LycGe1SlLfvWn9o64NR8gFqZBap/0NCDytzwkQGBqh0gzurYxtFLcPOxpDOSnCS6wwPtLLaopWjVtUuvZlx+ImEuuKuB9d66Fz85yr3MLUtNg=="
 
-
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v3
-        with:
-          version: 'latest'
-
+      - name: Debug AWS EKS params
+        run: echo "Region=us-east-1 | Cluster=abc-t24-dev"
+  
       - name: Update kubeconfig for EKS
-        run: |
-          aws eks update-kubeconfig --region us-east-1 --name abc-t24-dev
+        run: aws eks update-kubeconfig --region us-east-1 --name abc-t24-dev
 
       - name: Get Transact Pod Name
         id: getpod
