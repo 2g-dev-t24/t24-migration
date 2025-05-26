@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo3OTc5MzE1OTc6Q3AxMjUyOjE3NDgxMTM2NTg1NDU6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 24 May 2025 16:07:38
+* @ValidationCode : MjotMzUxMTAyNDA3OkNwMTI1MjoxNzQ4MjIyMDgwNDU0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 25 May 2025 22:14:40
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -18,7 +18,7 @@ SUBROUTINE ABC.VALIDA.CANAL (Y.CANAL, Y.ERROR)
 *-----------------------------------------------------------------------------
 * Modification History :
 *-----------------------------------------------------------------------------
-
+ 
 *-----------------------------------------------------------------------------
     $USING FT.Contract
     $USING AC.AccountOpening
