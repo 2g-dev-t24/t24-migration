@@ -1,0 +1,55 @@
+name: Deploy and Compile Routines on Kubernetes
+
+on:
+  push:
+    paths:
+      - 'source-code/routines/**'
+
+jobs:
+  deploy-to-pod:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up AWS CLI with hardcoded credentials (only for testing)
+        run: |
+          aws configure set aws_access_key_id ASIAW3MD73VJLTJCHVU7
+          aws configure set aws_secret_access_key m7Q/WvZOL/gZOWfKLqRs5CiLZoUwMRPhF8cHWyb3
+          aws configure set aws_session_token "IQoJb3JpZ2luX2VjEHEaCXVzLWVhc3QtMSJGMEQCIFZ7LaLoV2H/AMRJrxdC0frpyo+LK530ir3SYvqlahs+AiBM7juC9GgET4XuaQnxObG3gH9yLcrbreOHdJ+680eCpyqNAwg6EAAaDDQ3MTExMjYwNTAxMCIMSWUYAOfYRUVpW8kOKuoC7+kEBsCDUrdtchq9F9re90gWmZVoWCxOis60oLquuyDrf7JYeEwt5S8/SgC6jEIZNgY9XlUSNtAwnOohCN26iEkNk79RRlRFKKI63zhqmt3t0cAfWwVFdkRxHIjIotP9xNIUJma1GTIovolu2LMhb0DsRBOjBrZ6hwXVLBmO/p4Y/QvKdrSuiCp0jl3GE/c2dEtkx9uNKw+S9ewUnpHMGe6uOc5OE3mXV6kPUVVkjhh9Yc3ArtbmqK3UKydhjsDjGXMc/suTQlDnb9NJR74Z1O1MPNUA9Ywtr/fa2L6V5IT3zEyR+khp+7gPtCujGzgMU+W+c6vnPdA9V2HGMkDm6qEbxAzdc/iNrj0Zw7/bhcxxb8hYy0p7ezFhxniIOuel3BSqShFI7Tflw89MZtuk6lOkqvld6CjbgyTQioJ4G4BYE94k4LSFsVU6hBcLv8BNtxLddhkM/yuSRan0k1MceiZYeQnfJmXbd84wtPbOwQY6pwGOWEyOVEK3p7JLI9moTKkwX/BUzHuW7CF6kLBZV1w2ex2j2a6RQq2tBpvmdWXCUzPvG+gxoez1WTw5d0LAXYdEb7upW8rn5G1qKWUDcMGIoXdATHJt4LycGe1SlLfvWn9o64NR8gFqZBap/0NCDytzwkQGBqh0gzurYxtFLcPOxpDOSnCS6wwPtLLaopWjVtUuvZlx+ImEuuKuB9d66Fz85yr3MLUtNg=="
+
+
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'latest'
+
+      - name: Update kubeconfig for EKS
+        run: |
+          aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }} --region ${{ secrets.AWS_REGION }}
+
+      - name: Get Transact Pod Name
+        id: getpod
+        run: |
+          POD_NAME=$(kubectl get pods -n ${{ secrets.K8S_NAMESPACE }} -o jsonpath="{.items[?(@.metadata.name.startsWith(\"transact-dev-temenos-transact-app-\"))].metadata.name}" | awk '{print $1}')
+          echo "pod-name=$POD_NAME" >> $GITHUB_OUTPUT
+
+      - name: Find updated folders
+        id: detectfolders
+        run: |
+          echo "folders=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^source-code/routines/' | awk -F '/' '{print $3}' | sort -u | tr '\n' ' ')" >> $GITHUB_OUTPUT
+
+      - name: Copy updated folders to pod
+        run: |
+          for folder in ${{ steps.detectfolders.outputs.folders }}; do
+            echo "Copying $folder to pod"
+            kubectl cp source-code/routines/$folder ${{ steps.getpod.outputs.pod-name }}:/shares/tafjud/ABC.BP/$folder -n ${{ secrets.K8S_NAMESPACE }}
+          done
+
+      - name: Compile folders in pod
+        run: |
+          for folder in ${{ steps.detectfolders.outputs.folders }}; do
+            echo "Compiling $folder"
+            kubectl exec -n ${{ secrets.K8S_NAMESPACE }} ${{ steps.getpod.outputs.pod-name }} -- sh -c "cd /srv/Temenos/TAFJ/bin && sh tCompile /shares/tafjud/ABC.BP/$folder" || echo "Compilation failed for $folder"
+          done
