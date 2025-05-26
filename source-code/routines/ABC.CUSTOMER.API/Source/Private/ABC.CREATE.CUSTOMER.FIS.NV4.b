@@ -122,7 +122,7 @@ CREAR.OFS.CUSTOMER:
 
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'CUSTOMER'
-    Y.OFS.VERSION   = 'CUSTOMER,ABC.API.ALTA.DIGITAL.1.0.0'
+    Y.OFS.VERSION   = 'CUSTOMER,ABC.FISICA.NIVEL4L'
     Y.ID.CUSTOMER   = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
@@ -149,7 +149,7 @@ CREAR.OFS.MXBASE:
 *-----------------------------------------------------------------------------
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'MXBASE.ADD.CUSTOMER.DETAILS'
-    Y.OFS.VERSION   = 'MXBASE.ADD.CUSTOMER.DETAILS,ALTA.DIGITAL'
+    Y.OFS.VERSION   = 'MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.CON.CTE.NIVEL4L'
     Y.ID            = ''
     Y.RECORD        = ''
     Y.NO.OF.AUTH    = 0
