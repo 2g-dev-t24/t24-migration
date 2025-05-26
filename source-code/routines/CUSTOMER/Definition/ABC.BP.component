@@ -454,3 +454,29 @@ private method AbcNofGetAbcEstado (
 {
     jBC: ABC.NOF.GET.ABC.ESTADO
 }
+
+private method AbcValDatoFiscal (
+)
+{
+   jBC: ABC.VAL.DATO.FISCAL
+}
+private method AbcIngShortName (
+)
+{
+   jBC: ABC.ING.SHORT.NAME
+}
+private method AbcCargaActividadEconomica (
+)
+{
+   jBC: ABC.CARGA.ACTIVIDAD.ECONOMICA
+}
+private method AbcCalCapCont (
+)
+{
+   jBC: ABC.CAL.CAP.CONT
+}
+private method AbcESelDep (
+    INOUT EnqParam string
+)
+{
+    jBC: ABC.E.SEL.DEP
