@@ -39,3 +39,21 @@ private method abcVCustomerName (
    jBC: ABC.V.CUSTOMER.NAME
 }
 
+
+
+private method abcValidaCanal (
+   INOUT yCanal string,
+   INOUT yError string
+)
+{
+   jBC: ABC.VALIDA.CANAL
+}
+
+
+
+private method abcValidaCanalFt (
+)
+{
+   jBC: ABC.VALIDA.CANAL.FT
+}
+
