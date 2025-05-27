@@ -48,9 +48,9 @@ PROCESS:
     R.DATA = ""
     Y.CADENA.SALIDA = ""
     IF Y.ID.EST THEN 
-        SEL.CMD = "SELECT " : FN.ABC.ESTADO :" WITH LIKE ...":DQUOTE(Y.ID.EST):"..."
+        SEL.CMD = "SELECT " : FN.ABC.ESTADO :" WITH LIKE ...":DQUOTE(Y.ID.EST):"... BY @ID"
     END ELSE
-        SEL.CMD = "SELECT " : FN.ABC.ESTADO
+        SEL.CMD = "SELECT " : FN.ABC.ESTADO : " BY @ID"
     END
 
     EB.DataAccess.Readlist(SEL.CMD,Y.LIST.REG,'',Y.NO.REGISTROS,Y.SELECT.CMD.ERR)
