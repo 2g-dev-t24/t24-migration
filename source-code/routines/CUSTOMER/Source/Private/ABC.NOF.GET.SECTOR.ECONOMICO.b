@@ -46,12 +46,12 @@ PROCESS:
         Y.ID.CUS = SEL.VALUES<IND.POS>
     END
 
-***si se usa en un contexto en el que no se le paso el ID
-    IF Y.ID.CUS EQ '' THEN
-        Y.ID.CUS = EB.SystemTables.getIdNew()
-    END
-
     R.CUSTOMER = ST.Customer.Customer.Read(Y.ID.CUS,CUST.ERR)
+
+    IF R.CUSTOMER EQ '' THEN
+        Y.ID.CUS = EB.SystemTables.getIdNew()
+        R.CUSTOMER = ST.Customer.Customer.Read(Y.ID.CUS,CUST.ERR)
+    END
     Y.INDUSTRY = R.CUSTOMER<ST.Customer.Customer.EbCusIndustry>
     IF LEN(Y.INDUSTRY) < 4 THEN
         Y.FILTRO = FMT(Y.INDUSTRY, "R%4")
@@ -68,8 +68,8 @@ PROCESS:
         Y.ID.ACT.ECONOMICA = Y.LIST.REG<Y.I>
         EB.DataAccess.FRead(FN.INDUSTRY, Y.ID.ACT.ECONOMICA, R.ABC.ACTIVIDAD.ECONOMICA, F.ABC.ACTIVIDAD.ECONOMICA, ERR.IND)
         Y.ACT.ECON.DESC = R.ABC.ACTIVIDAD.ECONOMICA<AbcTable.AbcActividadEconomica.Descripcion>
-        IF LEN(Y.ID.ACT.ECONOMICA) < 7 THEN
-            Y.ID.ACT.ECONOMICA = FMT(Y.ID.ACT.ECONOMICA, "R%7")
+        IF Y.ID.ACT.ECONOMICA[1,1] EQ 0 THEN
+            Y.ID.ACT.ECONOMICA = Y.ID.ACT.ECONOMICA[2,6]
         END
         Y.CADENA.SALIDA = "BANXICO.ECO.ACTIVITY*": Y.ID.ACT.ECONOMICA : Y.SEP : Y.ACT.ECON.DESC : Y.SEP
         R.DATA<-1> = Y.CADENA.SALIDA
