@@ -31,7 +31,7 @@ INICIALIZA:
 
     Y.POS.CLASSIFICATION = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
     EB.LocalReferences.GetLocRef("CUSTOMER","ABC.FIRMA.ELECT",Y.POS.FIRMA.ELE)
-    EB.LocalReferences.GetLocRef("CUSTOMER","L.CDNIA.RESID.EUA",Y.POS.CDNIA.EUA)
+    EB.LocalReferences.GetLocRef("CUSTOMER","CDNIA.RESID.EUA",Y.POS.CDNIA.EUA)
     EB.LocalReferences.GetLocRef("CUSTOMER","L.TIPO.EMP.OTRO",Y.POS.TIPO.EMP.OTRO)
 
     RETURN
@@ -76,7 +76,7 @@ LEE.CAMPO:
 
 * Valido que el Valor Ingresado sea para la Posicion de la Firma Electronica
     Y.FIRMA.ELE = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.FIRMA.ELE>
-    Y.FIRMA.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)
+    Y.FIRMA.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusText)
 **    Y.FIRMA.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,2>
 * Valido que Tenga Firma Electronica en el Campo Local "TIENE.FIRMA.ELE"
     IF Y.FIRMA.ELE EQ "SI" THEN
@@ -89,7 +89,7 @@ LEE.CAMPO:
 
 * Valido que el Valor Ingresado sea para la Posicion del Registro Fiscal
     Y.CDNIA.EUA = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.CDNIA.EUA>
-    Y.CDNIA.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,3>
+    Y.CDNIA.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,2>
 
 * Valido que Tenga Firma Electronica en el Campo Local "CDNIA.RESID.EUA"
     IF Y.CDNIA.EUA EQ "SI" THEN
