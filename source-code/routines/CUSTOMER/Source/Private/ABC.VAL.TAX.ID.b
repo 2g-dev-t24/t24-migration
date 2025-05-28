@@ -103,7 +103,7 @@ LEE.CAMPO:
     Y.OTRO.EMP.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.TIPO.EMP.OTRO>
     Y.OCUPACION.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusOccupation)<1,1>
 
-    IF Y.CLASSIFICATION LT 2001 THEN
+    IF Y.CLASSIFICATION GE 2001 AND Y.CLASSIFICATION LE 2014 THEN
         IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusExternCusId)<1,1> EQ '' THEN
             EB.SystemTables.setEtext("EL CURP NO TIENE DATO")
             EB.ErrorProcessing.StoreEndError()
