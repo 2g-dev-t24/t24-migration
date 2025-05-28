@@ -60,13 +60,12 @@ INICIO:
     EB.DataAccess.Opf(FN.ABC.INFO.VAL.CUS,F.ABC.INFO.VAL.CUS)
 
     Y.APP.LOC = 'CUSTOMER'
-    Y.FIELD.LOC = 'NOM.PER.MORAL':@VM:'LUGAR.CONST':@VM:'CLASS.COTI'
+    Y.FIELD.LOC = 'L.NOM.PER.MORAL':@VM:'CLASS.COTI'
     Y.POS.LOC = ''
     EB.Updates.MultiGetLocRef(Y.APP.LOC, Y.FIELD.LOC, Y.POS.LOC)
 
     Y.POS.NOM.PER.MORAL = Y.POS.LOC<1,1>
-    Y.POS.LUGAR.CONST = Y.POS.LOC<1,2>
-    Y.POS.CLASS.COTI = Y.POS.LOC<1,3>
+    Y.POS.CLASS.COTI = Y.POS.LOC<1,2>
 
     Y.RAZON.SOCIAL.ARG = "SHORT" ; Y.RAZON.SOCIAL = ''
     ABC.BP.AbcGetRazonSocial(Y.RAZON.SOCIAL.ARG)
@@ -99,7 +98,7 @@ PROCESO:
         Y.SHORT.NAME = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusShortName))
         Y.NAME.1 = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne))
         Y.NAME.2 = TRIM(EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo))
-        Y.ESTADO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
+        Y.ESTADO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDistrictName)
         Y.RFC.ID = Y.RFC[1,10]
         Y.RFC.OLD.ID = Y.RFC.OLD[1,10]
         Y.CURP.ID = Y.CURP[1,10]

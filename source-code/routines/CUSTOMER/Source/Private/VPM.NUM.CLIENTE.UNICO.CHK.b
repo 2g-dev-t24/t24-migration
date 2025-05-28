@@ -63,7 +63,7 @@ GENERA.RFC.CURP:
             RETURN
         END
     END
-    IF Y.SECTOR EQ "2001" THEN
+    IF Y.SECTOR GE "2001" AND Y.SECTOR LE "2014" THEN
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusGender, "")
         GOSUB VALIDA.DATOS.M
         IF (RES = 0) AND (MENSAJE = '') THEN
@@ -165,7 +165,7 @@ ABRE.TABLAS:
 
 *Campos Locales
     Y.APP.LOC = 'CUSTOMER'
-    Y.FIELD.LOC = 'NOM.PER.MORAL':@VM:'LUGAR.CONST'
+    Y.FIELD.LOC = 'L.NOM.PER.MORAL':@VM:'LUGAR.CONST'
     Y.POS.LOC = ''
     EB.Updates.MultiGetLocRef(Y.APP.LOC, Y.FIELD.LOC, Y.POS.LOC)
 
@@ -195,7 +195,7 @@ VALIDA.DATOS:
     APE.MATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne)
     NOMBRE      = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo)
     FEC.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
-    LUG.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusBirthProvince)
+    LUG.NAC     = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDistrictName)
     GENERO      = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
 
     IF LEN(APE.PATERNO) = 0 THEN
