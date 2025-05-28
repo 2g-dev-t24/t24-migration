@@ -50,7 +50,7 @@ OPEN.FILES:
     FN.CUSTOMER = 'F.CUSTOMER'
     F.CUSTOMER  = ''
     EB.DataAccess.Opf(FN.CUSTOMER,F.CUSTOMER)
-    EB.Updates.MultiGetLocRef("CUSTOMER","EXPEDIENTE.DIGI",YPOS.EXPEDIENTE.DIGI)
+    EB.Updates.MultiGetLocRef("CUSTOMER","EXPE.DIGITAL",YPOS.EXPEDIENTE.DIGI)
 
 RETURN
 
@@ -60,7 +60,7 @@ PROCESA:
     Y.ERR.CUSTOMER = ''
     EB.DataAccess.FRead(FN.CUSTOMER,Y.ID.CUSTOMER,R.CUSTOMER,F.CUSTOMER,Y.ERR.CUSTOMER)
     IF Y.ERR.CUSTOMER EQ '' THEN
-        Y.EXPEDIENTE.DIGI = UPCASE(R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef,YPOS.EXPEDIENTE.DIGI>)
+        Y.EXPEDIENTE.DIGI = UPCASE(R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef, YPOS.EXPEDIENTE.DIGI>)
         IF Y.EXPEDIENTE.DIGI NE 'SI' THEN
             ETEXT = 'El cliente no tiene expediente digital'
             EB.SystemTables.setEtext(ETEXT)
