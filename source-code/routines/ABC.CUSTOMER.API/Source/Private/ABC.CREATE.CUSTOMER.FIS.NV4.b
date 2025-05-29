@@ -64,7 +64,7 @@ MAP.CUSTOMER:
     R.CUSTOMER<ST.Customer.Customer.EbCusAddressCountry>        = EB.SystemTables.getRNew(AbcTable.AbcCustomerFisicaNv4Api.Country)
     R.CUSTOMER<ST.Customer.Customer.EbCusJobTitle>              = EB.SystemTables.getRNew(AbcTable.AbcCustomerFisicaNv4Api.Profesion)
     R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef>              = Y.LOCAL.REF
-    
+    Y.ID.CUSTOMER                                               = EB.SystemTables.getRNew(AbcTable.AbcCustomerFisicaNv4Api.IdCustomer)
 *    R.CUSTOMER<ST.Customer.Acti> = EB.SystemTables.getRNew(AbcTable.AbcCustomerFisicaNv4Api.ActividadEcono) ??????
 RETURN
 
@@ -123,11 +123,8 @@ CREAR.OFS.CUSTOMER:
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'CUSTOMER'
     Y.OFS.VERSION   = 'CUSTOMER,ABC.FISICA.NIVEL4L'
-    Y.ID.CUSTOMER   = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
-    
-    GOSUB OBTENER.ID.CUSTOMER ; *Genera un nuevo id de customer para poder  guardarlo en la tabla como resultado
     
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.CUSTOMER,Y.OFS.REQUEST)
 
@@ -159,45 +156,7 @@ CREAR.OFS.MXBASE:
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
 
-
-
 RETURN
-
-*-----------------------------------------------------------------------------
-OBTENER.ID.CUSTOMER:
-*** <desc>Genera un nuevo id de customer para poder  guardarlo en la tabla como resultado </desc>
-*-----------------------------------------------------------------------------
-
-
-    Y.FULL.NAME     = EB.SystemTables.getFullFname()
-    Y.V.FUNCTION    = EB.SystemTables.getVFunction()
-    Y.PGM           = EB.SystemTables.getPgmType()
-    Y.ID.CONCATFILE = EB.SystemTables.getIdConcatfile()
-    Y.SAVE.COMI     = EB.SystemTables.getComi()
-    Y.APPLICATION   = EB.SystemTables.getApplication()
-    
-    EB.SystemTables.setFullFname('FBNK.CUSTOMER')
-    EB.SystemTables.setVFunction('I')
-    EB.SystemTables.setPgmType('.IDA')
-    EB.SystemTables.setIdConcatfile('')
-    EB.SystemTables.setComi('')
-    EB.SystemTables.setApplication('CUSTOMER')
-    
-    EB.TransactionControl.GetNextId('','F')
-
-    Y.ID.CUSTOMER        = EB.SystemTables.getComi()
-    EB.SystemTables.setFullFname(Y.FULL.NAME)
-    EB.SystemTables.setVFunction(Y.V.FUNCTION)
-    EB.SystemTables.setPgmType(Y.PGM)
-    EB.SystemTables.setIdConcatfile(Y.ID.CONCATFILE)
-    EB.SystemTables.setComi(Y.SAVE.COMI)
-    EB.SystemTables.setApplication(Y.APPLICATION)
-
-
-
-
-RETURN
-
 END
 
 
