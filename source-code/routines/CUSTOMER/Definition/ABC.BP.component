@@ -500,3 +500,10 @@ private method abcLocalidadFields (
     jBC: ABC.LOCALIDAD.FIELDS
 }
 
+
+private method AbcEFindCust (
+    INOUT EnqParam string
+)
+{
+    jBC: ABC.E.FIND.CUST
+}
