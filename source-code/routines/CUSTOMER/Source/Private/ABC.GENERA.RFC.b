@@ -44,10 +44,6 @@ INICIALIZACION:
     POS.CLASSIFICATION = 0
     Y.SECTOR = ""
 
-    GOSUB SET.LISTA.ANEXO.1
-    GOSUB SET.LISTA.ANEXO.2
-    GOSUB SET.LISTA.ANEXO.3
-
     OUT.ERROR = ''
 
 RETURN
@@ -733,15 +729,13 @@ RETURN
 
 SET.HOMONIMIA:
 
-    A.NUM.NOMBRE = '0'
+    A.NUM.NOMBRE = ''
 
     FOR A.I.NOM = 1 TO LEN(A.NOM.CLIENTE.ORIG)
 
-        FIND ('K' : A.NOM.CLIENTE.ORIG[A.I.NOM, 1]) IN A.ANEXO.1 SETTING Ap,Vp THEN
-
-            A.NUM.NOMBRE := A.ANEXO.1<Ap,2>
-
-        END
+        Y.CAR = A.NOM.CLIENTE.ORIG[A.I.NOM, 1]
+        GOSUB GET.LISTA.ANEXO.1
+        A.NUM.NOMBRE := Y.VAL
 
     NEXT A.I.NOM
 
@@ -752,7 +746,7 @@ SET.HOMONIMIA:
         A.NUM.1 = A.NUM.NOMBRE[A.I.NUM.NOM, 2]
         A.NUM.2 = A.NUM.NOMBRE[(A.I.NUM.NOM+1), 1]
 
-        A.SUM.HOM += A.NUM.NOMBRE[A.I.NUM.NOM, 2] * A.NUM.NOMBRE[(A.I.NUM.NOM+1), 1]
+        A.SUM.HOM = A.SUM.HOM + A.NUM.1 * A.NUM.2
 
     NEXT A.I.NUM.NOM
 
@@ -762,17 +756,13 @@ SET.HOMONIMIA:
 
     A.COC.HOM = (A.SUM.HOM-A.RES.HOM) / 34
 
-    FIND ('K' : A.COC.HOM) IN A.ANEXO.2 SETTING Ap,Vp THEN
+    Y.CAR = A.COC.HOM
+    GOSUB GET.LISTA.ANEXO.2
+    A.COC.HOM = Y.VAL
 
-        A.COC.HOM = A.ANEXO.2<Ap,2>
-
-    END
-
-    FIND ('K' : A.RES.HOM) IN A.ANEXO.2 SETTING Ap,Vp THEN
-
-        A.RES.HOM = A.ANEXO.2<Ap,2>
-
-    END
+    Y.CAR = A.RES.HOM
+    GOSUB GET.LISTA.ANEXO.2
+    A.RES.HOM = Y.VAL
 
     OUT.RFC := A.COC.HOM : A.RES.HOM
 
@@ -780,84 +770,230 @@ RETURN
 
 SET.LISTA.ANEXO.1:
 
-    A.ANEXO.1  = 'K ' : VM : '00' : FM
-    A.ANEXO.1 := 'K0' : VM : '00' : FM
-    A.ANEXO.1 := 'K1' : VM : '01' : FM
-    A.ANEXO.1 := 'K2' : VM : '02' : FM
-    A.ANEXO.1 := 'K3' : VM : '03' : FM
-    A.ANEXO.1 := 'K4' : VM : '04' : FM
-    A.ANEXO.1 := 'K5' : VM : '05' : FM
-    A.ANEXO.1 := 'K6' : VM : '06' : FM
-    A.ANEXO.1 := 'K7' : VM : '07' : FM
-    A.ANEXO.1 := 'K8' : VM : '08' : FM
-    A.ANEXO.1 := 'K9' : VM : '09' : FM
-    A.ANEXO.1 := 'K&' : VM : '10' : FM
-    A.ANEXO.1 := 'KA' : VM : '11' : FM
-    A.ANEXO.1 := 'KB' : VM : '12' : FM
-    A.ANEXO.1 := 'KC' : VM : '13' : FM
-    A.ANEXO.1 := 'KD' : VM : '14' : FM
-    A.ANEXO.1 := 'KE' : VM : '15' : FM
-    A.ANEXO.1 := 'KF' : VM : '16' : FM
-    A.ANEXO.1 := 'KG' : VM : '17' : FM
-    A.ANEXO.1 := 'KH' : VM : '18' : FM
-    A.ANEXO.1 := 'KI' : VM : '19' : FM
-    A.ANEXO.1 := 'KJ' : VM : '21' : FM
-    A.ANEXO.1 := 'KK' : VM : '22' : FM
-    A.ANEXO.1 := 'KL' : VM : '23' : FM
-    A.ANEXO.1 := 'KM' : VM : '24' : FM
-    A.ANEXO.1 := 'KN' : VM : '25' : FM
-    A.ANEXO.1 := 'KO' : VM : '26' : FM
-    A.ANEXO.1 := 'KP' : VM : '27' : FM
-    A.ANEXO.1 := 'KQ' : VM : '28' : FM
-    A.ANEXO.1 := 'KR' : VM : '29' : FM
-    A.ANEXO.1 := 'KS' : VM : '32' : FM
-    A.ANEXO.1 := 'KT' : VM : '33' : FM
-    A.ANEXO.1 := 'KU' : VM : '34' : FM
-    A.ANEXO.1 := 'KV' : VM : '35' : FM
-    A.ANEXO.1 := 'KW' : VM : '36' : FM
-    A.ANEXO.1 := 'KX' : VM : '37' : FM
-    A.ANEXO.1 := 'KY' : VM : '38' : FM
-    A.ANEXO.1 := 'KZ' : VM : '39' : FM
-    A.ANEXO.1 := 'K':Y.MAYUS : VM : '40'
+    IF NOT(Y.CAR) THEN
+        Y.VAL = '00'
+    END 
+    IF Y.CAR EQ '0' THEN
+        Y.VAL = '00'
+    END
+    IF Y.CAR EQ '1' THEN
+        Y.VAL = '01'
+    END
+    IF Y.CAR EQ '2' THEN
+        Y.VAL = '02'
+    END
+    IF Y.CAR EQ '3' THEN
+        Y.VAL = '03'
+    END
+    IF Y.CAR EQ '4' THEN
+        Y.VAL = '04'
+    END
+    IF Y.CAR EQ '5' THEN
+        Y.VAL = '05'
+    END
+    IF Y.CAR EQ '6' THEN
+        Y.VAL = '06'
+    END
+    IF Y.CAR EQ '7' THEN
+        Y.VAL = '07'
+    END
+    IF Y.CAR EQ '8' THEN
+        Y.VAL = '08'
+    END
+    IF Y.CAR EQ '9' THEN
+        Y.VAL = '09'
+    END
+    IF Y.CAR EQ '&' THEN
+        Y.VAL = '10'
+    END
+    IF Y.CAR EQ 'A' THEN
+        Y.VAL = '11'
+    END
+    IF Y.CAR EQ 'B' THEN
+        Y.VAL = '12'
+    END
+    IF Y.CAR EQ 'C' THEN
+        Y.VAL = '13'
+    END
+    IF Y.CAR EQ 'D' THEN
+        Y.VAL = '14'
+    END
+    IF Y.CAR EQ 'E' THEN
+        Y.VAL = '15'
+    END
+    IF Y.CAR EQ 'F' THEN
+        Y.VAL = '16'
+    END
+    IF Y.CAR EQ 'G' THEN
+        Y.VAL = '17'
+    END
+    IF Y.CAR EQ 'H' THEN
+        Y.VAL = '18'
+    END
+    IF Y.CAR EQ 'I' THEN
+        Y.VAL = '19'
+    END
+    IF Y.CAR EQ 'J' THEN
+        Y.VAL = '21'
+    END
+    IF Y.CAR EQ 'K' THEN
+        Y.VAL = '22'
+    END
+    IF Y.CAR EQ 'L' THEN
+        Y.VAL = '23'
+    END
+    IF Y.CAR EQ 'M' THEN
+        Y.VAL = '24'
+    END
+    IF Y.CAR EQ 'N' THEN
+        Y.VAL = '25'
+    END
+    IF Y.CAR EQ 'O' THEN
+        Y.VAL = '26'
+    END
+    IF Y.CAR EQ 'P' THEN
+        Y.VAL = '27'
+    END
+    IF Y.CAR EQ 'Q' THEN
+        Y.VAL = '28'
+    END
+    IF Y.CAR EQ 'R' THEN
+        Y.VAL = '29'
+    END
+    IF Y.CAR EQ 'S' THEN
+        Y.VAL = '32'
+    END
+    IF Y.CAR EQ 'T' THEN
+        Y.VAL = '33'
+    END
+    IF Y.CAR EQ 'U' THEN
+        Y.VAL = '34'
+    END
+    IF Y.CAR EQ 'V' THEN
+        Y.VAL = '35'
+    END
+    IF Y.CAR EQ 'W' THEN
+        Y.VAL = '36'
+    END
+    IF Y.CAR EQ 'X' THEN
+        Y.VAL = '37'
+    END
+    IF Y.CAR EQ 'Y' THEN
+        Y.VAL = '38'
+    END
+    IF Y.CAR EQ 'Z' THEN
+        Y.VAL = '39'
+    END
+    IF Y.CAR EQ Y.MAYUS THEN
+        Y.VAL = '40'
+    END
 
 RETURN
 
 SET.LISTA.ANEXO.2:
 
-    A.ANEXO.2  = 'K0'  : VM : '1' : FM
-    A.ANEXO.2 := 'K1'  : VM : '2' : FM
-    A.ANEXO.2 := 'K2'  : VM : '3' : FM
-    A.ANEXO.2 := 'K3'  : VM : '4' : FM
-    A.ANEXO.2 := 'K4'  : VM : '5' : FM
-    A.ANEXO.2 := 'K5'  : VM : '6' : FM
-    A.ANEXO.2 := 'K6'  : VM : '7' : FM
-    A.ANEXO.2 := 'K7'  : VM : '8' : FM
-    A.ANEXO.2 := 'K8'  : VM : '9' : FM
-    A.ANEXO.2 := 'K9'  : VM : 'A' : FM
-    A.ANEXO.2 := 'K10' : VM : 'B' : FM
-    A.ANEXO.2 := 'K11' : VM : 'C' : FM
-    A.ANEXO.2 := 'K12' : VM : 'D' : FM
-    A.ANEXO.2 := 'K13' : VM : 'E' : FM
-    A.ANEXO.2 := 'K14' : VM : 'F' : FM
-    A.ANEXO.2 := 'K15' : VM : 'G' : FM
-    A.ANEXO.2 := 'K16' : VM : 'H' : FM
-    A.ANEXO.2 := 'K17' : VM : 'I' : FM
-    A.ANEXO.2 := 'K18' : VM : 'J' : FM
-    A.ANEXO.2 := 'K19' : VM : 'K' : FM
-    A.ANEXO.2 := 'K20' : VM : 'L' : FM
-    A.ANEXO.2 := 'K21' : VM : 'M' : FM
-    A.ANEXO.2 := 'K22' : VM : 'N' : FM
-    A.ANEXO.2 := 'K23' : VM : 'P' : FM
-    A.ANEXO.2 := 'K24' : VM : 'Q' : FM
-    A.ANEXO.2 := 'K25' : VM : 'R' : FM
-    A.ANEXO.2 := 'K26' : VM : 'S' : FM
-    A.ANEXO.2 := 'K27' : VM : 'T' : FM
-    A.ANEXO.2 := 'K28' : VM : 'U' : FM
-    A.ANEXO.2 := 'K29' : VM : 'V' : FM
-    A.ANEXO.2 := 'K30' : VM : 'W' : FM
-    A.ANEXO.2 := 'K31' : VM : 'X' : FM
-    A.ANEXO.2 := 'K32' : VM : 'Y' : FM
-    A.ANEXO.2 := 'K33' : VM : 'Z' : FM
+    IF Y.CAR EQ 0 THEN
+        Y.VAL = '1'
+    END
+    IF Y.CAR EQ 1 THEN
+        Y.VAL = '2'
+    END
+    IF Y.CAR EQ 2 THEN
+        Y.VAL = '3'
+    END
+    IF Y.CAR EQ 3 THEN
+        Y.VAL = '4'
+    END
+    IF Y.CAR EQ 4 THEN
+        Y.VAL = '5'
+    END
+    IF Y.CAR EQ 5 THEN
+        Y.VAL = '6'
+    END
+    IF Y.CAR EQ 6 THEN
+        Y.VAL = '7'
+    END
+    IF Y.CAR EQ 7 THEN
+        Y.VAL = '8'
+    END
+    IF Y.CAR EQ 8 THEN
+        Y.VAL = '9'
+    END
+    IF Y.CAR EQ 9 THEN
+        Y.VAL = 'A'
+    END
+    IF Y.CAR EQ 10 THEN
+        Y.VAL = 'B'
+    END
+    IF Y.CAR EQ 11 THEN
+        Y.VAL = 'C'
+    END
+    IF Y.CAR EQ 12 THEN
+        Y.VAL = 'D'
+    END
+    IF Y.CAR EQ 13 THEN
+        Y.VAL = 'E'
+    END
+    IF Y.CAR EQ 14 THEN
+        Y.VAL = 'F'
+    END
+    IF Y.CAR EQ 15 THEN
+        Y.VAL = 'G'
+    END
+    IF Y.CAR EQ 16 THEN
+        Y.VAL = 'H'
+    END
+    IF Y.CAR EQ 17 THEN
+        Y.VAL = 'I'
+    END
+    IF Y.CAR EQ 18 THEN
+        Y.VAL = 'J'
+    END
+    IF Y.CAR EQ 19 THEN
+        Y.VAL = 'K'
+    END
+    IF Y.CAR EQ 20 THEN
+        Y.VAL = 'L'
+    END
+    IF Y.CAR EQ 21 THEN
+        Y.VAL = 'M'
+    END
+    IF Y.CAR EQ 22 THEN
+        Y.VAL = 'N'
+    END
+    IF Y.CAR EQ 23 THEN
+        Y.VAL = 'P'
+    END
+    IF Y.CAR EQ 24 THEN
+        Y.VAL = 'Q'
+    END
+    IF Y.CAR EQ 25 THEN
+        Y.VAL = 'R'
+    END
+    IF Y.CAR EQ 26 THEN
+        Y.VAL = 'S'
+    END
+    IF Y.CAR EQ 27 THEN
+        Y.VAL = 'T'
+    END
+    IF Y.CAR EQ 28 THEN
+        Y.VAL = 'U'
+    END
+    IF Y.CAR EQ 29 THEN
+        Y.VAL = 'V'
+    END
+    IF Y.CAR EQ 30 THEN
+        Y.VAL = 'W'
+    END
+    IF Y.CAR EQ 31 THEN
+        Y.VAL = 'X'
+    END
+    IF Y.CAR EQ 32 THEN
+        Y.VAL = 'Y'
+    END
+    IF Y.CAR EQ 33 THEN
+        Y.VAL = 'Z'
+    END
 
 RETURN
 
@@ -872,10 +1008,10 @@ SET.DIGITO.VER:
 
     FOR A.I.NOM = 1 TO 12
 
-        FIND ('K' : AUX.RFC[A.I.NOM, 1]) IN A.ANEXO.3 SETTING Ap,Vp THEN
-            A.SUM.DIG += A.ANEXO.3<Ap, 2> * A.FACTOR
-            A.FACTOR -= 1
-        END
+        Y.CAR = AUX.RFC[A.I.NOM, 1]
+        GOSUB GET.LISTA.ANEXO.3
+        A.SUM.DIG = A.SUM.DIG + Y.VAL * A.FACTOR
+        A.FACTOR = A.FACTOR - 1
     NEXT A.I.NOM
 
     A.RES.DIG = MOD(A.SUM.DIG, 11)
@@ -893,45 +1029,123 @@ RETURN
 
 SET.LISTA.ANEXO.3:
 
-    A.ANEXO.3  = 'K0'  : VM : '00' : FM
-    A.ANEXO.3 := 'K1'  : VM : '01' : FM
-    A.ANEXO.3 := 'K2'  : VM : '02' : FM
-    A.ANEXO.3 := 'K3'  : VM : '03' : FM
-    A.ANEXO.3 := 'K4'  : VM : '04' : FM
-    A.ANEXO.3 := 'K5'  : VM : '05' : FM
-    A.ANEXO.3 := 'K6'  : VM : '06' : FM
-    A.ANEXO.3 := 'K7'  : VM : '07' : FM
-    A.ANEXO.3 := 'K8'  : VM : '08' : FM
-    A.ANEXO.3 := 'K9'  : VM : '09' : FM
-    A.ANEXO.3 := 'KA'  : VM : '10' : FM
-    A.ANEXO.3 := 'KB'  : VM : '11' : FM
-    A.ANEXO.3 := 'KC'  : VM : '12' : FM
-    A.ANEXO.3 := 'KD'  : VM : '13' : FM
-    A.ANEXO.3 := 'KE'  : VM : '14' : FM
-    A.ANEXO.3 := 'KF'  : VM : '15' : FM
-    A.ANEXO.3 := 'KG'  : VM : '16' : FM
-    A.ANEXO.3 := 'KH'  : VM : '17' : FM
-    A.ANEXO.3 := 'KI'  : VM : '18' : FM
-    A.ANEXO.3 := 'KJ'  : VM : '19' : FM
-    A.ANEXO.3 := 'KK'  : VM : '20' : FM
-    A.ANEXO.3 := 'KL'  : VM : '21' : FM
-    A.ANEXO.3 := 'KM'  : VM : '22' : FM
-    A.ANEXO.3 := 'KN'  : VM : '23' : FM
-    A.ANEXO.3 := 'K&'  : VM : '24' : FM
-    A.ANEXO.3 := 'KO'  : VM : '25' : FM
-    A.ANEXO.3 := 'KP'  : VM : '26' : FM
-    A.ANEXO.3 := 'KQ'  : VM : '27' : FM
-    A.ANEXO.3 := 'KR'  : VM : '28' : FM
-    A.ANEXO.3 := 'KS'  : VM : '29' : FM
-    A.ANEXO.3 := 'KT'  : VM : '30' : FM
-    A.ANEXO.3 := 'KU'  : VM : '31' : FM
-    A.ANEXO.3 := 'KV'  : VM : '32' : FM
-    A.ANEXO.3 := 'KW'  : VM : '33' : FM
-    A.ANEXO.3 := 'KX'  : VM : '34' : FM
-    A.ANEXO.3 := 'KY'  : VM : '35' : FM
-    A.ANEXO.3 := 'KZ'  : VM : '36' : FM
-    A.ANEXO.3 := 'K '  : VM : '37' : FM
-    A.ANEXO.3 := 'K':Y.MAYUS  : VM : '38' : FM
+    IF Y.CAR EQ '0' THEN
+        Y.VAL = '00'
+    END
+    IF Y.CAR EQ '1' THEN
+        Y.VAL = '01'
+    END
+    IF Y.CAR EQ '2' THEN
+        Y.VAL = '02'
+    END
+    IF Y.CAR EQ '3' THEN
+        Y.VAL = '03'
+    END
+    IF Y.CAR EQ '4' THEN
+        Y.VAL = '04'
+    END
+    IF Y.CAR EQ '5' THEN
+        Y.VAL = '05'
+    END
+    IF Y.CAR EQ '6' THEN
+        Y.VAL = '06'
+    END
+    IF Y.CAR EQ '7' THEN
+        Y.VAL = '07'
+    END
+    IF Y.CAR EQ '8' THEN
+        Y.VAL = '08'
+    END
+    IF Y.CAR EQ '9' THEN
+        Y.VAL = '09'
+    END
+    IF Y.CAR EQ 'A' THEN
+        Y.VAL = '10'
+    END
+    IF Y.CAR EQ 'B' THEN
+        Y.VAL = '11'
+    END
+    IF Y.CAR EQ 'C' THEN
+        Y.VAL = '12'
+    END
+    IF Y.CAR EQ 'D' THEN
+        Y.VAL = '13'
+    END
+    IF Y.CAR EQ 'E' THEN
+        Y.VAL = '14'
+    END
+    IF Y.CAR EQ 'F' THEN
+        Y.VAL = '15'
+    END
+    IF Y.CAR EQ 'G' THEN
+        Y.VAL = '16'
+    END
+    IF Y.CAR EQ 'H' THEN
+        Y.VAL = '17'
+    END
+    IF Y.CAR EQ 'I' THEN
+        Y.VAL = '18'
+    END
+    IF Y.CAR EQ 'J' THEN
+        Y.VAL = '19'
+    END
+    IF Y.CAR EQ 'K' THEN
+        Y.VAL = '20'
+    END
+    IF Y.CAR EQ 'L' THEN
+        Y.VAL = '21'
+    END
+    IF Y.CAR EQ 'M' THEN
+        Y.VAL = '22'
+    END
+    IF Y.CAR EQ 'N' THEN
+        Y.VAL = '23'
+    END
+    IF Y.CAR EQ '&' THEN
+        Y.VAL = '24'
+    END
+    IF Y.CAR EQ 'O' THEN
+        Y.VAL = '25'
+    END
+    IF Y.CAR EQ 'P' THEN
+        Y.VAL = '26'
+    END
+    IF Y.CAR EQ 'Q' THEN
+        Y.VAL = '27'
+    END
+    IF Y.CAR EQ 'R' THEN
+        Y.VAL = '28'
+    END
+    IF Y.CAR EQ 'S' THEN
+        Y.VAL = '29'
+    END
+    IF Y.CAR EQ 'T' THEN
+        Y.VAL = '30'
+    END
+    IF Y.CAR EQ 'U' THEN
+        Y.VAL = '31'
+    END
+    IF Y.CAR EQ 'V' THEN
+        Y.VAL = '32'
+    END
+    IF Y.CAR EQ 'W' THEN
+        Y.VAL = '33'
+    END
+    IF Y.CAR EQ 'X' THEN
+        Y.VAL = '34'
+    END
+    IF Y.CAR EQ 'Y' THEN
+        Y.VAL = '35'
+    END
+    IF Y.CAR EQ 'Z' THEN
+        Y.VAL = '36'
+    END
+    IF NOT(Y.CAR) THEN
+        Y.VAL = '37'
+    END
+    IF Y.CAR EQ Y.MAYUS THEN
+        Y.VAL = '38'
+    END
 
 RETURN
 END
