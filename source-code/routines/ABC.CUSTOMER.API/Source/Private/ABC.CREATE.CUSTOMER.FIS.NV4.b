@@ -156,45 +156,7 @@ CREAR.OFS.MXBASE:
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
 
-
-
 RETURN
-
-*-----------------------------------------------------------------------------
-OBTENER.ID.CUSTOMER:
-*** <desc>Genera un nuevo id de customer para poder  guardarlo en la tabla como resultado </desc>
-*-----------------------------------------------------------------------------
-
-
-    Y.FULL.NAME     = EB.SystemTables.getFullFname()
-    Y.V.FUNCTION    = EB.SystemTables.getVFunction()
-    Y.PGM           = EB.SystemTables.getPgmType()
-    Y.ID.CONCATFILE = EB.SystemTables.getIdConcatfile()
-    Y.SAVE.COMI     = EB.SystemTables.getComi()
-    Y.APPLICATION   = EB.SystemTables.getApplication()
-    
-    EB.SystemTables.setFullFname('FBNK.CUSTOMER')
-    EB.SystemTables.setVFunction('I')
-    EB.SystemTables.setPgmType('.IDA')
-    EB.SystemTables.setIdConcatfile('')
-    EB.SystemTables.setComi('')
-    EB.SystemTables.setApplication('CUSTOMER')
-    
-    EB.TransactionControl.GetNextId('','F')
-
-    Y.ID.CUSTOMER        = EB.SystemTables.getComi()
-    EB.SystemTables.setFullFname(Y.FULL.NAME)
-    EB.SystemTables.setVFunction(Y.V.FUNCTION)
-    EB.SystemTables.setPgmType(Y.PGM)
-    EB.SystemTables.setIdConcatfile(Y.ID.CONCATFILE)
-    EB.SystemTables.setComi(Y.SAVE.COMI)
-    EB.SystemTables.setApplication(Y.APPLICATION)
-
-
-
-
-RETURN
-
 END
 
 
