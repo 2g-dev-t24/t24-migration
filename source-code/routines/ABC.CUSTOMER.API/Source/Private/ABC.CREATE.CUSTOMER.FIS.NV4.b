@@ -64,7 +64,7 @@ MAP.CUSTOMER:
     R.CUSTOMER<ST.Customer.Customer.EbCusAddressCountry>        = EB.SystemTables.getRNew(AbcTable.AbcCustomerFisicaNv4Api.Country)
     R.CUSTOMER<ST.Customer.Customer.EbCusJobTitle>              = EB.SystemTables.getRNew(AbcTable.AbcCustomerFisicaNv4Api.Profesion)
     R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef>              = Y.LOCAL.REF
-    
+    Y.ID.CUSTOMER                                               = EB.SystemTables.getRNew(AbcTable.AbcCustomerFisicaNv4Api.IdCustomer)
 *    R.CUSTOMER<ST.Customer.Acti> = EB.SystemTables.getRNew(AbcTable.AbcCustomerFisicaNv4Api.ActividadEcono) ??????
 RETURN
 
@@ -123,11 +123,8 @@ CREAR.OFS.CUSTOMER:
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'CUSTOMER'
     Y.OFS.VERSION   = 'CUSTOMER,ABC.FISICA.NIVEL4L'
-    Y.ID.CUSTOMER   = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
-    
-    GOSUB OBTENER.ID.CUSTOMER ; *Genera un nuevo id de customer para poder  guardarlo en la tabla como resultado
     
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.CUSTOMER,Y.OFS.REQUEST)
 
