@@ -36,7 +36,7 @@ PROCESO:
     Y.SECTOR.ECONOMICO = R.ACTIVIDAD.ECONOMICA<AbcTable.AbcActividadEconomica.SectorEconomico>
     Y.SECTOR.ECONOMICO = "CNBV.ECO.ACTIVITY*":Y.SECTOR.ECONOMICO
 
-    EB.SystemTables.setRNew(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.CnbvEcoActivityCode, Y.SECTOR.ECONOMICO)
+    EB.SystemTables.setRNew(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.CnbvEcoActivity, Y.SECTOR.ECONOMICO)
 
     RETURN
 END

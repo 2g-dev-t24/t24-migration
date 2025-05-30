@@ -49,7 +49,9 @@ PROCESS:
     R.CUSTOMER = ST.Customer.Customer.Read(Y.ID.CUS,CUST.ERR)
 
     IF R.CUSTOMER EQ '' THEN
-        Y.ID.CUS = EB.SystemTables.getIdNew()
+*        Y.ID.CUS = EB.SystemTables.getIdNew()
+        DEFFUN System.getVariable()
+        Y.ID.CUS = System.getVariable('CURRENT.ID.CUS')
         R.CUSTOMER = ST.Customer.Customer.Read(Y.ID.CUS,CUST.ERR)
     END
     Y.INDUSTRY = R.CUSTOMER<ST.Customer.Customer.EbCusIndustry>

@@ -507,3 +507,9 @@ private method AbcEFindCust (
 {
     jBC: ABC.E.FIND.CUST
 }
+
+private method AbcCheckSetCus (
+)
+{
+    jBC: ABC.CHECK.SET.CUS
+}
