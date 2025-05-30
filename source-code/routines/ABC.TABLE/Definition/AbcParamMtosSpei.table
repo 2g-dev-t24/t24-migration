@@ -1,0 +1,23 @@
+public table AbcParamMtosSpei {
+    t24: ABC.PARAM.MTOS.SPEI.Table
+    fields: {
+        Moneda(VMS.MONEDA) = 1
+        Departamento(VMS.DEPARTAMENTO) = 2
+        Monto(VMS.MONTO) = 3
+        Estatus(VMS.ESTATUS) = 4
+        Reserved5(VMS.RESERVED.5) = 5
+        Reserved4(VMS.RESERVED.4) = 6
+        Reserved3(VMS.RESERVED.3) = 7
+        Reserved2(VMS.RESERVED.2) = 8
+        Reserved1(VMS.RESERVED.1) = 9
+        RecordStatus(VMS.RECORD.STATUS) = 10
+        CurrNo(VMS.CURR.NO) = 11
+        Inputter(VMS.INPUTTER) = 12
+        DateTime(VMS.DATE.TIME) = 13
+        Authoriser(VMS.AUTHORISER) = 14
+        CoCode(VMS.CO.CODE) = 15
+        DeptCode(VMS.DEPT.CODE) = 16
+        AuditorCode(VMS.AUDITOR.CODE) = 17
+        AuditDateTime(VMS.AUDIT.DATE.TIME) = 18
+    }
+}

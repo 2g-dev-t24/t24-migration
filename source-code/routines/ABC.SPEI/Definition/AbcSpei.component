@@ -57,3 +57,7 @@ private method abcValidaCanalFt (
    jBC: ABC.VALIDA.CANAL.FT
 }
 
+private method AbcValidaRangosSpeiA ()
+{
+    jBC: ABC.VALIDA.RANGOS.SPEI.A
+}

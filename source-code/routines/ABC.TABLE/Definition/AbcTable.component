@@ -553,4 +553,19 @@ private method AbcCnbvGrpEconomicoFields (
     jBC: ABC.CNBV.GRP.ECONOMICO.FIELDS
 }
 
+private method AbcParamMtosSpei ()
+{
+    jBC: ABC.PARAM.MTOS.SPEI
+}
+
+private method AbcParamMtosSpeiFields ()
+{
+    jBC: ABC.PARAM.MTOS.SPEI.FIELDS
+}
+
+private method AbcParamMtosSpeiId ()
+{
+    jBC: ABC.PARAM.MTOS.SPEI.ID
+}
+
 
