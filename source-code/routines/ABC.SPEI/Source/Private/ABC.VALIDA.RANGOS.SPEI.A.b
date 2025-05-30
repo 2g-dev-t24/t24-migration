@@ -1,5 +1,5 @@
 
-    $PACKAGE AbcValidaRangosSpeiA
+    $PACKAGE AbcSpei
     SUBROUTINE ABC.VALIDA.RANGOS.SPEI.A
 *-----------------------------------------------------------------------------
 *
