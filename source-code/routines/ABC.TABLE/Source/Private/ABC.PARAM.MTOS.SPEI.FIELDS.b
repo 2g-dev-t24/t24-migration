@@ -1,4 +1,4 @@
-$PACKAGE AbcParamMtosSpei
+$PACKAGE AbcTable
 SUBROUTINE ABC.PARAM.MTOS.SPEI.FIELDS
 
 *---------------------------------------------------------------------------------------------------
