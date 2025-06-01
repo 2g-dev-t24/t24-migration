@@ -1,7 +1,7 @@
-* @ValidationCode : MjotMTk3OTI3NjUwMTpDcDEyNTI6MTc0MzEyNjM4NzEzNDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 27 Mar 2025 22:46:27
+* @ValidationCode : MjotMTY2NTg4NzcwMTpDcDEyNTI6MTc0ODc5OTA4ODY1ODp0cmFiYWpvOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 01 Jun 2025 14:31:28
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : User Name         : trabajo
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -12,6 +12,8 @@
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE AbcBi
 SUBROUTINE ABC.BI.MUEVE.CAMPOS
+    
+    
 *===============================================================================
 * First Release :
 * Desarrollador:        C�sar Alejandro Miranda Bravo - FyG Solutions   (CAMB)

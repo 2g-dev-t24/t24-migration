@@ -2,9 +2,13 @@ component AbcBi
 # Component Isolation Definition
 metamodelVersion 1.6
 
-private method AbcBiMueveCampos ()
+
+# ------------------ METHOD END ------------------
+
+
+private method abcBiMueveCampos (
+)
 {
     jBC: ABC.BI.MUEVE.CAMPOS
 }
 
-# ------------------ METHOD END ------------------
