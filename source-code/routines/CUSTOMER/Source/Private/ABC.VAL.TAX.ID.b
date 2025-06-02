@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxOTU2MjU0MzUxOkNwMTI1MjoxNzQ4ODk5MTUwODYzOnRyYWJham86LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 02 Jun 2025 18:19:10
+* @ValidationCode : MjoxODk4MTAwMTQ6Q3AxMjUyOjE3NDg5MDE0OTY0MTU6dHJhYmFqbzotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 02 Jun 2025 18:58:16
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : trabajo
 * @ValidationInfo : Nb tests success  : N/A
@@ -114,7 +114,7 @@ LEE.CAMPO:
     Y.OTRO.EMP.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.TIPO.EMP.OTRO>
     Y.OCUPACION.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusOccupation)<1,1>
 
-    IF Y.CLASSIFICATION LE 2001 THEN
+    IF Y.CLASSIFICATION LT 2001 THEN
         IF EB.SystemTables.getRNew(ST.Customer.Customer.EbCusExternCusId)<1,1> EQ '' THEN
             EB.SystemTables.setEtext("EL CURP NO TIENE DATO")
             EB.ErrorProcessing.StoreEndError()
