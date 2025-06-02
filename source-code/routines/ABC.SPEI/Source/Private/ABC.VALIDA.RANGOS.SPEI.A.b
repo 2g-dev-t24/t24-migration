@@ -72,22 +72,21 @@ PROCESS:
             Y.NO.DEPTOS = DCOUNT(Y.DEPTOS, @FM)
 
             Y.I = 1
+            LOOP
+            WHILE Y.I LE Y.NO.DEPTOS
+            
+                Y.SUCURSAL = FIELD(Y.DEPTOS, FM, Y.I)
+                Y.LONG.SUC = LEN(Y.SUCURSAL)
+                Y.DEPTO.SPEI = R.USER<EB.Security.User.UseDepartmentCode>[1, Y.LONG.SUC]
+            
+                IF Y.SUCURSAL EQ Y.DEPTO.SPEI THEN
+                    GOSUB SUCURSAL.EQ.DEPTO.SPEI
+                END ELSE
+                    GOSUB SUCURSAL.NE.DEPTO.SPEI
+                END
+                Y.I++
+            REPEAT
         END
-
-*   WHILE Y.I LE Y.NO.DEPTOS
-	
-        Y.SUCURSAL = FIELD(Y.DEPTOS, FM, Y.I)
-        Y.LONG.SUC = LEN(Y.SUCURSAL)
-        Y.DEPTO.SPEI = R.USER<EB.Security.User.UseDepartmentCode>[1, Y.LONG.SUC]
-	
-        IF Y.SUCURSAL EQ Y.DEPTO.SPEI THEN
-            GOSUB SUCURSAL.EQ.DEPTO.SPEI
-        END ELSE
-            GOSUB SUCURSAL.NE.DEPTO.SPEI
-        END
-        Y.I++
-*    REPEAT
-
     END
 
 
