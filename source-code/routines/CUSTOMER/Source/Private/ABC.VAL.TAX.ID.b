@@ -1,12 +1,24 @@
+* @ValidationCode : MjoxOTU2MjU0MzUxOkNwMTI1MjoxNzQ4ODk5MTUwODYzOnRyYWJham86LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 02 Jun 2025 18:19:10
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : trabajo
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *------------------------------------------------------------------------------------
 * <Rating>-26</Rating>
 *------------------------------------------------------------------------------------
 $PACKAGE ABC.BP
-    SUBROUTINE ABC.VAL.TAX.ID
+SUBROUTINE ABC.VAL.TAX.ID
 *------------------------------------------------------------------------------------
-* DESCRIPCION: 
-* FECHA:       
-* AUTOR:       
+* DESCRIPCION:
+* FECHA:
+* AUTOR:
 *
 *------------------------------------------------------------------------------------
 
@@ -22,7 +34,7 @@ $PACKAGE ABC.BP
     GOSUB INICIALIZA
     GOSUB LEE.CAMPO
     EB.Display.RebuildScreen()
-    RETURN
+RETURN
 ***********
 INICIALIZA:
 ***********
@@ -34,7 +46,7 @@ INICIALIZA:
     EB.LocalReferences.GetLocRef("CUSTOMER","CDNIA.RESID.EUA",Y.POS.CDNIA.EUA)
     EB.LocalReferences.GetLocRef("CUSTOMER","L.TIPO.EMP.OTRO",Y.POS.TIPO.EMP.OTRO)
 
-    RETURN
+RETURN
 ************
 LEE.CAMPO:
 ************
@@ -77,7 +89,6 @@ LEE.CAMPO:
 * Valido que el Valor Ingresado sea para la Posicion de la Firma Electronica
     Y.FIRMA.ELE = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)<1,Y.POS.FIRMA.ELE>
     Y.FIRMA.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusText)
-**    Y.FIRMA.VAL = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTaxId)<1,2>
 * Valido que Tenga Firma Electronica en el Campo Local "TIENE.FIRMA.ELE"
     IF Y.FIRMA.ELE EQ "SI" THEN
         IF Y.FIRMA.VAL EQ '' THEN
@@ -116,6 +127,6 @@ LEE.CAMPO:
         END
     END
     
-    RETURN
+RETURN
 
 END
