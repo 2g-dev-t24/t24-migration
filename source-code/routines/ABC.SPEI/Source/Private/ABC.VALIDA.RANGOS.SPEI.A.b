@@ -1,6 +1,18 @@
+* @ValidationCode : MjotMzY5NDQzNjcyOkNwMTI1MjoxNzQ4ODc1Mzc4NzQ5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 02 Jun 2025 11:42:58
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 
-    $PACKAGE AbcSpei
-    SUBROUTINE ABC.VALIDA.RANGOS.SPEI.A
+$PACKAGE AbcSpei
+SUBROUTINE ABC.VALIDA.RANGOS.SPEI.A
 *-----------------------------------------------------------------------------
 *
 *-------- ---------------------------------------------------------------------
@@ -12,13 +24,13 @@
     $USING EB.ErrorProcessing
     $USING EB.Security
     $USING FT.Contract
-    $USING EB.AbcParamMtosSpei
+    $USING AbcTable
 
     GOSUB INITIALIZE
     GOSUB PROCESS
     GOSUB FINAL
 
-    RETURN
+RETURN
 
 *-----------------------------------------------------------------------------
 INITIALIZE:
@@ -33,7 +45,7 @@ INITIALIZE:
     F.USER = ''
     EB.DataAccess.Opf(FN.USER, F.USER)
 
-    RETURN
+RETURN
 
 *-----------------------------------------------------------------------------
 PROCESS:
@@ -54,39 +66,42 @@ PROCESS:
     IF (Y.V.FUNCTION EQ 'I') THEN
         Y.ID.PP = 'MX0010001'
         EB.DataAccess.FRead(FN.ABC.PARAM.MTOS.SPEI, Y.ID.PP, R.ABC.PARAM.MTOS.SPEI, F.ABC.PARAM.MTOS.SPEI, Y.ERR.PARAM)
-        R.USER = EB.SystemTables.getRUser();
-        IF R.ABC.PARAM.MTOS.SPEI NE '' THEN 
-            Y.DEPTOS = RAISE(R.ABC.PARAM.MTOS.SPEI<EB.AbcParamMtosSpei.AbcParamMtosSpei.Departamento>)
-            Y.NO.DEPTOS = DCOUNT(Y.DEPTOS, FM)
+        R.USER = EB.SystemTables.getRUser()
+        IF R.ABC.PARAM.MTOS.SPEI NE '' THEN
+            Y.DEPTOS = RAISE(R.ABC.PARAM.MTOS.SPEI<AbcTable.AbcParamMtosSpei.Departamento)
+            Y.NO.DEPTOS = DCOUNT(Y.DEPTOS, @FM)
 
             Y.I = 1
-            WHILE Y.I LE Y.NO.DEPTOS
-
-                Y.SUCURSAL = FIELD(Y.DEPTOS, FM, Y.I)
-                Y.LONG.SUC = LEN(Y.SUCURSAL)
-                Y.DEPTO.SPEI = R.USER<EB.Security.User.UseDepartmentCode>[1, Y.LONG.SUC]
-
-                IF Y.SUCURSAL EQ Y.DEPTO.SPEI THEN
-                    GOSUB SUCURSAL.EQ.DEPTO.SPEI
-                ELSE
-                    GOSUB SUCURSAL.NE.DEPTO.SPEI
-                END
-                Y.I++
-            REPEAT
         END
+
+*   WHILE Y.I LE Y.NO.DEPTOS
+	
+        Y.SUCURSAL = FIELD(Y.DEPTOS, FM, Y.I)
+        Y.LONG.SUC = LEN(Y.SUCURSAL)
+        Y.DEPTO.SPEI = R.USER<EB.Security.User.UseDepartmentCode>[1, Y.LONG.SUC]
+	
+        IF Y.SUCURSAL EQ Y.DEPTO.SPEI THEN
+            GOSUB SUCURSAL.EQ.DEPTO.SPEI
+        END ELSE
+            GOSUB SUCURSAL.NE.DEPTO.SPEI
+        END
+        Y.I++
+*    REPEAT
+
     END
 
-    RETURN
+
+RETURN
 
 *-----------------------------------------------------------------------------
 SUCURSAL.EQ.DEPTO.SPEI:
 *-----------------------------------------------------------------------------
 
-    LOCATE Y.DEPTO.SPEI IN R.ABC.PARAM.MTOS.SPEI<AbcParamMtosSpei.Departamento, 1> SETTING Y.POS.DEPTO THEN
+    LOCATE Y.DEPTO.SPEI IN R.ABC.PARAM.MTOS.SPEI<AbcTable.AbcParamMtosSpei.Departamento, 1> SETTING Y.POS.DEPTO THEN
 
-        Y.DEPTO.X = RAISE(R.ABC.PARAM.MTOS.SPEI<EB.AbcParamMtosSpei.AbcParamMtosSpei.Departamento>)
-        Y.MONTO.X = RAISE(R.ABC.PARAM.MTOS.SPEI<EB.AbcParamMtosSpei.AbcParamMtosSpei.Monto>)
-        Y.ESTATUS.X = RAISE(R.ABC.PARAM.MTOS.SPEI<EB.AbcParamMtosSpei.AbcParamMtosSpei.Estatus>)
+        Y.DEPTO.X = RAISE(R.ABC.PARAM.MTOS.SPEI<AbcTable.AbcParamMtosSpei.Departamento>)
+        Y.MONTO.X = RAISE(R.ABC.PARAM.MTOS.SPEI<AbcTable.AbcParamMtosSpei.Monto>)
+        Y.ESTATUS.X = RAISE(R.ABC.PARAM.MTOS.SPEI<AbcTable.AbcParamMtosSpei.Estatus>)
 
         Y.DEPTO.PARAM = FIELD(Y.DEPTO.X, FM, POS.DEPTO)
         Y.MONTO.PARAM = FIELD(Y.MONTO.X, FM, POS.DEPTO)
@@ -106,14 +121,13 @@ RETURN
 SUCURSAL.NE.DEPTO.SPEI:
 *-----------------------------------------------------------------------------
 
-    IF Y.I EQ Y.NO.DEPTOS
+    IF Y.I EQ Y.NO.DEPTOS THEN
         V.ERROR.MSG.NO = "OPERACION NO PERMITIDA, CONTACTAR A TESORERIA"
         EB.SystemTables.setE(V.ERROR.MSG.NO)
         EB.ErrorProcessing.Err()
-        RETURN
     END
-
 RETURN
+
 
 *---------------------------------------------------------------
 FINAL:

@@ -61,3 +61,11 @@ private method AbcValidaRangosSpeiA ()
 {
     jBC: ABC.VALIDA.RANGOS.SPEI.A
 }
+
+
+private method abcValidaAutSpei (
+)
+{
+   jBC: ABC.VALIDA.AUT.SPEI
+}
+
