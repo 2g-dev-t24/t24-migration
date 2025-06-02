@@ -69,3 +69,11 @@ private method abcValidaAutSpei (
    jBC: ABC.VALIDA.AUT.SPEI
 }
 
+
+
+private method abcValMontoMenorUdi (
+)
+{
+   jBC: ABC.VAL.MONTO.MENOR.UDI
+}
+
