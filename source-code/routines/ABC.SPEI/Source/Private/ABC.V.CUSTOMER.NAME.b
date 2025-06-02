@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxOTk3NDcwNzMwOkNwMTI1MjoxNzQ4MTEyNDMwMTU4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 24 May 2025 15:47:10
+* @ValidationCode : MjoxNzI0OTgyMDYzOkNwMTI1MjoxNzQ4NjE3OTUzMTQ0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 30 May 2025 12:12:33
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -52,14 +52,14 @@ INITIALISE:
     
 
     
-    NOM.CAMPOS     = 'L.CLASSIFICATION':@VM:'L.NOM.PER.MORAL'
+    NOM.CAMPOS     = 'L.NOM.PER.MORAL'
     POS.CAMP.LOCAL = ""
     
     
     EB.Updates.MultiGetLocRef("CUSTOMER",NOM.CAMPOS,POS.CAMP.LOCAL)
 
-    CLASSIFICATION.POS     = POS.CAMP.LOCAL<1,1>
-    NOM.PER.MORAL.POS = POS.CAMP.LOCAL<1,2>
+    
+    NOM.PER.MORAL.POS = POS.CAMP.LOCAL<1,1>
     
     
 
@@ -86,15 +86,11 @@ PROCESS:
     Y.APELLIDO.M = R.CUS.REC<ST.Customer.Customer.EbCusNameOne>
     Y.NOMBRE.1 =R.CUS.REC<ST.Customer.Customer.EbCusNameTwo>
     Y.CUS.REF = R.CUS.REC<ST.Customer.Customer.EbCusLocalRef>
+        
 
 
 
-
-
-
-
-
-    Y.CLASSIFICATION = Y.CUS.REF<1,CLASSIFICATION.POS>
+    Y.CLASSIFICATION = Y.CUS.REF<ST.Customer.Customer.EbCusSector>
     Y.DENOMINACION =  Y.CUS.REF<1,NOM.PER.MORAL.POS>
 
     Y.NAME = ""

@@ -35,16 +35,19 @@ private table AbcCustomerFisicaNv4Api {
         TipoPerPolExp(ABC.NV4.API.TIPO.PER.POL.EXP)     = 30
         Canal(ABC.NV4.API.CANAL)                        = 31
         IdCustomer(ABC.NV4.API.ID.CUSTOMER)             = 32
+        Residence(ABC.NV4.API.RESIDENCE)                = 33
+        TipoEmpOtro(ABC.NV4.API.TIPO.EMP.OTRO)          = 34
+        
 
-        RecordStatus(ABC.NV4.API.RECORD.STATUS)         = 43
-        CurrNo(ABC.NV4.API.CURR.NO)                     = 44
-        Inputter(ABC.NV4.API.INPUTTER)                  = 45
-        DateTime(ABC.NV4.API.DATE.TIME)                 = 46
-        Authoriser(ABC.NV4.API.AUTHORISER)              = 47
-        CoCode(ABC.NV4.API.CO.CODE)                     = 48
-        DeptCode(ABC.NV4.API.DEPT.CODE)                 = 49
-        AuditorCode(ABC.NV4.API.AUDITOR.CODE)           = 50
-        AuditDateTime(ABC.NV4.API.AUDIT.DATE.TIME)      = 51
+        RecordStatus(ABC.NV4.API.RECORD.STATUS)         = 35
+        CurrNo(ABC.NV4.API.CURR.NO)                     = 36
+        Inputter(ABC.NV4.API.INPUTTER)                  = 37
+        DateTime(ABC.NV4.API.DATE.TIME)                 = 38
+        Authoriser(ABC.NV4.API.AUTHORISER)              = 39
+        CoCode(ABC.NV4.API.CO.CODE)                     = 40
+        DeptCode(ABC.NV4.API.DEPT.CODE)                 = 41
+        AuditorCode(ABC.NV4.API.AUDITOR.CODE)           = 42
+        AuditDateTime(ABC.NV4.API.AUDIT.DATE.TIME)      = 43
         
     }
 }

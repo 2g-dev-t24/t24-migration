@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNTgyNDMyMjI1OkNwMTI1MjoxNzQ1NjgyMTQzODM1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 26 Apr 2025 12:42:23
+* @ValidationCode : MjotMTYzMzI4MTQxNDpDcDEyNTI6MTc0ODYyNjMwNjAwNjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 30 May 2025 14:31:46
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -58,5 +58,7 @@ SUBROUTINE ABC.CUSTOMER.FISICA.NV4.API.FIELDS
     EB.Template.TableAddfielddefinition('TIPO.PER.POL.EXP' ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('CANAL'            ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('ID.CUSTOMER'      ,'100', 'A', '')
+    EB.Template.TableAddfielddefinition('RESIDENCE'        ,'100', 'A', '')
+    EB.Template.TableAddfielddefinition('TIPO.EMP.OTRO'    ,'100', 'A', '')
     
 END

@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTk4NjE4NTIxNzpDcDEyNTI6MTc0ODExMzcyMjYwMTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 24 May 2025 16:08:42
+* @ValidationCode : MjotMTA4NTE5Mjk5NTpDcDEyNTI6MTc0ODYxNDk3Mjk2MTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 30 May 2025 11:22:52
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -44,7 +44,7 @@ INICIALIZA:
 
 
 
-    NOM.CAMPOS     = 'L.CANAL.ENTIDAD'
+    NOM.CAMPOS     = 'CANAL.ENTIDAD'
     POS.CAMP.LOCAL = ""
     
     

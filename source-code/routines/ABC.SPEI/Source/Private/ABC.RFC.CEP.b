@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNTMwMjkwNjIzOkNwMTI1MjoxNzQ4MTEyNTEyODQ3Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 24 May 2025 15:48:32
+* @ValidationCode : MjotNzI5MTYxNjY1OkNwMTI1MjoxNzQ4NjE3NjIwMzkyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 30 May 2025 12:07:00
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -99,7 +99,7 @@ OPEN.FILES:
 
     Y.POS.FT.CUS.NAME = ''
     
-    NOM.CAMPOS     = 'L.RFC.BENEF.SPEI':@VM:'L.FT.CUS.NAME'
+    NOM.CAMPOS     = 'RFC.BENEF.SPEI':@VM:'FT.CUS.NAME'
     POS.CAMP.LOCAL = ""
     
     
