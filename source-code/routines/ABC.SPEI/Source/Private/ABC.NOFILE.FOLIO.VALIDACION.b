@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTM1OTczNTc0NTpDcDEyNTI6MTc0ODk2Nzc3MjQ0MTp0cmFiYWpvOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 03 Jun 2025 13:22:52
+* @ValidationCode : Mjo1MjA2MjM0NjQ6Q3AxMjUyOjE3NDg5NjgyNzY2Nzk6dHJhYmFqbzotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 03 Jun 2025 13:31:16
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : trabajo
 * @ValidationInfo : Nb tests success  : N/A
@@ -20,7 +20,7 @@ SUBROUTINE ABC.NOFILE.FOLIO.VALIDACION(R.DATA)
 * ENQ: ABC.E.FOLIO.VALIDACION
 * SS : NOFILE.ABC.FOLIO.VALIDACION
 * RTN: ABC.NOFILE.FOLIO.VALIDACION
-* Fecha Creacion     : 2021-01-18
+* Fecha Creacion     :
 * Modificaciones:
 *===============================================================================
 
