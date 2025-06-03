@@ -38,5 +38,15 @@ private table AbcCustomerFisNv4Api {
         Residence(ABC.NV4.RESIDENCE)                = 33
         TipoEmpOtro(ABC.NV4.TIPO.EMP.OTRO)          = 34
         
+        RecordStatus(ABC.NV4.RECORD.STATUS)              = 35
+        CurrNo(ABC.NV4.CURR.NO)                          = 36
+        Inputter(ABC.NV4.INPUTTER)                       = 37
+        DateTime(ABC.NV4.DATE.TIME)                      = 38
+        Authoriser(ABC.NV4.AUTHORISER)                   = 39
+        CoCode(ABC.NV4.CO.CODE)                          = 40
+        DeptCode(ABC.NV4.DEPT.CODE)                      = 41
+        AuditorCode(ABC.NV4.AUDITOR.CODE)                = 42
+        AuditDateTime(ABC.NV4.AUDIT.DATE.TIME)           = 43         
+        
     }
 }
