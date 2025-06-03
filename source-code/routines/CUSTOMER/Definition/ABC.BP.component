@@ -513,3 +513,9 @@ private method AbcCheckSetCus (
 {
     jBC: ABC.CHECK.SET.CUS
 }
+
+private method AbcCustNoexistePm (
+)
+{
+    jBC: ABC.CUST.NOEXISTE.PM
+}
