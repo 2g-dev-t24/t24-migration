@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTYzMzI4MTQxNDpDcDEyNTI6MTc0ODYyNjMwNjAwNjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 30 May 2025 14:31:46
+* @ValidationCode : MjoxNjc0ODMyMzU6Q3AxMjUyOjE3NDg5ODk1MjgzMzE6THVpcyBDYXByYTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 03 Jun 2025 19:25:28
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -60,5 +60,6 @@ SUBROUTINE ABC.CUSTOMER.FIS.NV4.API.FIELDS
     EB.Template.TableAddfielddefinition('ID.CUSTOMER'      ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('RESIDENCE'        ,'100', 'A', '')
     EB.Template.TableAddfielddefinition('TIPO.EMP.OTRO'    ,'100', 'A', '')
+    EB.Template.TableSetauditposition()
     
 END
