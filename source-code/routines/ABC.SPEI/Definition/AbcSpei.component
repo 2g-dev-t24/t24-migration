@@ -16,7 +16,7 @@ private method bmvIdCaja (
 private method abcValidateIvaSpei (
 )
 {
-   jBC: ABC.VALIDATE.IVA.SPEI
+    jBC: ABC.VALIDATE.IVA.SPEI
 }
 
 
@@ -24,7 +24,7 @@ private method abcValidateIvaSpei (
 private method abcRfcCep (
 )
 {
-   jBC: ABC.RFC.CEP
+    jBC: ABC.RFC.CEP
 }
 
 
@@ -32,21 +32,21 @@ private method abcRfcCep (
 
 
 private method abcVCustomerName (
-   INOUT yComi string,
-   INOUT yNombre string
+    INOUT yComi string,
+    INOUT yNombre string
 )
 {
-   jBC: ABC.V.CUSTOMER.NAME
+    jBC: ABC.V.CUSTOMER.NAME
 }
 
 
 
 private method abcValidaCanal (
-   INOUT yCanal string,
-   INOUT yError string
+    INOUT yCanal string,
+    INOUT yError string
 )
 {
-   jBC: ABC.VALIDA.CANAL
+    jBC: ABC.VALIDA.CANAL
 }
 
 
@@ -54,7 +54,7 @@ private method abcValidaCanal (
 private method abcValidaCanalFt (
 )
 {
-   jBC: ABC.VALIDA.CANAL.FT
+    jBC: ABC.VALIDA.CANAL.FT
 }
 
 private method AbcValidaRangosSpeiA ()
@@ -66,7 +66,7 @@ private method AbcValidaRangosSpeiA ()
 private method abcValidaAutSpei (
 )
 {
-   jBC: ABC.VALIDA.AUT.SPEI
+    jBC: ABC.VALIDA.AUT.SPEI
 }
 
 
@@ -74,6 +74,12 @@ private method abcValidaAutSpei (
 private method abcValMontoMenorUdi (
 )
 {
-   jBC: ABC.VAL.MONTO.MENOR.UDI
+    jBC: ABC.VAL.MONTO.MENOR.UDI
 }
 
+private method AbcNofileFolioValidacion (
+    INOUT EnqParam string
+)
+{
+    jBC: ABC.NOFILE.FOLIO.VALIDACION
+}
