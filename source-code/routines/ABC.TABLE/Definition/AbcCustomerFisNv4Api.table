@@ -3,40 +3,40 @@ private table AbcCustomerFisNv4Api {
     fields:{
         
         
-        OtherNationality(ABC.NV4.API.OTHER.NATIONALITY) = 1
-        Nationality(ABC.NV4.API.NATIONALITY)            = 2
-        TaxId(ABC.NV4.API.TAX.ID)                       = 3
-        DomFisc(ABC.NV4.API.DOM.FISC)                   = 4
-        RegFiscal(ABC.NV4.API.REG.FISCAL)               = 5
-        UsoCfdi(ABC.NV4.API.USO.CFDI)                   = 6
-        Iub(ABC.NV4.API.IUB)                            = 7
-        LegalDocName(ABC.NV4.API.LEGAL.DOC.NAME)        = 8
-        LegalId(ABC.NV4.API.LEGAL.ID)                   = 9
-        LegalIssDate(ABC.NV4.API.LEGAL.ISS.DATE)        = 10
-        LegalExpDate(ABC.NV4.API.LEGAL.EXP.DATE)        = 11
-        CompDom(ABC.NV4.API.COMP.DOM)                   = 12
-        Street(ABC.NV4.API.STREET)                      = 13
-        Address1(ABC.NV4.API.ADDRESS.1)                 = 14
-        Address2(ABC.NV4.API.ADDRESS.2)                 = 15
-        PostCode(ABC.NV4.API.POST.CODE)                 = 16
-        DirColonia(ABC.NV4.API.DIR.COLONIA)             = 17
-        TownCountry(ABC.NV4.API.TOWN.COUNTRY)           = 18
-        DirCdEdo(ABC.NV4.API.DIR.CD.EDO)                = 19
-        Country(ABC.NV4.API.COUNTRY)                    = 20
-        Localidad(ABC.NV4.API.LOCALIDAD)                = 21
-        ActividadEcono(ABC.NV4.API.ACTIVIDAD.ECONO)     = 22
-        Profesion(ABC.NV4.API.PROFESION)                = 23
-        OrigenRecursos(ABC.NV4.API.ORIGEN.RECURSOS)     = 24
-        DestinoRecurs(ABC.NV4.API.DESTINO.RECURS)       = 25
-        PldFunPub(ABC.NV4.API.PLD.FUN.PUB)              = 26
-        PuestoUltAnio(ABC.NV4.API.PUESTO.ULT.ANIO)      = 27
-        RelPersonaExp(ABC.NV4.API.REL.PERSONA.EXP)      = 28
-        NomPerPolExp(ABC.NV4.API.NOM.PER.POL.EXP)       = 29
-        TipoPerPolExp(ABC.NV4.API.TIPO.PER.POL.EXP)     = 30
-        Canal(ABC.NV4.API.CANAL)                        = 31
-        IdCustomer(ABC.NV4.API.ID.CUSTOMER)             = 32
-        Residence(ABC.NV4.API.RESIDENCE)                = 33
-        TipoEmpOtro(ABC.NV4.API.TIPO.EMP.OTRO)          = 34
+        OtherNationality(ABC.NV4.OTHER.NATIONALITY) = 1
+        Nationality(ABC.NV4.NATIONALITY)            = 2
+        TaxId(ABC.NV4.TAX.ID)                       = 3
+        DomFisc(ABC.NV4.DOM.FISC)                   = 4
+        RegFiscal(ABC.NV4.REG.FISCAL)               = 5
+        UsoCfdi(ABC.NV4.USO.CFDI)                   = 6
+        Iub(ABC.NV4.IUB)                            = 7
+        LegalDocName(ABC.NV4.LEGAL.DOC.NAME)        = 8
+        LegalId(ABC.NV4.LEGAL.ID)                   = 9
+        LegalIssDate(ABC.NV4.LEGAL.ISS.DATE)        = 10
+        LegalExpDate(ABC.NV4.LEGAL.EXP.DATE)        = 11
+        CompDom(ABC.NV4.COMP.DOM)                   = 12
+        Street(ABC.NV4.STREET)                      = 13
+        Address1(ABC.NV4.ADDRESS.1)                 = 14
+        Address2(ABC.NV4.ADDRESS.2)                 = 15
+        PostCode(ABC.NV4.POST.CODE)                 = 16
+        DirColonia(ABC.NV4.DIR.COLONIA)             = 17
+        TownCountry(ABC.NV4.TOWN.COUNTRY)           = 18
+        DirCdEdo(ABC.NV4.DIR.CD.EDO)                = 19
+        Country(ABC.NV4.COUNTRY)                    = 20
+        Localidad(ABC.NV4.LOCALIDAD)                = 21
+        ActividadEcono(ABC.NV4.ACTIVIDAD.ECONO)     = 22
+        Profesion(ABC.NV4.PROFESION)                = 23
+        OrigenRecursos(ABC.NV4.ORIGEN.RECURSOS)     = 24
+        DestinoRecurs(ABC.NV4.DESTINO.RECURS)       = 25
+        PldFunPub(ABC.NV4.PLD.FUN.PUB)              = 26
+        PuestoUltAnio(ABC.NV4.PUESTO.ULT.ANIO)      = 27
+        RelPersonaExp(ABC.NV4.REL.PERSONA.EXP)      = 28
+        NomPerPolExp(ABC.NV4.NOM.PER.POL.EXP)       = 29
+        TipoPerPolExp(ABC.NV4.TIPO.PER.POL.EXP)     = 30
+        Canal(ABC.NV4.CANAL)                        = 31
+        IdCustomer(ABC.NV4.ID.CUSTOMER)             = 32
+        Residence(ABC.NV4.RESIDENCE)                = 33
+        TipoEmpOtro(ABC.NV4.TIPO.EMP.OTRO)          = 34
         
     }
 }
