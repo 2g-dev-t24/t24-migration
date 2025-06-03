@@ -11,7 +11,7 @@
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE AbcTable
-SUBROUTINE ABC.CUSTOMER.FISICA.NV4.API.FIELDS
+SUBROUTINE ABC.CUSTOMER.FIS.NV4.API.FIELDS
 *-----------------------------------------------------------------------------
 *
 *-----------------------------------------------------------------------------

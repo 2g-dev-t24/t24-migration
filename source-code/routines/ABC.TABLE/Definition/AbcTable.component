@@ -492,18 +492,18 @@ private method AbcCompraInstrumentoFields (
     jBC: ABC.COMPRA.INSTRUMENTO.FIELDS
 }
 
-private method AbcCustomerFisicaNv4Api (
+private method AbcCustomerFisNv4Api (
 )
 {
-    jBC: ABC.CUSTOMER.FISICA.NV4.API
+    jBC: ABC.CUSTOMER.FIS.NV4.API
 }
 
 
 
-private method AbcCustomerFisicaNv4ApiFields (
+private method AbcCustomerFisNv4ApiFields (
 )
 {
-    jBC: ABC.CUSTOMER.FISICA.NV4.API.FIELDS
+    jBC: ABC.CUSTOMER.FIS.NV4.API.FIELDS
 }
 
 
