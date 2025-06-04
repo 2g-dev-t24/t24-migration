@@ -110,3 +110,17 @@ private method AbcValPostRest (
 {
     jBC: ABC.VAL.POST.REST
 }
+
+private method abc2BrRtnValidaRfc (
+)
+{
+    jBC: ABC.2BR.RTN.VALIDA.RFC
+}
+
+private method abcCalculaCcc (
+    INOUT inCadena string,
+    INOUT outError string,
+)
+{
+    jBC: ABC.CALCULA.CCC
+}
