@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNzkzNjYzNDc2OkNwMTI1MjoxNzQ5MDU5MTgzODAwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 04 Jun 2025 14:46:23
+* @ValidationCode : MjotMTcwMTA3NjkyMzpDcDEyNTI6MTc0OTA2MDM0OTYyMDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 04 Jun 2025 15:05:49
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -135,13 +135,6 @@ CREAR.OFS.CUSTOMER:
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.CUSTOMER,Y.OFS.REQUEST)
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
-   
-    IF Error THEN
-        EB.SystemTables.setEtext(Error)
-        EB.ErrorProcessing.StoreEndError()
-    END ELSE
-        EB.SystemTables.setRNew(AbcTable.AbcCustomerFisNv4Api.IdCustomer, Y.ID.CUSTOMER)
-    END
 
 RETURN
 
