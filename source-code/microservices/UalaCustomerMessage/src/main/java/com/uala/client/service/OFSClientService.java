@@ -3,7 +3,6 @@ package com.uala.client.service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.uala.client.config.OFSConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -19,37 +18,47 @@ import java.util.Map;
 public class OFSClientService {
 
     private final RestTemplate restTemplate;
-    private final OFSConfig ofsConfig;
 
     @Autowired
-    public OFSClientService(RestTemplate restTemplate, OFSConfig ofsConfig) {
+    public OFSClientService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
-        this.ofsConfig = ofsConfig;
     }
 
     public String callOFSService(String ofsRequest) {
-        String url = ofsConfig.getUrl();
+        // URL del servicio OFS
+        String url = "https://transact-qas.dev.corebanking.uala.mx/TAFJRestServices/resources/ofs";
 
+        // Configurar el cuerpo de la solicitud
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.set("Authorization", "Basic " + Base64.getEncoder().encodeToString("t24user:t24User123!".getBytes()));
 
-        String auth = ofsConfig.getUsername() + ":" + ofsConfig.getPassword();
-        headers.set("Authorization", "Basic " + Base64.getEncoder().encodeToString(auth.getBytes()));
-
+        // Crear el cuerpo de la solicitud
         Map<String, String> requestMap = new HashMap<>();
-        requestMap.put("ofsRequest", ofsRequest);
-        requestMap.put("tenantId", ofsConfig.getTenant());
 
+        requestMap.put("ofsRequest", ofsRequest);
+        requestMap.put("tenantId", "default");
+
+        // Crear la entidad de la solicitud
         HttpEntity<Map<String, String>> entity = new HttpEntity<>(requestMap, headers);
 
         try {
+            // Hacer la solicitud
             ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
 
-            ObjectMapper mapper = new ObjectMapper();
-            JsonNode json = mapper.readTree(response.getBody());
+            // Obtener el body como String
+            String responseBody = response.getBody();
 
+            // Parsear con Jackson
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode json = mapper.readTree(responseBody);
+
+            // Extraer "ofsResponse"
+            String ofsResponse = json.path("ofsResponse").asText();
+
+            // Devolverlo como JSON plano
             ObjectNode result = mapper.createObjectNode();
-            result.put("ofsResponse", json.path("ofsResponse").asText());
+            result.put("ofsResponse", ofsResponse);
             return result.toString();
 
         } catch (HttpClientErrorException | HttpServerErrorException e) {
