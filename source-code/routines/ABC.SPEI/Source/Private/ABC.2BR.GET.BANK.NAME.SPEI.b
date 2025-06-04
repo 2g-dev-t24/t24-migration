@@ -6,6 +6,7 @@ $PACKAGE AbcSpei
 
 *--------------------------------------------------------------------
     $USING EB.DataAccess
+    $USING AbcTable
 *-----------------------
 * Main Loop Program
 *-----------------------

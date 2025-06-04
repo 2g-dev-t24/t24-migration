@@ -2,7 +2,7 @@
 * <Rating>0</Rating>
 *-----------------------------------------------------------------------------
 $PACKAGE AbcSpei
-    SUBROUTINE VPM.DEAL.FMT.AMT(FAMT)
+    SUBROUTINE ABC.DEAL.FMT.AMT(FAMT)
 
     IF FAMT EQ '' THEN
         FAMT = '0.00'
