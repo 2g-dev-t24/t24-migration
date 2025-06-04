@@ -35,12 +35,8 @@ SUBROUTINE ABC.NUM.CLIENTE.UNICO
 
     MESSAGE = EB.SystemTables.getMessage()
     
-    PGM.VERSION = EB.SystemTables.getPgmVersion()
-
-    IF PGM.VERSION NE ",ABC.FISICA.INP" THEN
-        IF MESSAGE EQ 'VAL' THEN
-            RETURN
-        END
+    IF MESSAGE EQ 'VAL' THEN
+     RETURN
     END
 
 
@@ -656,11 +652,8 @@ CALCULA.NUM.CTE:
     CLIENTE.UNICO.CURP[5,6] = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)[3,6]
 *..MUEVE GENERO
 
-    IF PGM.VERSION NE ",ABC.FISICA.INP" THEN
-        SEXO = EB.SystemTables.getComi()
-    END ELSE
-        SEXO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusGender)
-    END
+
+    SEXO = EB.SystemTables.getComi()
     SEXO = UPCASE(SEXO)
  
     IF (SEXO EQ "MASCULINO") THEN
