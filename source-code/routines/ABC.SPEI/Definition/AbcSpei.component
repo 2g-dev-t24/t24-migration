@@ -119,7 +119,7 @@ private method abc2BrRtnValidaRfc (
 
 private method abcCalculaCcc (
     INOUT inCadena string,
-    INOUT outError string,
+    INOUT outError string
 )
 {
     jBC: ABC.CALCULA.CCC
