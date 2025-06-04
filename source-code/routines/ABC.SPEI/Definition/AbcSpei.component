@@ -124,3 +124,38 @@ private method abcCalculaCcc (
 {
     jBC: ABC.CALCULA.CCC
 }
+
+private method AbcDateFt (
+    INOUT inYInputData string
+)
+{
+    jBC: ABC.DATE.FT
+}
+
+private method AbcInputterFormat (
+    INOUT inYInputData string
+)
+{
+    jBC: ABC.INPUTTER.FORMAT
+}
+
+private method Abc2brGetBankNameSpei (
+    INOUT inYInputData string
+)
+{
+    jBC: ABC.2BR.GET.BANK.NAME.SPEI
+}
+
+private method Ba2brGetRefSpei (
+    INOUT inYInputData string
+)
+{
+    jBC: BA.2BR.GET.REF.SPEI
+}
+
+private method AbcDealFmtAmt (
+    INOUT inYInputData string
+)
+{
+    jBC: ABC.DEAL.FMT.AMT
+}
