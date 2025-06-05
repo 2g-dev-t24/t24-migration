@@ -1,7 +1,7 @@
 public table AbcParametrosSpei {
     t24: ABC.PARAMETROS.SPEI
     fields:{
-        SpeiPriNombre(ABC.SPEI.SPEI.PRI.NOMBRE) = 1
+        SpeiPriNombre(ABC.SPEI.SPEI.MONTO.MIN) = 1
         SpeiMontoMax(ABC.SPEI.SPEI.MONTO.MAX)= 2
         TxnTipoEnv(ABC.SPEI.TXN.TIPO.ENV)= 3
         TxnTipoMen(ABC.SPEI.TXN.TIPO.MEN)= 4

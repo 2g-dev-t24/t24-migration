@@ -10,7 +10,7 @@ SUBROUTINE ABC.PARAMETROS.SPEI.FIELDS
     EB.SystemTables.setIdT('A')
 *-----------------------------------------------------------------------------
 
-    EB.Template.TableAddfielddefinition('PRI.NOMBRE' ,'20', 'A', '')
+    EB.Template.TableAddfielddefinition('SPEI.MONTO.MIN' ,'20', 'A', '')
     EB.Template.TableAddfielddefinition('SPEI.MONTO.MAX' ,'20', 'A', '')
     EB.Template.TableAddfielddefinition('TXN.TIPO.ENV' ,'4', 'A', '')
     EB.Template.TableAddfielddefinition('TXN.TIPO.MEN' ,'4', 'A', '')
