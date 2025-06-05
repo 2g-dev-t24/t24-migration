@@ -90,6 +90,7 @@ PROCESO:
 
     IF Y.RFC EQ '' THEN
         *ABC.BP.AbcGeneraRfc('', Y.RFC, '' )
+        Y.MAYUS  = CHAR(165)
         Y.RFC = Y.CURP[1,10]
         GOSUB SET.HOMONIMIA
         GOSUB SET.DIGITO.VER
