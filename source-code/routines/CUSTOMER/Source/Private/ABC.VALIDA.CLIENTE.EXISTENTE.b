@@ -89,11 +89,15 @@ PROCESO:
     Y.DATE.BIRTH = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
 
     IF Y.RFC EQ '' THEN
-        *ABC.BP.AbcGeneraRfc('', Y.RFC, '' )
-        Y.MAYUS  = CHAR(165)
-        Y.RFC = Y.CURP[1,10]
-        GOSUB SET.HOMONIMIA
-        GOSUB SET.DIGITO.VER
+        
+        IF Y.SECTOR LT '2001' THEN
+            Y.MAYUS  = CHAR(165)
+            Y.RFC = Y.CURP[1,10]
+            GOSUB SET.HOMONIMIA
+            GOSUB SET.DIGITO.VER
+        END ELSE
+            ABC.BP.AbcGeneraRfc('', Y.RFC, '' )
+        END
         Y.RFC.BAN = '1'
     END
 
