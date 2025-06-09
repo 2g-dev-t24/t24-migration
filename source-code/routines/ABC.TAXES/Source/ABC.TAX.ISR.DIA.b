@@ -1,3 +1,15 @@
+* @ValidationCode : MjotNzM3NDM1MzI3OkNwMTI1MjoxNzQ5NTExMTU3MTk2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 09 Jun 2025 20:19:17
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE AbcTaxes
 
 SUBROUTINE ABC.TAX.ISR.DIA(PASS.CUSTOMER,PASS.DEAL.AMOUNT,PASS.DEAL.CCY,PASS.CCY.MKT,PASS.CROSS.RATE,PASS.CROSS.CCY,PASS.DWN.CCY,PASS.DATA,PASS.CUST.CDN,R.TAX,CHARGE.AMOUNT)
@@ -14,6 +26,7 @@ SUBROUTINE ABC.TAX.ISR.DIA(PASS.CUSTOMER,PASS.DEAL.AMOUNT,PASS.DEAL.CCY,PASS.CCY
     $USING AbcGetGeneralParam
     $USING IC.Config
     $USING AC.EntryCreation
+    $USING EB.SystemTables
 
     GOSUB OPEN.FILES
     GOSUB PROCESS
@@ -55,7 +68,7 @@ OPEN.FILES:
         ISR.VALOR.EXENTO = Y.LIST.VALUES<YPOS.PARAM>
     END
 
-    RETURN
+RETURN
 
 *---------------------------------------------------------------
 PROCESS:
@@ -75,7 +88,7 @@ PROCESS:
 
 
     Y.SELECT = "SELECT ": FN.GROUP.CREDIT.INT : " WITH @ID LIKE ": Y.CONDITION.GROUP : "MXN... BY-DSND @ID"
-    Y.LIST        = "" 
+    Y.LIST        = ""
     IVA.GRUPO     = ""
     R.INFO.IVA    = ""
     MNT.IVA.GRUPO = ""
@@ -142,7 +155,7 @@ PROCESS:
         END
     END
 
-    RETURN
+RETURN
 
 *---------------------------------------------------------------
 CALCULATE.ISR.TAX:
@@ -159,10 +172,13 @@ CALCULATE.ISR.TAX:
     END
 
     Y.CURRENCY = R.ACCOUNT<AC.AccountOpening.Account.Currency>
+    
     //TODO : Revisar LCCY si es getLccy o que
-    IF Y.CURRENCY = LCCY THEN
+    // Listo manco
+    Y.LCCY = EB.SystemTables.getLccy()
+    IF Y.CURRENCY = Y.LCCY THEN
         YPOS = ''
-        LOCATE LCCY IN R.TAX<CG.ChargeConfig.Tax.EbTaxCurrency,1> SETTING YPOS THEN
+        LOCATE Y.LCCY IN R.TAX<CG.ChargeConfig.Tax.EbTaxCurrency,1> SETTING YPOS THEN
             IF NOT(YERROR) THEN
                 YTAX.RATE = ''
                 Y.TAX.FACTOR = ''
@@ -181,5 +197,5 @@ CALCULATE.ISR.TAX:
         END
     END
 
-    RETURN
+RETURN
 END
