@@ -1,0 +1,22 @@
+component AbcTaxes
+
+# Component Isolation Definition
+metamodelVersion 1.6
+
+ 
+private method abcTaxIsrDia (
+    INOUT passCustomer string,
+    INOUT passDealAmount string,
+    INOUT passDealCcy string,
+    INOUT passCcyMkt string,
+    INOUT passCrossRate string,
+    INOUT passCrossCcy string,
+    INOUT passDwnCcy string,
+    INOUT passData string,
+    INOUT passCustCdn string,
+    INOUT rTax string,
+    INOUT chargeAmount string
+)
+{
+    jBC: ABC.TAX.ISR.DIA
+}
