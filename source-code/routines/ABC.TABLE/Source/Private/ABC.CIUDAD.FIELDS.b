@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTAwNTE1MjIxMjpDcDEyNTI6MTc0NDYzNTI0NzkzNTpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 14 Apr 2025 09:54:07
+* @ValidationCode : Mjo1OTU4NzIyMjA6Q3AxMjUyOjE3NDk0ODk2NDg1OTY6THVpcyBDYXByYTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 09 Jun 2025 14:20:48
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -33,5 +33,6 @@ SUBROUTINE ABC.CIUDAD.FIELDS
     EB.Template.TableAddfielddefinition('RANGO4',5, 'A', '')
     
     EB.Template.TableAddreservedfield("RESERVED.1")
+    EB.Template.TableSetauditposition()
 
 END

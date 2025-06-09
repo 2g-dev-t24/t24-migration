@@ -1,0 +1,262 @@
+######################################################
+# Type of Process to do: 
+# DBIMPORT
+# DBUPDATE
+processType   = DBIMPORT 
+
+
+######################################################
+# Type of Import to do (source of import): 
+# J4
+# DATABASE
+importType   = J4 
+
+
+######################################################
+# Number of Threads for Import process : 
+
+numThreads   = 4 
+
+
+#######################################################
+# The following parameter defines the sample select 
+# every N number of records for a thread. 
+# default :10000 (Example 1-10000,10001-20000,20001-30000) 
+
+sampleRange = 10000
+
+#######################################################
+# The following parameter defines the commit frequency for
+# every N number of records.
+# default value :0 ( commit after every insert).
+
+commitFrequency = 10000
+
+######################################################
+# FileEncoding : 
+# UTF-8
+# ISO-8859-1
+FileEncoding   = UTF-8 
+
+
+
+######################################################
+#        DB Params for Destination database          #
+######################################################
+# URL that describes database connection:
+# ex.  oracle:          jdbc:oracle:thin:@<host_or_ip>:1521:<db_name>
+# ex.  db2:             jdbc:db2://<host_or_ip>:50000/<db_name>
+# ex.  ms-sql:          jdbc:sqlserver://<host_or_ip>:1433;databaseName=<db_name>;integratedSecurity=false
+# ex.  H2:              jdbc:h2:tcp://<host_or_ip>/<db_name>
+# ex.  H2(Embedded):    jdbc:h2:<path_to_my_db>
+# ex.  nuodb:           jdbc:com.nuodb://<host_or_ip>/<db_name>
+# ex.  postgresql:      jdbc:postgresql://<host_or_ip>:5432/<db_name>?autosave=always
+Url      = 
+
+# DRIVER Class that describes the specific Driver for a database, 
+# ex. oracle:         oracle.jdbc.driver.OracleDriver
+# ex. db2:            com.ibm.db2.jcc.DB2Driver
+# ex. ms-sql:         com.microsoft.sqlserver.jdbc.SQLServerDriver
+# ex. H2:             org.h2.Driver
+# ex. nuodb:          com.nuodb.jdbc.Driver
+# ex. postgresql:     org.postgresql.Driver
+Driver   = 
+
+# Password can be encrypted with tCrypt
+#
+User   = 
+Password = 
+
+# Oracle only
+OracleUseXMLBinary=false
+
+######################################################
+#            DB Params for source database           #
+######################################################
+# DB Params for any source database in a database
+# to database import
+# URL that describes database connection:
+# ex.  oracle:          jdbc:oracle:thin:@<host_or_ip>:1521:<db_name>
+# ex.  db2:             jdbc:db2://<host_or_ip>:50000/<db_name>
+# ex.  ms-sql:          jdbc:sqlserver://<host_or_ip>:1433;databaseName=<db_name>;integratedSecurity=false
+# ex.  H2:              jdbc:h2:tcp://<host_or_ip>/<db_name>
+# ex.  H2(Embedded):    jdbc:h2:<path_to_my_db>
+# ex.  nuodb:           jdbc:com.nuodb://<host_or_ip>/<db_name>
+# 
+
+URLSourceDB           =
+# DRIVER Class that describes the specific Driver for a database, 
+# ex. oracle:         oracle.jdbc.driver.OracleDriver
+# ex. db2:            com.ibm.db2.jcc.DB2Driver
+# ex. ms-sql:         com.microsoft.sqlserver.jdbc.SQLServerDriver
+# ex. H2:             org.h2.Driver
+# ex. nuodb:          com.nuodb.jdbc.Driver
+
+
+DriverSourceDB        =
+
+UserSourceDB      =
+
+PasswordSourceDB  =
+
+
+######################################################
+#           DB Params for RO  database               #
+######################################################
+# DB Params for any read-only database involved.
+# Only one read-only database allowed
+# 
+
+UrlRO         =
+DriverRO      =
+UserRO            =
+PasswordRO        =
+DatabaseLinkRO  =
+
+######################################################
+# Layout : 
+# XML
+# CLOB
+# MULTIPLE
+# TEXT
+# JSON
+Layout           = XML
+  
+######################################################
+# File : 
+# All or <file_name>
+#
+File           = All
+
+ExcludeFile   =
+ExcludeFileButCreateFile  =
+ExcludeFileNoXML          = F.JOB.LIST.*
+  
+######################################################
+# ProtectFile : 
+# Y or N
+# FilesToProtect : 
+# All or <file_name>
+#
+ProtectFile          = N
+FilesToProtect           = All
+
+######################################################
+#         J4 Source
+######################################################
+# VOC file location : 
+#
+VocFile        = <full_path_to_VOC_File>
+
+######################################################
+# KeepVoc : ON DB to DB Import, Keep Voc? If No, previous Voc must be dropped.
+#
+KeepVoc        = N
+
+######################################################
+# User Directories location : 
+#
+UserDirectories      =
+
+######################################################
+# Create UD as Tables :
+# Yes or No
+CreateUDasTables   = Yes
+
+######################################################
+# UD FileEncoding : 
+# UTF-8
+# ISO-8859-1
+UDFileEncoding   = ISO-8859-1 
+
+######################################################
+# Insert UD Records :
+# Yes or No
+InsertUDRecords  = Yes
+
+######################################################
+# CreateTables :
+# Yes or No
+CreateTables   = Yes
+
+######################################################
+# ClearTable :
+# Yes or No
+ClearTables    = No
+
+######################################################
+# InsertRecords :
+# Yes or No
+InsertRecords  = Yes
+
+######################################################
+# CreateViews :
+# Yes or No
+CreateViews    = Yes
+
+######################################################
+# CreateSchemas :
+# Yes or No
+CreateSchemas    = No
+
+######################################################
+# Specify a cache to parallel insert into, :
+# Default to use is DBImportXMLWriteBehind
+CacheName    =
+
+######################################################
+# If CacheName specified, specify J4 file names  :
+# separated with comma (mandatory if CacheName specified)
+CacheTables    =
+
+#####################################################
+# If Destination Database DB2 :
+# Check the source DB voc/tafj_voc to know count of Tables  
+# Specify Number of Tables to create in particular table space 
+NumTables   =
+# Specify the table spaces with comma separator 
+ListTableSpaces  =
+######################################################
+# If DB2 mode zOS :
+# Yes or No
+ModeZOS      = No
+
+######################################################
+# If DB2 mode zOS 
+# StoGroup
+StoGroup  = SGTAFJ01
+
+######################################################
+# If DB2 mode zOS 
+# withSpecialLob
+# Yes or No
+withSpecialLob  = NO
+
+######################################################
+# If DB2 mode zOS 
+# pageSize
+# default=32704
+pageSize  = 32704
+bufferPool = BP32K2
+bufferPoolIndex = BP4
+zOSCCSID = UNICODE
+zOSDatabaseOtherOptions = 
+zOSTableSpaceOptions1 = PRIQTY 7200 SECQTY 7200 ERASE NO FREEPAGE 5 PCTFREE 5
+zOSTableSpaceOptions2 = CLOSE NO DEFINE NO
+
+
+######################################################
+# Additional connection properties for database authentication can be# added below with keyvalue pairs with  comma seperator for source DB.# ex : SourceDatabaseAuthentication=oracle.net.authentication_services=(KERBEROS5),oracle.net.kerberos5_mutual_authentication=true######################################################
+SourceDBAuthentication  = 
+
+
+######################################################
+# Additional connection properties for database authentication can be# added below with keyvalue pairs with  comma seperator for destination DB.# ex : DestinationDatabaseAuthentication=oracle.net.authentication_services=(KERBEROS5),oracle.net.kerberos5_mutual_authentication=true######################################################
+DestinationDBAuthentication  =
+
+
+######################################################
+# Additional connection properties for database authentication can be# added below with keyvalue pairs with  comma seperator for Read - only DB.# ex : RODBAuthentication=oracle.net.authentication_services=(KERBEROS5),oracle.net.kerberos5_mutual_authentication=true######################################################
+RODBAuthentication  =
+
+
