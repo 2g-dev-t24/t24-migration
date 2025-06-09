@@ -84,18 +84,6 @@ private method AbcNofileFolioValidacion (
     jBC: ABC.NOFILE.FOLIO.VALIDACION
 }
 
-private method AbcValidaMontoSpei (
-)
-{
-    jBC: ABC.VALIDA.MONTO.SPEI
-}
-
-private method RtnFtCheckBalance (
-)
-{
-    jBC: RTN.FT.CHECK.BALANCE
-}
-
 private method AbcMontoBloqueado (
     INOUT yNoAcc string,
     INOUT ySaldoBloq string 
@@ -109,6 +97,18 @@ private method AbcValPostRest (
 )
 {
     jBC: ABC.VAL.POST.REST
+}
+
+private method RtnFtCheckBalance (
+)
+{
+    jBC: RTN.FT.CHECK.BALANCE
+}
+
+private method AbcValidaMontoSpei (
+)
+{
+    jBC: ABC.VALIDA.MONTO.SPEI
 }
 
 private method abc2BrRtnValidaRfc (
@@ -159,3 +159,4 @@ private method AbcDealFmtAmt (
 {
     jBC: ABC.DEAL.FMT.AMT
 }
+

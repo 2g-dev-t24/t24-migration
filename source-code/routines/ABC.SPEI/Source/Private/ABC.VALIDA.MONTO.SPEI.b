@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTcyMTg2MTA0OkNwMTI1MjoxNzQ5MDAxNzMzOTc4Okx1Y2FzRmVycmFyaTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 03 Jun 2025 22:48:53
+* @ValidationCode : MjotODA0MzIyNzc3OkNwMTI1MjoxNzQ5NDM0OTU3NzczOkx1Y2FzRmVycmFyaTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 08 Jun 2025 23:09:17
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : LucasFerrari
 * @ValidationInfo : Nb tests success  : N/A
@@ -70,8 +70,8 @@ PROCESS:
         EB.ErrorProcessing.Err()
     END
 
-    AbcSpei.RtnFtCheckBalance
-    
+    AbcSpei.RtnFtCheckBalance()
+
     Y.ETEXT = EB.SystemTables.getEtext()
     IF (Y.ETEXT NE '') THEN
         EB.ErrorProcessing.StoreEndError()
