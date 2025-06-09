@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNzM3NDM1MzI3OkNwMTI1MjoxNzQ5NTExMTU3MTk2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 09 Jun 2025 20:19:17
+* @ValidationCode : MjotMTYzNTI1OTgwMDpDcDEyNTI6MTc0OTUxMTUzNzU1ODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 09 Jun 2025 20:25:37
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -27,6 +27,7 @@ SUBROUTINE ABC.TAX.ISR.DIA(PASS.CUSTOMER,PASS.DEAL.AMOUNT,PASS.DEAL.CCY,PASS.CCY
     $USING IC.Config
     $USING AC.EntryCreation
     $USING EB.SystemTables
+    $USING AC.ModelBank
 
     GOSUB OPEN.FILES
     GOSUB PROCESS
@@ -119,8 +120,10 @@ PROCESS:
     D.FIELDS = 'ACCOUNT':FM:'BOOKING.DATE'
     D.RANGE.AND.VALUE  = Y.PASS.DATA.ACCT:FM:TODAY
     D.LOGICAL.OPERANDS = '1':FM:'1'
-    //TODO : Revisar call enq y como setear los drangeandvalue y demas
-    CALL E.STMT.ENQ.BY.CONCAT(LISTA.STMT)
+* TODO : Revisar call enq y como setear los drangeandvalue y demas
+* me debes una
+    AC.ModelBank.EStmtEnqByConcat(LISTA.STMT)
+*CALL E.STMT.ENQ.BY.CONCAT(LISTA.STMT)
     TOTAL.STMT = ''
     TOTAL.STMT = DCOUNT(LISTA.STMT,FM)
     SALDO.INICIAL = 0
