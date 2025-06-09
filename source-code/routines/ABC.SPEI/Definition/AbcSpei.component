@@ -160,3 +160,14 @@ private method AbcDealFmtAmt (
     jBC: ABC.DEAL.FMT.AMT
 }
 
+private method AbcValidaCanalAc (
+)
+{
+    jBC: ABC.VALIDA.CANAL.AC
+}
+
+private method AbcCambioCategRemu (
+)
+{
+    jBC: ABC.CAMBIO.CATEG.REMU
+}
