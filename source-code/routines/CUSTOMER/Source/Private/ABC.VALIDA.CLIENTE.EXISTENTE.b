@@ -89,7 +89,15 @@ PROCESO:
     Y.DATE.BIRTH = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
 
     IF Y.RFC EQ '' THEN
-        ABC.BP.AbcGeneraRfc('', Y.RFC, '' )
+        
+        IF Y.SECTOR LT '2001' THEN
+            Y.MAYUS  = CHAR(165)
+            Y.RFC = Y.CURP[1,10]
+            GOSUB SET.HOMONIMIA
+            GOSUB SET.DIGITO.VER
+        END ELSE
+            ABC.BP.AbcGeneraRfc('', Y.RFC, '' )
+        END
         Y.RFC.BAN = '1'
     END
 
@@ -435,5 +443,431 @@ LIMPIA.VARIABLES:
     Y.ESTADO.1 = ''
 
 RETURN
+*****************
+SET.DIGITO.VER:
+*****************
+    A.SUM.DIG = 0
+    A.FACTOR = 13
 
+    AUX.RFC = Y.RFC
+
+    IF LEN(AUX.RFC) EQ 11 THEN AUX.RFC = ' ' : AUX.RFC
+
+    FOR A.I.NOM = 1 TO 12
+
+        Y.CAR = AUX.RFC[A.I.NOM, 1]
+        GOSUB GET.LISTA.ANEXO.3
+        A.SUM.DIG = A.SUM.DIG + Y.VAL * A.FACTOR
+        A.FACTOR = A.FACTOR - 1
+    NEXT A.I.NOM
+
+    A.RES.DIG = MOD(A.SUM.DIG, 11)
+
+    IF A.RES.DIG GT 0 THEN
+        A.RES.DIG = 11 - A.RES.DIG
+        IF A.RES.DIG EQ 10 THEN A.RES.DIG = 'A'
+    END
+
+    Y.RFC := A.RES.DIG
+RETURN
+*****************
+SET.HOMONIMIA:
+*****************
+    A.NUM.NOMBRE = ''
+    APE.PATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusShortName)
+    APE.MATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne)
+    NOMBRE = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo)
+    A.CLIENTE = APE.PATERNO : APE.MATERNO : NOMBRE
+    A.CLIENTE = UPCASE(A.CLIENTE)
+    A.CLIENTE = TRIM(A.CLIENTE)
+
+    A.NOM.CLIENTE.ORIG = A.CLIENTE
+    FOR A.I.NOM = 1 TO LEN(A.NOM.CLIENTE.ORIG)
+        Y.CAR = A.NOM.CLIENTE.ORIG[A.I.NOM, 1]
+        GOSUB GET.LISTA.ANEXO.1
+        A.NUM.NOMBRE := Y.VAL
+
+    NEXT A.I.NOM
+
+    A.SUM.HOM = 0
+
+    FOR A.I.NUM.NOM = 1 TO LEN(A.NUM.NOMBRE)
+
+        A.NUM.1 = A.NUM.NOMBRE[A.I.NUM.NOM, 2]
+        A.NUM.2 = A.NUM.NOMBRE[(A.I.NUM.NOM+1), 1]
+
+        A.SUM.HOM = A.SUM.HOM + A.NUM.1 * A.NUM.2
+
+    NEXT A.I.NUM.NOM
+
+    A.SUM.HOM = MOD(A.SUM.HOM, 1000)
+
+    A.RES.HOM = MOD(A.SUM.HOM, 34)
+
+    A.COC.HOM = (A.SUM.HOM-A.RES.HOM) / 34
+
+    Y.CAR = A.COC.HOM
+    GOSUB GET.LISTA.ANEXO.2
+    A.COC.HOM = Y.VAL
+
+    Y.CAR = A.RES.HOM
+    GOSUB GET.LISTA.ANEXO.2
+    A.RES.HOM = Y.VAL
+
+
+    Y.RFC := A.COC.HOM : A.RES.HOM
+
+RETURN
+*****************
+GET.LISTA.ANEXO.1:
+*****************
+    IF NOT(Y.CAR) THEN
+        Y.VAL = '00'
+    END 
+    IF Y.CAR EQ '0' THEN
+        Y.VAL = '00'
+    END
+    IF Y.CAR EQ '1' THEN
+        Y.VAL = '01'
+    END
+    IF Y.CAR EQ '2' THEN
+        Y.VAL = '02'
+    END
+    IF Y.CAR EQ '3' THEN
+        Y.VAL = '03'
+    END
+    IF Y.CAR EQ '4' THEN
+        Y.VAL = '04'
+    END
+    IF Y.CAR EQ '5' THEN
+        Y.VAL = '05'
+    END
+    IF Y.CAR EQ '6' THEN
+        Y.VAL = '06'
+    END
+    IF Y.CAR EQ '7' THEN
+        Y.VAL = '07'
+    END
+    IF Y.CAR EQ '8' THEN
+        Y.VAL = '08'
+    END
+    IF Y.CAR EQ '9' THEN
+        Y.VAL = '09'
+    END
+    IF Y.CAR EQ '&' THEN
+        Y.VAL = '10'
+    END
+    IF Y.CAR EQ 'A' THEN
+        Y.VAL = '11'
+    END
+    IF Y.CAR EQ 'B' THEN
+        Y.VAL = '12'
+    END
+    IF Y.CAR EQ 'C' THEN
+        Y.VAL = '13'
+    END
+    IF Y.CAR EQ 'D' THEN
+        Y.VAL = '14'
+    END
+    IF Y.CAR EQ 'E' THEN
+        Y.VAL = '15'
+    END
+    IF Y.CAR EQ 'F' THEN
+        Y.VAL = '16'
+    END
+    IF Y.CAR EQ 'G' THEN
+        Y.VAL = '17'
+    END
+    IF Y.CAR EQ 'H' THEN
+        Y.VAL = '18'
+    END
+    IF Y.CAR EQ 'I' THEN
+        Y.VAL = '19'
+    END
+    IF Y.CAR EQ 'J' THEN
+        Y.VAL = '21'
+    END
+    IF Y.CAR EQ 'K' THEN
+        Y.VAL = '22'
+    END
+    IF Y.CAR EQ 'L' THEN
+        Y.VAL = '23'
+    END
+    IF Y.CAR EQ 'M' THEN
+        Y.VAL = '24'
+    END
+    IF Y.CAR EQ 'N' THEN
+        Y.VAL = '25'
+    END
+    IF Y.CAR EQ 'O' THEN
+        Y.VAL = '26'
+    END
+    IF Y.CAR EQ 'P' THEN
+        Y.VAL = '27'
+    END
+    IF Y.CAR EQ 'Q' THEN
+        Y.VAL = '28'
+    END
+    IF Y.CAR EQ 'R' THEN
+        Y.VAL = '29'
+    END
+    IF Y.CAR EQ 'S' THEN
+        Y.VAL = '32'
+    END
+    IF Y.CAR EQ 'T' THEN
+        Y.VAL = '33'
+    END
+    IF Y.CAR EQ 'U' THEN
+        Y.VAL = '34'
+    END
+    IF Y.CAR EQ 'V' THEN
+        Y.VAL = '35'
+    END
+    IF Y.CAR EQ 'W' THEN
+        Y.VAL = '36'
+    END
+    IF Y.CAR EQ 'X' THEN
+        Y.VAL = '37'
+    END
+    IF Y.CAR EQ 'Y' THEN
+        Y.VAL = '38'
+    END
+    IF Y.CAR EQ 'Z' THEN
+        Y.VAL = '39'
+    END
+    IF Y.CAR EQ Y.MAYUS THEN
+        Y.VAL = '40'
+    END
+
+RETURN
+*****************
+GET.LISTA.ANEXO.2:
+*****************
+    IF Y.CAR EQ 0 THEN
+        Y.VAL = '1'
+    END
+    IF Y.CAR EQ 1 THEN
+        Y.VAL = '2'
+    END
+    IF Y.CAR EQ 2 THEN
+        Y.VAL = '3'
+    END
+    IF Y.CAR EQ 3 THEN
+        Y.VAL = '4'
+    END
+    IF Y.CAR EQ 4 THEN
+        Y.VAL = '5'
+    END
+    IF Y.CAR EQ 5 THEN
+        Y.VAL = '6'
+    END
+    IF Y.CAR EQ 6 THEN
+        Y.VAL = '7'
+    END
+    IF Y.CAR EQ 7 THEN
+        Y.VAL = '8'
+    END
+    IF Y.CAR EQ 8 THEN
+        Y.VAL = '9'
+    END
+    IF Y.CAR EQ 9 THEN
+        Y.VAL = 'A'
+    END
+    IF Y.CAR EQ 10 THEN
+        Y.VAL = 'B'
+    END
+    IF Y.CAR EQ 11 THEN
+        Y.VAL = 'C'
+    END
+    IF Y.CAR EQ 12 THEN
+        Y.VAL = 'D'
+    END
+    IF Y.CAR EQ 13 THEN
+        Y.VAL = 'E'
+    END
+    IF Y.CAR EQ 14 THEN
+        Y.VAL = 'F'
+    END
+    IF Y.CAR EQ 15 THEN
+        Y.VAL = 'G'
+    END
+    IF Y.CAR EQ 16 THEN
+        Y.VAL = 'H'
+    END
+    IF Y.CAR EQ 17 THEN
+        Y.VAL = 'I'
+    END
+    IF Y.CAR EQ 18 THEN
+        Y.VAL = 'J'
+    END
+    IF Y.CAR EQ 19 THEN
+        Y.VAL = 'K'
+    END
+    IF Y.CAR EQ 20 THEN
+        Y.VAL = 'L'
+    END
+    IF Y.CAR EQ 21 THEN
+        Y.VAL = 'M'
+    END
+    IF Y.CAR EQ 22 THEN
+        Y.VAL = 'N'
+    END
+    IF Y.CAR EQ 23 THEN
+        Y.VAL = 'P'
+    END
+    IF Y.CAR EQ 24 THEN
+        Y.VAL = 'Q'
+    END
+    IF Y.CAR EQ 25 THEN
+        Y.VAL = 'R'
+    END
+    IF Y.CAR EQ 26 THEN
+        Y.VAL = 'S'
+    END
+    IF Y.CAR EQ 27 THEN
+        Y.VAL = 'T'
+    END
+    IF Y.CAR EQ 28 THEN
+        Y.VAL = 'U'
+    END
+    IF Y.CAR EQ 29 THEN
+        Y.VAL = 'V'
+    END
+    IF Y.CAR EQ 30 THEN
+        Y.VAL = 'W'
+    END
+    IF Y.CAR EQ 31 THEN
+        Y.VAL = 'X'
+    END
+    IF Y.CAR EQ 32 THEN
+        Y.VAL = 'Y'
+    END
+    IF Y.CAR EQ 33 THEN
+        Y.VAL = 'Z'
+    END
+
+
+RETURN
+*****************
+GET.LISTA.ANEXO.3:
+*****************     
+    IF Y.CAR EQ '0' THEN
+        Y.VAL = '00'
+    END
+    IF Y.CAR EQ '1' THEN
+        Y.VAL = '01'
+    END
+    IF Y.CAR EQ '2' THEN
+        Y.VAL = '02'
+    END
+    IF Y.CAR EQ '3' THEN
+        Y.VAL = '03'
+    END
+    IF Y.CAR EQ '4' THEN
+        Y.VAL = '04'
+    END
+    IF Y.CAR EQ '5' THEN
+        Y.VAL = '05'
+    END
+    IF Y.CAR EQ '6' THEN
+        Y.VAL = '06'
+    END
+    IF Y.CAR EQ '7' THEN
+        Y.VAL = '07'
+    END
+    IF Y.CAR EQ '8' THEN
+        Y.VAL = '08'
+    END
+    IF Y.CAR EQ '9' THEN
+        Y.VAL = '09'
+    END
+    IF Y.CAR EQ 'A' THEN
+        Y.VAL = '10'
+    END
+    IF Y.CAR EQ 'B' THEN
+        Y.VAL = '11'
+    END
+    IF Y.CAR EQ 'C' THEN
+        Y.VAL = '12'
+    END
+    IF Y.CAR EQ 'D' THEN
+        Y.VAL = '13'
+    END
+    IF Y.CAR EQ 'E' THEN
+        Y.VAL = '14'
+    END
+    IF Y.CAR EQ 'F' THEN
+        Y.VAL = '15'
+    END
+    IF Y.CAR EQ 'G' THEN
+        Y.VAL = '16'
+    END
+    IF Y.CAR EQ 'H' THEN
+        Y.VAL = '17'
+    END
+    IF Y.CAR EQ 'I' THEN
+        Y.VAL = '18'
+    END
+    IF Y.CAR EQ 'J' THEN
+        Y.VAL = '19'
+    END
+    IF Y.CAR EQ 'K' THEN
+        Y.VAL = '20'
+    END
+    IF Y.CAR EQ 'L' THEN
+        Y.VAL = '21'
+    END
+    IF Y.CAR EQ 'M' THEN
+        Y.VAL = '22'
+    END
+    IF Y.CAR EQ 'N' THEN
+        Y.VAL = '23'
+    END
+    IF Y.CAR EQ '&' THEN
+        Y.VAL = '24'
+    END
+    IF Y.CAR EQ 'O' THEN
+        Y.VAL = '25'
+    END
+    IF Y.CAR EQ 'P' THEN
+        Y.VAL = '26'
+    END
+    IF Y.CAR EQ 'Q' THEN
+        Y.VAL = '27'
+    END
+    IF Y.CAR EQ 'R' THEN
+        Y.VAL = '28'
+    END
+    IF Y.CAR EQ 'S' THEN
+        Y.VAL = '29'
+    END
+    IF Y.CAR EQ 'T' THEN
+        Y.VAL = '30'
+    END
+    IF Y.CAR EQ 'U' THEN
+        Y.VAL = '31'
+    END
+    IF Y.CAR EQ 'V' THEN
+        Y.VAL = '32'
+    END
+    IF Y.CAR EQ 'W' THEN
+        Y.VAL = '33'
+    END
+    IF Y.CAR EQ 'X' THEN
+        Y.VAL = '34'
+    END
+    IF Y.CAR EQ 'Y' THEN
+        Y.VAL = '35'
+    END
+    IF Y.CAR EQ 'Z' THEN
+        Y.VAL = '36'
+    END
+    IF NOT(Y.CAR) THEN
+        Y.VAL = '37'
+    END
+    IF Y.CAR EQ Y.MAYUS THEN
+        Y.VAL = '38'
+    END
+
+RETURN
 END

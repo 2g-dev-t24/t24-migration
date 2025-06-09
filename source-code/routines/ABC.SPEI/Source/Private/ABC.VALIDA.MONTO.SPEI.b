@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTcyMTg2MTA0OkNwMTI1MjoxNzQ5MDAxNzMzOTc4Okx1Y2FzRmVycmFyaTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 03 Jun 2025 22:48:53
+* @ValidationCode : MjoxMDI2MzI2NjEyOkNwMTI1MjoxNzQ5NDM1NTU1NzgxOkx1Y2FzRmVycmFyaTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 08 Jun 2025 23:19:15
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : LucasFerrari
 * @ValidationInfo : Nb tests success  : N/A
@@ -56,7 +56,7 @@ PROCESS:
         YCONST.CTA.BANXICO = REG.PARAM<AbcTable.AbcParametrosSpei.SpeiCtaBanxico>
         YCONST.TXN.TYPE.TRANSF = REG.PARAM<AbcTable.AbcParametrosSpei.TxnTipoMen>
         YCONST.TXN.TYPE.SPEUA = REG.PARAM<AbcTable.AbcParametrosSpei.TxnTipoEnv>
-        YMONTO.MINIMO = REG.PARAM<AbcTable.AbcParametrosSpei.SpeiPriNombre>
+        YMONTO.MINIMO = REG.PARAM<AbcTable.AbcParametrosSpei.SpeiMontoMin>
     END
     Y.ID.ACCOUNT = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.DebitAcctNo)
     R.ACCOUNT = AC.AccountOpening.Account.Read(Y.ID.ACCOUNT, Y.AC.ERR)
@@ -70,8 +70,8 @@ PROCESS:
         EB.ErrorProcessing.Err()
     END
 
-    AbcSpei.RtnFtCheckBalance
-    
+    AbcSpei.RtnFtCheckBalance()
+
     Y.ETEXT = EB.SystemTables.getEtext()
     IF (Y.ETEXT NE '') THEN
         EB.ErrorProcessing.StoreEndError()

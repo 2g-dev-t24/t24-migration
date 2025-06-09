@@ -7,6 +7,15 @@ public table AbcCiudad {
         Rango3(ABC.CIUDAD.RANGO3)           = 4
         Rango4(ABC.CIUDAD.RANGO4)           = 5
         Reserved1(ABC.CIUDAD.RESERVED.1)    = 6
+        RecordStatus(ABC.CIUDAD.RECORD.STATUS)        = 7
+        CurrNo(ABC.CIUDAD.CURR.NO)                    = 8
+        Inputter(ABC.CIUDAD.INPUTTER)                 = 9
+        DateTime(ABC.CIUDAD.DATE.TIME)                = 10
+        Authoriser(ABC.CIUDAD.AUTHORISER)             = 11
+        CoCode(ABC.CIUDAD.CO.CODE)                    = 12
+        DeptCode(ABC.CIUDAD.DEPT.CODE)                = 13
+        AuditorCode(ABC.CIUDAD.AUDITOR.CODE)          = 14
+        AuditDateTime(ABC.CIUDAD.AUDIT.DATE.TIME)     = 15
 
     }
 }

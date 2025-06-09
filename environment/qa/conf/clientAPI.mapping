@@ -1,0 +1,10 @@
+{
+    "<channelName>": {
+        "ofsSource": "",
+        "ofsTimeoutMessage": "",
+		"ofsErrorMessage" : "",
+		"overrideErrorMessage" : "",
+		"retryOnStop" : "",
+		"retryOnTransientErrors" : ""
+    }   
+}

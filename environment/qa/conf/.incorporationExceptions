@@ -1,0 +1,16 @@
+#
+# This file lists the exception in the auto-incorporation process.
+# All items listed (coma-seperated) in the 4 categories (properties, 
+# methods, constants, tables) will be ignored during incorporation.
+# example : 
+# tables=TXN.JOURNAL,USER.SMS.GROUP 
+# means that the auto-incorporation
+# will ignore any F.READ, ... on these 2 tables (note that there is no "Fxxx." prefix.
+# Same for 
+# properties=AF,R.NEW 
+# will ignore these 2 commons.
+#
+properties=
+methods=
+constants=
+tables=
