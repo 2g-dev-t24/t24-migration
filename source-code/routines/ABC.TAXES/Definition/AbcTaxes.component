@@ -23,3 +23,14 @@ private method abcTaxIsrDia (
     jBC: ABC.TAX.ISR.DIA
 }
 
+private method abcTestCallBasic (
+)
+{
+    jBC: ABC.TEST.CALL.BASIC
+}
+
+private method abcTestSomeRtn (
+)
+{
+    jBC: ABC.TEST.SOME.RTN
+}
