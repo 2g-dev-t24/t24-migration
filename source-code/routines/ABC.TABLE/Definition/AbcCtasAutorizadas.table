@@ -1,0 +1,20 @@
+public table AbcCtasAutorizadas {
+    t24: ABC.CTAS.AUTORIZADAS
+    fields:{
+        ApePaterno(VCAU.APE.PATERNO) = 1
+        ApeMaterno(VCAU.APE.MATERNO) = 2
+        Nombre(VCAU.NOMBRE)   = 3
+        Rfc(VCAU.RFC)    = 4
+        Curp(VCAU.CURP)   = 5
+        CtaClabe(VCAU.CTA.CLABE)    = 6
+        RecordStatus(VCAU.RECORD.STATUS)        = 7
+        CurrNo(VCAU.CURR.NO)                    = 8
+        Inputter(VCAU.INPUTTER)                 = 9
+        DateTime(VCAU.DATE.TIME)                = 10
+        Authoriser(VCAU.AUTHORISER)             = 11
+        CoCode(VCAU.CO.CODE)                    = 12
+        DeptCode(VCAU.DEPT.CODE)                = 13
+        AuditorCode(VCAU.AUDITOR.CODE)          = 14
+        AuditDateTime(VCAU.AUDIT.DATE.TIME)     = 15
+    }
+}

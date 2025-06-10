@@ -569,3 +569,14 @@ private method AbcParamMtosSpeiId ()
 }
 
 
+private method AbcCtasAutorizadasFields ()
+{
+    jBC: ABC.CTAS.AUTORIZADAS.FIELDS
+}
+
+private method AbcCtasAutorizadas ()
+{
+    jBC: ABC.CTAS.AUTORIZADAS
+}
+
+
