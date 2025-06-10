@@ -103,7 +103,7 @@ PROCESS:
 
         IF R.GROUP.CREDIT.INT THEN
             Y.INT.RATE = R.GROUP.CREDIT.INT<IC.Config.GroupCreditInt.GciCrIntRate>
-            Y.LIMIT.AMT = R.GROUP.CREDIT.INT< IC.Config.GroupCreditInt.GciCrLimitAmt>
+            Y.LIMIT.AMT = R.GROUP.CREDIT.INT<IC.Config.GroupCreditInt.GciCrLimitAmt>
             Y.INT.RATE = RAISE(Y.INT.RATE)
             Y.LIMIT.AMT = RAISE(Y.LIMIT.AMT)
             Y.NO.VAL = DCOUNT(Y.INT.RATE,VM)
