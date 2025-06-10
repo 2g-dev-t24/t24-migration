@@ -1,8 +1,20 @@
+* @ValidationCode : MjotMTE3NTUyNTU3MjpDcDEyNTI6MTc0OTU4MjkwNTE4MTpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 10 Jun 2025 16:15:05
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : true
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>-9</Rating>
 *-----------------------------------------------------------------------------
 $PACKAGE ABC.BP
-    SUBROUTINE ABC.BIOMETRICOS.FIELDS
+SUBROUTINE ABC.BIOMETRICOS.FIELDS
 *===============================================
 * Nombre de Programa:   ABC.PAGOS.DIGITAL
 * Objetivo:
@@ -11,9 +23,6 @@ $PACKAGE ABC.BP
     $USING EB.Template
     $USING ABC.BP
 *-----------------------------------------------------------------------------
-    ID.F = "IUB"
-    ID.T = 'A'
-    ID.N = '11'
     EB.Template.TableDefineid("IUB", EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
 
@@ -145,6 +154,6 @@ $PACKAGE ABC.BP
 *-----------------------------------------------------------------------------
     EB.Template.TableSetauditposition()         ;* Populate audit information
 *-----------------------------------------------------------------------------
-    RETURN
+RETURN
 *-----------------------------------------------------------------------------
 END

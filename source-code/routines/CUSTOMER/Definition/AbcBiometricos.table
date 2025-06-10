@@ -29,21 +29,19 @@ public table AbcBiometricos {
         AbcBiomReserved8(ABC.BIOM.RESERVED.8) = 26
         AbcBiomReserved7(ABC.BIOM.RESERVED.7) = 27
         AbcBiomReserved6(ABC.BIOM.RESERVED.6) = 28
-        AbcBiometricosReserved5(ABC.BIOM.RESERVED.5) = 29
+        AbcBiomReserved5(ABC.BIOM.RESERVED.5) = 29
         AbcBiomReserved4(ABC.BIOM.RESERVED.4) = 30
         AbcBiomReserved3(ABC.BIOM.RESERVED.3) = 31
         AbcBiomReserved2(ABC.BIOM.RESERVED.2) = 32
         AbcBiomReserved1(ABC.BIOM.RESERVED.1) = 33
-        AbcBiomLocalRef(ABC.BIOM.LOCAL.REF) = 34
-        AbcBiomOverride(ABC.BIOM.OVERRIDE) = 35
-        AbcBiomRecordStatus(ABC.BIOM.RECORD.STATUS) = 36
-        AbcBiomCurrNo(ABC.BIOM.CURR.NO) = 37
-        AbcBiomInputter(ABC.BIOM.INPUTTER) = 38
-        AbcBiomDateTime(ABC.BIOM.DATE.TIME) = 39
-        AbcBiomAuthoriser(ABC.BIOM.AUTHORISER) = 40
-        AbcBiomCoCode(ABC.BIOM.CO.CODE) = 41
-        AbcBiomDeptCode(ABC.BIOM.DEPT.CODE) = 42
-        AbcBiomAuditorCode(ABC.BIOM.AUDITOR.CODE) = 43
-        AbcBiomAuditDateTime(ABC.BIOM.AUDIT.DATE.TIME) = 44
+        AbcBiomRecordStatus(ABC.BIOM.RECORD.STATUS) = 34
+        AbcBiomCurrNo(ABC.BIOM.CURR.NO) = 35
+        AbcBiomInputter(ABC.BIOM.INPUTTER) = 36
+        AbcBiomDateTime(ABC.BIOM.DATE.TIME) = 37
+        AbcBiomAuthoriser(ABC.BIOM.AUTHORISER) = 38
+        AbcBiomCoCode(ABC.BIOM.CO.CODE) = 39
+        AbcBiomDeptCode(ABC.BIOM.DEPT.CODE) = 40
+        AbcBiomAuditorCode(ABC.BIOM.AUDITOR.CODE) = 41
+        AbcBiomAuditDateTime(ABC.BIOM.AUDIT.DATE.TIME) = 42
     }
 }
