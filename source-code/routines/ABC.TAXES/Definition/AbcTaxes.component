@@ -4,6 +4,8 @@ component AbcTaxes
 metamodelVersion 1.6
 
  
+
+
 private method abcTaxIsrDia (
     INOUT passCustomer string,
     INOUT passDealAmount string,
@@ -20,3 +22,4 @@ private method abcTaxIsrDia (
 {
     jBC: ABC.TAX.ISR.DIA
 }
+

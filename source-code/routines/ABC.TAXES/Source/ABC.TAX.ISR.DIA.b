@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTYzNTI1OTgwMDpDcDEyNTI6MTc0OTUxMTUzNzU1ODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 09 Jun 2025 20:25:37
+* @ValidationCode : MjotMTExNjMwMzAwMzpDcDEyNTI6MTc0OTU2MzYzNzQzNjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 10 Jun 2025 10:53:57
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -10,6 +10,7 @@
 * @ValidationInfo : Bypass GateKeeper : false
 * @ValidationInfo : Compiler Version  : R24_SP1.0
 * @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
+
 $PACKAGE AbcTaxes
 
 SUBROUTINE ABC.TAX.ISR.DIA(PASS.CUSTOMER,PASS.DEAL.AMOUNT,PASS.DEAL.CCY,PASS.CCY.MKT,PASS.CROSS.RATE,PASS.CROSS.CCY,PASS.DWN.CCY,PASS.DATA,PASS.CUST.CDN,R.TAX,CHARGE.AMOUNT)
@@ -28,6 +29,8 @@ SUBROUTINE ABC.TAX.ISR.DIA(PASS.CUSTOMER,PASS.DEAL.AMOUNT,PASS.DEAL.CCY,PASS.CCY
     $USING AC.EntryCreation
     $USING EB.SystemTables
     $USING AC.ModelBank
+    $USING EB.API
+    $USING EB.Reports
 
     GOSUB OPEN.FILES
     GOSUB PROCESS
@@ -100,7 +103,7 @@ PROCESS:
 
         IF R.GROUP.CREDIT.INT THEN
             Y.INT.RATE = R.GROUP.CREDIT.INT<IC.Config.GroupCreditInt.GciCrIntRate>
-            Y.LIMIT.AMT = R.GROUP.CREDIT.INT<IC.Config.GroupCreditInt.GciCrIntLimitAmt>
+            Y.LIMIT.AMT = R.GROUP.CREDIT.INT< IC.Config.GroupCreditInt.GciCrLimitAmt>
             Y.INT.RATE = RAISE(Y.INT.RATE)
             Y.LIMIT.AMT = RAISE(Y.LIMIT.AMT)
             Y.NO.VAL = DCOUNT(Y.INT.RATE,VM)
@@ -120,8 +123,12 @@ PROCESS:
     D.FIELDS = 'ACCOUNT':FM:'BOOKING.DATE'
     D.RANGE.AND.VALUE  = Y.PASS.DATA.ACCT:FM:TODAY
     D.LOGICAL.OPERANDS = '1':FM:'1'
-* TODO : Revisar call enq y como setear los drangeandvalue y demas
-* me debes una
+
+    EB.Reports.setDFields(D.FIELDS)
+    EB.Reports.setDRangeAndValue(D.RANGE.AND.VALUE)
+    EB.Reports.setOperandList(D.LOGICAL.OPERANDS)
+
+
     AC.ModelBank.EStmtEnqByConcat(LISTA.STMT)
 *CALL E.STMT.ENQ.BY.CONCAT(LISTA.STMT)
     TOTAL.STMT = ''
@@ -143,7 +150,7 @@ PROCESS:
         IMPORTE.STMT = ''
         EB.DataAccess.FRead(FN.STMT,ID.STMT,R.INFO.STMT,F.STMT,ERROR.STMT)
         IF ERROR.STMT EQ '' THEN
-            IMPORTE.STMT = R.INFO.STMT<AC.STE.AMOUNT.LCY>
+            IMPORTE.STMT = R.INFO.STMT<AC.EntryCreation.StmtEntry.SteAmountLcy>
             Y.SALDO += IMPORTE.STMT
         END
     NEXT J
@@ -175,9 +182,7 @@ CALCULATE.ISR.TAX:
     END
 
     Y.CURRENCY = R.ACCOUNT<AC.AccountOpening.Account.Currency>
-    
-    //TODO : Revisar LCCY si es getLccy o que
-    // Listo manco
+
     Y.LCCY = EB.SystemTables.getLccy()
     IF Y.CURRENCY = Y.LCCY THEN
         YPOS = ''
@@ -191,8 +196,10 @@ CALCULATE.ISR.TAX:
                 YTAX.ISR = 0
                 YTAX.ISR = (Y.SALDO.CALCULO * Y.TAX.FACTOR)
                 CHARGE.AMOUNT = YTAX.ISR
-                //TODO : Revisar call OCOMO
-                CALL OCOMO("CUENTA: ":Y.PASS.DATA.ACCT:", Y.SALDO: ":Y.SALDO:", Y.SALDO.CALCULO: ":Y.SALDO.CALCULO:", PASS.DEAL.AMOUNT: ":PASS.DEAL.AMOUNT:", CHARGE.AMOUNT: ":CHARGE.AMOUNT:", Y.LIMITE.MONTO: ":Y.LIMITE.MONTO:", Y.INT.RATE: ":Y.INT.RATE:", Y.LIMIT.AMT: ":Y.LIMIT.AMT)
+
+                Y.TEXTO = "CUENTA: ":Y.PASS.DATA.ACCT:", Y.SALDO: ":Y.SALDO:", Y.SALDO.CALCULO: ":Y.SALDO.CALCULO:", PASS.DEAL.AMOUNT: ":PASS.DEAL.AMOUNT:", CHARGE.AMOUNT: ":CHARGE.AMOUNT:", Y.LIMITE.MONTO: ":Y.LIMITE.MONTO:", Y.INT.RATE: ":Y.INT.RATE:", Y.LIMIT.AMT: ":Y.LIMIT.AMT
+                EB.API.Ocomo(Y.TEXTO)
+*                CALL OCOMO("CUENTA: ":Y.PASS.DATA.ACCT:", Y.SALDO: ":Y.SALDO:", Y.SALDO.CALCULO: ":Y.SALDO.CALCULO:", PASS.DEAL.AMOUNT: ":PASS.DEAL.AMOUNT:", CHARGE.AMOUNT: ":CHARGE.AMOUNT:", Y.LIMITE.MONTO: ":Y.LIMITE.MONTO:", Y.INT.RATE: ":Y.INT.RATE:", Y.LIMIT.AMT: ":Y.LIMIT.AMT)
             END
             ELSE
                 CHARGE.AMOUNT = 0
