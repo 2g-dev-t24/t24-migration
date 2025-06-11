@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTM5ODk4NjI4MjpDcDEyNTI6MTc0OTYxMzIwOTE5NzptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 11 Jun 2025 00:40:09
+* @ValidationCode : MjotNjE1MTU3MDU4OkNwMTI1MjoxNzQ5NjEzNTE4MDU2Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 11 Jun 2025 00:45:18
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -13,7 +13,7 @@
 *-----------------------------------------------------------------------------
 * <Rating>168</Rating>
 *-----------------------------------------------------------------------------
-$PACKAGE AbcSpei
+$PACKAGE AbcTaxes
 SUBROUTINE ABC.TAX.ISR.AA(PASS.CUSTOMER, PASS.DEAL.AMOUNT, PASS.DEAL.CCY, PASS.CCY.MKT,PASS.CROSS.RATE,PASS.CROSS.CCY, PASS.DWN.CCY, PASS.DATA,PASS.CUST.CDN,R.TAX,CHARGE.AMOUNT)
 *-----------------------------------------------------------------------------
 *===============================================================================
