@@ -171,3 +171,21 @@ private method AbcCambioCategRemu (
 {
     jBC: ABC.CAMBIO.CATEG.REMU
 }
+
+private method abcTaxIsrAa (
+    INOUT passCustomer string,
+    INOUT passDealAmount string,
+    INOUT passDealCcy string,
+    INOUT passCcyMkt string,
+    INOUT passCrossRate string,
+    INOUT passCrossCcy string,
+    INOUT passDwnCcy string,
+    INOUT passData string,
+    INOUT passCustCdn string,
+    INOUT rTax string,
+    INOUT chargeAmount string
+)
+{
+    jBC: ABC.TAX.ISR.AA
+}
+
