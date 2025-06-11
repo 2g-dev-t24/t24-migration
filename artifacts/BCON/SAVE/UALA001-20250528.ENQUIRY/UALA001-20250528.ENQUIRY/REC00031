@@ -1,0 +1,82 @@
+4,99
+CUSTOMER
+SECTOR RG 1000 1499CUSTOMER.TYPE EQ ACTIVE
+
+
+
+
+
+
+
+
+
+
+@IDHDRCUST.SHORT.NAMENAME.1NAME.2SECTORACCT.OFFICERACCT.OFF.NAMEHYPHENDAO.HYPHENDISP.DAORECORD.STATUSINPUTTERZERORECORDSCOMPANY.BOOKSECTORVER.1VER.2DECIDE.VER
+@ID"Actualiza CURP "SHORT.NAMENAME.1NAME.2SECTORACCOUNT.OFFICERF ACCT.OFFICER" - "C ACCT.OFFICER : HYPHENC DAO.HYPHEN : ACCT.OFF.NAMERECORD.STATUSINPUTTER"No Unauthorised Customers "COMPANY.BOOKSECTOR"MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIF.BUSINESS""MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIFICATION.IND"IF SECTOR EQ "1700" VER.1 VER.2
+11,0579534516
+10L35L10R4R4L40L11L4R
+L DEPT.ACCT.OFFICER,NAMEF _,2,1
+
+LANGUAGE
+NONE
+Customer NoId ClienteNameApellido PaternoApellido MaternoNombresTipo PersonaRelationship OfficerRecord StatusInputterCustomer Branch Name
+CLASS-ENQ.H.TITLECLASS-ENQ.NORECS
+HEADERHEADER
+
+
+
+
+
+
+
+
+
+
+SSSSMSS
+CUSTOMER,ABC.ACTUALIZA.CURP I @ID
+CURRENT.ID>@ID
+@ID 1
+Actualiza CURP[edit.gifActualiza CURP[edit.gif
+18 123456789101112131516171819
+
+1 13
+0 
+1 14
+0 
+1 1
+
+
+
+
+
+
+
+
+Unauthorised Customer
+ZERORECORDDISPLAYNO.SELECTION
+
+Unauthorised Customer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7
+57113_USERUALA__OFS_BROWSERTC
+2505202334
+57113_USERUALA_OFS_BROWSERTC
+MX0010001
+1

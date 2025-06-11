@@ -1,0 +1,82 @@
+4,19
+NOFILE.CUST.BIOM.ALTA
+
+
+
+IUB
+IUB
+EQ
+
+
+
+
+
+@IDHEADERIUBNOMBREAPE.PATAPE.MATNOMBRESCURPFEC.NACEST.NACSEXOTIP.IDENUM.IDFEC.EMIFEC.VENCELULAREMAIL
+@ID"Alta Cliente con Biometricos"F @IDF @IDF @IDF @IDF @IDF @IDF @IDF @IDF @IDF @IDF @IDF @IDF @IDF @IDF @ID
+1,0110
+500L16R100R
+F *,1,1F *,2,1F *,3,1F *,4,1F *,5,1F *,6,1F *,7,1F *,8,1F *,9,1F *,10,1F *,11,1F *,12,1F *,13,1F *,14,1F *,15,1
+
+L
+ONCE
+Apellido PaternoIUBIUBIUBIUBNOMBRENOMBRENombre
+CLASS-ENQ.H.TITLE
+HEADER
+
+
+
+
+
+
+
+
+
+
+SSS
+CUSTOMER,ABC.FISICA.INP I F3
+CURRENT.APEPAT>APE.PATCURRENT.APEMAT>APE.MATCURRENT.NOMBRE>NOMBRESCURRENT.CURP>CURPCURRENT.FECNAC>FEC.NACCURRENT.ESTNAC>EST.NACCURRENT.SEXO>SEXOCURRENT.TIPIDE>TIP.IDECURRENT.NUMID>NUM.IDCURRENT.FECEMI>FEC.EMICURRENT.FECVEN>FEC.VENCURRENT.CELULAR>CELULARCURRENT.EMAIL>EMAILCURRENT.IUB>IUB
+NOMBRE 4
+Alta Persona Fisica[custscv.gifAlta Persona Fisica
+16 234567891011121314151617
+
+0 
+0 
+1 1
+0 
+14 5678910111213141516173
+
+
+
+
+
+
+
+
+
+
+
+Consulta Registro BiometricosConsulta Registro Biometricos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14
+71019_SUPERVISOR__OFS_BROWSERTC
+2504162358
+71019_SUPERVISOR_OFS_BROWSERTC
+MX0010001
+1

@@ -1,0 +1,82 @@
+4,99
+CUSTOMER
+CUSTOMER.TYPE EQ ACTIVE
+
+
+
+
+
+
+
+
+
+
+CUSTOMERIDSHORT.NAMENAME.1NAME.2
+@IDSHORT.NAMENAME.1NAME.2
+1235
+10L70L70L70L
+
+
+LLL
+No de Cliente
+Apellido PaternoApellido MaternoApellido Materno
+
+
+
+
+
+
+
+
+
+
+
+
+S
+CUSTOMER,ABC.UPD.DAT.FISCALES I CUSTOMERID
+CUSTOMERID EQ @ID
+CUSTOMERID 1
+Actualiza Datos Fiscales[edit.gif
+3 234
+
+0 
+0 
+1 1
+0 
+1 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3
+57113_USERUALA__OFS_BROWSERTC
+2505202338
+57113_USERUALA_OFS_BROWSERTC
+MX0010001
+1
