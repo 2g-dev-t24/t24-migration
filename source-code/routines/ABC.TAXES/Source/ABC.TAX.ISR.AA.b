@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNjE1MTU3MDU4OkNwMTI1MjoxNzQ5NjEzNTE4MDU2Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 11 Jun 2025 00:45:18
+* @ValidationCode : MjoxNTE0NDQzNTY5OkNwMTI1MjoxNzQ5NjE3MTczNzI0Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 11 Jun 2025 01:46:13
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -79,6 +79,8 @@ SUBROUTINE ABC.TAX.ISR.AA(PASS.CUSTOMER, PASS.DEAL.AMOUNT, PASS.DEAL.CCY, PASS.C
     $USING EB.Updates
     $USING AC.AccountOpening
     $USING CG.ChargeConfig
+    $USING AA.PaymentSchedule
+    $USING AA.ProductFramework
     
     APPLICATION   = EB.SystemTables.getApplication()
     GOSUB GET.ACCT.DETAILS
@@ -246,7 +248,7 @@ RETURN
 *****************
 GET.ACCT.DETAILS:
 *****************
-    ARR.ID = AA$ARR.ID
+    ARR.ID = AA.Framework.getArrId()
     EFF.DATE = TODAY
     ARR.TOT.REC = ''; PRODUCT.ID= '';PROPERTY.LIST = '';ARR.REC = '';
     AA.Framework.GetArrangementProduct(ARR.ID,EFF.DATE,ARR.TOT.REC,PRODUCT.ID,PROPERTY.LIST)
@@ -256,28 +258,34 @@ GET.ACCT.DETAILS:
 *------------------------------INICIA (CAMB)-------------------------------------------------
 * IF RUNNING.UNDER.BATCH THEN
     IF APPLICATION NE "ENQUIRY.SELECT" THEN
-        TOT.PAY.DATES = FULL.PAYMENT.DATES
+*TODO MLOPEZ CHEQUEAR SI ESTO ES O NO FRUTA PORQUE NO ESTOY SEGURO QUE HAGA LO MISMO
+*        TOT.PAY.DATES = FULL.PAYMENT.DATES
+        AA.PaymentSchedule.ScheduleProjector(ARR.ID, SimulationRef, NoReset, DateRange, TotPayment, DueDates, DueDeferDates, DueTypes, DueMethods, DueTypeAmts, DueProps, DuePropAmts, DueOuts)
+        TOT.PAY.DATES = DueDates
+*TODO MLOPEZ
+        
     END ELSE
         DUE.DATES = ''; CYCLE.DATE = ''; TOT.PAYMENT = '';
-*TODO FALTA CONVERTIR ESTA RUTINA
+*TODO MLOPEZ FALTA CONVERTIR ESTA RUTINA
 *CALL FYG.AA.SCHEDULE.PROJECTOR(ARR.ID,SIM.REF,"1",CYCLE.DATE,TOT.PAYMENT,DUE.DATES)
-
+*TODO MLOPEZ
         TOT.PAY.DATES = DUE.DATES
         DUE.DATES = ''; CYCLE.DATE = ''; TOT.PAYMENT = '';
     END
 
-    CORR.DETAILS  = AA$CONTRACT.DETAILS<4>
+*TODO MLOPEZ ESTA LINEA NO SE QUE SIGNIFICA, PERO TAMPOCO VEO QUE ESTE HACIENDO ALGO CON ESTA VARIABLE
+*    CORR.DETAILS  = AA$CONTRACT.DETAILSS<4>
+*TODO MLOPEZ
+    
 *------------------------------TERMINA (CAMB)-------------------------------------------------
     ARR.ACC = AA.Framework.getLinkedAccount()
     
-    
-    CALL AA.GET.PROPERTY.RECORD('', ARR.ID, '', TODAY, 'SETTLEMENT', '', SET.RECORD, R.ERR)
-
+    AA.ProductFramework.GetPropertyRecord('', ARR.ID, '', TODAY, 'SETTLEMENT', '', SET.RECORD, R.ERR)
     ACC.NO = SET.RECORD<AA.Settlement.Settlement.SetPayoutAccount>
 
 
     APP.NAME = "ACCOUNT"
-    FIELD.NAME = "EXENTO.IMPUESTO": VM :"GPO.CLUB.AHORRO"
+    FIELD.NAME = "EXENTO.IMPUESTO": @VM :"GPO.CLUB.AHORRO"
     FIELD.POS = ""
     EB.Updates.MultiGetLocRef(APP.NAME,FIELD.NAME,FIELD.POS)
     TAX.PROCESS = FIELD.POS<1,1>
