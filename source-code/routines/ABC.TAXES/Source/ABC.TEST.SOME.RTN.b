@@ -10,7 +10,9 @@ SUBROUTINE ABC.TEST.SOME.RTN
     $USING EB.SystemTables
     $USING EB.ErrorProcessing
 
-    ETEXT = "LLAMADA DESDE ABC.TEST.CALL.BASIC"
+    Y.PGM.VERSION = EB.SystemTables.getPgmVersion()
+
+    ETEXT = "LLAMADA DESDE: " : Y.PGM.VERSION
     EB.SystemTables.setEtext(ETEXT)
     EB.ErrorProcessing.StoreEndError()
 
