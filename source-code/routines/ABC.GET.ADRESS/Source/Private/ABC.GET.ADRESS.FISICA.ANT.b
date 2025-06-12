@@ -110,7 +110,9 @@ PROCESS:
         
         EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.CAMPOS.LOCALES)
         
-        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTownCountry,Y.CIUDAD)
+        Y.CUS.TOWN.COUNTRY<1,1> = Y.CIUDAD
+        Y.CUS.TOWN.COUNTRY<1,2> = Y.CIUDAD
+        EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTownCountry,Y.CUS.TOWN.COUNTRY)
 
         EB.Display.RebuildScreen()
         
