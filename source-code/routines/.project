@@ -5,13 +5,7 @@
 	<projects>
 	</projects>
 	<buildSpec>
-		<buildCommand>
-			<name>com.temenos.tafj.builder.TAFJBasicBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>com.temenos.tafj.builder.TAFJBasicNature</nature>
 	</natures>
 </projectDescription>
