@@ -31,7 +31,7 @@ private method abcRfcCep (
 
 
 
-private method abcVCustomerName (
+public method abcVCustomerName (
     INOUT yComi string,
     INOUT yNombre string
 )
