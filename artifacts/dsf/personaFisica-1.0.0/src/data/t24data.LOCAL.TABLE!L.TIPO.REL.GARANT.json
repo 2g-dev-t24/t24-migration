@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.TIPO.REL.GARANT",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.TIPO.REL.GAR"
+    }, {
+      "SHORT.NAME" : "L.TIPO.REL.GAR"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "TIPO DE RELACION PARA GARANTIA"
+    }, {
+      "DESCRIPTION" : "TIPO DE RELACION PARA GARANTIA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

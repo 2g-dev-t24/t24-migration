@@ -1,0 +1,44 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40140",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "400605"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "437778"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "400550"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "416689"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "422299"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "471239"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CONSUBANCO"
+    }, {
+      "DESCRIPTION" : "CONSUBANCO"
+    } ]
+  }
+}

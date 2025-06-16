@@ -1,0 +1,92 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*8",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "000"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477130"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "498588"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "498589"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "498590"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "588772020"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "588772021"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "588772022"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "606333"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506221"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "58877284"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "58877261"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "533987"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "639559"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "545290"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "545325"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "534926"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "544505"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "522312"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "522794"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "523013"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "527374"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "627636"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "PRESTACIONES UNIVERSALES"
+    }, {
+      "DESCRIPTION" : "PRESTACIONES UNIVERSALES"
+    } ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "L.REL.TIPO.REL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.REL.TIPO.REL"
+    }, {
+      "SHORT.NAME" : "L.REL.TIPO.REL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "REL.TIPO.REL"
+    }, {
+      "DESCRIPTION" : "L.REL.TIPO.REL"
+    } ],
+    "APPLICATION.VET" : "ABC.RELACION.CLIENTES",
+    "CHAR.TYPE" : "A",
+    "APPL.ENRICHM.FIELD" : "1",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

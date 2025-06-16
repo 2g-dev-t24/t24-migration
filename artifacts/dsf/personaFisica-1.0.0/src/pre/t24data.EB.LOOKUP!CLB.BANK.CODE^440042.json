@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40042",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446878"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "519946"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "526972"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "549909"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "MIFEL"
+    }, {
+      "DESCRIPTION" : "MIFEL"
+    } ]
+  }
+}

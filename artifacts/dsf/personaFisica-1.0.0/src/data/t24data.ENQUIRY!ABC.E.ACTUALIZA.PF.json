@@ -1,0 +1,188 @@
+{
+  "header" : {
+    "id" : "ABC.E.ACTUALIZA.PF",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "CUSTOMER,ABC.FISICA.ACTUALIZA I CUSTOMERID",
+      "LABEL.FIELD" : "CUSTOMERID 1",
+      "NXT.DESC" : [ {
+        "NXT.DESC" : "Actualiza Cliente[edit.gif"
+      }, {
+        "NXT.DESC" : "Actualiza Cliente[edit.gif"
+      } ]
+    }, {
+      "ENQUIRY.NAME" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.CONOCE.CLIENTE I CUSTOMERID",
+      "LABEL.FIELD" : "CUSTOMERID 1",
+      "NXT.DESC" : [ {
+        "NXT.DESC" : "Actualiza Datos Adicionales[edit.gif"
+      }, {
+        "NXT.DESC" : "Actualiza Datos Adicionales[edit.gif"
+      } ]
+    } ],
+    "ATTRIBUTES" : [ {
+      "ATTRIBUTES" : "ZERORECORDDISPLAY"
+    }, {
+      "ATTRIBUTES" : "NO.SELECTION"
+    } ],
+    "PAGE.SIZE" : "4,9",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "CUSTOMERID",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Customer No"
+      }, {
+        "FIELD.LBL" : "No DE CLIENTE"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"Actualiza Cliente Persona Fisica\""
+      } ],
+      "FIELD.NAME" : "HDR",
+      "COLUMN" : "1,0",
+      "FIELD.DISP.TYPE" : "CLASS-ENQ.H.TITLE",
+      "SECTION" : "HEADER"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SHORT.NAME"
+      } ],
+      "FIELD.NAME" : "SHORT.NAME",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Name"
+      }, {
+        "FIELD.LBL" : "Nombre Cliente"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "ACCOUNT.OFFICER"
+      } ],
+      "FIELD.NAME" : "ACCOUNT.OFFICER",
+      "LENGTH.MASK" : "4R",
+      "SINGLE.MULTI" : "S",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Ejecutivo"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F ACCOUNT.OFFICER"
+      } ],
+      "FIELD.NAME" : "ACCOUNT.OFFICER",
+      "LENGTH.MASK" : "4R",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\" - \""
+      } ],
+      "FIELD.NAME" : "HYPHEN"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "C ACCT.OFFICER : HYPHEN"
+      } ],
+      "FIELD.NAME" : "DAO.HYPHEN"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "C DAO.HYPHEN : ACCT.OFF.NAME"
+      } ],
+      "FIELD.NAME" : "DISP.DAO",
+      "COLUMN" : "3",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Relationship Officer"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "RECORD.STATUS"
+      } ],
+      "FIELD.NAME" : "RECORD.STATUS",
+      "LENGTH.MASK" : "4L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "4",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Record Status"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "INPUTTER"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F _,2,1"
+      } ],
+      "FIELD.NAME" : "INPUTTER",
+      "LENGTH.MASK" : "40L",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Inputter"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"No Unauthorised Customers \""
+      } ],
+      "FIELD.NAME" : "ZERORECORDS",
+      "COLUMN" : "1",
+      "FIELD.DISP.TYPE" : "CLASS-ENQ.NORECS",
+      "DISPLAY.BREAK" : "NONE",
+      "SECTION" : "HEADER"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "COMPANY.BOOK"
+      } ],
+      "FIELD.NAME" : "COMPANY.BOOK",
+      "LENGTH.MASK" : "11L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "6",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Customer Branch Name"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SECTOR"
+      } ],
+      "FIELD.NAME" : "SECTOR",
+      "LENGTH.MASK" : "4R",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIF.BUSINESS\""
+      } ],
+      "FIELD.NAME" : "VER.1"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIFICATION.IND\""
+      } ],
+      "FIELD.NAME" : "VER.2"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IF SECTOR EQ \"1700\" VER.1 VER.2"
+      } ],
+      "FIELD.NAME" : "DECIDE.VER"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "SECTOR EQ 1001"
+    }, {
+      "FIXED.SELECTION" : "CUSTOMER.TYPE EQ ACTIVE"
+    } ],
+    "DESCRIPT" : [ {
+      "DESCRIPT" : [ {
+        "DESCRIPT" : "Unauthorised Customer"
+      } ]
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Unauthorised Customer"
+    } ],
+    "FILE.NAME" : "CUSTOMER"
+  }
+}

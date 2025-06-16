@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ABC.DIR.CALLE.A",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ABC.DIR.CALLE.A"
+    }, {
+      "SHORT.NAME" : "ABC.DIR.CALLE.A"
+    } ],
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "Calle Domicilio Anterior"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "60"
+  }
+}

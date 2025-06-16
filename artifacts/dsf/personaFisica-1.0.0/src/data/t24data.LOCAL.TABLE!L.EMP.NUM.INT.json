@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.EMP.NUM.INT",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EMP.NUM.INT"
+    }, {
+      "SHORT.NAME" : "EMP.NUM.INT"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EMPRESA NUMERO INTERIOR"
+    }, {
+      "DESCRIPTION" : "EMPRESA NUMERO INTERIOR"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "6"
+  }
+}

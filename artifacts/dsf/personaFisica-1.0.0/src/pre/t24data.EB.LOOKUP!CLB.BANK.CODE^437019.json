@@ -1,0 +1,44 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*37019",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "037"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491343"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491346"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547080"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491344"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557602"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "481279"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BANJERCITO"
+    }, {
+      "DESCRIPTION" : "BANJERCITO"
+    } ]
+  }
+}

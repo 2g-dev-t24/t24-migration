@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.SECTOR.ECO",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.SECTOR.ECO"
+    }, {
+      "SHORT.NAME" : "L.SECTOR.ECO"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Sector Economico"
+    }, {
+      "DESCRIPTION" : "Sector Economico"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "5"
+  }
+}

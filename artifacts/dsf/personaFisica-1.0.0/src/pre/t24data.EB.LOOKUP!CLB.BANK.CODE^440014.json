@@ -1,0 +1,155 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40014",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "272800"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "454747"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "456300"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "456344"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491327"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491405"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491406"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491418"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491512"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491572"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491573"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493135"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493136"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "494133"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "494134"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "540845"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "545307"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "545730"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "546080"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547015"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547046"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547067"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547146"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547157"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547484"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "549611"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "553253"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "554900"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547066"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "552488"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "433194"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557905"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557906"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557907"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557908"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557909"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557910"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "589617"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "433126"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "451312"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "405689"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506217"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506218"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "SANTANDER"
+    }, {
+      "DESCRIPTION" : "SANTANDER"
+    } ]
+  }
+}

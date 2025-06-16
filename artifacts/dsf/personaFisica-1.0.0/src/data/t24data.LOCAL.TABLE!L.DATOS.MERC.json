@@ -1,0 +1,37 @@
+{
+  "header" : {
+    "id" : "L.DATOS.MERC",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.DATOS.MERC"
+    }, {
+      "SHORT.NAME" : "L.DATOS.MERC"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "SI",
+      "REMARK" : [ { }, {
+        "REMARK" : "Si Acepto"
+      } ]
+    }, {
+      "VETTING.TABLE" : "NO",
+      "REMARK" : [ { }, {
+        "REMARK" : "No Acepto"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "DATOS PARA MERCADEO"
+    }, {
+      "DESCRIPTION" : "DATOS PARA MERCADEO"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

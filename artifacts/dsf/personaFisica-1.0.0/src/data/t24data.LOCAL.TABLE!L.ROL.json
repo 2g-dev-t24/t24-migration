@@ -1,0 +1,31 @@
+{
+  "header" : {
+    "id" : "L.ROL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.ROL"
+    }, {
+      "SHORT.NAME" : "L.ROL"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "enroladorClientes"
+    }, {
+      "VETTING.TABLE" : "enroladorUsuarios"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ROL USUARIO"
+    }, {
+      "DESCRIPTION" : "ROL USUARIO"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "65"
+  }
+}

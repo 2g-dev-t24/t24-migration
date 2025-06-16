@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.DOM.FISC",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.DOM.FISC"
+    }, {
+      "SHORT.NAME" : "L.DOM.FISC"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "L.DOM.FISC"
+    }, {
+      "DESCRIPTION" : "L.DOM.FISC"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "5"
+  }
+}

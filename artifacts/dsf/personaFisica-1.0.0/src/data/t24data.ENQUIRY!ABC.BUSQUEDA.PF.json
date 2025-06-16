@@ -1,0 +1,120 @@
+{
+  "header" : {
+    "id" : "ABC.BUSQUEDA.PF",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "AA.FIND.ARRANGEMENT.AR",
+      "LABEL.FIELD" : "@ID 1",
+      "SEL.CRIT" : [ {
+        "SEL.CRIT" : "CUSTOMER EQ @ID"
+      } ]
+    } ],
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "Nombre"
+      } ],
+      "SELECTION.FLDS" : "NAME.2"
+    }, {
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "Apellido Paterno"
+      } ],
+      "SELECTION.FLDS" : "SHORT.NAME"
+    }, {
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "Apellido Materno"
+      } ],
+      "SELECTION.FLDS" : "NAME.1"
+    }, {
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "No de Cliente"
+      } ],
+      "SELECTION.FLDS" : "@ID"
+    } ],
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "No de Cliente"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.2"
+      } ],
+      "FIELD.NAME" : "NAME.2",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "4",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Nombres(s)"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SHORT.NAME"
+      } ],
+      "FIELD.NAME" : "SHORT.NAME",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "7",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Apellido Paterno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.1"
+      } ],
+      "FIELD.NAME" : "NAME.1",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "9",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Apellido Materno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "ACCOUNT.OFFICER"
+      } ],
+      "FIELD.NAME" : "ACCOUNT.OFFICER",
+      "LENGTH.MASK" : "4R",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F ACCOUNT.OFFICER"
+      } ],
+      "FIELD.NAME" : "ACCT.OFFR.NAME",
+      "COLUMN" : "14",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Ejecutivo de Cuenta"
+      } ]
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "SECTOR EQ 1001 1100 1300 1301 1302 1303 1304"
+    } ],
+    "DESCRIPT" : [ {
+      "DESCRIPT" : [ {
+        "DESCRIPT" : "Busqueda Personas Físicas&lf;"
+      }, {
+        "DESCRIPT" : "Busqueda Personas Físicas&lf;"
+      } ]
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Busqueda Personas Físicas"
+    }, {
+      "SHORT.DESC" : "Busqueda Personas Físicas"
+    } ],
+    "FILE.NAME" : "CUSTOMER"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "L.LOCALIDAD",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.LOCALIDAD"
+    }, {
+      "SHORT.NAME" : "L.LOCALIDAD"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "L.LOCALIDAD"
+    }, {
+      "DESCRIPTION" : "L.LOCALIDAD"
+    } ],
+    "APPLICATION.VET" : "ABC.LOCALIDADES",
+    "CHAR.TYPE" : "A",
+    "APPL.ENRICHM.FIELD" : "1",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

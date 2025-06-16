@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "ABC.VPM.MONTO.MENSUAL*40",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OTHER.INFO" : "MXN",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "De 1 a 100,000"
+    }, {
+      "DESCRIPTION" : "De 1 a 100,000"
+    } ]
+  }
+}

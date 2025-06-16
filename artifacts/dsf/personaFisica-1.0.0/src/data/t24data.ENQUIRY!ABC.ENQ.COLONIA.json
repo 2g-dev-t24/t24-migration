@@ -1,0 +1,55 @@
+{
+  "header" : {
+    "id" : "ABC.ENQ.COLONIA",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "EQ"
+      } ],
+      "SELECTION.FLDS" : "@ID"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "5L",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "COLONIA"
+      } ],
+      "FIELD.NAME" : "ID.COLONIA",
+      "LENGTH.MASK" : "17L",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "ID.COLONIA"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "COLONIA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "L ABC.COLONIA,COLONIA"
+      } ],
+      "FIELD.NAME" : "NOMBRE.COLONIA",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "NOMBRE"
+      } ]
+    } ],
+    "FILE.NAME" : "ABC.CODIGO.POSTAL"
+  }
+}

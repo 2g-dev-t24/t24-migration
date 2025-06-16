@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.DESTINO.RECURSO*PagoBienesServicios",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Pago de Bienes y Servicios"
+    }, {
+      "DESCRIPTION" : "Pago de Bienes y Servicios"
+    } ]
+  }
+}

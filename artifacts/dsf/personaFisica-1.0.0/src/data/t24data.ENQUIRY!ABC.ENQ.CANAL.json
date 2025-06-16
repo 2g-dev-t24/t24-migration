@@ -1,0 +1,68 @@
+{
+  "header" : {
+    "id" : "ABC.ENQ.CANAL",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "ID"
+      }, {
+        "SEL.LABEL" : "ID"
+      } ],
+      "SELECTION.FLDS" : "@ID",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ID"
+      }, {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "DESCRIPCION"
+      } ],
+      "FIELD.NAME" : "DESCRIPCION",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "DESCRIPTION"
+      }, {
+        "FIELD.LBL" : "DESCRIPCION"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "MNEMONIC"
+      } ],
+      "FIELD.NAME" : "MNEMONIC",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "MNEMONIC"
+      }, {
+        "FIELD.LBL" : "MNEMONIC"
+      } ]
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "CONSULTA DE CANAL"
+    }, {
+      "SHORT.DESC" : "CONSULTA DE CANAL"
+    } ],
+    "FILE.NAME" : "ABC.CANAL"
+  }
+}

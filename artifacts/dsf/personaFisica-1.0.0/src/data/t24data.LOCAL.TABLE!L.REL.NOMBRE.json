@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.REL.NOMBRE",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.REL.NOMBRE"
+    }, {
+      "SHORT.NAME" : "L.REL.NOMBRE"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "REL.NOMBRE"
+    }, {
+      "DESCRIPTION" : "REL.NOMBRE"
+    } ],
+    "CHAR.TYPE" : "SS",
+    "MAXIMUM.CHAR" : "61"
+  }
+}

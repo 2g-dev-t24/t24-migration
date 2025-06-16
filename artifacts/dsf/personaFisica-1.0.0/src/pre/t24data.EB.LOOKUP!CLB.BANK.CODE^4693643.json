@@ -1,0 +1,89 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*693643",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "069"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "521300"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "523285"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529081"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "549920"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "522339"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "511747"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "517586"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "522618"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547751"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "516603"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "534541"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "534544"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "534548"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "534550"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "516094"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "519983"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "531081"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "555326"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "534629"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506403"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "425763"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "OPERADORA BROXEL"
+    }, {
+      "DESCRIPTION" : "OPERADORA BROXEL"
+    } ]
+  }
+}

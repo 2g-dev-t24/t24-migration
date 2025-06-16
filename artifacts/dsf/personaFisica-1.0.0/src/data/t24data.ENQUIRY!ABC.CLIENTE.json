@@ -1,0 +1,105 @@
+{
+  "header" : {
+    "id" : "ABC.CLIENTE",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SELECTION.FLDS" : "@ID"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.2"
+      } ],
+      "FIELD.NAME" : "NAME.2",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "NOMBRE"
+      }, {
+        "FIELD.LBL" : "NOMBRE"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SHORT.NAME"
+      } ],
+      "FIELD.NAME" : "SHORT.NAME",
+      "COLUMN" : "20",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "APELLIDO PATERNO"
+      }, {
+        "FIELD.LBL" : "APELLIDO PATERNO"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.1"
+      } ],
+      "FIELD.NAME" : "NAME.1",
+      "COLUMN" : "40",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "APELLIDO MATERNO"
+      }, {
+        "FIELD.LBL" : "APELLIDO MATERNO"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "EMAIL.1"
+      } ],
+      "FIELD.NAME" : "EMAIL.1",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "60",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "EMAIL"
+      }, {
+        "FIELD.LBL" : "EMAIL"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "EXTERN.CUS.ID"
+      } ],
+      "FIELD.NAME" : "EXTERN.CUS.ID",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "80",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "CURP"
+      }, {
+        "FIELD.LBL" : "CURP"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IDESC IUB"
+      } ],
+      "FIELD.NAME" : "IUB",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "95",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "IUB"
+      }, {
+        "FIELD.LBL" : "IUB"
+      } ]
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "CONSULTA CLIENTE BIOMETRICOS"
+    }, {
+      "SHORT.DESC" : "CONSULTA CLIENTE BIOMETRICOS"
+    } ],
+    "FILE.NAME" : "CUSTOMER"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "header" : {
+    "id" : "E.ABC.NOF.GET.COLONIA",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "CODIGO.POSTAL"
+      } ],
+      "SELECTION.FLDS" : "CODIGO.POSTAL",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "PRODUCT" : "EB",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "0"
+      } ],
+      "FIELD.NAME" : "R.DATA"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,1,1"
+      } ],
+      "FIELD.NAME" : "COLONIA",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Colonia"
+      }, {
+        "FIELD.LBL" : "Colonia"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,2,1"
+      } ],
+      "FIELD.NAME" : "DESC.COLONIA",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "20",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Desc Colonia"
+      }, {
+        "FIELD.LBL" : "Desc Colonia"
+      } ]
+    } ],
+    "FILE.NAME" : "NOFILE.ABC.NOF.GET.COLONIA"
+  }
+}

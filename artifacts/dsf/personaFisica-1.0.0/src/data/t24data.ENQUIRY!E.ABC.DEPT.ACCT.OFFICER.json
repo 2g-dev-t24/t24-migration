@@ -1,0 +1,56 @@
+{
+  "header" : {
+    "id" : "E.ABC.DEPT.ACCT.OFFICER",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "DEPT.ACCT.OFF.CODE"
+      } ],
+      "FIELD.NAME" : "DEPT.ACCT.OFF.CODE",
+      "LENGTH.MASK" : "20R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Dept Acct Off Code"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME"
+      } ],
+      "FIELD.NAME" : "NAME",
+      "LENGTH.MASK" : "100L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "NAME"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "AREA"
+      } ],
+      "FIELD.NAME" : "AREA",
+      "LENGTH.MASK" : "100L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "3",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "AREA"
+      } ]
+    } ],
+    "BUILD.ROUTINE" : [ {
+      "BUILD.ROUTINE" : "ABC.E.SEL.DEP"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Ejecutivos"
+    } ],
+    "FILE.NAME" : "DEPT.ACCT.OFFICER"
+  }
+}

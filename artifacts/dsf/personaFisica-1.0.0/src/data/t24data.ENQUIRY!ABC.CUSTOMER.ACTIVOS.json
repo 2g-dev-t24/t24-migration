@@ -1,0 +1,72 @@
+{
+  "header" : {
+    "id" : "ABC.CUSTOMER.ACTIVOS",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "CUSTOMER,ABC.UPD.DAT.FISCALES I CUSTOMERID",
+      "LABEL.FIELD" : "CUSTOMERID 1",
+      "SEL.CRIT" : [ {
+        "SEL.CRIT" : "CUSTOMERID EQ @ID"
+      } ],
+      "NXT.DESC" : [ { }, {
+        "NXT.DESC" : "Actualiza Datos Fiscales[edit.gif"
+      } ]
+    } ],
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "CUSTOMERID",
+      "LENGTH.MASK" : "10L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "DISPLAY.BREAK" : "No de Cliente"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SHORT.NAME"
+      } ],
+      "FIELD.NAME" : "SHORT.NAME",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Apellido Paterno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.1"
+      } ],
+      "FIELD.NAME" : "NAME.1",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "3",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Apellido Materno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.2"
+      } ],
+      "FIELD.NAME" : "NAME.2",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Apellido Materno"
+      } ],
+      "TYPE" : "L"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "CUSTOMER.TYPE EQ ACTIVE"
+    } ],
+    "FILE.NAME" : "CUSTOMER"
+  }
+}

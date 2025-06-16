@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "APE.PAT.FISCAL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "APE.PAT.FISCAL"
+    }, {
+      "SHORT.NAME" : "APE.PAT.FISCAL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Apellido Paterno Fiscal"
+    }, {
+      "DESCRIPTION" : "Apellido Paterno Fiscal"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

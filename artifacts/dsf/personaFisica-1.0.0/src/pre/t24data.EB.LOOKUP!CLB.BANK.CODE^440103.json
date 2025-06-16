@@ -1,0 +1,596 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40103",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "I"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376670"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376671"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376672"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376673"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376674"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376675"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376676"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376677"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376678"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376679"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376720"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376721"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376722"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376723"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376724"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376725"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376726"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376727"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376728"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376729"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376730"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376731"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376732"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376733"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376734"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376735"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376736"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376737"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376738"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376739"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376740"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376741"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376742"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376743"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376744"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376745"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376746"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376747"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376748"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376749"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376750"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376751"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376752"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376753"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376754"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376755"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376756"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376757"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376758"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376759"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376760"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376761"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376762"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376763"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376764"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376765"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376766"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376767"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376768"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376769"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376770"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376771"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376772"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376773"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376774"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376775"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376776"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376777"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376778"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376779"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376780"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376781"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376782"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376783"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376784"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376785"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376786"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376787"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376788"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376789"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376790"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376791"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376792"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376793"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376794"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376795"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376796"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376797"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376798"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376799"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376800"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376801"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376802"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376803"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376804"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376805"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376806"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376807"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376808"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376809"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376810"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376811"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376812"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376813"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376814"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376815"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376816"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376817"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376818"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376819"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376820"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376821"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376822"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376823"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376824"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376825"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376826"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376827"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376828"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376829"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376830"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376831"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376832"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376833"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376834"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376835"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376836"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376837"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376838"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376839"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376840"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376841"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376842"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376843"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376844"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376845"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376846"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376847"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376848"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376849"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376850"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376851"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376852"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376853"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376854"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376855"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376856"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376857"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376858"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376859"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376860"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376861"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376862"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376863"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376864"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376865"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376866"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376867"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376868"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376869"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376870"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376871"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376872"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376873"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376874"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376875"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376876"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376877"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376878"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376879"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376880"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376881"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376882"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376883"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376884"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376885"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376886"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376887"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376888"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376889"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376890"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376891"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376892"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376893"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376894"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376895"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376896"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376897"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376898"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "376899"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "AMERICAN EXPRES"
+    }, {
+      "DESCRIPTION" : "AMERICAN EXPRES"
+    } ]
+  }
+}

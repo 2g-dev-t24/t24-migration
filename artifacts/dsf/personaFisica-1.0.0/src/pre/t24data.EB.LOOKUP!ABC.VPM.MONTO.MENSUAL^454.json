@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "ABC.VPM.MONTO.MENSUAL*54",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OTHER.INFO" : "USD",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Más de 125,000 dólares"
+    }, {
+      "DESCRIPTION" : "Más de 125,000 dólares"
+    } ]
+  }
+}

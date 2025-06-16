@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.OCUPACION*12",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "JUBILADO (A)"
+    }, {
+      "DESCRIPTION" : "JUBILADO (A)"
+    } ]
+  }
+}

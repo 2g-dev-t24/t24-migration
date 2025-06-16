@@ -1,0 +1,65 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40030",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "20202225"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "20202226"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "420199"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "421003"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "426188"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "408400"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "512280"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506250"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506255"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506304"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "687283"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "516102"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "532485"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BAJIO"
+    }, {
+      "DESCRIPTION" : "BAJIO"
+    } ]
+  }
+}

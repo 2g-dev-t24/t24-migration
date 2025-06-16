@@ -1,0 +1,32 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*22",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "000"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "636379"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506428"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "TODITO PAGOS"
+    }, {
+      "DESCRIPTION" : "TODITO PAGOS"
+    } ]
+  }
+}

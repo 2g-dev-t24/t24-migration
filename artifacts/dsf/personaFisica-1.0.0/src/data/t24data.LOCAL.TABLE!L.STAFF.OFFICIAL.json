@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "L.STAFF.OFFICIAL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "STAFF.OFFICIAL"
+    }, {
+      "SHORT.NAME" : "STAFF.OFFICIAL"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "Y",
+      "REMARK" : [ {
+        "REMARK" : "Yes"
+      }, {
+        "REMARK" : "Si"
+      } ]
+    }, {
+      "VETTING.TABLE" : "N",
+      "REMARK" : [ {
+        "REMARK" : "No"
+      }, {
+        "REMARK" : "No"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "L.STAFF.OFFICIAL"
+    }, {
+      "DESCRIPTION" : "L.STAFF.OFFICIAL"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "1"
+  }
+}

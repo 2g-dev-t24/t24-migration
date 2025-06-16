@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40060",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "435769"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "539978"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "465762"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "428464"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "523595"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BANSI"
+    }, {
+      "DESCRIPTION" : "BANSI"
+    } ]
+  }
+}

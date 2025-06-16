@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*4",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "000"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "402514"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "407339"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "600973"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "421648"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "603778"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CONTROL DE CARTERAS ESPECIALES"
+    }, {
+      "DESCRIPTION" : "CONTROL DE CARTERAS ESPECIALES"
+    } ]
+  }
+}

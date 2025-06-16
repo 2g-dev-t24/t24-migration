@@ -1,0 +1,32 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*2",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "000"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "417849"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "421812"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "LIVERPOOL"
+    }, {
+      "DESCRIPTION" : "LIVERPOOL"
+    } ]
+  }
+}

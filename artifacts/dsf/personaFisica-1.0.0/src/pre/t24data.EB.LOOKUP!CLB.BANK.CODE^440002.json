@@ -1,0 +1,476 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40002",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "403707"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "405306"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "405930"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "407458"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "407559"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "408242"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "408244"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "408245"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "410852"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "420713"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "429522"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "430902"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "435741"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "439120"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "441541"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "441545"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "441549"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446985"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446986"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "449187"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "449700"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "454057"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "454069"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "454492"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455255"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "467473"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "476684"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "476687"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477261"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "479461"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "480790"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "490176"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "490176060"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "490178"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491271"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491272"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491501"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491502"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493164"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493165"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "498460"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "504536"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "504563"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "512709"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "512795"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "512809"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "512823"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "517712"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "517721"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "517747"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "517771"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "517795"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "518004"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "518174"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "518853"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "518899"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "520021"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "520116"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "520213"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "520416"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "520608"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "520694"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "520698"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "522130"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "524711"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "525424"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "525678"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "526489"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "528804"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "528805"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "528843"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "528851"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "528866"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "528875"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "528877"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529001"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529028"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529088"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529091"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529093"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529595"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "530056"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "530756"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "542537"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "544672"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "544925"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "545039"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "545631"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547075"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547093"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547112"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547514"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "548234"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "548236"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "549138"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "551077"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "551081"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "551244"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "552523"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "552526"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "554625"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "554627"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "554628"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557561"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557874"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557875"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557991"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "558426"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "559209"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854809"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854819"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854840"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854858"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854859"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854860"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854863"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854873"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854874"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854897"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "554492"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "549631"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "549639"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "533609"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "425763"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "425766"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "425768"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "427435"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "519347"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "532858"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "548119"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "549949"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "550233"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477247"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529065"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "441134"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "400889"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "466397"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "467596"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "469495"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "473993"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "476890"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477177"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477961"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "490256"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "490950"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "533341"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "410080"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "553579"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "555989"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "525564"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BANAMEX"
+    }, {
+      "DESCRIPTION" : "BANAMEX"
+    } ]
+  }
+}

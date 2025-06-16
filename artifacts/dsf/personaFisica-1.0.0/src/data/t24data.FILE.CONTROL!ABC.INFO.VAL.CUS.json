@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "ABC.INFO.VAL.CUS",
+    "dsfApiType" : "FILE.CONTROL",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "FILE.MODULO" : "11",
+    "CUS.CLEAR.FILES" : "N",
+    "SYS.CLEAR.FILES" : "N",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Tabla concat info cliente"
+    } ],
+    "PRODUCT" : "EB",
+    "CLASSIFICATION" : "INT",
+    "FILE.TYPE" : "3"
+  }
+}

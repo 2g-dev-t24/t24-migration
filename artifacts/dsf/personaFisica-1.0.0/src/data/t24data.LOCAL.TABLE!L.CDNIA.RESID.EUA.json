@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "L.CDNIA.RESID.EUA",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "CDNIA.RESID.EUA"
+    }, {
+      "SHORT.NAME" : "CDNIA.RESID.EUA"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "NO",
+      "REMARK" : [ {
+        "REMARK" : "NO"
+      }, {
+        "REMARK" : "NO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "SI",
+      "REMARK" : [ {
+        "REMARK" : "SI"
+      }, {
+        "REMARK" : "SI"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CUIDADANIA O RESIDENCIA EN EUA"
+    }, {
+      "DESCRIPTION" : "CUIDADANIA O RESIDENCIA EN EUA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

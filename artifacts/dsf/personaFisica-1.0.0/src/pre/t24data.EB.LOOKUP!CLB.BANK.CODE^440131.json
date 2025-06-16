@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40131",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "I"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "400820"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "543691"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "428575"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "428574"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "474494"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506341"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "554964"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BANCO FAMSA"
+    }, {
+      "DESCRIPTION" : "BANCO FAMSA"
+    } ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.TIPO.EMP.OTRO",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "TIPO.EMP.OTRO"
+    }, {
+      "SHORT.NAME" : "TIPO.EMP.OTRO"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "TIPO EMPLEO"
+    }, {
+      "DESCRIPTION" : "TIPO EMPLEO"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "31"
+  }
+}

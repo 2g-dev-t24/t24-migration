@@ -1,0 +1,35 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*13",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "000"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506299"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506300"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506354"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ONE CARD"
+    }, {
+      "DESCRIPTION" : "ONE CARD"
+    } ]
+  }
+}

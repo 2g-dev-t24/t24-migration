@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.FOLIO.CON.BURO",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "FOLIO.CON.BURO"
+    }, {
+      "SHORT.NAME" : "FOLIO.CON.BURO"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "FOLIO.CONSULTA.BURO"
+    }, {
+      "DESCRIPTION" : "FOLIO.CONSULTA.BURO"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "7"
+  }
+}

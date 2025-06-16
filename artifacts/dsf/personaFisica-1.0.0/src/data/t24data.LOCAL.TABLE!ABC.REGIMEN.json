@@ -1,0 +1,42 @@
+{
+  "header" : {
+    "id" : "ABC.REGIMEN",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ABC.REGIMEN"
+    }, {
+      "SHORT.NAME" : "ABC.REGIMEN"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "1",
+      "REMARK" : [ {
+        "REMARK" : "SEPARACION DE BIENES"
+      }, {
+        "REMARK" : "SEPARACION DE BIENES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "2",
+      "REMARK" : [ {
+        "REMARK" : "SOCIEDAD CONYUGAL"
+      }, {
+        "REMARK" : "SOCIEDAD CONYUGAL"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Regimen Matrimonial"
+    }, {
+      "DESCRIPTION" : "Regimen Matrimonial"
+    } ],
+    "CHAR.TYPE" : "A",
+    "NOINPUT.CHANGE.FLD" : "NOCHANGE",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

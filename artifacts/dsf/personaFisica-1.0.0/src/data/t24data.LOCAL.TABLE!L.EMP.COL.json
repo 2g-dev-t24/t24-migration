@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.EMP.COL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EMP.COL"
+    }, {
+      "SHORT.NAME" : "EMP.COL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EMPRESA COLONIA"
+    }, {
+      "DESCRIPTION" : "EMPRESA COLONIA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "15"
+  }
+}

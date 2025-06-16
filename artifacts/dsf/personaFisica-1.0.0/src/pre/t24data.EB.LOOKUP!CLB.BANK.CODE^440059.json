@@ -1,0 +1,89 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40059",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "421811"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "463186"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "463187"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "406130"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446137"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446138"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "492143"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506201"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506205"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529506"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529575"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547736"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "639388"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "419690"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "419691"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "546804"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "546759"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "420807"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "439185"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "439186"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "439187"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "INVEX"
+    }, {
+      "DESCRIPTION" : "INVEX"
+    } ]
+  }
+}

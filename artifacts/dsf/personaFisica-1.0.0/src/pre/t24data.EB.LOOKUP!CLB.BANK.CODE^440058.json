@@ -1,0 +1,59 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40058",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "417967"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "417968"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "474175"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "474174"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "436401"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "476840"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "480063"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "423429"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493165"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "490897"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491047"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BANREGIO"
+    }, {
+      "DESCRIPTION" : "BANREGIO"
+    } ]
+  }
+}

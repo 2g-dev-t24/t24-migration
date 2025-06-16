@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.INFO.VAL.CUS",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "Tabla concat info cliente"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "L"
+  }
+}

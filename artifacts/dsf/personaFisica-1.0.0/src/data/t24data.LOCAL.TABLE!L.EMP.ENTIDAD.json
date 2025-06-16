@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.EMP.ENTIDAD",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EMP.ENTIDAD"
+    }, {
+      "SHORT.NAME" : "EMP.ENTIDAD"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ENTIDAD EMPRESA"
+    }, {
+      "DESCRIPTION" : "ENTIDAD EMPRESA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

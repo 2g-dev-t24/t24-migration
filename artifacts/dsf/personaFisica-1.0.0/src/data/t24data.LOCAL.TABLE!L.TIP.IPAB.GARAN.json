@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "L.TIP.IPAB.GARAN",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.TIP.IPAB.GARA"
+    }, {
+      "SHORT.NAME" : "L.TIP.IPAB.GARA"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "SI",
+      "REMARK" : [ {
+        "REMARK" : "Garantizado"
+      }, {
+        "REMARK" : "Garantizado"
+      } ]
+    }, {
+      "VETTING.TABLE" : "NO",
+      "REMARK" : [ {
+        "REMARK" : "No Garantizado"
+      }, {
+        "REMARK" : "No Garantizado"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "TIPO DE IPAB GARANTIZADO"
+    }, {
+      "DESCRIPTION" : "TIPO DE IPAB GARANTIZADO"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

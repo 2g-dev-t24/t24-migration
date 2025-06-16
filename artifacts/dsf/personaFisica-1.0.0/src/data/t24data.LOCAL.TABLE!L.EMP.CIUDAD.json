@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.EMP.CIUDAD",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EMP.CIUDAD"
+    }, {
+      "SHORT.NAME" : "EMP.CIUDAD"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EMPLEADO CIUDAD"
+    }, {
+      "DESCRIPTION" : "EMPLEADO CIUDAD"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "4"
+  }
+}

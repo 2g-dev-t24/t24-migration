@@ -1,0 +1,143 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40127",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477831"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "440133"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "476202"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "476203"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "476204"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "402766"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "412432"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "415269"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "421364"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "458909"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506259"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "528074"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "529571"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "551238"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "400195"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "516576"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "531298"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "415571"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "534381"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "557604"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "483112"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "483104"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643200"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643201"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643202"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643203"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643204"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643205"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643206"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643207"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643208"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643209"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643212"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643260"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643270"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643280"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "643281"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "407615"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "480065"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "AZTECA"
+    }, {
+      "DESCRIPTION" : "AZTECA"
+    } ]
+  }
+}

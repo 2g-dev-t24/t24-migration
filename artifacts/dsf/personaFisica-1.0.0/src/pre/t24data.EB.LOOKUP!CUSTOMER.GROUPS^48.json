@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "CUSTOMER.GROUPS*8",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ESPECIAL 3"
+    }, {
+      "DESCRIPTION" : "ESPECIAL 3"
+    } ]
+  }
+}

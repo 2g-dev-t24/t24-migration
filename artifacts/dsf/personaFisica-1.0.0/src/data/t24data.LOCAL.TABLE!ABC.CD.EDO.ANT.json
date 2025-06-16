@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ABC.CD.EDO.ANT",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ABC.CD.EDO.ANT"
+    }, {
+      "SHORT.NAME" : "ABC.CD.EDO.ANT"
+    } ],
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "Ciudad o Estado domicilio anterior"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

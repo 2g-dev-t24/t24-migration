@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40138",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "445016"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "542861"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "445017"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506323"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC CAPITAL"
+    }, {
+      "DESCRIPTION" : "ABC CAPITAL"
+    } ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "DENOM.SO.FISCAL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "DENOM.SO.FISCAL"
+    }, {
+      "SHORT.NAME" : "DENOM.SO.FISCAL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "DENOM.SO.FISCAL"
+    }, {
+      "DESCRIPTION" : "DENOM.SO.FISCAL"
+    } ],
+    "CHAR.TYPE" : "TEXT",
+    "MAXIMUM.CHAR" : "65"
+  }
+}

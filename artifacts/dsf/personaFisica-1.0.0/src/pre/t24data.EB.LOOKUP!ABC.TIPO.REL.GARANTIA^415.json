@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "ABC.TIPO.REL.GARANTIA*15",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OTHER.INFO" : "FISICA",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "PERSONA FISICA NO RELACIONADA CON LA ENTIDAD QUE REPORTA"
+    }, {
+      "DESCRIPTION" : "PERSONA FISICA NO RELACIONADA CON LA ENTIDAD QUE REPORTA"
+    } ]
+  }
+}

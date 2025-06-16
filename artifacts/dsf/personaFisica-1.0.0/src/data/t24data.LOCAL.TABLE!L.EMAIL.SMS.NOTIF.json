@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "L.EMAIL.SMS.NOTIF",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.EMAIL.SMS.NOT"
+    }, {
+      "SHORT.NAME" : "L.EMAIL.SMS.NOT"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "S",
+      "REMARK" : [ {
+        "REMARK" : "SI DESEO NOTIFICACIONES"
+      }, {
+        "REMARK" : "SI DESEO NOTIFICACIONES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "N",
+      "REMARK" : [ {
+        "REMARK" : "NO DESEO NOTIFICACIONES"
+      }, {
+        "REMARK" : "NO DESEO NOTIFICACIONES"
+      } ]
+    } ],
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "NOTIFICACION POR EMAIL Y SMS"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "1"
+  }
+}
