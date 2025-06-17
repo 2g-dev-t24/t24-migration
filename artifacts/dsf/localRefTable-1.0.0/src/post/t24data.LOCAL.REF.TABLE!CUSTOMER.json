@@ -1,0 +1,229 @@
+{
+  "header" : {
+    "id" : "CUSTOMER",
+    "dsfApiType" : "LOCAL.REF.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.TABLE.NO" : [ {
+      "LOCAL.TABLE.NO" : "CUSTOMER.SEGMENT"
+    }, {
+      "LOCAL.TABLE.NO" : "ATTR.RISK.PRF"
+    }, {
+      "LOCAL.TABLE.NO" : "ESBASE.INDUSTRY.CLASSIFICATION"
+    }, {
+      "LOCAL.TABLE.NO" : "ESBASE.BIRTH.PROVINCE"
+    }, {
+      "LOCAL.TABLE.NO" : "VAT.GST.ID"
+    }, {
+      "LOCAL.TABLE.NO" : "WHT.EXEMPT"
+    }, {
+      "LOCAL.TABLE.NO" : "PERM.EST"
+    }, {
+      "LOCAL.TABLE.NO" : "TAX.CERT"
+    }, {
+      "LOCAL.TABLE.NO" : "SCORE.DATE.IN",
+      "SUB.ASSOC.CODE" : "XX<"
+    }, {
+      "LOCAL.TABLE.NO" : "CREDIT.SCORE.IN",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "LOCAL.TABLE.NO" : "CREDIT.BUREAU.IN",
+      "SUB.ASSOC.CODE" : "XX>"
+    }, {
+      "LOCAL.TABLE.NO" : "RELATION.CUSTOMER"
+    }, {
+      "LOCAL.TABLE.NO" : "CUSTOMER.INITIALS"
+    }, {
+      "LOCAL.TABLE.NO" : "LEGAL.LASTNAME.PREFIX"
+    }, {
+      "LOCAL.TABLE.NO" : "EFFECTIVE.TAX.RESIDENCE"
+    }, {
+      "LOCAL.TABLE.NO" : "MESSAGE.ID"
+    }, {
+      "LOCAL.TABLE.NO" : "ITF.TAX.EXEMPT"
+    }, {
+      "LOCAL.TABLE.NO" : "BANK.RELATION"
+    }, {
+      "LOCAL.TABLE.NO" : "LEGAL.DOC.NAME.EMPLOYER"
+    }, {
+      "LOCAL.TABLE.NO" : "LEGAL.ID.EMPLOYER"
+    }, {
+      "LOCAL.TABLE.NO" : "COMPANY.TYPE"
+    }, {
+      "LOCAL.TABLE.NO" : "CONSENT.TYPE"
+    }, {
+      "LOCAL.TABLE.NO" : "CONSENT.CHANNEL"
+    }, {
+      "LOCAL.TABLE.NO" : "PROFIT.INDICATOR"
+    }, {
+      "LOCAL.TABLE.NO" : "BUSINESS.ACTIVITY"
+    }, {
+      "LOCAL.TABLE.NO" : "FATHER.SURNAME"
+    }, {
+      "LOCAL.TABLE.NO" : "MOTHER.SURNAME"
+    }, {
+      "LOCAL.TABLE.NO" : "CNBV.SECTOR"
+    }, {
+      "LOCAL.TABLE.NO" : "SCIAN.CODE"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.FIRMA.ELECT"
+    }, {
+      "LOCAL.TABLE.NO" : "IUB"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.NOMBRE.CONY"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.REGIMEN"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.ESTUDIOS"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.DOM.ANOS"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.DIR.CALLE.A"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.NUM.EXT.ANT"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.NUM.INT.ANT"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.COD.POS.ANT"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.COLONIA.ANT"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.DEL.MUN.ANT"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.CD.EDO.ANT"
+    }, {
+      "LOCAL.TABLE.NO" : "ABC.PAIS.ANT"
+    }, {
+      "LOCAL.TABLE.NO" : "L.CONTACT.NAMES",
+      "SUB.ASSOC.CODE" : "XX<"
+    }, {
+      "LOCAL.TABLE.NO" : "L.CONTACT.POS",
+      "SUB.ASSOC.CODE" : "XX>"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMAIL.SMS.NOTIF"
+    }, {
+      "LOCAL.TABLE.NO" : "L.STAFF.OFFICIAL"
+    }, {
+      "LOCAL.TABLE.NO" : "L.ABC.NO.EMPL"
+    }, {
+      "LOCAL.TABLE.NO" : "L.LOCALIDAD"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.CALLE"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.NUM.EXT"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.NUM.INT"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.COD.POS"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.COL"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.DEL.MUNI"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.CIUDAD"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.ENTIDAD"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.PAIS"
+    }, {
+      "LOCAL.TABLE.NO" : "L.TIPO.EMP.OTRO"
+    }, {
+      "LOCAL.TABLE.NO" : "L.ESP.SUB.SECTOR"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EMP.PUESTO"
+    }, {
+      "LOCAL.TABLE.NO" : "L.REG.FISCAL"
+    }, {
+      "LOCAL.TABLE.NO" : "L.REF.B.ANT.A"
+    }, {
+      "LOCAL.TABLE.NO" : "L.TIPO.REL.GARANT"
+    }, {
+      "LOCAL.TABLE.NO" : "L.REL.PART.ECO"
+    }, {
+      "LOCAL.TABLE.NO" : "L.TIP.IPAB.GARAN"
+    }, {
+      "LOCAL.TABLE.NO" : "L.PLD.FUN.PUB"
+    }, {
+      "LOCAL.TABLE.NO" : "L.PUESTO.ULT.ANIO"
+    }, {
+      "LOCAL.TABLE.NO" : "L.REL.PERSONA.EXP"
+    }, {
+      "LOCAL.TABLE.NO" : "L.NOM.PER.POL.EXP"
+    }, {
+      "LOCAL.TABLE.NO" : "L.TIPO.PER.POL.EX"
+    }, {
+      "LOCAL.TABLE.NO" : "L.CDNIA.RESID.EUA"
+    }, {
+      "LOCAL.TABLE.NO" : "L.DATOS.MERC"
+    }, {
+      "LOCAL.TABLE.NO" : "L.AUTO.BURO.CRED"
+    }, {
+      "LOCAL.TABLE.NO" : "L.VIG.BURO.CRED"
+    }, {
+      "LOCAL.TABLE.NO" : "L.FOLIO.CON.BURO"
+    }, {
+      "LOCAL.TABLE.NO" : "L.EXPEDIENTE.DIGITAL"
+    }, {
+      "LOCAL.TABLE.NO" : "L.CANAL"
+    }, {
+      "LOCAL.TABLE.NO" : "SUBE.NVL.DIG"
+    }, {
+      "LOCAL.TABLE.NO" : "L.USO.CFDI"
+    }, {
+      "LOCAL.TABLE.NO" : "L.DOM.FISC"
+    }, {
+      "LOCAL.TABLE.NO" : "L.GROUP.CLASSIFIC"
+    }, {
+      "LOCAL.TABLE.NO" : "APE.PAT.FISCAL"
+    }, {
+      "LOCAL.TABLE.NO" : "APE.MAT.FISCAL"
+    }, {
+      "LOCAL.TABLE.NO" : "NOMBRES.FISCAL"
+    }, {
+      "LOCAL.TABLE.NO" : "DENOM.SO.FISCAL",
+      "SUB.ASSOC.CODE" : "XX."
+    }, {
+      "LOCAL.TABLE.NO" : "L.SECTOR.ECO"
+    }, {
+      "LOCAL.TABLE.NO" : "L.REL.NOMBRE",
+      "SUB.ASSOC.CODE" : "XX<"
+    }, {
+      "LOCAL.TABLE.NO" : "L.REL.TIPO.REL",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "LOCAL.TABLE.NO" : "L.REL.PART.ECON",
+      "SUB.ASSOC.CODE" : "XX>"
+    }, {
+      "LOCAL.TABLE.NO" : "L.NOM.ACCIONIST",
+      "SUB.ASSOC.CODE" : "XX<"
+    }, {
+      "LOCAL.TABLE.NO" : "L.NAC.ACCIONIST",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "LOCAL.TABLE.NO" : "L.RES.ACCIONIST",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "LOCAL.TABLE.NO" : "L.RFC.ACCIONIST",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "LOCAL.TABLE.NO" : "L.ACC.PORCENTAJ",
+      "SUB.ASSOC.CODE" : "XX>"
+    }, {
+      "LOCAL.TABLE.NO" : "L.NOM.PER.MORAL"
+    }, {
+      "LOCAL.TABLE.NO" : "L.GIRO.MERC"
+    }, {
+      "LOCAL.TABLE.NO" : "L.TIPO.IND"
+    }, {
+      "LOCAL.TABLE.NO" : "L.GPO.FINANCIER"
+    }, {
+      "LOCAL.TABLE.NO" : "L.SUBE.NVL.DIG"
+    } ]
+  }
+}
