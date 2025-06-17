@@ -1,0 +1,136 @@
+{
+  "header" : {
+    "id" : "ENQ.ABC.CODI.DIR",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "Codigo Postal"
+      } ],
+      "SELECTION.FLDS" : "CODIGO.POSTAL",
+      "SEL.FLD.OPER" : "EQ"
+    }, {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "Colonia"
+      } ],
+      "SELECTION.FLDS" : "COLONIA",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "10000L",
+      "SINGLE.MULTI" : "S",
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,1,1"
+      } ],
+      "FIELD.NAME" : "RESPUESTA",
+      "LENGTH.MASK" : "5L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "RESPUESTA"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,2,1"
+      } ],
+      "FIELD.NAME" : "ID.COLONIA",
+      "LENGTH.MASK" : "20L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ID.COLONIA"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,3,1"
+      } ],
+      "FIELD.NAME" : "ID.ESTADO",
+      "LENGTH.MASK" : "10L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "15",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ID.ESTADO"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,4,1"
+      } ],
+      "FIELD.NAME" : "ID.CIUDAD",
+      "LENGTH.MASK" : "10L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "20",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ID.CIUDAD"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,5,1"
+      } ],
+      "FIELD.NAME" : "ID.MUNICIPIO",
+      "LENGTH.MASK" : "10L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "25",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ID.MUNICIPIO"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,6,1"
+      } ],
+      "FIELD.NAME" : "ID.PAIS",
+      "LENGTH.MASK" : "10L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "30",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ID.PAIS"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,7,1"
+      } ],
+      "FIELD.NAME" : "ERROR",
+      "LENGTH.MASK" : "100L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "35",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ERROR"
+      } ]
+    } ],
+    "FILE.NAME" : "NOFILE.ABC.CODI.DIR"
+  }
+}

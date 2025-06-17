@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "L.EXPEDIENTE.DIGITAL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EXPEDIENTE.DIGI"
+    }, {
+      "SHORT.NAME" : "EXPEDIENTE.DIGI"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "NO",
+      "REMARK" : [ {
+        "REMARK" : "NO"
+      }, {
+        "REMARK" : "SI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "SI",
+      "REMARK" : [ {
+        "REMARK" : "SI"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EXPEDIENTE DIGITAL"
+    }, {
+      "DESCRIPTION" : "EXPEDIENTE DIGITAL"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

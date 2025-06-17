@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.EMAIL.DOM.TERR",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "ABC.EMAIL.DOM.TERR"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "H"
+  }
+}

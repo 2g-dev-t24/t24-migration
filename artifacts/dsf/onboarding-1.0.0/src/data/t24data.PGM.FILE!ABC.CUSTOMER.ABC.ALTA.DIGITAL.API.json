@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.CUSTOMER.ABC.ALTA.DIGITAL.API",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "Tabla para Api de Customer Alta Digital"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "H"
+  }
+}

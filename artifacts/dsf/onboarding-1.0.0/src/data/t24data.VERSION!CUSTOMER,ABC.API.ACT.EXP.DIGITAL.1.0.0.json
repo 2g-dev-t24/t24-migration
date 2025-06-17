@@ -1,0 +1,48 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.API.ACT.EXP.DIGITAL.1.0.0",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "EXPEDIENTE.DIGI",
+      "AUT.NEW.CONTENT" : "SI"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "EXPEDIENTE.DIGI",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "expedienteDigital"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-45-"
+      } ],
+      "TABLE.LINE" : "0"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "EXPEDIENTE.DIGI"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "actualizaciónDeExpedienteDigital"
+    } ],
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "EXPEDIENTE.DIGI"
+    } ]
+  }
+}

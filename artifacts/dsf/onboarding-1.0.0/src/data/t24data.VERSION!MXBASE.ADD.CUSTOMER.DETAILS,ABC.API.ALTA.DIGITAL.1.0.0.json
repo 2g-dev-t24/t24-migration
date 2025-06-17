@@ -1,0 +1,63 @@
+{
+  "header" : {
+    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.API.ALTA.DIGITAL.1.0.0",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "BORROWER.TYPE",
+      "AUT.NEW.CONTENT" : "99"
+    }, {
+      "AUTOM.FIELD.NO" : "TYPE",
+      "AUT.NEW.CONTENT" : "Cheques,Efectivos,Trasferencia"
+    }, {
+      "AUTOM.FIELD.NO" : "TYPE.OF.OPERATION-1",
+      "AUT.NEW.CONTENT" : "Cheques,Efectivos,Trasferencia"
+    }, {
+      "AUTOM.FIELD.NO" : "SOURCE.REC",
+      "AUT.NEW.CONTENT" : "Sueldos"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "SAT.TAX.REGIME",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Régimen Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "BANXICO.ECO.ACTIVITY",
+      "COLUMN" : "2",
+      "TEXT" : [ {
+        "TEXT" : "Actividad Económica"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "2-73-"
+      } ],
+      "TABLE.LINE" : "1"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Alta Digital"
+    } ]
+  }
+}

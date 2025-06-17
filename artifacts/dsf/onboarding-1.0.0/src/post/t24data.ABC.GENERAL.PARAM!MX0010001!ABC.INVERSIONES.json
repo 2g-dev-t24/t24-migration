@@ -1,0 +1,32 @@
+{
+  "header" : {
+    "id" : "ABC.INVERSIONES",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "6605",
+      "COMENTARIO" : "21004",
+      "DATO.PARAMETRO" : "21004"
+    }, {
+      "NOMB.PARAMETRO" : "6606",
+      "COMENTARIO" : "21003",
+      "DATO.PARAMETRO" : "21003"
+    }, {
+      "NOMB.PARAMETRO" : "6608",
+      "COMENTARIO" : "21005",
+      "DATO.PARAMETRO" : "21005"
+    }, {
+      "NOMB.PARAMETRO" : "6607",
+      "COMENTARIO" : "21005",
+      "DATO.PARAMETRO" : "21005"
+    } ],
+    "MODULO" : "AA INVERSIONES"
+  }
+}

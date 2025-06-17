@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "L.CANAL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.CANAL"
+    }, {
+      "SHORT.NAME" : "L.CANAL"
+    } ],
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "CANAL ORIGINAL DE CAPTACION"
+    } ],
+    "APPLICATION.VET" : "ABC.CANAL",
+    "APPL.ENRICHM.FIELD" : "1",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

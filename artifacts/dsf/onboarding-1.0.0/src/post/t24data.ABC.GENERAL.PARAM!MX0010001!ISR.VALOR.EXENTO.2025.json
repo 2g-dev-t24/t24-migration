@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "ISR.VALOR.EXENTO.2025",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "VALOR",
+      "COMENTARIO" : "Valor exento",
+      "DATO.PARAMETRO" : "206367.6"
+    } ],
+    "MODULO" : "Parametrizacion del valor exento de retencion ISR por anio"
+  }
+}

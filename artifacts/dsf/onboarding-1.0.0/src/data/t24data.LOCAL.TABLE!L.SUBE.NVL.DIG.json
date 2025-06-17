@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "L.SUBE.NVL.DIG",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.SUBE.NVL.DIG"
+    }, {
+      "SHORT.NAME" : "L.SUBE.NVL.DIG"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "S",
+      "REMARK" : [ {
+        "REMARK" : "SI"
+      }, {
+        "REMARK" : "SI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "N",
+      "REMARK" : [ {
+        "REMARK" : "NO"
+      }, {
+        "REMARK" : "NO"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "SUBE.NIVEL.DIGITAL"
+    }, {
+      "DESCRIPTION" : "SUBE.NIVEL.DIGITAL"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}
