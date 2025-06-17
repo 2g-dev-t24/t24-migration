@@ -1,0 +1,153 @@
+{
+  "header" : {
+    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.REFERENCIAS",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "BANK.REFERENCE-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nombre Banco"
+      } ],
+      "TEXT.CHAR.MAX" : "12",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-50-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "ACCOUNT.TYPE-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Cuenta"
+      } ],
+      "TEXT.CHAR.MAX" : "14",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-52-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "ACCOUNT.NUMBER-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Numero de Cuenta"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-35-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "NUMBER.OF.EMPLOYEES",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Antiguedad en anos"
+      } ],
+      "TEXT.CHAR.MAX" : "18",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-25-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "*Referencias Personales"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "REFERRAL.LAST.NAME-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Paterno"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "REFERRAL.MOTHER.MAIDEN.NAME-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Materno"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "REFERRAL.FIRST.NAME-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Primer Nombre"
+      } ],
+      "TEXT.CHAR.MAX" : "13",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-51-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "REFERRAL.SECOND.NAME-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Segundo Nombre"
+      } ],
+      "TEXT.CHAR.MAX" : "14",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-52-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "REFERRAL.TELEPHONE.NUMBER-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Telefono"
+      } ],
+      "TEXT.CHAR.MAX" : "8",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-22-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "REFERRAL.EMAIL-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Domicilio"
+      } ],
+      "TEXT.CHAR.MAX" : "9",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-47-"
+      } ],
+      "TABLE.LINE" : "9"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Referencias Personales - Bancarias"
+    }, {
+      "DESCRIPTION" : "Referencias Personales - Bancarias"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "GTS.CONTROL" : "1",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Referencias"
+    } ]
+  }
+}

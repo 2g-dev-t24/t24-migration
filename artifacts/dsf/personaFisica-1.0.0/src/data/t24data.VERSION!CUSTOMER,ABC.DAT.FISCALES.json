@@ -1,0 +1,51 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.DAT.FISCALES",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "L.DOM.FISC",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "CP Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "9",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-17-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "L.USO.CFDI",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Uso de CFDI"
+      } ],
+      "TEXT.CHAR.MAX" : "11",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-49-"
+      } ],
+      "TABLE.LINE" : "1"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Datos Fiscales"
+    }, {
+      "DESCRIPTION" : "Datos Fiscales"
+    } ],
+    "NO.OF.AUTH" : "1",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1"
+  }
+}

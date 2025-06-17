@@ -1,0 +1,251 @@
+{
+  "header" : {
+    "id" : "ABC.BIOMETRICOS,REGISTRO",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "NOMBRE",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Nombre"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-109-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "APP",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Apellido paterno"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-109-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "APM",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Apellido materno"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-109-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "CURP",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "CURP"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-92-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "ID.IDENTIFICACION",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "ID de identificación"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-104-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "FECHA.EMISION",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de emisión"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-82-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "FECHA.VENCIMIENTO",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de vencimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-82-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "CELULAR",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Celular"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "ENRI.COL" : "35",
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "EMAIL",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "E-mail"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-124-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "LATITUD",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Latitud"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-94-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "LONGITUD",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Longitud"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-94-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "CIC",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "CIC"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-94-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "OCR",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "OCR"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-94-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "CUC",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "CUC"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-84-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "EJECUTIVO",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Ejecutivo"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "ENRI.COL" : "35",
+      "TABLE.LINE" : "14"
+    }, {
+      "FIELD.NO" : "TIPO.ENROLAMIENTO",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo enrolamiento"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "ENRI.COL" : "35",
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "FOLIO.VALIDACION",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Folio validacion"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-110-"
+      } ],
+      "TABLE.LINE" : "16"
+    }, {
+      "FIELD.NO" : "VERIFICADO",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Verificado"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "17"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "ABC.LLENA.IUB.CUS.USER"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Registro Biometricos"
+    }, {
+      "DESCRIPTION" : "Registro Biometricos"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "TIPO.ENROLAMIENTO"
+    }, {
+      "NOINPUT.FIELD" : "VERIFICADO"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1"
+  }
+}

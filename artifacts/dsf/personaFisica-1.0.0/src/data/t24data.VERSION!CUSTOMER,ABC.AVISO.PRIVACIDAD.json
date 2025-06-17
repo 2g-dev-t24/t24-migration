@@ -1,0 +1,77 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.AVISO.PRIVACIDAD",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "L.DATOS.MERC",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Autorizo el Tratamiento de Mis Datos"
+      } ],
+      "TEXT.CHAR.MAX" : "36",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-41-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "AUTO.BURO.CRED",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Autorización Consulta de Buró Crédito"
+      } ],
+      "TEXT.CHAR.MAX" : "37",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-42-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "L.VIG.BURO.CRED",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Vigencia de Buró de Crédito"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "FOLIO.CON.BURO",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Folio de Consulta de Buró de Crédito"
+      } ],
+      "TEXT.CHAR.MAX" : "36",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-46-"
+      } ],
+      "TABLE.LINE" : "3"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Aviso de Privacidad"
+    }, {
+      "DESCRIPTION" : "Aviso de Privacidad"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "GTS.CONTROL" : "1",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Aviso de Privacidad"
+    } ]
+  }
+}

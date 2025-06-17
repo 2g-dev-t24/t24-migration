@@ -1,0 +1,34 @@
+{
+  "header" : {
+    "id" : "ABC.CUSTOMER.AUTH.PF",
+    "dsfApiType" : "EB.COMPOSITE.SCREEN",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TITLE" : [ {
+      "TITLE" : "Autoriza Clientes Fisico"
+    }, {
+      "TITLE" : "Activate Customer"
+    } ],
+    "CONTENT.TYPE" : [ {
+      "BORDER.SIZE" : "0",
+      "CONTENT.TYPE" : "OPEN.FRAME",
+      "COLS" : "50%,*"
+    }, {
+      "CONTENT.TYPE" : "TXN",
+      "CONTENT" : "CUSTOMER,ABC.FISICA.AUTORIZA I !CURRENT.ID",
+      "NAME" : "AutorizaCustomer"
+    }, {
+      "CONTENT.TYPE" : "TXN",
+      "CONTENT" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.CONOCE.CLIENTE A !CURRENT.ID",
+      "NAME" : "AutorizaInfoAdd"
+    }, {
+      "CONTENT.TYPE" : "CLOSE.FRAME"
+    } ]
+  }
+}

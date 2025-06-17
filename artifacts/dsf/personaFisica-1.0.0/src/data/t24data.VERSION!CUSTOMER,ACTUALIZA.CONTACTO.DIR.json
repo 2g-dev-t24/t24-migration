@@ -1,0 +1,329 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ACTUALIZA.CONTACTO.DIR",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "ABC.CUS.VALIDA.GENERICO"
+    }, {
+      "INPUT.ROUTINE" : "VPM.NUM.CLIENTE.UNICO.CHK"
+    } ],
+    "AUTH.ROUTINE" : [ {
+      "AUTH.ROUTINE" : "ABC.ENV.EMAIL.ACT.CONTACTO"
+    }, {
+      "AUTH.ROUTINE" : "ABC.ACTUALIZA.CEL.ACCT.ALT"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "CHECK.REC.RTN" : [ {
+      "CHECK.REC.RTN" : "ABC.CUS.VALIDA.GENERICO"
+    } ],
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "ADDRESS.COUNTRY",
+      "AUT.NEW.CONTENT" : "MX"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "*",
+      "TEXT" : [ {
+        "TEXT" : "Datos generales:"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "*",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "SHORT.NAME-1",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Paterno"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-125-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "NAME.1-1",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Materno"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-125-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "NAME.2-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nombre(s)"
+      } ],
+      "TEXT.CHAR.MAX" : "9",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-82-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "EMAIL.1-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Correo"
+      } ],
+      "TEXT.CHAR.MAX" : "6",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-95-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "SMS.1-1",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Celular"
+      } ],
+      "TEXT.CHAR.MAX" : "7",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-63-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "*",
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "*",
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "*",
+      "TEXT" : [ {
+        "TEXT" : "Datos de domicilio:"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "*",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "STREET-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Calle"
+      } ],
+      "TEXT.CHAR.MAX" : "5",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-114-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "BUILDING.NUMBER",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Número Exterior"
+      } ],
+      "TEXT.CHAR.MAX" : "15",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-70-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "FLAT.NUMBER",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Número Interior"
+      } ],
+      "TEXT.CHAR.MAX" : "15",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-124-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "POST.CODE-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Código Postal"
+      } ],
+      "TEXT.CHAR.MAX" : "13",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-87-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "FIELD.NO" : "SUB.DEPARTMENT",
+      "ENQ.SELECTION" : "CODIGO.POSTAL EQ POST.CODE",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "E.ABC.NOF.GET.COLONIA",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Colonia"
+      } ],
+      "TEXT.CHAR.MAX" : "7",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-116-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "DEPARTMENT",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Delegación o Municipio"
+      } ],
+      "TEXT.CHAR.MAX" : "22",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-131-"
+      } ],
+      "TABLE.LINE" : "16"
+    }, {
+      "FIELD.NO" : "TOWN.COUNTRY-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Ciudad"
+      } ],
+      "TEXT.CHAR.MAX" : "6",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-80-"
+      } ],
+      "TABLE.LINE" : "17"
+    }, {
+      "FIELD.NO" : "COUNTRY.SUBDIVISION",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Estado"
+      } ],
+      "TEXT.CHAR.MAX" : "6",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-80-"
+      } ],
+      "TABLE.LINE" : "18"
+    }, {
+      "FIELD.NO" : "ADDRESS.COUNTRY",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Pais"
+      } ],
+      "TEXT.CHAR.MAX" : "4",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-9-"
+      } ],
+      "TABLE.LINE" : "19"
+    }, {
+      "FIELD.NO" : "L.LOCALIDAD",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Localidad Banxico"
+      } ],
+      "TEXT.CHAR.MAX" : "17",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-91-"
+      } ],
+      "TABLE.LINE" : "20"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Actualizacion Contacto Dir"
+    }, {
+      "DESCRIPTION" : "Actualizacion Contacto Dir"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "SHORT.NAME"
+    }, {
+      "NOINPUT.FIELD" : "NAME.1"
+    }, {
+      "NOINPUT.FIELD" : "NAME.2"
+    }, {
+      "NOINPUT.FIELD" : "DEPARTMENT"
+    }, {
+      "NOINPUT.FIELD" : "COUNTRY.SUBDIVISION"
+    }, {
+      "NOINPUT.FIELD" : "ADDRESS.COUNTRY"
+    }, {
+      "NOINPUT.FIELD" : "TOWN.COUNTRY"
+    }, {
+      "NOINPUT.FIELD" : "L.LOCALIDAD"
+    } ],
+    "MULTI.POSSIBLE" : "Y",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Actualiza Datos domicilio"
+    } ],
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "EMAIL.1"
+    }, {
+      "MANDATORY.FIELD" : "SMS.1"
+    }, {
+      "MANDATORY.FIELD" : "STREET"
+    }, {
+      "MANDATORY.FIELD" : "POST.CODE"
+    }, {
+      "MANDATORY.FIELD" : "BUILDING.NUMBER"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.VALIDA.EMAIL",
+      "VALIDATION.FLD" : "EMAIL.1"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.LONG.CELULAR",
+      "VALIDATION.FLD" : "SMS.1"
+    }, {
+      "VALIDATION.RTN" : "ABC.GET.ADRESS.FISICA",
+      "VALIDATION.FLD" : "POST.CODE-1"
+    } ],
+    "ID.RTN" : [ {
+      "ID.RTN" : "ABC.CUST.NOEXISTE.PFS"
+    } ]
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.ACTUALIZA.CURP",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "ABC.VAL.TAX.ID"
+    } ],
+    "NO.OF.AUTH" : "1",
+    "RECORDS.PER.PAGE" : "1",
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "1"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "FIELD.NO" : [ {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "SHORT.NAME-1",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Paterno"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-149-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "NAME.1-1",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Materno"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-149-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "NAME.2-1",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Nombre(s)"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-149-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "DATE.OF.BIRTH",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Nacimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "COUNTRY-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "País de Nacimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "BIRTH.PROVINCE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Estado de la República de Nacimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-45-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "GENDER",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Sexo"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-53-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "EXTERN.CUS.ID-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "C.U.R.P."
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-93-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "IUB",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Identificador Unico Biometrico"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "8"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Actualizacion CURP"
+    }, {
+      "DESCRIPTION" : "&Actualizacion CURP"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "LOCAL.REF-2"
+    }, {
+      "NOINPUT.FIELD" : "SHORT.NAME"
+    }, {
+      "NOINPUT.FIELD" : "NAME.1"
+    }, {
+      "NOINPUT.FIELD" : "NAME.2"
+    }, {
+      "NOINPUT.FIELD" : "DATE.OF.BIRTH"
+    }, {
+      "NOINPUT.FIELD" : "OTHER.NATIONALITY"
+    }, {
+      "NOINPUT.FIELD" : "BIRTH.PROVINCE"
+    }, {
+      "NOINPUT.FIELD" : "GENDER"
+    }, {
+      "NOINPUT.FIELD" : "IUB"
+    } ],
+    "EXC.INC.RTN" : "YES",
+    "MULTI.POSSIBLE" : "Y",
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "EXTERN.CUS.ID"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "@V.ABC.GET.MNEMONIC",
+      "VALIDATION.FLD" : "DATE.OF.BIRTH"
+    }, {
+      "VALIDATION.RTN" : "ABC.VAL.FMT.CURP.CLIENTE",
+      "VALIDATION.FLD" : "EXTERN.CUS.ID"
+    }, {
+      "VALIDATION.RTN" : "@ABC.NUM.CLIENTE.UNICO",
+      "VALIDATION.FLD" : "GENDER"
+    } ],
+    "ID.RTN" : [ {
+      "ID.RTN" : "@ABC.VAL.TIPO.PERSONA"
+    }, {
+      "ID.RTN" : "@ABC.VALIDA.CLIENTE.EXISTENTE"
+    } ]
+  }
+}

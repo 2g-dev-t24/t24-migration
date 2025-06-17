@@ -1,0 +1,121 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.AUDIT",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "OVERRIDE-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Cancelar"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "RECORD.STATUS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Estado del registro"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-42-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "CURR.NO",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Numero actual"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-42-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "INPUTTER-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Ingreso"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "DATE.TIME-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha y hora"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-53-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "AUTHORISER",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Autorizador"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-58-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "CO.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Codigo de la compania"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-49-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "DEPT.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Codigo del departamento"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-42-"
+      } ],
+      "TABLE.LINE" : "7"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Auditoria"
+    }, {
+      "DESCRIPTION" : "Auditoria"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.040..078" : "&Auditoria",
+      "HDR.1.001..039" : "Auditoria"
+    } ]
+  }
+}

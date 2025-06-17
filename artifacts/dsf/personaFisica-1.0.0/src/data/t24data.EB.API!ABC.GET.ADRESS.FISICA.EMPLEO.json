@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "ABC.GET.ADRESS.FISICA.EMPLEO",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.GET.ADRESS.FISICA.EMPLEO"
+    }, {
+      "DESCRIPTION" : "ABC.GET.ADRESS.FISICA.EMPLEO"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

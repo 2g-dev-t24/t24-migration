@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.LLENA.IUB.CUS.USER",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "ABC.LLENA.IUB.CUS.USER"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

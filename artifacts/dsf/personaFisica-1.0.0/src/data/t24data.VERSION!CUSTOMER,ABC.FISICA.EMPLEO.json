@@ -1,0 +1,348 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.FISICA.EMPLEO",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "EMP.PAIS",
+      "AUT.NEW.CONTENT" : "MX"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "EMPLOYMENT.STATUS-1",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "25",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Empleo"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-99-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "OCCUPATION-1",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.OCUPACION",
+      "ENRICHM.CHAR" : "40",
+      "TEXT" : [ {
+        "TEXT" : "Ocupacion"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-114-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "EMPLOYERS.NAME-1",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "25",
+      "TEXT" : [ {
+        "TEXT" : "Nombre de la Empresa"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-214-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "EMPLOYERS.ADD-1.1",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "40",
+      "TEXT" : [ {
+        "TEXT" : "Domicilio Empresa"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-229-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "EMPLOYERS.BUSS-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nombre de su Jefe"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-188-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "EMPLOYMENT.START-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Ingreso"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-49-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "SALARY-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Salario Mensual Bruto"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-57-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "ANNUAL.BONUS-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Otros Ingresos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-57-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "TIPO.EMP.OTRO",
+      "COLUMN" : "112",
+      "TEXT" : [ {
+        "TEXT" : "Especifique Otro Tipo de Empleo"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-69-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "ESP.SUB.SECTOR",
+      "COLUMN" : "112",
+      "TEXT" : [ {
+        "TEXT" : "Especifique Otra Ocupación"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-88-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "NET.MONTHLY.IN",
+      "COLUMN" : "112",
+      "TEXT" : [ {
+        "TEXT" : "Total Ingresos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-57-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "EMP.PUESTO",
+      "COLUMN" : "112",
+      "TEXT" : [ {
+        "TEXT" : "Puesto que Desempeña"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-59-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "L.SECTOR.ECO",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.SECTOR.ECONOMICO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Sector Giro Económico"
+      } ],
+      "TEXT.CHAR.MAX" : "21",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-65-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "INDUSTRY",
+      "ENQ.SELECTION" : "INDUSTRY.CODE EQ L.SECTOR.ECO",
+      "COLUMN" : "112",
+      "DROP.DOWN" : "ABC.NOF.GET.INDUSTRY",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Industria"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-48-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "CNBV.SECTOR",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Sector CNBV"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-44-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "STAFF.OFFICIAL",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Empleado de UALA"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-39-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "EMP.CALLE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Calle"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-63-"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "FIELD.NO" : "EMP.NUM.EXT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Num. Ext."
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-44-"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "EMP.NUM.INT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Num. Int"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-44-"
+      } ],
+      "TABLE.LINE" : "16"
+    }, {
+      "FIELD.NO" : "EMP.COD.POS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Código Postal"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "17"
+    }, {
+      "FIELD.NO" : "EMP.COL",
+      "ENQ.SELECTION" : "CODIGO.POSTAL EQ EMP.COD.POS",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "E.ABC.NOF.GET.COLONIA",
+      "TEXT" : [ {
+        "TEXT" : "Colonia"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-53-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "18"
+    }, {
+      "FIELD.NO" : "EMP.DEL.MUNI",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Delegación Municipio"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "19"
+    }, {
+      "FIELD.NO" : "EMP.CIUDAD",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Ciudad"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-42-"
+      } ],
+      "TABLE.LINE" : "20"
+    }, {
+      "FIELD.NO" : "EMP.ENTIDAD",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Estado"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-40-"
+      } ],
+      "TABLE.LINE" : "21"
+    }, {
+      "FIELD.NO" : "EMP.PAIS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "País"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-47-"
+      } ],
+      "TABLE.LINE" : "22"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Detalle Empleo"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "EMP.DEL.MUNI"
+    }, {
+      "NOINPUT.FIELD" : "EMP.CIUDAD"
+    }, {
+      "NOINPUT.FIELD" : "EMP.ENTIDAD"
+    }, {
+      "NOINPUT.FIELD" : "EMP.PAIS"
+    } ],
+    "MULTI.POSSIBLE" : "Y",
+    "GTS.CONTROL" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Detalle Empleo"
+    } ]
+  }
+}

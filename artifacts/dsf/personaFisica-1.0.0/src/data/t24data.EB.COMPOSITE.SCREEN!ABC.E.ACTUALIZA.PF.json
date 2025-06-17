@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "ABC.E.ACTUALIZA.PF",
+    "dsfApiType" : "EB.COMPOSITE.SCREEN",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TITLE" : [ {
+      "TITLE" : "Actualiza Clientes Fisico"
+    }, {
+      "TITLE" : "Actualiza Clientes Fisico"
+    } ],
+    "CONTENT.TYPE" : [ {
+      "BORDER.SIZE" : "0",
+      "CONTENT.TYPE" : "OPEN.FRAME",
+      "ROWS" : "45%,*"
+    }, {
+      "CONTENT.TYPE" : "ENQ",
+      "CONTENT" : "ABC.E.ACTUALIZA.PF NONE",
+      "ITEMS" : [ {
+        "ITEMS" : "ENQ"
+      } ],
+      "NAME" : "Autoriza"
+    }, {
+      "CONTENT.TYPE" : "BLANK",
+      "ITEMS" : [ {
+        "ITEMS" : "ALL"
+      } ],
+      "NAME" : "Blank"
+    }, {
+      "CONTENT.TYPE" : "CLOSE.FRAME"
+    } ]
+  }
+}

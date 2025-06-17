@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "V.ABC.CUS.DOM.ANOS.CHK",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "V.ABC.CUS.DOM.ANOS.CHK"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

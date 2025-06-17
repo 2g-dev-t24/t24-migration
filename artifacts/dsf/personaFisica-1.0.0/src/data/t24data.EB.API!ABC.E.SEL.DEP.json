@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "ABC.E.SEL.DEP",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

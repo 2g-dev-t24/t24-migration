@@ -1,0 +1,422 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.FISICA.AUTORIZA",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "ABC.VERIFICA.FOLIO.BIOMETRICO"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "CHECK.REC.RTN" : [ {
+      "CHECK.REC.RTN" : "ABC.CHECK.CAMPOS.LOCALES"
+    } ],
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "SECTOR",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo Cliente"
+      } ],
+      "TEXT.CHAR.MAX" : "25",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-38-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "CUSTOMER.STATUS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Estatus del Cliente"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-26-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "CUSTOMER.TYPE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo"
+      } ],
+      "TEXT.CHAR.MAX" : "5",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "BIRTH.INCORP.DATE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Alta del Cliente"
+      } ],
+      "TEXT.CHAR.MAX" : "25",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-39-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "SHORT.NAME-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Paterno"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-89-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "NAME.1-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Materno"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-89-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "NAME.2-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Nombres"
+      } ],
+      "TEXT.CHAR.MAX" : "7",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-80-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "DATE.OF.BIRTH",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Nacimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-33-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "COUNTRY-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Pais de Nacimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "18",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-56-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "BIRTH.PROVINCE",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "MXBASE.BIRTH.PROVINCE",
+      "TEXT" : [ {
+        "TEXT" : "Estado de la Republica de Nacimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "36",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-41-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "NATIONALITY",
+      "COLUMN" : "24",
+      "TEXT" : [ {
+        "TEXT" : "Nacionalidad"
+      } ],
+      "TEXT.CHAR.MAX" : "17",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "24-22-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "RESIDENCE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Pais de Residencia"
+      } ],
+      "TEXT.CHAR.MAX" : "18",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-23-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "GENDER",
+      "TEXT" : [ {
+        "TEXT" : "Sexo"
+      } ],
+      "TEXT.CHAR.MAX" : "4",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "24-17-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "EXTERN.CUS.ID-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "CURP"
+      } ],
+      "TEXT.CHAR.MAX" : "4",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-57-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "TAX.ID-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "R.F.C"
+      } ],
+      "TEXT.CHAR.MAX" : "5",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "IUB",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Identificador Unico Biometrico"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-44-"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "FIELD.NO" : "ABC.FIRMA.ELECT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tiene firma Electronica Avanzada?"
+      } ],
+      "TEXT.CHAR.MAX" : "33",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-38-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "TEXT-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Codigo de la Firma (FIEL)"
+      } ],
+      "TEXT.CHAR.MAX" : "25",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-63-"
+      } ],
+      "TABLE.LINE" : "16"
+    }, {
+      "FIELD.NO" : "MARITAL.STATUS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Estado Civil"
+      } ],
+      "TEXT.CHAR.MAX" : "12",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-50-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "17"
+    }, {
+      "FIELD.NO" : "ABC.NOMBRE.CONY",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Nombre del Conyuge"
+      } ],
+      "TEXT.CHAR.MAX" : "18",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-86-"
+      } ],
+      "TABLE.LINE" : "18"
+    }, {
+      "FIELD.NO" : "ABC.REGIMEN",
+      "COLUMN" : "24",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Regimen Matrimonial"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "24-24-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "19"
+    }, {
+      "FIELD.NO" : "ABC.ESTUDIOS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Grado Maximo de Estudios"
+      } ],
+      "TEXT.CHAR.MAX" : "24",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-62-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "20"
+    }, {
+      "FIELD.NO" : "JOB.TITLE-1",
+      "COLUMN" : "24",
+      "TEXT" : [ {
+        "TEXT" : "Profesion"
+      } ],
+      "TEXT.CHAR.MAX" : "9",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "24-22-"
+      } ],
+      "TABLE.LINE" : "21"
+    }, {
+      "FIELD.NO" : "ACCOUNT.OFFICER",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Promotor"
+      } ],
+      "TEXT.CHAR.MAX" : "8",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-15-"
+      } ],
+      "TABLE.LINE" : "22"
+    }, {
+      "FIELD.NO" : "OTHER.OFFICER-1",
+      "COLUMN" : "24",
+      "TEXT" : [ {
+        "TEXT" : "Promotor de Credito"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "24-26-"
+      } ],
+      "TABLE.LINE" : "22"
+    }, {
+      "FIELD.NO" : "ITF.TAX.EXEMPT",
+      "COLUMN" : "24",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Exento de Impuestos"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "24-25-"
+      } ],
+      "TABLE.LINE" : "23"
+    } ],
+    "ASSOC.VERSION" : [ {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.AUDIT"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Autoriza Cliente Fisico"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "MNEMONIC"
+    }, {
+      "NOINPUT.FIELD" : "BIRTH.INCORP.DATE"
+    }, {
+      "NOINPUT.FIELD" : "SECTOR"
+    }, {
+      "NOINPUT.FIELD" : "FLOOR"
+    }, {
+      "NOINPUT.FIELD" : "CUSTOMER.STATUS"
+    }, {
+      "NOINPUT.FIELD" : "JOB.TITLE"
+    }, {
+      "NOINPUT.FIELD" : "RISK.LEVEL"
+    }, {
+      "NOINPUT.FIELD" : "ITF.TAX.EXEMPT"
+    }, {
+      "NOINPUT.FIELD" : "IUB"
+    }, {
+      "NOINPUT.FIELD" : "DEPARTMENT"
+    }, {
+      "NOINPUT.FIELD" : "COUNTRY.SUBDIVISION"
+    }, {
+      "NOINPUT.FIELD" : "SHORT.NAME"
+    }, {
+      "NOINPUT.FIELD" : "NAME.1"
+    }, {
+      "NOINPUT.FIELD" : "NAME.2"
+    }, {
+      "NOINPUT.FIELD" : "DATE.OF.BIRTH"
+    }, {
+      "NOINPUT.FIELD" : "COUNTRY"
+    }, {
+      "NOINPUT.FIELD" : "BIRTH.PROVINCE"
+    }, {
+      "NOINPUT.FIELD" : "NATIONALITY"
+    }, {
+      "NOINPUT.FIELD" : "RESIDENCE"
+    }, {
+      "NOINPUT.FIELD" : "GENDER"
+    }, {
+      "NOINPUT.FIELD" : "EXTERN.CUS.ID"
+    }, {
+      "NOINPUT.FIELD" : "TAX.ID"
+    }, {
+      "NOINPUT.FIELD" : "ABC.FIRMA.ELECT"
+    }, {
+      "NOINPUT.FIELD" : "TEXT"
+    }, {
+      "NOINPUT.FIELD" : "MARITAL.STATUS"
+    }, {
+      "NOINPUT.FIELD" : "ABC.NOMBRE.CONY"
+    }, {
+      "NOINPUT.FIELD" : "ABC.REGIMEN"
+    }, {
+      "NOINPUT.FIELD" : "ABC.ESTUDIOS"
+    }, {
+      "NOINPUT.FIELD" : "ACCOUNT.OFFICER"
+    }, {
+      "NOINPUT.FIELD" : "OTHER.OFFICER"
+    } ],
+    "EXC.INC.RTN" : "YES",
+    "MULTI.POSSIBLE" : "Y",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Autoriza Cliente Fisico"
+    } ]
+  }
+}
