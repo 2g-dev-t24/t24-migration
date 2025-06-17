@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "10",
+    "dsfApiType" : "JOB.TITLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CIENCIAS POLITICAS Y ADMON. PUBLICA"
+    } ]
+  }
+}
