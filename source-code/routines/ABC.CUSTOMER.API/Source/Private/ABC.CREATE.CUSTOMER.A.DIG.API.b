@@ -108,7 +108,7 @@ MAP.MXBASE:
 *-----------------------------------------------------------------------------
     R.MAP.MXBASE = ''
     R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.SatTaxRegime>     = 'SAT.TAX.REGIME*':EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.regFiscal)
-    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.EconomicActivity> = 'BANXICO.ECO.ACTIVITY*':EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.actividadEcono)
+    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.BanxicoEcoActivity > = 'BANXICO.ECO.ACTIVITY*':EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.actividadEcono)
     
 
 RETURN
