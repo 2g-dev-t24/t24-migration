@@ -8,7 +8,10 @@ private method AbcGetAdressFisica ()
     jBC: ABC.GET.ADRESS.FISICA
 }
 
-
+private method AbcGetAdressFisicaDigital ()
+{
+    jBC: ABC.GET.ADRESS.FISICA.DIGITAL
+}
 private method AbcDireccionSepomex (INOUT YCodPost string, INOUT YCadSalida string)
 {
     jBC: ABC.DIRECCION.SEPOMEX
