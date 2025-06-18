@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNTQzMTUxOTA3OkNwMTI1MjoxNzUwMjgxOTU5NzYyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 18 Jun 2025 18:25:59
+* @ValidationCode : MjoxMjQ3ODE1NDM6Q3AxMjUyOjE3NTAyODU0MzM2OTM6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 18 Jun 2025 19:23:53
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -92,7 +92,7 @@ PROCESS:
 
     EB.SystemTables.setRNew(ST.Customer.Customer.EbCusCountrySubdivision,Y.ESTADO)
     EB.SystemTables.setRNew(ST.Customer.Customer.EbCusDepartment,Y.MUNICIPIO)
-    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusSubDepartment,Y.COLONIA)
+*   EB.SystemTables.setRNew(ST.Customer.Customer.EbCusSubDepartment,Y.COLONIA)
         
     Y.CUS.TOWN.COUNTRY = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusTownCountry)
         

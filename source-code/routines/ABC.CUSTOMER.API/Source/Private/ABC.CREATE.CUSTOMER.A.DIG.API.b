@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTc0MzExNDA0OTpDcDEyNTI6MTc1MDE5NjcwMzMwMDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 17 Jun 2025 18:45:03
+* @ValidationCode : MjotNTczNzAwMjgzOkNwMTI1MjoxNzUwMjg1NTkwMjkwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 18 Jun 2025 19:26:30
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -67,7 +67,7 @@ MAP.CUSTOMER:
     R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalExpDate)
     R.CUSTOMER<ST.Customer.Customer.EbCusTaxId>                 = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.taxId)
     R.CUSTOMER<ST.Customer.Customer.EbCusOccupation>            = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.occupation)
-    R.CUSTOMER<ST.Customer.Customer.EbCusOtherNationality>      = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.otherNationality)
+    R.CUSTOMER<ST.Customer.Customer.EbCusCountry>               = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.otherNationality)
     R.CUSTOMER<ST.Customer.Customer.EbCusNationality>           = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.nationality)
     R.CUSTOMER<ST.Customer.Customer.EbCusDistrictName>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.lugNac)
 
