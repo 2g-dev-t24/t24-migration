@@ -171,3 +171,9 @@ private method AbcCambioCategRemu (
 {
     jBC: ABC.CAMBIO.CATEG.REMU
 }
+
+private method StoChkPostRestr (
+)
+{
+    jBC: STO.CHK.POST.RESTR
+}
