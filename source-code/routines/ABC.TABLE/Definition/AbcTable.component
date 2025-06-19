@@ -588,3 +588,13 @@ private method AbcParametrosBanxico ()
 {
     jBC: ABC.PARAMETROS.BANXICO
 }
+
+private method AbcMotivoDevCecobanFields ()
+{
+    jBC: ABC.MOTIVO.DEV.CECOBAN.FIELDS
+}
+
+private method AbcMotivoDevCecoban ()
+{
+    jBC: ABC.MOTIVO.DEV.CECOBAN
+}
