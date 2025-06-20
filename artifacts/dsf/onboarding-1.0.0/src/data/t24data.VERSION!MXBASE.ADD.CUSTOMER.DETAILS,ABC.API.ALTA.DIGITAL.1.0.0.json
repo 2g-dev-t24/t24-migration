@@ -16,7 +16,7 @@
     "FIELDS.PER.LINE" : "MULTI",
     "AUTOM.FIELD.NO" : [ {
       "AUTOM.FIELD.NO" : "BORROWER.TYPE",
-      "AUT.NEW.CONTENT" : "99"
+      "AUT.NEW.CONTENT" : "8"
     }, {
       "AUTOM.FIELD.NO" : "TYPE",
       "AUT.NEW.CONTENT" : "Cheques,Efectivos,Trasferencia"

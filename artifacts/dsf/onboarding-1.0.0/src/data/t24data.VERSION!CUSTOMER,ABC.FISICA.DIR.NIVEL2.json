@@ -67,15 +67,10 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-61-"
       } ],
-      "ATTRIBS" : [ {
-        "ATTRIBS" : "HOT.FIELD"
-      } ],
       "TABLE.LINE" : "2"
     }, {
       "FIELD.NO" : "SUB.DEPARTMENT",
-      "ENQ.SELECTION" : "CODIGO.POSTAL EQ POST.CODE",
       "COLUMN" : "1",
-      "DROP.DOWN" : "E.ABC.NOF.GET.COLONIA",
       "ENRICHM.CHAR" : "3",
       "TEXT" : [ {
         "TEXT" : "Colonia"
@@ -83,9 +78,6 @@
       "TEXT.CHAR.MAX" : "23",
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-100-"
-      } ],
-      "ATTRIBS" : [ {
-        "ATTRIBS" : "HOT.FIELD"
       } ],
       "TABLE.LINE" : "3"
     }, {

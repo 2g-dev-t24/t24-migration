@@ -93,6 +93,12 @@
     }, {
       "AUTOM.FIELD.NO" : "L.TIP.IPAB.GARA",
       "AUT.NEW.CONTENT" : "SI"
+    }, {
+      "AUTOM.FIELD.NO" : "L.SECTOR.ECO",
+      "AUT.NEW.CONTENT" : "8100"
+    }, {
+      "AUTOM.FIELD.NO" : "CUSTOMER.TYPE",
+      "AUT.NEW.CONTENT" : "ACTIVE"
     } ],
     "FIELD.NO" : [ {
       "FIELD.NO" : "SECTOR",
@@ -380,7 +386,7 @@
       "MANDATORY.FIELD" : "LEGAL.ID"
     } ],
     "VALIDATION.FLD" : [ {
-      "VALIDATION.RTN" : "ABC.GET.ADRESS.FISICA",
+      "VALIDATION.RTN" : "ABC.GET.ADRESS.FISICA.DIGITAL",
       "VALIDATION.FLD" : "POST.CODE-1"
     }, {
       "VALIDATION.RTN" : "ABC.VALIDA.EMAIL",
