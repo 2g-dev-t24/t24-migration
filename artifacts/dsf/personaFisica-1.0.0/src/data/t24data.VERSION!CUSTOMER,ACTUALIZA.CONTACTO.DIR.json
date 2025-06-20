@@ -51,7 +51,6 @@
       } ],
       "TABLE.LINE" : "1"
     }, {
-      "CASE.CONV" : "UPPERCASE",
       "FIELD.NO" : "SHORT.NAME-1",
       "COLUMN" : "1",
       "ENRICHM.CHAR" : "35",
@@ -64,7 +63,6 @@
       } ],
       "TABLE.LINE" : "2"
     }, {
-      "CASE.CONV" : "UPPERCASE",
       "FIELD.NO" : "NAME.1-1",
       "COLUMN" : "1",
       "ENRICHM.CHAR" : "35",
@@ -77,7 +75,6 @@
       } ],
       "TABLE.LINE" : "3"
     }, {
-      "CASE.CONV" : "UPPERCASE",
       "FIELD.NO" : "NAME.2-1",
       "COLUMN" : "1",
       "TEXT" : [ {
