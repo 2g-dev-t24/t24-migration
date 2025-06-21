@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "1301",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "CotitularFisica"
+    }, {
+      "SHORT.NAME" : "CotitularFisica"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cotitular Persona Fisica"
+    }, {
+      "DESCRIPTION" : "Cotitular Persona Fisica"
+    } ]
+  }
+}

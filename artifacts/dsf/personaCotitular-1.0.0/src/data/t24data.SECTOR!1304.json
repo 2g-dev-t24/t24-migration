@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "1304",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "CotitularFideic"
+    }, {
+      "SHORT.NAME" : "CotitularFideic"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cotitular Fideicomiso"
+    }, {
+      "DESCRIPTION" : "Cotitular Fideicomiso"
+    } ]
+  }
+}

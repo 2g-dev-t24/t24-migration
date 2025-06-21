@@ -1,0 +1,104 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.COTITULAR.EMPLEO",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "OCCUPATION-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "DROP.DOWN" : "ABC.OCUPACION",
+      "ENRICHM.CHAR" : "40",
+      "TEXT" : [ {
+        "TEXT" : "Ocupacion"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-114-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "EMPLOYERS.NAME-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "25",
+      "TEXT" : [ {
+        "TEXT" : "Nombre de la Empresa"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-214-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "EMP.PUESTO",
+      "COLUMN" : "112",
+      "TEXT" : [ {
+        "TEXT" : "Puesto que Desempeña"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-59-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "L.SECTOR.ECO",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.SECTOR.ECONOMICO",
+      "TEXT" : [ {
+        "TEXT" : "Sector Giro Economico"
+      } ],
+      "TEXT.CHAR.MAX" : "21",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-29-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "INDUSTRY",
+      "ENQ.SELECTION" : "INDUSTRY.CODE EQ L.SECTOR.ECO",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.GET.INDUSTRY",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Industria"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "TABLE.LINE" : "4"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Detalle Empleo"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "GTS.CONTROL" : "1",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Detalle Empleo Cotitular"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.GET.ADRESS.FISICA.EMPLEO",
+      "VALIDATION.FLD" : "EMP.COD.POS"
+    }, {
+      "VALIDATION.RTN" : "ABC.CALC.ING.TOTAL.CUST",
+      "VALIDATION.FLD" : "SALARY"
+    }, {
+      "VALIDATION.RTN" : "ABC.CALC.ING.TOTAL.CUST",
+      "VALIDATION.FLD" : "ANNUAL.BONUS"
+    } ]
+  }
+}
