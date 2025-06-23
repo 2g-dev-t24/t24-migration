@@ -177,3 +177,15 @@ private method StoChkPostRestr (
 {
     jBC: STO.CHK.POST.RESTR
 }
+
+public method AbcValidaCccSpei (
+)
+{
+    jBC: ABC.VALIDA.CCC.SPEI
+}
+
+public method AbcValidaComisionSpei (
+)
+{
+    jBC: ABC.VALIDA.COMISION.SPEI
+}
