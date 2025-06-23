@@ -189,3 +189,9 @@ public method AbcValidaComisionSpei (
 {
     jBC: ABC.VALIDA.COMISION.SPEI
 }
+
+public method AbcCallRtnsGenFt (
+)
+{
+    jBC: ABC.CALL.RTNS.GEN.FT
+}
