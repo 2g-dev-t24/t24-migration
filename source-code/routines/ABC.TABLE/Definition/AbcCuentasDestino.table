@@ -1,0 +1,34 @@
+public table AbcCuentasDestino {
+    t24: ABC.CUENTAS.DESTINO
+    fields:{
+        TipoCta(ACD.DES.TIPO.CTA) = 1
+        Banco(ACD.DES.BANCO) = 2
+        Status(ACD.DES.STATUS) = 3
+        Alias(ACD.DES.ALIAS) = 4
+        Beneficiario(ACD.DES.BENEFICIARIO) = 5
+        Rfc(ACD.DES.RFC) = 6 
+        Email(ACD.DES.EMAIL) = 7       
+        Movil(ACD.DES.MOVIL) = 8
+        TipVersion(ACD.DES.TIP.VERSION) = 9                
+        Curp(ACD.DES.CURP) = 10
+        FechaHoraAut(ACD.DES.FECHA.HORA.AUT) = 11
+        Validar(ACD.DES.VALIDAR) = 12
+        Reserved6(ACD.DES.RESERVED.6)                    = 15
+        Reserved5(ACD.DES.RESERVED.5)                    = 16
+        Reserved4(ACD.DES.RESERVED.4)                    = 17
+        Reserved3(ACD.DES.RESERVED.3)                    = 15
+        Reserved2(ACD.DES.RESERVED.2)                    = 16
+        Reserved1(ACD.DES.RESERVED.1)                    = 17
+        LocalRef(ACD.DES.LOCAL.REF)                      = 18
+        Override(ACD.DES.OVERRIDE)                       = 19
+        RecordStatus(ACD.DES.RECORD.STATUS)              = 20
+        CurrNo(ACD.DES.CURR.NO)                          = 21
+        Inputter(ACD.DES.INPUTTER)                       = 22
+        DateTime(ACD.DES.DATE.TIME)                      = 23
+        Authoriser(ACD.DES.AUTHORISER)                   = 24
+        CoCode(ACD.DES.CO.CODE)                          = 25
+        DeptCode(ACD.DES.DEPT.CODE)                      = 26
+        AuditorCode(ACD.DES.AUDITOR.CODE)                = 27
+        AuditDateTime(ACD.DES.AUDIT.DATE.TIME)           = 28
+    }
+}

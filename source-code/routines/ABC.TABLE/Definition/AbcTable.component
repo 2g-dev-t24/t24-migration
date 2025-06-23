@@ -598,3 +598,13 @@ private method AbcMotivoDevCecoban ()
 {
     jBC: ABC.MOTIVO.DEV.CECOBAN
 }
+
+private method AbcCuentasDestinoFields ()
+{
+    jBC: ABC.CUENTAS.DESTINO.FIELDS
+}
+
+private method AbcCuentasDestino ()
+{
+    jBC: ABC.CUENTAS.DESTINO
+}
