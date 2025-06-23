@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.VALIDA.EDO.CURP",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "ABC.VALIDA.EDO.CURP"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

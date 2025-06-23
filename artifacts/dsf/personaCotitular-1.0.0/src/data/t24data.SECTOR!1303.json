@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "1303",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Cotitular-Moral"
+    }, {
+      "SHORT.NAME" : "Cotitular-Moral"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cotitular Persona Moral"
+    }, {
+      "DESCRIPTION" : "Cotitular Persona Moral"
+    } ]
+  }
+}

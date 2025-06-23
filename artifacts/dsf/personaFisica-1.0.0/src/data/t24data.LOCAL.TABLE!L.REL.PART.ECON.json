@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.REL.PART.ECON",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.REL.PART.ECON"
+    }, {
+      "SHORT.NAME" : "L.REL.PART.ECON"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "L.REL.PART.ECON"
+    }, {
+      "DESCRIPTION" : "L.REL.PART.ECON"
+    } ],
+    "CHAR.TYPE" : "AMTCCY",
+    "MAXIMUM.CHAR" : "6"
+  }
+}

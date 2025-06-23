@@ -1,0 +1,175 @@
+{
+  "header" : {
+    "id" : "ABC.ACTUALIZA.PFA.PF.CURP",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "CUSTOMER,ABC.ACTUALIZA.CURP I @ID",
+      "LABEL.FIELD" : "@ID 1",
+      "SEL.CRIT" : [ {
+        "SEL.CRIT" : "@ID EQ @ID"
+      } ],
+      "NXT.DESC" : [ {
+        "NXT.DESC" : "Actualiza CURP[edit.gif"
+      }, {
+        "NXT.DESC" : "Actualiza CURP[edit.gif"
+      } ]
+    } ],
+    "ATTRIBUTES" : [ {
+      "ATTRIBUTES" : "ZERORECORDDISPLAY"
+    }, {
+      "ATTRIBUTES" : "NO.SELECTION"
+    } ],
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "10L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "No de Cliente"
+      }, {
+        "FIELD.LBL" : "No de Cliente"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SHORT.NAME"
+      } ],
+      "FIELD.NAME" : "SHORT.NAME",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Apellido Paterno"
+      }, {
+        "FIELD.LBL" : "Apellido Paterno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.1"
+      } ],
+      "FIELD.NAME" : "NAME.1",
+      "COLUMN" : "3",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Apellido Materno"
+      }, {
+        "FIELD.LBL" : "Apellido Materno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.2"
+      } ],
+      "FIELD.NAME" : "NAME.2",
+      "LENGTH.MASK" : "40L",
+      "COLUMN" : "4",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Nombres"
+      }, {
+        "FIELD.LBL" : "Nombres"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "EXTERN.CUS.ID"
+      } ],
+      "FIELD.NAME" : "CURP",
+      "LENGTH.MASK" : "50L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "6",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "CURP"
+      }, {
+        "FIELD.LBL" : "Id Tipo Persona"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SECTOR"
+      } ],
+      "FIELD.NAME" : "SECTOR",
+      "LENGTH.MASK" : "4R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "7",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Id Tipo Persona"
+      }, {
+        "FIELD.LBL" : "Id Tipo Persona"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SECTOR"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "S 1001,Persona Fisica"
+      }, {
+        "CONVERSION" : "S 1100,Persona Fisica Act Empresarial"
+      } ],
+      "FIELD.NAME" : "DESCR.SECTOR",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "9",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Tipo Persona"
+      }, {
+        "FIELD.LBL" : "Tipo Persona"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "ACCOUNT.OFFICER"
+      } ],
+      "FIELD.NAME" : "ACCT.OFFICER",
+      "LENGTH.MASK" : "4R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "11",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Id Ejecutivo"
+      }, {
+        "FIELD.LBL" : "Ejecutivo"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F ACCT.OFFICER"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "L DEPT.ACCT.OFFICER,NAME"
+      } ],
+      "FIELD.NAME" : "ACCT.OFF.NAME",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "15",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Sucursal o Ejecutivo"
+      }, {
+        "FIELD.LBL" : "Nombre Ejecutivo"
+      } ]
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "SECTOR EQ 1001 1100"
+    }, {
+      "FIXED.SELECTION" : "CUSTOMER.TYPE EQ ACTIVE"
+    } ],
+    "DESCRIPT" : [ {
+      "DESCRIPT" : [ {
+        "DESCRIPT" : "Actualiza Datos CURP"
+      }, {
+        "DESCRIPT" : "Actualiza Datos CURP"
+      } ]
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Actualiza Datos CURP"
+    }, {
+      "SHORT.DESC" : "Actualiza Datos CURP"
+    } ],
+    "FILE.NAME" : "CUSTOMER"
+  }
+}

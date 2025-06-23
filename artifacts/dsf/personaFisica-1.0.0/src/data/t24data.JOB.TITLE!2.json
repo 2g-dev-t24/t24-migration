@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "2",
+    "dsfApiType" : "JOB.TITLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ADMINISTRADOR DE EMPRESAS"
+    } ]
+  }
+}

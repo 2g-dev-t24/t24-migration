@@ -1,0 +1,209 @@
+{
+  "header" : {
+    "id" : "ABC.E.ACTIVA.CUSTOMER.AUTH.PF",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "COS ABC.CUSTOMER.AUTH.PF",
+      "LABEL.FIELD" : "@ID 1",
+      "SEL.CRIT" : [ {
+        "SEL.CRIT" : "CURRENT.ID>@ID"
+      } ],
+      "NXT.DESC" : [ {
+        "NXT.DESC" : "Autoriza Customer[custscv.gif"
+      } ]
+    } ],
+    "ATTRIBUTES" : [ {
+      "ATTRIBUTES" : "ZERORECORDDISPLAY"
+    }, {
+      "ATTRIBUTES" : "NO.SELECTION"
+    } ],
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Customer No"
+      }, {
+        "FIELD.LBL" : "Id Cliente"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"Autorizacion de Cientes Persona Fisica\""
+      } ],
+      "FIELD.NAME" : "HDR",
+      "COLUMN" : "1,0",
+      "FIELD.DISP.TYPE" : "CLASS-ENQ.H.TITLE",
+      "SECTION" : "HEADER"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SHORT.NAME"
+      } ],
+      "FIELD.NAME" : "SHORT.NAME",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Name"
+      }, {
+        "FIELD.LBL" : "Apellido Paterno"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.1"
+      } ],
+      "FIELD.NAME" : "NAME.1",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "4",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Apellido Materno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.2"
+      } ],
+      "FIELD.NAME" : "NAME.2",
+      "COLUMN" : "6",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Nombres"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SECTOR"
+      } ],
+      "FIELD.NAME" : "SECTOR",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "6",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Tipo de Persona"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "ACCOUNT.OFFICER"
+      } ],
+      "FIELD.NAME" : "ACCT.OFFICER",
+      "LENGTH.MASK" : "4R",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F ACCT.OFFICER"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "L DEPT.ACCT.OFFICER,NAME"
+      } ],
+      "FIELD.NAME" : "ACCT.OFF.NAME"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\" - \""
+      } ],
+      "FIELD.NAME" : "HYPHEN"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "C ACCT.OFFICER : HYPHEN"
+      } ],
+      "FIELD.NAME" : "DAO.HYPHEN"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "C DAO.HYPHEN : ACCT.OFF.NAME"
+      } ],
+      "FIELD.NAME" : "DISP.DAO",
+      "COLUMN" : "3",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Relationship Officer"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "RECORD.STATUS"
+      } ],
+      "FIELD.NAME" : "RECORD.STATUS",
+      "LENGTH.MASK" : "4L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "4",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Record Status"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "INPUTTER"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F _,2,1"
+      } ],
+      "FIELD.NAME" : "INPUTTER",
+      "LENGTH.MASK" : "40L",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Inputter"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"No Unauthorised Customers \""
+      } ],
+      "FIELD.NAME" : "ZERORECORDS",
+      "COLUMN" : "1",
+      "FIELD.DISP.TYPE" : "CLASS-ENQ.NORECS",
+      "DISPLAY.BREAK" : "NONE",
+      "SECTION" : "HEADER"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "COMPANY.BOOK"
+      } ],
+      "FIELD.NAME" : "COMPANY.BOOK",
+      "LENGTH.MASK" : "11L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "6",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Customer Branch Name"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SECTOR"
+      } ],
+      "FIELD.NAME" : "SECTOR",
+      "LENGTH.MASK" : "4R",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIF.BUSINESS\""
+      } ],
+      "FIELD.NAME" : "VER.1"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIFICATION.IND\""
+      } ],
+      "FIELD.NAME" : "VER.2"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IF SECTOR EQ \"1700\" VER.1 VER.2"
+      } ],
+      "FIELD.NAME" : "DECIDE.VER"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "SECTOR EQ 1001"
+    }, {
+      "FIXED.SELECTION" : "CUSTOMER.TYPE EQ 'PROSPECT'"
+    } ],
+    "DESCRIPT" : [ {
+      "DESCRIPT" : [ {
+        "DESCRIPT" : "Unauthorised Customer"
+      } ]
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Unauthorised Customer"
+    } ],
+    "FILE.NAME" : "CUSTOMER"
+  }
+}

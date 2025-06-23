@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "ABC.PAIS.ANT",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ABC.PAIS.ANT"
+    }, {
+      "SHORT.NAME" : "ABC.PAIS.ANT"
+    } ],
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "Pais domicilio anterior"
+    } ],
+    "APPLICATION.VET" : "COUNTRY",
+    "CHAR.TYPE" : "S",
+    "APPL.ENRICHM.FIELD" : "2",
+    "MAXIMUM.CHAR" : "9"
+  }
+}

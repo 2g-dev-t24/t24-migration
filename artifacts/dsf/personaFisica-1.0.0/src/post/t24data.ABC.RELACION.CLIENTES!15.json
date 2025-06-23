@@ -1,0 +1,15 @@
+{
+  "header" : {
+    "id" : "15",
+    "dsfApiType" : "ABC.RELACION.CLIENTES",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPCION" : "Padre / Madre"
+  }
+}

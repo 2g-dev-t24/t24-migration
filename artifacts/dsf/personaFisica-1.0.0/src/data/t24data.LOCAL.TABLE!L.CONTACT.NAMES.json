@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.CONTACT.NAMES",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.CONTACT.NAMES"
+    }, {
+      "SHORT.NAME" : "L.CONTACT.NAMES"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "L.CONTACT.NAMES"
+    }, {
+      "DESCRIPTION" : "L.CONTACT.NAMES"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "36"
+  }
+}

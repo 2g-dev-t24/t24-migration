@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "ABC.COB.GEO",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "75L",
+      "SINGLE.MULTI" : "S",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "DESCRIPTION"
+      } ],
+      "FIELD.NAME" : "DESCRIPTION",
+      "LENGTH.MASK" : "65L",
+      "COLUMN" : "4",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Descripcion"
+      } ],
+      "TYPE" : "L"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "@ID LK ABC.COB.GEO..."
+    } ],
+    "FILE.NAME" : "EB.LOOKUP"
+  }
+}

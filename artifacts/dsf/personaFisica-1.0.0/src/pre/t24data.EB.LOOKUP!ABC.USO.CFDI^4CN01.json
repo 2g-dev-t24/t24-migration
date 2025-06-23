@@ -1,0 +1,34 @@
+{
+  "header" : {
+    "id" : "ABC.USO.CFDI*CN01",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "APLICA.PERS.FISICA",
+      "DATA.VALUE" : "SI"
+    }, {
+      "DATA.NAME" : "APLICA.PERS.MORAL",
+      "DATA.VALUE" : "NO"
+    }, {
+      "DATA.NAME" : "FECHA.INI.VIGENCIA",
+      "DATA.VALUE" : "20220101"
+    }, {
+      "DATA.NAME" : "FECHA.FIN.VIGENCIA"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-1",
+      "DATA.VALUE" : "605"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Nomina"
+    }, {
+      "DESCRIPTION" : "Nomina"
+    } ]
+  }
+}

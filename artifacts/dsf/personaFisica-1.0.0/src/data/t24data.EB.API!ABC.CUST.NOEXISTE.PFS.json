@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.CUST.NOEXISTE.PFS",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "ABC.CUST.NOEXISTE.PFS"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

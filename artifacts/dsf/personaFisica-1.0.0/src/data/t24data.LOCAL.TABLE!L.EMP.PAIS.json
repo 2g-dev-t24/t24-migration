@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "L.EMP.PAIS",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EMP.PAIS"
+    }, {
+      "SHORT.NAME" : "EMP.PAIS"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EMPRESA PAIS"
+    }, {
+      "DESCRIPTION" : "EMPRESA PAIS"
+    } ],
+    "APPLICATION.VET" : "COUNTRY",
+    "CHAR.TYPE" : "S",
+    "APPL.ENRICHM.FIELD" : "2",
+    "MAXIMUM.CHAR" : "9"
+  }
+}

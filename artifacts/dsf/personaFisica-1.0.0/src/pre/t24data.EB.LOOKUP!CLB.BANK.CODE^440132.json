@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40132",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "426808"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "511265"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "465495"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "465496"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "465497"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "465498"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "407848"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "MULTIVA BANCO"
+    }, {
+      "DESCRIPTION" : "MULTIVA BANCO"
+    } ]
+  }
+}

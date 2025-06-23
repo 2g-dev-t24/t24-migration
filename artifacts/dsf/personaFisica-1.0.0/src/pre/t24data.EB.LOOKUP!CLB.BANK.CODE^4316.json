@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*316",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "000"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "GRUPO BELVEG INTEGRADORA DE NEGOCIOS"
+    }, {
+      "DESCRIPTION" : "GRUPO BELVEG INTEGRADORA DE NEGOCIOS"
+    } ]
+  }
+}

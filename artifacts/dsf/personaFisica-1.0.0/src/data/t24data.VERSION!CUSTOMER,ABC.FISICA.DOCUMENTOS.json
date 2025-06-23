@@ -1,0 +1,91 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.FISICA.DOCUMENTOS",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "LEGAL.DOC.NAME-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.TIPIDE"
+    }, {
+      "AUTOM.FIELD.NO" : "LEGAL.ID-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.NUMID"
+    }, {
+      "AUTOM.FIELD.NO" : "LEGAL.ISS.DATE-1",
+      "AUT.NEW.CONTENT" : "CURRENT.FECEMI"
+    }, {
+      "AUTOM.FIELD.NO" : "LEGAL.EXP.DATE-1",
+      "AUT.NEW.CONTENT" : "CURRENT.FECVEN"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "LEGAL.DOC.NAME-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Identificacion"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "LEGAL.ID-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Numero de Identificacion"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "LEGAL.ISS.DATE-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Valida Desde"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "LEGAL.EXP.DATE-1",
+      "COLUMN" : "150",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Specifies legal Expiry date"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Expiracion"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "150-54-"
+      } ],
+      "TABLE.LINE" : "2"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Legal ID- Documentos"
+    } ],
+    "EXC.INC.RTN" : "YES",
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Detalle de Documentos"
+    } ]
+  }
+}

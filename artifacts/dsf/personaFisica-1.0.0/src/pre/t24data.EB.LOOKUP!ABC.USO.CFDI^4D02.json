@@ -1,0 +1,58 @@
+{
+  "header" : {
+    "id" : "ABC.USO.CFDI*D02",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "APLICA.PERS.FISICA",
+      "DATA.VALUE" : "SI"
+    }, {
+      "DATA.NAME" : "APLICA.PERS.MORAL",
+      "DATA.VALUE" : "NO"
+    }, {
+      "DATA.NAME" : "FECHA.INI.VIGENCIA",
+      "DATA.VALUE" : "20220101"
+    }, {
+      "DATA.NAME" : "FECHA.FIN.VIGENCIA"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-1",
+      "DATA.VALUE" : "605"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-2",
+      "DATA.VALUE" : "606"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-3",
+      "DATA.VALUE" : "608"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-4",
+      "DATA.VALUE" : "611"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-5",
+      "DATA.VALUE" : "612"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-6",
+      "DATA.VALUE" : "614"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-7",
+      "DATA.VALUE" : "607"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-8",
+      "DATA.VALUE" : "615"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT-9",
+      "DATA.VALUE" : "625"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Gastos medicos por incapacidad o discapacidad."
+    }, {
+      "DESCRIPTION" : "Gastos medicos por incapacidad o discapacidad."
+    } ]
+  }
+}

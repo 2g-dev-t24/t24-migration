@@ -1,0 +1,74 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*6",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "000"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446351"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "286900"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "469849"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506301"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506329"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506330"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506359"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506360"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506369"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506370"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506371"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506372"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "464811"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "481284"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "464812"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "481283"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BRADESCARD DE MICO"
+    }, {
+      "DESCRIPTION" : "BRADESCARD DE MICO"
+    } ]
+  }
+}

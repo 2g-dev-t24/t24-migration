@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.CREATE.CUSTOMER.FIS.NV4",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.CREATE.CUSTOMER.FIS.NV4"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

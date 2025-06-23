@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "L.REL.PERSONA.EXP",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "REL.PERSONA.EXP"
+    }, {
+      "SHORT.NAME" : "REL.PERSONA.EXP"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "SI",
+      "REMARK" : [ {
+        "REMARK" : "SI"
+      }, {
+        "REMARK" : "SI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "NO",
+      "REMARK" : [ {
+        "REMARK" : "NO"
+      }, {
+        "REMARK" : "NO"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CUST.REL.PERSONA.EXP"
+    }, {
+      "DESCRIPTION" : "CUST.REL.PERSONA.EXP"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

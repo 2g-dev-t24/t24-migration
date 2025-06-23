@@ -1,0 +1,50 @@
+{
+  "header" : {
+    "id" : "ABC.ESTADO.ENQ",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "3R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "ESTADO"
+      } ],
+      "FIELD.NAME" : "ESTADO",
+      "LENGTH.MASK" : "60L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "20",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Estado"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "CLAVE"
+      } ],
+      "FIELD.NAME" : "CLAVE",
+      "LENGTH.MASK" : "2L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "30"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "@ID LE 32"
+    } ],
+    "FILE.NAME" : "ABC.ESTADO"
+  }
+}

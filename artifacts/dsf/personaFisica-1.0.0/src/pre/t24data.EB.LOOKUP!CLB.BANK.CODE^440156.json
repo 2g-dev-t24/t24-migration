@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40156",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547022"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "549912"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "548640"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "553548"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "549685"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "SABADELL"
+    }, {
+      "DESCRIPTION" : "SABADELL"
+    } ]
+  }
+}

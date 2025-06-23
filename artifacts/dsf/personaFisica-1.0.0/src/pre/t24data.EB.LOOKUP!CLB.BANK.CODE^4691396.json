@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*691396",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "069"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506203"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "544511"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "523541"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "230668"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "FINANCIERA CUALLIX"
+    }, {
+      "DESCRIPTION" : "FINANCIERA CUALLIX"
+    } ]
+  }
+}

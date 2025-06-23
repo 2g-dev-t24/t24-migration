@@ -1,0 +1,65 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40062",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "423646"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "448790"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "512029"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "512048"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "539672"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "535943"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "537030"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "413098"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "432049"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "512382"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "514065"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "492144"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "427213"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "AFIRME"
+    }, {
+      "DESCRIPTION" : "AFIRME"
+    } ]
+  }
+}

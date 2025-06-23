@@ -1,0 +1,384 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.FISICA.DIRECCION",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "LANGUAGE",
+      "AUT.NEW.CONTENT" : "2"
+    }, {
+      "AUTOM.FIELD.NO" : "ADDRESS.COUNTRY",
+      "AUT.NEW.CONTENT" : "MX"
+    }, {
+      "AUTOM.FIELD.NO" : "ABC.PAIS.ANT",
+      "AUT.NEW.CONTENT" : "MX"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "ADDRESS.TYPE",
+      "COLUMN" : "112",
+      "ENRICHM.CHAR" : "3",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Comprobante"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-65-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "STREET-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Calle"
+      } ],
+      "TEXT.CHAR.MAX" : "5",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "BUILDING.NUMBER",
+      "COLUMN" : "112",
+      "ENRICHM.CHAR" : "3",
+      "TEXT" : [ {
+        "TEXT" : "Numero Exterior"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-46-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "FLAT.NUMBER",
+      "COLUMN" : "118",
+      "TEXT" : [ {
+        "TEXT" : "Numero Interior"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "118-96-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "POST.CODE-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Codigo Postal"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-97-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "SUB.DEPARTMENT",
+      "ENQ.SELECTION" : "CODIGO.POSTAL EQ POST.CODE",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "E.ABC.NOF.GET.COLONIA",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Colonia"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-132-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "DEPARTMENT",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Delegacion o Municipio"
+      } ],
+      "TEXT.CHAR.MAX" : "22",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-131-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "TOWN.COUNTRY-1",
+      "COLUMN" : "112",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Ciudad"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-97-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "COUNTRY.SUBDIVISION",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Estado"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-97-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "ADDRESS.COUNTRY",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "%COUNTRY",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Pais"
+      } ],
+      "TEXT.CHAR.MAX" : "4",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-45-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "L.LOCALIDAD",
+      "COLUMN" : "112",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Localidad Banxico"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-109-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "RESIDENCE.STATUS-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Vive en Casa (Tipo de Casa)"
+      } ],
+      "TEXT.CHAR.MAX" : "27",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-101-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "RESIDENCE.TYPE-1",
+      "COLUMN" : "112",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Especifique Otra"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-90-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "*",
+      "TEXT" : [ {
+        "TEXT" : "Tiempo de Residencia"
+      } ],
+      "TEXT.CHAR.MAX" : "39",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "ABC.DOM.ANOS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Años"
+      } ],
+      "TEXT.CHAR.MAX" : "4",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-9-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Domicilio Anterior"
+      } ],
+      "TEXT.CHAR.MAX" : "39",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "ABC.DIR.CALLE.A",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Calle"
+      } ],
+      "TEXT.CHAR.MAX" : "5",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-68-"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "FIELD.NO" : "ABC.NUM.EXT.ANT",
+      "COLUMN" : "112",
+      "TEXT" : [ {
+        "TEXT" : "Numero Exterior"
+      } ],
+      "TEXT.CHAR.MAX" : "15",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "112-24-"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "ABC.NUM.INT.ANT",
+      "COLUMN" : "118",
+      "TEXT" : [ {
+        "TEXT" : "Numero Interior"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "118-28-"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "ABC.COD.POS.ANT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Codigo Postal"
+      } ],
+      "TEXT.CHAR.MAX" : "13",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-21-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "ABC.COLONIA.ANT",
+      "ENQ.SELECTION" : "CODIGO.POSTAL EQ ABC.COD.POS.ANT",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "E.ABC.NOF.GET.COLONIA2",
+      "TEXT" : [ {
+        "TEXT" : "Colonia"
+      } ],
+      "TEXT.CHAR.MAX" : "7",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-25-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "16"
+    }, {
+      "FIELD.NO" : "ABC.DEL.MUN.ANT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Delegacion o Municipio"
+      } ],
+      "TEXT.CHAR.MAX" : "22",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-30-"
+      } ],
+      "TABLE.LINE" : "17"
+    }, {
+      "FIELD.NO" : "TOWN.COUNTRY-2",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Ciudad"
+      } ],
+      "TEXT.CHAR.MAX" : "6",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-44-"
+      } ],
+      "TABLE.LINE" : "18"
+    }, {
+      "FIELD.NO" : "ABC.CD.EDO.ANT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Estado"
+      } ],
+      "TEXT.CHAR.MAX" : "6",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-11-"
+      } ],
+      "TABLE.LINE" : "19"
+    }, {
+      "FIELD.NO" : "ABC.PAIS.ANT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Pais"
+      } ],
+      "TEXT.CHAR.MAX" : "4",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-16-"
+      } ],
+      "TABLE.LINE" : "20"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Direccion"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "DEPARTMENT"
+    }, {
+      "NOINPUT.FIELD" : "COUNTRY.SUBDIVISION"
+    }, {
+      "NOINPUT.FIELD" : "ABC.DEL.MUN.ANT"
+    }, {
+      "NOINPUT.FIELD" : "ABC.CD.EDO.ANT"
+    }, {
+      "NOINPUT.FIELD" : "TOWN.COUNTRY"
+    }, {
+      "NOINPUT.FIELD" : "L.LOCALIDAD"
+    }, {
+      "NOINPUT.FIELD" : "ABC.PAIS.ANT"
+    } ],
+    "EXC.INC.RTN" : "YES",
+    "MULTI.POSSIBLE" : "Y",
+    "GTS.CONTROL" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Direccion Fisica"
+    } ],
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "STREET"
+    }, {
+      "MANDATORY.FIELD" : "SUB.DEPARTMENT"
+    } ]
+  }
+}

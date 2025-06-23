@@ -1,0 +1,60 @@
+{
+  "header" : {
+    "id" : "CUSTOMER.EXP.DIG",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "CLIENTE"
+      } ],
+      "SELECTION.FLDS" : "@ID",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "\"TRUE\""
+      } ],
+      "FIELD.NAME" : "Y.TRUE",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"FALSE\""
+      } ],
+      "FIELD.NAME" : "Y.FALSE",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IDESC EXPEDIENTE.DIGI"
+      } ],
+      "FIELD.NAME" : "Y.EXP.DIG"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"SI\""
+      } ],
+      "FIELD.NAME" : "Y.SI",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Expediente Digital"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IF Y.EXP.DIG EQ Y.SI Y.TRUE Y.FALSE"
+      } ],
+      "FIELD.NAME" : "EXPEDIENTE.DIGI",
+      "LENGTH.MASK" : "5L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Expediente Digital"
+      } ]
+    } ],
+    "FILE.NAME" : "CUSTOMER"
+  }
+}

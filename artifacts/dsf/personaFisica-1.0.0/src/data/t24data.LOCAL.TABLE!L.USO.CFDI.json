@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "L.USO.CFDI",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.USO.CFDI"
+    }, {
+      "SHORT.NAME" : "L.USO.CFDI"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "L.USO.CFDI"
+    }, {
+      "DESCRIPTION" : "L.USO.CFDI"
+    } ],
+    "VIRTUAL.TABLE" : "ABC.USO.CFDI",
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

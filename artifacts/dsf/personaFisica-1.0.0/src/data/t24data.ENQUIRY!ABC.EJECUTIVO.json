@@ -1,0 +1,87 @@
+{
+  "header" : {
+    "id" : "ABC.EJECUTIVO",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SELECTION.FLDS" : "SIGN.ON.NAME"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "USER.NAME"
+      } ],
+      "FIELD.NAME" : "USER.NAME",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "USER.NAME"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\" \""
+      } ],
+      "FIELD.NAME" : "ESPACIO"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "USER.NAME"
+      } ],
+      "FIELD.NAME" : "NOMBRE1",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\" \""
+      } ],
+      "FIELD.NAME" : "AP.PATERNO",
+      "COLUMN" : "20"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\" \""
+      } ],
+      "FIELD.NAME" : "AP.MATERNO",
+      "COLUMN" : "40"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IDESC IUB"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "L ABC.BIOMETRICOS,EMAIL"
+      } ],
+      "FIELD.NAME" : "EMAIL",
+      "COLUMN" : "60"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IDESC IUB"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "L ABC.BIOMETRICOS,CURP"
+      } ],
+      "FIELD.NAME" : "CURP",
+      "COLUMN" : "80"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IDESC IUB"
+      } ],
+      "FIELD.NAME" : "IUB",
+      "LENGTH.MASK" : "11R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "95"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "CONSULTA EJECUTIVO BIOMETRICOS"
+    }, {
+      "SHORT.DESC" : "CONSULTA EJECUTIVO BIOMETRICOS"
+    } ],
+    "FILE.NAME" : "USER"
+  }
+}

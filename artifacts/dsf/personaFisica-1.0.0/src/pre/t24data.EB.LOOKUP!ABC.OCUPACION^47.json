@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.OCUPACION*7",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CHOFERES CONDUCTORES Y OPERADORES DE TRANSPORTE"
+    }, {
+      "DESCRIPTION" : "CHOFERES CONDUCTORES Y OPERADORES DE TRANSPORTE"
+    } ]
+  }
+}

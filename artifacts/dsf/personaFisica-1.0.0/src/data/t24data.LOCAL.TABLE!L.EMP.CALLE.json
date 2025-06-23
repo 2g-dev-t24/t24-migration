@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.EMP.CALLE",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EMP.CALLE"
+    }, {
+      "SHORT.NAME" : "EMP.CALLE"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EMPRESA CALLE"
+    }, {
+      "DESCRIPTION" : "EMPRESA CALLE"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "25"
+  }
+}

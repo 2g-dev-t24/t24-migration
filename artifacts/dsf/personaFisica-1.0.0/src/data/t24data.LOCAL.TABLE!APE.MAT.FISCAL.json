@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "APE.MAT.FISCAL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "APE.MAT.FISCAL"
+    }, {
+      "SHORT.NAME" : "APE.MAT.FISCAL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Apellido Materno Fiscal"
+    }, {
+      "DESCRIPTION" : "Apellido Materno Fiscal"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

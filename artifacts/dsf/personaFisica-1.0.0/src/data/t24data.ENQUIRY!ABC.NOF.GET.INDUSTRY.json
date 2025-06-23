@@ -1,0 +1,56 @@
+{
+  "header" : {
+    "id" : "ABC.NOF.GET.INDUSTRY",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "INDUSTRY.CODE"
+      } ],
+      "SELECTION.FLDS" : "INDUSTRY.CODE",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "PRODUCT" : "EB",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "0"
+      } ],
+      "FIELD.NAME" : "R.DATA"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,1,1"
+      } ],
+      "FIELD.NAME" : "ID",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,2,1"
+      } ],
+      "FIELD.NAME" : "DESCRIPTION",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "20",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "DESCRIPTION"
+      } ]
+    } ],
+    "FILE.NAME" : "NOFILE.ABC.NOF.GET.INDUSTRY"
+  }
+}

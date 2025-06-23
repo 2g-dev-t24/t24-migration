@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.EMP.PUESTO",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EMP.PUESTO"
+    }, {
+      "SHORT.NAME" : "EMP.PUESTO"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EMPLEO PUESTO"
+    }, {
+      "DESCRIPTION" : "EMPLEO PUESTO"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "21"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.EMP.DEL.MUNI",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EMP.DEL.MUNI"
+    }, {
+      "SHORT.NAME" : "EMP.DEL.MUNI"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EMPRESA DELEG. O MUNICIPIO"
+    }, {
+      "DESCRIPTION" : "EMPRESA DELEG. O MUNICIPIO"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "5"
+  }
+}

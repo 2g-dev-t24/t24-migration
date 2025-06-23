@@ -1,0 +1,44 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*68012",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "068"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "444449"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "464596"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "464597"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "464598"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "483347"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "60462204"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "GLOBAL CARD"
+    }, {
+      "DESCRIPTION" : "GLOBAL CARD"
+    } ]
+  }
+}

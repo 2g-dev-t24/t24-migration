@@ -31,7 +31,7 @@ private method abcRfcCep (
 
 
 
-private method abcVCustomerName (
+public method abcVCustomerName (
     INOUT yComi string,
     INOUT yNombre string
 )
@@ -170,4 +170,28 @@ private method AbcCambioCategRemu (
 )
 {
     jBC: ABC.CAMBIO.CATEG.REMU
+}
+
+private method StoChkPostRestr (
+)
+{
+    jBC: STO.CHK.POST.RESTR
+}
+
+public method AbcValidaCccSpei (
+)
+{
+    jBC: ABC.VALIDA.CCC.SPEI
+}
+
+public method AbcValidaComisionSpei (
+)
+{
+    jBC: ABC.VALIDA.COMISION.SPEI
+}
+
+public method AbcCallRtnsGenFt (
+)
+{
+    jBC: ABC.CALL.RTNS.GEN.FT
 }

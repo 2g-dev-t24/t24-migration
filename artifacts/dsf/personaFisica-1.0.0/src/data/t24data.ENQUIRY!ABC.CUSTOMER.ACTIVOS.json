@@ -1,0 +1,129 @@
+{
+  "header" : {
+    "id" : "ABC.CUSTOMER.ACTIVOS",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "CUSTOMER,ABC.UPD.DAT.FISCALES I @ID",
+      "LABEL.FIELD" : "@ID 1",
+      "SEL.CRIT" : [ {
+        "SEL.CRIT" : "@ID EQ @ID"
+      } ],
+      "NXT.DESC" : [ {
+        "NXT.DESC" : "Actualiza Datos Fiscales[edit.gif"
+      }, {
+        "NXT.DESC" : "Actualiza Datos Fiscales[edit.gif"
+      } ]
+    } ],
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "No de Cliente"
+      }, {
+        "FIELD.LBL" : "No de Cliente"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SHORT.NAME"
+      } ],
+      "FIELD.NAME" : "SHORT.NAME",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Apellido Paterno"
+      }, {
+        "FIELD.LBL" : "Apellido Paterno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.1"
+      } ],
+      "FIELD.NAME" : "NAME.1",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "3",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Apellido Materno"
+      }, {
+        "FIELD.LBL" : "Apellido Materno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NAME.2"
+      } ],
+      "FIELD.NAME" : "NAME.2",
+      "LENGTH.MASK" : "45L",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Nombres"
+      }, {
+        "FIELD.LBL" : "Apellido Materno"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SECTOR"
+      } ],
+      "FIELD.NAME" : "SECTOR",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "7",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Id Tipo Persona"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "ACCOUNT.OFFICER"
+      } ],
+      "FIELD.NAME" : "ACCT.OFFICER",
+      "LENGTH.MASK" : "4R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Id Ejecutivo"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F ACCT.OFFICER"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "L DEPT.ACCT.OFFICER,NAME"
+      } ],
+      "FIELD.NAME" : "ACCT.OFF.NAME",
+      "COLUMN" : "12",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Sucursal o Ejecutivo"
+      } ]
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "CUSTOMER.TYPE EQ ACTIVE"
+    } ],
+    "DESCRIPT" : [ {
+      "DESCRIPT" : [ {
+        "DESCRIPT" : "Actualiza Datos Fiscales"
+      }, {
+        "DESCRIPT" : "Actualiza Datos Fiscales"
+      } ]
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Actualiza Datos Fiscales"
+    }, {
+      "SHORT.DESC" : "Actualiza Datos Fiscales"
+    } ],
+    "FILE.NAME" : "CUSTOMER"
+  }
+}

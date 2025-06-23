@@ -1,0 +1,120 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.UPD.DAT.FISCALES",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "APE.PAT.FISCAL",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Paterno"
+      } ],
+      "TEXT.CHAR.MAX" : "20",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-58-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "APE.MAT.FISCAL",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Materno"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "NOMBRES.FISCAL",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nombre Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "13",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-51-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "DENOM.SO.FISCAL-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Denominacion social"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-87-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "TAX.ID-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "R.F.C"
+      } ],
+      "TEXT.CHAR.MAX" : "5",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "L.DOM.FISC",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "CP Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "9",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-17-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "L.USO.CFDI",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Uso de CFDI"
+      } ],
+      "TEXT.CHAR.MAX" : "11",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-49-"
+      } ],
+      "TABLE.LINE" : "6"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "@ABC.VAL.TAX.ID"
+    }, {
+      "INPUT.ROUTINE" : "@ABC.VALIDA.CLIENTE.EXISTENTE"
+    }, {
+      "INPUT.ROUTINE" : "@ABC.VAL.DATO.FISCAL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Datos Fiscales"
+    }, {
+      "DESCRIPTION" : "Datos Fiscales"
+    } ],
+    "NO.OF.AUTH" : "1",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Datos Fiscales"
+    } ],
+    "ID.RTN" : [ {
+      "ID.RTN" : "ABC.CUST.NOEXISTE"
+    } ]
+  }
+}

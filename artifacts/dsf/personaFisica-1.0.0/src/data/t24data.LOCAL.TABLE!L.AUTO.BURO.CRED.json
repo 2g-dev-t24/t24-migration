@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "L.AUTO.BURO.CRED",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "AUTO.BURO.CRED"
+    }, {
+      "SHORT.NAME" : "AUTO.BURO.CRED"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "SI",
+      "REMARK" : [ {
+        "REMARK" : "SI"
+      }, {
+        "REMARK" : "SI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "NO",
+      "REMARK" : [ {
+        "REMARK" : "NO"
+      }, {
+        "REMARK" : "NO"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "AUTO DE CONSULTA DE BURO DE CREDITO"
+    }, {
+      "DESCRIPTION" : "AUTO DE CONSULTA DE BURO DE CREDITO"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "header" : {
+    "id" : "BA.LISTA.COL",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "SELECTION.FLDS" : "@ID"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "ID"
+      } ],
+      "FIELD.NAME" : "ID",
+      "LENGTH.MASK" : "15L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "NO."
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "COLONIA"
+      } ],
+      "FIELD.NAME" : "COLONIA",
+      "LENGTH.MASK" : "60L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "NOMBRE"
+      } ]
+    } ],
+    "BUILD.ROUTINE" : [ {
+      "BUILD.ROUTINE" : "BA.VAL.LISTA.COL"
+    } ],
+    "FILE.NAME" : "ABC.COLONIA"
+  }
+}

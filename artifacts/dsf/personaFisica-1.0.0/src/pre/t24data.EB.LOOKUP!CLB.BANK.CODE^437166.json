@@ -1,0 +1,68 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*37166",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "037"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "438099"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506206"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "502275"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "413131"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "419335"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "419334"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "459497"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "405063"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "551507"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "551509"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "526192"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "526194"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "526196"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "526197"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BaBien"
+    }, {
+      "DESCRIPTION" : "BaBien"
+    } ]
+  }
+}

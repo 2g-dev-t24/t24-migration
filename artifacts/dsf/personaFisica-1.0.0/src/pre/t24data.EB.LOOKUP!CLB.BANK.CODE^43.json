@@ -1,0 +1,44 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*3",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "000"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506303"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "636318"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "558306"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "526949"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "526951"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "526953"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EDENRED"
+    }, {
+      "DESCRIPTION" : "EDENRED"
+    } ]
+  }
+}

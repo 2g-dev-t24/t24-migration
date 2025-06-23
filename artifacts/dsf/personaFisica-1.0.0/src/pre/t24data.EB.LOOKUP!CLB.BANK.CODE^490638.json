@@ -1,0 +1,59 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*90638",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "090"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506199"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506305"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506306"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506307"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506332"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506333"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "588772"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "588773"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "588774"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "588775"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "588776"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "NU MEXICO"
+    }, {
+      "DESCRIPTION" : "NU MEXICO"
+    } ]
+  }
+}

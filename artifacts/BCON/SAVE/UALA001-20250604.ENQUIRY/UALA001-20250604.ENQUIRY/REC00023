@@ -1,0 +1,82 @@
+4,99
+CUSTOMER
+SECTOR EQ 1001 1100 1300 1301 1302 1303 1304
+
+
+NAME.2SHORT.NAMENAME.1@ID
+NombreApellido PaternoApellido MaternoNo de Cliente
+
+
+
+
+
+
+@IDNAME.2SHORT.NAMENAME.1ACCOUNT.OFFICERACCT.OFFR.NAME
+@IDNAME.2SHORT.NAMENAME.1ACCOUNT.OFFICERF ACCOUNT.OFFICER
+147914
+10R70L70L70L4R
+
+
+LLL
+
+No de ClienteNombres(s)Apellido PaternoApellido MaternoEjecutivo de Cuenta
+
+
+
+
+
+
+
+
+
+
+
+
+SS
+AA.FIND.ARRANGEMENT.AR
+CUSTOMER EQ @ID
+@ID 1
+
+6 123456
+
+0 
+0 
+0 
+0 
+1 1
+
+
+
+
+
+
+
+
+Busqueda Personas Físicas&lf;Busqueda Personas Físicas&lf;
+
+
+Busqueda Personas FísicasBusqueda Personas Físicas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6
+53588_USERUALA__OFS_BROWSERTC
+2505131758
+53588_USERUALA_OFS_BROWSERTC
+MX0010001
+1

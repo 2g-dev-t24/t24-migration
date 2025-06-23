@@ -1,0 +1,137 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40021",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "413405"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "413406"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "416502"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "426012"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "426513"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "456880"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491280"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491281"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491283"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491294"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491295"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491528"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491529"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493166"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493170"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "540956"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "541278"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "541286"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "541290"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547068"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547074"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547092"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547406"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547489"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491282"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "426514"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "452421"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "522174"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "421316"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "430967"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "474176"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491089"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "491284"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506229"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "483030"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506270"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "379525"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "HSBC"
+    }, {
+      "DESCRIPTION" : "HSBC"
+    } ]
+  }
+}

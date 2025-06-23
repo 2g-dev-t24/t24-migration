@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*29019",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "029"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506314"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CAJA POPULAR APASEO EL ALTO"
+    }, {
+      "DESCRIPTION" : "CAJA POPULAR APASEO EL ALTO"
+    } ]
+  }
+}

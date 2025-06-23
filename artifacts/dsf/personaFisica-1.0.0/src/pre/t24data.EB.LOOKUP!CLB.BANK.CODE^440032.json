@@ -1,0 +1,44 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40032",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "I"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "402318"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "425981"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "425982"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "512745"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "554764"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "480862"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "IXE BANCO"
+    }, {
+      "DESCRIPTION" : "IXE BANCO"
+    } ]
+  }
+}

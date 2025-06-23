@@ -1,0 +1,40 @@
+{
+  "header" : {
+    "id" : "ABC.FIRMA.ELECT",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ABC.FIRMA.ELECT"
+    }, {
+      "SHORT.NAME" : "ABC.FIRMA.ELECT"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "SI",
+      "REMARK" : [ {
+        "REMARK" : "YES"
+      }, {
+        "REMARK" : "SI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "NO",
+      "REMARK" : [ {
+        "REMARK" : "NO"
+      }, {
+        "REMARK" : "NO"
+      } ]
+    } ],
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "ABC.FIRMA.ELECT"
+    } ],
+    "CHAR.TYPE" : "A",
+    "NOINPUT.CHANGE.FLD" : "NOCHANGE",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

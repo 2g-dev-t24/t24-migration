@@ -579,4 +579,22 @@ private method AbcCtasAutorizadas ()
     jBC: ABC.CTAS.AUTORIZADAS
 }
 
+private method AbcParametrosBanxicoFields ()
+{
+    jBC: ABC.PARAMETROS.BANXICO.FIELDS
+}
 
+private method AbcParametrosBanxico ()
+{
+    jBC: ABC.PARAMETROS.BANXICO
+}
+
+private method AbcMotivoDevCecobanFields ()
+{
+    jBC: ABC.MOTIVO.DEV.CECOBAN.FIELDS
+}
+
+private method AbcMotivoDevCecoban ()
+{
+    jBC: ABC.MOTIVO.DEV.CECOBAN
+}

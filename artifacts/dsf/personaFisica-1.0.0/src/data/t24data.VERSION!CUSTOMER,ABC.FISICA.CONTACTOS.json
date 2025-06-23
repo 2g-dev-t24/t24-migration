@@ -1,0 +1,126 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.FISICA.CONTACTOS",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "L.CONTACT.NAMES-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Nombre de Contacto"
+      } ],
+      "TEXT.CHAR.MAX" : "18",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-57-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "PHONE.1-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Teléfono Domicilio"
+      } ],
+      "TEXT.CHAR.MAX" : "18",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-38-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "SMS.1-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Celular"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "EMAIL.1-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Correo Electrónico"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-76-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "OFF.PHONE-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Teléfono Oficina"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "FAX.1-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Ext"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "L.CONTACT.POS-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Puesto"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-74-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "L.EMAIL.SMS.NOT",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "¿Desea Recibir Notificaciones?"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-34-"
+      } ],
+      "TABLE.LINE" : "7"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Detalla de Contacto"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Detalle de Contacto"
+    } ]
+  }
+}

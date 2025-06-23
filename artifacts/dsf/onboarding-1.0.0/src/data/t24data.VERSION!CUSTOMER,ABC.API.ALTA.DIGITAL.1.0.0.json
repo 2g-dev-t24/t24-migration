@@ -1,0 +1,411 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.API.ALTA.DIGITAL.1.0.0",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "ABC.VALIDA.CLIENTE.EXISTENTE"
+    }, {
+      "INPUT.ROUTINE" : "ABC.VAL.CUS"
+    }, {
+      "INPUT.ROUTINE" : "ABC.VALIDA.CANAL.CUS"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "SECTOR",
+      "AUT.NEW.CONTENT" : "1001"
+    }, {
+      "AUTOM.FIELD.NO" : "INDUSTRY",
+      "AUT.NEW.CONTENT" : "8110"
+    }, {
+      "AUTOM.FIELD.NO" : "CUSTOMER.STATUS",
+      "AUT.NEW.CONTENT" : "2"
+    }, {
+      "AUTOM.FIELD.NO" : "BIRTH.INCORP.DATE",
+      "AUT.NEW.CONTENT" : "!TODAY"
+    }, {
+      "AUTOM.FIELD.NO" : "NATIONALITY",
+      "AUT.NEW.CONTENT" : "MX"
+    }, {
+      "AUTOM.FIELD.NO" : "RESIDENCE",
+      "AUT.NEW.CONTENT" : "MX"
+    }, {
+      "AUTOM.FIELD.NO" : "LANGUAGE",
+      "AUT.NEW.CONTENT" : "2"
+    }, {
+      "AUTOM.FIELD.NO" : "ACCOUNT.OFFICER",
+      "AUT.NEW.CONTENT" : "90250"
+    }, {
+      "AUTOM.FIELD.NO" : "TARGET",
+      "AUT.NEW.CONTENT" : "1"
+    }, {
+      "AUTOM.FIELD.NO" : "CNBV.SECTOR",
+      "AUT.NEW.CONTENT" : "32"
+    }, {
+      "AUTOM.FIELD.NO" : "ADDRESS.COUNTRY",
+      "AUT.NEW.CONTENT" : "MX"
+    }, {
+      "AUTOM.FIELD.NO" : "CUSTOMER.CURRENCY-1",
+      "AUT.NEW.CONTENT" : "MXN"
+    }, {
+      "AUTOM.FIELD.NO" : "ITF.TAX.EXEMPT",
+      "AUT.NEW.CONTENT" : "NO"
+    }, {
+      "AUTOM.FIELD.NO" : "RISK.LEVEL-1",
+      "AUT.NEW.CONTENT" : "1"
+    }, {
+      "AUTOM.FIELD.NO" : "LEGAL.DOC.NAME-1",
+      "AUT.NEW.CONTENT" : "1"
+    }, {
+      "AUTOM.FIELD.NO" : "ADDRESS.TYPE",
+      "AUT.NEW.CONTENT" : "6"
+    }, {
+      "AUTOM.FIELD.NO" : "REL.PERSONA.EXP",
+      "AUT.NEW.CONTENT" : "NO"
+    }, {
+      "AUTOM.FIELD.NO" : "L.PLD.FUN.PUB",
+      "AUT.NEW.CONTENT" : "NO"
+    }, {
+      "AUTOM.FIELD.NO" : "L.EMAIL.SMS.NOT",
+      "AUT.NEW.CONTENT" : "S"
+    }, {
+      "AUTOM.FIELD.NO" : "COUNTRY-1",
+      "AUT.NEW.CONTENT" : "MX"
+    }, {
+      "AUTOM.FIELD.NO" : "MNEMONIC",
+      "AUT.NEW.CONTENT" : "@ABC.GENERA.MNEMONIC"
+    }, {
+      "AUTOM.FIELD.NO" : "GROUP.CLASSIFIC",
+      "AUT.NEW.CONTENT" : "4"
+    }, {
+      "AUTOM.FIELD.NO" : "L.TIP.IPAB.GARA",
+      "AUT.NEW.CONTENT" : "SI"
+    }, {
+      "AUTOM.FIELD.NO" : "L.SECTOR.ECO",
+      "AUT.NEW.CONTENT" : "8100"
+    }, {
+      "AUTOM.FIELD.NO" : "CUSTOMER.TYPE",
+      "AUT.NEW.CONTENT" : "ACTIVE"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "SECTOR",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Cliente"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-53-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "CUSTOMER.STATUS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Estatus del Cliente"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-47-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "BIRTH.INCORP.DATE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Alta del Cliente"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "SHORT.NAME-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Paterno"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-113-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "NAME.1-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Apellido Materno"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-113-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "NAME.2-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Nombre(s)"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-113-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "DATE.OF.BIRTH",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Nacimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "DISTRICT.NAME",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Estado de la República de Nacimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "GENDER",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Sexo"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-53-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "EXTERN.CUS.ID-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "C.U.R.P."
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-88-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "SMS.1-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Celular"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-60-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "EMAIL.1-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Correo"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-93-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "LEGAL.DOC.NAME-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Identificación"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "LEGAL.ID-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Número de Identificación"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "LEGAL.ISS.DATE-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Válida Desde"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "FIELD.NO" : "LEGAL.EXP.DATE-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Expiración"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "OCCUPATION-1",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.OCUPACION",
+      "TEXT" : [ {
+        "TEXT" : "Ocupacion"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "16"
+    }, {
+      "FIELD.NO" : "COUNTRY-1",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "%COUNTRY",
+      "TEXT" : [ {
+        "TEXT" : "Pais"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "17"
+    }, {
+      "FIELD.NO" : "L.CANAL",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Canal de Originación"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "18"
+    }, {
+      "FIELD.NO" : "L.DOM.FISC",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "CP Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "19"
+    }, {
+      "FIELD.NO" : "L.USO.CFDI",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Uso CFDI"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "20"
+    } ],
+    "ASSOC.VERSION" : [ {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.FISICA.DIR.NIVEL2"
+    }, {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.AUDIT"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "MULTI.POSSIBLE" : "Y",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "ALTA.DIGITAL"
+    } ],
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "CUSTOMER.STATUS"
+    }, {
+      "MANDATORY.FIELD" : "NAME.2"
+    }, {
+      "MANDATORY.FIELD" : "NATIONALITY"
+    }, {
+      "MANDATORY.FIELD" : "RESIDENCE"
+    }, {
+      "MANDATORY.FIELD" : "ACCOUNT.OFFICER"
+    }, {
+      "MANDATORY.FIELD" : "STREET"
+    }, {
+      "MANDATORY.FIELD" : "POST.CODE"
+    }, {
+      "MANDATORY.FIELD" : "GENDER"
+    }, {
+      "MANDATORY.FIELD" : "DATE.OF.BIRTH"
+    }, {
+      "MANDATORY.FIELD" : "L.EMAIL.SMS.NOT"
+    }, {
+      "MANDATORY.FIELD" : "ITF.TAX.EXEMPT"
+    }, {
+      "MANDATORY.FIELD" : "SMS.1"
+    }, {
+      "MANDATORY.FIELD" : "CNBV.SECTOR"
+    }, {
+      "MANDATORY.FIELD" : "SUB.DEPARTMENT"
+    }, {
+      "MANDATORY.FIELD" : "LEGAL.ID"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.GET.ADRESS.FISICA.DIGITAL",
+      "VALIDATION.FLD" : "POST.CODE-1"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.EMAIL",
+      "VALIDATION.FLD" : "EMAIL.1"
+    }, {
+      "VALIDATION.RTN" : "ABC.NUM.CLIENTE.UNICO",
+      "VALIDATION.FLD" : "GENDER"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.EDO.CURP",
+      "VALIDATION.FLD" : "EXTERN.CUS.ID-1"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.NACIONALIDAD",
+      "VALIDATION.FLD" : "NATIONALITY"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.NACIONALIDAD",
+      "VALIDATION.FLD" : "RESIDENCE"
+    } ],
+    "ID.RTN" : [ {
+      "ID.RTN" : "ABC.CUST.YAEXISTE"
+    } ]
+  }
+}

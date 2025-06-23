@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.CALC.ING.TOTAL.CUST",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "ABC.CALC.ING.TOTAL.CUST"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

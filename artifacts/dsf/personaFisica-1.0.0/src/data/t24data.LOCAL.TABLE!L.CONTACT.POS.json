@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.CONTACT.POS",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.CONTACT.POS"
+    }, {
+      "SHORT.NAME" : "L.CONTACT.POS"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "L.CONTACT.POS"
+    }, {
+      "DESCRIPTION" : "L.CONTACT.POS"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "36"
+  }
+}

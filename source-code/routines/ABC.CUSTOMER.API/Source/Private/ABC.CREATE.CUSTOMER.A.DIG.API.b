@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo0ODkxMjM2NTA6Q3AxMjUyOjE3NDc4NjYxODc5MTk6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 21 May 2025 19:23:07
+* @ValidationCode : MjotNTczNzAwMjgzOkNwMTI1MjoxNzUwMjg1NTkwMjkwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 18 Jun 2025 19:26:30
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -67,8 +67,10 @@ MAP.CUSTOMER:
     R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.legalExpDate)
     R.CUSTOMER<ST.Customer.Customer.EbCusTaxId>                 = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.taxId)
     R.CUSTOMER<ST.Customer.Customer.EbCusOccupation>            = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.occupation)
-    R.CUSTOMER<ST.Customer.Customer.EbCusOtherNationality>      = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.otherNationality)
+    R.CUSTOMER<ST.Customer.Customer.EbCusCountry>               = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.otherNationality)
     R.CUSTOMER<ST.Customer.Customer.EbCusNationality>           = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.nationality)
+    R.CUSTOMER<ST.Customer.Customer.EbCusDistrictName>          = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.lugNac)
+
     R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef>              = Y.LOCAL.REF
 
    
@@ -80,7 +82,7 @@ CARGAR.LOCAL.FIELDS:
 *-----------------------------------------------------------------------------
 
     V.APP      = 'CUSTOMER'
-    V.FLD.NAME = 'L.DOM.FISC' : @VM : 'L.USO.CFDI' : @VM : 'L.CANAL' : @VM : 'BIRTH.PROVINCE'
+    V.FLD.NAME = 'L.DOM.FISC' : @VM : 'L.USO.CFDI' : @VM : 'L.CANAL'
     V.FLD.POS  = ''
 
     EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, V.FLD.POS)
@@ -88,14 +90,15 @@ CARGAR.LOCAL.FIELDS:
     Y.POS.L.DOM.FISC        = V.FLD.POS<1,1>
     Y.POS.L.USO.CFDI        = V.FLD.POS<1,2>
     Y.POS.L.CANAL           = V.FLD.POS<1,3>
-    Y.POS.BIRTH.PROVINCE    = V.FLD.POS<1,4>
+    
 
     Y.LOCAL.REF         = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusLocalRef)
     
     Y.LOCAL.REF<1,Y.POS.L.DOM.FISC>     = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.domFisc)
     Y.LOCAL.REF<1,Y.POS.L.USO.CFDI>     = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.usoCfdi)
     Y.LOCAL.REF<1,Y.POS.L.CANAL>        = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.canal)
-    Y.LOCAL.REF<1,Y.POS.BIRTH.PROVINCE> = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.lugNac)
+  
+    
 
 RETURN
 
@@ -104,8 +107,8 @@ MAP.MXBASE:
 *** <desc>Mapeo campos MXBASE </desc>
 *-----------------------------------------------------------------------------
     R.MAP.MXBASE = ''
-    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.SatTaxRegime>     = 'BANXICO.ECO.ACTIVITY*':EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.regFiscal)
-    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.EconomicActivity> = EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.actividadEcono)
+    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.SatTaxRegime>     = 'SAT.TAX.REGIME*':EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.regFiscal)
+    R.MAP.MXBASE<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.BanxicoEcoActivity> = 'BANXICO.ECO.ACTIVITY*':EB.SystemTables.getRNew(AbcTable.AbcCustomerAbcAltaDigitalApi.actividadEcono)
     
 
 RETURN
@@ -143,14 +146,14 @@ CREAR.OFS.MXBASE:
 *-----------------------------------------------------------------------------
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'MXBASE.ADD.CUSTOMER.DETAILS'
-    Y.OFS.VERSION   = 'MXBASE.ADD.CUSTOMER.DETAILS,ALTA.DIGITAL'
+    Y.OFS.VERSION   = 'MXBASE.ADD.CUSTOMER.DETAILS,ABC.API.ALTA.DIGITAL.1.0.0'
     Y.RECORD        = ''
     Y.NO.OF.AUTH    = 0
     Y.OFS.RECORD    = ''
     Y.GTSMODE       = ''
     Error           = ''
     EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.MAP.MXBASE,Y.OFS.REQUEST)
-
+ 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
 
     IF Error THEN

@@ -1,0 +1,42 @@
+{
+  "header" : {
+    "id" : "ABC.PER.COTITULAR",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "SECTOR.CODE"
+      } ],
+      "FIELD.NAME" : "SECTOR.CODE",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Codigo Sector"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "DESCRIPTION"
+      } ],
+      "FIELD.NAME" : "DESCRIPTION",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Descripcion"
+      } ],
+      "TYPE" : "L"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "@ID RG 1301 1304"
+    } ],
+    "FILE.NAME" : "SECTOR"
+  }
+}

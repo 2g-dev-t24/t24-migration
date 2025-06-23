@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "USER",
+    "dsfApiType" : "LOCAL.REF.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.TABLE.NO" : [ {
+      "LOCAL.TABLE.NO" : "IUB"
+    }, {
+      "LOCAL.TABLE.NO" : "L.ROL"
+    }, {
+      "LOCAL.TABLE.NO" : "L.ABC.NO.EMPL"
+    } ]
+  }
+}

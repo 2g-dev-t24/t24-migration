@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.ESP.SUB.SECTOR",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ESP.SUB.SECTOR"
+    }, {
+      "SHORT.NAME" : "ESP.SUB.SECTOR"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CUST.ESP.SUB.SECTOR"
+    }, {
+      "DESCRIPTION" : "CUST.ESP.SUB.SECTOR"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "50"
+  }
+}

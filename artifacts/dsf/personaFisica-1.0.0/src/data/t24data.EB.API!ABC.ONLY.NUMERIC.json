@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.ONLY.NUMERIC",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "ABC.ONLY.NUMERIC"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

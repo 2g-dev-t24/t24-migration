@@ -1,0 +1,183 @@
+{
+  "header" : {
+    "id" : "ABC.INFO.VAL.CUS",
+    "dsfApiType" : "STANDARD.SELECTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SYS.FIELD.NAME" : [ {
+      "SYS.DISPLAY.FMT" : "35L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "0"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "@ID"
+    }, {
+      "SYS.DISPLAY.FMT" : "35L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "0"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "ABC.RFC.ID"
+    }, {
+      "SYS.DISPLAY.FMT" : "13L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "1"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "RFC"
+    }, {
+      "SYS.DISPLAY.FMT" : "20L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "2"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "CURP"
+    }, {
+      "SYS.DISPLAY.FMT" : "11L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "3"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "CLIENTE"
+    }, {
+      "SYS.DISPLAY.FMT" : "10L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "4"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "GENDER"
+    }, {
+      "SYS.DISPLAY.FMT" : "11L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "5"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "DATE.OF.BIRTH"
+    }, {
+      "SYS.DISPLAY.FMT" : "2L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "6"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "ESTADO"
+    }, {
+      "SYS.DISPLAY.FMT" : "40L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "7"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "SHORT.NAME"
+    }, {
+      "SYS.DISPLAY.FMT" : "40L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "8"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "NAME.1"
+    }, {
+      "SYS.DISPLAY.FMT" : "40L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "9"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "NAME.2"
+    }, {
+      "SYS.DISPLAY.FMT" : "80L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "10"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "NOM.PER.MORAL"
+    } ]
+  }
+}

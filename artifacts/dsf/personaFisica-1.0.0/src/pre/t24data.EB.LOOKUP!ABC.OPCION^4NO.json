@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "ABC.OPCION*NO",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "NO"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Conoce a tu Cliente"
+    }, {
+      "DESCRIPTION" : "Conoce a tu Cliente"
+    } ]
+  }
+}

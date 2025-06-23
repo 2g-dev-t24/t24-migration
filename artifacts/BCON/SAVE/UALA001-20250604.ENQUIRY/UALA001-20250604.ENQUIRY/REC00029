@@ -1,0 +1,82 @@
+4,9
+CUSTOMER
+SECTOR EQ 1001CUSTOMER.TYPE EQ ACTIVE
+
+
+
+
+
+
+
+
+
+
+CUSTOMERIDHDRSHORT.NAMEACCOUNT.OFFICERACCOUNT.OFFICERHYPHENDAO.HYPHENDISP.DAORECORD.STATUSINPUTTERZERORECORDSCOMPANY.BOOKSECTORVER.1VER.2DECIDE.VER
+@ID"Actualiza Cliente Persona Fisica"SHORT.NAMEACCOUNT.OFFICERF ACCOUNT.OFFICER" - "C ACCT.OFFICER : HYPHENC DAO.HYPHEN : ACCT.OFF.NAMERECORD.STATUSINPUTTER"No Unauthorised Customers "COMPANY.BOOKSECTOR"MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIF.BUSINESS""MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIFICATION.IND"IF SECTOR EQ "1700" VER.1 VER.2
+11,0234516
+10R70L4R4R4L40L11L4R
+F _,2,1
+
+
+NONE
+Customer NoNo DE CLIENTENameNombre ClienteEjecutivoRelationship OfficerRecord StatusInputterCustomer Branch Name
+CLASS-ENQ.H.TITLECLASS-ENQ.NORECS
+HEADERHEADER
+
+
+
+
+
+
+
+
+
+
+SSSSMSS
+CUSTOMER,ABC.FISICA.ACTUALIZA I CUSTOMERIDMXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.CONOCE.CLIENTE I CUSTOMERID
+
+CUSTOMERID 1CUSTOMERID 1
+Actualiza Cliente[edit.gifActualiza Cliente[edit.gifActualiza Datos Adicionales[edit.gifActualiza Datos Adicionales[edit.gif
+15 123456789101213141516
+
+1 10
+0 
+1 11
+0 
+1 1
+
+
+
+
+
+
+
+
+Unauthorised Customer
+ZERORECORDDISPLAYNO.SELECTION
+
+Unauthorised Customer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9
+53876_USERUALA__OFS_BROWSERTC
+2504301556
+53876_USERUALA_OFS_BROWSERTC
+MX0010001
+1

@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "ABC.ASSIGN.DAO.CUST",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ { }, {
+      "SCREEN.TITLE" : "ABC.ASSIGN.DAO.CUST"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "S",
+    "APPL.FOR.SUBR" : [ {
+      "APPL.FOR.SUBR" : "CUSTOMER"
+    } ]
+  }
+}

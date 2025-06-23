@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.EMP.COD.POS",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EMP.COD.POS"
+    }, {
+      "SHORT.NAME" : "EMP.COD.POS"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EMPRESA CODIGO POSTAL"
+    }, {
+      "DESCRIPTION" : "EMPRESA CODIGO POSTAL"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "5"
+  }
+}

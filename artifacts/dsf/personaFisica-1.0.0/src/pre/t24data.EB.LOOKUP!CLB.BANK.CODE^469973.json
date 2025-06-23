@@ -1,0 +1,44 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*69973",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "069"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "637480"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "511765"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "535072"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506202"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506302"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "420839"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "TOKA INVESTMENT"
+    }, {
+      "DESCRIPTION" : "TOKA INVESTMENT"
+    } ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "L.PLD.FUN.PUB",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.PLD.FUN.PUB"
+    }, {
+      "SHORT.NAME" : "L.PLD.FUN.PUB"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "SI",
+      "REMARK" : [ {
+        "REMARK" : "SI"
+      }, {
+        "REMARK" : "SI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "NO",
+      "REMARK" : [ {
+        "REMARK" : "NO"
+      }, {
+        "REMARK" : "NO"
+      } ]
+    } ],
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "PLD PREGUNTA FUNCION PUBLICA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

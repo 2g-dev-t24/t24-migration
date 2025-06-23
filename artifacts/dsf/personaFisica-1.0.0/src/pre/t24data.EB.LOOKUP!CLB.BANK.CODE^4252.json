@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*252",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "000"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "522375"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "627180"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "506430"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854881"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "854899"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "881006"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "881052"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "SOCIEDAD DE FAC MULTIROTATIVAS SAPI"
+    }, {
+      "DESCRIPTION" : "SOCIEDAD DE FAC MULTIROTATIVAS SAPI"
+    } ]
+  }
+}

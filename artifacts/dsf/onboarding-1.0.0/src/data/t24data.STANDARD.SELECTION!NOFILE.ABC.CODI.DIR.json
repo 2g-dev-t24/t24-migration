@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "NOFILE.ABC.CODI.DIR",
+    "dsfApiType" : "STANDARD.SELECTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "USR.FIELD.NAME" : [ {
+      "USR.TYPE" : "D",
+      "USR.DISPLAY.FMT" : "10000L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "0"
+      } ],
+      "USR.FIELD.NAME" : "@ID"
+    }, {
+      "USR.TYPE" : "R",
+      "USR.DISPLAY.FMT" : "1000",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "ABC.CODI.DATOS.DIR"
+      } ],
+      "USR.FIELD.NAME" : "CODIGO.POSTAL"
+    }, {
+      "USR.TYPE" : "D",
+      "USR.DISPLAY.FMT" : "100",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "1"
+      } ],
+      "USR.FIELD.NAME" : "COLONIA"
+    } ]
+  }
+}

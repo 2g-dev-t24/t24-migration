@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "NOMBRES.FISCAL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "NOMBRES.FISCAL"
+    }, {
+      "SHORT.NAME" : "NOMBRES.FISCAL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "NOMBRES.FISCAL"
+    }, {
+      "DESCRIPTION" : "NOMBRES.FISCAL"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

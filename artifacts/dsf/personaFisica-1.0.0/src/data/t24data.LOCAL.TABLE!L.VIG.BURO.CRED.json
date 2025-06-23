@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "L.VIG.BURO.CRED",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.VIG.BURO.CRED"
+    }, {
+      "SHORT.NAME" : "L.VIG.BURO.CRED"
+    } ],
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "VIGENCIA DE CONSULTA DE BURO CREDIT"
+    } ],
+    "CHAR.TYPE" : "D",
+    "MAXIMUM.CHAR" : "10"
+  }
+}

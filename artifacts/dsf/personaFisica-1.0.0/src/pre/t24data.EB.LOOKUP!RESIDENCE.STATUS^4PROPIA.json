@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "RESIDENCE.STATUS*PROPIA",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Propia"
+    }, {
+      "DESCRIPTION" : "PROPIA"
+    } ]
+  }
+}

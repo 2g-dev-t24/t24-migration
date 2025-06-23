@@ -1,0 +1,229 @@
+{
+  "header" : {
+    "id" : "ABC.E.PF.BIOM.ALTA",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "CUSTOMER,ABC.FISICA.INP I F3",
+      "LABEL.FIELD" : "NOMBRE 4",
+      "SEL.CRIT" : [ {
+        "SEL.CRIT" : "CURRENT.APEPAT>APE.PAT"
+      }, {
+        "SEL.CRIT" : "CURRENT.APEMAT>APE.MAT"
+      }, {
+        "SEL.CRIT" : "CURRENT.NOMBRES>NOMBRES"
+      }, {
+        "SEL.CRIT" : "CURRENT.FECNAC>FEC.NAC"
+      }, {
+        "SEL.CRIT" : "CURRENT.SEXO>SEXO"
+      }, {
+        "SEL.CRIT" : "CURRENT.IUB>IUB"
+      }, {
+        "SEL.CRIT" : "CURRENT.CURP>CURP"
+      }, {
+        "SEL.CRIT" : "CURRENT.ESTNAC>EST.NAC"
+      }, {
+        "SEL.CRIT" : "CURRENT.TIPIDE>TIP.IDE"
+      }, {
+        "SEL.CRIT" : "CURRENT.NUMID>NUM.ID"
+      }, {
+        "SEL.CRIT" : "CURRENT.FECEMI>FEC.EMI"
+      }, {
+        "SEL.CRIT" : "CURRENT.FECVEN>FEC.VEN"
+      }, {
+        "SEL.CRIT" : "CURRENT.CELULAR>CELULAR"
+      }, {
+        "SEL.CRIT" : "CURRENT.EMAIL>EMAIL"
+      } ],
+      "NXT.DESC" : [ {
+        "NXT.DESC" : "Alta Persona Fisica[custscv.gif"
+      } ]
+    } ],
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "IUB"
+      } ],
+      "SELECTION.FLDS" : "IUB",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "500L",
+      "SINGLE.MULTI" : "S",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Apellido Paterno"
+      }, {
+        "FIELD.LBL" : "IUB"
+      } ],
+      "TYPE" : "L",
+      "DISPLAY.BREAK" : "ONCE"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"Alta Cliente con Biometricos\""
+      } ],
+      "FIELD.NAME" : "HEADER",
+      "COLUMN" : "1,0",
+      "FIELD.DISP.TYPE" : "CLASS-ENQ.H.TITLE",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "IUB"
+      } ],
+      "SECTION" : "HEADER"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,1,1"
+      } ],
+      "FIELD.NAME" : "IUB",
+      "LENGTH.MASK" : "16R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "IUB"
+      }, {
+        "FIELD.LBL" : "IUB"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,2,1"
+      } ],
+      "FIELD.NAME" : "NOMBRE",
+      "LENGTH.MASK" : "100R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "NOMBRE"
+      }, {
+        "FIELD.LBL" : "NOMBRE"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,3,1"
+      } ],
+      "FIELD.NAME" : "APE.PAT"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,4,1"
+      } ],
+      "FIELD.NAME" : "APE.MAT"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,5,1"
+      } ],
+      "FIELD.NAME" : "NOMBRES",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Nombre"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,6,1"
+      } ],
+      "FIELD.NAME" : "CURP"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,7,1"
+      } ],
+      "FIELD.NAME" : "FEC.NAC"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,8,1"
+      } ],
+      "FIELD.NAME" : "EST.NAC"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,9,1"
+      } ],
+      "FIELD.NAME" : "SEXO"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,10,1"
+      } ],
+      "FIELD.NAME" : "TIP.IDE"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,11,1"
+      } ],
+      "FIELD.NAME" : "NUM.ID"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,12,1"
+      } ],
+      "FIELD.NAME" : "FEC.EMI"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,13,1"
+      } ],
+      "FIELD.NAME" : "FEC.VEN"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,14,1"
+      } ],
+      "FIELD.NAME" : "CELULAR"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,15,1"
+      } ],
+      "FIELD.NAME" : "EMAIL"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Consulta Registro Biometricos"
+    }, {
+      "SHORT.DESC" : "Consulta Registro Biometricos"
+    } ],
+    "FILE.NAME" : "NOFILE.CUST.BIOM.ALTA"
+  }
+}

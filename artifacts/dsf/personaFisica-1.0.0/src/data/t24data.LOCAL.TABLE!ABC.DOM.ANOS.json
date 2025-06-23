@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ABC.DOM.ANOS",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ABC.DOM.ANOS"
+    }, {
+      "SHORT.NAME" : "ABC.DOM.ANOS"
+    } ],
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "anos en el docimicilio"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

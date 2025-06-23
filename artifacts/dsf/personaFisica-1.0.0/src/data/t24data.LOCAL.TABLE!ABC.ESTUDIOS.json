@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "ABC.ESTUDIOS",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ABC.ESTUDIOS"
+    }, {
+      "SHORT.NAME" : "ABC.ESTUDIOS"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Grado maximo de estudios"
+    }, {
+      "DESCRIPTION" : "Grado maximo de estudios"
+    } ],
+    "VIRTUAL.TABLE" : "ABC.ESTUDIOS",
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

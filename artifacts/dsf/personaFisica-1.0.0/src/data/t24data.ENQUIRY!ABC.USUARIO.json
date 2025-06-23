@@ -1,0 +1,64 @@
+{
+  "header" : {
+    "id" : "ABC.USUARIO",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SELECTION.FLDS" : "SIGN.ON.NAME"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "SIGN.ON.NAME"
+      } ],
+      "FIELD.NAME" : "SIGN.ON.NAME",
+      "LENGTH.MASK" : "16L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "5"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IDESC L.ROL"
+      } ],
+      "FIELD.NAME" : "L.ROL",
+      "COLUMN" : "7",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ROL"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IDESC IUB"
+      } ],
+      "FIELD.NAME" : "IUB",
+      "LENGTH.MASK" : "11R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "USER.NAME"
+      } ],
+      "FIELD.NAME" : "USER.NAME",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "15",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Nombre"
+      }, {
+        "FIELD.LBL" : "Nombre"
+      } ]
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "LOG IN BIOMETRICOS"
+    }, {
+      "SHORT.DESC" : "LOG IN BIOMETRICOS"
+    } ],
+    "FILE.NAME" : "USER"
+  }
+}

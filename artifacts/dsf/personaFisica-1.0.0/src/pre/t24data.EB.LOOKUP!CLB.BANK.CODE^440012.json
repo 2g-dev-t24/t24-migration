@@ -1,0 +1,290 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40012",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455501"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "542015"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "546688"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "542073"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455502"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455525"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455526"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455527"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "415327"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "418073"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "418075"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "418094"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "444085"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "409728"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "410180"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "410181"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "441311"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "441314"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455500"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455503"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455504"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455505"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455506"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455507"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455508"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455513"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455514"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455515"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455518"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455519"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455529"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455540"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455545"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493160"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493161"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "493162"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "494398"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "542010"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "542977"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "544053"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "544551"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547077"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547086"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547095"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547155"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547156"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "547492"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "409851"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "410177"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "415231"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "441312"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "441313"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446115"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446116"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446117"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455509"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455510"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455511"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455533"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455537"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "418093"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "446118"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "411808"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "418078"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "522498"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "418080"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "418077"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "418090"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "408341"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "408343"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "444086"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "444087"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477210"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477211"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477212"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477213"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477214"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477291"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "477292"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "455517"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "418076"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "408340"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "554629"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "535875"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "481514"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "481515"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "481516"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "481517"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BBVA MEXICO"
+    }, {
+      "DESCRIPTION" : "BBVA MEXICO"
+    } ]
+  }
+}

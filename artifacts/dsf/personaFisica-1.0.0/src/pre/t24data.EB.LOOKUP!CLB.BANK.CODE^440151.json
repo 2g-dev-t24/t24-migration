@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "CLB.BANK.CODE*40151",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "TIPO",
+      "DATA.VALUE" : "040"
+    }, {
+      "DATA.NAME" : "BAN.ESTATUS",
+      "DATA.VALUE" : "A"
+    }, {
+      "DATA.NAME" : "BIN",
+      "DATA.VALUE" : "511852"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "DONDE"
+    }, {
+      "DESCRIPTION" : "DONDE"
+    } ]
+  }
+}

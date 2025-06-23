@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.GROUP.CLASSIFIC",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "GROUP.CLASSIFIC"
+    }, {
+      "SHORT.NAME" : "GROUP.CLASSIFIC"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "L.GROUP.CLASSIFIC"
+    }, {
+      "DESCRIPTION" : "L.GROUP.CLASSIFIC"
+    } ],
+    "VIRTUAL.TABLE" : "CUSTOMER.GROUPS",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

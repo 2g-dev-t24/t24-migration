@@ -1,0 +1,65 @@
+{
+  "header" : {
+    "id" : "ABC.VALIDACION.BIOMETRICOS,REGISTRO",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "CUC",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "CUC"
+      } ],
+      "TEXT.CHAR.MAX" : "20",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-69-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "RESPUESTA",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Respuesta"
+      } ],
+      "TEXT.CHAR.MAX" : "20",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-94-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "VERIFICADO",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Verificado"
+      } ],
+      "TEXT.CHAR.MAX" : "20",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-94-"
+      } ],
+      "TABLE.LINE" : "2"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Validacion Biometricos"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "VERIFICADO"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1"
+  }
+}

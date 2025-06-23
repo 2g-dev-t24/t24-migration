@@ -1,0 +1,54 @@
+{
+  "header" : {
+    "id" : "ABC.USO.CFDI*D05",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "APLICA.PERS.FISICA",
+      "DATA.VALUE" : "SI"
+    }, {
+      "DATA.NAME" : "APLICA.PERS.MORAL",
+      "DATA.VALUE" : "NO"
+    }, {
+      "DATA.NAME" : "FECHA.INI.VIGENCIA",
+      "DATA.VALUE" : "20220101"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT",
+      "DATA.VALUE" : "ABC.REGIMEN.FISCAL.PF*605"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT",
+      "DATA.VALUE" : "ABC.REGIMEN.FISCAL.PF*606"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT",
+      "DATA.VALUE" : "ABC.REGIMEN.FISCAL.PF*608"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT",
+      "DATA.VALUE" : "ABC.REGIMEN.FISCAL.PF*611"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT",
+      "DATA.VALUE" : "ABC.REGIMEN.FISCAL.PF*612"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT",
+      "DATA.VALUE" : "ABC.REGIMEN.FISCAL.PF*614"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT",
+      "DATA.VALUE" : "ABC.REGIMEN.FISCAL.PF*607"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT",
+      "DATA.VALUE" : "ABC.REGIMEN.FISCAL.PF*615"
+    }, {
+      "DATA.NAME" : "REG.FIS.RECEPT",
+      "DATA.VALUE" : "ABC.REGIMEN.FISCAL.PF*625"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Intereses reales efectivamente pagados por creditos hipotecarios"
+    } ]
+  }
+}

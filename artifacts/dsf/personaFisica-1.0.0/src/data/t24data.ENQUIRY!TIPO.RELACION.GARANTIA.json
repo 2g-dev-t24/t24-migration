@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "TIPO.RELACION.GARANTIA",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "OTHER.INFO"
+      } ],
+      "SELECTION.FLDS" : "OTHER.INFO",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "LOOKUP.ID"
+      } ],
+      "FIELD.NAME" : "LOOKUP.ID",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "DESCRIPTION"
+      } ],
+      "FIELD.NAME" : "DESCRIPTION",
+      "LENGTH.MASK" : "65L",
+      "COLUMN" : "4",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Descripcion"
+      } ],
+      "TYPE" : "L"
+    } ],
+    "FILE.NAME" : "EB.LOOKUP"
+  }
+}

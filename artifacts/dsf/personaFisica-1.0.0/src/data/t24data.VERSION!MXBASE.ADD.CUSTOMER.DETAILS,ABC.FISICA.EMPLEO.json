@@ -1,0 +1,117 @@
+{
+  "header" : {
+    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.EMPLEO",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "BANXICO.ECO.ACTIVITY",
+      "ENQ.SELECTION" : "ID.CUSTOMER EQ @ID",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.GET.SECTOR.ECONOMICO",
+      "TEXT" : [ {
+        "TEXT" : "Actividad Economica"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "POPUP.DROPDOWN"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "BANXICO.ECO.ACTIVITY.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Codigo Actividad Económica"
+      } ],
+      "TEXT.CHAR.MAX" : "31",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "CNBV.ECO.ACTIVITY",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Sector Economico Banxico"
+      } ],
+      "TEXT.CHAR.MAX" : "24",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-62-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "CNBV.ECO.ACTIVITY.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Código Sector Económico"
+      } ],
+      "TEXT.CHAR.MAX" : "26",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-49-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "SAT.TAX.REGIME",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.REGIMEN",
+      "TEXT" : [ {
+        "TEXT" : "Regimen Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "14",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-52-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "SAT.TAX.REGIME.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Codigo de Regimen Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "24",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-47-"
+      } ],
+      "TABLE.LINE" : "5"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Otros Adicionales Empleo"
+    }, {
+      "DESCRIPTION" : "Otros Adicionales Empleo"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "BANXICO.ECO.ACTIVITY.CODE"
+    }, {
+      "NOINPUT.FIELD" : "CNBV.ECO.ACTIVITY.CODE"
+    }, {
+      "NOINPUT.FIELD" : "SAT.TAX.REGIME.CODE"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "GTS.CONTROL" : "1",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Detalle de Empleo"
+    } ],
+    "CHECK.REC.RTN" : [ {
+      "CHECK.REC.RTN" : "ABC.CHECK.SET.CUS"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.VAL.SECTOR.ECONOMICO",
+      "VALIDATION.FLD" : "BANXICO.ECO.ACTIVITY"
+    } ]
+  }
+}
