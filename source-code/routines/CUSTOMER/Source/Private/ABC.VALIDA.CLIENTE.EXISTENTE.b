@@ -89,7 +89,6 @@ PROCESO:
     Y.DATE.BIRTH = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusDateOfBirth)
 
     IF Y.RFC EQ '' THEN
-        
         ABC.BP.AbcGeneraRfc('', Y.RFC, '' )
         Y.RFC.BAN = '1'
     END
