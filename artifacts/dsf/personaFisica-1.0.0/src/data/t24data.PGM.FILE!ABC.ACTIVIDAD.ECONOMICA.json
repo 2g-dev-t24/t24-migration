@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.ACTIVIDAD.ECONOMICA",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "COLONIA"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "H"
+  }
+}
