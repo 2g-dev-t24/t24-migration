@@ -13,7 +13,7 @@ SUBROUTINE ABC.CUENTAS.DESTINO.FIELDS
 
     EB.Template.TableAddoptionsfield('TIPO.CTA','CUENTA_CLABE_TARJETA DE CREDITO_TARJETA DEBITO_CELULAR', '','')
     EB.Template.TableAddfielddefinition('BANCO', '5', 'ACC', '')
-    EB.Template.FieldSetcheckfile("ABC.BANCOS":FM:ABC.BANCOS.BANCO:FM:'A.')
+    EB.Template.FieldSetcheckfile("ABC.BANCOS")
     EB.Template.TableAddoptionsfield('STATUS','ACTIVA_INACTIVA', '','')
     EB.Template.TableAddfielddefinition('ALIAS','50', '', '')
     EB.Template.TableAddfielddefinition('BENEFICIARIO','80', 'A', '')
@@ -32,7 +32,8 @@ SUBROUTINE ABC.CUENTAS.DESTINO.FIELDS
     EB.Template.TableAddreservedfield("RESERVED.2")
     EB.Template.TableAddreservedfield("RESERVED.1")
 
-	EB.Template.TableAddlocalreferencefield('LOCAL.REF')
+	EB.Template.TableAddlocalreferencefield('')
+    EB.Template.TableAddoverridefield()
 *-----------------------------------------------------------------------------
     EB.Template.TableSetauditposition()         ;* Populate audit information
 *-----------------------------------------------------------------------------
