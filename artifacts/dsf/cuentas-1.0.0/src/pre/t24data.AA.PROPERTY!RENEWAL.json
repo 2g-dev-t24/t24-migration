@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "RENEWAL",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Renewal Conditions"
+    } ],
+    "PROPERTY.CLASS" : "CHANGE.PRODUCT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Renewal Conditions"
+    } ]
+  }
+}

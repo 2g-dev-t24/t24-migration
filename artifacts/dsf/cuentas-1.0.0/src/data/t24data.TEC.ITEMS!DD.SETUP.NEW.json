@@ -1,0 +1,48 @@
+{
+  "header" : {
+    "id" : "DD.SETUP.NEW",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Audit No"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "CURR.NO",
+      "OPERAND" : "equals",
+      "VALUE" : "1"
+    }, {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Direction"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "DIRECTION",
+      "OPERAND" : "equals",
+      "VALUE" : "INWARD"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "New Direct Debit Mandate"
+    } ],
+    "EVENT.TYPE" : "DD.DDI",
+    "SOURCE.TABLE" : "DD.DDI",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

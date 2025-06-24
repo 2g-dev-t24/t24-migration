@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "PREFPRICING",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Pricing"
+    } ],
+    "PROPERTY.CLASS" : "PRICING.RULES",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Pricing"
+    } ]
+  }
+}

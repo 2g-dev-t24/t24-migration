@@ -1,0 +1,67 @@
+{
+  "header" : {
+    "id" : "ABC.CURRENT.ACCOUNT--20240408",
+    "dsfApiType" : "AA.PRD.DES.FACILITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "NR.ATTRIBUTE" : [ {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "CUSTOMER.OPTION"
+    } ],
+    "FULL.DESCRIPTION" : "First Debit Card Free - Add-on Card 10USD - Unlimited Cheque",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Current Account Facilities"
+    }, {
+      "DESCRIPTION" : "Facilities Cuentas Corrientes"
+    } ],
+    "SERVICE" : [ {
+      "SERVICE.AVAILABILITY" : "AVAILABLE",
+      "SERVICE" : "CARD.ISSUE"
+    }, {
+      "SERVICE.AVAILABILITY" : "AVAILABLE",
+      "SERVICE" : "CASH.POOL"
+    }, {
+      "SERVICE.AVAILABILITY" : "AVAILABLE",
+      "SERVICE" : "ISSUE.CHQ"
+    }, {
+      "SERVICE.AVAILABILITY" : "AVAILABLE",
+      "SERVICE" : "FUNDING"
+    }, {
+      "SERVICE.AVAILABILITY" : "AVAILABLE",
+      "SERVICE" : "LIQUIDATE"
+    }, {
+      "SERVICE.AVAILABILITY" : "OPTIONAL",
+      "SERVICE" : "MAIN.SWEEP",
+      "CUSTOMER.OPTION" : "OPT-IN"
+    }, {
+      "SERVICE.AVAILABILITY" : "OPTIONAL",
+      "SERVICE" : "SURP.SWEEP",
+      "CUSTOMER.OPTION" : "OPT-IN"
+    }, {
+      "SERVICE.AVAILABILITY" : "OPTIONAL",
+      "SERVICE" : "DIR.DEBIT",
+      "CUSTOMER.OPTION" : "OPT-OUT"
+    }, {
+      "SERVICE.AVAILABILITY" : "OPTIONAL",
+      "SERVICE" : "STO",
+      "CUSTOMER.OPTION" : "OPT-IN"
+    }, {
+      "SERVICE.AVAILABILITY" : "OPTIONAL",
+      "SERVICE" : "SETUP.STOP",
+      "CUSTOMER.OPTION" : "OPT-IN"
+    }, {
+      "SERVICE.AVAILABILITY" : "OPTIONAL",
+      "SERVICE" : "AMEND.STOP",
+      "CUSTOMER.OPTION" : "OPT-IN"
+    } ]
+  }
+}

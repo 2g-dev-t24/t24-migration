@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "MINIMUM.BALANCE",
+    "dsfApiType" : "AA.PERIODIC.ATTRIBUTE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "COMPARISON.TYPE" : "MINIMUM",
+    "RULE.OVE.MSG" : "LT.MINIMUM.BAL",
+    "SOURCE.TYPE" : "AC.BALANCE.TYPE",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Minimum balance breached"
+    } ],
+    "RULE.ERR.MSG" : "AA-ECT.MIN.BELOW",
+    "PR.ATTR.CLASS" : "BALANCE",
+    "PERIOD.TYPE" : "LIFE",
+    "TYPE" : "BALANCE.TYPE",
+    "RULE.START" : "ARRANGEMENT"
+  }
+}

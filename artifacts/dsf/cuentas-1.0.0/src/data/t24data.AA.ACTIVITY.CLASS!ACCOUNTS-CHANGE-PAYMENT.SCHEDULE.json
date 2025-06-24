@@ -1,0 +1,74 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-CHANGE-PAYMENT.SCHEDULE",
+    "dsfApiType" : "AA.ACTIVITY.CLASS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BATCH.NAME" : [ {
+      "BATCH.NAME" : "AA.EOD.PROCESS",
+      "BATCH.SEQ" : "39"
+    }, {
+      "BATCH.NAME" : "AA.SOD.PROCESS",
+      "BATCH.SEQ" : "39"
+    } ],
+    "PAYLOAD.MAPPER" : "PAYMENT.SCHEDULE-PROPERTY-UPDATE",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Modify and recalc payment schedules"
+    } ],
+    "ACTIVITY.TYPE" : [ {
+      "ACTIVITY.TYPE" : "USER"
+    }, {
+      "ACTIVITY.TYPE" : "SCHEDULED"
+    }, {
+      "ACTIVITY.TYPE" : "SECONDARY"
+    }, {
+      "ACTIVITY.TYPE" : "BUNDLE.ADJUST"
+    }, {
+      "ACTIVITY.TYPE" : "PRE.LIVE"
+    }, {
+      "ACTIVITY.TYPE" : "INTEREST.APR"
+    } ],
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROPERTY.CLASS" : [ {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "PAYMENT.SCHEDULE",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "SETTLEMENT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "RETROSPECT",
+      "PROPERTY.CLASS" : "PAYMENT.SCHEDULE",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "EVALUATE",
+      "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "CALCULATE",
+      "PROPERTY.CLASS" : "ACTIVITY.CHARGES",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "SEND.MESSAGE",
+      "PROPERTY.CLASS" : "ACTIVITY.MESSAGING",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "CHECK.PROJECTION",
+      "PROPERTY.CLASS" : "PAYMENT.SCHEDULE",
+      "USER.INPUT" : "NO"
+    } ],
+    "PROCESS.ID" : "CHANGE",
+    "CLASS.ID" : "PAYMENT.SCHEDULE",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Modify and recalc payment schedules"
+    } ],
+    "EVENT.CLASS" : "accounts.updateSchedule.scheduleUpdated"
+  }
+}

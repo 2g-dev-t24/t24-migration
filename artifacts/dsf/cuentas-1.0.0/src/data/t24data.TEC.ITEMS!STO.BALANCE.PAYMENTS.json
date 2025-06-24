@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "STO.BALANCE.PAYMENTS",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "MANDATORY",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "STO Product"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "TYPE",
+      "OPERAND" : "equals",
+      "VALUE" : "BO"
+    }, {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Version Number"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "CURR.NO",
+      "OPERAND" : "equals",
+      "VALUE" : "1"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "ARRANGEMENT.SERVICE"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Balance Payment Standing Order"
+    } ],
+    "EVENT.TYPE" : "STANDING.ORDER-SERVICE",
+    "SOURCE.TABLE" : "STANDING.ORDER",
+    "ITEM.CLASSIFICATION" : "SERVICE",
+    "SUBSCRIPTION.TYPE" : "PRODUCT"
+  }
+}

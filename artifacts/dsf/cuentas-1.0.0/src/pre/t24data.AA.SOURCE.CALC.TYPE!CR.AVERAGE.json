@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "CR.AVERAGE",
+    "dsfApiType" : "AA.SOURCE.CALC.TYPE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CALC.TYPE" : "AVERAGE",
+    "SOURCE.TYPE" : "BALANCE",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Average CREDIT Balance"
+    } ],
+    "BALANCE.TYPE" : "CREDIT"
+  }
+}

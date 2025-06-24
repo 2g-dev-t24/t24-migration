@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "PAYMXHIGHESTDEBIT",
+    "dsfApiType" : "AC.BALANCE.TYPE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENTRY.TYPE" : "STMT",
+    "ACTIVITY.UPDATE" : "Y",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Pay Charge Balance"
+    } ],
+    "REPORTING.TYPE" : "NON-CONTINGENT"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "PR.CHARGE",
+    "dsfApiType" : "AA.BILL.TYPE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Rule Fee"
+    } ],
+    "SYS.BILL.TYPE" : "PR.CHARGE"
+  }
+}

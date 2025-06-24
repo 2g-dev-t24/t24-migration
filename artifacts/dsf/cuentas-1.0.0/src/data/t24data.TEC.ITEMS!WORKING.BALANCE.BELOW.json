@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "WORKING.BALANCE.BELOW",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Working Balance"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "YES",
+      "FIELD" : "WORKING.BALANCE",
+      "OPERAND" : "goes below"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "PRECEDENCE" : [ {
+      "PRECEDENCE" : "ACCOUNT.OVERDRAWN"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Available Balance (below)"
+    } ],
+    "EVENT.TYPE" : "ACCOUNTING.BALANCE.BELOW",
+    "SOURCE.TABLE" : "EB.CONTRACT.BALANCES",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

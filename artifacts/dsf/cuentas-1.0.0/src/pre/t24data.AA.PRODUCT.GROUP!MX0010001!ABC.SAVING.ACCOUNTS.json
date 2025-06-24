@@ -1,0 +1,254 @@
+{
+  "header" : {
+    "id" : "ABC.SAVING.ACCOUNTS",
+    "dsfApiType" : "AA.PRODUCT.GROUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "REBUILD.BALANCE.TYPE" : "YES",
+    "GROUP.TYPE" : [ {
+      "GROUP.TYPE" : "INTERNAL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "MX Savings Accounts"
+    }, {
+      "DESCRIPTION" : "ABC Cuentas de Ahorro"
+    } ],
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROPERTY.CLASS" : [ {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "BALANCE"
+      } ],
+      "PROPERTY.CLASS" : "ACCOUNT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "ACCOUNTING"
+      } ],
+      "PROPERTY.CLASS" : "ACCOUNTING"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "API"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.API"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ACTIVITY.CHARGES"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.CHARGES"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "ACTIVITY.MAPPING"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.MAPPING"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MESSAGING"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.MESSAGING"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "PRESENTATION"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.PRESENTATION"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ARRANGEMENT.RULES"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "PRODUCT.QUALIFIER.RULES"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "AGENT.COMMISSION"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "REWARDS.POINTS"
+      } ],
+      "PROPERTY.CLASS" : "AGENT.COMMISSION"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ALERTS"
+      } ],
+      "PROPERTY.CLASS" : "ALERTS"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "BALANCE.AVAILABILITY"
+      } ],
+      "PROPERTY.CLASS" : "BALANCE.AVAILABILITY"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "BALANCE.MAINTENANCE"
+      } ],
+      "PROPERTY.CLASS" : "BALANCE.MAINTENANCE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "RENEWAL"
+      } ],
+      "PROPERTY.CLASS" : "CHANGE.PRODUCT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "CLOSUREFEE"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "DORMANCYFEE"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "TXNFEE"
+      } ],
+      "PROPERTY.CLASS" : "CHARGE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "CHARGE.OVERRIDE"
+      } ],
+      "PROPERTY.CLASS" : "CHARGE.OVERRIDE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "CLOSURE"
+      } ],
+      "PROPERTY.CLASS" : "CLOSURE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "CUSTOMER"
+      } ],
+      "PROPERTY.CLASS" : "CUSTOMER"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ELIGIBILITY"
+      } ],
+      "PROPERTY.CLASS" : "ELIGIBILITY"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "CRINTEREST"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "DRINTEREST"
+      } ],
+      "PROPERTY.CLASS" : "INTEREST"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "OFFICERS"
+      } ],
+      "PROPERTY.CLASS" : "OFFICERS"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "SCHEDULE"
+      } ],
+      "PROPERTY.CLASS" : "PAYMENT.SCHEDULE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ACCOUNTS.PAYMENT.RULES"
+      } ],
+      "PROPERTY.CLASS" : "PAYMENT.RULES"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ACCOUNTS.PAYOUT"
+      } ],
+      "PROPERTY.CLASS" : "PAYOUT.RULES"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "PERIODICCHARGES"
+      } ],
+      "PROPERTY.CLASS" : "PERIODIC.CHARGES"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "PREFPRICING"
+      } ],
+      "PROPERTY.CLASS" : "PRICING.RULES"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "SETTLEMENT"
+      } ],
+      "PROPERTY.CLASS" : "SETTLEMENT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MXTAX"
+      } ],
+      "PROPERTY.CLASS" : "TAX"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "PAYOFF"
+      } ],
+      "PROPERTY.CLASS" : "PAYOFF"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "DORMANCY"
+      } ],
+      "PROPERTY.CLASS" : "DORMANCY"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "FACILITY"
+      } ],
+      "PROPERTY.CLASS" : "FACILITY"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "STATEMENT"
+      } ],
+      "PROPERTY.CLASS" : "STATEMENT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "CONSTRAINT"
+      } ],
+      "PROPERTY.CLASS" : "CONSTRAINT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ACCREPORTING"
+      } ],
+      "PROPERTY.CLASS" : "REPORTING"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MXTXLIMIT"
+      } ],
+      "PROPERTY.CLASS" : "XTXLIMIT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MXGATSETUP"
+      } ],
+      "PROPERTY.CLASS" : "XRATE.SETUP"
+    } ],
+    "REBUILD.ACTIVITIES" : "YES",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "MX Savings Accounts"
+    } ]
+  }
+}

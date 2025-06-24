@@ -1,0 +1,212 @@
+{
+  "header" : {
+    "id" : "ABC.CURRENT.ACCOUNTS",
+    "dsfApiType" : "AA.PRODUCT.GROUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "REBUILD.BALANCE.TYPE" : "YES",
+    "GROUP.TYPE" : [ {
+      "GROUP.TYPE" : "INTERNAL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "MX Current Accounts"
+    }, {
+      "DESCRIPTION" : "ABC Cuentas Corrientes"
+    } ],
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROPERTY.CLASS" : [ {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "BALANCE"
+      } ],
+      "PROPERTY.CLASS" : "ACCOUNT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "ACCOUNTING"
+      } ],
+      "PROPERTY.CLASS" : "ACCOUNTING"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MESSAGING"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.MESSAGING"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ACTIVITY.CHARGES"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.CHARGES"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "API"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.API"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "PRESENTATION"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.PRESENTATION"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "TXNFEE"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "DORMANCYFEE"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MXHIGHESTDEBIT"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MXMGMTFEE"
+      } ],
+      "PROPERTY.CLASS" : "CHARGE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "CUSTOMER"
+      } ],
+      "PROPERTY.CLASS" : "CUSTOMER"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "CRINTEREST"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "DRINTEREST"
+      } ],
+      "PROPERTY.CLASS" : "INTEREST"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "LIMIT"
+      } ],
+      "PROPERTY.CLASS" : "LIMIT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "OFFICERS"
+      } ],
+      "PROPERTY.CLASS" : "OFFICERS"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "SCHEDULE"
+      } ],
+      "PROPERTY.CLASS" : "PAYMENT.SCHEDULE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ARRANGEMENT.RULES"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "CLOSURE"
+      } ],
+      "PROPERTY.CLASS" : "CLOSURE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "BALANCE.MAINTENANCE"
+      } ],
+      "PROPERTY.CLASS" : "BALANCE.MAINTENANCE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "ACTIVITY.MAPPING"
+      } ],
+      "PROPERTY.CLASS" : "ACTIVITY.MAPPING"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MXTAX"
+      } ],
+      "PROPERTY.CLASS" : "TAX"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "BALANCE.AVAILABILITY"
+      } ],
+      "PROPERTY.CLASS" : "BALANCE.AVAILABILITY"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ELIGIBILITY"
+      } ],
+      "PROPERTY.CLASS" : "ELIGIBILITY"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "CHARGE.OVERRIDE"
+      } ],
+      "PROPERTY.CLASS" : "CHARGE.OVERRIDE"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ALERTS"
+      } ],
+      "PROPERTY.CLASS" : "ALERTS"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "YES",
+        "PROPERTY" : "PAYOFF"
+      } ],
+      "PROPERTY.CLASS" : "PAYOFF"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "FACILITY"
+      } ],
+      "PROPERTY.CLASS" : "FACILITY"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "STATEMENT"
+      } ],
+      "PROPERTY.CLASS" : "STATEMENT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "ACCREPORTING"
+      } ],
+      "PROPERTY.CLASS" : "REPORTING"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MXTXLIMIT"
+      }, {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "MXINTVAT"
+      } ],
+      "PROPERTY.CLASS" : "XTXLIMIT"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "DORMANCY"
+      } ],
+      "PROPERTY.CLASS" : "DORMANCY"
+    }, {
+      "PROPERTY" : [ {
+        "MANDATORY" : "NO",
+        "PROPERTY" : "SETTLEMENT"
+      } ],
+      "PROPERTY.CLASS" : "SETTLEMENT"
+    } ],
+    "REBUILD.ACTIVITIES" : "YES",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "MX Current Accounts"
+    } ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "89",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.VALUE.DATE" : "Y",
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "CUSTOMER",
+    "STMT.NARR.REF" : "OUR",
+    "DEBIT.CREDIT.IND" : "CREDIT",
+    "EXPOSURE.DATE" : "Y",
+    "SWIFT.NARRATIVE" : "NMSC",
+    "SHORT.DESC" : "Cr",
+    "DISPO.EXEMPT" : "YES",
+    "DATA.CAPTURE" : "Y",
+    "STMT.NARR" : "Cr",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Cash Deposit-Foreign Currency"
+    } ]
+  }
+}

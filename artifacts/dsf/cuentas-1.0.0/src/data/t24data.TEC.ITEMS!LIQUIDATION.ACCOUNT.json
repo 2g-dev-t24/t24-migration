@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "LIQUIDATION.ACCOUNT",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "MANDATORY",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Liquidation Account"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "PAYOUT.ACCOUNT",
+      "OPERAND" : "equals",
+      "VALUE" : "!SUBSCRIPTION.ID"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "ARRANGEMENT.SERVICE"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Liquidation Acccount"
+    } ],
+    "EVENT.TYPE" : "SETTLEMENT-SERVICE",
+    "SOURCE.TABLE" : "AA.ARR.SETTLEMENT",
+    "ITEM.CLASSIFICATION" : "SERVICE",
+    "SUBSCRIPTION.TYPE" : "PRODUCT"
+  }
+}

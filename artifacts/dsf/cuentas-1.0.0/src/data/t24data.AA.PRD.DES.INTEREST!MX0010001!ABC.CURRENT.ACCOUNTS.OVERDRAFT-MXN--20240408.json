@@ -1,0 +1,49 @@
+{
+  "header" : {
+    "id" : "ABC.CURRENT.ACCOUNTS.OVERDRAFT-MXN--20240408",
+    "dsfApiType" : "AA.PRD.DES.INTEREST",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "NR.ATTRIBUTE" : [ {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NEGOTIABLE"
+      }, {
+        "NR.OPTIONS" : "OVERRIDE"
+      } ],
+      "NR.ATTRIBUTE" : "MARGIN.RATE"
+    } ],
+    "DEFAULT.ATTR.OPTION" : "RESETTING",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Current Account (Banded Tiers)"
+    }, {
+      "DESCRIPTION" : "Cuentas Corrientes Sobregiro"
+    } ],
+    "DAY.BASIS" : "E",
+    "RATE.TYPE" : "REDUCING.RATE",
+    "ACCRUAL.RULE" : "BOTH",
+    "FIXED.RATE" : [ {
+      "FLOATING.INDEX" : "12",
+      "MARGIN.TYPE" : [ {
+        "MARGIN.OPER" : "ADD",
+        "MARGIN.TYPE" : "SINGLE",
+        "MARGIN.RATE" : "2"
+      } ]
+    }, {
+      "FLOATING.INDEX" : "12",
+      "MARGIN.TYPE" : [ {
+        "MARGIN.OPER" : "ADD",
+        "MARGIN.TYPE" : "SINGLE",
+        "MARGIN.RATE" : "3.5"
+      } ]
+    } ],
+    "RATE.TIER.TYPE" : "BAND",
+    "REFER.LIMIT" : "YES"
+  }
+}

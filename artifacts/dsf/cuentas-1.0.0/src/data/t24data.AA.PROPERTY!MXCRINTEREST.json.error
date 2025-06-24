@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "MXCRINTEREST",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "error" : {
+    "code" : "TGVCP-021",
+    "message" : "MXCRINTEREST is not Live",
+    "type" : "BUSINESS"
+  }
+}

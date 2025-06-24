@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "AA.CONTEXT.NAME*CHARGE.ACT.AMOUNT",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "To Pass Negotiated Charge Amount"
+    } ]
+  }
+}

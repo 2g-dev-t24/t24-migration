@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "MINBAL.DISCOUNT",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "BOTH",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Evaluation Result"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "EVALUATION",
+      "OPERAND" : "equals",
+      "VALUE" : "DISQUALIFIED"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Min Bal Discount Failed"
+    } ],
+    "EVENT.TYPE" : "AA.EVALUATION.DETAILS*MINBAL.DISCOUNT",
+    "SOURCE.TABLE" : "AA.EVALUATION.DETAILS",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT"
+  }
+}

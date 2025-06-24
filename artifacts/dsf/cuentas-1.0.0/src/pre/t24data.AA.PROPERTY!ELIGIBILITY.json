@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "ELIGIBILITY",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Eligibility"
+    } ],
+    "PROPERTY.CLASS" : "ELIGIBILITY",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Provides the rules governing which customer's are"
+    }, {
+      "FULL.DESC" : "eligible for this product."
+    } ],
+    "PROPERTY.TYPE" : [ {
+      "PROPERTY.TYPE" : "VARIATION"
+    }, {
+      "PROPERTY.TYPE" : "PRODUCT.ONLY"
+    } ]
+  }
+}

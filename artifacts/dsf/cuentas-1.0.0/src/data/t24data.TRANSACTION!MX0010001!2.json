@@ -1,0 +1,30 @@
+{
+  "header" : {
+    "id" : "2",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MANDATORY.REF.NO" : "Y",
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "CUSTOMER",
+    "SWIFT.NARRATIVE" : "NMSC",
+    "SHORT.DESC" : "Db",
+    "DISPO.EXEMPT" : "YES",
+    "DATA.CAPTURE" : "Y",
+    "STMT.NARR" : "Db",
+    "DEFAULT.VALUE.DATE" : "Y",
+    "STMT.NARR.REF" : "THEIR",
+    "NARR.TYPE" : "TCQW",
+    "DEBIT.CREDIT.IND" : "DEBIT",
+    "CHEQUE.IND" : "Y",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Cash Withdrawal(Local Ccy)"
+    } ]
+  }
+}

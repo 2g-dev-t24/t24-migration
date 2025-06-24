@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "GUARANTOR",
+    "dsfApiType" : "AA.CUSTOMER.ROLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Guarantor"
+    } ],
+    "DELIVERY.CUSTOMER" : "YES",
+    "APP.FORMAT" : "GUTR"
+  }
+}

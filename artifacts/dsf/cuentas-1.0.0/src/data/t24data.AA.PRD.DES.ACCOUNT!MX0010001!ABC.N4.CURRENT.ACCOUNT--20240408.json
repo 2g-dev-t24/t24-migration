@@ -1,0 +1,63 @@
+{
+  "header" : {
+    "id" : "ABC.N4.CURRENT.ACCOUNT--20240408",
+    "dsfApiType" : "AA.PRD.DES.ACCOUNT",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "GENERATE.IBAN" : "NO",
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "NR.ATTRIBUTE" : [ {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "CATEGORY"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "ACCOUNT.TITLE.1"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "ACCOUNT.TITLE.2"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "ACCOUNT.REFERENCE"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-RESETTING"
+      } ],
+      "NR.ATTRIBUTE" : "SHORT.TITLE"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "EARLY.PROCESSING"
+    } ],
+    "DEFAULT.ATTR.OPTION" : "RESETTING",
+    "ACCOUNT.TITLE.1" : [ {
+      "ACCOUNT.TITLE.1" : "Current Account"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC N4 Current Account"
+    }, {
+      "DESCRIPTION" : "ABC Cuenta Cte N4"
+    } ],
+    "CATEGORY" : "1014",
+    "BASE.DATE.TYPE" : "AGREEMENT",
+    "DATE.CONVENTION" : "FORWARD",
+    "PASSBOOK" : "NO",
+    "BUS.DAY.CENTRES" : [ {
+      "BUS.DAY.CENTRES" : "MX"
+    } ]
+  }
+}

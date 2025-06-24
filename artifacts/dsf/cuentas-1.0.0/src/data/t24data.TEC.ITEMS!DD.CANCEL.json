@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "DD.CANCEL",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Status"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "STATUS",
+      "OPERAND" : "equals",
+      "VALUE" : "CANCELLED"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "DD Mandate cancelled"
+    } ],
+    "EVENT.TYPE" : "DD.DDI",
+    "SOURCE.TABLE" : "DD.DDI",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

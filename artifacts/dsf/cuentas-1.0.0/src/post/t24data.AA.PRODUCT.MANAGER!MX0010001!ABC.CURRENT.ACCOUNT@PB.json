@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ABC.CURRENT.ACCOUNT",
+    "dsfApiType" : "AA.PRODUCT.MANAGER",
+    "dsfApiComponent" : "t24data",
+    "dsfApiAction" : "Publish",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "AVAILABLE.DATE" : "20240408",
+    "DIRECT.PUBLISH" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Product Lifecycle Management"
+    }, {
+      "DESCRIPTION" : "ABC Current Account"
+    } ],
+    "PROCESS.METHOD" : "ONLINE",
+    "ACTION" : "PUBLISH"
+  }
+}

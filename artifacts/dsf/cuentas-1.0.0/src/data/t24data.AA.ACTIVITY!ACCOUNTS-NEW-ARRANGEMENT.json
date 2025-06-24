@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-NEW-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SYSTEM.ACTIVITY" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "New Account Arrangement"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROCESS.ID" : "NEW",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "SYSTEM CREATED"
+    } ]
+  }
+}

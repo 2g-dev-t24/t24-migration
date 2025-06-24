@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "ABC.CURRENT.ACCOUNTS-MXN--20240408",
+    "dsfApiType" : "AA.PRD.DES.INTEREST",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "DEFAULT.ATTR.OPTION" : "RESETTING",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC Credit Interest"
+    }, {
+      "DESCRIPTION" : "ABC Intereses de credito"
+    } ],
+    "DAY.BASIS" : "B",
+    "RATE.TYPE" : "REDUCING.RATE",
+    "ACCRUAL.RULE" : "BOTH",
+    "DATE.CONVENTION" : "PERIODIC INTEREST",
+    "FIXED.RATE" : [ {
+      "FIXED.RATE" : "2"
+    } ],
+    "RATE.TIER.TYPE" : "SINGLE"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "PRODUCT.QUALIFIER.RULES",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Product Qualifier Rules"
+    } ],
+    "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Product Qualifier Rules"
+    } ],
+    "PROPERTY.TYPE" : [ {
+      "PROPERTY.TYPE" : "PRODUCT.QUALIFIER"
+    }, {
+      "PROPERTY.TYPE" : "PRODUCT.ONLY"
+    } ]
+  }
+}

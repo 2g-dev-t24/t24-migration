@@ -1,0 +1,3527 @@
+{
+  "name" : "cuentas",
+  "version" : "1.0.0",
+  "status" : "DEFINING",
+  "sequence" : [ {
+    "component" : "t24data",
+    "type" : "AC.EVENT",
+    "id" : "INTEREST-AGE.BILLS-DUE-DUE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.EVENT",
+    "id" : "INTEREST-AGE.BILLS-DUE-GRC"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.EVENT",
+    "id" : "INTEREST-AGE.BILLS-DUE-DEL"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.EVENT",
+    "id" : "INTEREST-AGE.BILLS-DUE-NAB"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ACTIVITY.ATTRIBUTE*ACCOUNT.MAINTENANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ACTIVITY.ATTRIBUTE*EXCLUDE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ACTIVITY.ATTRIBUTE*FINANCIAL.ADJUSTMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ACTIVITY.ATTRIBUTE*TAKEOVER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ADJUSTMENT.REASON*RETAIN.CUSTOMERS.BUSINESS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ADJUSTMENT.REASON*VALUED.CUSTOMER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.AGENT.ROLE*AFFILIATEDAGENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.AGENT.ROLE*AGENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.AGENT.ROLE*LEADAGENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.AGENT.ROLE*NONAFFILIATEDAGENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ARRANGEMENT.LINK.TYPE*INHERITANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ARRANGEMENT.LINK.TYPE*SUBARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ARRANGEMENT.PHASE*FIXED.RATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ARRANGEMENT.PHASE*PREFERRED.VARIABLE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ARRANGEMENT.PHASE*SECOND.YEAR.FIXED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ARRANGEMENT.PHASE*VARIABLE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.EVENT*PAY.OUTSIDE.LIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.EVENT*PAY.WITH.LIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.EVENT*RETURN.OUTSIDE.LIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.EVENT*RETURN.WITH.LIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.EVENT*REVERSE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.GROUP*ATM"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.GROUP*BRANCH"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.GROUP*ELECTRONIC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.GROUP*INBRANCH"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CHARGE.GROUP*ONLINE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONSENT.PARTY*AGENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONSENT.PARTY*BORROWER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONSENT.TYPE*TRADE.ACCEPTANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.GROUP*DORMANCY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.GROUP*EXTERNAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.GROUP*FACILITY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.GROUP*PRICING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.NAME*CHARGE.ACT.AMOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.NAME*CHARGE.REASON"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.NAME*LAST.ACTIVE.TRANSACTION.DATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.NAME*LAST.DORMANCY.DATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.NAME*LAST.DORMANCY.STATUS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.NAME*TRANSACTION.INITIATION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.NAME*TRANSACTION.SERVICE.GROUP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.CONTEXT.NAME*U-TAX.ACCOUNTING.DETAILS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.ARR.SOURCE*ACCOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.ARR.SOURCE*ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.ARR.SOURCE*INTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.LEVEL.TYPE*DEAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.LEVEL.TYPE*FACILITY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DECISION.REFERENCE*ARRANGEMENT.ACCRUAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DECISION.REFERENCE*CLEARING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DECISION.REFERENCE*EMIT.ARRANGEMENT.EVENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DECISION.REFERENCE*EMIT.PRODUCT.EVENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DECISION.REFERENCE*PAYMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DECISION.REFERENCE*UNAUTH.PROCESS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.ARRANGEMENT.ACCRUAL*DEFAULT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.ARRANGEMENT.ACCRUAL*METHOD.PROCESSING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.CLEARING*AA.GET.ACTIVITY.COMPLEX.RESTRICTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.CLEARING*AA.GET.ACTIVITY.MODERATE.RESTRICTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.CLEARING*AA.GET.ACTIVITY.NO.RESTRICTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.CLEARING*AA.GET.ACTIVITY.SIMPLE.RESTRICTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.EMIT.ARRANGEMENT.EVENT*EMIT.ARRANGEMENT.EVENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.EMIT.ARRANGEMENT.EVENT*NONE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.EMIT.PRODUCT.EVENT*EMIT.PRODUCT.EVENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.EMIT.PRODUCT.EVENT*NONE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.PAYMENT*AA.GET.ACTIVITY.MODERATE.RESTRICTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.PAYMENT*AA.GET.ACTIVITY.NO.RESTRICTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.PAYMENT*AA.GET.ACTIVITY.SIMPLE.RESTRICTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.UNAUTH.PROCESS*DEFAULT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.UNAUTH.PROCESS*IGNORE.TRANSACTION.ACTIVITIES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DORMANCY.STATUS*CLOSEREADY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DORMANCY.STATUS*DORMANT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DORMANCY.STATUS*INACTIVE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DORMANCY.STATUS*UNCLAIMED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.EXT.AVAIL*DATA.CAPTURE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.EXT.AVAIL*FULL.PROCESSING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.EXT.AVAIL*NOT.ALLOWED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.FIELD.PARAMETER*control"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.FIELD.PARAMETER*decimals"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.FIELD.PARAMETER*ruleEditValuesOnly"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.FIELD.PARAMETER*ruleSupportLevel"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.FIELD.PARAMETER*ruleValue"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.FUNDING.METHOD*MATCH.FUNDING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.FUNDING.METHOD*POOL.FUNDING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.LIMIT.MATURITY*LIMIT.MATURITY.DATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.LIMIT.MATURITY*MATURITY.DATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.LIMIT.MATURITY*RENEWAL.DATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.MARGIN.TYPE*PRICING.SPREAD"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.MARGIN.TYPE*PRODUCT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.MARGIN.TYPE*RFR.SPREAD"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.MARGIN.TYPE*SINGLE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.MARGIN.TYPE*TREASURY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OFFICER.ROLE*APPLICATION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OFFICER.ROLE*APPROVAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OFFICER.ROLE*COLLECTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OFFICER.ROLE*DISBURSEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDRAFT.STATUS*BRN"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDRAFT.STATUS*COL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDRAFT.STATUS*GRC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDRAFT.STATUS*NT1"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDRAFT.STATUS*NT2"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDRAFT.STATUS*NT3"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDUE.STATUS*DEL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDUE.STATUS*DUE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDUE.STATUS*GRC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.OVERDUE.STATUS*NAB"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PARTY.ROLE*CO"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PARTY.ROLE*CO-SIGNER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PARTY.ROLE*GUARANTOR"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PARTY.ROLE*INDEMNATOR"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PARTY.ROLE*POWER.OF.ATTORNEY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*ACCOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*ACCOUNTING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*ACTIVITY.PROCESSING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*BUSINESS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*CUSTOMER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*MAIN"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*NON.AA"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*PAYMENTS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*PRICING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*RULES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PC.GROUP*TECHNICAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PQ.FREQUENCY.NAME*VAL.BEYOND.COOLING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PQ.FREQUENCY.NAME*VAL.COOLING.PERIOD"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.BENEFIT*ACTIVITY.RESTRICTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.BENEFIT*CONDITIONAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.BENEFIT*ELIGIBLE.CREDIT.BENEFITS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.BENEFIT*MINBAL.BONUS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.BENEFIT*MINBAL.PREFERRED.RATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.BENEFIT*NSF.MAXIMUM.CHARGE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*ACCOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*CHANNEL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*CUSTOMER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*CustomerSegment"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*LoyaltyProgram"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*NSF.PRICING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*PACKAGE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*PRODUCT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*REGIONAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRICING.PROGRAM*RELATIONSHIP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.ATTRIBUTE*FEATURES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.ATTRIBUTE*IMPORT.BLUEPRINT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*ACCOUNTS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*BUSINESS.BANKING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*CORPORATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*DEPOSITS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*LENDING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*NONFINANCIAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*PRIVATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*PROCESS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*RES.BNPL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*RETAIL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*TRADE.FINANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*TREASURY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*CCY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*EXTERNAL.FINANCIAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*FEATURES.SUPPORTED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*MULTI.ARRANGEMENTS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*NO.ARRANGEMENTS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*OPT.CCY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*REPLAY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*SINGLE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*SINGLE.GROUP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*A"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*AA"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*AAA"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*B"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*BRANCH"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*BRONZE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*C"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*GOLD"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*INT.ON.MA"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*INTERNET"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*MOBILE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*NO.INT.ON.MA"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*OD.ON.MA"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*PLATINUM"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.VARIATION*SILVER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*ACC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*ACR"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*AGE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*AVL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*CAP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*CUR"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*DEF"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*DUE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*EXP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*EXT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*HOL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*HOLBL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*INV"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*OVD"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*PAY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*REC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*RES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*RSP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*TOT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*UNA"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*UNC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*UND"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*UTL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*CCY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*COMMON"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*DATED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*DELAYED.TRACKING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*EXTERNAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*EXTERNAL.FINANCIAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*FEATURE.CLASS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*FORWARD.DATED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*INHERITANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*MEMO.ENABLED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*MERGE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*MULTIPLE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*MULTIPLE.UNIQUE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*NO.CCY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*NON.RESETTING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*NON.TRACKING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*OPT.CCY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*PARTIAL.INHERITANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*PUBLISH.CONDITION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*TRACKING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*TRACKING.ONLY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*TRANSACTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*TRIGGER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*VARIATION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*VERSION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*ACCRUAL.BY.BILLS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*ADJUST"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*ADJUST.DUE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*ADVANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*AMORT.RECOVERY.SUSPEND"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*BASE.CONDITIONS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*COMMISSION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*CREDIT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*DAYLIGHT.PARENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*DEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*DEFER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*FEATURE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*FORCE.CAPITALISE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*FORWARD.DATED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*INFO"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*INHERITANCE.ONLY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*INTERNAL.FEATURE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*ITEMIZED.AMORTIZATION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*MEMO.ENABLED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*MEMO.ONLY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*NON.CUSTOMER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*PARTICIPANT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*PERIODIC.COMMISSION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*PRINCIPAL.RECEIVABLE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*PRODUCT.ONLY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*PRODUCT.QUALIFIER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*REBATE.UNAMORTISED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*RECEIVABLE.ACCOUNTING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*RESIDUAL.ACCRUAL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*REWARDS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*RISK.PARTICIPANT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*STOP.SUSPEND"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*SUSPEND"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*SUSPEND.OVERDUES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*VALUE.NEXT.DAY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*VARIATION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*AMEND.STOP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*BULK.PAYMENTS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*CARD.ISSUE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*CASH.POOL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*DIR.DEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*FUNDING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*ISSUE.CHQ"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*LIQUIDATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*MAIN.SWEEP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*MOBILE.BANKING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*SETTLEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*SETUP.STOP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*STO"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.SERVICE*SURP.SWEEP"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STATEMENT.FREQUENCY.NAME*MONTHLY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STATEMENT.FREQUENCY.NAME*QUATERLY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*MERGE.INTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*NET.OPPOSITE.ENTRIES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*NET.PROPERTY.BALANCES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*NET.REVERSAL.ENTRIES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*PROP.INLINE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*SHOW.PROPERTIES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*SHOW.REVERSALS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*SKIP.ADJ.ENTRIES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*SKIP.NON.TRANSACTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.ATTRIBUTE*SWAP.DD.MAKEDUE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.TRANS.TYPE*ACCOUNT.TRANSFER.IN"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.TRANS.TYPE*ACCOUNT.TRANSFER.OUT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.TRANS.TYPE*LOAN.DISBURSEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.STMT.TRANS.TYPE*LOAN.REPAYMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.YES*YES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.XINTVAT*BUS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.XINTVAT*PER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*MORTGAGE.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.ARR.SOURCE*CHANGE.PRODUCT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.ARR.SOURCE*CHARGE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.ARR.SOURCE*CUSTOMER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.ARR.SOURCE*PAYMENT.SCHEDULE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DATA.ELEMENTS.ARR.SOURCE*TERM.AMOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DECISION.REFERENCE*DEPOSITS.FORCE.AT.EOD"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DECISION.REFERENCE*SYSTEM.ACTIVITY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.DEPOSITS.FORCE.AT.EOD*EOD"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.DEPOSITS.FORCE.AT.EOD*SOD"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.SYSTEM.ACTIVITY*DEFAULT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.DEP.SYSTEM.ACTIVITY*DIRECT.ACCOUNTING.AS.M"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.FIELD.PARAMETER*optionListGen"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.FIELD.PARAMETER*rulePeriods"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.INTEREST.RECALCULATE*NOTHING"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.INTEREST.RECALCULATE*PROFIT.AMOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.INTEREST.RECALCULATE*PROFIT.AMOUNT.AND.RATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.INTEREST.RECALCULATE*RATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*BUSINESS.CURRENT.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*BUSINESS.DEPOSIT.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*BUSINESS.LOAN.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*CLUB.LOANS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*CORP.CURRENT.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*CORP.DEPOSIT.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*CORP.FACILITIES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*RETAIL.BNPL.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*RETAIL.CURRENT.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*RETAIL.DEPOSIT.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.METERING.CLASS*RETAIL.LOAN.AC"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PARAM.ATTRIBUTE.TYPE*SCHEDULE.INITIATION.ON.HOLIDAY"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PARAM.ATTRIBUTE.TYPE*SCHEDULED.ACTIVITIES"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PARAM.ATTRIBUTE.VALUE*CALENDAR"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PARAM.ATTRIBUTE.VALUE*DEPOSITS.FORCE.AT.EOD"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.ATTRIBUTE*TERM.VARIATIONS"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.ATTRIBUTE*XES.PRODUCT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*PRODUCT.TYPE.REQUIRED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.LINE.LINE.ATTRIBUTE*VERSION.ENABLED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*ADV"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.CLASS.TYPE*NOAPPLY.RATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*CONTAINER"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*NOAPPLY.RATE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*PG.INDEX"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*REBUILD.ACTIVITY.BALANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*SUBSCRIPTIONS.PLAN"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*SUPPRESS.EVALUATION.LOG"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*TERM.VARIATIONS.SUPPORTED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*TRANSACTION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.TERM.AMOUNT.ON.MATURITY*DUE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.TERM.AMOUNT.ON.MATURITY*EXTEND.TERM"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.TERM.AMOUNT.ON.MATURITY*EXTEND.TERM.RET"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.TERM.AMOUNT.ON.MATURITY*RETURN"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.ACTIVITY.ATTRIBUTE*SALARY.CREDIT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.ATTRIBUTE*MX.PAYROLL"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PRODUCT.ATTRIBUTE*PAYROLL.ACCOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.LOOKUP",
+    "id" : "AA.PROPERTY.PROPERTY.TYPE*MXMB.ACC.CREDIT.INT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.SOURCE.CALC.TYPE",
+    "id" : "CR.AVERAGE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.SOURCE.CALC.TYPE",
+    "id" : "DR.DAILY"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "NEW"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.POSTING.DETAIL",
+    "id" : "STMT-AA"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.POSTING.DETAIL",
+    "id" : "CATEG-AA"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.POSTING.DETAIL",
+    "id" : "SPECIAL-AA"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "890"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "891"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "MVT"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "50010"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "50001"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "815"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "1130"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "450"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "862"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "860"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "832"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "833"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "894"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "451"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "863"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "884"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "861"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "812"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "LNW"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "ADJ"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "WOF"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "DUE"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "CAP"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "RSM"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "PAY"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "ACC"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "SUS"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "813"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "COM"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "920"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "827"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "966"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "967"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "921"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "974"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "964"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "965"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "972"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "830"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "883"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "893"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "831"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "385"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "395"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "824"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "973"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "804"
+  }, {
+    "component" : "t24data",
+    "type" : "RE.TXN.CODE",
+    "id" : "CRT"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "892"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "814"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "885"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "864"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "942"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "51001"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "52251"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "51010"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "52252"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "55052"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "55053"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.CUSTOMER",
+    "id" : "NEGOTIABLE-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.CUSTOMER",
+    "id" : "NEGOTIABLE-20081204"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.OFFICERS",
+    "id" : "NEGOTIABLE--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.OFFICERS",
+    "id" : "NEGOTIABLE--20081204"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.BILL.TYPE",
+    "id" : "INSTALLMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "POSTING.RESTRICT",
+    "id" : "90"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.BALANCE.MAINTENANCE",
+    "id" : "NEGOTIABLE-MXN-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.BALANCE.MAINTENANCE",
+    "id" : "NEGOTIABLE-USD-20081204"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "52"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "26"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "89"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "90"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "107"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "93"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "96"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "49"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "55"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "5"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "888"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "889"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "866"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "867"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "868"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "42"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "2000"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "2001"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "2002"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "2003"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "ISSUE.CD.CHEQUE.BOOK"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STO.PERIODIC.PAYMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "FUNDING.ACCOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "AMEND.TRANS.STOP"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.BALANCE.AVAILABILITY",
+    "id" : "ACCOUNTS-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.BALANCE.AVAILABILITY",
+    "id" : "ACCOUNTS-20100825"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STO.AMEND"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.PAYOFF",
+    "id" : "ACCOUNTS-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.PAYOFF",
+    "id" : "ACCOUNTS-20100812"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.API",
+    "id" : "CMBASE.CLABE.ID.GENERATION"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.API",
+    "id" : "AA.LOCAL.IS.CUSTOMER.PRIVATE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.CHARGE",
+    "id" : "NEGOTIABLE---20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.CHARGE",
+    "id" : "NEGOTIABLE---20100106"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "1005"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ELIGIBILITY",
+    "id" : "ABC.CA.AGE.GT.18.YEARS---20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.FACILITY",
+    "id" : "ABC.CURRENT.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "1004"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "1006"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.API",
+    "id" : "MXACCT.GET.ACTIVITY.TOTAL.DATE"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "1014"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.RESTRICTION",
+    "id" : "MX.SAV.LEVEL4.ACCOUNT-MXN-BRANCH-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.RESTRICTION",
+    "id" : "MX.SAV.LEVEL4.ACCOUNT-MXN-MOBILE-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "1002"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "BALANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "ACCOUNTING"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MESSAGING"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "ACTIVITY.CHARGES"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "API"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "PRESENTATION"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "TXNFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "DORMANCYFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MXHIGHESTDEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MXMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "CUSTOMER"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "CRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "DRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "LIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "OFFICERS"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "SCHEDULE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "ARRANGEMENT.RULES"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "CLOSURE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "BALANCE.MAINTENANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "ACTIVITY.MAPPING"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MXTAX"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "BALANCE.AVAILABILITY"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "ELIGIBILITY"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "CHARGE.OVERRIDE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "ALERTS"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "PAYOFF"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "FACILITY"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "STATEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "ACCREPORTING"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MXTXLIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MXINTVAT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "DORMANCY"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "SETTLEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "INFCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "BUNDLEINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "PENALINT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "INFDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "OVDLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "UTLLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.ALLOCATION.RULE",
+    "id" : "ACCOUNTS-LIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PAYMENT.TYPE",
+    "id" : "INTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.CLOSURE",
+    "id" : "ACCOUNT.CLOSURE-20110414"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-UPDATE-CUSTOMER"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CURBALANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CURBALANCEINF"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "UNCBALANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "UNDBALANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVBALANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "AVLBALANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCTXNFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCTXNFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFTXNFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFTXNFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUETXNFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUETXNFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYTXNFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVTXNFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPTXNFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCDORMANCYFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCDORMANCYFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFDORMANCYFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFDORMANCYFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEDORMANCYFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEDORMANCYFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYDORMANCYFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVDORMANCYFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPDORMANCYFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCMXHIGHESTDEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCMXHIGHESTDEBITSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFMXHIGHESTDEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFMXHIGHESTDEBITSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEMXHIGHESTDEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEMXHIGHESTDEBITSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYMXHIGHESTDEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVMXHIGHESTDEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPMXHIGHESTDEBITSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCMXMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCMXMGMTFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFMXMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFMXMGMTFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEMXMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEMXMGMTFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYMXMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVMXMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPMXMGMTFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUECRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCDRINTERESTSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEDRINTERESTSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFDRINTERESTSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPDRINTERESTSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "TOTLIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CURLIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "UTLLIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "OVDLIMIT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVMXTAX"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCINFCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEINFCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFINFCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYINFCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVINFCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCBUNDLEINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEBUNDLEINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFBUNDLEINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYBUNDLEINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVBUNDLEINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCPENALINT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCPENALINTSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEPENALINT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEPENALINTSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFPENALINT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFPENALINTSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYPENALINT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPPENALINTSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVPENALINT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCINFDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEINFDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFINFDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYINFDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVINFDRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCMGMTFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFMGMTFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEMGMTFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVMGMTFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPMGMTFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCOVDLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCOVDLIMITFEESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEOVDLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEOVDLIMITFEESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFOVDLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFOVDLIMITFEESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYOVDLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPOVDLIMITFEESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVOVDLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCUTLLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCUTLLIMITFEESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEUTLLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEUTLLIMITFEESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFUTLLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFUTLLIMITFEESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYUTLLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPUTLLIMITFEESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVUTLLIMITFEES"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.GROUP",
+    "id" : "ABC.CURRENT.ACCOUNTS"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.ALLOCATION.RULE",
+    "id" : "ACCOUNTS-CHARGE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.ALLOCATION.RULE",
+    "id" : "ACCOUNTS-INTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.ALLOCATION.RULE",
+    "id" : "ACCOUNTS-ACCOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.ALLOCATION.RULE",
+    "id" : "ACCOUNTS-PERIODICCHG"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.ALLOCATION.RULE",
+    "id" : "ACCOUNTS-TAX"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.ALLOCATION.RULE",
+    "id" : "ACCOUNTS-SETTLE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-NEW-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-TAKEOVER-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-ADJUST.BALANCE-BALANCE.MAINTENANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-ADJUST.SUSP.BALANCE-BALANCE.MAINTENANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-ADJUST.BILL-BALANCE.MAINTENANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-CALCULATE-PAYOFF"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-TRANSFORM-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SETTLE-PAYOFF"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-CREDIT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-DEBIT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-APPLYPAYMENT-ACCOUNTS.PAYMENT.RULES"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-RECORD.EVENT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SCHEDULE.CHARGE-DORMANCY"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNTING",
+    "id" : "ACCOUNTS-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNTING",
+    "id" : "ACCOUNTS-20100812"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.PRESENTATION",
+    "id" : "ACCOUNTS-20100825"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-FCYCASHDRAW-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-LCYCASHDEP-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-LCYCASHDRAW-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-LCYCASHBACK-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-FCYCASHDEP-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-FCYCASHBACK-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-TRANSFEROUT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-TRANSFERIN-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-LCYCHQDEP-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-FCYCHQDEP-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-LCYCHQCLG-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-ONUSCHQDEP-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-BUYTC-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SELLTC-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-ATMDRAW-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-POS.PAYMENT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-ACH.DEBIT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-ENCASHCHQ-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-PAYROLL.CREDIT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-PENSION.PLAN.CREDIT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-BILL.PAYMENT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-ISSUE.CHEQUE.BOOK-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-BALANCE.STO.SETUP-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-PERIODIC.STO.SETUP-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SETUP.LIQUDATION.AC-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SETUP.FUNDING.AC-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SETUP.STOP.INSTRUCTION-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-AMEND.STOP.INSTRUCTION-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-DEFAULT.EVENT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-DEPLIQ-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-INTLCASHBACK-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SCHEDULE.CHARGE-DORMANCY*DORMANT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SCHEDULE.CHARGE-DORMANCY*UNCLAIMED"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.PRESENTATION",
+    "id" : "ACCOUNTS-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.PAYMENT.SCHEDULE",
+    "id" : "ABC.CURRENT.ACCOUNTS-MXN-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.CLOSURE",
+    "id" : "ACCOUNT.CLOSURE-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "2"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "213"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "258"
+  }, {
+    "component" : "t24data",
+    "type" : "TRANSACTION",
+    "id" : "92"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "ISSUE.VISA.CARD"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "ISSUE.SB.CHEQUE.BOOK"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STO.BALANCE.PAYMENTS"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "LIQUIDATION.ACCOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "NEW.TRANS.STOP"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-ISSUE.CARD-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.MAPPING",
+    "id" : "ACCOUNTS.CORP-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.MAPPING",
+    "id" : "ACCOUNTS.CORP-20091202"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "AR.ACCOUNT.CLOSURE.REQUEST"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "CREDIT.INT.CAP"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STO.SETUP"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STO.EXECUTED"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.CUSTOMER.ROLE",
+    "id" : "JOINT.OWNER"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.CUSTOMER.ROLE",
+    "id" : "OWNER"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.CUSTOMER.ROLE",
+    "id" : "GUARANTOR"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "MINBAL.DISCOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "MINBAL.PREFERRED.RATE"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STO.CANCEL"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "WORKING.BALANCE.BELOW"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "CLEARED.BALANCE.ABOVE"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "UNCLEARED.BALANCE.ABOVE"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "INTERNET.DEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STOP.PAYMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "LARGE.WITHDRAWAL"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "LARGE.DEPOSIT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "CHQ.DEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "SALARY.CREDIT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "DD.RETRY.FAILED"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "DD.SETUP.NEW"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "ACCOUNT.OVERDRAWN"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STO.FAILED"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "CHQ.NUMBER.DEBIT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "DD.SETUP.AMEND"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STO.RETRY.FAILED"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "DD.CANCEL"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "DD.EXECUTED"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "DD.FAILED"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "ACCOUNT.AMEND.COND"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "CHQ.ISSUED"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "STOP.PAYMENT.REVOKE"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "INCOMING.TRANSFER.BY.AMT"
+  }, {
+    "component" : "t24data",
+    "type" : "TEC.ITEMS",
+    "id" : "INCOMING.TRANSFER"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ALERTS",
+    "id" : "ACCOUNTS-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ALERTS",
+    "id" : "ACCOUNTS-20110414"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-POST.ASSESSMENT-PRICING.RULES"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-NEW-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-UPDATE-ACCOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.API",
+    "id" : "ABC.CURRENT.API-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.INTEREST",
+    "id" : "ABC.CURRENT.ACCOUNTS-MXN--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.INTEREST",
+    "id" : "ABC.CURRENT.ACCOUNTS.OVERDRAFT-MXN--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-SUBSCRIBE-ALERTS"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-UPDATE-SETTLEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-CHANGE-CUSTOMER"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-CHANGE.PRODUCT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-RENEGOTIATE-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-RESET-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY.CLASS",
+    "id" : "ACCOUNTS-CHANGE-PAYMENT.SCHEDULE"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.RULE.GATEWAY",
+    "id" : "IS.ACCOUNT.RESTRICTED"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.RULE.GATEWAY",
+    "id" : "WORKING.BAL.LCY.GE.100"
+  }, {
+    "component" : "t24data",
+    "type" : "EB.RULE.GATEWAY",
+    "id" : "WORKING.BAL.LT.0"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.DORMANCY",
+    "id" : "CURRENT.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.DORMANCY",
+    "id" : "CURRENT.ACCOUNT-20110722"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.XTXLIMIT",
+    "id" : "MX.SAV.LEVEL.AC.LIMIT-MXN-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SCHEDULE.CHARGE-DORMANCY*INACTIVE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.CHARGES",
+    "id" : "ABC.CURRENT.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.CURRENT.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNT",
+    "id" : "ABC.BAS.CURRENT.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.BAS.CURRENT.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNT",
+    "id" : "ABC.EJE.CURRENT.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.EJE.CURRENT.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNT",
+    "id" : "ABC.N2.CURRENT.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PERIODIC.ATTRIBUTE.CLASS",
+    "id" : "MX.TRANS.AMOUNT.TOTAL.DATE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PERIODIC.ATTRIBUTE",
+    "id" : "MX.TOTAL.AMOUNT.UDIM"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.RESTRICTION",
+    "id" : "MX.SAV.LEVEL2.ACCOUNT-MXN--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.RESTRICTION",
+    "id" : "MX.SAV.LEVEL4.ACCOUNT-MXN--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.RESTRICTION",
+    "id" : "MX.SAV.LEVEL4.ACCOUNT-MXN-INTERNET-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.N2.CURRENT.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNT",
+    "id" : "ABC.N4.CURRENT.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.N4.CURRENT.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNT",
+    "id" : "ABC.PAYROLL.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.PAYROLL.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.REM.CURRENT.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.MANAGER",
+    "id" : "ABC.CURRENT.ACCOUNT",
+    "action" : "Proof"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.MANAGER",
+    "id" : "ABC.CURRENT.ACCOUNT",
+    "action" : "Publish"
+  }, {
+    "component" : "t24data",
+    "type" : "PGM.FILE",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "FILE.CONTROL",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "STANDARD.SELECTION",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "BATCH.NEW.COMPANY",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "BATCH",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "TSA.SERVICE",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "EB.API",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "LOCAL.TABLE",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "LOCAL.REF.TABLE",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "EB.TABLE.DEFINITION",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "EB.API",
+    "id" : "AA.GET.BALANCE.AMOUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.BALANCE.AVAILABILITY",
+    "id" : "MX.SAV.ACCOUNTS-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.BALANCE.MAINTENANCE",
+    "id" : "MX.SAV.NEGOTIABLE-MXN-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.BILL.TYPE",
+    "id" : "ACT.CHARGE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.BILL.TYPE",
+    "id" : "COMMISSION"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.BILL.TYPE",
+    "id" : "DEF.CHARGE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.BILL.TYPE",
+    "id" : "DISBURSEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.BILL.TYPE",
+    "id" : "PAYMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.BILL.TYPE",
+    "id" : "PR.CHARGE"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "6008"
+  }, {
+    "component" : "t24data",
+    "type" : "TAX",
+    "id" : "3103.20100101"
+  }, {
+    "component" : "t24data",
+    "type" : "TAX",
+    "id" : "3103.20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "6006"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "6007"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.INTEREST",
+    "id" : "ABC.REMN4.SAV.ACCT.CRINTEREST-MXN--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "CATEGORY",
+    "id" : "6001"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "PRODUCT.QUALIFIER.RULES"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "AGENT.COMMISSION"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "REWARDS.POINTS"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "RENEWAL"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "CLOSUREFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "ACCOUNTS.PAYMENT.RULES"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "ACCOUNTS.PAYOUT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "PERIODICCHARGES"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "PREFPRICING"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "CONSTRAINT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MXGATSETUP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCCLOSUREFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCCLOSUREFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFCLOSUREFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFCLOSUREFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUECLOSUREFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUECLOSUREFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYCLOSUREFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVCLOSUREFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPCLOSUREFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEPERIODICCHARGES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEPERIODICCHARGESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYPERIODICCHARGES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFPERIODICCHARGES"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFPERIODICCHARGESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPPERIODICCHARGESSP"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.PAYMENT.SCHEDULE",
+    "id" : "ABC.REM.SAVING.ACCOUNTS-MXN-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.PAYMENT.SCHEDULE",
+    "id" : "ABC.SAVINGS.ACCOUNTS-MXN-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.GROUP",
+    "id" : "ABC.SAVING.ACCOUNTS"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-UPDATE-BALANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.ACTIVITY",
+    "id" : "ACCOUNTS-SUSP.PAYMENT-ARRANGEMENT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.CLOSURE",
+    "id" : "SAVINGS.ACCOUNT.STD-20091202"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.PRESENTATION",
+    "id" : "SAVINGS.ACCOUNT-20110414"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MXCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCMXCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEMXCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFMXCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYMXCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVMXCRINTEREST"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PROPERTY",
+    "id" : "MXMINBALFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCMXMINBALFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "ACCMXMINBALFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFMXMINBALFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DEFMXMINBALFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEMXMINBALFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "DUEMXMINBALFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "PAYMXMINBALFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "INVMXMINBALFEE"
+  }, {
+    "component" : "t24data",
+    "type" : "AC.BALANCE.TYPE",
+    "id" : "CAPMXMINBALFEESP"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PERIODIC.ATTRIBUTE",
+    "id" : "TOTAL.TXN.COUNT"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PERIODIC.ATTRIBUTE",
+    "id" : "MINIMUM.BALANCE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.RESTRICTION",
+    "id" : "MX.SAV.ACCOUNT-MXN--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.CLOSURE",
+    "id" : "SAVINGS.ACCOUNT.STD-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.PRESENTATION",
+    "id" : "SAVINGS.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.DORMANCY",
+    "id" : "SAVINGS.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.DORMANCY",
+    "id" : "SAVINGS.ACCOUNT-20110722"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.CHARGES",
+    "id" : "SAVINGS.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACTIVITY.CHARGES",
+    "id" : "SAVINGS.ACCOUNT--20100101"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.TAX",
+    "id" : "ABC.SAV.ACCT.TAX-MXN-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PAYMENT.RULE.TYPE",
+    "id" : "PAY.BY.DATE"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.PAYOUT.RULES",
+    "id" : "ACCOUNTS.PAYOUT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.PAYOUT.RULES",
+    "id" : "ACCOUNTS.PAYOUT-20100825"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.SAVINGS.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNT",
+    "id" : "ABC.GAR.SAV.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.INTEREST",
+    "id" : "ABC.GAR.SAV.ACCT.CRINTEREST-MXN--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.PAYMENT.SCHEDULE",
+    "id" : "ABC.GAR.SAVING.ACCOUNTS-MXN-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.TAX",
+    "id" : "ABC.GAR.SAV.ACCT.TAX-MXN-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.GAR.SAVINGS.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNT",
+    "id" : "ABC.REM.SAVING.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.INTEREST",
+    "id" : "ABC.REM.SAV.ACCT.CRINTEREST-MXN--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.REMN2.SAVINGS.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNT",
+    "id" : "ABC.REMN4.SAVING.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.REMN4.SAVINGS.ACCOUNT-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.ACCOUNT",
+    "id" : "ABC.SAVINGS.ACCOUNT--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRD.DES.INTEREST",
+    "id" : "ABC.SAV.ACCT.CRINTEREST-MXN--20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.DESIGNER",
+    "id" : "ABC.SAVINGS.ACCOUNT.CHILD-20240408"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.MANAGER",
+    "id" : "ABC.SAVINGS.ACCOUNT",
+    "action" : "Proof"
+  }, {
+    "component" : "t24data",
+    "type" : "AA.PRODUCT.MANAGER",
+    "id" : "ABC.SAVINGS.ACCOUNT",
+    "action" : "Publish"
+  } ],
+  "dataStructures" : [ {
+    "record" : "t24data.AA.PRODUCT.DESIGNER!ABC.CURRENT.ACCOUNT-20240408",
+    "dataStructureName" : "t24data_aa"
+  }, {
+    "record" : "t24data.AA.PRODUCT.DESIGNER!ABC.SAVINGS.ACCOUNT-20240408",
+    "dataStructureName" : "t24data_aa"
+  } ]
+}

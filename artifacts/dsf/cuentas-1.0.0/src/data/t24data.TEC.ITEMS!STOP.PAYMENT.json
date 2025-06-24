@@ -1,0 +1,46 @@
+{
+  "header" : {
+    "id" : "STOP.PAYMENT",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Stop Active"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "STOP.ACTIVE",
+      "OPERAND" : "equals"
+    }, {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Stop End Flag"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "STOP.END.FLAG",
+      "OPERAND" : "equals"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Stop Payment"
+    } ],
+    "EVENT.TYPE" : "PAYMENT.STOP",
+    "SOURCE.TABLE" : "PAYMENT.STOP",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

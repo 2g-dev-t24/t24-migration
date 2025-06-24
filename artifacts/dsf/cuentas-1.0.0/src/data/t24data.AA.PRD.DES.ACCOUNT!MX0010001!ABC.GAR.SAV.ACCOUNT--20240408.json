@@ -1,0 +1,58 @@
+{
+  "header" : {
+    "id" : "ABC.GAR.SAV.ACCOUNT--20240408",
+    "dsfApiType" : "AA.PRD.DES.ACCOUNT",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "GENERATE.IBAN" : "NO",
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "NR.ATTRIBUTE" : [ {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "ACCOUNT.TITLE.1"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "ACCOUNT.TITLE.2"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "ACCOUNT.REFERENCE"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-RESETTING"
+      } ],
+      "NR.ATTRIBUTE" : "SHORT.TITLE"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "EARLY.PROCESSING"
+    } ],
+    "DEFAULT.ATTR.OPTION" : "RESETTING",
+    "ACCOUNT.TITLE.1" : [ {
+      "ACCOUNT.TITLE.1" : "Savings Account"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC Savings Garantee Account"
+    }, {
+      "DESCRIPTION" : "ABC Cuenta Garantizada"
+    } ],
+    "CATEGORY" : "6008",
+    "BASE.DATE.TYPE" : "AGREEMENT",
+    "DATE.CONVENTION" : "FORWARD",
+    "PASSBOOK" : "NO",
+    "BUS.DAY.CENTRES" : [ {
+      "BUS.DAY.CENTRES" : "MX"
+    } ]
+  }
+}

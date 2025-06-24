@@ -1,0 +1,75 @@
+{
+  "header" : {
+    "id" : "STMT-AA",
+    "dsfApiType" : "AC.POSTING.DETAIL",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENTRY.FIELD" : [ {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "PROPERTY"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "ARRANGEMENT.ACTIVITY"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "ACTIVITY"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "CUSTOMER"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "DEAL.AMT"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "DEAL.CCY"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "TAX.CODE"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "TAX.RATE"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "EXCH.RATE"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "FCY.AMT"
+    }, {
+      "VALUE.SOURCE" : "CONTRACT",
+      "ENTRY.FIELD" : "THEIR.REFERENCE",
+      "ENTRY.VALUE" : "REFERENCE.9"
+    }, {
+      "VALUE.SOURCE" : "TRANSACTION",
+      "ENTRY.FIELD" : "NARRATIVE",
+      "ENTRY.VALUE" : "NARRATIVE.1"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "OUR.REFERENCE",
+      "ENTRY.VALUE" : "4"
+    }, {
+      "VALUE.SOURCE" : "CONSTANT",
+      "ENTRY.FIELD" : "SYSTEM.ID",
+      "ENTRY.VALUE" : "AA"
+    } ],
+    "MOVEMENT.TYPE" : "STMT",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Statement Entry for AA"
+    } ]
+  }
+}

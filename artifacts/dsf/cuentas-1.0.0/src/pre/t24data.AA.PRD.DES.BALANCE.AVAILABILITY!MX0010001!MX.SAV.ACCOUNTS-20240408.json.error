@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "MX.SAV.ACCOUNTS-20240408",
+    "dsfApiType" : "AA.PRD.DES.BALANCE.AVAILABILITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "error" : {
+    "code" : "TGVCP-021",
+    "message" : "MX.SAV.ACCOUNTS-20240408 is not Live",
+    "type" : "BUSINESS"
+  }
+}

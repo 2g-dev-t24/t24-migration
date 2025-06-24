@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "LARGE.DEPOSIT",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Txn.Amount"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "YES",
+      "FIELD" : "AMOUNT.LCY",
+      "OPERAND" : "greater than"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "PRECEDENCE" : [ {
+      "PRECEDENCE" : "CLEARED.BALANCE.ABOVE"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Large Deposit"
+    } ],
+    "EVENT.TYPE" : "ACCOUNTING.CR.TXN",
+    "SOURCE.TABLE" : "STMT.ENTRY",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

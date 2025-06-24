@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "CHQ.NUMBER.DEBIT",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Cheque Number"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "YES",
+      "FIELD" : "CHEQUE.NUMBER",
+      "OPERAND" : "equals"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cheque Cleared - specific cheque"
+    } ],
+    "EVENT.TYPE" : "ACCOUNTING.CHEQUE",
+    "SOURCE.TABLE" : "STMT.ENTRY",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL",
+    "ONE.TIME.SUB" : "YES"
+  }
+}

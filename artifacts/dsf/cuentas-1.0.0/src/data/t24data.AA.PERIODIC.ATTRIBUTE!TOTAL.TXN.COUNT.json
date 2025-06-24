@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "TOTAL.TXN.COUNT",
+    "dsfApiType" : "AA.PERIODIC.ATTRIBUTE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "COMPARISON.TYPE" : "+DIFFERENCE",
+    "SOURCE.TYPE" : "AA.ACTIVITY",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Total no. of transactions"
+    } ],
+    "PERIOD" : "1M",
+    "PR.ATTR.CLASS" : "TRANSACTION.COUNT.TOTAL",
+    "PERIOD.TYPE" : "REPEATING",
+    "RULE.START" : "ARRANGEMENT"
+  }
+}

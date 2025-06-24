@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "3103.20100101",
+    "dsfApiType" : "TAX",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ISR Default Tax"
+    } ],
+    "RATE" : "16",
+    "CATEGORY" : "17205",
+    "TR.CODE.DR" : "464",
+    "TR.CODE.CR" : "465",
+    "TAX.OPERAND" : "MINUS",
+    "SHORT.DESCR" : [ {
+      "SHORT.DESCR" : "ISR Default Tax"
+    } ]
+  }
+}

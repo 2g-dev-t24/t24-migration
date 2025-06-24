@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "STO.PERIODIC.PAYMENT",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "MANDATORY",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "STO Product"
+      } ],
+      "FIELD.TYPE" : "KEYWORD",
+      "INHERIT" : "NO",
+      "FIELD" : "!SERVICE.PRODUCT",
+      "OPERAND" : "equals",
+      "VALUE" : "PP"
+    }, {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Version Number"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "CURR.NO",
+      "OPERAND" : "equals",
+      "VALUE" : "1"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "ARRANGEMENT.SERVICE"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Periodic Payment Standing Order"
+    } ],
+    "EVENT.TYPE" : "STANDING.ORDER-SERVICE",
+    "SOURCE.TABLE" : "STANDING.ORDER",
+    "ITEM.CLASSIFICATION" : "SERVICE",
+    "SUBSCRIPTION.TYPE" : "PRODUCT"
+  }
+}

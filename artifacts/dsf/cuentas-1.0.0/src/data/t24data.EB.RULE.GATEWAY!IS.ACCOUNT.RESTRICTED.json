@@ -1,0 +1,31 @@
+{
+  "header" : {
+    "id" : "IS.ACCOUNT.RESTRICTED",
+    "dsfApiType" : "EB.RULE.GATEWAY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CONTEXT.ID" : [ {
+      "CALLING.APPL" : [ {
+        "CONTEXT.FLD" : "ARRANGEMENT",
+        "CALLING.APPL" : "AA.ARRANGEMENT.ACTIVITY"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Is Account marked with Posting Rest"
+    } ],
+    "EVAL.RULE" : [ {
+      "EVAL.RULE" : "IS.ACCOUNT.RESTRICTED",
+      "EVAL.VALUE" : "RULE.MESSAGE"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Is Posting Res."
+    } ],
+    "EVAL.MODE" : "All.Rules"
+  }
+}

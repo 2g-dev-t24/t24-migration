@@ -1,0 +1,61 @@
+{
+  "header" : {
+    "id" : "SAVINGS.ACCOUNT--20240408",
+    "dsfApiType" : "AA.PRD.DES.ACTIVITY.CHARGES",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "NR.ATTRIBUTE" : [ {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "APP.METHOD"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "APP.PERIOD"
+    } ],
+    "AUTO.SETTLE" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Activity Charges - Savings Account"
+    } ],
+    "ACTIVITY.ID" : [ {
+      "ACTIVITY.ID" : "ACCOUNTS-INTLCASHBACK-ARRANGEMENT",
+      "CHARGE" : [ {
+        "APP.METHOD" : "CAPITALISE",
+        "CHARGE" : "TXNFEE"
+      } ]
+    }, {
+      "ACTIVITY.ID" : "ACCOUNTS-SETTLE-PAYOFF",
+      "CHARGE" : [ {
+        "APP.METHOD" : "CAPITALISE",
+        "CHARGE" : "CLOSUREFEE"
+      } ]
+    }, {
+      "ACTIVITY.ID" : "ACCOUNTS-SCHEDULE.CHARGE-DORMANCY*INACTIVE",
+      "CHARGE" : [ {
+        "APP.METHOD" : "CAPITALISE",
+        "CHARGE" : "DORMANCYFEE"
+      } ]
+    }, {
+      "ACTIVITY.ID" : "ACCOUNTS-SCHEDULE.CHARGE-DORMANCY*DORMANT",
+      "CHARGE" : [ {
+        "APP.METHOD" : "CAPITALISE",
+        "CHARGE" : "DORMANCYFEE"
+      } ]
+    }, {
+      "ACTIVITY.ID" : "ACCOUNTS-SCHEDULE.CHARGE-DORMANCY*UNCLAIMED",
+      "CHARGE" : [ {
+        "APP.METHOD" : "CAPITALISE",
+        "CHARGE" : "DORMANCYFEE"
+      } ]
+    } ]
+  }
+}

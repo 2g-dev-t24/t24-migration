@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "SAVINGS.ACCOUNT.STD-20240408",
+    "dsfApiType" : "AA.PRD.DES.CLOSURE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "POSTING.RESTRICT" : "90",
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "CLOSURE.ACTIVITY" : [ {
+      "CLOSURE.ACTIVITY" : "ACCOUNTS-SETTLE-PAYOFF"
+    } ],
+    "FULL.DESCRIPTION" : "Cooling period conditions for savings accounts",
+    "CLOSURE.TYPE" : "BALANCE",
+    "CLOSE.ONLINE" : "YES",
+    "CLOSURE.METHOD" : "AUTOMATIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cooling period conditions-Savings"
+    } ]
+  }
+}

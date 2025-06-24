@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "3103.20240408",
+    "dsfApiType" : "TAX",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "error" : {
+    "code" : "TGVCP-021",
+    "message" : "3103.20240408 is not Live",
+    "type" : "BUSINESS"
+  }
+}

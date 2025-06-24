@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS.PAYOUT-20100825",
+    "dsfApiType" : "AA.PRD.DES.PAYOUT.RULES",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "APPLICATION.TYPE" : "PAY.BY.DATE",
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "REMAINDER.ACTIVITY" : "ACCOUNTS-SUSP.PAYMENT-ARRANGEMENT",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Payout rules for Accounts"
+    } ],
+    "SEQUENCE" : [ {
+      "PROPERTY" : "CRINTEREST",
+      "SEQUENCE" : "1"
+    } ],
+    "APPLICATION.ORDER" : "OLDEST.FIRST"
+  }
+}

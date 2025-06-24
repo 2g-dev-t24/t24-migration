@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "ACCMXMINBALFEESP",
+    "dsfApiType" : "AC.BALANCE.TYPE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENTRY.TYPE" : "SPECIAL",
+    "ACTIVITY.UPDATE" : "Y",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Suspended Balance for ACC Charge"
+    } ],
+    "REPORTING.TYPE" : "NON-CONTINGENT"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "42",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MANDATORY.REF.NO" : "Y",
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "CUSTOMER",
+    "SWIFT.NARRATIVE" : "NCHK",
+    "SHORT.DESC" : "Cheque",
+    "DISPO.EXEMPT" : "YES",
+    "DATA.CAPTURE" : "Y",
+    "STMT.NARR" : "Cheque",
+    "DEFAULT.VALUE.DATE" : "Y",
+    "STMT.NARR.REF" : "OUR",
+    "DEBIT.CREDIT.IND" : "DEBIT",
+    "CHEQUE.IND" : "Y",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Encash Cheque"
+    } ]
+  }
+}

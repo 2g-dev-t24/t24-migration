@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "1014",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "SA Account"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cuenta Uala N4"
+    }, {
+      "DESCRIPTION" : "Cuenta Uala N4"
+    } ],
+    "SYSTEM.IND" : "AC"
+  }
+}

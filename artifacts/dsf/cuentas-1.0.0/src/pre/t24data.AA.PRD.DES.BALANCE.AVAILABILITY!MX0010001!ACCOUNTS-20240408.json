@@ -1,0 +1,32 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-20240408",
+    "dsfApiType" : "AA.PRD.DES.BALANCE.AVAILABILITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "NR.ATTRIBUTE" : [ {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "CREDIT.CHECK"
+    }, {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "AVAIL.BAL.UPD"
+    } ],
+    "DEFAULT.ATTR.OPTION" : "RESETTING",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Accounts Availability Parameters"
+    } ],
+    "CREDIT.CHECK" : "WORKING",
+    "AVAIL.BAL.UPD" : "DEBITS"
+  }
+}

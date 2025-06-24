@@ -1,0 +1,151 @@
+{
+  "header" : {
+    "id" : "ABC.CURRENT.ACCOUNT-20240408",
+    "dsfApiType" : "AA.PRODUCT.DESIGNER",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CURRENCY" : [ {
+      "CURRENCY" : "MXN"
+    } ],
+    "INHERITANCE.ONLY" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "MX Current Account Parent"
+    }, {
+      "DESCRIPTION" : "ABC Cuenta Corriente Padre"
+    } ],
+    "PROPERTY" : [ {
+      "PROPERTY" : "ACCOUNTING",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "PRESENTATION",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "CUSTOMER",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "OFFICERS",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "SCHEDULE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "ABC.CURRENT.ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "CLOSURE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ACCOUNT.CLOSURE"
+      } ]
+    }, {
+      "PROPERTY" : "BALANCE.MAINTENANCE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "ACTIVITY.MAPPING",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS.CORP"
+      } ]
+    }, {
+      "PROPERTY" : "BALANCE.AVAILABILITY",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "ALERTS",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "PAYOFF",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "API",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ABC.CURRENT.API"
+      } ]
+    }, {
+      "PROPERTY" : "CRINTEREST",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "ABC.CURRENT.ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "DRINTEREST",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "ABC.CURRENT.ACCOUNTS.OVERDRAFT"
+      } ]
+    }, {
+      "PROPERTY" : "DORMANCY",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "CURRENT.ACCOUNT"
+      } ]
+    }, {
+      "PROPERTY" : "MXTXLIMIT",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "MX.SAV.LEVEL.AC.LIMIT"
+      } ]
+    }, {
+      "PROPERTY" : "ACTIVITY.CHARGES",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ABC.CURRENT.ACCOUNT"
+      } ]
+    }, {
+      "PROPERTY" : "TXNFEE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "DORMANCYFEE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    } ],
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "ABC Current Account Parent"
+    } ],
+    "CALC.PROPERTY" : [ {
+      "SOURCE.BALANCE" : "CURBALANCE",
+      "SOURCE.TYPE" : "CR.AVERAGE",
+      "CALC.PROPERTY" : "CRINTEREST"
+    }, {
+      "SOURCE.BALANCE" : "CURBALANCE",
+      "SOURCE.TYPE" : "DR.DAILY",
+      "CALC.PROPERTY" : "DRINTEREST"
+    } ],
+    "PRODUCT.GROUP" : "ABC.CURRENT.ACCOUNTS"
+  }
+}

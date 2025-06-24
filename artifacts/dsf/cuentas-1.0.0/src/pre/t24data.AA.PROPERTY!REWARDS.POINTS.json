@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "REWARDS.POINTS",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Rewards points"
+    } ],
+    "PROPERTY.CLASS" : "AGENT.COMMISSION",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Rewards Points"
+    } ],
+    "PROPERTY.TYPE" : [ {
+      "PROPERTY.TYPE" : "REWARDS"
+    } ]
+  }
+}

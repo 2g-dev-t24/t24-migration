@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "90",
+    "dsfApiType" : "POSTING.RESTRICT",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Automatic Closing"
+    } ],
+    "RESTRICTION.TYPE" : "ALL"
+  }
+}

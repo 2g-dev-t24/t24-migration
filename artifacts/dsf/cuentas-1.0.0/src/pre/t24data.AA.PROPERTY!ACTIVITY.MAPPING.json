@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "ACTIVITY.MAPPING",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Activity Mapping"
+    } ],
+    "PROPERTY.CLASS" : "ACTIVITY.MAPPING",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Activity Mapping"
+    } ],
+    "PROPERTY.TYPE" : [ {
+      "PROPERTY.TYPE" : "PRODUCT.ONLY"
+    }, {
+      "PROPERTY.TYPE" : "MEMO.ENABLED"
+    } ]
+  }
+}

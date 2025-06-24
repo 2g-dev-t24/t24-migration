@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-PENSION.PLAN.CREDIT-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Pension Plan Credit"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-CREDIT-ARRANGEMENT",
+    "PROCESS.ID" : "CREDIT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Pension Plan Credit"
+    } ]
+  }
+}

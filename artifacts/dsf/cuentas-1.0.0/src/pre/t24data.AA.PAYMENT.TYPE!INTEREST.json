@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "INTEREST",
+    "dsfApiType" : "AA.PAYMENT.TYPE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CALC.TYPE" : "ACTUAL",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Interest"
+    } ],
+    "MAND.PROP.CLASS" : [ {
+      "MAND.PROP.CLASS" : "INTEREST"
+    } ],
+    "TYPE" : "CALCULATED"
+  }
+}

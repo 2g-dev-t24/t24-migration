@@ -1,0 +1,48 @@
+{
+  "header" : {
+    "id" : "CHQ.ISSUED",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Cheque Status"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "CHEQUE.STATUS",
+      "OPERAND" : "equals",
+      "VALUE" : "90"
+    }, {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Audit No"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "CURR.NO",
+      "OPERAND" : "equals",
+      "VALUE" : "1"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cheques Issued"
+    } ],
+    "EVENT.TYPE" : "CHEQUE.ISSUE",
+    "SOURCE.TABLE" : "CHEQUE.ISSUE",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

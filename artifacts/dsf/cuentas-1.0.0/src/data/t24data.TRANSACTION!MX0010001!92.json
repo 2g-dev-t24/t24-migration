@@ -1,0 +1,30 @@
+{
+  "header" : {
+    "id" : "92",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MANDATORY.REF.NO" : "Y",
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "CUSTOMER",
+    "EXPOSURE.DATE" : "+02W",
+    "SWIFT.NARRATIVE" : "NCOL",
+    "SHORT.DESC" : "Chq Collection",
+    "DISPO.EXEMPT" : "YES",
+    "DATA.CAPTURE" : "Y",
+    "STMT.NARR" : "Cheque Collection",
+    "DEFAULT.VALUE.DATE" : "Y",
+    "STMT.NARR.REF" : "THEIR",
+    "NARR.TYPE" : "TTCHQ",
+    "DEBIT.CREDIT.IND" : "CREDIT",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Cheque Collection Direct"
+    } ]
+  }
+}

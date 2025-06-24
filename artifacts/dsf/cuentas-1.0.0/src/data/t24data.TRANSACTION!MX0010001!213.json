@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "213",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "CUSTOMER",
+    "STMT.NARR.REF" : "THEIR",
+    "NARR.TYPE" : "FTOUT",
+    "SWIFT.NARRATIVE" : "NTRF",
+    "SHORT.DESC" : "Transfer",
+    "DISPO.EXEMPT" : "YES",
+    "STMT.NARR" : "Transfer",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Transfer Out"
+    } ]
+  }
+}

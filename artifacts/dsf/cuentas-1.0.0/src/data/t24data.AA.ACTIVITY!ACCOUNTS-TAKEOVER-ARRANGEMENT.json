@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-TAKEOVER-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SYSTEM.ACTIVITY" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Takeover Arrangement"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROCESS.ID" : "TAKEOVER",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "SYSTEM CREATED"
+    } ]
+  }
+}

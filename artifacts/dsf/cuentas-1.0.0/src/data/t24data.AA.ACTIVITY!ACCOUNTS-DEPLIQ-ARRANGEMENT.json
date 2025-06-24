@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-DEPLIQ-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Credit from Deposit Liquidation"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-CREDIT-ARRANGEMENT",
+    "PROCESS.ID" : "CREDIT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Credit from Deposit Liquidation"
+    } ]
+  }
+}

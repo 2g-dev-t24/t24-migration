@@ -1,0 +1,2103 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-CHARGE",
+    "dsfApiType" : "AC.ALLOCATION.RULE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : "Debit Charge",
+    "DEF.CR.TXN" : "813",
+    "EVENT.TYPE" : [ {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-PAY-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-PAY-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.CAPITALISE-PAY-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.MAKE.DUE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.MAKE.DUE-DUE-SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.CAPITALISE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.CAPITALISE-DUE-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-DUE-SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-DUE-SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "863",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "COM",
+        "MVMT.DR.RE.T" : "COM",
+        "OPP.CR.TXN" : "862"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-DUE-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "863",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "862"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-DUE-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "COM",
+        "MVMT.DR.RE.T" : "COM",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.MAKE.DUE-DUE-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "OPP.DR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "812"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-OS"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "815",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "815",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN"
+      } ],
+      "EVENT.TYPE" : "CHARGE-SUSPEND-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.CR.RE.T" : "RSM",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "OPP.DR.RE.T" : "RSM",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "PL*52251"
+      } ],
+      "EVENT.TYPE" : "CHARGE-RESUME-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "OPP.DR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "812"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "894",
+        "OPP.DR.TXN" : "894",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "894",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "OPP.CR.TXN" : "894"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-OS.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "884",
+        "OPP.DR.TXN" : "884",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "884",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "PL*54202",
+        "OPP.CR.TXN" : "884"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-OS.WOF"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "832",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "832"
+      } ],
+      "EVENT.TYPE" : "CHARGE-AGE.BILLS-DUE-GRC"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "832",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "832"
+      } ],
+      "EVENT.TYPE" : "CHARGE-AGE.BILLS-DUE-DEL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "832",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "832"
+      } ],
+      "EVENT.TYPE" : "CHARGE-AGE.BILLS-DUE-NAB"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-AGE.BILLS-DUE-SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "861",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-PAY-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "894",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "MVMT.CR.RE.T" : "ADJ",
+        "MVMT.DR.RE.T" : "ADJ",
+        "OPP.CR.TXN" : "894"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-PAY-OS.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.CR.RE.T" : "PAY",
+        "MVMT.STMT" : "STMT-AA",
+        "OPP.DR.RE.T" : "PAY",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.MAKE.DUE-PAY-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.CR.RE.T" : "PAY",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "OPP.DR.RE.T" : "PAY",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.MAKE.DUE-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.CR.RE.T" : "PAY",
+        "MVMT.STMT" : "STMT-AA",
+        "OPP.DR.RE.T" : "PAY",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "DUE",
+        "MVMT.DR.RE.T" : "DUE"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-PAY-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-PAY-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.CR.RE.T" : "PAY",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "OPP.DR.RE.T" : "PAY",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "894",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "894"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "863",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "OPP.TARGET" : "INT*U-AASUSPENSE",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "LNW",
+        "MVMT.DR.RE.T" : "LNW",
+        "OPP.CR.TXN" : "862"
+      } ],
+      "EVENT.TYPE" : "ACCOUNT-CREDIT-DUE-SUS"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "863",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "OPP.TARGET" : "INT*U-AASUSPENSE",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "LNW",
+        "MVMT.DR.RE.T" : "LNW",
+        "OPP.CR.TXN" : "862"
+      } ],
+      "EVENT.TYPE" : "ACCOUNT-DEBIT-DUE-SUS"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS"
+      } ],
+      "EVENT.TYPE" : "ACCOUNT-SETTLE.SUSP-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS"
+      } ],
+      "EVENT.TYPE" : "ACCOUNT-SETTLE.SUSP-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-OS.ADJ.SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "884",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "884",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-OS.WOF.SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "894",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "894",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-AGE.BILLS-DUE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "894",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "894",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEF.MAKE.DUE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "862",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS"
+      } ],
+      "EVENT.TYPE" : "CHARGE-SUSPEND-DUE-TAKE.OVER"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "863",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "DUE",
+        "MVMT.DR.RE.T" : "DUE",
+        "OPP.CR.TXN" : "862"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE-SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.CAPITALISE-DUE-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.MAKE.DUE-DUE-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-DUE-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-DUE-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-WAIVE.AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.CAPITALISE-DUE-WAIVE.AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-DUE-WAIVE.AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-DUE-WAIVE.AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-DUE-WAIVE.SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-DUE-WAIVE.SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-PAY-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-PAY-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "894",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "894"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-PAY-AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.MAKE.DUE-PAY-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-ACC"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-PAY-ACC"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.MAKE.DUE-PAY-CR.PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.MAKE.DUE-PAY-DR.PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-PAY-CR.PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-PAY-DR.PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-CR.PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-DR.CUR"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-PAY-CR.CUR"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-PAY-DR.PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-PAY-WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-PAYOFF.CAPITALISE-PAY-DR.ACC"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-PAYOFF.CAPITALISE-DUE-CR.ACC"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "884",
+        "OPP.CR.RE.T" : "ACC",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "884",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "884",
+        "OPP.DR.RE.T" : "ACC",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP",
+        "OPP.CR.TXN" : "884"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.INFO.BILL-DUE-CURR.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "894",
+        "OPP.CR.RE.T" : "ACC",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "894",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "894",
+        "OPP.DR.RE.T" : "ACC",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP",
+        "OPP.CR.TXN" : "894"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.INFO.BILL-PAY-CURR.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "COM",
+        "MVMT.DR.RE.T" : "COM",
+        "OPP.CR.TXN" : "832"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-DUE-ACCRUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-ACCRUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-DUE-ACCRUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.CAPITALISE-DUE-ACCRUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.CR.RE.T" : "PAY",
+        "MVMT.STMT" : "STMT-AA",
+        "OPP.DR.RE.T" : "PAY",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "DUE",
+        "MVMT.DR.RE.T" : "DUE"
+      } ],
+      "EVENT.TYPE" : "CHARGE-MAKE.DUE-PAY-ACCRUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-PAY-ACCRUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.MAKEDUE-PAY-ACCRUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.CAPITALISE-PAY-ACCRUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "813",
+        "OPP.CR.RE.T" : "ACC",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.RE.T" : "ACC",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-DEF.OS.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "ADJ",
+        "MVMT.DR.RE.T" : "ADJ",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CREDIT-DUE-ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "ADJ",
+        "MVMT.DR.RE.T" : "ADJ",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEBIT-DUE-ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-CR.PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-DR.DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-INV"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-INV.AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-INV.WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-INV.DR.CUR"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-INV.CR.PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.ACCRUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.CR.PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.DR.DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.WAIVE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "832",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.WAIVE.AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "833",
+        "OPP.DR.TXN" : "833",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "833",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "833"
+      } ],
+      "EVENT.TYPE" : "CHARGE-PAYOFF.CAPITALISE-DUE-INV.CR.ACC"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "884",
+        "OPP.CR.RE.T" : "ACC",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "884",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "884",
+        "OPP.DR.RE.T" : "ACC",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP",
+        "OPP.CR.TXN" : "884"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.INFO.BILL-DUE-INV.CURR.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "894",
+        "OPP.DR.TXN" : "894",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "894",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "OPP.CR.TXN" : "894"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE-INV"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE-INV.AMORT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "863",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "DUE",
+        "MVMT.DR.RE.T" : "DUE",
+        "OPP.CR.TXN" : "862"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE-INV.SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "813",
+        "OPP.CR.RE.T" : "ACC",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.RE.T" : "ACC",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.DEF.OS.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.ADJ.SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "884",
+        "OPP.DR.TXN" : "884",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "884",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "PL*54202",
+        "OPP.CR.TXN" : "884"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.WOF"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "884",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "884",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.WOF.SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-INV"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-INV.ACC"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "OPP.DR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "812"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-INV.OS"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "451",
+        "OPP.CR.RE.T" : "ACC",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "OPP.DR.RE.T" : "ACC",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP",
+        "OPP.CR.TXN" : "450"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "863",
+        "OPP.CR.RE.T" : "ACC",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "ACC",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "RSM",
+        "MVMT.DR.RE.T" : "RSM",
+        "OPP.CR.TXN" : "862"
+      } ],
+      "EVENT.TYPE" : "CHARGE-RESUME-DUE-CAP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-INV.CR.CUR"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-INV.DR.PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "884",
+        "OPP.DR.TXN" : "884",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "884",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "PL*54202",
+        "OPP.CR.TXN" : "884"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.TOL.WOF"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "884",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "884",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.TOL.WOF.SP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "813",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "813",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-DEFER.CAPITALISE-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "ADJ",
+        "MVMT.DR.RE.T" : "ADJ",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.DEF.OS.ADJ.CUST"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "ADJ",
+        "MVMT.DR.RE.T" : "ADJ",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.ADJ.CO"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "ADJ",
+        "MVMT.DR.RE.T" : "ADJ",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.ADJ.CUST"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "WOF",
+        "MVMT.DR.RE.T" : "WOF",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.TOL.WOF.CO"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "INT*U-AAWOF",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "WOF",
+        "MVMT.DR.RE.T" : "WOF",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.TOL.WOF.CUST"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "INT*U-AAWOF",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "WOF",
+        "MVMT.DR.RE.T" : "WOF",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.WOF.CO"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "INT*U-AAWOF",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "WOF",
+        "MVMT.DR.RE.T" : "WOF",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ADJUST.BILL-DUE-INV.OS.WOF.CUST"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.CO"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.CUST"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.SP.CO"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-INV.SP.CUST"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "INT*U-AAWOF",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "DUE",
+        "MVMT.DR.RE.T" : "DUE",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE-INV.CO"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "INT*U-AAWOF",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "DUE",
+        "MVMT.DR.RE.T" : "DUE",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE-INV.CUST"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "INT*U-AAWOF",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "DUE",
+        "MVMT.DR.RE.T" : "DUE",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE-INV.SP.CO"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "INT*U-AAWOF",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "DUE",
+        "MVMT.DR.RE.T" : "DUE",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPTURE.BILL-DUE-INV.SP.CUST"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "OPP.DR.TXN" : "861",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "MVMT.CR.RE.T" : "PAY",
+        "MVMT.DR.RE.T" : "PAY",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "CHARGE-PAY-PAY-OFFSET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-ACC.OFFSET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "OPP.DR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "812"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-OFFSET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "OPP.DR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "812"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-OS.OFFSET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-PAY-ACC.OFFSET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "OPP.DR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "812"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-SP.OFFSET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "832",
+        "OPP.DR.TXN" : "813",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "832",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "813"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-INV.ACC.OFFSET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-INV.OFFSET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "812",
+        "OPP.DR.TXN" : "812",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "812",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "812"
+      } ],
+      "EVENT.TYPE" : "CHARGE-REPAY-DUE-INV.OS.OFFSET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "MVT",
+        "MVMT.DR.RE.T" : "MVT"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-CAP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "MVT",
+        "MVMT.DR.RE.T" : "MVT"
+      } ],
+      "EVENT.TYPE" : "CHARGE-ACT.CAPITALISE-DUE-PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "1130",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-CAP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "1130",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-PAY-CAP"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "1130",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-PAY-PL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "1130",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "CAP",
+        "MVMT.DR.RE.T" : "CAP"
+      } ],
+      "EVENT.TYPE" : "CHARGE-CAPITALISE-DUE-PL"
+    } ],
+    "DEF.DR.TXN" : "813",
+    "DEF.CR.RE.T" : "COM",
+    "DEF.DR.RE.T" : "COM"
+  }
+}

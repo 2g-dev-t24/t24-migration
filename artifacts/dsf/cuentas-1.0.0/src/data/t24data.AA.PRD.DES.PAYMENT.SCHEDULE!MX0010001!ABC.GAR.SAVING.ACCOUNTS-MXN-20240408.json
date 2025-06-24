@@ -1,0 +1,33 @@
+{
+  "header" : {
+    "id" : "ABC.GAR.SAVING.ACCOUNTS-MXN-20240408",
+    "dsfApiType" : "AA.PRD.DES.PAYMENT.SCHEDULE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "FULL.DESCRIPTION" : "Monthly payment schedule for current accounts",
+    "PAYMENT.TYPE" : [ {
+      "PAYMENT.TYPE" : "INTEREST",
+      "BILL.TYPE" : "INSTALLMENT",
+      "PAYMENT.METHOD" : "DUE",
+      "ISSUE.BILL" : "NO",
+      "PROPERTY" : [ {
+        "PROPERTY" : "CRINTEREST",
+        "DUE.FREQ" : "e0Y e1M e0W e0D e0F"
+      } ],
+      "PAYMENT.FREQ" : "e0Y e1M e0W e0D e0F"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Monthly payment schedule"
+    }, {
+      "DESCRIPTION" : "ABC Garantee Saving Account PS"
+    } ],
+    "BILLS.COMBINED" : "YES"
+  }
+}

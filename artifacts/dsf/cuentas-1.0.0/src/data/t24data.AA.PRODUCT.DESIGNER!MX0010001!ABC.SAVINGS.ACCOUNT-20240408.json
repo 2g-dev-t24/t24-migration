@@ -1,0 +1,133 @@
+{
+  "header" : {
+    "id" : "ABC.SAVINGS.ACCOUNT-20240408",
+    "dsfApiType" : "AA.PRODUCT.DESIGNER",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CURRENCY" : [ {
+      "CURRENCY" : "MXN"
+    } ],
+    "INHERITANCE.ONLY" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC Savings Account"
+    }, {
+      "DESCRIPTION" : "ABC Cuenta de Ahorro Padre"
+    } ],
+    "PROPERTY" : [ {
+      "PROPERTY" : "ACCOUNTING",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "ACTIVITY.MAPPING",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS.CORP"
+      } ]
+    }, {
+      "PROPERTY" : "ARRANGEMENT.RULES",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "MX.SAV.ACCOUNT"
+      } ]
+    }, {
+      "PROPERTY" : "BALANCE.AVAILABILITY",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "MX.SAV.ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "BALANCE.MAINTENANCE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "MX.SAV.NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "CLOSURE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "SAVINGS.ACCOUNT.STD"
+      } ]
+    }, {
+      "PROPERTY" : "CUSTOMER",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "OFFICERS",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "PRESENTATION",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "SAVINGS.ACCOUNT"
+      } ]
+    }, {
+      "PROPERTY" : "PAYOFF",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "DORMANCY",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "SAVINGS.ACCOUNT"
+      } ]
+    }, {
+      "PROPERTY" : "ACTIVITY.CHARGES",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "SAVINGS.ACCOUNT"
+      } ]
+    }, {
+      "PROPERTY" : "TXNFEE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "DORMANCYFEE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "CLOSUREFEE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "NEGOTIABLE"
+      } ]
+    }, {
+      "PROPERTY" : "API",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ABC.CURRENT.API"
+      } ]
+    }, {
+      "PROPERTY" : "MXTAX",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ABC.SAV.ACCT.TAX"
+      } ]
+    }, {
+      "PROPERTY" : "ACCOUNTS.PAYOUT",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ACCOUNTS.PAYOUT"
+      } ]
+    } ],
+    "PRODUCT.GROUP" : "ABC.SAVING.ACCOUNTS"
+  }
+}

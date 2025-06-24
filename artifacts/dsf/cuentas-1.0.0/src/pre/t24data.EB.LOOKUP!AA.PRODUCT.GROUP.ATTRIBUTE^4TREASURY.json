@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "AA.PRODUCT.GROUP.ATTRIBUTE*TREASURY",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OTHER.INFO" : "Treasury",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Treasury"
+    } ]
+  }
+}

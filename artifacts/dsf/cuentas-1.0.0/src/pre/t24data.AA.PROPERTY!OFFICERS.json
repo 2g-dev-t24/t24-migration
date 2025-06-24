@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "OFFICERS",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Account Officers"
+    } ],
+    "PROPERTY.CLASS" : "OFFICERS",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Account Officers"
+    } ],
+    "PROPERTY.TYPE" : [ {
+      "PROPERTY.TYPE" : "MEMO.ENABLED"
+    } ]
+  }
+}

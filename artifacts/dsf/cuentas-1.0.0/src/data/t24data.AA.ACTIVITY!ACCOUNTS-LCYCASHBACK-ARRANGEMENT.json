@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-LCYCASHBACK-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cash Back (Local Currency)"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-DEBIT-ARRANGEMENT",
+    "PROCESS.ID" : "DEBIT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Cash Back - "
+    }, {
+      "FULL.DESC" : "Local Currency"
+    } ]
+  }
+}

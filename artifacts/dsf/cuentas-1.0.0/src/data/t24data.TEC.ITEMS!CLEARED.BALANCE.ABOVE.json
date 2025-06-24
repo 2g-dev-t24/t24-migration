@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "CLEARED.BALANCE.ABOVE",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Available Balance"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "YES",
+      "FIELD" : "ONLINE.CLEARED.BAL",
+      "OPERAND" : "goes above"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cleared Balance (above)"
+    } ],
+    "EVENT.TYPE" : "ACCOUNTING.BALANCE.ABOVE",
+    "SOURCE.TABLE" : "EB.CONTRACT.BALANCES",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

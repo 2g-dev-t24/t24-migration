@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "STO.CANCEL",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Function"
+      } ],
+      "FIELD.TYPE" : "KEYWORD",
+      "INHERIT" : "NO",
+      "FIELD" : "!V$FUNCTION",
+      "OPERAND" : "equals",
+      "VALUE" : "R"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Standing Order cancelled"
+    } ],
+    "EVENT.TYPE" : "STANDING.ORDER",
+    "SOURCE.TABLE" : "STANDING.ORDER",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "header" : {
+    "id" : "MX.SAV.LEVEL2.ACCOUNT-MXN--20240408",
+    "dsfApiType" : "AA.PRD.DES.ACTIVITY.RESTRICTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "PERIODIC.RULE" : [ {
+      "PERIODIC.ATTRIBUTE" : "MX.TOTAL.AMOUNT.UDIM",
+      "RULE.ACTIVITY.ID" : [ {
+        "RULE.ACTIVITY.ID" : "ACCOUNTS-LCYCASHDEP-ARRANGEMENT"
+      }, {
+        "RULE.ACTIVITY.ID" : "ACCOUNTS-FCYCASHDEP-ARRANGEMENT"
+      }, {
+        "RULE.ACTIVITY.ID" : "ACCOUNTS-TRANSFERIN-ARRANGEMENT"
+      }, {
+        "RULE.ACTIVITY.ID" : "ACCOUNTS-LCYCHQDEP-ARRANGEMENT"
+      }, {
+        "RULE.ACTIVITY.ID" : "ACCOUNTS-FCYCHQDEP-ARRANGEMENT"
+      }, {
+        "RULE.ACTIVITY.ID" : "ACCOUNTS-ONUSCHQDEP-ARRANGEMENT"
+      } ],
+      "RULE.NAME" : "Limit 1 Month Level 4",
+      "PERIODIC.VALUE" : "3000"
+    } ],
+    "ACTIVITY.CLASS" : [ {
+      "ACTIVITY.CLASS" : [ {
+        "ACTIVITY.ID" : "ACCOUNTS-LCYCASHDEP-ARRANGEMENT"
+      }, {
+        "ACTIVITY.ID" : "ACCOUNTS-FCYCASHDEP-ARRANGEMENT"
+      }, {
+        "ACTIVITY.ID" : "ACCOUNTS-TRANSFERIN-ARRANGEMENT"
+      }, {
+        "ACTIVITY.ID" : "ACCOUNTS-LCYCHQDEP-ARRANGEMENT"
+      }, {
+        "ACTIVITY.ID" : "ACCOUNTS-FCYCHQDEP-ARRANGEMENT"
+      }, {
+        "ACTIVITY.ID" : "ACCOUNTS-ONUSCHQDEP-ARRANGEMENT"
+      } ],
+      "RULE.ID" : [ {
+        "RESTRICT.ERROR" : "MXACCT-NOT.UDI.ALLOWED",
+        "RULE.ID" : "Limit 1 Month Level 4",
+        "RESTRICT.TYPE" : "ERROR"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Level 2 Savings Account Restriction"
+    }, {
+      "DESCRIPTION" : "Level 2 Savings Account Restriction"
+    } ]
+  }
+}

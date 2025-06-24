@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-ACH.DEBIT-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ACH Debit"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-DEBIT-ARRANGEMENT",
+    "PROCESS.ID" : "DEBIT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "ACH Debit"
+    } ]
+  }
+}

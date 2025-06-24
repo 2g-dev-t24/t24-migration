@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "INFCRINTEREST",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Credit Interest Info"
+    } ],
+    "PROPERTY.CLASS" : "INTEREST",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Credit Interest Info"
+    } ]
+  }
+}

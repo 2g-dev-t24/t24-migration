@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "1002",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MNEMONIC" : "CURRACCT2",
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "CurrAcc with OD"
+    }, {
+      "SHORT.NAME" : "ABC CtaNom"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Current Account with Overdraft"
+    }, {
+      "DESCRIPTION" : "ABC Cuenta de Nomina"
+    } ],
+    "SYSTEM.IND" : "AC"
+  }
+}

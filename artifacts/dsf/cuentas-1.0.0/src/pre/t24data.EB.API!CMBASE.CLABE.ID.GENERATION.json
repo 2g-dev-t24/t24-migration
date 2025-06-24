@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "CMBASE.CLABE.ID.GENERATION",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CMBASE.CLABE.ID.GENERATION"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

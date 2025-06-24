@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-TRANSFERIN-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Transfer In"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-CREDIT-ARRANGEMENT",
+    "PROCESS.ID" : "CREDIT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Transfer In"
+    }, {
+      "FULL.DESC" : "Transfer in"
+    } ]
+  }
+}

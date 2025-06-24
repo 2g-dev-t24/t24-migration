@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "883",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "BANK",
+    "SWIFT.NARRATIVE" : "NWOI",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Writeoff Interest"
+    } ]
+  }
+}

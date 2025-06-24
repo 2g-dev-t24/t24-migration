@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "ISSUE.VISA.CARD",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "MANDATORY",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Card Type"
+      } ],
+      "FIELD.TYPE" : "KEYWORD",
+      "INHERIT" : "NO",
+      "FIELD" : "!SERVICE.PRODUCT",
+      "OPERAND" : "equals",
+      "VALUE" : "VISA"
+    }, {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Card Status"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "CARD.STATUS",
+      "OPERAND" : "equals",
+      "VALUE" : "90"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "ARRANGEMENT.SERVICE"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Issue Visa Card"
+    } ],
+    "EVENT.TYPE" : "CARD.ISSUE-SERVICE",
+    "SOURCE.TABLE" : "CARD.ISSUE",
+    "ITEM.CLASSIFICATION" : "SERVICE",
+    "SUBSCRIPTION.TYPE" : "PRODUCT"
+  }
+}

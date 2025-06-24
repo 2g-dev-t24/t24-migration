@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-SCHEDULE.CHARGE-DORMANCY*UNCLAIMED",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SYSTEM.ACTIVITY" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Scheduled DormancyCharge(Unclaimed)"
+    } ],
+    "PROPERTY" : "DORMANCY",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-SCHEDULE.CHARGE-DORMANCY",
+    "PROCESS.ID" : "SCHEDULE.CHARGE",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "SYSTEM CREATED"
+    } ]
+  }
+}

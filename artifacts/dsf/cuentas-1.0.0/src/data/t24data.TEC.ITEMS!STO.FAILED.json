@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "STO.FAILED",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Status Indicator"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "FIELD.NO" : "1",
+      "INHERIT" : "NO",
+      "FIELD" : "Indicator",
+      "OPERAND" : "equals",
+      "VALUE" : "0"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Standing Order Failed"
+    } ],
+    "EVENT.TYPE" : "STO.EXECUTION",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT"
+  }
+}

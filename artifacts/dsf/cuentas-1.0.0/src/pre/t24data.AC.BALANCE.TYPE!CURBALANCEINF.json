@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "CURBALANCEINF",
+    "dsfApiType" : "AC.BALANCE.TYPE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENTRY.TYPE" : "SPECIAL",
+    "ACTIVITY.UPDATE" : "Y",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Info Balance"
+    } ],
+    "REPORTING.TYPE" : "INTERNAL",
+    "MOVEMENT.SUPPRESS" : "Y"
+  }
+}

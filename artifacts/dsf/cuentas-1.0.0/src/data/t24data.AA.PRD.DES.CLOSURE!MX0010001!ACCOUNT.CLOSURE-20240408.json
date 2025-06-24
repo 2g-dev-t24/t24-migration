@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "ACCOUNT.CLOSURE-20240408",
+    "dsfApiType" : "AA.PRD.DES.CLOSURE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "POSTING.RESTRICT" : "90",
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "CLOSE.ONLINE" : "YES",
+    "CLOSURE.METHOD" : "MANUAL",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Default Account Closure"
+    } ]
+  }
+}

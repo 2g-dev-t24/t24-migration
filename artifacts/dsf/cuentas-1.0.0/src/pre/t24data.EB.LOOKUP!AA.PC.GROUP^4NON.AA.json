@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "AA.PC.GROUP*NON.AA",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OTHER.INFO" : "Non AA",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Non AA"
+    } ]
+  }
+}

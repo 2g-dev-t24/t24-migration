@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "MXACCT.GET.ACTIVITY.TOTAL.DATE",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "error" : {
+    "code" : "TGVCP-021",
+    "message" : "MXACCT.GET.ACTIVITY.TOTAL.DATE is not Live",
+    "type" : "BUSINESS"
+  }
+}

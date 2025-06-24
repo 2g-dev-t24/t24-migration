@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "55",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.VALUE.DATE" : "Y",
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "CUSTOMER",
+    "STMT.NARR.REF" : "TRANS",
+    "DEBIT.CREDIT.IND" : "CREDIT",
+    "EXPOSURE.DATE" : "Y",
+    "SWIFT.NARRATIVE" : "NMSC",
+    "SHORT.DESC" : "Trav Chqs Sale",
+    "DISPO.EXEMPT" : "YES",
+    "DATA.CAPTURE" : "Y",
+    "STMT.NARR" : "Travellers Cheques Sale",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Buy Travellers Cheque"
+    } ]
+  }
+}

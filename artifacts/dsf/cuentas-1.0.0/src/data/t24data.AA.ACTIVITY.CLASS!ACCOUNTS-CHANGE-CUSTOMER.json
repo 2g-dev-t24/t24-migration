@@ -1,0 +1,74 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-CHANGE-CUSTOMER",
+    "dsfApiType" : "AA.ACTIVITY.CLASS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BATCH.NAME" : [ {
+      "BATCH.NAME" : "AA.EOD.PROCESS",
+      "BATCH.SEQ" : "3"
+    }, {
+      "BATCH.NAME" : "AA.SOD.PROCESS",
+      "BATCH.SEQ" : "3"
+    } ],
+    "PAYLOAD.MAPPER" : "CUSTOMER-PROPERTY-UPDATE",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Change Customer activity"
+    } ],
+    "ACTIVITY.TYPE" : [ {
+      "ACTIVITY.TYPE" : "USER"
+    }, {
+      "ACTIVITY.TYPE" : "SCHEDULED"
+    }, {
+      "ACTIVITY.TYPE" : "SOD-PROCESS"
+    }, {
+      "ACTIVITY.TYPE" : "PRE.LIVE"
+    } ],
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROPERTY.CLASS" : [ {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "CUSTOMER",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "MAINTAIN",
+      "PROPERTY.CLASS" : "LIMIT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "CHANGE",
+      "PROPERTY.CLASS" : "ACCOUNT",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "ACCOUNT",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "STATEMENT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "EVALUATE",
+      "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "CALCULATE",
+      "PROPERTY.CLASS" : "ACTIVITY.CHARGES",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "SEND.MESSAGE",
+      "PROPERTY.CLASS" : "ACTIVITY.MESSAGING",
+      "USER.INPUT" : "NO"
+    } ],
+    "PROCESS.ID" : "CHANGE",
+    "CLASS.ID" : "CUSTOMER",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Change the customer of an arrangement"
+    } ],
+    "EVENT.CLASS" : "accounts.updateParty.partyUpdated"
+  }
+}

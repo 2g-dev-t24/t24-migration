@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "SPECIAL-AA",
+    "dsfApiType" : "AC.POSTING.DETAIL",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENTRY.FIELD" : [ {
+      "VALUE.SOURCE" : "CONSTANT",
+      "ENTRY.FIELD" : "SYSTEM.ID",
+      "ENTRY.VALUE" : "AAAA"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "OUR.REFERENCE",
+      "ENTRY.VALUE" : "3"
+    } ],
+    "MOVEMENT.TYPE" : "SPECIAL",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Special entry from AA"
+    } ]
+  }
+}

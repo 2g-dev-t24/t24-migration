@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "258",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "CUSTOMER",
+    "STMT.NARR.REF" : "OUR",
+    "NARR.TYPE" : "FTIN",
+    "DEBIT.CREDIT.IND" : "CREDIT",
+    "SWIFT.NARRATIVE" : "NTRF",
+    "SHORT.DESC" : "Transfer in",
+    "DISPO.EXEMPT" : "YES",
+    "STMT.NARR" : "Transfer in",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Transfer In"
+    } ]
+  }
+}

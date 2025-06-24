@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "862",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "AUTO",
+    "SWIFT.NARRATIVE" : "NCRA",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Credit from Arrangement"
+    } ]
+  }
+}

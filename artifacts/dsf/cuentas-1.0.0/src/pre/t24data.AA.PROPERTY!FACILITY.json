@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "FACILITY",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Facilities"
+    } ],
+    "PROPERTY.CLASS" : "FACILITY",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Enables the selection of the services which will"
+    }, {
+      "FULL.DESC" : "be available for the product"
+    } ]
+  }
+}

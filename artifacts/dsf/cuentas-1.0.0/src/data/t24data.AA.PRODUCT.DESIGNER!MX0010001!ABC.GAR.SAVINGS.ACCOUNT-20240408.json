@@ -1,0 +1,54 @@
+{
+  "header" : {
+    "id" : "ABC.GAR.SAVINGS.ACCOUNT-20240408",
+    "dsfApiType" : "AA.PRODUCT.DESIGNER",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CURRENCY" : [ {
+      "CURRENCY" : "MXN"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC SAVINGS ACCOUNTS"
+    }, {
+      "DESCRIPTION" : "ABC Cuenta de Ahorro Garantizada"
+    } ],
+    "PROPERTY" : [ {
+      "PROPERTY" : "BALANCE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "ABC.GAR.SAV.ACCOUNT"
+      } ]
+    }, {
+      "PROPERTY" : "CRINTEREST",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ABC.GAR.SAV.ACCT.CRINTEREST"
+      } ]
+    }, {
+      "PROPERTY" : "SCHEDULE",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "NON.TRACKING",
+        "PRD.PROPERTY" : "ABC.GAR.SAVING.ACCOUNTS"
+      } ]
+    }, {
+      "PROPERTY" : "MXTAX",
+      "PRD.PROPERTY" : [ {
+        "ARR.LINK" : "TRACKING",
+        "PRD.PROPERTY" : "ABC.GAR.SAV.ACCT.TAX"
+      } ]
+    } ],
+    "PARENT.PRODUCT" : "ABC.SAVINGS.ACCOUNT",
+    "CALC.PROPERTY" : [ {
+      "SOURCE.BALANCE" : "CURBALANCE",
+      "SOURCE.TYPE" : "CR.AVERAGE",
+      "CALC.PROPERTY" : "CRINTEREST"
+    } ],
+    "PRODUCT.GROUP" : "ABC.SAVING.ACCOUNTS"
+  }
+}

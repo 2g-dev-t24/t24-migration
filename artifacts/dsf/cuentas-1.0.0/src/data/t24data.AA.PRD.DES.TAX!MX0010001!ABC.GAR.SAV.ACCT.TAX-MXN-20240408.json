@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "ABC.GAR.SAV.ACCT.TAX-MXN-20240408",
+    "dsfApiType" : "AA.PRD.DES.TAX",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cuenta Garantizada"
+    }, {
+      "DESCRIPTION" : "Cuenta Garantizada"
+    } ],
+    "PROPERTY" : [ {
+      "PROPERTY" : "CRINTEREST",
+      "PROP.TAX.CODE" : [ {
+        "PROP.TAX.CODE" : "3103"
+      } ]
+    } ]
+  }
+}

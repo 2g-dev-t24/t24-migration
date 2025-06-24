@@ -1,0 +1,814 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-20240408",
+    "dsfApiType" : "AA.PRD.DES.ACCOUNTING",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "ADJUSTMENT.OPTION" : "NEXT.CAP",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Accounting Rule for Customer Accts"
+    } ],
+    "DEF.MVMT.RE.DR" : "MVT",
+    "PROPERTY" : [ {
+      "NEG.BOOKING.PY" : "55053",
+      "NEG.BOOKING.CM" : "55052",
+      "BOOKING.CM" : "50001",
+      "BOOKING.PY" : "50010",
+      "PROPERTY" : "CRINTEREST",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ACCRUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "REPAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEBIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CREDIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPTURE.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "RESUME"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "SUSPEND"
+      } ],
+      "ADJUST.CM" : "50001",
+      "BOOKING.PM" : "50001",
+      "NEG.BOOKING.PM" : "55052"
+    }, {
+      "NEG.BOOKING.PY" : "55053",
+      "NEG.BOOKING.CM" : "55052",
+      "BOOKING.CM" : "50001",
+      "BOOKING.PY" : "50010",
+      "PROPERTY" : "INFCRINTEREST",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ACCRUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "REPAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEBIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CREDIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPTURE.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "RESUME"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "SUSPEND"
+      } ],
+      "ADJUST.CM" : "50001",
+      "BOOKING.PM" : "50001",
+      "NEG.BOOKING.PM" : "55052"
+    }, {
+      "NEG.BOOKING.PY" : "55053",
+      "NEG.BOOKING.CM" : "55052",
+      "BOOKING.CM" : "50001",
+      "BOOKING.PY" : "50010",
+      "PROPERTY" : "BUNDLEINTEREST",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "REPAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ACCRUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEBIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CREDIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPTURE.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "RESUME"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "SUSPEND"
+      } ],
+      "ADJUST.CM" : "50001",
+      "BOOKING.PM" : "50001",
+      "NEG.BOOKING.PM" : "55052"
+    }, {
+      "NEG.BOOKING.PY" : "55053",
+      "NEG.BOOKING.CM" : "55052",
+      "BOOKING.CM" : "51001",
+      "BOOKING.PY" : "51010",
+      "PROPERTY" : "PENALINT",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ACCRUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "REPAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEBIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CREDIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPTURE.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "SUSPEND"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "RESUME"
+      } ],
+      "ADJUST.CM" : "51001",
+      "BOOKING.PM" : "51001",
+      "NEG.BOOKING.PM" : "55052"
+    }, {
+      "NEG.BOOKING.PY" : "55053",
+      "NEG.BOOKING.CM" : "55052",
+      "BOOKING.CM" : "51001",
+      "BOOKING.PY" : "51010",
+      "PROPERTY" : "DRINTEREST",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ACCRUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "REPAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEBIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CREDIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPTURE.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "SUSPEND"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "RESUME"
+      } ],
+      "ADJUST.CM" : "51001",
+      "BOOKING.PM" : "51001",
+      "NEG.BOOKING.PM" : "55052"
+    }, {
+      "NEG.BOOKING.PY" : "55053",
+      "NEG.BOOKING.CM" : "55052",
+      "BOOKING.CM" : "51001",
+      "BOOKING.PY" : "51010",
+      "PROPERTY" : "INFDRINTEREST",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ACCRUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "REPAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEBIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CREDIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPTURE.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "RESUME"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "SUSPEND"
+      } ],
+      "ADJUST.CM" : "51001",
+      "BOOKING.PM" : "51001",
+      "NEG.BOOKING.PM" : "55052"
+    }, {
+      "BOOKING.CM" : "52251",
+      "BOOKING.PY" : "52252",
+      "PROPERTY" : "MGMTFEE",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "ACT.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "ACT.MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "ADJUST.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "ADJUST.INFO.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "CAPTURE.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "PAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "REPAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "CREDIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "DEBIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "SUSPEND"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "RESUME"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-CHARGE",
+        "ACCT.ACTION" : "PAYOFF.CAPITALISE"
+      } ],
+      "ADJUST.CM" : "52251",
+      "BOOKING.PM" : "52251",
+      "ACCRUE.AMORT" : "ACCRUE",
+      "ACCRUE.PERIOD" : "SCHEDULE"
+    }, {
+      "BOOKING.CM" : "51001",
+      "BOOKING.PY" : "51010",
+      "PROPERTY" : "OVDLIMITFEES",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ACCRUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "REPAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEBIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CREDIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPTURE.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "SUSPEND"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "RESUME"
+      } ],
+      "ADJUST.CM" : "51001",
+      "BOOKING.PM" : "51001"
+    }, {
+      "BOOKING.CM" : "51001",
+      "BOOKING.PY" : "51010",
+      "PROPERTY" : "UTLLIMITFEES",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ACCRUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "MAKE.DUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "REPAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEBIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CREDIT"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAY"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "ADJUST.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "CAPTURE.BILL"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "SUSPEND"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-INTEREST",
+        "ACCT.ACTION" : "RESUME"
+      } ],
+      "ADJUST.CM" : "51001",
+      "BOOKING.PM" : "51001"
+    }, {
+      "PROPERTY" : "LIMIT",
+      "ACCT.ACTION" : [ {
+        "ACCT.RULE" : "ACCOUNTS-LIMIT",
+        "ACCT.ACTION" : "UPDATE.BALANCE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-LIMIT",
+        "ACCT.ACTION" : "UPDATE.HIS.BALANCE"
+      }, {
+        "ACCT.RULE" : "ACCOUNTS-LIMIT",
+        "ACCT.ACTION" : "CLOSE"
+      } ]
+    } ],
+    "DEF.MVMT.RE.CR" : "MVT",
+    "DEF.MVMT.DR" : "891",
+    "PROPERTY.CLASS" : [ {
+      "PC.ACTION" : [ {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "MAKE.DUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "REPAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "PAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "ADJUST.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "CAPTURE.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "DEF.MAKE.DUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "ACT.CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "ACT.MAKE.DUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "CHECK.SETTLE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "ADJUST.INFO.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "CREDIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "DEBIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "SUSPEND"
+      }, {
+        "PC.RULE" : "ACCOUNTS-CHARGE",
+        "PC.ACTION" : "RESUME"
+      } ],
+      "PROPERTY.CLASS" : "CHARGE",
+      "PC.BOOKING.CM" : "52251",
+      "PC.BOOKING.PY" : "52252",
+      "PC.ADJUST.CM" : "52251",
+      "PC.BOOKING.PM" : "52251"
+    }, {
+      "PC.ACTION" : [ {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "ACCRUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "MAKE.DUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "REPAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "DEBIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "CREDIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "PAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "ADJUST"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "ADJUST.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "CAPTURE.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "RESUME"
+      }, {
+        "PC.RULE" : "ACCOUNTS-INTEREST",
+        "PC.ACTION" : "SUSPEND"
+      } ],
+      "PROPERTY.CLASS" : "INTEREST",
+      "PC.BOOKING.CM" : "51001",
+      "PC.BOOKING.PY" : "51010",
+      "PC.ADJUST.CM" : "51001",
+      "PC.BOOKING.PM" : "51001"
+    }, {
+      "PC.ACTION" : [ {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "DR.MOVEMENT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "CR.MOVEMENT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "CREDIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "DEBIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "SETTLE.SUSP"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "FORCECREDIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "FORCEDEBIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "FUTURECREDIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "FUTUREDEBIT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "RESERVEFUNDS"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "CREDITPRENOTE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "BALANCE.TRANSFORM"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "TRANSFORM"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "RESTRUCTURE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "CONSOLIDATE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "BALANCE.MOVEMENT"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "CREATE.INVOICE.BALANCE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "OFFSET.INVOICE.BALANCE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "REPAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "RESUME"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "SUSPEND"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "PAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "DUE.NOTICE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "CHANGE.NOTICE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-ACCOUNT",
+        "PC.ACTION" : "EXPIRE.BILL"
+      } ],
+      "PROPERTY.CLASS" : "ACCOUNT"
+    }, {
+      "PC.ACTION" : [ {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "MAKE.DUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "REPAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "PAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "ISSUE.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "DEF.CHARGE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "UPDATE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "DEFER.MAKEDUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "DEFER.CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "CAPTURE.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "ADJUST.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "ADJUST.INFO.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "SUSPEND"
+      }, {
+        "PC.RULE" : "ACCOUNTS-PERIODICCHG",
+        "PC.ACTION" : "RESUME"
+      } ],
+      "PROPERTY.CLASS" : "PERIODIC.CHARGES",
+      "PC.BOOKING.CM" : "52251",
+      "PC.BOOKING.PY" : "52252",
+      "PC.ADJUST.CM" : "52251",
+      "PC.BOOKING.PM" : "52251"
+    }, {
+      "PC.ACTION" : [ {
+        "PC.RULE" : "ACCOUNTS-TAX",
+        "PC.ACTION" : "CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-TAX",
+        "PC.ACTION" : "MAKE.DUE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-TAX",
+        "PC.ACTION" : "ADJUST.INFO.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-TAX",
+        "PC.ACTION" : "CAPTURE.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-TAX",
+        "PC.ACTION" : "ADJUST.BILL"
+      }, {
+        "PC.RULE" : "ACCOUNTS-TAX",
+        "PC.ACTION" : "PAYOFF.CAPITALISE"
+      }, {
+        "PC.RULE" : "ACCOUNTS-TAX",
+        "PC.ACTION" : "REPAY"
+      } ],
+      "PROPERTY.CLASS" : "TAX"
+    }, {
+      "PC.ACTION" : [ {
+        "PC.RULE" : "ACCOUNTS-SETTLE",
+        "PC.ACTION" : "ADVANCE.PAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-SETTLE",
+        "PC.ACTION" : "DEBIT.SUSPPAY"
+      }, {
+        "PC.RULE" : "ACCOUNTS-SETTLE",
+        "PC.ACTION" : "SETTLE"
+      } ],
+      "PROPERTY.CLASS" : "SETTLEMENT"
+    } ],
+    "PC.CONSOLIDATION" : [ {
+      "PC.CONSOL.METHOD" : "NET",
+      "PC.CONSOLIDATION" : "CHARGE"
+    }, {
+      "PC.CONSOL.METHOD" : "ITEMIZED",
+      "PC.CONSOLIDATION" : "TAX"
+    } ],
+    "DEF.MVMT.CR" : "890"
+  }
+}

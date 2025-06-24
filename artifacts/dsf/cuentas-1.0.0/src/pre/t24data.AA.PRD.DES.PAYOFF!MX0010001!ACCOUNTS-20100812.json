@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-20100812",
+    "dsfApiType" : "AA.PRD.DES.PAYOFF",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Accounts Payoff Condition"
+    } ]
+  }
+}

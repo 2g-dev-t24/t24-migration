@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "AA.MARGIN.TYPE*PRICING.SPREAD",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "COMPARE.RATES",
+      "DATA.VALUE" : "INCLUDE"
+    } ],
+    "OTHER.INFO" : "Include in Rate Comparison",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Pricing Spread"
+    } ]
+  }
+}

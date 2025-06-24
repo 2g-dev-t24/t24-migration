@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "ABC.SAV.ACCT.TAX-MXN-20240408",
+    "dsfApiType" : "AA.PRD.DES.TAX",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "MX Tax on-Interest"
+    }, {
+      "DESCRIPTION" : "MX Impuesto Sobre Intereses"
+    } ],
+    "PROPERTY" : [ {
+      "PROP.TAX.COND" : [ {
+        "PROP.TAX.COND" : "ISRTAX"
+      } ],
+      "PROPERTY" : "CRINTEREST"
+    } ]
+  }
+}

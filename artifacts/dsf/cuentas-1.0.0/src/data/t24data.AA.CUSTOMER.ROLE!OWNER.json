@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "OWNER",
+    "dsfApiType" : "AA.CUSTOMER.ROLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BENEFICIAL.OWNER" : "YES",
+    "MAX.TAX.LIAB.PERC" : "100",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Beneficial Owner"
+    } ],
+    "REL.PRICING.AVAIL" : "YES",
+    "LIMIT.CUSTOMER" : "YES",
+    "TAXABLE" : "YES",
+    "GL.CUSTOMER" : "YES",
+    "DELIVERY.CUSTOMER" : "YES",
+    "APP.FORMAT" : "OWNR"
+  }
+}

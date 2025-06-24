@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "50010",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Int Exp (1)-PY"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Int Exp (1) - adjust prv year"
+    } ],
+    "SYSTEM.IND" : "PL"
+  }
+}

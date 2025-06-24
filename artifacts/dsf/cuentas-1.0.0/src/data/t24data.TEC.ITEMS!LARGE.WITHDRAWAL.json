@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "LARGE.WITHDRAWAL",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Txn Amount"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "YES",
+      "FIELD" : "AMOUNT.LCY",
+      "OPERAND" : "greater than",
+      "VALUE" : "(ABS)"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Large Withdrawal"
+    } ],
+    "EVENT.TYPE" : "ACCOUNTING.DR.TXN",
+    "SOURCE.TABLE" : "STMT.ENTRY",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

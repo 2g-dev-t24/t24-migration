@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-FCYCASHDEP-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cash Deposit (Foreign Currency)"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-CREDIT-ARRANGEMENT",
+    "PROCESS.ID" : "CREDIT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Cash Deposit - Foreign Currency"
+    } ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "header" : {
+    "id" : "CHQ.DEBIT",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Cheque Number"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "CHEQUE.NUMBER",
+      "OPERAND" : "not equal to"
+    }, {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Txn. Amount"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "AMOUNT.LCY",
+      "OPERAND" : "less than",
+      "VALUE" : "0"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "PRECEDENCE" : [ {
+      "PRECEDENCE" : "CHQ.NUMBER.DEBIT"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cheque Cleared"
+    } ],
+    "EVENT.TYPE" : "ACCOUNTING.CHEQUE",
+    "SOURCE.TABLE" : "STMT.ENTRY",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

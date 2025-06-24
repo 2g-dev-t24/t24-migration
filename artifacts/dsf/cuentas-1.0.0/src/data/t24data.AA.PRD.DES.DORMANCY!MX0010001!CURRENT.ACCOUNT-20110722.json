@@ -1,0 +1,90 @@
+{
+  "header" : {
+    "id" : "CURRENT.ACCOUNT-20110722",
+    "dsfApiType" : "AA.PRD.DES.DORMANCY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "STATUS" : [ {
+      "CHARGE.FREQUENCY" : "e0Y e1M e0W e0D e0F",
+      "STATUS" : "INACTIVE",
+      "NOTICE.FREQ" : "e0Y e1M e0W e0D e0F",
+      "PERIOD" : "12M",
+      "NOTICE.DAYS" : "10",
+      "AUTO.RESET.STATUS" : "YES",
+      "EXCEPTION.API" : [ {
+        "EXCEPTION.API" : "AA.LOCAL.IS.CUSTOMER.PRIVATE"
+      }, {
+        "EXCEPTION.RULE" : "IS.ACCOUNT.RESTRICTED"
+      }, {
+        "EXCEPTION.RULE" : "WORKING.BAL.LCY.GE.100"
+      }, {
+        "EXCEPTION.RULE" : "WORKING.BAL.LT.0"
+      } ]
+    }, {
+      "CHARGE.FREQUENCY" : "e0Y e1M e0W e0D e0F",
+      "STATUS" : "DORMANT",
+      "NOTICE.FREQ" : "e0Y e1M e0W e0D e0F",
+      "PERIOD" : "24M",
+      "AUTO.RESET.STATUS" : "YES"
+    }, {
+      "STATUS" : "CLOSEREADY",
+      "PERIOD" : "31M"
+    }, {
+      "STATUS" : "UNCLAIMED",
+      "PERIOD" : "5M"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Current Account Dormancy Condition"
+    } ],
+    "ACTIVITY.INITIATION" : [ {
+      "ACTIVITY.INITIATION" : "USER",
+      "INCLUDE.INDICATOR" : "EXCLUDE"
+    }, {
+      "AUTO.RESET.ACTIVITY" : "YES",
+      "ACTIVITY.INITIATION" : "CUSTOMER",
+      "INCLUDE.INDICATOR" : "INCLUDE"
+    }, {
+      "ACTIVITY.CLASS" : "ACCOUNTS-SUBSCRIBE-ALERTS",
+      "AUTO.RESET.ACTIVITY" : "YES",
+      "INCLUDE.INDICATOR" : "INCLUDE"
+    }, {
+      "ACTIVITY.CLASS" : "ACCOUNTS-UPDATE-SETTLEMENT",
+      "AUTO.RESET.ACTIVITY" : "YES",
+      "INCLUDE.INDICATOR" : "INCLUDE"
+    }, {
+      "ACTIVITY.CLASS" : "ACCOUNTS-CHANGE-CUSTOMER",
+      "AUTO.RESET.ACTIVITY" : "YES",
+      "INCLUDE.INDICATOR" : "INCLUDE"
+    }, {
+      "ACTIVITY.CLASS" : "ACCOUNTS-CHANGE.PRODUCT-ARRANGEMENT",
+      "AUTO.RESET.ACTIVITY" : "YES",
+      "INCLUDE.INDICATOR" : "INCLUDE"
+    }, {
+      "ACTIVITY.CLASS" : "ACCOUNTS-RENEGOTIATE-ARRANGEMENT",
+      "AUTO.RESET.ACTIVITY" : "YES",
+      "INCLUDE.INDICATOR" : "INCLUDE"
+    }, {
+      "ACTIVITY.CLASS" : "ACCOUNTS-RESET-ARRANGEMENT",
+      "AUTO.RESET.ACTIVITY" : "YES",
+      "INCLUDE.INDICATOR" : "INCLUDE"
+    }, {
+      "ACTIVITY.CLASS" : "ACCOUNTS-CHANGE-PAYMENT.SCHEDULE",
+      "AUTO.RESET.ACTIVITY" : "YES",
+      "INCLUDE.INDICATOR" : "INCLUDE"
+    }, {
+      "ACTIVITY.CLASS" : "ACCOUNTS-UPDATE-CUSTOMER",
+      "AUTO.RESET.ACTIVITY" : "YES",
+      "INCLUDE.INDICATOR" : "INCLUDE"
+    }, {
+      "ACTIVITY.NAME" : "ACCOUNTS-DEPLIQ-ARRANGEMENT",
+      "INCLUDE.INDICATOR" : "EXCLUDE"
+    } ]
+  }
+}

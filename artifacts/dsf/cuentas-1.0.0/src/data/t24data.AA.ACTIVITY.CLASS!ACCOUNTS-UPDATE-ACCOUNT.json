@@ -1,0 +1,62 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-UPDATE-ACCOUNT",
+    "dsfApiType" : "AA.ACTIVITY.CLASS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BATCH.NAME" : [ {
+      "BATCH.NAME" : "AA.EOD.PROCESS",
+      "BATCH.SEQ" : "8"
+    }, {
+      "BATCH.NAME" : "AA.SOD.PROCESS",
+      "BATCH.SEQ" : "8"
+    } ],
+    "PAYLOAD.MAPPER" : "ACCOUNT-PROPERTY-UPDATE",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Update Account static"
+    } ],
+    "ACTIVITY.TYPE" : [ {
+      "ACTIVITY.TYPE" : "USER"
+    }, {
+      "ACTIVITY.TYPE" : "SECONDARY"
+    }, {
+      "ACTIVITY.TYPE" : "SCHEDULED"
+    }, {
+      "ACTIVITY.TYPE" : "SOD-PROCESS"
+    }, {
+      "ACTIVITY.TYPE" : "PRE.LIVE"
+    }, {
+      "ACTIVITY.TYPE" : "EVALUATE.GRID"
+    } ],
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROPERTY.CLASS" : [ {
+      "ACTION" : "MAINTAIN",
+      "PROPERTY.CLASS" : "ACCOUNT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "EVALUATE",
+      "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "CALCULATE",
+      "PROPERTY.CLASS" : "ACTIVITY.CHARGES",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "SEND.MESSAGE",
+      "PROPERTY.CLASS" : "ACTIVITY.MESSAGING",
+      "USER.INPUT" : "NO"
+    } ],
+    "PROCESS.ID" : "UPDATE",
+    "CLASS.ID" : "ACCOUNT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Update Account static"
+    } ],
+    "EVENT.CLASS" : "accounts.updateAccount.accountUpdated"
+  }
+}

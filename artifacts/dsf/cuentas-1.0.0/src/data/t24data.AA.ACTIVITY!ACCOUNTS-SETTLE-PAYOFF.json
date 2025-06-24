@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-SETTLE-PAYOFF",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SYSTEM.ACTIVITY" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Settle Payoff for accounts"
+    } ],
+    "PROPERTY" : "PAYOFF",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROCESS.ID" : "SETTLE",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "SYSTEM CREATED"
+    } ]
+  }
+}

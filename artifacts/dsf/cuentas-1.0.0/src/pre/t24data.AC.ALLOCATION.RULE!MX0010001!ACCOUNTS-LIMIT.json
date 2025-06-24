@@ -1,0 +1,260 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-LIMIT",
+    "dsfApiType" : "AC.ALLOCATION.RULE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : "Limit Allocation Rule",
+    "DEF.CR.TXN" : "890",
+    "EVENT.TYPE" : [ {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.BALANCE-DUE-TOT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.BALANCE-PAY-TOT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.BALANCE-DUE-CUR"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.BALANCE-PAY-CUR"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.BALANCE-DUE-UTL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.BALANCE-PAY-UTL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.BALANCE-DUE-OVD"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.BALANCE-PAY-OVD"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-CLOSE-DUE-CUR"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-CLOSE-DUE-TOT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-CLOSE-DUE-UTL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-CLOSE-DUE-OVD"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.HIS.BALANCE-DUE-CUR"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.HIS.BALANCE-DUE-TOT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.HIS.BALANCE-DUE-OVD"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.HIS.BALANCE-DUE-UTL"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.HIS.BALANCE-PAY-TOT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.HIS.BALANCE-PAY-CUR"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.HIS.BALANCE-PAY-OVD"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "NEW",
+        "MVMT.DR.RE.T" : "NEW"
+      } ],
+      "EVENT.TYPE" : "LIMIT-UPDATE.HIS.BALANCE-PAY-UTL"
+    } ],
+    "DEF.DR.TXN" : "891",
+    "DEF.CR.RE.T" : "MVT",
+    "DEF.DR.RE.T" : "MVT"
+  }
+}

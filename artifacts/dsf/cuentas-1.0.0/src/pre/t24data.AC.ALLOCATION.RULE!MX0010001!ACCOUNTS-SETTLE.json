@@ -1,0 +1,99 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-SETTLE",
+    "dsfApiType" : "AC.ALLOCATION.RULE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : "Settlement for Accounts",
+    "DEF.CR.TXN" : "890",
+    "EVENT.TYPE" : [ {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.TXN" : "891",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "SETTLEMENT-ISSUE.ORDER-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.TXN" : "891",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "SETTLEMENT-ADVANCE.PAY-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.TXN" : "891",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "SETTLEMENT-ADVANCE.PAY-PAY-ADV"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "SETTLEMENT-DEBIT.SUSPPAY-PAY-SUSPPAYMENT"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "AC*TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "SETTLEMENT-SETTLE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "AC*TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "SETTLEMENT-SETTLE-PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "SETTLEMENT-ADVANCE.PAY-PAY-CUR"
+    } ],
+    "DEF.DR.TXN" : "891",
+    "DEF.CR.RE.T" : "MVT",
+    "DEF.DR.RE.T" : "MVT"
+  }
+}

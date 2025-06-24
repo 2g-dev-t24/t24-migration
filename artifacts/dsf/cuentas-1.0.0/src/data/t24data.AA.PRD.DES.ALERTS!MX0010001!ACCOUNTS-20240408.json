@@ -1,0 +1,250 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-20240408",
+    "dsfApiType" : "AA.PRD.DES.ALERTS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Account Alerts"
+    } ],
+    "EVENT" : [ {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "AR.ACCOUNT.CLOSURE.REQUEST"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "CREDIT.INT.CAP"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "STO.SETUP"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "STO.EXECUTED"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "STO.AMEND"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "INCOMING.TRANSFER"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "STOP.PAYMENT.REVOKE"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "CHQ.ISSUED"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "ACCOUNT.AMEND.COND"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      }, {
+        "ROLE" : "GUARANTOR"
+      } ],
+      "EVENT" : "DD.FAILED"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "DD.EXECUTED"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      }, {
+        "ROLE" : "GUARANTOR"
+      } ],
+      "EVENT" : "DD.CANCEL"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      }, {
+        "ROLE" : "GUARANTOR"
+      } ],
+      "EVENT" : "STO.RETRY.FAILED"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "DD.SETUP.AMEND"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "CHQ.NUMBER.DEBIT"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      }, {
+        "ROLE" : "GUARANTOR"
+      } ],
+      "EVENT" : "STO.FAILED"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      }, {
+        "ROLE" : "GUARANTOR"
+      } ],
+      "EVENT" : "ACCOUNT.OVERDRAWN"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "DD.SETUP.NEW"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      }, {
+        "ROLE" : "GUARANTOR"
+      } ],
+      "EVENT" : "DD.RETRY.FAILED"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "SALARY.CREDIT"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "CHQ.DEBIT"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "LARGE.DEPOSIT"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "LARGE.WITHDRAWAL"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      }, {
+        "ROLE" : "GUARANTOR"
+      } ],
+      "EVENT" : "STOP.PAYMENT"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "INTERNET.DEBIT"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "UNCLEARED.BALANCE.ABOVE"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "CLEARED.BALANCE.ABOVE"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "WORKING.BALANCE.BELOW"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "STO.CANCEL"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "MINBAL.PREFERRED.RATE"
+    }, {
+      "ROLE" : [ {
+        "ROLE" : "OWNER"
+      }, {
+        "ROLE" : "JOINT.OWNER"
+      } ],
+      "EVENT" : "MINBAL.DISCOUNT"
+    } ]
+  }
+}

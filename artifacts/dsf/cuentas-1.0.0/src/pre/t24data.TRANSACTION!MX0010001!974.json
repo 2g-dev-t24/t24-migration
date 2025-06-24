@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "974",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "AUTO",
+    "SWIFT.NARRATIVE" : "NLDP",
+    "SHORT.DESC" : "Int - Payable",
+    "DISPO.EXEMPT" : "YES",
+    "STMT.NARR" : "Interest - Payable",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Interest - Payable"
+    } ]
+  }
+}

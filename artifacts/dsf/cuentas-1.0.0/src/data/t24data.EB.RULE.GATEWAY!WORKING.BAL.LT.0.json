@@ -1,0 +1,31 @@
+{
+  "header" : {
+    "id" : "WORKING.BAL.LT.0",
+    "dsfApiType" : "EB.RULE.GATEWAY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CONTEXT.ID" : [ {
+      "CALLING.APPL" : [ {
+        "CONTEXT.FLD" : "ARRANGEMENT",
+        "CALLING.APPL" : "AA.ARRANGEMENT.ACTIVITY"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Is Working Balance less than 0"
+    } ],
+    "EVAL.RULE" : [ {
+      "EVAL.RULE" : "WORKING.BAL.LT.0",
+      "EVAL.VALUE" : "RULE.MESSAGE"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Is Wor bal lt 0"
+    } ],
+    "EVAL.MODE" : "All.Rules"
+  }
+}

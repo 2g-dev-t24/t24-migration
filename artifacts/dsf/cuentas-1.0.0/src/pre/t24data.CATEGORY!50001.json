@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "50001",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Interest Exp(1)"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Interest Expense (1)"
+    } ],
+    "SYSTEM.IND" : "PL"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-POST.ASSESSMENT-PRICING.RULES",
+    "dsfApiType" : "AA.ACTIVITY.CLASS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BATCH.NAME" : [ {
+      "BATCH.NAME" : "AA.EOD.PROCESS",
+      "BATCH.SEQ" : "31"
+    }, {
+      "BATCH.NAME" : "AA.SOD.PROCESS",
+      "BATCH.SEQ" : "31"
+    } ],
+    "PAYLOAD.MAPPER" : "ARRANGEMENT-PROPERTY-CHANGE.CONDITION",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Activity class for pricing rules"
+    } ],
+    "ACTIVITY.TYPE" : [ {
+      "ACTIVITY.TYPE" : "SCHEDULED"
+    }, {
+      "ACTIVITY.TYPE" : "NOREVERSE"
+    }, {
+      "ACTIVITY.TYPE" : "SECONDARY"
+    } ],
+    "ALERT.EVENT.TYPE" : [ {
+      "ALERT.EVENT.TYPE" : "AA.EVALUATION.DETAILS*PRICING.BENEFIT"
+    } ],
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROPERTY.CLASS" : [ {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "INTEREST",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "CHARGE",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "PERIODIC.CHARGES",
+      "USER.INPUT" : "YES"
+    } ],
+    "PROCESS.ID" : "POST.ASSESSMENT",
+    "CLASS.ID" : "PRICING.RULES",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "New activity class to apply pricing rules post"
+    }, {
+      "FULL.DESC" : "assessment"
+    } ],
+    "EVENT.CLASS" : "accounts.assessPricing.pricingAssessed"
+  }
+}

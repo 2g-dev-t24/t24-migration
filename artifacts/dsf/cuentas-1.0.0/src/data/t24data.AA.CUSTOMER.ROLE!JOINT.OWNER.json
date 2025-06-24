@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "JOINT.OWNER",
+    "dsfApiType" : "AA.CUSTOMER.ROLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Non Beneficial Owner"
+    } ],
+    "DELIVERY.CUSTOMER" : "YES",
+    "APP.FORMAT" : "JNTO"
+  }
+}

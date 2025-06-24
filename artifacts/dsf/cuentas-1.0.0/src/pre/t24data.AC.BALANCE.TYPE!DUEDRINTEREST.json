@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "DUEDRINTEREST",
+    "dsfApiType" : "AC.BALANCE.TYPE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENTRY.TYPE" : "STMT",
+    "ACTIVITY.UPDATE" : "Y",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Debit Interest (Due)"
+    } ],
+    "REPORTING.TYPE" : "NON-CONTINGENT"
+  }
+}

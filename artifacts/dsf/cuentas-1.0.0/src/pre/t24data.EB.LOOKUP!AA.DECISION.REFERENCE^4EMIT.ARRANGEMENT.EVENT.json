@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "AA.DECISION.REFERENCE*EMIT.ARRANGEMENT.EVENT",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Decision parameter to raise the events for arrangement creation"
+    } ]
+  }
+}

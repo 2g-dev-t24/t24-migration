@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "51010",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Int inc(1) - PY"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Int inc(1) - adjust prv year"
+    } ],
+    "SYSTEM.IND" : "PL"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "MVT",
+    "dsfApiType" : "RE.TXN.CODE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "MOVEMENT ENTRY"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "MOVEMENT ENTRY"
+    } ]
+  }
+}

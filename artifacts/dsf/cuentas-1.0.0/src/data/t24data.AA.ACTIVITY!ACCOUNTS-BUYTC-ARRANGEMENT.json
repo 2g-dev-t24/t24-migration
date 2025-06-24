@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-BUYTC-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Buy TC against Account"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-DEBIT-ARRANGEMENT",
+    "PROCESS.ID" : "DEBIT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Buy Travellers Cheque against account"
+    } ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "DR.DAILY",
+    "dsfApiType" : "AA.SOURCE.CALC.TYPE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CALC.TYPE" : "DAILY",
+    "SOURCE.TYPE" : "BALANCE",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Daily DEBIT Balance"
+    } ],
+    "BALANCE.TYPE" : "DEBIT"
+  }
+}

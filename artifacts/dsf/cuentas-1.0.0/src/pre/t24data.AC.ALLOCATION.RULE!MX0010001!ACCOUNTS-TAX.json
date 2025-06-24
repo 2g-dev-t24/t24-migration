@@ -1,0 +1,443 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-TAX",
+    "dsfApiType" : "AC.ALLOCATION.RULE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : "Allocation rule for tax",
+    "DEF.CR.TXN" : "860",
+    "EVENT.TYPE" : [ {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "862",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "863",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "ACCOUNT-SETTLE.SUSP-DUE-LEGACY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "861",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "TAX-MAKE.DUE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "891",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-DUE-NET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-PAY-NET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.TXN" : "861",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "TAX-MAKE.DUE-DUE-NET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-DUE-FCCY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-PAY-LCCY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.TXN" : "861",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "TAX-MAKE.DUE-DUE-FCCY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "860",
+        "OPP.DR.TXN" : "861",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "861",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "860"
+      } ],
+      "EVENT.TYPE" : "TAX-MAKE.DUE-PAY-LCCY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "891",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "TAX-PAYOFF.CAPITALISE-DUE-CR.ACC"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "891",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "ADJ",
+        "MVMT.DR.RE.T" : "ADJ",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "TAX-ADJUST.INFO.BILL-DUE-CURR.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "892",
+        "OPP.DR.TXN" : "892",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "892",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "OPP.CR.TXN" : "892"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPTURE.BILL-DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "814",
+        "OPP.DR.TXN" : "814",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "814",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "OPP.CR.TXN" : "814"
+      } ],
+      "EVENT.TYPE" : "TAX-ADJUST.BILL-DUE-OS.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.TXN" : "891",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "TAX-ADJUST.BILL-DUE-OS.WOF"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "OPP.DR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "942"
+      } ],
+      "EVENT.TYPE" : "TAX-MAKE.DUE-DUE-ADJ.DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "OPP.DR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "942"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-PAY-ADJ.PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "OPP.DR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "942"
+      } ],
+      "EVENT.TYPE" : "TAX-MAKE.DUE-PAY-ADJ.PAY"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "OPP.DR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "942"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-DUE-ADJ.DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-DUE-ADJ.NET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-PAY-ADJ.NET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-MAKE.DUE-DUE-ADJ.NET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-MAKE.DUE-PAY-ADJ.NET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "892",
+        "OPP.DR.TXN" : "892",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "892",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "OPP.CR.TXN" : "892"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPTURE.BILL-DUE-INV"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "814",
+        "OPP.DR.TXN" : "814",
+        "OPP.STMT" : "STMT-AA",
+        "OPP.CATEG" : "CATEG-AA",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "814",
+        "OPP.SPEC" : "SPECIAL-AA",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "OPP.CR.TXN" : "814"
+      } ],
+      "EVENT.TYPE" : "TAX-ADJUST.BILL-DUE-INV.OS.ADJ"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.TXN" : "891",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "TAX-ADJUST.BILL-DUE-INV.OS.WOF"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "891",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-DUE-INV"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "OPP.DR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "OPP.TARGET" : "TXN",
+        "OPP.CR.TXN" : "942"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-DUE-INV.ADJ.DUE"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "942",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "942",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-DUE-INV.ADJ.NET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "MVMT.SPEC" : "SPECIAL-AA"
+      } ],
+      "EVENT.TYPE" : "TAX-CAPITALISE-DUE-INV.NET"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "891",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "OPP.TARGET" : "TXN",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "SUS",
+        "MVMT.DR.RE.T" : "SUS",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "TAX-PAYOFF.CAPITALISE-DUE-INV.CR.ACC"
+    }, {
+      "MVMT.TARGET" : [ {
+        "OPP.DR.TXN" : "891",
+        "OPP.CR.RE.T" : "SUS",
+        "MVMT.STMT" : "STMT-AA",
+        "MVMT.DR.TXN" : "891",
+        "OPP.TARGET" : "INT*U-AACAPTURE",
+        "MVMT.TARGET" : "TXN",
+        "MVMT.CATEG" : "CATEG-AA",
+        "MVMT.CR.TXN" : "890",
+        "OPP.DR.RE.T" : "SUS",
+        "MVMT.SPEC" : "SPECIAL-AA",
+        "MVMT.CR.RE.T" : "ADJ",
+        "MVMT.DR.RE.T" : "ADJ",
+        "OPP.CR.TXN" : "890"
+      } ],
+      "EVENT.TYPE" : "TAX-ADJUST.INFO.BILL-DUE-INV.CURR.ADJ"
+    } ],
+    "DEF.DR.TXN" : "861",
+    "DEF.CR.RE.T" : "ADJ",
+    "DEF.DR.RE.T" : "ADJ"
+  }
+}

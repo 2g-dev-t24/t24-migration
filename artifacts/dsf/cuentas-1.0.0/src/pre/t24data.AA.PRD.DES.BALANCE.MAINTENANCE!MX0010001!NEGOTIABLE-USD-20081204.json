@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "NEGOTIABLE-USD-20081204",
+    "dsfApiType" : "AA.PRD.DES.BALANCE.MAINTENANCE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Fully Negotiable"
+    } ]
+  }
+}

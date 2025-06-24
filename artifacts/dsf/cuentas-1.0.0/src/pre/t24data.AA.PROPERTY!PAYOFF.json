@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "PAYOFF",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Payoff Rules"
+    } ],
+    "PROPERTY.CLASS" : "PAYOFF",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Payoff Rules"
+    } ],
+    "PROPERTY.TYPE" : [ {
+      "PROPERTY.TYPE" : "MEMO.ENABLED"
+    } ]
+  }
+}

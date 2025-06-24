@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "BALANCE.MAINTENANCE",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Balance Maintenance"
+    } ],
+    "PROPERTY.CLASS" : "BALANCE.MAINTENANCE",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Balance Maintenance"
+    } ],
+    "PROPERTY.TYPE" : [ {
+      "PROPERTY.TYPE" : "MEMO.ENABLED"
+    } ]
+  }
+}

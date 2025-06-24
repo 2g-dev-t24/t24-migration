@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "MGMTFEE",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Management Fees"
+    } ],
+    "PROPERTY.CLASS" : "CHARGE",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Management Fees"
+    } ],
+    "PROPERTY.TYPE" : [ {
+      "PROPERTY.TYPE" : "SUSPEND"
+    } ]
+  }
+}

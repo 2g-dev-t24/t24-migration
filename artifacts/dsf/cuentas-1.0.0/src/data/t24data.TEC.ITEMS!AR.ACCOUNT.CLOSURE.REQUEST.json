@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "AR.ACCOUNT.CLOSURE.REQUEST",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Activity"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "ACTIVITY.CLASS",
+      "OPERAND" : "equals",
+      "VALUE" : "ACCOUNTS-REQUEST.CLOSURE-ARRANGEMENT"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "AR Account Closure Request"
+    } ],
+    "EVENT.TYPE" : "AR.CLOSURE.REQUEST",
+    "SOURCE.TABLE" : "AA.ARRANGEMENT.ACTIVITY",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

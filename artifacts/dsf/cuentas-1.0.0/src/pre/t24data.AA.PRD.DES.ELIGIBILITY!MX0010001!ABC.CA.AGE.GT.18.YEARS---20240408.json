@@ -1,0 +1,37 @@
+{
+  "header" : {
+    "id" : "ABC.CA.AGE.GT.18.YEARS---20240408",
+    "dsfApiType" : "AA.PRD.DES.ELIGIBILITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "NR.ATTRIBUTE" : [ {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NEGOTIABLE"
+      }, {
+        "NR.OPTIONS" : "OVERRIDE"
+      } ],
+      "NR.ATTRIBUTE" : "ELIGIBILE.DEFAULT.PRD"
+    } ],
+    "DEFAULT.ATTR.OPTION" : "RESETTING",
+    "REVIEW.FREQUENCY" : "e1Y e0M e0W e0D e0F",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Age greater than 18 years"
+    }, {
+      "DESCRIPTION" : "Edad mayor a 18"
+    } ],
+    "CUST.STATIC.REVIEW" : "YES",
+    "RULE" : [ {
+      "FAILURE.TYPE" : "ERROR",
+      "RULE" : "MX.CUSTOMER.AGE.LT.18",
+      "FAILURE.ACTION" : "IGNORE"
+    } ],
+    "PERIODIC.REVIEW" : "YES"
+  }
+}

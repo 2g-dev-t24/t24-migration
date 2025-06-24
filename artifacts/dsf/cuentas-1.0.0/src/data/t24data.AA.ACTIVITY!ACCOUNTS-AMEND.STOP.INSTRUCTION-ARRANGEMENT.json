@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-AMEND.STOP.INSTRUCTION-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Amend Stop Instructions"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-RECORD.EVENT-ARRANGEMENT",
+    "PROCESS.ID" : "RECORD.EVENT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Activity for Amend Stop Instructions"
+    } ]
+  }
+}

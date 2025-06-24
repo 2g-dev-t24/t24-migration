@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "6006",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MNEMONIC" : "REMUNER1",
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Cta Remuneraa"
+    }, {
+      "SHORT.NAME" : "CTAREMN2"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Cuenta Remunerada"
+    }, {
+      "DESCRIPTION" : "Cuenta de Ahorro Remunerada N2"
+    } ],
+    "SYSTEM.IND" : "AC"
+  }
+}

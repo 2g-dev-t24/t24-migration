@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "INCOMING.TRANSFER.BY.AMT",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Transaction Type"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "TRANSACTION.TYPE",
+      "OPERAND" : "contains",
+      "VALUE" : "IT"
+    }, {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Txn.Amount"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "YES",
+      "FIELD" : "DEBIT.AMOUNT",
+      "OPERAND" : "greater than"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Incoming CR Transfer - Specific Amt"
+    } ],
+    "EVENT.TYPE" : "FUNDS.TRANSFER",
+    "SOURCE.TABLE" : "FUNDS.TRANSFER",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

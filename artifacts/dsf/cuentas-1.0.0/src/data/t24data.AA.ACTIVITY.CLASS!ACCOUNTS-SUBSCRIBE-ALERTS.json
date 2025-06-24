@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-SUBSCRIBE-ALERTS",
+    "dsfApiType" : "AA.ACTIVITY.CLASS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PAYLOAD.MAPPER" : "ARRANGEMENT-BASIC-STATIC.CHANGE",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Subscribing for alert services"
+    } ],
+    "ACTIVITY.TYPE" : [ {
+      "ACTIVITY.TYPE" : "USER"
+    }, {
+      "ACTIVITY.TYPE" : "NOREVERSE"
+    }, {
+      "ACTIVITY.TYPE" : "NORR"
+    } ],
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROPERTY.CLASS" : [ {
+      "ACTION" : "SUBSCRIBE",
+      "PROPERTY.CLASS" : "ALERTS",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "MAINTAIN",
+      "PROPERTY.CLASS" : "ACCOUNT",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "CALCULATE",
+      "PROPERTY.CLASS" : "ACTIVITY.CHARGES",
+      "USER.INPUT" : "NO"
+    } ],
+    "PROCESS.ID" : "SUBSCRIBE",
+    "CLASS.ID" : "ALERTS",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Subscribe for alert servcies of Accounts"
+    }, {
+      "FULL.DESC" : "product line"
+    } ],
+    "EVENT.CLASS" : "accounts.subscribeAlerts.alertsSubscribed"
+  }
+}

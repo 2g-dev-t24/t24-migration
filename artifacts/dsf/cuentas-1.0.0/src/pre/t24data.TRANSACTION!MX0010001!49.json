@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "49",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MANDATORY.REF.NO" : "Y",
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "CUSTOMER",
+    "EXPOSURE.DATE" : "Y",
+    "SWIFT.NARRATIVE" : "NCHK",
+    "SHORT.DESC" : "Cheque",
+    "DISPO.EXEMPT" : "YES",
+    "DATA.CAPTURE" : "Y",
+    "STMT.NARR" : "Cheque",
+    "DEFAULT.VALUE.DATE" : "Y",
+    "STMT.NARR.REF" : "OUR",
+    "DEBIT.CREDIT.IND" : "CREDIT",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Deposit Cheque (On US)"
+    } ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "833",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "AUTO",
+    "SWIFT.NARRATIVE" : "NCCP",
+    "SHORT.DESC" : "Charge Cap.",
+    "DISPO.EXEMPT" : "YES",
+    "STMT.NARR" : "Interest Repayment",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Charge - Capitalise"
+    } ]
+  }
+}

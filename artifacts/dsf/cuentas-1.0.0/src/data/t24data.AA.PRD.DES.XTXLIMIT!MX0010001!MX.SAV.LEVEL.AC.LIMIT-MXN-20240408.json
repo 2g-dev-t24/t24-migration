@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "MX.SAV.LEVEL.AC.LIMIT-MXN-20240408",
+    "dsfApiType" : "AA.PRD.DES.XTXLIMIT",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "FULL.DESCRIPTION" : "Level Product Limit Definition",
+    "LIMIT.CURRENCY" : "UDI",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Level Product Limit Definition"
+    }, {
+      "DESCRIPTION" : "Level Product Limit Definition"
+    } ]
+  }
+}

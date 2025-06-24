@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "385",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "BANK",
+    "STMT.NARR.REF" : "TRANS",
+    "SWIFT.NARRATIVE" : "NINT",
+    "SHORT.DESC" : "Corr of Ct Int",
+    "DISPO.EXEMPT" : "YES",
+    "STMT.NARR" : "Correction of Cred. Int.",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Interest - Correction"
+    } ]
+  }
+}

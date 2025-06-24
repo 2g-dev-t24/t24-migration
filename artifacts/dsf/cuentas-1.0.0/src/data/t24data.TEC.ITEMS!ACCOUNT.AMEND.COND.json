@@ -1,0 +1,41 @@
+{
+  "header" : {
+    "id" : "ACCOUNT.AMEND.COND",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Product"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "CATEGORY",
+      "OPERAND" : "changed"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "PRECEDENCE" : [ {
+      "PRECEDENCE" : "ACCOUNT.AMEND"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Product changed"
+    } ],
+    "EVENT.TYPE" : "ACCOUNT",
+    "SOURCE.TABLE" : "ACCOUNT",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

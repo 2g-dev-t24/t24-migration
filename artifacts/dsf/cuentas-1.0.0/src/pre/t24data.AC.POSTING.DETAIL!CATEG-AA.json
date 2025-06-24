@@ -1,0 +1,35 @@
+{
+  "header" : {
+    "id" : "CATEG-AA",
+    "dsfApiType" : "AC.POSTING.DETAIL",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENTRY.FIELD" : [ {
+      "VALUE.SOURCE" : "CONTRACT",
+      "ENTRY.FIELD" : "CUSTOMER.ID",
+      "ENTRY.VALUE" : "CUSTOMER.NUMBER"
+    }, {
+      "VALUE.SOURCE" : "CONTRACT",
+      "ENTRY.FIELD" : "ACCOUNT.OFFICER",
+      "ENTRY.VALUE" : "ACCOUNT.OFFICER"
+    }, {
+      "VALUE.SOURCE" : "CONTRACT",
+      "ENTRY.FIELD" : "PRODUCT.CATEGORY",
+      "ENTRY.VALUE" : "CATEGORY"
+    }, {
+      "VALUE.SOURCE" : "EVENT",
+      "ENTRY.FIELD" : "OUR.REFERENCE",
+      "ENTRY.VALUE" : "3"
+    } ],
+    "MOVEMENT.TYPE" : "CATEG",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Categ Entry from AA"
+    } ]
+  }
+}

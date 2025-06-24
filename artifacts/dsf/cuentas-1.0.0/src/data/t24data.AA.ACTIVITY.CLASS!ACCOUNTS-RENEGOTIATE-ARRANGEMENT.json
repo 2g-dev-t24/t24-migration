@@ -1,0 +1,304 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-RENEGOTIATE-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY.CLASS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CAN.PROP.CLASS" : [ {
+      "CAN.ACTION" : "SEND.MESSAGE",
+      "CAN.PROP.CLASS" : "ACTIVITY.MESSAGING",
+      "CAN.USER.INP" : "NO"
+    }, {
+      "CAN.ACTION" : "CHECK.PROJECTION",
+      "CAN.PROP.CLASS" : "PAYMENT.SCHEDULE",
+      "CAN.USER.INP" : "NO"
+    }, {
+      "CAN.ACTION" : "CALCULATE",
+      "CAN.PROP.CLASS" : "ACTIVITY.CHARGES",
+      "CAN.USER.INP" : "NO"
+    }, {
+      "CAN.ACTION" : "EVALUATE",
+      "CAN.PROP.CLASS" : "ACTIVITY.RESTRICTION",
+      "CAN.USER.INP" : "NO"
+    }, {
+      "CAN.ACTION" : "DATA.CAPTURE",
+      "CAN.PROP.CLASS" : "XRATE.SETUP",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "DATA.CAPTURE",
+      "CAN.PROP.CLASS" : "XTXLIMIT",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "PRICING.RULES",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "CLOSURE",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "CHANGE",
+      "CAN.PROP.CLASS" : "DORMANCY",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "CONSTRAINT",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "PERIODIC.CHARGES",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "BALANCE.MAINTENANCE",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "ACTIVITY.MESSAGING",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "ACTIVITY.API",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "ACTIVITY.PRESENTATION",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "SETTLEMENT",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "ACTIVITY.CHARGES",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "FACILITY",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "ACTIVITY.RESTRICTION",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "PAYOFF",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "PAYMENT.SCHEDULE",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "TAX",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "CHARGE",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "INTEREST",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "STATEMENT",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "CHANGE.PRODUCT",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "MAINTAIN",
+      "CAN.PROP.CLASS" : "ACCOUNT",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "MAINTAIN",
+      "CAN.PROP.CLASS" : "LIMIT",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "ACCOUNT",
+      "CAN.USER.INP" : "NO"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "OFFICERS",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "CUSTOMER",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "ACTIVITY.MAPPING",
+      "CAN.USER.INP" : "YES"
+    }, {
+      "CAN.ACTION" : "UPDATE",
+      "CAN.PROP.CLASS" : "ACCOUNTING",
+      "CAN.USER.INP" : "YES"
+    } ],
+    "PAYLOAD.MAPPER" : "ARRANGEMENT-PROPERTY-CHANGE.CONDITION",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Renegotiate Arrangement"
+    } ],
+    "ACTIVITY.TYPE" : [ {
+      "ACTIVITY.TYPE" : "USER"
+    }, {
+      "ACTIVITY.TYPE" : "SECONDARY"
+    }, {
+      "ACTIVITY.TYPE" : "INCLUDE.USER.CLASS"
+    }, {
+      "ACTIVITY.TYPE" : "PRE.LIVE"
+    }, {
+      "ACTIVITY.TYPE" : "INTEREST.APR"
+    }, {
+      "ACTIVITY.TYPE" : "EVALUATE.GRID"
+    } ],
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROPERTY.CLASS" : [ {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "ACCOUNTING",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "ACTIVITY.MAPPING",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "CUSTOMER",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "OFFICERS",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "MAINTAIN",
+      "PROPERTY.CLASS" : "LIMIT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "MAINTAIN",
+      "PROPERTY.CLASS" : "ACCOUNT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "DATA.CAPTURE",
+      "PROPERTY.CLASS" : "XTXLIMIT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "DATA.CAPTURE",
+      "PROPERTY.CLASS" : "XRATE.SETUP",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "ACCOUNT",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "CHANGE.PRODUCT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "STATEMENT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "INTEREST",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "CHARGE",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "TAX",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "PAYMENT.SCHEDULE",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "PAYOFF",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "FACILITY",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "ACTIVITY.CHARGES",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "SETTLEMENT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "ACTIVITY.PRESENTATION",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "ACTIVITY.API",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "ACTIVITY.MESSAGING",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "BALANCE.MAINTENANCE",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "PERIODIC.CHARGES",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "CONSTRAINT",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "CHANGE",
+      "PROPERTY.CLASS" : "DORMANCY",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "CLOSURE",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "PRICING.RULES",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "EVALUATE",
+      "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "CALCULATE",
+      "PROPERTY.CLASS" : "ACTIVITY.CHARGES",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "CHECK.PROJECTION",
+      "PROPERTY.CLASS" : "PAYMENT.SCHEDULE",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "SEND.MESSAGE",
+      "PROPERTY.CLASS" : "ACTIVITY.MESSAGING",
+      "USER.INPUT" : "NO"
+    } ],
+    "PROCESS.ID" : "RENEGOTIATE",
+    "CLASS.ID" : "ARRANGEMENT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Renegotiate Arrangement"
+    } ],
+    "EVENT.CLASS" : "accounts.renegotiate.accountRenegotiated"
+  }
+}

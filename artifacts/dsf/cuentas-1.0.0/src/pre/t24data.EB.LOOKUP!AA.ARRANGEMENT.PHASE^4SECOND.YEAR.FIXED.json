@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "AA.ARRANGEMENT.PHASE*SECOND.YEAR.FIXED",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Second Year Fixed Rate"
+    } ]
+  }
+}

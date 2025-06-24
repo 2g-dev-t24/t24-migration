@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "52252",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MNEMONIC" : "ALPYCHG",
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Charge AAloanPY"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Charge Inc from AA Loans PY"
+    } ],
+    "SYSTEM.IND" : "PL"
+  }
+}

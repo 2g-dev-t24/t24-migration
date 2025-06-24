@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-DEFAULT.EVENT-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Default Activity for Ext Txn"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "LINKED.ACTIVITY" : "ACCOUNTS-RECORD.EVENT-ARRANGEMENT",
+    "PROCESS.ID" : "RECORD.EVENT",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Default Activity for External Transaction"
+    } ]
+  }
+}

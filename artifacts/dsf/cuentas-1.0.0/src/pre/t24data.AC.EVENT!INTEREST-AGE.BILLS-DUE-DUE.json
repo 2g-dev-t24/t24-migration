@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "INTEREST-AGE.BILLS-DUE-DUE",
+    "dsfApiType" : "AC.EVENT",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "FULL.DESCRIPTION" : "This event would CREDIT the previous AGE balance and DEBIT the DUE balance.",
+    "CREDIT.PREFIX" : "AGE",
+    "DESCRIPTION" : "Ages interest amount in Bill - Due",
+    "DEBIT.PREFIX" : "DUE"
+  }
+}

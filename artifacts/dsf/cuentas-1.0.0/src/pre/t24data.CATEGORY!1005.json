@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "1005",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MNEMONIC" : "EXPPACKCR",
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Packing Credit"
+    }, {
+      "SHORT.NAME" : "ABC CtaBasica"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Export Packing Credit"
+    }, {
+      "DESCRIPTION" : "ABC Cuenta Basica"
+    } ],
+    "SYSTEM.IND" : "AC"
+  }
+}

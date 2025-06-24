@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "FUNDING.ACCOUNT",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "MANDATORY",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Funding Account"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "INHERIT" : "NO",
+      "FIELD" : "PAYIN.ACCOUNT",
+      "OPERAND" : "equals",
+      "VALUE" : "!SUBSCRIPTION.ID"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "ARRANGEMENT.SERVICE"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Funding Account"
+    } ],
+    "EVENT.TYPE" : "SETTLEMENT-SERVICE",
+    "SOURCE.TABLE" : "AA.ARR.SETTLEMENT",
+    "ITEM.CLASSIFICATION" : "SERVICE",
+    "SUBSCRIPTION.TYPE" : "PRODUCT"
+  }
+}

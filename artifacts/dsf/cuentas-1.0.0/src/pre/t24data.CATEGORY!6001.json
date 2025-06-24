@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "6001",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MNEMONIC" : "SAVINGS",
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Savings Account"
+    }, {
+      "SHORT.NAME" : "ABC Cta Ahorro"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Savings Account"
+    }, {
+      "DESCRIPTION" : "ABC Cuenta de Ahorro"
+    } ],
+    "SYSTEM.IND" : "AC"
+  }
+}

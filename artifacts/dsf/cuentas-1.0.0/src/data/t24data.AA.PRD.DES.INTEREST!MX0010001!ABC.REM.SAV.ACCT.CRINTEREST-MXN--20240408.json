@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "ABC.REM.SAV.ACCT.CRINTEREST-MXN--20240408",
+    "dsfApiType" : "AA.PRD.DES.INTEREST",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Savings Rem Account"
+    }, {
+      "DESCRIPTION" : "Cuenta de Ahorro Rem N2"
+    } ],
+    "DAY.BASIS" : "B",
+    "RATE.TYPE" : "REDUCING.RATE",
+    "ACCRUAL.RULE" : "BOTH",
+    "FIXED.RATE" : [ {
+      "FIXED.RATE" : "12"
+    } ],
+    "RATE.TIER.TYPE" : "BAND"
+  }
+}

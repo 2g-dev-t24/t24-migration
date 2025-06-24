@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "INFDRINTEREST",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Debit Interest Info"
+    } ],
+    "PROPERTY.CLASS" : "INTEREST",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Debit Interest Info"
+    } ]
+  }
+}

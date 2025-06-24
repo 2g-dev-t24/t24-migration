@@ -1,0 +1,31 @@
+{
+  "header" : {
+    "id" : "WORKING.BAL.LCY.GE.100",
+    "dsfApiType" : "EB.RULE.GATEWAY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CONTEXT.ID" : [ {
+      "CALLING.APPL" : [ {
+        "CONTEXT.FLD" : "ARRANGEMENT",
+        "CALLING.APPL" : "AA.ARRANGEMENT.ACTIVITY"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Is LCY working bal ge 100"
+    } ],
+    "EVAL.RULE" : [ {
+      "EVAL.RULE" : "WORKING.BAL.LCY.GE.100",
+      "EVAL.VALUE" : "RULE.MESSAGE"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "lcy bal GE 100"
+    } ],
+    "EVAL.MODE" : "All.Rules"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-UPDATE-CUSTOMER",
+    "dsfApiType" : "AA.ACTIVITY.CLASS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BATCH.NAME" : [ {
+      "BATCH.NAME" : "AA.EOD.PROCESS",
+      "BATCH.SEQ" : "5"
+    }, {
+      "BATCH.NAME" : "AA.SOD.PROCESS",
+      "BATCH.SEQ" : "5"
+    } ],
+    "PAYLOAD.MAPPER" : "CUSTOMER-PROPERTY-UPDATE",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Update arrangement parties"
+    } ],
+    "ACTIVITY.TYPE" : [ {
+      "ACTIVITY.TYPE" : "USER"
+    }, {
+      "ACTIVITY.TYPE" : "SCHEDULED"
+    }, {
+      "ACTIVITY.TYPE" : "SOD-PROCESS"
+    }, {
+      "ACTIVITY.TYPE" : "PRE.LIVE"
+    }, {
+      "ACTIVITY.TYPE" : "EVALUATE.GRID"
+    } ],
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROPERTY.CLASS" : [ {
+      "ACTION" : "UPDATE",
+      "PROPERTY.CLASS" : "CUSTOMER",
+      "USER.INPUT" : "YES"
+    }, {
+      "ACTION" : "MAINTAIN",
+      "PROPERTY.CLASS" : "ACCOUNT",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "EVALUATE",
+      "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "CALCULATE",
+      "PROPERTY.CLASS" : "ACTIVITY.CHARGES",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "SEND.MESSAGE",
+      "PROPERTY.CLASS" : "ACTIVITY.MESSAGING",
+      "USER.INPUT" : "NO"
+    }, {
+      "ACTION" : "EVALUATE",
+      "PROPERTY.CLASS" : "ALERTS",
+      "USER.INPUT" : "NO"
+    } ],
+    "PROCESS.ID" : "UPDATE",
+    "CLASS.ID" : "CUSTOMER",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Update other parties for an arrangement."
+    } ],
+    "EVENT.CLASS" : "accounts.updateParty.partyUpdated"
+  }
+}

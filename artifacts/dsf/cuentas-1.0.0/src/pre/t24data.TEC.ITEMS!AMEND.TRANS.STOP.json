@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "AMEND.TRANS.STOP",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "MANDATORY",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Status"
+      } ],
+      "FIELD.TYPE" : "KEYWORD",
+      "INHERIT" : "NO",
+      "FIELD" : "!SERVICE.PRODUCT",
+      "OPERAND" : "equals",
+      "VALUE" : "AMEND"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "ARRANGEMENT.SERVICE"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Amend Stop Instructions activities"
+    } ],
+    "EVENT.TYPE" : "TZ.TRANSACTION.STOP.INSTRUCTION-SERVICE",
+    "SOURCE.TABLE" : "TZ.TRANSACTION.STOP.INSTRUCTION",
+    "ITEM.CLASSIFICATION" : "SERVICE",
+    "SUBSCRIPTION.TYPE" : "PRODUCT"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "STO.EXECUTED",
+    "dsfApiType" : "TEC.ITEMS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SUBSCRIPTION.LEVEL" : "EXTERNAL",
+    "STATUS" : "ACTIVE",
+    "FIELD.TYPE" : [ {
+      "FIELD.DESC" : [ {
+        "FIELD.DESC" : "Status"
+      } ],
+      "FIELD.TYPE" : "FIELD.NAME",
+      "FIELD.NO" : "1",
+      "INHERIT" : "NO",
+      "FIELD" : "Indicator",
+      "OPERAND" : "equals",
+      "VALUE" : "1"
+    } ],
+    "THRESHOLD.TYPE" : [ {
+      "SUBSCRIBER" : [ {
+        "SUBSCRIBER" : "DELIVERY.ALERT"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Standing Order Executed"
+    } ],
+    "EVENT.TYPE" : "STO.EXECUTION",
+    "ITEM.CLASSIFICATION" : "BUSINESS",
+    "SUBSCRIPTION.TYPE" : "PRODUCT",
+    "SEVERITY" : "CRITICAL"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "450",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "BANK",
+    "STMT.NARR.REF" : "OUR",
+    "SWIFT.NARRATIVE" : "NLDP",
+    "SHORT.DESC" : "Interest Accr.",
+    "DISPO.EXEMPT" : "YES",
+    "STMT.NARR" : "Interest Accruals",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Interest Accruals"
+    } ]
+  }
+}

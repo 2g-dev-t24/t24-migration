@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-TRANSFORM-ARRANGEMENT",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SYSTEM.ACTIVITY" : "YES",
+    "ATTRIBUTE" : [ {
+      "ATTRIBUTE" : "EXCLUDE"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Add/Remove from Pool"
+    } ],
+    "PROPERTY" : "ARRANGEMENT",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROCESS.ID" : "TRANSFORM",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Add/Remove from Pool"
+    } ]
+  }
+}

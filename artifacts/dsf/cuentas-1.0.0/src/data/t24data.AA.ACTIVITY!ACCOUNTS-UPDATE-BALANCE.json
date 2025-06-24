@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ACCOUNTS-UPDATE-BALANCE",
+    "dsfApiType" : "AA.ACTIVITY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SYSTEM.ACTIVITY" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Update Account Details"
+    } ],
+    "PROPERTY" : "BALANCE",
+    "PRODUCT.LINE" : "ACCOUNTS",
+    "PROCESS.ID" : "UPDATE",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "SYSTEM CREATED"
+    } ]
+  }
+}

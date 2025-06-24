@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "ACT.CHARGE",
+    "dsfApiType" : "AA.BILL.TYPE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Activity Charge"
+    } ],
+    "SYS.BILL.TYPE" : "ACT.CHARGE"
+  }
+}

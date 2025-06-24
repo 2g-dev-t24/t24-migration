@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "ARRANGEMENT.RULES",
+    "dsfApiType" : "AA.PROPERTY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Arrangement Rules"
+    } ],
+    "PROPERTY.CLASS" : "ACTIVITY.RESTRICTION",
+    "FULL.DESC" : [ {
+      "FULL.DESC" : "Arrangement Rules"
+    } ]
+  }
+}

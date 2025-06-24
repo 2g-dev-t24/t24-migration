@@ -1,0 +1,35 @@
+{
+  "header" : {
+    "id" : "ABC.CURRENT.API-20240408",
+    "dsfApiType" : "AA.PRD.DES.ACTIVITY.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "NO",
+    "ACTIVITY.CLASS" : [ {
+      "PRE.ROUTINE" : [ {
+        "PRE.ROUTINE" : "CMBASE.CLABE.ID.GENERATION"
+      } ],
+      "ACTIVITY.CLASS" : "ACCOUNTS-NEW-ARRANGEMENT",
+      "PC.ACTION" : "MAINTAIN",
+      "PROPERTY.CLASS" : "ACCOUNT"
+    }, {
+      "PRE.ROUTINE" : [ {
+        "PRE.ROUTINE" : "CMBASE.CLABE.ID.GENERATION"
+      } ],
+      "ACTIVITY.CLASS" : "ACCOUNTS-UPDATE-ACCOUNT",
+      "PC.ACTION" : "MAINTAIN",
+      "PROPERTY.CLASS" : "ACCOUNT"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Current Accounts API"
+    }, {
+      "DESCRIPTION" : "Activity Api"
+    } ]
+  }
+}

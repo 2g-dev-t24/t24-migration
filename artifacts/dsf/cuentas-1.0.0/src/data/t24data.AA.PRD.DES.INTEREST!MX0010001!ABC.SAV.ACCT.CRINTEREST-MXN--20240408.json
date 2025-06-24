@@ -1,0 +1,37 @@
+{
+  "header" : {
+    "id" : "ABC.SAV.ACCT.CRINTEREST-MXN--20240408",
+    "dsfApiType" : "AA.PRD.DES.INTEREST",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DEFAULT.NEGOTIABLE" : "YES",
+    "NR.ATTRIBUTE" : [ {
+      "NR.OPTIONS" : [ {
+        "NR.OPTIONS" : "NON-NEGOTIABLE"
+      } ],
+      "NR.ATTRIBUTE" : "PERIODIC.INDEX"
+    } ],
+    "FULL.DESCRIPTION" : "MX INTEREST UPTO 187391",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "MX INTEREST FOR SAV ACCOUNTS"
+    }, {
+      "DESCRIPTION" : "ABC Saving Accounts Interest"
+    } ],
+    "DAY.BASIS" : "B",
+    "RATE.TYPE" : "REDUCING.RATE",
+    "ACCRUAL.RULE" : "FIRST",
+    "FIXED.RATE" : [ {
+      "FIXED.RATE" : "10",
+      "TIER.AMOUNT" : "187391.00"
+    }, {
+      "FIXED.RATE" : "0.00"
+    } ],
+    "RATE.TIER.TYPE" : "LEVEL"
+  }
+}

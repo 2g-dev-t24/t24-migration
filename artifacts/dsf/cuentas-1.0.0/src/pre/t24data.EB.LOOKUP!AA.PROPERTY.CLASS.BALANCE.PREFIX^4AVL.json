@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "AA.PROPERTY.CLASS.BALANCE.PREFIX*AVL",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Available"
+    } ]
+  }
+}

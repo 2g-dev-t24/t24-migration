@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "868",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "CUSTOMER",
+    "STMT.NARR.REF" : "OUR",
+    "DEBIT.CREDIT.IND" : "DEBIT",
+    "SWIFT.NARRATIVE" : "NACH",
+    "SHORT.DESC" : "ACH Debit",
+    "DISPO.EXEMPT" : "YES",
+    "STMT.NARR" : "ACH Debit",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "ACH Debit"
+    } ]
+  }
+}
