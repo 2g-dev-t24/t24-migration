@@ -514,3 +514,9 @@ private method AbcCustNoexistePm (
 {
     jBC: ABC.CUST.NOEXISTE.PM
 }
+
+private method AbcValInputterDist (
+)
+{
+    jBC: ABC.VAL.INPUTTER.DIST
+}
