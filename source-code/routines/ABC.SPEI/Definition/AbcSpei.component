@@ -195,3 +195,9 @@ public method AbcCallRtnsGenFt (
 {
     jBC: ABC.CALL.RTNS.GEN.FT
 }
+
+public method AbcGetBenRfcSpei (
+)
+{
+    jBC: ABC.GET.BEN.RFC.SPEI
+}
