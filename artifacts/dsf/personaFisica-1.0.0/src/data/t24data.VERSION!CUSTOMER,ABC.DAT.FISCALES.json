@@ -29,6 +29,7 @@
     }, {
       "FIELD.NO" : "L.USO.CFDI",
       "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.USO.CFDI",
       "TEXT" : [ {
         "TEXT" : "Uso de CFDI"
       } ],
@@ -44,7 +45,7 @@
     }, {
       "DESCRIPTION" : "Datos Fiscales"
     } ],
-    "NO.OF.AUTH" : "1",
+    "NO.OF.AUTH" : "0",
     "MULTI.POSSIBLE" : "Y",
     "RECORDS.PER.PAGE" : "1"
   }
