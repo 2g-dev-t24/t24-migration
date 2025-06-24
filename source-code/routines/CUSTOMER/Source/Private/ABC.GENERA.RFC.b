@@ -102,6 +102,9 @@ PROCESO:
 
         GOSUB PROCESO.PER.FIS
 
+        Y.CURP = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusExternCusId)
+        OUT.RFC = Y.CURP[1,4]
+        
         IF LEN(OUT.RFC) NE 4 THEN
             OUT.ERROR = 'ERROR.3 NO SE PUDIERON CALCULAR LOS PRIMEROS 3 CARACTERES DE LA PERSONA MORAL'
             RETURN

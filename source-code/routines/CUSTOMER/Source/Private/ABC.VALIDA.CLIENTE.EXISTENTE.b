@@ -115,11 +115,11 @@ PROCESO:
         IF Y.ERROR EQ '' THEN
             ABC.BP.AbcInfoValCus.Write(Y.RFC.ID, R.VAL.CUS)
 
-            IF Y.RFC.BAN EQ '1' THEN
-                Y.INSERT<1,1> = Y.RFC
-                EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
-                EB.Display.RebuildScreen()
-            END
+            *IF Y.RFC.BAN EQ '1' THEN
+            *    Y.INSERT<1,1> = Y.RFC
+            *    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusTaxId, Y.INSERT)
+            *    EB.Display.RebuildScreen()
+            *END
         END
     END ELSE
         IF Y.SECTOR LE '2014' THEN
