@@ -17,14 +17,16 @@ RETURN
 *---------------------------------------------------------------
 PROCESS:
 *---------------------------------------------------------------
-
+    
     Y.RFC = EB.SystemTables.getComi()
 
-    IF LEN(Y.RFC) = 0 THEN
+    Y.TODAY = EB.SystemTables.getToday()
+
+    IF LEN(Y.RFC) EQ 0 THEN
       RETURN
     END
 
-    IF LEN(Y.RFC) = 12 THEN
+    IF LEN(Y.RFC) EQ 12 THEN
         Y.TIPO.CTE = 3
     END ELSE
         Y.TIPO.CTE = 1
@@ -57,10 +59,10 @@ PROCESS:
         Y.ALF.3 = Y.ALF[3,1]
         Y.ALF.4 = Y.ALF[4,1]
 
-        YASCII.ALF.1 = SEQX(Y.ALF.1)
-        YASCII.ALF.2 = SEQX(Y.ALF.2)
-        YASCII.ALF.3 = SEQX(Y.ALF.3)
-        YASCII.ALF.4 = SEQX(Y.ALF.4)
+        YASCII.ALF.1 = SEQ(Y.ALF.1)
+        YASCII.ALF.2 = SEQ(Y.ALF.2)
+        YASCII.ALF.3 = SEQ(Y.ALF.3)
+        YASCII.ALF.4 = SEQ(Y.ALF.4)
 
         YASCII.ALF.1.OK = 1
         YASCII.ALF.2.OK = 1
@@ -107,9 +109,9 @@ PROCESS:
         YASCII.ALF.2.OK = 1
         YASCII.ALF.3.OK = 1
 
-        YASCII.ALF.1 = SEQX(Y.ALF.1)
-        YASCII.ALF.2 = SEQX(Y.ALF.2)
-        YASCII.ALF.3 = SEQX(Y.ALF.3)
+        YASCII.ALF.1 = SEQ(Y.ALF.1)
+        YASCII.ALF.2 = SEQ(Y.ALF.2)
+        YASCII.ALF.3 = SEQ(Y.ALF.3)
 
         IF NOT((YASCII.ALF.1 GE 65 AND YASCII.ALF.1 LE 90) OR (YASCII.ALF.1 EQ 209)) THEN YASCII.ALF.1.OK = 0
         IF NOT((YASCII.ALF.2 GE 65 AND YASCII.ALF.2 LE 90) OR (YASCII.ALF.2 EQ 209)) THEN YASCII.ALF.2.OK = 0
@@ -136,20 +138,20 @@ PROCESS:
 VALIDA.FECHA.RFC:
 *---------------------------------------------------------------
 
-    IF Y.AA < 20 THEN
+    IF Y.AA LT 20 THEN
         Y.AAAA = 2000 + Y.AA
     END ELSE
         Y.AAAA = 1900 + Y.AA
     END
 
-    IF (Y.MM < 1) OR (Y.MM > 12) THEN
+    IF (Y.MM LT 1) OR (Y.MM GT 12) THEN
         V.ERROR.MSG = "MES INVALIDO EN RFC"
         EB.SystemTables.setE(V.ERROR.MSG)
         EB.ErrorProcessing.Err()
         RETURN
     END
 
-    IF Y.DD < 1 THEN
+    IF Y.DD LT 1 THEN
         V.ERROR.MSG = "DIA INVALIDO EN RFC"
         EB.SystemTables.setE(V.ERROR.MSG)
         EB.ErrorProcessing.Err()
@@ -157,30 +159,30 @@ VALIDA.FECHA.RFC:
     END
 
     BEGIN CASE
-    CASE Y.MM = 1 OR Y.MM = 3 OR Y.MM = 5 OR Y.MM = 7 OR Y.MM = 8 OR Y.MM = 10 OR Y.MM = 12
-        IF Y.DD > 31 THEN
+    CASE Y.MM EQ 1 OR Y.MM EQ 3 OR Y.MM EQ 5 OR Y.MM EQ 7 OR Y.MM EQ 8 OR Y.MM EQ 10 OR Y.MM EQ 12
+        IF Y.DD GT 31 THEN
             V.ERROR.MSG = "DIA INVALIDO EN RFC"
             EB.SystemTables.setE(V.ERROR.MSG)
             EB.ErrorProcessing.Err()
             RETURN
         END
-    CASE Y.MM = 4 OR Y.MM = 6 OR Y.MM = 9 OR Y.MM = 11
-        IF Y.DD > 30 THEN
+    CASE Y.MM EQ 4 OR Y.MM EQ 6 OR Y.MM EQ 9 OR Y.MM EQ 11
+        IF Y.DD GT 30 THEN
             V.ERROR.MSG = "DIA INVALIDO EN RFC"
             EB.SystemTables.setE(V.ERROR.MSG)
             EB.ErrorProcessing.Err()
             RETURN
         END
-    CASE OTHERWISE
-        IF MOD(Y.AAAA,4) = 0 THEN
-            IF Y.DD > 29 THEN
+    CASE Y.MM EQ 2
+        IF MOD(Y.AAAA,4) EQ 0 THEN
+            IF Y.DD GT 29 THEN
                 V.ERROR.MSG = "DIA INVALIDO EN RFC"
                 EB.SystemTables.setE(V.ERROR.MSG)
                 EB.ErrorProcessing.Err()
                 RETURN
             END
         END ELSE
-            IF Y.DD > 28 THEN
+            IF Y.DD GT 28 THEN
                 V.ERROR.MSG = "DIA INVALIDO EN RFC"
                 EB.SystemTables.setE(V.ERROR.MSG)
                 EB.ErrorProcessing.Err()
@@ -190,7 +192,7 @@ VALIDA.FECHA.RFC:
     END CASE
 
     Y.F.RFC = Y.AAAA:Y.MM:Y.DD
-    IF Y.F.RFC > TODAY THEN
+    IF Y.F.RFC GT Y.TODAY THEN
         V.ERROR.MSG = "FECHA NO PUEDE SER MAYOR A HOY"
         EB.SystemTables.setE(V.ERROR.MSG)
         EB.ErrorProcessing.Err()
@@ -206,14 +208,14 @@ VALIDA.HOMOCLAVE:
 *---------------------------------------------------------------
 
     IF (Y.TIPO.CTE LT 3) THEN
-        IF LEN(Y.RFC) = 13 THEN
+        IF LEN(Y.RFC) EQ 13 THEN
             YHOMOCVE.1 = Y.RFC[11,1]
             YHOMOCVE.2 = Y.RFC[12,1]
             YHOMOCVE.3 = Y.RFC[13,1]
 
-            YASCII.1 = SEQX(YHOMOCVE.1)
-            YASCII.2 = SEQX(YHOMOCVE.2)
-            YASCII.3 = SEQX(YHOMOCVE.3)
+            YASCII.1 = SEQ(YHOMOCVE.1)
+            YASCII.2 = SEQ(YHOMOCVE.2)
+            YASCII.3 = SEQ(YHOMOCVE.3)
 
             YASCII.1.OK = 0
             YASCII.2.OK = 0
@@ -236,9 +238,9 @@ VALIDA.HOMOCLAVE:
         YHOMOCVE.2 = Y.RFC[11,1]
         YHOMOCVE.3 = Y.RFC[12,1]
 
-        YASCII.1 = SEQX(YHOMOCVE.1)
-        YASCII.2 = SEQX(YHOMOCVE.2)
-        YASCII.3 = SEQX(YHOMOCVE.3)
+        YASCII.1 = SEQ(YHOMOCVE.1)
+        YASCII.2 = SEQ(YHOMOCVE.2)
+        YASCII.3 = SEQ(YHOMOCVE.3)
 
         YASCII.1.OK = 0
         YASCII.2.OK = 0

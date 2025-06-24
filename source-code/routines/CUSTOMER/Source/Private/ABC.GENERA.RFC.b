@@ -104,7 +104,7 @@ PROCESO:
 
         Y.CURP = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusExternCusId)
         OUT.RFC = Y.CURP[1,4]
-        
+
         IF LEN(OUT.RFC) NE 4 THEN
             OUT.ERROR = 'ERROR.3 NO SE PUDIERON CALCULAR LOS PRIMEROS 3 CARACTERES DE LA PERSONA MORAL'
             RETURN
@@ -421,14 +421,39 @@ SET.NOMBRE.CLIENTE:
         A.FIS.APE.PATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusShortName)
         A.FIS.APE.MATERNO = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameOne)
 
-        A.FIS.NOMBRE = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo)
-        A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,FM," ")
-        A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,VM," ")
-        A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,"  "," ")
-        A.FIS.NOMBRE = TRIM(A.FIS.NOMBRE)
+        A.FIS.APE.PATERNO = TRIM(A.FIS.APE.PATERNO) ;*PRUEBA
+        A.FIS.APE.MATERNO = TRIM(A.FIS.APE.MATERNO) ;*PRUEBA
 
+        A.FIS.NOMBRE = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo)
+
+        *A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,FM," ")
+        *A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,VM," ")
+        *A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,"  "," ")
+
+;*PRUEBA
+        Y.NUM.VM = DCOUNT(A.FIS.NOMBRE, @VM)
+        NOM.COMPLETO = ""
+        FOR I = 1 TO Y.NUM.VM
+            Y.NOM.TURNO   = FIELD(A.FIS.NOMBRE, @VM,I)
+            NOM.COMPLETO := Y.NOM.TURNO : " "
+        NEXT I
+
+        NOM.COMPLETO = TRIM(NOM.COMPLETO)
+
+        LONG.NOM  = LEN(NOM.COMPLETO)
+        FOR POS.CARACTER = 1 TO LONG.NOM
+            IF NOM.COMPLETO[LONG.NOM,1] EQ ' ' THEN
+                NOM.COMPLETO[LONG.NOM,1] = ''
+                POS.CARACTER = LONG.NOM - 1
+            END
+        NEXT
+
+        *A.FIS.NOMBRE = TRIM(A.FIS.NOMBRE)
+        A.FIS.NOMBRE =  NOM.COMPLETO
+;*PRUEBA
         IF Y.SECTOR LT 1300 THEN
-            A.CLIENTE = A.FIS.APE.PATERNO : ' ' : A.FIS.APE.MATERNO : ' ' : A.FIS.NOMBRE
+            *A.CLIENTE = A.FIS.APE.PATERNO : ' ' : A.FIS.APE.MATERNO : ' ' : A.FIS.NOMBRE ;*PRUEBA
+            A.CLIENTE = A.FIS.APE.PATERNO : A.FIS.APE.MATERNO : A.FIS.NOMBRE  ;*PRUEBA
         END ELSE
             A.CLIENTE = A.FIS.APE.MATERNO
         END
@@ -442,7 +467,7 @@ SET.NOMBRE.CLIENTE:
         A.CLIENTE = EB.SystemTables.getComiEnri()
     END
 
-    CHANGE ',' TO ' ' IN A.CLIENTE
+    *CHANGE ',' TO ' ' IN A.CLIENTE
 
     A.CLIENTE = UPCASE(A.CLIENTE)
     A.CLIENTE = TRIM(A.CLIENTE)
