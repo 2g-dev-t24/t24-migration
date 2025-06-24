@@ -520,3 +520,10 @@ private method AbcValInputterDist (
 {
     jBC: ABC.VAL.INPUTTER.DIST
 }
+
+private method AbcNofileAccountPrn (
+    INOUT RData string
+)
+{
+    jBC: ABC.NOFILE.ACCOUNT.PRN
+}
