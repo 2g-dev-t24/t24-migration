@@ -40,7 +40,7 @@ INIT:
     EB.Updates.MultiGetLocRef(APP.NAME,FIELD.NAME,FIELD.POS)
     Y.POS.RFC.BEN        = FIELD.POS<1,1>
 
-    Y.CTA.BEN = COMI
+    Y.CTA.BEN = EB.SystemTables.getComi()
 
     F.BAN.INT = ""
     FN.BAN.INT = "F.ABC.CUENTAS.DESTINO"
