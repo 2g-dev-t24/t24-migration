@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "01",
+    "dsfApiType" : "ABC.ESTADO",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ESTADO" : "AGUASCALIENTES",
+    "CLAVE" : "AS"
+  }
+}

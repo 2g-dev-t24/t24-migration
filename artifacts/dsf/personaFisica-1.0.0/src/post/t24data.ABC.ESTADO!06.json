@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "06",
+    "dsfApiType" : "ABC.ESTADO",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ESTADO" : "COLIMA",
+    "CLAVE" : "CM"
+  }
+}

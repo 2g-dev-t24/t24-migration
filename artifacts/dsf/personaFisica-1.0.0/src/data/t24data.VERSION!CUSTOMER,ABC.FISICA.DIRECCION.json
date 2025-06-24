@@ -104,7 +104,7 @@
         "TABLE.COLUMN" : "1-132-"
       } ],
       "ATTRIBS" : [ {
-        "ATTRIBS" : "HOT.FIELD"
+        "ATTRIBS" : "HOT.VALIDATE"
       } ],
       "TABLE.LINE" : "5"
     }, {
@@ -365,9 +365,9 @@
     }, {
       "NOINPUT.FIELD" : "TOWN.COUNTRY"
     }, {
-      "NOINPUT.FIELD" : "L.LOCALIDAD"
+      "NOINPUT.FIELD" : "ADDRESS.COUNTRY"
     }, {
-      "NOINPUT.FIELD" : "ABC.PAIS.ANT"
+      "NOINPUT.FIELD" : "L.LOCALIDAD"
     } ],
     "EXC.INC.RTN" : "YES",
     "MULTI.POSSIBLE" : "Y",

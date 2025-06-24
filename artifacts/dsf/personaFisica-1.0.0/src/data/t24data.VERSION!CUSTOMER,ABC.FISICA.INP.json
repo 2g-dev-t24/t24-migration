@@ -47,9 +47,6 @@
       "AUTOM.FIELD.NO" : "CUSTOMER.TYPE",
       "AUT.NEW.CONTENT" : "PROSPECT"
     }, {
-      "AUTOM.FIELD.NO" : "ACCOUNT.OFFICER",
-      "AUT.NEW.CONTENT" : "@ABC.ASSIGN.DAO.CUST"
-    }, {
       "AUTOM.FIELD.NO" : "GROUP.CLASSIFIC",
       "AUT.NEW.CONTENT" : "4"
     }, {
@@ -237,7 +234,7 @@
     }, {
       "FIELD.NO" : "DISTRICT.NAME",
       "COLUMN" : "1",
-      "DROP.DOWN" : "E.ABC.ESTADOS",
+      "DROP.DOWN" : "ABC.ESTADO.ENQ",
       "ENRICHM.CHAR" : "35",
       "TEXT" : [ {
         "TEXT" : "Estado de la República de Nacimiento"
@@ -562,8 +559,6 @@
       "MANDATORY.FIELD" : "DISTRICT.NAME"
     }, {
       "MANDATORY.FIELD" : "ABC.FIRMA.ELECT"
-    }, {
-      "MANDATORY.FIELD" : "L.TIPO.REL.GAR"
     } ],
     "VALIDATION.FLD" : [ {
       "VALIDATION.RTN" : "V.ABC.CUS.DOM.ANOS.CHK",
@@ -610,18 +605,6 @@
     }, {
       "VALIDATION.RTN" : "ABC.GET.ADRESS.FISICA",
       "VALIDATION.FLD" : "POST.CODE-1"
-    }, {
-      "VALIDATION.RTN" : "ABC.ONLY.NUMERIC",
-      "VALIDATION.FLD" : "PHONE.1-1"
-    }, {
-      "VALIDATION.RTN" : "ABC.ONLY.NUMERIC",
-      "VALIDATION.FLD" : "OFF.PHONE-1"
-    }, {
-      "VALIDATION.RTN" : "ABC.ONLY.NUMERIC",
-      "VALIDATION.FLD" : "SMS.1-1"
-    }, {
-      "VALIDATION.RTN" : "ABC.ONLY.NUMERIC",
-      "VALIDATION.FLD" : "FAX.1"
     } ],
     "ID.RTN" : [ {
       "ID.RTN" : "@ABC.CUST.YAEXISTE"
