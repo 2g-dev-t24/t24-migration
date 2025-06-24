@@ -1,0 +1,15 @@
+public table Abc2brCtlgOpRemesas {
+    t24: ABC.2BR.CTLG.OP.REMESAS
+    fields:{
+        Descripcion(CHKBK.QTY.DESCRIPCION) = 1
+        RecordStatus(CHKBK.QTY.RECORD.STATUS) = 2
+        CurrNo(CHKBK.QTY.CURR.NO) = 3
+        Inputter(CHKBK.QTY.INPUTTER) = 4
+        DateTime(CHKBK.QTY.DATE.TIME) = 5
+        Authoriser(CHKBK.QTY.AUTHORISER) = 6
+        CoCode(CHKBK.QTY.CO.CODE) = 7
+        DeptCode(CHKBK.QTY.DEPT.CODE) = 8
+        AuditorCode(CHKBK.QTY.AUDITOR.CODE) = 9
+        AuditDateTime(CHKBK.QTY.AUDIT.DATE.TIME) = 10
+    }
+}

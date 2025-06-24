@@ -608,3 +608,13 @@ private method AbcCuentasDestino ()
 {
     jBC: ABC.CUENTAS.DESTINO
 }
+
+private method Abc2brCtlgOpRemesasFields ()
+{
+    jBC: ABC.2BR.CTLG.OP.REMESAS.FIELDS
+}
+
+private method Abc2brCtlgOpRemesas ()
+{
+    jBC: ABC.2BR.CTLG.OP.REMESAS
+}
