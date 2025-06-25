@@ -1,0 +1,120 @@
+{
+  "header" : {
+    "id" : "ABC.ACCOUNT.PRN",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "PRN"
+      }, {
+        "SEL.LABEL" : "PRN"
+      } ],
+      "SELECTION.FLDS" : "PRN",
+      "SEL.FLD.OPER" : "EQ"
+    }, {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "CLABE"
+      }, {
+        "SEL.LABEL" : "CLABE"
+      } ],
+      "SELECTION.FLDS" : "CLABE",
+      "SEL.FLD.OPER" : "EQ"
+    }, {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "BALANCE.ID"
+      }, {
+        "SEL.LABEL" : "BALANCE.ID"
+      } ],
+      "SELECTION.FLDS" : "BALANCE.ID",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "0"
+      } ],
+      "FIELD.NAME" : "R.DATA"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,1,1"
+      } ],
+      "FIELD.NAME" : "CLABE",
+      "LENGTH.MASK" : "20L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "CLABE"
+      }, {
+        "FIELD.LBL" : "CLABE"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,2,1"
+      } ],
+      "FIELD.NAME" : "PRN",
+      "LENGTH.MASK" : "10000L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "PRN"
+      }, {
+        "FIELD.LBL" : "PRN"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,3,1"
+      } ],
+      "FIELD.NAME" : "BALANCE.ID",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "BALANCE.ID"
+      }, {
+        "FIELD.LBL" : "BALANCE.ID"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,4,1"
+      } ],
+      "FIELD.NAME" : "ERROR",
+      "COLUMN" : "15",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Id Error en el proceso"
+      }, {
+        "FIELD.LBL" : "Id Error en el proceso"
+      } ]
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "R.DATA"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "CUENTAS ALTERNAS"
+    }, {
+      "SHORT.DESC" : "CUENTAS ALTERNAS"
+    } ],
+    "FILE.NAME" : "NOFILE.ABC.ACCOUNT.PRN"
+  }
+}

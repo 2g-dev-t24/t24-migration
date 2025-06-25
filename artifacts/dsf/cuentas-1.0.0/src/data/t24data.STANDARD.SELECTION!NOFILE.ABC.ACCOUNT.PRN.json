@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "NOFILE.ABC.ACCOUNT.PRN",
+    "dsfApiType" : "STANDARD.SELECTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "USR.FIELD.NAME" : [ {
+      "USR.TYPE" : "R",
+      "USR.DISPLAY.FMT" : "150L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "ABC.NOFILE.ACCOUNT.PRN"
+      } ],
+      "USR.FIELD.NAME" : "R.DATA"
+    }, {
+      "USR.TYPE" : "S",
+      "USR.DISPLAY.FMT" : "10000L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NAME" : "PRN"
+    }, {
+      "USR.TYPE" : "S",
+      "USR.DISPLAY.FMT" : "18L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NAME" : "CLABE"
+    }, {
+      "USR.TYPE" : "S",
+      "USR.DISPLAY.FMT" : "35L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NAME" : "BALANCE.ID"
+    } ]
+  }
+}

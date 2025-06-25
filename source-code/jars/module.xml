@@ -1,0 +1,24 @@
+<module xmlns="urn:jboss:module:1.0" name="com.temenos.t24">
+  <resources>
+    <!-- Insert resources here -->
+    <resource-root path="./L3lib/ABC_BP.jar" />
+    <resource-root path="./L3lib/AbcAssign.jar" />
+    <resource-root path="./L3lib/AbcCusValLoc.jar" />
+    <resource-root path="./L3lib/AbcCustomerApi.jar" />
+    <resource-root path="./L3lib/AbcEnqRoutines.jar" />
+    <resource-root path="./L3lib/AbcGetAdress.jar" />
+    <resource-root path="./L3lib/AbcGetGeneralParam.jar" />
+    <resource-root path="./L3lib/AbcSpei.jar" />
+    <resource-root path="./L3lib/AbcTable.jar" />
+    <resource-root path="./L3lib/AbcTaxes.jar" />
+    <resource-root path="./L3lib/AbcValCusHasDig.jar" />
+    <resource-root path="./L3lib/AbcValCusHasDig_component.jar" />
+    <resource-root path="./L3lib/AbcValDatoFiscal.jar" />
+    <resource-root path="./L3lib/AbcValidaLongCelular.jar" />
+    <resource-root path="./L3lib/BaValListaCol.jar" />
+    <resource-root path="./L3lib/Tables.jar" />
+  </resources>
+  <dependencies>
+    <module name="com.temenos.tafj"/>
+  </dependencies>
+</module>
