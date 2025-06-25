@@ -1,7 +1,7 @@
-* @ValidationCode : MjotMjUzODM3Mjg3OkNwMTI1MjoxNzUwMjk3MjczNjE3Okx1Y2FzRmVycmFyaTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 18 Jun 2025 22:41:13
+* @ValidationCode : MjoxNTU5NzEzNjUyOkNwMTI1MjoxNzUwODY0NTQ1MDEwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 25 Jun 2025 12:15:45
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : LucasFerrari
+* @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -26,6 +26,7 @@ SUBROUTINE ABC.MOTIVO.DEV.CECOBAN.FIELDS
     EB.SystemTables.setIdF('ID')
     EB.SystemTables.setIdN('2.1')
     EB.SystemTables.setIdT('A')
+    EB.Template.TableDefineid("ID", EB.Template.T24String)
 *-----------------------------------------------------------------------------
     EB.Template.TableAddfielddefinition('DESCRIPCION', '60', 'A', '')
     

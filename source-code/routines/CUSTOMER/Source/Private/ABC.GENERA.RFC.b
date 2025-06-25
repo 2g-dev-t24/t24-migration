@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNDcxMzc2NDpDcDEyNTI6MTc0NTYxMzMzNDY2ODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 25 Apr 2025 17:35:34
+* @ValidationCode : MjotODcwMTAzNzA0OkNwMTI1MjoxNzUwODY0NjA1NjU4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 25 Jun 2025 12:16:45
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -314,7 +314,7 @@ RETURN
 
 SET.PER.FIS.REGLA.1:
 
-    A.VOCALES = 'A' : FM : 'E' : FM : 'I' : FM : 'O' : FM : 'U'
+    A.VOCALES = 'A' : @FM : 'E' : @FM : 'I' : @FM : 'O' : @FM : 'U'
 
     FOR A.I.LETRA = 2 TO LEN(A.FIS.APE.PATERNO)
 
@@ -342,45 +342,45 @@ RETURN
 
 SET.LISTA.PER.FIS.REG.9:
 
-    A.LISTA.PAL.ALT  = 'KBUEI' : VM : 'BUEX' : FM
-    A.LISTA.PAL.ALT := 'KBUEY' : VM : 'BUEX' : FM
-    A.LISTA.PAL.ALT := 'KCACA' : VM : 'CACX' : FM
-    A.LISTA.PAL.ALT := 'KCACO' : VM : 'CACX' : FM
-    A.LISTA.PAL.ALT := 'KCAGA' : VM : 'CAGX' : FM
-    A.LISTA.PAL.ALT := 'KCAGO' : VM : 'CAGX' : FM
-    A.LISTA.PAL.ALT := 'KCAKA' : VM : 'CAKX' : FM
-    A.LISTA.PAL.ALT := 'KCOGE' : VM : 'COGX' : FM
-    A.LISTA.PAL.ALT := 'KCOJA' : VM : 'COJX' : FM
-    A.LISTA.PAL.ALT := 'KCOJE' : VM : 'COJX' : FM
-    A.LISTA.PAL.ALT := 'KCOJI' : VM : 'COJX' : FM
-    A.LISTA.PAL.ALT := 'KCOJO' : VM : 'COJX' : FM
-    A.LISTA.PAL.ALT := 'KCULO' : VM : 'CULX' : FM
-    A.LISTA.PAL.ALT := 'KFETO' : VM : 'FETX' : FM
-    A.LISTA.PAL.ALT := 'KGUEY' : VM : 'GUEX' : FM
-    A.LISTA.PAL.ALT := 'KJOTO' : VM : 'JOTX' : FM
-    A.LISTA.PAL.ALT := 'KKACA' : VM : 'KACX' : FM
-    A.LISTA.PAL.ALT := 'KKACO' : VM : 'KACX' : FM
-    A.LISTA.PAL.ALT := 'KKAGA' : VM : 'KAGX' : FM
-    A.LISTA.PAL.ALT := 'KKAGO' : VM : 'KAGX' : FM
-    A.LISTA.PAL.ALT := 'KKOGE' : VM : 'KOGX' : FM
-    A.LISTA.PAL.ALT := 'KKOJO' : VM : 'KOJX' : FM
-    A.LISTA.PAL.ALT := 'KKAKA' : VM : 'KAKX' : FM
-    A.LISTA.PAL.ALT := 'KKULO' : VM : 'KULX' : FM
-    A.LISTA.PAL.ALT := 'KMAME' : VM : 'MAMX' : FM
-    A.LISTA.PAL.ALT := 'KMAMO' : VM : 'MAMX' : FM
-    A.LISTA.PAL.ALT := 'KMEAR' : VM : 'MEAX' : FM
-    A.LISTA.PAL.ALT := 'KMEON' : VM : 'MEOX' : FM
-    A.LISTA.PAL.ALT := 'KMION' : VM : 'MIOX' : FM
-    A.LISTA.PAL.ALT := 'KMOCO' : VM : 'MOCX' : FM
-    A.LISTA.PAL.ALT := 'KMULA' : VM : 'MULX' : FM
-    A.LISTA.PAL.ALT := 'KPEDA' : VM : 'PEDX' : FM
-    A.LISTA.PAL.ALT := 'KPEDO' : VM : 'PEDX' : FM
-    A.LISTA.PAL.ALT := 'KPENE' : VM : 'PENX' : FM
-    A.LISTA.PAL.ALT := 'KPUTA' : VM : 'PUTX' : FM
-    A.LISTA.PAL.ALT := 'KPUTO' : VM : 'PUTX' : FM
-    A.LISTA.PAL.ALT := 'KQULO' : VM : 'QULX' : FM
-    A.LISTA.PAL.ALT := 'KRATA' : VM : 'RATX' : FM
-    A.LISTA.PAL.ALT := 'KRUIN' : VM : 'RUIX' : FM
+    A.LISTA.PAL.ALT  = 'KBUEI' : @VM : 'BUEX' : @FM
+    A.LISTA.PAL.ALT := 'KBUEY' : @VM : 'BUEX' : @FM
+    A.LISTA.PAL.ALT := 'KCACA' : @VM : 'CACX' : @FM
+    A.LISTA.PAL.ALT := 'KCACO' : @VM : 'CACX' : @FM
+    A.LISTA.PAL.ALT := 'KCAGA' : @VM : 'CAGX' : @FM
+    A.LISTA.PAL.ALT := 'KCAGO' : @VM : 'CAGX' : @FM
+    A.LISTA.PAL.ALT := 'KCAKA' : @VM : 'CAKX' : @FM
+    A.LISTA.PAL.ALT := 'KCOGE' : @VM : 'COGX' : @FM
+    A.LISTA.PAL.ALT := 'KCOJA' : @VM : 'COJX' : @FM
+    A.LISTA.PAL.ALT := 'KCOJE' : @VM : 'COJX' : @FM
+    A.LISTA.PAL.ALT := 'KCOJI' : @VM : 'COJX' : @FM
+    A.LISTA.PAL.ALT := 'KCOJO' : @VM : 'COJX' : @FM
+    A.LISTA.PAL.ALT := 'KCULO' : @VM : 'CULX' : @FM
+    A.LISTA.PAL.ALT := 'KFETO' : @VM : 'FETX' : @FM
+    A.LISTA.PAL.ALT := 'KGUEY' : @VM : 'GUEX' : @FM
+    A.LISTA.PAL.ALT := 'KJOTO' : @VM : 'JOTX' : @FM
+    A.LISTA.PAL.ALT := 'KKACA' : @VM : 'KACX' : @FM
+    A.LISTA.PAL.ALT := 'KKACO' : @VM : 'KACX' : @FM
+    A.LISTA.PAL.ALT := 'KKAGA' : @VM : 'KAGX' : @FM
+    A.LISTA.PAL.ALT := 'KKAGO' : @VM : 'KAGX' : @FM
+    A.LISTA.PAL.ALT := 'KKOGE' : @VM : 'KOGX' : @FM
+    A.LISTA.PAL.ALT := 'KKOJO' : @VM : 'KOJX' : @FM
+    A.LISTA.PAL.ALT := 'KKAKA' : @VM : 'KAKX' : @FM
+    A.LISTA.PAL.ALT := 'KKULO' : @VM : 'KULX' : @FM
+    A.LISTA.PAL.ALT := 'KMAME' : @VM : 'MAMX' : @FM
+    A.LISTA.PAL.ALT := 'KMAMO' : @VM : 'MAMX' : @FM
+    A.LISTA.PAL.ALT := 'KMEAR' : @VM : 'MEAX' : @FM
+    A.LISTA.PAL.ALT := 'KMEON' : @VM : 'MEOX' : @FM
+    A.LISTA.PAL.ALT := 'KMION' : @VM : 'MIOX' : @FM
+    A.LISTA.PAL.ALT := 'KMOCO' : @VM : 'MOCX' : @FM
+    A.LISTA.PAL.ALT := 'KMULA' : @VM : 'MULX' : @FM
+    A.LISTA.PAL.ALT := 'KPEDA' : @VM : 'PEDX' : @FM
+    A.LISTA.PAL.ALT := 'KPEDO' : @VM : 'PEDX' : @FM
+    A.LISTA.PAL.ALT := 'KPENE' : @VM : 'PENX' : @FM
+    A.LISTA.PAL.ALT := 'KPUTA' : @VM : 'PUTX' : @FM
+    A.LISTA.PAL.ALT := 'KPUTO' : @VM : 'PUTX' : @FM
+    A.LISTA.PAL.ALT := 'KQULO' : @VM : 'QULX' : @FM
+    A.LISTA.PAL.ALT := 'KRATA' : @VM : 'RATX' : @FM
+    A.LISTA.PAL.ALT := 'KRUIN' : @VM : 'RUIX' : @FM
 
 
 RETURN
@@ -426,9 +426,9 @@ SET.NOMBRE.CLIENTE:
 
         A.FIS.NOMBRE = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusNameTwo)
 
-        *A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,FM," ")
-        *A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,VM," ")
-        *A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,"  "," ")
+*A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,FM," ")
+*A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,VM," ")
+*A.FIS.NOMBRE = EREPLACE(A.FIS.NOMBRE,"  "," ")
 
 ;*PRUEBA
         Y.NUM.VM = DCOUNT(A.FIS.NOMBRE, @VM)
@@ -448,11 +448,11 @@ SET.NOMBRE.CLIENTE:
             END
         NEXT
 
-        *A.FIS.NOMBRE = TRIM(A.FIS.NOMBRE)
+*A.FIS.NOMBRE = TRIM(A.FIS.NOMBRE)
         A.FIS.NOMBRE =  NOM.COMPLETO
 ;*PRUEBA
         IF Y.SECTOR LT 1300 THEN
-            *A.CLIENTE = A.FIS.APE.PATERNO : ' ' : A.FIS.APE.MATERNO : ' ' : A.FIS.NOMBRE ;*PRUEBA
+*A.CLIENTE = A.FIS.APE.PATERNO : ' ' : A.FIS.APE.MATERNO : ' ' : A.FIS.NOMBRE ;*PRUEBA
             A.CLIENTE = A.FIS.APE.PATERNO : A.FIS.APE.MATERNO : A.FIS.NOMBRE  ;*PRUEBA
         END ELSE
             A.CLIENTE = A.FIS.APE.MATERNO
@@ -467,7 +467,7 @@ SET.NOMBRE.CLIENTE:
         A.CLIENTE = EB.SystemTables.getComiEnri()
     END
 
-    *CHANGE ',' TO ' ' IN A.CLIENTE
+*CHANGE ',' TO ' ' IN A.CLIENTE
 
     A.CLIENTE = UPCASE(A.CLIENTE)
     A.CLIENTE = TRIM(A.CLIENTE)
@@ -643,19 +643,19 @@ RETURN
 
 SET.LISTA.PER.MOR.ANEXO.VI:
 
-    A.MOR.CAR.ESP  = '@' : VM : 'ARROBA'    : FM
-    A.MOR.CAR.ESP := "'" : VM : 'APOSTROFE' : FM
-    A.MOR.CAR.ESP := '%' : VM : 'PORCIENTO' : FM
-    A.MOR.CAR.ESP := '#' : VM : 'NUMERO'    : FM
-    A.MOR.CAR.ESP := '!' : VM : 'ADMIRACION': FM
-    A.MOR.CAR.ESP := '.' : VM : 'PUNTO'      : FM
-    A.MOR.CAR.ESP := '$' : VM : 'PESOS'       : FM
-    A.MOR.CAR.ESP := '"' : VM : 'COMILLAS'     : FM
-    A.MOR.CAR.ESP := '-' : VM : 'GUION'         : FM
-    A.MOR.CAR.ESP := '/' : VM : 'DIAGONAL'       : FM
-    A.MOR.CAR.ESP := '+' : VM : 'SUMA'            : FM
-    A.MOR.CAR.ESP := '(' : VM : 'ABRE PARENTESIS'  : FM
-    A.MOR.CAR.ESP := ')' : VM : 'CIERRA PARENTESIS' : FM
+    A.MOR.CAR.ESP  = '@' : @VM : 'ARROBA'    : @FM
+    A.MOR.CAR.ESP := "'" : @VM : 'APOSTROFE' : @FM
+    A.MOR.CAR.ESP := '%' : @VM : 'PORCIENTO' : @FM
+    A.MOR.CAR.ESP := '#' : @VM : 'NUMERO'    : @FM
+    A.MOR.CAR.ESP := '!' : @VM : 'ADMIRACION': @FM
+    A.MOR.CAR.ESP := '.' : @VM : 'PUNTO'      : @FM
+    A.MOR.CAR.ESP := '$' : @VM : 'PESOS'       : @FM
+    A.MOR.CAR.ESP := '"' : @VM : 'COMILLAS'     : @FM
+    A.MOR.CAR.ESP := '-' : @VM : 'GUION'         : @FM
+    A.MOR.CAR.ESP := '/' : @VM : 'DIAGONAL'       : @FM
+    A.MOR.CAR.ESP := '+' : @VM : 'SUMA'            : @FM
+    A.MOR.CAR.ESP := '(' : @VM : 'ABRE PARENTESIS'  : @FM
+    A.MOR.CAR.ESP := ')' : @VM : 'CIERRA PARENTESIS' : @FM
 
 RETURN
 
@@ -800,7 +800,7 @@ GET.LISTA.ANEXO.1:
 
     IF NOT(Y.CAR) THEN
         Y.VAL = '00'
-    END 
+    END
     IF Y.CAR EQ '0' THEN
         Y.VAL = '00'
     END
