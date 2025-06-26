@@ -1,0 +1,68 @@
+    SUBROUTINE ABC.EXPORTA.TABLA
+*===============================================================================
+* Nombre de Programa:   ABC.EXPORTA.TABLA
+* Objetivo: Dada la tabla parametrizada en batch.data, exporta todos los 
+* registros a un archivo plano en /interfaces
+* BATCH> BNK/ABC.EXPORTA.TABLA
+* TSA.SERVICE> BNK/ABC.EXPORTA.TABLA
+* Archivo queda en /bnkv/temenos/bnk/interfaces. 
+* Una vez generado, desde r24, carpeta bin de t24, ejecutar
+* sh tRun tSS WS
+* tirar todos los OFS y cruzar los dedos
+* Desarrollador: mlopez
+*===============================================================================
+
+    $INCLUDE ../T24_BP I_COMMON
+    $INCLUDE ../T24_BP I_EQUATE
+
+
+    Y.APLICACION = BATCH.DETAILS<3>
+
+    APP.NAME = Y.APLICACION
+    OFSVERSION = APP.NAME:","
+    FUNCT  = 'I'
+    NO.OF.AUTH = '0'
+    OFS.RECORD = ''
+    NEW.REC.ID = ''
+    R.REC = ''
+
+    CUST.LIST = ''
+    CUST.NO = ''
+
+    FN.FILE = 'F.' : APP.NAME
+    F.FILE = ''
+    CALL OPF(FN.FILE, F.FILE)
+    Y.LISTA = ''
+
+    Y.RUTA = '../interfaces/'
+    Y.ARCHIVO = 'SALIDA.TABLA.' : APP.NAME
+
+    EXECUTE "rm " : Y.RUTA : Y.ARCHIVO
+
+    OPENSEQ Y.RUTA,Y.ARCHIVO TO F.ARCHIVO.LOG ELSE
+        EXECUTE "mkdir -p " : Y.RUTA
+        CREATE F.ARCHIVO.LOG ELSE
+            DISPLAY "Ruta o archivo inexistente" : Y.RUTA : Y.ARCHIVO
+            ABORT
+        END
+    END
+
+    SELECT.CMD = "SELECT ":FN.FILE
+    CALL EB.READLIST(SELECT.CMD, Y.LIST, '', CUST.NO, '')
+
+    LOOP
+    REMOVE Y.ID FROM Y.LIST SETTING Y.POS
+    WHILE Y.ID:Y.POS
+        CALL F.READ(FN.FILE, Y.ID, R.REC, F.FILE, Y.ERR)
+        CALL OFS.BUILD.RECORD(APP.NAME, FUNCT, "PROCESS", OFSVERSION, "", NO.OF.AUTH, Y.ID, R.REC, OFS.RECORD)
+
+        Y.MENSAJE = "<MSG>" : OFS.RECORD : "</MSG>"
+        WRITESEQ Y.MENSAJE APPEND TO F.ARCHIVO.LOG ELSE
+            DISPLAY "No se logro crear el archivo"
+            ABORT
+        END        
+    REPEAT
+
+    CLOSESEQ F.ARCHIVO.LOG
+
+END
