@@ -1,0 +1,90 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.MORAL.RELACIONES",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "L.TIPO.REL.GAR",
+      "ENQ.SELECTION" : "OTHER.INFO EQ 'MORAL'",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "TIPO.RELACION.GARANTIA",
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Relación para Garantia"
+      } ],
+      "TEXT.CHAR.MAX" : "22",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-63-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "L.REL.NOMBRE-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nombre"
+      } ],
+      "TEXT.CHAR.MAX" : "6",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-70-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "L.REL.TIPO.REL-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Relacion"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "L.REL.PART.ECON-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Participación Economica"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-32-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "L.TIP.IPAB.GARA",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Garantizado por el IPAB"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-28-"
+      } ],
+      "TABLE.LINE" : "4"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "P Fisicas/Morales relacionadas"
+    }, {
+      "DESCRIPTION" : "P Fisicas/Morales relacionadas"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "P Fisicas/Morales relacionadas"
+    } ]
+  }
+}

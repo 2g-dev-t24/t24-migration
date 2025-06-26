@@ -1,0 +1,32 @@
+{
+  "header" : {
+    "id" : "2001",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Asociaciones"
+    }, {
+      "SHORT.NAME" : "Asociaciones"
+    }, {
+      "SHORT.NAME" : "Persona Moral"
+    }, {
+      "SHORT.NAME" : "Persona Moral"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Asociaciones"
+    }, {
+      "DESCRIPTION" : "Persona Moral Asociaciones"
+    }, {
+      "DESCRIPTION" : "Persona Moral"
+    }, {
+      "DESCRIPTION" : "Persona Moral"
+    } ]
+  }
+}

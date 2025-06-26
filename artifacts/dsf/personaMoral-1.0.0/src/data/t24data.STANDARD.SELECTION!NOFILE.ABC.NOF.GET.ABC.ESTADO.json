@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "NOFILE.ABC.NOF.GET.ABC.ESTADO",
+    "dsfApiType" : "STANDARD.SELECTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "USR.FIELD.NAME" : [ {
+      "USR.TYPE" : "R",
+      "USR.DISPLAY.FMT" : "55",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "ABC.NOF.GET.ABC.ESTADO"
+      } ],
+      "USR.FIELD.NAME" : "ID"
+    } ]
+  }
+}

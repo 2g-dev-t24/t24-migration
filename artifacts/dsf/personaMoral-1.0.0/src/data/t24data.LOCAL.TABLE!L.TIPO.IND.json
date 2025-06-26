@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "L.TIPO.IND",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.TIPO.IND"
+    }, {
+      "SHORT.NAME" : "L.TIPO.IND"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CUST TIPO INDUSTRIA"
+    }, {
+      "DESCRIPTION" : "CUST TIPO INDUSTRIA"
+    } ],
+    "APPLICATION.VET" : "INDUSTRY",
+    "APPL.ENRICHM.FIELD" : "1",
+    "MAXIMUM.CHAR" : "10"
+  }
+}

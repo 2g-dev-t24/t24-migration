@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.NOM.ACCIONIST",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.NOM.ACCIONIST"
+    }, {
+      "SHORT.NAME" : "L.NOM.ACCIONIST"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "NOMBRE DEL ACCIONISTA"
+    }, {
+      "DESCRIPTION" : "NOMBRE DEL ACCIONISTA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "65"
+  }
+}

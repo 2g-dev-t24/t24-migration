@@ -1,0 +1,249 @@
+{
+  "header" : {
+    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.MORAL.CONOCE.CLIENTE",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "TYPE",
+      "AUT.NEW.CONTENT" : "Cheques,Efectivo,Transferencias"
+    }, {
+      "AUTOM.FIELD.NO" : "TYPE.OF.OPERATION-1",
+      "AUT.NEW.CONTENT" : "0"
+    }, {
+      "AUTOM.FIELD.NO" : "TYPE.OF.OPERATION-2",
+      "AUT.NEW.CONTENT" : "Cheques,Efectivo,Transferencias"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "SOURCE.REC",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.ORIGEN.RECURSOS",
+      "TEXT" : [ {
+        "TEXT" : "Origen de los Recursos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "OTHER.SOURCE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Especifique Otro Origen"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-98-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "ACCOUNT.PURPOSE",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.DESTINO.RECURSO",
+      "TEXT" : [ {
+        "TEXT" : "Destino de los Recursos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "OTHER.PURPOSE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Especifique Otro Destino"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-98-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "TYPE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Deposito"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "MONTHLY.APPROX.INCOME",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "E.ABC.MONTO.MENSUAL",
+      "TEXT" : [ {
+        "TEXT" : "Monto Acumulado Estimado Depositos Mensuales"
+      } ],
+      "TEXT.CHAR.MAX" : "44",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-82-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "TRANSACTION.OPERATION.NUMBER-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "DROP.DOWN" : "ABC.RANGO",
+      "TEXT" : [ {
+        "TEXT" : "Num Deposito"
+      } ],
+      "TEXT.CHAR.MAX" : "12",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-20-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "TYPE.OF.OPERATION-2",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Retiro"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "TRANSACTION.AMOUNT.MONTHLY-2",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "DROP.DOWN" : "E.ABC.MONTO.MENSUAL",
+      "TEXT" : [ {
+        "TEXT" : "Monto Acumulado Estimado Retiros Mensuales"
+      } ],
+      "TEXT.CHAR.MAX" : "42",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-64-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "TRANSACTION.OPERATION.NUMBER-2",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "DROP.DOWN" : "ABC.RANGO",
+      "TEXT" : [ {
+        "TEXT" : "Num Retiros"
+      } ],
+      "TEXT.CHAR.MAX" : "11",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-19-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "COMMENTS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Cliente Considerado Politicamente"
+      } ],
+      "TEXT.CHAR.MAX" : "33",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-71-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "JOB.POSITION",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Puesto Desempeñado en el Ultimo Año"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-58-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "RELATION.CLIENT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Cliente Relacionado a una Persona"
+      } ],
+      "TEXT.CHAR.MAX" : "33",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-71-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "OTHERS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nombre Persona Politicamente Expuesta"
+      } ],
+      "TEXT.CHAR.MAX" : "37",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-70-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "RELATION.TYPE",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.RELATION.CUS",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Relacion"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "14"
+    } ],
+    "ASSOC.VERSION" : [ {
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.EMPLEO"
+    }, {
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.REFERENCIAS"
+    }, {
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,CLIENTE.RELACIONES"
+    }, {
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,AUDIT"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Conoce a tu cliente Adicional"
+    }, {
+      "DESCRIPTION" : "Conoce a tu cliente Adicional"
+    } ],
+    "MULTI.POSSIBLE" : "Y",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Conoce tu Cliente"
+    } ],
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "TYPE"
+    }, {
+      "MANDATORY.FIELD" : "MONTHLY.APPROX.INCOME"
+    }, {
+      "MANDATORY.FIELD" : "TRANSACTION.OPERATION.NUMBER"
+    }, {
+      "MANDATORY.FIELD" : "TYPE.OF.OPERATION"
+    }, {
+      "MANDATORY.FIELD" : "COMMENTS"
+    }, {
+      "MANDATORY.FIELD" : "RELATION.CLIENT"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "V.ABC.CUS.ORI.REC.CHK",
+      "VALIDATION.FLD" : "SOURCE.REC"
+    }, {
+      "VALIDATION.RTN" : "V.ABC.CUS.DES.REC.CHK",
+      "VALIDATION.FLD" : "ACCOUNT.PURPOSE"
+    } ]
+  }
+}

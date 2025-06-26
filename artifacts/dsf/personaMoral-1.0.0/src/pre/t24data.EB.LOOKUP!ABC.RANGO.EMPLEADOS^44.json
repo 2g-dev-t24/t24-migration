@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.RANGO.EMPLEADOS*4",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "DE 101 A 250"
+    }, {
+      "DESCRIPTION" : "DE 101 A 250"
+    } ]
+  }
+}

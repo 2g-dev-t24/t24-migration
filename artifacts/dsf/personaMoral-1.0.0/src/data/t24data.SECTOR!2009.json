@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "2009",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Mercantiles"
+    }, {
+      "SHORT.NAME" : "Mercantiles"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Mercantiles"
+    }, {
+      "DESCRIPTION" : "Persona Moral Mercantiles"
+    } ]
+  }
+}

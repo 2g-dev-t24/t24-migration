@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.NAC.ACCIONIST",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.NAC.ACCIONIST"
+    }, {
+      "SHORT.NAME" : "L.NAC.ACCIONIST"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "NACIONALIDAD DEL ACCIONISTA"
+    }, {
+      "DESCRIPTION" : "NACIONALIDAD DEL ACCIONISTA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "65"
+  }
+}

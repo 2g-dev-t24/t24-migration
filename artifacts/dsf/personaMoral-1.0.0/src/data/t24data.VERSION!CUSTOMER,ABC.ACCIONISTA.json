@@ -1,0 +1,89 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.ACCIONISTA",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "L.NOM.ACCIONIST-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nombre del Accionista"
+      } ],
+      "TEXT.CHAR.MAX" : "65",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-133-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "L.NAC.ACCIONIST-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nacionalidad del accionista"
+      } ],
+      "TEXT.CHAR.MAX" : "65",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-133-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "L.RES.ACCIONIST-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Residencia del accionista"
+      } ],
+      "TEXT.CHAR.MAX" : "65",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-133-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "L.RFC.ACCIONIST-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "RFC del accionista"
+      } ],
+      "TEXT.CHAR.MAX" : "65",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-133-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "L.ACC.PORCENTAJ-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Porcentaje del accionista"
+      } ],
+      "TEXT.CHAR.MAX" : "65",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-133-"
+      } ],
+      "TABLE.LINE" : "4"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Accionistas"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Accionistas"
+    } ]
+  }
+}

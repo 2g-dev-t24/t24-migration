@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "SECTOR.ECONOMICO*8300",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "SER ARRENDAMIENTO Y ADMON INMUEBLES"
+    }, {
+      "DESCRIPTION" : "SER ARRENDAMIENTO Y ADMON INMUEBLES"
+    } ]
+  }
+}

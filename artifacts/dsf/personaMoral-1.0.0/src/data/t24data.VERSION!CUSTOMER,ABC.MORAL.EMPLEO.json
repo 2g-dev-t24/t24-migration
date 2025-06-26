@@ -1,0 +1,102 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.MORAL.EMPLEO",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "EMPLOYMENT.START-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Inicio de Operaciones"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-49-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "L.GIRO.MERC",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Giro Mercantil"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-40-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "L.SECTOR.ECO",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.SECTOR.ECONOMICO",
+      "TEXT" : [ {
+        "TEXT" : "Sector Giro Económico"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "INDUSTRY",
+      "ENQ.SELECTION" : "INDUSTRY.CODE EQ L.SECTOR.ECO",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.GET.INDUSTRY",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Industria"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "L.TIPO.IND",
+      "ENQ.SELECTION" : "INDUSTRY.CODE EQ L.SECTOR.ECO",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.GET.INDUSTRY",
+      "TEXT" : [ {
+        "TEXT" : "Giro de la Empresa"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "CNBV.SECTOR",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Sector CNBV"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-44-"
+      } ],
+      "TABLE.LINE" : "5"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Detalle de Empleo"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Detalle de Empleo"
+    } ]
+  }
+}

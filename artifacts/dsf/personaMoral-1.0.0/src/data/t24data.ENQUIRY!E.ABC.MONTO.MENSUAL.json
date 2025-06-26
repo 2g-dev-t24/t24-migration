@@ -1,0 +1,45 @@
+{
+  "header" : {
+    "id" : "E.ABC.MONTO.MENSUAL",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "LOOKUP.ID"
+      } ],
+      "FIELD.NAME" : "LOOKUP.ID",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "DESCRIPTION"
+      } ],
+      "FIELD.NAME" : "DESCRIPTION",
+      "LENGTH.MASK" : "65L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "3",
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "OTHER.INFO"
+      } ],
+      "FIELD.NAME" : "OTHER.INFO",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "5"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "@ID LK ABC.VPM.MONTO.MENSUAL*4..."
+    } ],
+    "FILE.NAME" : "EB.LOOKUP"
+  }
+}

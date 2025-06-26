@@ -1,0 +1,248 @@
+{
+  "header" : {
+    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.MORAL.EMPLEO",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "BANXICO.ECO.ACTIVITY",
+      "ENQ.SELECTION" : "ID.CUSTOMER EQ @ID",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.GET.SECTOR.ECONOMICO",
+      "TEXT" : [ {
+        "TEXT" : "Actividad Económica"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "POPUP.DROPDOWN"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "BANXICO.ECO.ACTIVITY.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Código Actividad Económica"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-58-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "CNBV.ECO.ACTIVITY",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Sector Económico"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "CNBV.ECO.ACTIVITY.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Código Sector Económico"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-58-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "SAT.TAX.REGIME",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.REGIMEN",
+      "TEXT" : [ {
+        "TEXT" : "Régimen Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "SAT.TAX.REGIME.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Codigo de Regimen Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-58-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "NUMBER.OF.EMPLOYEES",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.RANGO.EMPLEADOS",
+      "TEXT" : [ {
+        "TEXT" : "Número de Empleados"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-42-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "GEO.COVERAGE",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.COB.GEO",
+      "TEXT" : [ {
+        "TEXT" : "Cobertura Geográfica"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-103-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "MAIN.CITIES-1",
+      "ENQ.SELECTION" : "ID EQ \"0\"",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.ESTADO",
+      "TEXT" : [ {
+        "TEXT" : "Actividad en Estados"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-103-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "NUMBER.OF.BRANCH",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.RANGO.SUCURSAL",
+      "TEXT" : [ {
+        "TEXT" : "Número de Sucursales"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "TOTAL.ANNUAL.SALES",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Ventas Anuales Totales"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-57-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "TOTAL.ASSETS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Total de Activos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-57-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "TOTAL.LIABILITY",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Total de Pasivos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-57-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "STOCK.HOLDER.EQUITY",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Capital Contable"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "IMPORTATION.EXPORTATION",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Monto Estimado de Exportaciones"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-103-"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "FIELD.NO" : "EXPORTATION.COUNTRIES",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Paises de Exportación"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-40-"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "IMPORTATION.AMOUNT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Monto Estimado de Importaciones"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-103-"
+      } ],
+      "TABLE.LINE" : "16"
+    }, {
+      "FIELD.NO" : "IMPORTATION.COUNTRIES",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Paises de Importación"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-40-"
+      } ],
+      "TABLE.LINE" : "17"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Detalle de Empleo"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Detalle de Empleo"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.VAL.SECTOR.ECONOMICO",
+      "VALIDATION.FLD" : "BANXICO.ECO.ACTIVITY"
+    }, {
+      "VALIDATION.RTN" : "ABC.CAL.CAP.CONT",
+      "VALIDATION.FLD" : "TOTAL.LIABILITY"
+    } ]
+  }
+}

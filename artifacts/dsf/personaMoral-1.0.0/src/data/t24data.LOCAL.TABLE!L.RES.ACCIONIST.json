@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.RES.ACCIONIST",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.RES.ACCIONIST"
+    }, {
+      "SHORT.NAME" : "L.RES.ACCIONIST"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "RESIDENCIA DEL ACCIONISTA"
+    }, {
+      "DESCRIPTION" : "RESIDENCIA DEL ACCIONISTA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "65"
+  }
+}

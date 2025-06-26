@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "SECTOR.ECONOMICO*2400",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "INDUSTRIA DEL VESTIDO"
+    }, {
+      "DESCRIPTION" : "INDUSTRIA DEL VESTIDO"
+    } ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "2008",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Financieras"
+    }, {
+      "SHORT.NAME" : "Financieras"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Financieras"
+    }, {
+      "DESCRIPTION" : "Persona Moral Financieras"
+    } ]
+  }
+}

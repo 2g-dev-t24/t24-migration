@@ -1,0 +1,54 @@
+{
+  "header" : {
+    "id" : "L.GIRO.MERC",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.GIRO.MERC"
+    }, {
+      "SHORT.NAME" : "L.GIRO.MERC"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "1",
+      "REMARK" : [ {
+        "REMARK" : "SERVICIOS"
+      }, {
+        "REMARK" : "SERVICIOS"
+      } ]
+    }, {
+      "VETTING.TABLE" : "2",
+      "REMARK" : [ {
+        "REMARK" : "COMERCIAL"
+      }, {
+        "REMARK" : "COMERCIAL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "3",
+      "REMARK" : [ {
+        "REMARK" : "INDUSTRIAL"
+      }, {
+        "REMARK" : "INDUSTRIAL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "4",
+      "REMARK" : [ {
+        "REMARK" : "OTROS"
+      }, {
+        "REMARK" : "OTROS"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CUST GIRO MERCANTIL"
+    }, {
+      "DESCRIPTION" : "CUST GIRO MERCANTIL"
+    } ],
+    "MAXIMUM.CHAR" : "2"
+  }
+}

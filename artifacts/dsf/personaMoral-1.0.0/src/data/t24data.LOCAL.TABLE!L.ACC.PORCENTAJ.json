@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.ACC.PORCENTAJ",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.ACC.PORCENTAJ"
+    }, {
+      "SHORT.NAME" : "L.ACC.PORCENTAJ"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "PORCENTAJE DE PARTICIPACION ACCI"
+    }, {
+      "DESCRIPTION" : "PORCENTAJE DE PARTICIPACION ACCI"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "65"
+  }
+}

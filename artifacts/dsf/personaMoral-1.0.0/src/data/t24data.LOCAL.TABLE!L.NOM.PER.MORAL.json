@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.NOM.PER.MORAL",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.NOM.PER.MORAL"
+    }, {
+      "SHORT.NAME" : "L.NOM.PER.MORAL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "NOMBRE PERSONA MORAL"
+    }, {
+      "DESCRIPTION" : "NOMBRE PERSONA MORAL"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "65"
+  }
+}

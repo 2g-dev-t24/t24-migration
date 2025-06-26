@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "SECTOR.ECONOMICO*6800",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "COMERCIO DE VEHÍCULOS Y REFACCIONES"
+    }, {
+      "DESCRIPTION" : "COMERCIO DE VEHÍCULOS Y REFACCIONES"
+    } ]
+  }
+}

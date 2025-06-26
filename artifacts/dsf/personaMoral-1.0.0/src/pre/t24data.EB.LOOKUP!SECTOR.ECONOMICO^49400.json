@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "SECTOR.ECONOMICO*9400",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ADMINISTRACION PUBLICA"
+    }, {
+      "DESCRIPTION" : "ADMINISTRACION PUBLICA"
+    } ]
+  }
+}

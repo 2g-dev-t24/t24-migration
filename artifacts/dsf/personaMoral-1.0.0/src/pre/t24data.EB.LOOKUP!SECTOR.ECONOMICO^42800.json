@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "SECTOR.ECONOMICO*2800",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "INDUSTRIA DEL PAPEL"
+    }, {
+      "DESCRIPTION" : "INDUSTRIA DEL PAPEL"
+    } ]
+  }
+}

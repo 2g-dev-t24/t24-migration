@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "2006",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Estados y Munic"
+    }, {
+      "SHORT.NAME" : "Estados y Munic"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Estados y Municipios"
+    }, {
+      "DESCRIPTION" : "Persona Moral Estados y Municipios"
+    } ]
+  }
+}

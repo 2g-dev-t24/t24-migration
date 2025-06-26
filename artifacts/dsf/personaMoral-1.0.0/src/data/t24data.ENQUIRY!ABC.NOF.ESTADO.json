@@ -1,0 +1,73 @@
+{
+  "header" : {
+    "id" : "ABC.NOF.ESTADO",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "ID"
+      }, {
+        "SEL.LABEL" : "ID"
+      } ],
+      "SELECTION.FLDS" : "ID",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "0"
+      } ],
+      "FIELD.NAME" : "R.DATA"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,1,1"
+      } ],
+      "FIELD.NAME" : "ID",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,2,1"
+      } ],
+      "FIELD.NAME" : "ESTADO",
+      "COLUMN" : "20",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Estado"
+      }, {
+        "FIELD.LBL" : "Estado"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,3,1"
+      } ],
+      "FIELD.NAME" : "CLAVE",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "30",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Clave"
+      }, {
+        "FIELD.LBL" : "Clave"
+      } ]
+    } ],
+    "FILE.NAME" : "NOFILE.ABC.NOF.GET.ABC.ESTADO"
+  }
+}

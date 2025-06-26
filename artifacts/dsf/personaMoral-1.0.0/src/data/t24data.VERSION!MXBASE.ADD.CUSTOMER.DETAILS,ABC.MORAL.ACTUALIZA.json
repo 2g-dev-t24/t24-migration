@@ -1,0 +1,213 @@
+{
+  "header" : {
+    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.MORAL.ACTUALIZA",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "CORPORATE.CUSTOMER.TYPE",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "E.ABC.TIPO.SOCIEDAD",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Sociedad"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "CORPORATE.CUSTOMER.TYPE.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Codigo Tipo de Sociedad"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-58-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "MXBASE.CONSTITUTION.TYPE-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Número de Escritura Constitutiva"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "REGISTRATION.COMPANY.NO-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Datos Registro Público"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-68-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "DATE.REGISTRATION-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Inscripción al Registro Público Autoriza"
+      } ],
+      "TEXT.CHAR.MAX" : "49",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-63-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "COUNTRY.REGISTERED-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "País de Constitución"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-40-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "STATE.REGISTERED-1",
+      "ENQ.SELECTION" : "ID EQ \"0\"",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.ESTADO",
+      "TEXT" : [ {
+        "TEXT" : "Entidad Registro Público"
+      } ],
+      "TEXT.CHAR.MAX" : "65",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-70-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "NOTARY.NAME-1.1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nombre del Notario"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-103-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "REGISTRATION.NOTARY.NUMBER-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Número de Notario"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-68-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "NOTARY.STATE-1",
+      "ENQ.SELECTION" : "ID EQ \"0\"",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.ESTADO",
+      "TEXT" : [ {
+        "TEXT" : "Entidad del Notario"
+      } ],
+      "TEXT.CHAR.MAX" : "65",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-70-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "CONSTITUTION.STATE",
+      "ENQ.SELECTION" : "ID EQ \"0\"",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.ESTADO",
+      "TEXT" : [ {
+        "TEXT" : "Lugar de Constitución"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-103-"
+      } ],
+      "TABLE.LINE" : "10"
+    } ],
+    "ASSOC.VERSION" : [ {
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.MORAL.EMPLEO"
+    }, {
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.MORAL.CONOCE.CLIENTE"
+    }, {
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.MORAL.REFERENCIAS"
+    }, {
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.MORAL.RELACIONES"
+    }, {
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,AUDIT"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "CORPORATE.CUSTOMER.TYPE"
+    }, {
+      "NOINPUT.FIELD" : "CORPORATE.CUSTOMER.TYPE.CODE"
+    }, {
+      "NOINPUT.FIELD" : "REGISTRATION.COMPANY.NO"
+    }, {
+      "NOINPUT.FIELD" : "DATE.REGISTRATION"
+    }, {
+      "NOINPUT.FIELD" : "IMPORTATION.EXPORTATION"
+    }, {
+      "NOINPUT.FIELD" : "EXPORTATION.COUNTRIES"
+    }, {
+      "NOINPUT.FIELD" : "IMPORTATION.AMOUNT"
+    }, {
+      "NOINPUT.FIELD" : "IMPORTATION.COUNTRIES"
+    } ],
+    "MULTI.POSSIBLE" : "Y",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Persona Moral Actualiza"
+    } ],
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "MXBASE.CONSTITUTION.TYPE"
+    }, {
+      "MANDATORY.FIELD" : "REGISTRATION.NOTARY.NUMBER"
+    }, {
+      "MANDATORY.FIELD" : "NOTARY.NAME"
+    }, {
+      "MANDATORY.FIELD" : "NOTARY.STATE"
+    }, {
+      "MANDATORY.FIELD" : "BANXICO.ECO.ACTIVITY"
+    }, {
+      "MANDATORY.FIELD" : "TYPE"
+    }, {
+      "MANDATORY.FIELD" : "TYPE.OF.OPERATION"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.VAL.SECTOR.ECONOMICO",
+      "VALIDATION.FLD" : "BANXICO.ECO.ACTIVITY"
+    }, {
+      "VALIDATION.RTN" : "V.ABC.CUS.ORI.REC.CHK",
+      "VALIDATION.FLD" : "SOURCE.REC"
+    }, {
+      "VALIDATION.RTN" : "V.ABC.CUS.DES.REC.CHK",
+      "VALIDATION.FLD" : "ACCOUNT.PURPOSE"
+    }, {
+      "VALIDATION.RTN" : "ABC.CAL.CAP.CONT",
+      "VALIDATION.FLD" : "TOTAL.LIABILITY"
+    } ]
+  }
+}

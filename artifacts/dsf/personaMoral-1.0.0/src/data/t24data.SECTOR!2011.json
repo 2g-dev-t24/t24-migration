@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "2011",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ORG DescentralI"
+    }, {
+      "SHORT.NAME" : "ORG DescentralI"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Organismos Descentralizados"
+    }, {
+      "DESCRIPTION" : "Persona Moral Organismos Descentralizados"
+    } ]
+  }
+}

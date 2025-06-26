@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "2012",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "PM Otros"
+    }, {
+      "SHORT.NAME" : "PM Otros"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Otros"
+    }, {
+      "DESCRIPTION" : "Persona Moral Otros"
+    } ]
+  }
+}

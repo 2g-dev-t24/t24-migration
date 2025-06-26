@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "2014",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "PM Rurales"
+    }, {
+      "SHORT.NAME" : "PM Rurales"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Rurales"
+    }, {
+      "DESCRIPTION" : "Persona Moral Rurales"
+    } ]
+  }
+}

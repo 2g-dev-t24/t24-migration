@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "SECTOR.ECONOMICO*3900",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "FAB. JOYERIA INST. PREC. OPT. Y DEP"
+    }, {
+      "DESCRIPTION" : "FAB. JOYERIA INST. PREC. OPT. Y DEP"
+    } ]
+  }
+}

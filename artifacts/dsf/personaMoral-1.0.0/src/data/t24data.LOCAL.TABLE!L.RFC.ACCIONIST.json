@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "L.RFC.ACCIONIST",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.RFC.ACCIONIST"
+    }, {
+      "SHORT.NAME" : "L.RFC.ACCIONIST"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "RFC DEL ACCIONISTA"
+    }, {
+      "DESCRIPTION" : "RFC DEL ACCIONISTA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "65"
+  }
+}

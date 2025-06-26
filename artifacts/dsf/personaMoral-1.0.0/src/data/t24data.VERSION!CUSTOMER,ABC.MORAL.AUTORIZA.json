@@ -1,0 +1,259 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.MORAL.AUTORIZA",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "SECTOR",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo Cliente"
+      } ],
+      "TEXT.CHAR.MAX" : "25",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-38-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "CUSTOMER.STATUS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Estatus del Cliente"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-26-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "CUSTOMER.TYPE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo"
+      } ],
+      "TEXT.CHAR.MAX" : "5",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "BIRTH.INCORP.DATE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Alta del Cliente"
+      } ],
+      "TEXT.CHAR.MAX" : "25",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-39-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "L.NOM.PER.MORAL",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Denominación /Razón Social"
+      } ],
+      "TEXT.CHAR.MAX" : "26",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-94-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "DATE.OF.BIRTH",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Constitución"
+      } ],
+      "TEXT.CHAR.MAX" : "21",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-35-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "NATIONALITY",
+      "COLUMN" : "24",
+      "TEXT" : [ {
+        "TEXT" : "Nacionalidad"
+      } ],
+      "TEXT.CHAR.MAX" : "17",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "24-22-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "RESIDENCE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Pais de Residencia"
+      } ],
+      "TEXT.CHAR.MAX" : "18",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-23-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "TAX.ID-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "R.F.C"
+      } ],
+      "TEXT.CHAR.MAX" : "5",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "ABC.FIRMA.ELECT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tiene firma Electronica Avanzada?"
+      } ],
+      "TEXT.CHAR.MAX" : "33",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-38-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "TEXT-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Código de la Firma (FIEL)"
+      } ],
+      "TEXT.CHAR.MAX" : "25",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-63-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "ACCOUNT.OFFICER",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Promotor"
+      } ],
+      "TEXT.CHAR.MAX" : "8",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-15-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "OTHER.OFFICER-1",
+      "COLUMN" : "24",
+      "TEXT" : [ {
+        "TEXT" : "Promotor de Credito"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "24-26-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "ITF.TAX.EXEMPT",
+      "COLUMN" : "24",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Exento de Impuestos"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "24-25-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "L.GPO.FINANCIER",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Grupo Financiero"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-40-"
+      } ],
+      "TABLE.LINE" : "13"
+    } ],
+    "ASSOC.VERSION" : [ {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.MORAL.DIRECCION"
+    }, {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.MORAL.CONTACTOS"
+    }, {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.MORAL.EMPLEO"
+    }, {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.MORAL.CONOCE.CLIENTE"
+    }, {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.MORAL.RELACIONES"
+    }, {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.ACCIONISTA"
+    }, {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.AVISO.PRIVACIDAD"
+    }, {
+      "ASSOC.VERSION" : "CUSTOMER,ABC.AUDIT"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Autoriza Cliente Persona Moral"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "MNEMONIC"
+    }, {
+      "NOINPUT.FIELD" : "BIRTH.INCORP.DATE"
+    }, {
+      "NOINPUT.FIELD" : "SECTOR"
+    }, {
+      "NOINPUT.FIELD" : "CUSTOMER.STATUS"
+    }, {
+      "NOINPUT.FIELD" : "ITF.TAX.EXEMPT"
+    }, {
+      "NOINPUT.FIELD" : "L.NOM.PER.MORAL"
+    }, {
+      "NOINPUT.FIELD" : "DATE.OF.BIRTH"
+    }, {
+      "NOINPUT.FIELD" : "NATIONALITY"
+    }, {
+      "NOINPUT.FIELD" : "RESIDENCE"
+    }, {
+      "NOINPUT.FIELD" : "TAX.ID"
+    }, {
+      "NOINPUT.FIELD" : "ABC.FIRMA.ELECT"
+    }, {
+      "NOINPUT.FIELD" : "TEXT"
+    }, {
+      "NOINPUT.FIELD" : "ACCOUNT.OFFICER"
+    }, {
+      "NOINPUT.FIELD" : "OTHER.OFFICER"
+    } ],
+    "EXC.INC.RTN" : "YES",
+    "MULTI.POSSIBLE" : "Y",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Autoriza Cliente Persona Moral"
+    } ]
+  }
+}
