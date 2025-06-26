@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "2003",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Cooperativas"
+    }, {
+      "SHORT.NAME" : "Cooperativas"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Cooperativas"
+    }, {
+      "DESCRIPTION" : "Persona Moral Cooperativas"
+    } ]
+  }
+}

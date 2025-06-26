@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "2002",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Civiles"
+    }, {
+      "SHORT.NAME" : "Civiles"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Civiles"
+    }, {
+      "DESCRIPTION" : "Persona Moral Civiles"
+    } ]
+  }
+}

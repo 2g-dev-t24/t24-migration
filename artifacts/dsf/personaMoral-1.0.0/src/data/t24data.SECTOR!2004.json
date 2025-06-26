@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "2004",
+    "dsfApiType" : "SECTOR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Dependencia Gob"
+    }, {
+      "SHORT.NAME" : "Dependencia Gob"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Persona Moral Dependencias del Gobierno"
+    }, {
+      "DESCRIPTION" : "Persona Moral Dependencias del Gobierno"
+    } ]
+  }
+}
