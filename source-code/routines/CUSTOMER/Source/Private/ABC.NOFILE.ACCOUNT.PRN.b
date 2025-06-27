@@ -1,7 +1,19 @@
+* @ValidationCode : MjoxNjQ0ODUyNTE6Q3AxMjUyOjE3NTA5NjU2NjM0NzE6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 26 Jun 2025 16:21:03
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *===============================================================================
 $PACKAGE ABC.BP
 *===============================================================================
-    SUBROUTINE ABC.NOFILE.ACCOUNT.PRN(R.DATA)
+SUBROUTINE ABC.NOFILE.ACCOUNT.PRN(R.DATA)
 *===============================================================================
 * Nombre de Programa :  ABC.NOFILE.ACCOUNT.PRN
 
@@ -36,7 +48,7 @@ $PACKAGE ABC.BP
         GOSUB FINALLY
     END
 
-    RETURN
+RETURN
 
 *******
 INICIA:
@@ -66,7 +78,7 @@ INICIA:
     
     GOSUB VALIDA.DATOS
 
-    RETURN
+RETURN
 
 *************
 VALIDA.DATOS:
@@ -99,7 +111,7 @@ VALIDA.DATOS:
         R.DATA<-1> = Y.CLABE:"|||1"
     END
 
-    RETURN
+RETURN
 
 ************************
 OBTIENE.PARAMETRIZACION:
@@ -119,7 +131,7 @@ OBTIENE.PARAMETRIZACION:
         Y.OFS.SOURCE = Y.LIST.VALUES<Y.POS>
     END
 
-    RETURN
+RETURN
 
 ***********
 OPEN.FILES:
@@ -135,7 +147,7 @@ OPEN.FILES:
 
     EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, YPOS.CLABE)
 
-    RETURN
+RETURN
 
 ********
 PROCESO:
@@ -148,11 +160,11 @@ PROCESO:
         IF Y.CLABE.CUENTA EQ Y.CLABE THEN
             Y.OFS = Y.OFS.APLICACION:Y.OFS.VERSION:"/":Y.FUNCION.APLICA:",,":Y.CUENTA
             IF Y.PRN NE '' THEN
-                Y.OFS := ',PRN::="':Y.PRN:'"'
+                Y.OFS := ',ALT.ACCT.TYPE::=PRN,ALT.ACCT.ID::="':Y.PRN:'"'
             END
-            IF Y.BALANCE.ID NE '' THEN
-                Y.OFS := ',BALANCE.ID::="':Y.BALANCE.ID:'"'
-            END
+*            IF Y.BALANCE.ID NE '' THEN
+*                Y.OFS := ',BALANCE.ID::="':Y.BALANCE.ID:'"'
+*            END
 
             GOSUB APLICA.OFS
 
@@ -169,7 +181,7 @@ PROCESO:
         R.DATA<-1> = Y.CLABE:"|||3":
     END
 
-    RETURN
+RETURN
 
 ***********
 APLICA.OFS:
@@ -184,7 +196,7 @@ APLICA.OFS:
     Y.RESPONSE.OFS = TRIM(FIELD(Y.RESPONSE.OFS,",",1))
     Y.ERROR = TRIM(FIELD(Y.OFS, '/', 4))
 
-    RETURN
+RETURN
 
 **************
 OBTIENE.ERROR:
@@ -209,12 +221,12 @@ OBTIENE.ERROR:
 
     PRINT Y.OFS
 
-    RETURN
+RETURN
 
 ********
 FINALLY:
 ********
 
-    RETURN
+RETURN
 
 END
