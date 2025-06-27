@@ -527,3 +527,11 @@ private method AbcNofileAccountPrn (
 {
     jBC: ABC.NOFILE.ACCOUNT.PRN
 }
+
+
+private method AbcCtaAltPrn (
+)
+{
+   jBC: ABC.CTA.ALT.PRN
+}
+
