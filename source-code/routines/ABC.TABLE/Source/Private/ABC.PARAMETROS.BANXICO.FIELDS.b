@@ -67,7 +67,7 @@ SUBROUTINE ABC.PARAMETROS.BANXICO.FIELDS
     EB.Template.FieldSetcheckfile('POSTING.RESTRICT')
     
     EB.Template.TableAddfielddefinition('XX>REJ.CODE', '2', 'A', '')
-    EB.Template.FieldSetcheckfile('ABC.MOTIVO.DEV.CECOBAN')
+    EB.Template.FieldSetcheckfile('ABC.MO.DE.CE')
         
     EB.Template.TableAddfielddefinition('OFS.SRCE.PAGADOS', '20', 'A', '')
     EB.Template.FieldSetcheckfile('OFS.SOURCE')

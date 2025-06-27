@@ -589,16 +589,6 @@ private method AbcParametrosBanxico ()
     jBC: ABC.PARAMETROS.BANXICO
 }
 
-private method AbcMotivoDevCecobanFields ()
-{
-    jBC: ABC.MOTIVO.DEV.CECOBAN.FIELDS
-}
-
-private method AbcMotivoDevCecoban ()
-{
-    jBC: ABC.MOTIVO.DEV.CECOBAN
-}
-
 private method AbcCuentasDestinoFields ()
 {
     jBC: ABC.CUENTAS.DESTINO.FIELDS
@@ -617,4 +607,14 @@ private method Abc2brCtlgOpRemesasFields ()
 private method Abc2brCtlgOpRemesas ()
 {
     jBC: ABC.2BR.CTLG.OP.REMESAS
+}
+
+private method AbcMoDeCeFields ()
+{
+    jBC: ABC.MO.DE.CE.FIELDS
+}
+
+private method AbcMoDeCe ()
+{
+    jBC: ABC.MO.DE.CE
 }

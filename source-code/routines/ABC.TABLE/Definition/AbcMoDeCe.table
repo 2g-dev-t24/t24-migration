@@ -1,0 +1,15 @@
+public table AbcMoDeCe {
+    t24: ABC.MO.DE.CE
+    fields:{
+        Descripcion(ABC.MO.DE.CE.DESCRIPCION) = 1
+        RecordStatus(ABC.MO.DE.CE.RECORD.STATUS) = 2
+        CurrNo(ABC.MO.DE.CE.CURR.NO) = 3
+        Inputter(ABC.MO.DE.CE.INPUTTER) = 4
+        DateTime(ABC.MO.DE.CE.DATE.TIME) = 5
+        Authoriser(ABC.MO.DE.CE.AUTHORISER) = 6
+        CoCode(ABC.MO.DE.CE.CO.CODE) = 7
+        DeptCode(ABC.MO.DE.CE.DEPT.CODE) = 8
+        AuditorCode(ABC.MO.DE.CE.AUDITOR.CODE) = 9
+        AuditDateTime(ABC.MO.DE.CE.AUDIT.DATE.TIME) = 10
+    }
+}
