@@ -1,0 +1,34 @@
+{
+  "header" : {
+    "id" : "L.GPO.FINANCIER",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "L.GPO.FINANCIER"
+    }, {
+      "SHORT.NAME" : "L.GPO.FINANCIER"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "SI",
+      "REMARK" : [ {
+        "REMARK" : "SI"
+      }, {
+        "REMARK" : "SI"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "GRUPO FINANCIERO"
+    }, {
+      "DESCRIPTION" : "GRUPO FINANCIERO"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}
