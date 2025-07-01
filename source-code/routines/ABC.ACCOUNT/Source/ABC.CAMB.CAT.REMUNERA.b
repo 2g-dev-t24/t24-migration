@@ -55,7 +55,6 @@ LEER.PARAMETROS:
     END ELSE
         ETEXT = 'No existe el parámetro ':Y.PARAM.ID:' en la tabla ABC.GENERAL.PARAM'
         EB.SystemTables.setEtext(ETEXT)
-        EB.ErrorProcessing.Err()
         EB.ErrorProcessing.StoreEndError()
         RETURN
     END
