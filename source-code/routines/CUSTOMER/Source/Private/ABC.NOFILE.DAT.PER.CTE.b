@@ -56,7 +56,7 @@ RETURN
 *---------------------------------------------------------------
 PROCESA:
 *---------------------------------------------------------------
-    Y.SEL.CMD = "SELECT " : FN.CUSTOMER : " @ID LIKE ":Y.ID.CUS
+    Y.SEL.CMD = "SELECT " : FN.CUSTOMER : " WITH @ID EQ ":Y.ID.CUS
     Y.REG.LIST = ''
     Y.NO.REG = ''
     EB.DataAccess.Readlist(Y.SEL.CMD, Y.REG.LIST, '', Y.NO.REG, Y.ERROR)
