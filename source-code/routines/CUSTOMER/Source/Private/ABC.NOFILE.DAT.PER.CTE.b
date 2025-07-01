@@ -114,32 +114,32 @@ ARMA.ARREGLO:
    
 
     R.DATA  = Y.SECTOR          : Y.SEP
-    R.DATA := Y.ID              : Y.SEP
-    R.DATA := Y.NAME.2          : Y.SEP
-    R.DATA := Y.APE.PATERNO     : Y.SEP
-    R.DATA := Y.NAME.1          : Y.SEP
-    R.DATA := Y.TAX.ID          : Y.SEP
-    R.DATA := Y.LEGAL.DOC.NAME  : Y.SEP
-    R.DATA := Y.LEGAL.ID        : Y.SEP
-    R.DATA := Y.LEGAL.ISS.DATE  : Y.SEP
-    R.DATA := Y.LEGAL.EXP.DATE  : Y.SEP
-    R.DATA := Y.ACTIVIDAD.ECONO : Y.SEP
-    R.DATA := Y.OCCUPATION      : Y.SEP
-    R.DATA := Y.NATIONALITY     : Y.SEP
-    R.DATA := Y.DATE.OF.BIRTH   : Y.SEP
-    R.DATA := Y.COUNTRY         : Y.SEP
-    R.DATA := Y.DISTRICT.NAME   : Y.SEP
-    R.DATA := Y.DEPARTMENT      : Y.SEP
-    R.DATA := Y.STREET          : Y.SEP
-    R.DATA := Y.ADDRESS         : Y.SEP
-    R.DATA := Y.DIRECCION       : Y.SEP
-    R.DATA := Y.RESIDENCE       : Y.SEP
-    R.DATA := Y.BUILDING.NUMBER : Y.SEP
-    R.DATA := Y.FLAT.NUMBER     : Y.SEP
-    R.DATA := Y.DIR.COD.POS     : Y.SEP
-    R.DATA := Y.TEL.CEL         : Y.SEP
-    R.DATA := Y.GENDER          : Y.SEP
-    R.DATA := Y.EMAIL           : Y.SEP
+    R.DATA := 'AAA';* Y.ID              : Y.SEP
+    R.DATA := 'AAA';* Y.NAME.2          : Y.SEP
+    R.DATA := 'AAA';* Y.APE.PATERNO     : Y.SEP
+    R.DATA := 'AAA';* Y.NAME.1          : Y.SEP
+    R.DATA := 'AAA';* Y.TAX.ID          : Y.SEP
+    R.DATA := 'AAA';* Y.LEGAL.DOC.NAME  : Y.SEP
+    R.DATA := 'AAA';* Y.LEGAL.ID        : Y.SEP
+    R.DATA := 'AAA';* Y.LEGAL.ISS.DATE  : Y.SEP
+    R.DATA := 'AAA';* Y.LEGAL.EXP.DATE  : Y.SEP
+    R.DATA := 'AAA';* Y.ACTIVIDAD.ECONO : Y.SEP
+    R.DATA := 'AAA';* Y.OCCUPATION      : Y.SEP
+    R.DATA := 'AAA';* Y.NATIONALITY     : Y.SEP
+    R.DATA := 'AAA';* Y.DATE.OF.BIRTH   : Y.SEP
+    R.DATA := 'AAA';* Y.COUNTRY         : Y.SEP
+    R.DATA := 'AAA';* Y.DISTRICT.NAME   : Y.SEP
+    R.DATA := 'AAA';* Y.DEPARTMENT      : Y.SEP
+    R.DATA := 'AAA';* Y.STREET          : Y.SEP
+    R.DATA := 'AAA';* Y.ADDRESS         : Y.SEP
+    R.DATA := 'AAA';* Y.DIRECCION       : Y.SEP
+    R.DATA := 'AAA';* Y.RESIDENCE       : Y.SEP
+    R.DATA := 'AAA';* Y.BUILDING.NUMBER : Y.SEP
+    R.DATA := 'AAA';* Y.FLAT.NUMBER     : Y.SEP
+    R.DATA := 'AAA';* Y.DIR.COD.POS     : Y.SEP
+    R.DATA := 'AAA';* Y.TEL.CEL         : Y.SEP
+    R.DATA := 'AAA';* Y.GENDER          : Y.SEP
+    R.DATA := 'AAA';* Y.EMAIL           : Y.SEP
 
 RETURN
 *---------------------------------------------------------------
