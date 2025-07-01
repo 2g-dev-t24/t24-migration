@@ -309,7 +309,12 @@ private method AbcOfsGetMnemonic (
     jBC: ABC.OFS.GET.MNEMONIC
 }
 
-
+private method AbcNofielDatPerCte (
+    INOUT RData string
+)
+{
+    jBC: ABC.NOFILE.DAT.PER.CTE
+}
 
 
 
