@@ -40,14 +40,16 @@ INICIALIZA:
     Y.SEP = '*'
 
     Y.ID.CUS = ''
-
+    
+    SEL.FIELDS              = EB.Reports.getDFields()
+    SEL.VALUES              = EB.Reports.getDRangeAndValue()
     LOCATE "ID" IN SEL.FIELDS SETTING ID.POS THEN
         Y.ID.CUS = SEL.VALUES<ID.POS>
     END
 
     R.DATA = ''
     Y.SEP = '*'
-
+    ESPACIO = ' '
 
 RETURN
 
@@ -63,7 +65,7 @@ PROCESA:
     
     EB.DataAccess.FRead(FN.MXBASE.ADD.CUSTOMER.DETAILS, Y.REG.LIST, R.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS, Y.MXBASE.ADD.CUSTOMER.DETAILS)
 
-
+    Y.SECTOR = ''
     Y.SECTOR          = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
     Y.ID              = Y.ID.CUS
     Y.NAME.2          = R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>
