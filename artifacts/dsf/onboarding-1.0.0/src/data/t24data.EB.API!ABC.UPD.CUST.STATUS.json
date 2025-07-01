@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.UPD.CUST.STATUS",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.UPD.CUST.STATUS"
+    } ],
+    "PROTECTION.LEVEL" : "NONE"
+  }
+}

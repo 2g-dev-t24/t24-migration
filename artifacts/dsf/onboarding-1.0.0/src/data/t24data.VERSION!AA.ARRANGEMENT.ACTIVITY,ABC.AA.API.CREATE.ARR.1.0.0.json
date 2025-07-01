@@ -10,11 +10,16 @@
     }
   },
   "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "AUTH.ROUTINE" : [ {
+      "AUTH.ROUTINE" : "ABC.UPD.CUST.STATUS"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
     "LANGUAGE.CODE" : [ {
       "LANGUAGE.CODE" : "1"
     } ],
     "FIELDS.PER.LINE" : "MULTI",
-    "LOCAL.REF.FIELD" : "LOCAL.REF",
     "AUTOM.FIELD.NO" : [ {
       "AUTOM.FIELD.NO" : "ARRANGEMENT",
       "AUT.NEW.CONTENT" : "NEW"
@@ -218,10 +223,8 @@
     "DESCRIPTION" : [ {
       "DESCRIPTION" : "createArrangement"
     } ],
-    "NO.OF.AUTH" : "0",
     "MULTI.POSSIBLE" : "Y",
     "GTS.CONTROL" : "1",
-    "RECORDS.PER.PAGE" : "1",
     "VALIDATION.FLD" : [ {
       "VALIDATION.RTN" : "ABC.EXP.DIG.CUS",
       "VALIDATION.FLD" : "CUSTOMER"
