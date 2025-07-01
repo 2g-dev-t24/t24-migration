@@ -89,7 +89,7 @@ PROCESS:
                 
                 LOCATE Y.ACCOUNT.CATEGORY IN Y.LIST.PARAMS SETTING Y.POS.CATEGORY THEN
                     Y.NEW.PRODUCT = Y.LIST.VALUES<Y.POS.CATEGORY>
-                    EB.SystemTables.setRNew(AA.Framework.ArrangementActivity.AaArrangementActivityProduct, Y.NEW.PRODUCT)
+                    EB.SystemTables.setRNew(AA.Framework.ArrangementActivity.ArrActProduct, Y.NEW.PRODUCT)
                 END ELSE
                     ETEXT = 'Categoría ':Y.ACCOUNT.CATEGORY:' no encontrada en la lista de parámetros'
                     EB.SystemTables.setEtext(ETEXT)
