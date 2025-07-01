@@ -63,9 +63,9 @@ PROCESA:
     
     EB.DataAccess.FRead(FN.CUSTOMER, Y.REG.LIST, R.CUSTOMER, F.CUSTOMER, Y.ERR.CUS)
     
-    EB.DataAccess.FRead(FN.MXBASE.ADD.CUSTOMER.DETAILS, Y.REG.LIST, R.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS, Y.MXBASE.ADD.CUSTOMER.DETAILS)
+*    EB.DataAccess.FRead(FN.MXBASE.ADD.CUSTOMER.DETAILS, Y.REG.LIST, R.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS, Y.MXBASE.ADD.CUSTOMER.DETAILS)
 
-    
+    R.MXBASE.ADD.CUSTOMER.DETAILS = MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.Read(Y.ID.CUS,Y.ERROR)
     Y.SECTOR          = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
     Y.ID              = Y.ID.CUS
     Y.NAME.2          = R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>
@@ -83,7 +83,7 @@ PROCESA:
     Y.LEGAL.ISS.DATE  = R.CUSTOMER<ST.Customer.Customer.EbCusLegalIssDate>
     Y.LEGAL.EXP.DATE  = R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>
 
-    Y.ACTIVIDAD.ECONO = R.MXBASE.ADD.CUSTOMER.DETAILS<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.BanxicoEcoActivity>
+    Y.ACTIVIDAD.ECONO = R.MXBASE.ADD.CUSTOMER.DETAILS<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.CnbvEcoActivity>
 
     Y.OCCUPATION      = R.CUSTOMER<ST.Customer.Customer.EbCusOccupation>
     Y.NATIONALITY     = R.CUSTOMER<ST.Customer.Customer.EbCusNationality>
@@ -114,32 +114,32 @@ ARMA.ARREGLO:
    
 
     R.DATA  = Y.SECTOR          : Y.SEP
-    R.DATA := 'AAA';* Y.ID              : Y.SEP
-    R.DATA := 'AAA';* Y.NAME.2          : Y.SEP
-    R.DATA := 'AAA';* Y.APE.PATERNO     : Y.SEP
-    R.DATA := 'AAA';* Y.NAME.1          : Y.SEP
-    R.DATA := 'AAA';* Y.TAX.ID          : Y.SEP
-    R.DATA := 'AAA';* Y.LEGAL.DOC.NAME  : Y.SEP
-    R.DATA := 'AAA';* Y.LEGAL.ID        : Y.SEP
-    R.DATA := 'AAA';* Y.LEGAL.ISS.DATE  : Y.SEP
-    R.DATA := 'AAA';* Y.LEGAL.EXP.DATE  : Y.SEP
-    R.DATA := 'AAA';* Y.ACTIVIDAD.ECONO : Y.SEP
-    R.DATA := 'AAA';* Y.OCCUPATION      : Y.SEP
-    R.DATA := 'AAA';* Y.NATIONALITY     : Y.SEP
-    R.DATA := 'AAA';* Y.DATE.OF.BIRTH   : Y.SEP
-    R.DATA := 'AAA';* Y.COUNTRY         : Y.SEP
-    R.DATA := 'AAA';* Y.DISTRICT.NAME   : Y.SEP
-    R.DATA := 'AAA';* Y.DEPARTMENT      : Y.SEP
-    R.DATA := 'AAA';* Y.STREET          : Y.SEP
-    R.DATA := 'AAA';* Y.ADDRESS         : Y.SEP
-    R.DATA := 'AAA';* Y.DIRECCION       : Y.SEP
-    R.DATA := 'AAA';* Y.RESIDENCE       : Y.SEP
-    R.DATA := 'AAA';* Y.BUILDING.NUMBER : Y.SEP
-    R.DATA := 'AAA';* Y.FLAT.NUMBER     : Y.SEP
-    R.DATA := 'AAA';* Y.DIR.COD.POS     : Y.SEP
-    R.DATA := 'AAA';* Y.TEL.CEL         : Y.SEP
-    R.DATA := 'AAA';* Y.GENDER          : Y.SEP
-    R.DATA := 'AAA';* Y.EMAIL           : Y.SEP
+    R.DATA := R.MXBASE.ADD.CUSTOMER.DETAILS : Y.SEP;*  Y.ID              : Y.SEP
+    R.DATA := Y.NAME.2          : Y.SEP
+    R.DATA := Y.APE.PATERNO     : Y.SEP
+    R.DATA := Y.NAME.1          : Y.SEP
+    R.DATA := Y.TAX.ID          : Y.SEP
+    R.DATA := Y.LEGAL.DOC.NAME  : Y.SEP
+    R.DATA := Y.LEGAL.ID        : Y.SEP
+    R.DATA := Y.LEGAL.ISS.DATE  : Y.SEP
+    R.DATA := Y.LEGAL.EXP.DATE  : Y.SEP
+    R.DATA := Y.ACTIVIDAD.ECONO : Y.SEP
+    R.DATA := Y.OCCUPATION      : Y.SEP
+    R.DATA := Y.NATIONALITY     : Y.SEP
+    R.DATA := Y.DATE.OF.BIRTH   : Y.SEP
+    R.DATA := Y.COUNTRY         : Y.SEP
+    R.DATA := Y.DISTRICT.NAME   : Y.SEP
+    R.DATA := Y.DEPARTMENT      : Y.SEP
+    R.DATA := Y.STREET          : Y.SEP
+    R.DATA := Y.ADDRESS         : Y.SEP
+    R.DATA := Y.DIRECCION       : Y.SEP
+    R.DATA := Y.RESIDENCE       : Y.SEP
+    R.DATA := Y.BUILDING.NUMBER : Y.SEP
+    R.DATA := Y.FLAT.NUMBER     : Y.SEP
+    R.DATA := Y.DIR.COD.POS     : Y.SEP
+    R.DATA := Y.TEL.CEL         : Y.SEP
+    R.DATA := Y.GENDER          : Y.SEP
+    R.DATA := Y.EMAIL           : Y.SEP
 
 RETURN
 *---------------------------------------------------------------
