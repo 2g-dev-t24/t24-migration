@@ -1,0 +1,10 @@
+component AbcAccount
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcCambioCategRemu ()
+{
+    jBC: ABC.CAMBIO.CATEG.REMU
+}
+
+# ------------------ METHOD END ------------------
