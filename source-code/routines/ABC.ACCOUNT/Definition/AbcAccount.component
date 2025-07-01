@@ -2,9 +2,9 @@ component AbcAccount
 # Component Isolation Definition
 metamodelVersion 1.6
 
-private method AbcCambioCategRemu ()
+private method AbcCambCatRemunera ()
 {
-    jBC: ABC.CAMBIO.CATEG.REMU
+    jBC: ABC.CAMB.CAT.REMUNERA
 }
 
 # ------------------ METHOD END ------------------

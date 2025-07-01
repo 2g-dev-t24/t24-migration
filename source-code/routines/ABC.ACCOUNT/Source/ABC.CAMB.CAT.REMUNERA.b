@@ -1,6 +1,6 @@
 $PACKAGE AbcAccount
 *-----------------------------------------------------------------------------
-SUBROUTINE ABC.CAMBIO.CATEG.REMU
+SUBROUTINE ABC.CAMB.CAT.REMUNERA
 *===============================================================================
     
     $USING EB.ErrorProcessing
