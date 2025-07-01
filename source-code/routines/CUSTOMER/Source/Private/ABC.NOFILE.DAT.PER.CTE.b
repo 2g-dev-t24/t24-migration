@@ -65,7 +65,7 @@ PROCESA:
     
     EB.DataAccess.FRead(FN.MXBASE.ADD.CUSTOMER.DETAILS, Y.REG.LIST, R.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS, Y.MXBASE.ADD.CUSTOMER.DETAILS)
 
-    Y.SECTOR = ''
+    
     Y.SECTOR          = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
     Y.ID              = Y.ID.CUS
     Y.NAME.2          = R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>
@@ -74,7 +74,7 @@ PROCESA:
        Y.APE.PATERNO     =  R.CUSTOMER<ST.Customer.Customer.EbCusShortName>
     END
 
-    IF SECTOR NE 2001 THEN
+    IF Y.SECTOR NE 2001 THEN
       Y.NAME.1         = R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>
     END
     Y.TAX.ID          = R.CUSTOMER<ST.Customer.Customer.EbCusTaxId>
