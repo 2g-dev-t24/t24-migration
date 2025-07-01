@@ -82,21 +82,18 @@ PROCESS:
                 IF R.ACCOUNT<AC.AccountOpening.Account.PostingRestrict> THEN
                     ETEXT = 'La cuenta ':Y.ACCOUNT.NO:' tiene posting restriction'
                     EB.SystemTables.setEtext(ETEXT)
-                    EB.ErrorProcessing.Err()
                     EB.ErrorProcessing.StoreEndError()
                     RETURN
                 END
                 
-                LOCATE Y.ACCOUNT.CATEGORY IN Y.LIST.PARAMS SETTING Y.POS.CATEGORY THEN
-                    Y.NEW.PRODUCT = Y.LIST.VALUES<Y.POS.CATEGORY>
-                    EB.SystemTables.setRNew(AA.Framework.ArrangementActivity.ArrActProduct, Y.NEW.PRODUCT)
-                END ELSE
+                LOCATE Y.ACCOUNT.CATEGORY IN Y.LIST.PARAMS SETTING Y.POS.CATEGORY ELSE
                     ETEXT = 'Categoría ':Y.ACCOUNT.CATEGORY:' no encontrada en la lista de parámetros'
                     EB.SystemTables.setEtext(ETEXT)
-                    EB.ErrorProcessing.Err()
                     EB.ErrorProcessing.StoreEndError()
                     RETURN
                 END
+                Y.NEW.PRODUCT = Y.LIST.VALUES<Y.POS.CATEGORY>
+                EB.SystemTables.setRNew(AA.Framework.ArrangementActivity.ArrActProduct, Y.NEW.PRODUCT)
             END 
         END
     END

@@ -1,0 +1,84 @@
+*-----------------------------------------------------------------------------
+* <Rating>-32</Rating>
+*-----------------------------------------------------------------------------
+    SUBROUTINE ABC.UPD.CUST.STATUS
+*----------------------------------------------------
+* AUTOR        : MARCO DAVILA - CLEVER SERVICES
+* Tipo Rutina  : Auth rtn
+* MODIFICACION : 07 - abr - 2016
+* AUTOR        : MARCO ANTONIO DAVILA MARTINEZ
+* DESCRIPCION  : Asigna al campo CUSTOMER.STATUS de CUSTOMER, el valor 1 (ACTIVO),
+*                cuando una cuenta es aperturada al cliente
+*----------------------------------------------------
+*Modificación
+* AUTOR        : César Alejandro Miranda Bravo - FyG Solutions   (CAMB)
+* MODIFICACION : 20 - Junio - 2018
+* DESCRIPCION  : Se verifica si existe registro del cliente en CUSTOMER$NAU, en caso
+*                de existir se envía error.
+*----------------------------------------------------
+*----------------------------------------------------
+*
+* ------------------------------------------------
+    $INSERT ../T24_BP I_COMMON
+    $INSERT ../T24_BP I_EQUATE
+    $INSERT ../T24_BP I_F.ACCOUNT
+    $INSERT ../T24_BP I_F.CUSTOMER
+
+    GOSUB INICIO
+    GOSUB OPEN.FILES
+    RUNNING.UNDER.BATCH = 1
+    GOSUB PROCESA
+    RUNNING.UNDER.BATCH = 0
+
+    RETURN
+*----------*
+INICIO:
+*----------*
+    Y.ID.CUSTOMER = R.NEW(AC.CUSTOMER)
+
+    RETURN
+*----------*
+OPEN.FILES:
+*----------*
+
+    FN.CUSTOMER = 'F.CUSTOMER'
+    F.CUSTOMER  = ''
+    CALL OPF (FN.CUSTOMER,F.CUSTOMER)
+
+    FN.CUSTOMER.NAU = 'F.CUSTOMER$NAU'
+    F.CUSTOMER.NAU  = ''
+    CALL OPF (FN.CUSTOMER.NAU,F.CUSTOMER.NAU)
+
+    RETURN
+*----------*
+PROCESA:
+*----------*
+*-- Reviso primero si el Cliente tiene alguna autorización pendiente en caso de tener pendiente se envía error     (CAMB)
+    CALL F.READ (FN.CUSTOMER.NAU,Y.ID.CUSTOMER,R.CUSTOMER.NAU,F.CUSTOMER.NAU,Y.ERR.CUSTOMER.NAU)
+    IF R.CUSTOMER.NAU EQ '' THEN
+*-- Reviso si ya tiene el valor 1 (ACTIVO), si no lo tiene o tiene otro, le asigno el STATUS 1
+        CALL F.READ (FN.CUSTOMER,Y.ID.CUSTOMER,R.CUSTOMER,F.CUSTOMER,Y.ERR.CUSTOMER)
+        IF Y.ERR.CUSTOMER EQ '' THEN
+            Y.STATUS = R.CUSTOMER<EB.CUS.CUSTOMER.STATUS>
+            IF Y.STATUS NE "1" THEN
+                R.CUSTOMER<EB.CUS.CUSTOMER.STATUS> = "1"
+                CALL F.LIVE.WRITE(FN.CUSTOMER,Y.ID.CUSTOMER,R.CUSTOMER)
+            END
+        END ELSE
+            E = 'No se puede actualizar el cliente'
+            Y.E.AUX = E
+            ETEXT = E
+            CALL STORE.END.ERROR
+            CALL ERR
+            E = Y.E.AUX
+        END
+    END ELSE
+        E = 'El cliente tiene cambio o autorizacion pendiente por aplicar'
+        Y.E.AUX = E
+        CALL ERR
+        E = Y.E.AUX
+    END
+
+    RETURN
+*----------*
+END
