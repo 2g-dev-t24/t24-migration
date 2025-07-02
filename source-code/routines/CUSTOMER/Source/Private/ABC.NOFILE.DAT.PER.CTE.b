@@ -15,8 +15,6 @@ SUBROUTINE ABC.NOFILE.DAT.PER.CTE(R.DATA)
     $USING EB.SystemTables
     $USING EB.Template
     $USING ST.Customer
-*    $USING ABC.BP
-	$USING AbcTable
     $USING MXBASE.CustomerRegulatory
 
     GOSUB INICIALIZA
@@ -37,12 +35,13 @@ INICIALIZA:
     F.MXBASE.ADD.CUSTOMER.DETAILS = ''
     EB.DataAccess.Opf(FN.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS)
 
-    Y.SEP = '*'
+    Y.SEP = '|'
 
     Y.ID.CUS = ''
     
     SEL.FIELDS              = EB.Reports.getDFields()
     SEL.VALUES              = EB.Reports.getDRangeAndValue()
+
     LOCATE "ID" IN SEL.FIELDS SETTING ID.POS THEN
         Y.ID.CUS = SEL.VALUES<ID.POS>
     END
@@ -64,7 +63,8 @@ PROCESA:
     EB.DataAccess.FRead(FN.CUSTOMER, Y.REG.LIST, R.CUSTOMER, F.CUSTOMER, Y.ERR.CUS)
     
 *    EB.DataAccess.FRead(FN.MXBASE.ADD.CUSTOMER.DETAILS, Y.REG.LIST, R.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS, Y.MXBASE.ADD.CUSTOMER.DETAILS)
-
+    
+    
     R.MXBASE.ADD.CUSTOMER.DETAILS = MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.Read(Y.ID.CUS,Y.ERROR)
     Y.SECTOR          = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
     Y.ID              = Y.ID.CUS
@@ -114,7 +114,7 @@ ARMA.ARREGLO:
    
 
     R.DATA  = Y.SECTOR          : Y.SEP
-    R.DATA := R.MXBASE.ADD.CUSTOMER.DETAILS : Y.SEP;*  Y.ID              : Y.SEP
+    R.DATA := Y.ID              : Y.SEP
     R.DATA := Y.NAME.2          : Y.SEP
     R.DATA := Y.APE.PATERNO     : Y.SEP
     R.DATA := Y.NAME.1          : Y.SEP
