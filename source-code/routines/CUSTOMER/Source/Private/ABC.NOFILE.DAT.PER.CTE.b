@@ -84,7 +84,7 @@ PROCESA:
     Y.LEGAL.EXP.DATE  = R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>
 
     Y.ACTIVIDAD.ECONO = R.MXBASE.ADD.CUSTOMER.DETAILS<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.CnbvEcoActivity>
-
+    Y.ACTIVIDAD.ECONO = FIELD(Y.ACTIVIDAD.ECONO,"*",2)
     Y.OCCUPATION      = R.CUSTOMER<ST.Customer.Customer.EbCusOccupation>
     Y.NATIONALITY     = R.CUSTOMER<ST.Customer.Customer.EbCusNationality>
     Y.DATE.OF.BIRTH   = R.CUSTOMER<ST.Customer.Customer.EbCusDateOfBirth>
