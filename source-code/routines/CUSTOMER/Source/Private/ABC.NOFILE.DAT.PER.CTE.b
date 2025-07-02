@@ -40,7 +40,14 @@ INICIALIZA:
     F.MXBASE.ADD.CUSTOMER.DETAILS = ''
     EB.DataAccess.Opf(FN.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS)
 
-    
+    V.APP      = 'CUSTOMER'
+    V.FLD.NAME = 'L.NOM.PER.MORAL'
+    V.FLD.POS  = ''
+
+    EB.Updates.MultiGetLocRef(V.APP, V.FLD.NAME, V.FLD.POS)
+
+    Y.L.NOM.PER.MORAL = V.FLD.POS<1,1>
+
 
     Y.ID.CUS = ''
     
@@ -77,7 +84,14 @@ PROCESA:
 
     Y.SECTOR          = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
     Y.ID              = Y.ID.CUS
-    Y.NAME.2          = R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>
+
+    IF Y.SECTOR LE 2001 THEN
+       Y.NAME.2          = R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>
+    END
+    IF Y.SECTOR GE 2001 AND Y.SECTOR LE 20214 THEN
+        
+        Y.NAME.2 = R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef,Y.L.NOM.PER.MORAL>
+    END
     
     IF Y.SECTOR GE 2001 AND Y.SECTOR LE 2014 THEN
        Y.APE.PATERNO     =  R.CUSTOMER<ST.Customer.Customer.EbCusShortName>
