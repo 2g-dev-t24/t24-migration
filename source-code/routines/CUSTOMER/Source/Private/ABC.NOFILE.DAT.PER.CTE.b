@@ -35,7 +35,7 @@ INICIALIZA:
     F.MXBASE.ADD.CUSTOMER.DETAILS = ''
     EB.DataAccess.Opf(FN.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS)
 
-    Y.SEP = '|'
+    
 
     Y.ID.CUS = ''
     
@@ -47,7 +47,7 @@ INICIALIZA:
     END
 
     R.DATA = ''
-    Y.SEP = '*'
+    Y.SEP = '|'
     ESPACIO = ' '
 
 RETURN
