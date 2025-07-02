@@ -31,6 +31,11 @@ INICIALIZA:
     F.CUSTOMER = ''
     EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
     
+    FN.CUSTOMER.HIS         = 'F.CUSTOMER$HIS'
+    F.CUSTOMER.HIS          = ''
+    
+    EB.DataAccess.Opf(FN.CUSTOMER.HIS, F.CUSTOMER.HIS)
+
     FN.MXBASE.ADD.CUSTOMER.DETAILS = 'F.MXBASE.ADD.CUSTOMER.DETAILS'
     F.MXBASE.ADD.CUSTOMER.DETAILS = ''
     EB.DataAccess.Opf(FN.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS)
@@ -62,28 +67,33 @@ PROCESA:
     
     EB.DataAccess.FRead(FN.CUSTOMER, Y.REG.LIST, R.CUSTOMER, F.CUSTOMER, Y.ERR.CUS)
     
+    IF NOT(R.CUSTOMER) THEN
+       EB.DataAccess.FRead(FN.CUSTOMER.HIS, Y.REG.LIST, R.CUSTOMER, F.CUSTOMER.HIS, Y.ERR.CUS)
+    END
 *    EB.DataAccess.FRead(FN.MXBASE.ADD.CUSTOMER.DETAILS, Y.REG.LIST, R.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS, Y.MXBASE.ADD.CUSTOMER.DETAILS)
     
     
     R.MXBASE.ADD.CUSTOMER.DETAILS = MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.Read(Y.ID.CUS,Y.ERROR)
+
     Y.SECTOR          = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
     Y.ID              = Y.ID.CUS
     Y.NAME.2          = R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>
-
-    IF Y.SECTOR NE 2001 THEN
+    
+    IF Y.SECTOR GE 2001 AND Y.SECTOR LE 2014 THEN
        Y.APE.PATERNO     =  R.CUSTOMER<ST.Customer.Customer.EbCusShortName>
     END
 
-    IF Y.SECTOR NE 2001 THEN
+    IF Y.SECTOR GE 2001 AND Y.SECTOR LE 2014 THEN
       Y.NAME.1         = R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>
     END
+    
     Y.TAX.ID          = R.CUSTOMER<ST.Customer.Customer.EbCusTaxId>
     Y.LEGAL.DOC.NAME  = R.CUSTOMER<ST.Customer.Customer.EbCusLegalDocName>
     Y.LEGAL.ID        = R.CUSTOMER<ST.Customer.Customer.EbCusLegalId>
     Y.LEGAL.ISS.DATE  = R.CUSTOMER<ST.Customer.Customer.EbCusLegalIssDate>
     Y.LEGAL.EXP.DATE  = R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>
 
-    Y.ACTIVIDAD.ECONO = R.MXBASE.ADD.CUSTOMER.DETAILS<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.CnbvEcoActivity>
+    Y.ACTIVIDAD.ECONO = R.MXBASE.ADD.CUSTOMER.DETAILS<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.BanxicoEcoActivity>
     Y.ACTIVIDAD.ECONO = FIELD(Y.ACTIVIDAD.ECONO,"*",2)
     Y.OCCUPATION      = R.CUSTOMER<ST.Customer.Customer.EbCusOccupation>
     Y.NATIONALITY     = R.CUSTOMER<ST.Customer.Customer.EbCusNationality>
