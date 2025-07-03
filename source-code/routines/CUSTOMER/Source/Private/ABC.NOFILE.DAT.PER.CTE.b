@@ -85,7 +85,7 @@ PROCESA:
     Y.SECTOR          = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
     Y.ID              = Y.ID.CUS
 
-    IF Y.SECTOR LE 2001 THEN
+    IF Y.SECTOR LE 2000 THEN
        Y.NAME.2          = R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>
     END
     IF Y.SECTOR GE 2001 AND Y.SECTOR LE 20214 THEN
@@ -93,11 +93,11 @@ PROCESA:
         Y.NAME.2 = R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef,Y.L.NOM.PER.MORAL>
     END
     
-    IF Y.SECTOR LT 2001 AND Y.SECTOR GE 2014 THEN
+    IF Y.SECTOR LT 2001 THEN
        Y.APE.PATERNO     =  R.CUSTOMER<ST.Customer.Customer.EbCusShortName>
     END
 
-    IF Y.SECTOR LT 2001 AND Y.SECTOR GE 2014 THEN
+    IF Y.SECTOR LT 2001 THEN
       Y.NAME.1         = R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>
     END
     
@@ -108,6 +108,7 @@ PROCESA:
     Y.LEGAL.EXP.DATE  = R.CUSTOMER<ST.Customer.Customer.EbCusLegalExpDate>
 
     Y.ACTIVIDAD.ECONO = R.MXBASE.ADD.CUSTOMER.DETAILS<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.BanxicoEcoActivity>
+
     Y.ACTIVIDAD.ECONO = FIELD(Y.ACTIVIDAD.ECONO,"*",2)
     Y.OCCUPATION      = R.CUSTOMER<ST.Customer.Customer.EbCusOccupation>
     Y.NATIONALITY     = R.CUSTOMER<ST.Customer.Customer.EbCusNationality>
