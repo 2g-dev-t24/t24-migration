@@ -6,9 +6,9 @@ metamodelVersion 1.6
 
 
 
-private method AbcCuentaL4Api (
+private method abcCuentaL4ApiRtn (
 )
 {
-    jBC: ABC.CUENTA.L4.API
+    jBC: ABC.CUENTA.L4.API.RTN
 }
 
