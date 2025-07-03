@@ -93,11 +93,11 @@ PROCESA:
         Y.NAME.2 = R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef,Y.L.NOM.PER.MORAL>
     END
     
-    IF Y.SECTOR GE 2001 AND Y.SECTOR LE 2014 THEN
+    IF Y.SECTOR LT 2001 AND Y.SECTOR GE 2014 THEN
        Y.APE.PATERNO     =  R.CUSTOMER<ST.Customer.Customer.EbCusShortName>
     END
 
-    IF Y.SECTOR GE 2001 AND Y.SECTOR LE 2014 THEN
+    IF Y.SECTOR LT 2001 AND Y.SECTOR GE 2014 THEN
       Y.NAME.1         = R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>
     END
     
