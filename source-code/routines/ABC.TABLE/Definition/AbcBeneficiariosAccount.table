@@ -1,0 +1,22 @@
+public table AbcBeneficiariosAccount {
+    t24: ABC.BENEFICIARIOS.ACCOUNT
+    fields:{
+        ApePaterno(ABC.BEN.ACCT.APE.PATERNO) = 1
+        ApeMaterno(ABC.BEN.ACCT.APE.MATERNO)= 2
+        Nombres(ABC.BEN.ACCT.NOMBRES)= 3
+        FecNac(ABC.BEN.ACCT.FEC.NAC)= 4
+        Porcentaje(ABC.BEN.ACCT.PORCENTAJE)= 5
+        Email(ABC.BEN.ACCT.EMAIL)= 6
+
+
+        RecordStatus(ABC.BEN.ACCT.RECORD.STATUS) = 7
+        CurrNo(ABC.BEN.ACCT.CURR.NO) = 8
+        Inputter(ABC.BEN.ACCT.INPUTTER) = 9
+        DateTime(ABC.BEN.ACCT.DATE.TIME) = 10
+        Authoriser(ABC.BEN.ACCT.AUTHORISER) = 11
+        CoCode(ABC.BEN.ACCT.CO.CODE) = 12
+        DeptCode(ABC.BEN.ACCT.DEPT.CODE) = 13
+        AuditorCode(ABC.BEN.ACCT.AUDITOR.CODE) = 14
+        AuditDateTime(ABC.BEN.ACCT.AUDIT.DATE.TIME) = 15
+    }
+}

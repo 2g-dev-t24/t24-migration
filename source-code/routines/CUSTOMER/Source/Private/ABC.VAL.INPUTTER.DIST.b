@@ -1,3 +1,15 @@
+* @ValidationCode : MjotMTU3MjA0OTA1MTpDcDEyNTI6MTc1MTUwNzc5NzIyOTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 02 Jul 2025 22:56:37
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 $PACKAGE ABC.BP
 SUBROUTINE ABC.VAL.INPUTTER.DIST
@@ -13,10 +25,9 @@ SUBROUTINE ABC.VAL.INPUTTER.DIST
 
     FN.CUSTOMER = 'F.CUSTOMER$NAU'
     F.CUSTOMER = ''
-    EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)   
+    EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
 
-    Y.CUSTOMER.ID = EB.SystemTables.IdNew()
-
+    Y.CUSTOMER.ID = EB.SystemTables.getIdNew()
     IF NOT(Y.CUSTOMER.ID) THEN
         Y.CUSTOMER.ID = EB.SystemTables.getComi()
     END

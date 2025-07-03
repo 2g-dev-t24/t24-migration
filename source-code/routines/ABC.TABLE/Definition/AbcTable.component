@@ -618,3 +618,34 @@ private method AbcMoDeCe ()
 {
     jBC: ABC.MO.DE.CE
 }
+
+private method AbcBeneficiariosAccount (
+)
+{
+   jBC: ABC.BENEFICIARIOS.ACCOUNT
+}
+
+
+
+private method AbcBeneficiariosAccountFields (
+)
+{
+   jBC: ABC.BENEFICIARIOS.ACCOUNT.FIELDS
+}
+
+
+
+private method AbcCuentaL4Api (
+)
+{
+   jBC: ABC.CUENTA.L4.API
+}
+
+
+
+private method AbcCuentaL4ApiFields (
+)
+{
+   jBC: ABC.CUENTA.L4.API.FIELDS
+}
+

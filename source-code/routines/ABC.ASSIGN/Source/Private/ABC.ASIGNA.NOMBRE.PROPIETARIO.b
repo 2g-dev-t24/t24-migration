@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNTIwODk4NTg2OkNwMTI1MjoxNzQzMTI2NTQ2MjUzOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 27 Mar 2025 22:49:06
+* @ValidationCode : MjoyMDY5NDk3MDpDcDEyNTI6MTc1MTUwODEyMTA0ODpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 02 Jul 2025 23:02:01
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -19,15 +19,15 @@ SUBROUTINE ABC.ASIGNA.NOMBRE.PROPIETARIO
 *-----------------------------------------------------------------------------
 
 *-----------------------------------------------------------------------------
-$INSERT ../T24_BP I_COMMON
-$INSERT ../T24_BP I_EQUATE
-$INSERT ../T24_BP I_F.ACCOUNT
-$INSERT ABC.BP I_F.ET.SAP.TARJETA
+*$INSERT ../T24_BP I_COMMON*
+*$INSERT ../T24_BP I_EQUATE
+*$INSERT ../T24_BP I_F.ACCOUNT
+*$INSERT ABC.BP I_F.ET.SAP.TARJETA
 
 
-Y.NOMBRE.TITULAR=''
-Y.NOMBRE.TITULAR=R.NEW(CRD.TITULAR.ID)
-R.NEW(CRD.NOMBRE.PROPIETARIO)=Y.NOMBRE.TITULAR
+*Y.NOMBRE.TITULAR=''
+*Y.NOMBRE.TITULAR=R.NEW(CRD.TITULAR.ID)
+*R.NEW(CRD.NOMBRE.PROPIETARIO)=Y.NOMBRE.TITULAR
 
-RETURN
+*RETURN
 END
