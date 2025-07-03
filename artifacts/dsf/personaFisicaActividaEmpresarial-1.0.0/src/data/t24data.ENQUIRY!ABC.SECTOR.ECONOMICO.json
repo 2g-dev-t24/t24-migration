@@ -1,0 +1,42 @@
+{
+  "header" : {
+    "id" : "ABC.SECTOR.ECONOMICO",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PAGE.SIZE" : "4,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "LOOKUP.ID"
+      } ],
+      "FIELD.NAME" : "LOOKUP.ID",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "DESCRIPTION"
+      } ],
+      "FIELD.NAME" : "DESCRIPTION",
+      "LENGTH.MASK" : "65L",
+      "COLUMN" : "4",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Descripcion"
+      } ],
+      "TYPE" : "L"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "@ID LK SECTOR.ECONOMICO*..."
+    } ],
+    "FILE.NAME" : "EB.LOOKUP"
+  }
+}

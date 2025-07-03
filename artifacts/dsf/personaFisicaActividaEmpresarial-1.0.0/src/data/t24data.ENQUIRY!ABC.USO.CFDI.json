@@ -1,0 +1,42 @@
+{
+  "header" : {
+    "id" : "ABC.USO.CFDI",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "LOOKUP.ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Clave"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "DESCRIPTION"
+      } ],
+      "FIELD.NAME" : "DESCRIPTION",
+      "LENGTH.MASK" : "65L",
+      "COLUMN" : "3",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "Descripcion"
+      } ],
+      "TYPE" : "L"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "@ID LK ABC.USO.CFDI*..."
+    } ],
+    "FILE.NAME" : "EB.LOOKUP"
+  }
+}

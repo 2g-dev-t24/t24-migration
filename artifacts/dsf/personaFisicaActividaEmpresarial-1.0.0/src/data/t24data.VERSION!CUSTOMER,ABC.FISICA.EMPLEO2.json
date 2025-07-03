@@ -1,0 +1,227 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.FISICA.EMPLEO2",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "CNBV.SECTOR",
+      "AUT.NEW.CONTENT" : "32"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "EMPLOYMENT.STATUS-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "DROP.DOWN" : "ABC.EMPLEO.STATUS",
+      "ENRICHM.CHAR" : "25",
+      "TEXT" : [ {
+        "TEXT" : "Tienen negocio Propio"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-99-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "EMPLOYERS.NAME-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "ENRICHM.CHAR" : "25",
+      "TEXT" : [ {
+        "TEXT" : "Nombre del Negocio"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-214-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "EMPLOYMENT.START-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de Inicio de Operaciones"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-49-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "OCCUPATION-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "DROP.DOWN" : "ABC.OCUPACION",
+      "TEXT" : [ {
+        "TEXT" : "Ocupacion"
+      } ],
+      "TEXT.CHAR.MAX" : "9",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-47-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "TIPO.EMP.OTRO",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Especifique Otro Tipo de Empleo"
+      } ],
+      "TEXT.CHAR.MAX" : "31",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-65-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Giro Mercantil"
+      } ],
+      "TEXT.CHAR.MAX" : "14",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "L.GIRO.MERC",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Giro Mercantil"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-40-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "L.SECTOR.ECO",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.SECTOR.ECONOMICO",
+      "TEXT" : [ {
+        "TEXT" : "Sector Giro Económico"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-43-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "INDUSTRY",
+      "ENQ.SELECTION" : "INDUSTRY.CODE EQ L.SECTOR.ECO",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.GET.INDUSTRY",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Industria"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "L.TIPO.IND",
+      "ENQ.SELECTION" : "INDUSTRY.CODE EQ L.SECTOR.ECO",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.NOF.GET.INDUSTRY",
+      "TEXT" : [ {
+        "TEXT" : "Giro de la Empresa"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "CNBV.SECTOR",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Sector CNBV"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-44-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Salario Mensual Bruto"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "ANNUAL.BONUS-1",
+      "COLUMN" : "1",
+      "EXPANSION" : "NO",
+      "TEXT" : [ {
+        "TEXT" : "Otros Ingresos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-57-"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "FIELD.NO" : "NET.MONTHLY.IN",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Total Ingresos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-57-"
+      } ],
+      "TABLE.LINE" : "15"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Detalle Empleo"
+    } ],
+    "MULTI.POSSIBLE" : "Y",
+    "GTS.CONTROL" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Detalle Empleo"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.CALC.ING.TOTAL.CUST",
+      "VALIDATION.FLD" : "SALARY"
+    }, {
+      "VALIDATION.RTN" : "ABC.CALC.ING.TOTAL.CUST",
+      "VALIDATION.FLD" : "ANNUAL.BONUS"
+    } ]
+  }
+}

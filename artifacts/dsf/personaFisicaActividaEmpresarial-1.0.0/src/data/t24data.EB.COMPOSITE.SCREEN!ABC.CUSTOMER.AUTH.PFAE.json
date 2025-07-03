@@ -1,0 +1,34 @@
+{
+  "header" : {
+    "id" : "ABC.CUSTOMER.AUTH.PFAE",
+    "dsfApiType" : "EB.COMPOSITE.SCREEN",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TITLE" : [ {
+      "TITLE" : "Autoriza Clientes Fisica Act Empresarial"
+    }, {
+      "TITLE" : "Autoriza Clientes Fisica Act Empresarial"
+    } ],
+    "CONTENT.TYPE" : [ {
+      "BORDER.SIZE" : "0",
+      "CONTENT.TYPE" : "OPEN.FRAME",
+      "COLS" : "50%,*"
+    }, {
+      "CONTENT.TYPE" : "TXN",
+      "CONTENT" : "CUSTOMER,ABC.FISICA.AUTORIZA I !CURRENT.ID",
+      "NAME" : "AutorizaCustomer"
+    }, {
+      "CONTENT.TYPE" : "TXN",
+      "CONTENT" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.ACTEMPR.CONOCE.CLIENTE A !CURRENT.ID",
+      "NAME" : "AutorizaInfoAdd"
+    }, {
+      "CONTENT.TYPE" : "CLOSE.FRAME"
+    } ]
+  }
+}

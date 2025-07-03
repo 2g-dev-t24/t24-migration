@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "ABC.E.ACTIVA.CUSTOMER.AUTH.PFAE",
+    "dsfApiType" : "EB.COMPOSITE.SCREEN",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TITLE" : [ {
+      "TITLE" : "Activa Clientes Fisica Actividad Empresarial"
+    }, {
+      "TITLE" : "Activa Clientes Fisica Actividad Empresarial"
+    } ],
+    "CONTENT.TYPE" : [ {
+      "BORDER.SIZE" : "0",
+      "CONTENT.TYPE" : "OPEN.FRAME",
+      "ROWS" : "45%,*"
+    }, {
+      "CONTENT.TYPE" : "ENQ",
+      "CONTENT" : "ABC.E.ACTIVA.CUSTOMER.AUTH.PFAE NONE",
+      "ITEMS" : [ {
+        "ITEMS" : "ENQ"
+      } ],
+      "NAME" : "Autoriza"
+    }, {
+      "CONTENT.TYPE" : "BLANK",
+      "ITEMS" : [ {
+        "ITEMS" : "ALL"
+      } ],
+      "NAME" : "Blank"
+    }, {
+      "CONTENT.TYPE" : "CLOSE.FRAME"
+    } ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "CUSTOMER,ABC.FISICA.ACTIVIDAD.EMP",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "error" : {
+    "code" : "TGVCP-021",
+    "message" : "CUSTOMER,ABC.FISICA.ACTIVIDAD.EMP is not Live",
+    "type" : "BUSINESS"
+  }
+}

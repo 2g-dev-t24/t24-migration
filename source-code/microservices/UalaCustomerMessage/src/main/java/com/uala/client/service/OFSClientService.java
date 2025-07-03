@@ -26,7 +26,7 @@ public class OFSClientService {
 
     public String callOFSService(String ofsRequest) {
         // URL del servicio OFS
-        String url = "https://transact-qas.dev.corebanking.uala.mx/TAFJRestServices/resources/ofs";
+        String url = "https://transact-dev.dev.corebanking.uala.mx/TAFJRestServices/resources/ofs";
 
         // Configurar el cuerpo de la solicitud
         HttpHeaders headers = new HttpHeaders();
