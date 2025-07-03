@@ -154,9 +154,9 @@ ARMA.ARREGLO:
     R.DATA := Y.DATE.OF.BIRTH   : Y.SEP
     R.DATA := Y.COUNTRY         : Y.SEP
     R.DATA := Y.DISTRICT.NAME   : Y.SEP
-*    R.DATA := Y.DEPARTMENT      : Y.SEP
-*    R.DATA := Y.STREET          : Y.SEP
-    R.DATA := Y.ADDRESS         : Y.SEP
+*    R.DATA := Y.DEPARTMENT     : Y.SEP
+*    R.DATA := Y.STREET         : Y.SEP
+    R.DATA := Y.DEPARTMENT      : Y.SEP
     R.DATA := Y.DIRECCION       : Y.SEP
     R.DATA := Y.RESIDENCE       : Y.SEP
     R.DATA := Y.BUILDING.NUMBER : Y.SEP
