@@ -10,20 +10,8 @@ SUBROUTINE ABC.VAL.INPUTTER.DIST
     $USING EB.ErrorProcessing
     $USING EB.SystemTables
     $USING ST.Customer
-
-    FN.CUSTOMER = 'F.CUSTOMER$NAU'
-    F.CUSTOMER = ''
-    EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)   
-
-    Y.CUSTOMER.ID = EB.SystemTables.IdNew()
-
-    IF NOT(Y.CUSTOMER.ID) THEN
-        Y.CUSTOMER.ID = EB.SystemTables.getComi()
-    END
-
-    EB.DataAccess.FRead(FN.CUSTOMER, Y.CUSTOMER.ID, R.CUSTOMER, F.CUSTOMER, Y.ERR.CUS)
     
-	Y.INPUTTER = R.CUSTOMER<ST.Customer.Customer.EbCusInputter>
+	Y.INPUTTER = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusInputter)
 	Y.INPUTTER = FIELD(Y.INPUTTER, '_', 2)
     Y.USER.ID  = EB.SystemTables.getOperator()
 
