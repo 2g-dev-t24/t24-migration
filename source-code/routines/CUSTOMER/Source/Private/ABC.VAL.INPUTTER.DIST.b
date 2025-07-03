@@ -15,7 +15,11 @@ SUBROUTINE ABC.VAL.INPUTTER.DIST
     F.CUSTOMER = ''
     EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)   
 
-    Y.CUSTOMER.ID = EB.SystemTables.getComi()
+    Y.CUSTOMER.ID = EB.SystemTables.IdNew()
+
+    IF NOT(Y.CUSTOMER.ID) THEN
+        Y.CUSTOMER.ID = EB.SystemTables.getComi()
+    END
 
     EB.DataAccess.FRead(FN.CUSTOMER, Y.CUSTOMER.ID, R.CUSTOMER, F.CUSTOMER, Y.ERR.CUS)
     
