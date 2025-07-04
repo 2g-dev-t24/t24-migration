@@ -1,0 +1,80 @@
+{
+  "header" : {
+    "id" : "ABC.Q.PFAE.ALTA",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "ABC.E.PFAE.BIOM.ALTA",
+      "LABEL.FIELD" : "ID 1",
+      "SEL.CRIT" : [ {
+        "SEL.CRIT" : "IUB EQ ID"
+      } ],
+      "NXT.DESC" : [ { }, {
+        "NXT.DESC" : "Alta cliente P. Fisica con Act. Emp"
+      } ]
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "ID",
+      "LENGTH.MASK" : "11L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "IUB"
+      }, {
+        "FIELD.LBL" : "IUB"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "FOLIO.VALIDACION"
+      } ],
+      "FIELD.NAME" : "FOLIO.VALIDACION",
+      "LENGTH.MASK" : "36L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Folio de validacion"
+      }, {
+        "FIELD.LBL" : "Folio de validacion"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "NOMBRE"
+      } ],
+      "FIELD.NAME" : "NOMBRE",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Nombre"
+      }, {
+        "FIELD.LBL" : "Nombre"
+      } ]
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "VERIFICADO NE SI"
+    }, {
+      "FIXED.SELECTION" : "FOLIO.VALIDACION NE ''"
+    }, {
+      "FIXED.SELECTION" : "TIPO.ENROLAMIENTO EQ ''"
+    }, {
+      "FIXED.SELECTION" : "CUC EQ ''"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Alta Persona Fisica con Act. Emp."
+    }, {
+      "SHORT.DESC" : "Alta Persona Fisica con Act. Emp."
+    } ],
+    "FILE.NAME" : "ABC.BIOMETRICOS"
+  }
+}

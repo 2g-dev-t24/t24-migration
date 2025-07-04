@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "ID.ESTAB",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ID.ESTAB"
+    }, {
+      "SHORT.NAME" : "ID.ESTAB"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ID.ESTAB"
+    }, {
+      "DESCRIPTION" : "ID.ESTAB"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

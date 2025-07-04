@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "ID.CLIENTE.TDC",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ID.CLIENTE.TDC"
+    }, {
+      "SHORT.NAME" : "ID.CLIENTE.TDC"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "CUSTOMER"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ID.CLIENTE.TDC"
+    }, {
+      "DESCRIPTION" : "ID.CLIENTE.TDC"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "10"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "FT.CUS.NAME",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "FT.CUS.NAME"
+    }, {
+      "SHORT.NAME" : "FT.CUS.NAME"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "NOMBRE DEL BENEFICIARIO SPEI"
+    }, {
+      "DESCRIPTION" : "NOMBRE DEL BENEFICIARIO SPEI"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "50"
+  }
+}

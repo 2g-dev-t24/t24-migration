@@ -546,3 +546,14 @@ private method AbcUpdCustStatus (
    jBC: ABC.UPD.CUST.STATUS
 }
 
+
+private method AbcValidaVerificaFolio (INOUT YDatos string, INOUT YError string)
+{
+    jBC: ABC.VALIDA.VERIFICA.FOLIO
+}
+
+private method AbcValidaFolioBiome (
+)
+{
+   jBC: ABC.VALIDA.FOLIO.BIOME
+}

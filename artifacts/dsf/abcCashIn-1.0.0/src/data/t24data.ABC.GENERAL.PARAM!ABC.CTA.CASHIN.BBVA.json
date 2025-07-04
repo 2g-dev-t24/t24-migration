@@ -1,0 +1,20 @@
+{
+  "header" : {
+    "id" : "ABC.CTA.CASHIN.BBVA",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "DEBIT.ACCT",
+      "COMENTARIO" : "CUENTA DEBITO CASHIN BBVA",
+      "DATO.PARAMETRO" : "MXN101510013"
+    } ],
+    "MODULO" : "CUENTA DEBITO CASHIN BBVA"
+  }
+}

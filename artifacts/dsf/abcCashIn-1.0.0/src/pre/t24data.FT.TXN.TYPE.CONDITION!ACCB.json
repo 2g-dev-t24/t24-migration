@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "ACCB",
+    "dsfApiType" : "FT.TXN.TYPE.CONDITION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "STO.TXN.CODE.CR" : "246",
+    "TXN.CODE.DR" : "246",
+    "TXN.CODE.CR" : "246",
+    "STO.TXN.CODE.DR" : "246",
+    "BULK.TXN.CODE.DR" : "246",
+    "DR.CHARGE.TXN.CODE" : "246",
+    "CR.ADVICE.REQD.Y.N" : "Y",
+    "PAYMENT.TYPE" : [ {
+      "CUSTOMER.FLOAT" : "0",
+      "PAYMENT.VALUE" : "Y",
+      "PAYMENT.TYPE" : "ALL"
+    } ],
+    "BULK.TXN.CODE.CR" : "246",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Depósito en Efectivo"
+    }, {
+      "DESCRIPTION" : "Depósito en Efectivo"
+    } ],
+    "SHORT.DESCR" : [ {
+      "SHORT.DESCR" : "CashIn"
+    }, {
+      "SHORT.DESCR" : "CashIn"
+    } ],
+    "DR.CHEQUE.TXN.CODE" : "201",
+    "DR.ADVICE.REQD.Y.N" : "Y"
+  }
+}

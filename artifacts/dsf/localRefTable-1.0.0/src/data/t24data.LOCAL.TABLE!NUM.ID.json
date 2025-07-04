@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "NUM.ID",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "NUM.ID"
+    }, {
+      "SHORT.NAME" : "NUM.ID"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "NUM.ID"
+    }, {
+      "DESCRIPTION" : "NUM.ID"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "10"
+  }
+}

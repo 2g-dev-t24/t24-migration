@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.CALL.RTNS.GEN.FT",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.CALL.RTNS.GEN.FT"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

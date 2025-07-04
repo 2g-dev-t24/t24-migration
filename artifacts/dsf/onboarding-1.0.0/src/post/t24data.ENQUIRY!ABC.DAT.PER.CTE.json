@@ -1,0 +1,425 @@
+{
+  "header" : {
+    "id" : "ABC.DAT.PER.CTE",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "Id Cliente"
+      } ],
+      "SELECTION.FLDS" : "ID",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "0"
+      } ],
+      "FIELD.NAME" : "R.DATA"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,1,1"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Id Cliente"
+      }, {
+        "FIELD.LBL" : "Id Cliente"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,2,1"
+      } ],
+      "FIELD.NAME" : "NAME.2",
+      "LENGTH.MASK" : "70L",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Nombre"
+      }, {
+        "FIELD.LBL" : "Nombre"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,3,1"
+      } ],
+      "FIELD.NAME" : "APE.PATERNO-1",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "10",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Primer Apellido"
+      }, {
+        "FIELD.LBL" : "Primer Apellido"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,4,1"
+      } ],
+      "FIELD.NAME" : "NAME.1",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "15",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Segundo Apellido"
+      }, {
+        "FIELD.LBL" : "Segundo Apellido"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,5,1"
+      } ],
+      "FIELD.NAME" : "RFC.CTE",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "20",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "RFC"
+      }, {
+        "FIELD.LBL" : "RFC"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,6,1"
+      } ],
+      "FIELD.NAME" : "LEGAL.DOC.NAME",
+      "LENGTH.MASK" : "20R",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "25",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Identificacion"
+      }, {
+        "FIELD.LBL" : "Identificacion"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,7,1"
+      } ],
+      "FIELD.NAME" : "LEGAL.ID",
+      "LENGTH.MASK" : "20L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "30",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Numero Identificacion"
+      }, {
+        "FIELD.LBL" : "Numero Identificacion"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,8,1"
+      } ],
+      "FIELD.NAME" : "LEGAL.ISS.DATE",
+      "LENGTH.MASK" : "11R",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "35",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Fecha Emision Identificacion"
+      }, {
+        "FIELD.LBL" : "Fecha Emision Identificacion"
+      } ],
+      "TYPE" : "D"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,9,1"
+      } ],
+      "FIELD.NAME" : "LEGAL.EXP.DATE",
+      "LENGTH.MASK" : "11R",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "40",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Fecha Vencimiento Identificacion"
+      }, {
+        "FIELD.LBL" : "Fecha Vencimiento Identificacion"
+      } ],
+      "TYPE" : "D"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,10,1"
+      } ],
+      "FIELD.NAME" : "ACTIVIDAD.ECONO",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "43",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Actividad Economica"
+      }, {
+        "FIELD.LBL" : "Actividad Economica"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,11,1"
+      } ],
+      "FIELD.NAME" : "OCCUPATION",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "45",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Ocupacion"
+      }, {
+        "FIELD.LBL" : "Ocupacion"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,12,1"
+      } ],
+      "FIELD.NAME" : "NATIONALITY",
+      "LENGTH.MASK" : "2L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "55",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Nacionalidad"
+      }, {
+        "FIELD.LBL" : "Nacionalidad"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,13,1"
+      } ],
+      "FIELD.NAME" : "DATE.OF.BIRTH",
+      "LENGTH.MASK" : "11R",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "60",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Fecha Nacimiento"
+      }, {
+        "FIELD.LBL" : "Fecha Nacimiento"
+      } ],
+      "TYPE" : "D"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,14,1"
+      } ],
+      "FIELD.NAME" : "COUNTRY",
+      "LENGTH.MASK" : "35L",
+      "COLUMN" : "65",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Pais Nacimiento"
+      }, {
+        "FIELD.LBL" : "Pais Nacimiento"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,15,1"
+      } ],
+      "FIELD.NAME" : "DISTRICT.NAME",
+      "LENGTH.MASK" : "2L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "70",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Estado Nacimiento"
+      }, {
+        "FIELD.LBL" : "Estado Nacimiento"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,16,1"
+      } ],
+      "FIELD.NAME" : "DEPARTMENT",
+      "LENGTH.MASK" : "5L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "75",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Municipio"
+      }, {
+        "FIELD.LBL" : "Municipio"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,17,1"
+      } ],
+      "FIELD.NAME" : "DIRECCION",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "80",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Direccion"
+      }, {
+        "FIELD.LBL" : "Direccion"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,18,1"
+      } ],
+      "FIELD.NAME" : "RESIDENCE",
+      "LENGTH.MASK" : "2L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "85",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Residencia"
+      }, {
+        "FIELD.LBL" : "Residencia"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,19,1"
+      } ],
+      "FIELD.NAME" : "BUILDING.NUMBER",
+      "LENGTH.MASK" : "16L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "90",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Numero Exterior"
+      }, {
+        "FIELD.LBL" : "Numero Exterior"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,20,1"
+      } ],
+      "FIELD.NAME" : "FLAT.NUMBER",
+      "LENGTH.MASK" : "70L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "95",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Numero Exterior"
+      }, {
+        "FIELD.LBL" : "Numero Exterior"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,21,1"
+      } ],
+      "FIELD.NAME" : "DIR.COD.POS",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "100",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Codigo Postal"
+      }, {
+        "FIELD.LBL" : "Codigo Postal"
+      } ],
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,22,1"
+      } ],
+      "FIELD.NAME" : "TEL.CEL",
+      "LENGTH.MASK" : "17L",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "105",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Telefono"
+      }, {
+        "FIELD.LBL" : "Telefono"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,23,1"
+      } ],
+      "FIELD.NAME" : "GENDER",
+      "LENGTH.MASK" : "10L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "110",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Genero"
+      }, {
+        "FIELD.LBL" : "Genero"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F |,24,1"
+      } ],
+      "FIELD.NAME" : "EMAIL",
+      "LENGTH.MASK" : "50L",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "115",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Email"
+      }, {
+        "FIELD.LBL" : "Email"
+      } ]
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "R.DATA"
+    } ],
+    "SHORT.DESC" : [ { }, {
+      "SHORT.DESC" : "Consulta Cliente Remesas"
+    } ],
+    "FILE.NAME" : "NOFILE.ABC.DAT.PER.CTE"
+  }
+}

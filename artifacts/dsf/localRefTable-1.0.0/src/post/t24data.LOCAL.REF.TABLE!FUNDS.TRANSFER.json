@@ -1,0 +1,82 @@
+{
+  "header" : {
+    "id" : "FUNDS.TRANSFER",
+    "dsfApiType" : "LOCAL.REF.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.TABLE.NO" : [ {
+      "LOCAL.TABLE.NO" : "152"
+    }, {
+      "LOCAL.TABLE.NO" : "153"
+    }, {
+      "LOCAL.TABLE.NO" : "171"
+    }, {
+      "LOCAL.TABLE.NO" : "172"
+    }, {
+      "LOCAL.TABLE.NO" : "173"
+    }, {
+      "LOCAL.TABLE.NO" : "FUTURE.DATE"
+    }, {
+      "LOCAL.TABLE.NO" : "151"
+    }, {
+      "LOCAL.TABLE.NO" : "IMMEDIATELY"
+    }, {
+      "LOCAL.TABLE.NO" : "TRANS.INSTR",
+      "SUB.ASSOC.CODE" : "XX."
+    }, {
+      "LOCAL.TABLE.NO" : "CTA.BENEF.SPEUA"
+    }, {
+      "LOCAL.TABLE.NO" : "CTA.EXT.TRANSF"
+    }, {
+      "LOCAL.TABLE.NO" : "AMT.IVA.SPEI"
+    }, {
+      "LOCAL.TABLE.NO" : "CHQ.ISSUE.ID"
+    }, {
+      "LOCAL.TABLE.NO" : "TIPOTRANSACCION"
+    }, {
+      "LOCAL.TABLE.NO" : "NUM.ID"
+    }, {
+      "LOCAL.TABLE.NO" : "FLAG.SPEUA"
+    }, {
+      "LOCAL.TABLE.NO" : "FLAG.SPEI"
+    }, {
+      "LOCAL.TABLE.NO" : "RFC.BENEF.SPEI"
+    }, {
+      "LOCAL.TABLE.NO" : "TIPO.SPEI"
+    }, {
+      "LOCAL.TABLE.NO" : "FOL.VALIDACION"
+    }, {
+      "LOCAL.TABLE.NO" : "REFERENCIA"
+    }, {
+      "LOCAL.TABLE.NO" : "CANAL.ENTIDAD"
+    }, {
+      "LOCAL.TABLE.NO" : "GEOLOCALIZACION"
+    }, {
+      "LOCAL.TABLE.NO" : "EXT.TRANS.ID"
+    }, {
+      "LOCAL.TABLE.NO" : "ID.CLIENTE.TDC"
+    }, {
+      "LOCAL.TABLE.NO" : "FT.CUS.NAME"
+    }, {
+      "LOCAL.TABLE.NO" : "FIRMA"
+    }, {
+      "LOCAL.TABLE.NO" : "TIPO.CTA.BEN"
+    }, {
+      "LOCAL.TABLE.NO" : "RASTREO"
+    }, {
+      "LOCAL.TABLE.NO" : "TIMESTAMP.SPEUA"
+    }, {
+      "LOCAL.TABLE.NO" : "ID.ADMIN"
+    }, {
+      "LOCAL.TABLE.NO" : "ID.COMI"
+    }, {
+      "LOCAL.TABLE.NO" : "ID.ESTAB"
+    } ]
+  }
+}

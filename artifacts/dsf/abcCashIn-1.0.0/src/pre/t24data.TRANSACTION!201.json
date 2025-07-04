@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "201",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "MANDATORY.REF.NO" : "Y",
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "AUTO",
+    "STMT.NARR.REF" : "TRANS",
+    "DEBIT.CREDIT.IND" : "DEBIT",
+    "SWIFT.NARRATIVE" : "NTRF",
+    "SHORT.DESC" : "Outward Chq-Dr",
+    "DISPO.EXEMPT" : "YES",
+    "CHEQUE.IND" : "Y",
+    "STMT.NARR" : "Outward Cheque - Dr",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "Outward Cheque - Dr"
+    } ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "header" : {
+    "id" : "TIPO.CTA.BEN",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "TIPO.CTA.BEN"
+    }, {
+      "SHORT.NAME" : "TIPO.CTA.BEN"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "40",
+      "REMARK" : [ {
+        "REMARK" : "CLABE"
+      }, {
+        "REMARK" : "CLABE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "10",
+      "REMARK" : [ {
+        "REMARK" : "CELULAR"
+      }, {
+        "REMARK" : "CELULAR"
+      } ]
+    }, {
+      "VETTING.TABLE" : "3",
+      "REMARK" : [ {
+        "REMARK" : "TARJETA DEBITO"
+      }, {
+        "REMARK" : "TARJETA DEBITO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "1",
+      "REMARK" : [ {
+        "REMARK" : "MISMO BANCO"
+      }, {
+        "REMARK" : "MISMO BANCO"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "TIPO.CTA.BEN"
+    }, {
+      "DESCRIPTION" : "TIPO.CTA.BEN"
+    } ],
+    "MAXIMUM.CHAR" : "2"
+  }
+}

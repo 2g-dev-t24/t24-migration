@@ -1,0 +1,57 @@
+{
+  "name" : "AbcCashIn",
+  "version" : "1.0.0",
+  "description" : "AbcCashIn",
+  "status" : "DEFINING",
+  "sequence" : [ {
+    "component" : "t24data",
+    "type" : "PGM.FILE",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "FILE.CONTROL",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "STANDARD.SELECTION",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "BATCH.NEW.COMPANY",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "BATCH",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "TSA.SERVICE",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "EB.API",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "LOCAL.TABLE",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "LOCAL.REF.TABLE",
+    "id" : "",
+    "action" : ""
+  }, {
+    "component" : "t24data",
+    "type" : "EB.TABLE.DEFINITION",
+    "id" : "",
+    "action" : ""
+  } ]
+}
