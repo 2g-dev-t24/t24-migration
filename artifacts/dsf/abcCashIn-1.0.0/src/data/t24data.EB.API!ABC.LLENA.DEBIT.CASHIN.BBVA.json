@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.LLENA.DEBIT.CASHIN.BBVA",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.LLENA.DEBIT.CASHIN.BBVA"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

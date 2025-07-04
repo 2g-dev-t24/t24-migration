@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.SMS.EMAIL.ENVIAR",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "Notificaciones por Envia"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "H"
+  }
+}

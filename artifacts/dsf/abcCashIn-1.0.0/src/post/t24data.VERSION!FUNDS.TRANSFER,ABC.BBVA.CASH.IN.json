@@ -3,24 +3,32 @@
     "id" : "FUNDS.TRANSFER,ABC.BBVA.CASH.IN",
     "dsfApiType" : "VERSION",
     "dsfApiComponent" : "t24data",
-    "dsfApiPhase" : "main",
+    "dsfApiPhase" : "post",
     "metadata" : {
       "installed" : "NO",
       "release" : "R24"
     }
   },
   "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "ABC.CALL.RTNS.GEN.FT"
+    } ],
+    "AUTH.ROUTINE" : [ {
+      "AUTH.ROUTINE" : "ABC.ENV.EMAIL.CASHIN.BBVA"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
     "LANGUAGE.CODE" : [ {
       "LANGUAGE.CODE" : "2"
     } ],
     "FIELDS.PER.LINE" : "MULTI",
-    "LOCAL.REF.FIELD" : "LOCAL.REF",
     "AUTOM.FIELD.NO" : [ {
       "AUTOM.FIELD.NO" : "TRANSACTION.TYPE",
       "AUT.NEW.CONTENT" : "ACCB"
     }, {
       "AUTOM.FIELD.NO" : "DEBIT.ACCT.NO",
-      "AUT.NEW.CONTENT" : "MXN101510013"
+      "AUT.NEW.CONTENT" : "@ABC.LLENA.DEBIT.CASHIN.BBVA"
     }, {
       "AUTOM.FIELD.NO" : "DEBIT.CURRENCY",
       "AUT.NEW.CONTENT" : "MXN"
@@ -32,7 +40,7 @@
       "AUT.NEW.CONTENT" : "Mt103extend"
     }, {
       "AUTOM.FIELD.NO" : "ORDERING.BANK-1",
-      "AUT.NEW.CONTENT" : "MXN112510010"
+      "AUT.NEW.CONTENT" : "MX0010001"
     } ],
     "FIELD.NO" : [ {
       "FIELD.NO" : "DEBIT.ACCT.NO",
@@ -149,9 +157,8 @@
     "NOINPUT.FIELD" : [ {
       "NOINPUT.FIELD" : "DEBIT.ACCT.NO"
     } ],
-    "NO.OF.AUTH" : "0",
+    "EXC.INC.RTN" : "YES",
     "MULTI.POSSIBLE" : "Y",
-    "RECORDS.PER.PAGE" : "1",
     "HDR.1.001..039" : [ {
       "HDR.1.001..039" : "Deposito CashIn BBVA"
     } ],

@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "ABC.LLENA.DEBIT.CASHIN.BBVA",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "ABC.LLENA.DEBIT.CASHIN.BBVA"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "S",
+    "APPL.FOR.SUBR" : [ {
+      "APPL.FOR.SUBR" : "FUNDS.TRANSFER"
+    } ]
+  }
+}

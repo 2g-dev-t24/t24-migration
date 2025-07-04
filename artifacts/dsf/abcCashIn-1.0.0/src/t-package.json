@@ -1,7 +1,7 @@
 {
-  "name" : "AbcCashInBbva",
+  "name" : "AbcCashIn",
   "version" : "1.0.0",
-  "description" : "AbcCashInBbva",
+  "description" : "AbcCashIn",
   "status" : "DEFINING",
   "sequence" : [ {
     "component" : "t24data",

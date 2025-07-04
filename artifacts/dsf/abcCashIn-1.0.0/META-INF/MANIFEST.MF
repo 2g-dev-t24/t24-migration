@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: AbcCashInBbva
+Implementation-Title: AbcCashIn
 Implementation-Version: 1.0.0
 Implementation-Vendor: Temenos
 
