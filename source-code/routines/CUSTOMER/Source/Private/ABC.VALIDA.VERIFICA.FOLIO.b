@@ -13,7 +13,8 @@ $PACKAGE ABC.BP
     $USING AC.AccountOpening
     $USING EB.LocalReferences
     $USING AbcGetGeneralParam
-
+    $USING AbcTable
+    
     GOSUB INICIALIZA
     GOSUB PROCESO
     RETURN

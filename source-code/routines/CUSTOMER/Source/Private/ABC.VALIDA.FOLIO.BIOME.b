@@ -13,9 +13,8 @@ $PACKAGE ABC.BP
     $USING AC.AccountOpening
     $USING FT.Contract
     $USING EB.Updates
-
-    $INSERT ABC.BP I_F.ABC.VALIDACION.BIOMETRICOS
-
+    $USING EB.ErrorProcessing
+    
     GOSUB INICIALIZA
     GOSUB PROCESO
     RETURN
