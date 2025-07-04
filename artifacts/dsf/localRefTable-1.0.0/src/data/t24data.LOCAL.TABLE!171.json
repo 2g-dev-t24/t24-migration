@@ -1,0 +1,983 @@
+{
+  "header" : {
+    "id" : "171",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "IBLC COUNTRY-DR"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "290",
+      "REMARK" : [ {
+        "REMARK" : "ALBANIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "240",
+      "REMARK" : [ {
+        "REMARK" : "ALLEMAGNE DE L'EST"
+      } ]
+    }, {
+      "VETTING.TABLE" : "60",
+      "REMARK" : [ {
+        "REMARK" : "ALLEMAGNE DE L'OUEST"
+      } ]
+    }, {
+      "VETTING.TABLE" : "901",
+      "REMARK" : [ {
+        "REMARK" : "ANDORRE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "130",
+      "REMARK" : [ {
+        "REMARK" : "AUTRICHE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "270",
+      "REMARK" : [ {
+        "REMARK" : "BULGARIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "100",
+      "REMARK" : [ {
+        "REMARK" : "DANEMARK"
+      } ]
+    }, {
+      "VETTING.TABLE" : "140",
+      "REMARK" : [ {
+        "REMARK" : "ESPAGNE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "200",
+      "REMARK" : [ {
+        "REMARK" : "FINLANDE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "20",
+      "REMARK" : [ {
+        "REMARK" : "FRANCE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "905",
+      "REMARK" : [ {
+        "REMARK" : "GIBRALTAR"
+      } ]
+    }, {
+      "VETTING.TABLE" : "160",
+      "REMARK" : [ {
+        "REMARK" : "GRECE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "260",
+      "REMARK" : [ {
+        "REMARK" : "HONGRIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "190",
+      "REMARK" : [ {
+        "REMARK" : "REPUBLIQUE D'IRLANDE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "210",
+      "REMARK" : [ {
+        "REMARK" : "ISLANDE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "70",
+      "REMARK" : [ {
+        "REMARK" : "ITALIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "902",
+      "REMARK" : [ {
+        "REMARK" : "LIECHTENSTEIN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "906",
+      "REMARK" : [ {
+        "REMARK" : "MALTE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "900",
+      "REMARK" : [ {
+        "REMARK" : "MONACO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "90",
+      "REMARK" : [ {
+        "REMARK" : "NORVEGE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "40",
+      "REMARK" : [ {
+        "REMARK" : "PAYS-BAS"
+      } ]
+    }, {
+      "VETTING.TABLE" : "230",
+      "REMARK" : [ {
+        "REMARK" : "POLOGNE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "120",
+      "REMARK" : [ {
+        "REMARK" : "PORTUGAL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "280",
+      "REMARK" : [ {
+        "REMARK" : "ROUMANIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "30",
+      "REMARK" : [ {
+        "REMARK" : "ROYAUME-UNI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "903",
+      "REMARK" : [ {
+        "REMARK" : "SAINT-MARIN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "80",
+      "REMARK" : [ {
+        "REMARK" : "SUEDE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "50",
+      "REMARK" : [ {
+        "REMARK" : "SUISSE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "250",
+      "REMARK" : [ {
+        "REMARK" : "TCHECOSLOVAQUIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "180",
+      "REMARK" : [ {
+        "REMARK" : "TURQUIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "220",
+      "REMARK" : [ {
+        "REMARK" : "U.R.R.S"
+      } ]
+    }, {
+      "VETTING.TABLE" : "904",
+      "REMARK" : [ {
+        "REMARK" : "VATICAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "170",
+      "REMARK" : [ {
+        "REMARK" : "YOUGOSLAVIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "310",
+      "REMARK" : [ {
+        "REMARK" : "ALGERIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "910",
+      "REMARK" : [ {
+        "REMARK" : "CEUTA ET MELILLA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "330",
+      "REMARK" : [ {
+        "REMARK" : "EGYPTE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "907",
+      "REMARK" : [ {
+        "REMARK" : "ILES CANARIES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "911",
+      "REMARK" : [ {
+        "REMARK" : "LIBYE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "300",
+      "REMARK" : [ {
+        "REMARK" : "MAROC"
+      } ]
+    }, {
+      "VETTING.TABLE" : "340",
+      "REMARK" : [ {
+        "REMARK" : "SOUDAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "320",
+      "REMARK" : [ {
+        "REMARK" : "TUNISIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "926",
+      "REMARK" : [ {
+        "REMARK" : "BENIN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "914",
+      "REMARK" : [ {
+        "REMARK" : "BURKINA - FASSO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "908",
+      "REMARK" : [ {
+        "REMARK" : "ILES DU CAP VERT"
+      } ]
+    }, {
+      "VETTING.TABLE" : "923",
+      "REMARK" : [ {
+        "REMARK" : "COTE D'IVOIRE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "918",
+      "REMARK" : [ {
+        "REMARK" : "GAMBIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "924",
+      "REMARK" : [ {
+        "REMARK" : "GHANA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "920",
+      "REMARK" : [ {
+        "REMARK" : "GUINEE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "919",
+      "REMARK" : [ {
+        "REMARK" : "GUINEE-BISSAU"
+      } ]
+    }, {
+      "VETTING.TABLE" : "922",
+      "REMARK" : [ {
+        "REMARK" : "LIBERIA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "913",
+      "REMARK" : [ {
+        "REMARK" : "MALI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "912",
+      "REMARK" : [ {
+        "REMARK" : "MAURITANIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "915",
+      "REMARK" : [ {
+        "REMARK" : "NIGER"
+      } ]
+    }, {
+      "VETTING.TABLE" : "360",
+      "REMARK" : [ {
+        "REMARK" : "NIGERIA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "917",
+      "REMARK" : [ {
+        "REMARK" : "SENEGAL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "921",
+      "REMARK" : [ {
+        "REMARK" : "SIERRA LEONE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "916",
+      "REMARK" : [ {
+        "REMARK" : "TCHAD"
+      } ]
+    }, {
+      "VETTING.TABLE" : "925",
+      "REMARK" : [ {
+        "REMARK" : "TOGO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "440",
+      "REMARK" : [ {
+        "REMARK" : "AFRIQUE DU SUD"
+      } ]
+    }, {
+      "VETTING.TABLE" : "390",
+      "REMARK" : [ {
+        "REMARK" : "ANGOLA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "301",
+      "REMARK" : [ {
+        "REMARK" : "BOTSWANA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "302",
+      "REMARK" : [ {
+        "REMARK" : "SWAZILAND"
+      } ]
+    }, {
+      "VETTING.TABLE" : "303",
+      "REMARK" : [ {
+        "REMARK" : "LESOTHO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "450",
+      "REMARK" : [ {
+        "REMARK" : "BURUNDI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "927",
+      "REMARK" : [ {
+        "REMARK" : "CAMEROUN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "928",
+      "REMARK" : [ {
+        "REMARK" : "REPUBLIQUE CENTRAFRICAINE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "650",
+      "REMARK" : [ {
+        "REMARK" : "ILES COMORES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "350",
+      "REMARK" : [ {
+        "REMARK" : "CONGO (BRAZZAVILLE)"
+      } ]
+    }, {
+      "VETTING.TABLE" : "400",
+      "REMARK" : [ {
+        "REMARK" : "ETHIOPIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "930",
+      "REMARK" : [ {
+        "REMARK" : "GABON"
+      } ]
+    }, {
+      "VETTING.TABLE" : "929",
+      "REMARK" : [ {
+        "REMARK" : "GUINEE EQUATORIALE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "933",
+      "REMARK" : [ {
+        "REMARK" : "KENYA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "420",
+      "REMARK" : [ {
+        "REMARK" : "MADAGASCAR"
+      } ]
+    }, {
+      "VETTING.TABLE" : "939",
+      "REMARK" : [ {
+        "REMARK" : "MALAWI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "936",
+      "REMARK" : [ {
+        "REMARK" : "MAURICE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "410",
+      "REMARK" : [ {
+        "REMARK" : "MOZAMBIQUE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "993",
+      "REMARK" : [ {
+        "REMARK" : "NAMIBIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "934",
+      "REMARK" : [ {
+        "REMARK" : "OUGANDA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "937",
+      "REMARK" : [ {
+        "REMARK" : "REUNION"
+      } ]
+    }, {
+      "VETTING.TABLE" : "370",
+      "REMARK" : [ {
+        "REMARK" : "RWANDA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "973",
+      "REMARK" : [ {
+        "REMARK" : "SAO TOME ET PRINCIPE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "640",
+      "REMARK" : [ {
+        "REMARK" : "ILES SEYCHELLES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "932",
+      "REMARK" : [ {
+        "REMARK" : "SOMALIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "935",
+      "REMARK" : [ {
+        "REMARK" : "TANZANIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "931",
+      "REMARK" : [ {
+        "REMARK" : "TERRITOIRE DES AFARS ET ISSAS"
+      } ]
+    }, {
+      "VETTING.TABLE" : "380",
+      "REMARK" : [ {
+        "REMARK" : "ZAIRE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "430",
+      "REMARK" : [ {
+        "REMARK" : "ZAMBIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "938",
+      "REMARK" : [ {
+        "REMARK" : "ZIMBABWE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "110",
+      "REMARK" : [ {
+        "REMARK" : "CANADA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "10",
+      "REMARK" : [ {
+        "REMARK" : "ETATS-UNIS D'AMERIQUE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "940",
+      "REMARK" : [ {
+        "REMARK" : "SAINT-PIERRE ET MIQUELON"
+      } ]
+    }, {
+      "VETTING.TABLE" : "610",
+      "REMARK" : [ {
+        "REMARK" : "ARGENTINE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "304",
+      "REMARK" : [ {
+        "REMARK" : "ARUBA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "305",
+      "REMARK" : [ {
+        "REMARK" : "CURACAO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "311",
+      "REMARK" : [ {
+        "REMARK" : "ILES CAIQUES ET ILES TURQUES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "959",
+      "REMARK" : [ {
+        "REMARK" : "BAHAMAS"
+      } ]
+    }, {
+      "VETTING.TABLE" : "520",
+      "REMARK" : [ {
+        "REMARK" : "BELIZE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "942",
+      "REMARK" : [ {
+        "REMARK" : "ILES BERMUDES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "580",
+      "REMARK" : [ {
+        "REMARK" : "BOLIVIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "560",
+      "REMARK" : [ {
+        "REMARK" : "BRESIL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "660",
+      "REMARK" : [ {
+        "REMARK" : "ILES CAIMAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "570",
+      "REMARK" : [ {
+        "REMARK" : "CHILI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "530",
+      "REMARK" : [ {
+        "REMARK" : "COLOMBIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "630",
+      "REMARK" : [ {
+        "REMARK" : "COSTA-RICA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "510",
+      "REMARK" : [ {
+        "REMARK" : "CUBA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "944",
+      "REMARK" : [ {
+        "REMARK" : "EL SALVADOR"
+      } ]
+    }, {
+      "VETTING.TABLE" : "620",
+      "REMARK" : [ {
+        "REMARK" : "EQUATEUR"
+      } ]
+    }, {
+      "VETTING.TABLE" : "480",
+      "REMARK" : [ {
+        "REMARK" : "GRENADE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "308",
+      "REMARK" : [ {
+        "REMARK" : "GUADELOUPE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "309",
+      "REMARK" : [ {
+        "REMARK" : "MARTINIQUE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "941",
+      "REMARK" : [ {
+        "REMARK" : "GUATEMALA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "953",
+      "REMARK" : [ {
+        "REMARK" : "GUYANE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "955",
+      "REMARK" : [ {
+        "REMARK" : "GUYANE FRANCAISE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "949",
+      "REMARK" : [ {
+        "REMARK" : "HAITI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "943",
+      "REMARK" : [ {
+        "REMARK" : "HONDURAS"
+      } ]
+    }, {
+      "VETTING.TABLE" : "703",
+      "REMARK" : [ {
+        "REMARK" : "DOMINIQUE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "704",
+      "REMARK" : [ {
+        "REMARK" : "STE LUCIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "705",
+      "REMARK" : [ {
+        "REMARK" : "ST VINCENT"
+      } ]
+    }, {
+      "VETTING.TABLE" : "958",
+      "REMARK" : [ {
+        "REMARK" : "JAMAIQUE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "946",
+      "REMARK" : [ {
+        "REMARK" : "LA BARBADE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "500",
+      "REMARK" : [ {
+        "REMARK" : "MEXIQUE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "945",
+      "REMARK" : [ {
+        "REMARK" : "NICARAGUA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "947",
+      "REMARK" : [ {
+        "REMARK" : "PANAMA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "590",
+      "REMARK" : [ {
+        "REMARK" : "PARAGUAY"
+      } ]
+    }, {
+      "VETTING.TABLE" : "550",
+      "REMARK" : [ {
+        "REMARK" : "PEROU"
+      } ]
+    }, {
+      "VETTING.TABLE" : "950",
+      "REMARK" : [ {
+        "REMARK" : "REPUBLIQUE DOMINICAINE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "954",
+      "REMARK" : [ {
+        "REMARK" : "SURINAM"
+      } ]
+    }, {
+      "VETTING.TABLE" : "956",
+      "REMARK" : [ {
+        "REMARK" : "TRINIDAD ET TOBAGO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "600",
+      "REMARK" : [ {
+        "REMARK" : "URUGUAY"
+      } ]
+    }, {
+      "VETTING.TABLE" : "540",
+      "REMARK" : [ {
+        "REMARK" : "VENEZUELA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "990",
+      "REMARK" : [ {
+        "REMARK" : "ILES VIERGES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "750",
+      "REMARK" : [ {
+        "REMARK" : "ARABIE-SAOUDITE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "963",
+      "REMARK" : [ {
+        "REMARK" : "BAHREIN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "960",
+      "REMARK" : [ {
+        "REMARK" : "CHYPRE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "970",
+      "REMARK" : [ {
+        "REMARK" : "EMIRATS ARABES UNIS"
+      } ]
+    }, {
+      "VETTING.TABLE" : "720",
+      "REMARK" : [ {
+        "REMARK" : "IRAK"
+      } ]
+    }, {
+      "VETTING.TABLE" : "730",
+      "REMARK" : [ {
+        "REMARK" : "IRAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "740",
+      "REMARK" : [ {
+        "REMARK" : "ISRAEL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "962",
+      "REMARK" : [ {
+        "REMARK" : "JORDANIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "760",
+      "REMARK" : [ {
+        "REMARK" : "KOWEIT"
+      } ]
+    }, {
+      "VETTING.TABLE" : "700",
+      "REMARK" : [ {
+        "REMARK" : "LIBAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "965",
+      "REMARK" : [ {
+        "REMARK" : "OMAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "964",
+      "REMARK" : [ {
+        "REMARK" : "QATAR"
+      } ]
+    }, {
+      "VETTING.TABLE" : "710",
+      "REMARK" : [ {
+        "REMARK" : "SYRIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "966",
+      "REMARK" : [ {
+        "REMARK" : "YEMEN DU NORD"
+      } ]
+    }, {
+      "VETTING.TABLE" : "967",
+      "REMARK" : [ {
+        "REMARK" : "YEMEN DU SUD"
+      } ]
+    }, {
+      "VETTING.TABLE" : "961",
+      "REMARK" : [ {
+        "REMARK" : "AFGHANISTAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "890",
+      "REMARK" : [ {
+        "REMARK" : "BANGLADESH"
+      } ]
+    }, {
+      "VETTING.TABLE" : "969",
+      "REMARK" : [ {
+        "REMARK" : "BIRMANIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "976",
+      "REMARK" : [ {
+        "REMARK" : "BRUNEI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "974",
+      "REMARK" : [ {
+        "REMARK" : "CAMBODGE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "820",
+      "REMARK" : [ {
+        "REMARK" : "CHINE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "980",
+      "REMARK" : [ {
+        "REMARK" : "COREE DU NORD"
+      } ]
+    }, {
+      "VETTING.TABLE" : "981",
+      "REMARK" : [ {
+        "REMARK" : "COREE DU SUD"
+      } ]
+    }, {
+      "VETTING.TABLE" : "850",
+      "REMARK" : [ {
+        "REMARK" : "HONG-KONG"
+      } ]
+    }, {
+      "VETTING.TABLE" : "780",
+      "REMARK" : [ {
+        "REMARK" : "INDE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "810",
+      "REMARK" : [ {
+        "REMARK" : "INDONESIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "830",
+      "REMARK" : [ {
+        "REMARK" : "JAPON"
+      } ]
+    }, {
+      "VETTING.TABLE" : "971",
+      "REMARK" : [ {
+        "REMARK" : "LAOS"
+      } ]
+    }, {
+      "VETTING.TABLE" : "978",
+      "REMARK" : [ {
+        "REMARK" : "MACAO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "800",
+      "REMARK" : [ {
+        "REMARK" : "MALAYSIA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "992",
+      "REMARK" : [ {
+        "REMARK" : "ILES MALDIVES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "979",
+      "REMARK" : [ {
+        "REMARK" : "MONGOLIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "701",
+      "REMARK" : [ {
+        "REMARK" : "NEPAL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "702",
+      "REMARK" : [ {
+        "REMARK" : "BHOUTAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "770",
+      "REMARK" : [ {
+        "REMARK" : "PAKISTAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "977",
+      "REMARK" : [ {
+        "REMARK" : "PHILIPPINES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "975",
+      "REMARK" : [ {
+        "REMARK" : "SINGAPOUR"
+      } ]
+    }, {
+      "VETTING.TABLE" : "790",
+      "REMARK" : [ {
+        "REMARK" : "SRI LANKA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "840",
+      "REMARK" : [ {
+        "REMARK" : "TAIWAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "880",
+      "REMARK" : [ {
+        "REMARK" : "THAILANDE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "972",
+      "REMARK" : [ {
+        "REMARK" : "VIETNAM"
+      } ]
+    }, {
+      "VETTING.TABLE" : "719",
+      "REMARK" : [ {
+        "REMARK" : "NAURU"
+      } ]
+    }, {
+      "VETTING.TABLE" : "860",
+      "REMARK" : [ {
+        "REMARK" : "AUSTRALIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "985",
+      "REMARK" : [ {
+        "REMARK" : "ILES FIDJI"
+      } ]
+    }, {
+      "VETTING.TABLE" : "870",
+      "REMARK" : [ {
+        "REMARK" : "NOUVELLE ZELANDE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "714",
+      "REMARK" : [ {
+        "REMARK" : "VANUATU (NOUVELLES HEBRIDES)"
+      } ]
+    }, {
+      "VETTING.TABLE" : "982",
+      "REMARK" : [ {
+        "REMARK" : "OCEANIE AMERICAINE (ILES)"
+      } ]
+    }, {
+      "VETTING.TABLE" : "987",
+      "REMARK" : [ {
+        "REMARK" : "PAPOUASIE - NOUVELLE GUINEE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "706",
+      "REMARK" : [ {
+        "REMARK" : "NOUVELLE CALEDONIE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "707",
+      "REMARK" : [ {
+        "REMARK" : "WALLIS ET FUTUNA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "986",
+      "REMARK" : [ {
+        "REMARK" : "SAMOA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "306",
+      "REMARK" : [ {
+        "REMARK" : "FALKLANDS"
+      } ]
+    }, {
+      "VETTING.TABLE" : "307",
+      "REMARK" : [ {
+        "REMARK" : "STE HELENE"
+      } ]
+    }, {
+      "VETTING.TABLE" : "708",
+      "REMARK" : [ {
+        "REMARK" : "TONGA"
+      } ]
+    }, {
+      "VETTING.TABLE" : "709",
+      "REMARK" : [ {
+        "REMARK" : "TUVALU"
+      } ]
+    }, {
+      "VETTING.TABLE" : "711",
+      "REMARK" : [ {
+        "REMARK" : "KIRIBATI (ILES GILBERT)"
+      } ]
+    }, {
+      "VETTING.TABLE" : "712",
+      "REMARK" : [ {
+        "REMARK" : "ILES SALOMON"
+      } ]
+    }, {
+      "VETTING.TABLE" : "997",
+      "REMARK" : [ {
+        "REMARK" : "ORGAN. INTERN. DONT SIEGE HORS UEBL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "998",
+      "REMARK" : [ {
+        "REMARK" : "OTAN, SHAPE ET SERVICES SUBORDONNES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "999",
+      "REMARK" : [ {
+        "REMARK" : "INSTITUTIONS EUROPEENNES"
+      } ]
+    }, {
+      "VETTING.TABLE" : "001",
+      "REMARK" : [ {
+        "REMARK" : "US"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "I.B.L.C. COUNTRY-DR"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "3"
+  }
+}

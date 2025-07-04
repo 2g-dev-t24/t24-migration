@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "RASTREO",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "RASTREO"
+    }, {
+      "SHORT.NAME" : "RASTREO"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CLAVE DE RASTREO"
+    }, {
+      "DESCRIPTION" : "CLAVE DE RASTREO"
+    } ],
+    "MAXIMUM.CHAR" : "30"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "CTA.EXT.TRANSF",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "CTA.EXT.TRANSF"
+    }, {
+      "SHORT.NAME" : "CTA.EXT.TRANSF"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CUENTA EXTERNA TRANSFERENCIAS"
+    }, {
+      "DESCRIPTION" : "CUENTA EXTERNA TRANSFERENCIAS"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "20"
+  }
+}

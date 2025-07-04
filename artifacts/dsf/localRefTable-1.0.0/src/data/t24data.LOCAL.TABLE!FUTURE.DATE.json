@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "FUTURE.DATE",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "FUTURE.DATE"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "FUTURE.DATE"
+    } ],
+    "CHAR.TYPE" : "D",
+    "MAXIMUM.CHAR" : "15"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "REFERENCIA",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "REFERENCIA"
+    }, {
+      "SHORT.NAME" : "REFERENCIA"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "REFERENCIA"
+    }, {
+      "DESCRIPTION" : "REFERENCIA"
+    } ],
+    "MAXIMUM.CHAR" : "7"
+  }
+}

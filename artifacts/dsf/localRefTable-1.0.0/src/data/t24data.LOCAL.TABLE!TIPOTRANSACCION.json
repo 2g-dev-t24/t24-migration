@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "TIPOTRANSACCION",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "TIPOTRANSACCION"
+    }, {
+      "SHORT.NAME" : "TIPOTRANSACCION"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "TIPO TRANSACCION"
+    }, {
+      "DESCRIPTION" : "TIPO TRANSACCION"
+    } ],
+    "MAXIMUM.CHAR" : "2"
+  }
+}

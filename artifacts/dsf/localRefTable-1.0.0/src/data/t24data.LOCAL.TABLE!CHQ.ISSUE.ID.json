@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "CHQ.ISSUE.ID",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "CHQ.ISSUE.ID"
+    }, {
+      "SHORT.NAME" : "CHQ.ISSUE.ID"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CHQ ISSUE ID"
+    }, {
+      "DESCRIPTION" : "CHQ ISSUE ID"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

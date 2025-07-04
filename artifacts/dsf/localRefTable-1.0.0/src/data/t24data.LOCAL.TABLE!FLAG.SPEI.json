@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "FLAG.SPEI",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "FLAG.SPEI"
+    }, {
+      "SHORT.NAME" : "FLAG.SPEI"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "FLAG, TIMESTAMP PROCESADO SPEI"
+    }, {
+      "DESCRIPTION" : "FLAG, TIMESTAMP PROCESADO SPEI"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "16"
+  }
+}

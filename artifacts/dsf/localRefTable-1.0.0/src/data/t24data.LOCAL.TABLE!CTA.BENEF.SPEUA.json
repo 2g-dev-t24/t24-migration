@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "CTA.BENEF.SPEUA",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "CTA.BENEF.SPEUA"
+    }, {
+      "SHORT.NAME" : "CTA.BENEF.SPEUA"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CUENTA DEL BENEFICIARIO SPEUA"
+    }, {
+      "DESCRIPTION" : "CUENTA DEL BENEFICIARIO SPEUA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "20"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "TRANS.INSTR",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "TRANS.INSTR"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "TRANS.INSTR"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

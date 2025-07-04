@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "FOL.VALIDACION",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "FOL.VALIDACION"
+    }, {
+      "SHORT.NAME" : "FOL.VALIDACION"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "FOL.VALIDACION"
+    }, {
+      "DESCRIPTION" : "FOL.VALIDACION"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "40"
+  }
+}
