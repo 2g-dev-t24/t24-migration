@@ -1,7 +1,7 @@
-* @ValidationCode : MjotMTU3MjA0OTA1MTpDcDEyNTI6MTc1MTUwNzc5NzIyOTpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 02 Jul 2025 22:56:37
+* @ValidationCode : MjoxMjc2NzUzNjg4OkNwMTI1MjoxNzUxNTkxNDAyODU5Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 03 Jul 2025 22:10:02
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -18,23 +18,11 @@ SUBROUTINE ABC.VAL.INPUTTER.DIST
 * igual al actual
 *----------------------------------------------------------------
 
-    $USING EB.DataAccess
-    $USING EB.ErrorProcessing
     $USING EB.SystemTables
     $USING ST.Customer
 
-    FN.CUSTOMER = 'F.CUSTOMER$NAU'
-    F.CUSTOMER = ''
-    EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
+    Y.INPUTTER = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusInputter)
 
-    Y.CUSTOMER.ID = EB.SystemTables.getIdNew()
-    IF NOT(Y.CUSTOMER.ID) THEN
-        Y.CUSTOMER.ID = EB.SystemTables.getComi()
-    END
-
-    EB.DataAccess.FRead(FN.CUSTOMER, Y.CUSTOMER.ID, R.CUSTOMER, F.CUSTOMER, Y.ERR.CUS)
-    
-	Y.INPUTTER = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusInputter)
 	Y.INPUTTER = FIELD(Y.INPUTTER, '_', 2)
     Y.USER.ID  = EB.SystemTables.getOperator()
 
