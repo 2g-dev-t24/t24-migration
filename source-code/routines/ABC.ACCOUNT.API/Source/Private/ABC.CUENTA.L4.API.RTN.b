@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNTQzNjYzMDc5OkNwMTI1MjoxNzUxNTgyMjA3ODM5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 03 Jul 2025 19:36:47
+* @ValidationCode : MjoxMjEzOTQ1ODM1OkNwMTI1MjoxNzUxNTk1MjkzNTQxOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 03 Jul 2025 23:14:53
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -45,7 +45,7 @@ MAP.ACCOUNT:
 
     R.ACCOUNT<AA.Framework.Arrangement.ArrProperty> = 'BALANCE'
     
-    R.ACCOUNT<AA.Framework.ArrangementActivity.ArrActActivity> = 'algo'
+    R.ACCOUNT<AA.Framework.ArrangementActivity.ArrActActivity> = 'ACCOUNTS-CHANGE.PRODUCT-ARRANGEMENT'
     
     R.ACCOUNT<AA.Framework.ArrangementActivity.ArrActArrangement> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Account)
     

@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "NOFILE.ABC.DAT.PER.CTE",
+    "dsfApiType" : "STANDARD.SELECTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "USR.FIELD.NAME" : [ {
+      "USR.TYPE" : "R",
+      "USR.DISPLAY.FMT" : "500L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "ABC.NOFILE.DAT.PER.CTE"
+      } ],
+      "USR.FIELD.NAME" : "R.DATA"
+    }, {
+      "USR.TYPE" : "S",
+      "USR.DISPLAY.FMT" : "500L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.ALT.INDEX" : "N",
+      "USR.FIELD.NAME" : "ID"
+    } ]
+  }
+}
