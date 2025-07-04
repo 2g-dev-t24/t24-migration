@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "FIRMA",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "FIRMA"
+    }, {
+      "SHORT.NAME" : "FIRMA"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "FIRMA"
+    }, {
+      "DESCRIPTION" : "FIRMA"
+    } ],
+    "CHAR.TYPE" : "ANY",
+    "MAXIMUM.CHAR" : "40"
+  }
+}

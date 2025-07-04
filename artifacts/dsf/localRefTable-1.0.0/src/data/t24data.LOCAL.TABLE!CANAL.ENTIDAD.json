@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "CANAL.ENTIDAD",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "CANAL.ENTIDAD"
+    }, {
+      "SHORT.NAME" : "CANAL.ENTIDAD"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "ABC.CANAL"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CANAL QUE REGISTRO LA CUENTA"
+    }, {
+      "DESCRIPTION" : "CANAL QUE REGISTRO LA CUENTA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

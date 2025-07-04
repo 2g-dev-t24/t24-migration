@@ -1,0 +1,663 @@
+{
+  "header" : {
+    "id" : "152",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "IBLC CODE-CR"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "010",
+      "REMARK" : [ {
+        "REMARK" : "Arbitrages"
+      } ]
+    }, {
+      "VETTING.TABLE" : "020",
+      "REMARK" : [ {
+        "REMARK" : "Banques Agrees"
+      } ]
+    }, {
+      "VETTING.TABLE" : "025",
+      "REMARK" : [ {
+        "REMARK" : "Transferts justifes"
+      } ]
+    }, {
+      "VETTING.TABLE" : "030",
+      "REMARK" : [ {
+        "REMARK" : "DR et CR en comptes 'Reglementes'"
+      } ]
+    }, {
+      "VETTING.TABLE" : "031",
+      "REMARK" : [ {
+        "REMARK" : "DR et CR en compte 'Transit.Terme'"
+      } ]
+    }, {
+      "VETTING.TABLE" : "032",
+      "REMARK" : [ {
+        "REMARK" : "DR et CR en compte 'Transit.Spec.'"
+      } ]
+    }, {
+      "VETTING.TABLE" : "034",
+      "REMARK" : [ {
+        "REMARK" : "DR et CR en compte 'libres'"
+      } ]
+    }, {
+      "VETTING.TABLE" : "040",
+      "REMARK" : [ {
+        "REMARK" : "Transferts de FCY marche -> marche"
+      } ]
+    }, {
+      "VETTING.TABLE" : "050",
+      "REMARK" : [ {
+        "REMARK" : "Transferts internes"
+      } ]
+    }, {
+      "VETTING.TABLE" : "060",
+      "REMARK" : [ {
+        "REMARK" : "Transf. entre comptes etr. BEF/LUF"
+      } ]
+    }, {
+      "VETTING.TABLE" : "070",
+      "REMARK" : [ {
+        "REMARK" : "Operations d'escompte"
+      } ]
+    }, {
+      "VETTING.TABLE" : "072",
+      "REMARK" : [ {
+        "REMARK" : "Extournes d'operations a justifier"
+      } ]
+    }, {
+      "VETTING.TABLE" : "080",
+      "REMARK" : [ {
+        "REMARK" : "Autorisations particulieres"
+      } ]
+    }, {
+      "VETTING.TABLE" : "090",
+      "REMARK" : [ {
+        "REMARK" : "Achat et vente de marchandises"
+      } ]
+    }, {
+      "VETTING.TABLE" : "091",
+      "REMARK" : [ {
+        "REMARK" : "Remboursement de paiements"
+      } ]
+    }, {
+      "VETTING.TABLE" : "092",
+      "REMARK" : [ {
+        "REMARK" : "Achat et vente de marchandises"
+      } ]
+    }, {
+      "VETTING.TABLE" : "093",
+      "REMARK" : [ {
+        "REMARK" : "Achat et vente de marchandises"
+      } ]
+    }, {
+      "VETTING.TABLE" : "094",
+      "REMARK" : [ {
+        "REMARK" : "Travail a facon sur marchandises"
+      } ]
+    }, {
+      "VETTING.TABLE" : "095",
+      "REMARK" : [ {
+        "REMARK" : "Tous paiements (090 a 094)"
+      } ]
+    }, {
+      "VETTING.TABLE" : "096",
+      "REMARK" : [ {
+        "REMARK" : "Tous les paiements < 100000 BEF/LUF"
+      } ]
+    }, {
+      "VETTING.TABLE" : "140",
+      "REMARK" : [ {
+        "REMARK" : "Frais de transport de marchandises"
+      } ]
+    }, {
+      "VETTING.TABLE" : "141",
+      "REMARK" : [ {
+        "REMARK" : "Primes, frais, .. aux assurances"
+      } ]
+    }, {
+      "VETTING.TABLE" : "150",
+      "REMARK" : [ {
+        "REMARK" : "Autres frais de transport"
+      } ]
+    }, {
+      "VETTING.TABLE" : "151",
+      "REMARK" : [ {
+        "REMARK" : "Frais et droits de douane"
+      } ]
+    }, {
+      "VETTING.TABLE" : "152",
+      "REMARK" : [ {
+        "REMARK" : "Location de navires at aeronefs"
+      } ]
+    }, {
+      "VETTING.TABLE" : "153",
+      "REMARK" : [ {
+        "REMARK" : "Carburants pour navires et aeronefs"
+      } ]
+    }, {
+      "VETTING.TABLE" : "160",
+      "REMARK" : [ {
+        "REMARK" : "Frais de montage d'industrielles"
+      } ]
+    }, {
+      "VETTING.TABLE" : "161",
+      "REMARK" : [ {
+        "REMARK" : "Frais d'entretien de navires"
+      } ]
+    }, {
+      "VETTING.TABLE" : "170",
+      "REMARK" : [ {
+        "REMARK" : "Commission, courtages..."
+      } ]
+    }, {
+      "VETTING.TABLE" : "171",
+      "REMARK" : [ {
+        "REMARK" : "Frais d'analyse"
+      } ]
+    }, {
+      "VETTING.TABLE" : "172",
+      "REMARK" : [ {
+        "REMARK" : "Frais de publicite"
+      } ]
+    }, {
+      "VETTING.TABLE" : "173",
+      "REMARK" : [ {
+        "REMARK" : "Interets et frais de financement"
+      } ]
+    }, {
+      "VETTING.TABLE" : "174",
+      "REMARK" : [ {
+        "REMARK" : "Reglementes relatifs a des avals"
+      } ]
+    }, {
+      "VETTING.TABLE" : "175",
+      "REMARK" : [ {
+        "REMARK" : "Dedits et indemnites pour resiliat."
+      } ]
+    }, {
+      "VETTING.TABLE" : "176",
+      "REMARK" : [ {
+        "REMARK" : "Avaries communes"
+      } ]
+    }, {
+      "VETTING.TABLE" : "177",
+      "REMARK" : [ {
+        "REMARK" : "Contrats d'entreprises"
+      } ]
+    }, {
+      "VETTING.TABLE" : "180",
+      "REMARK" : [ {
+        "REMARK" : "Assurances"
+      } ]
+    }, {
+      "VETTING.TABLE" : "200",
+      "REMARK" : [ {
+        "REMARK" : "Agences de voyage"
+      } ]
+    }, {
+      "VETTING.TABLE" : "210",
+      "REMARK" : [ {
+        "REMARK" : "Salaires"
+      } ]
+    }, {
+      "VETTING.TABLE" : "211",
+      "REMARK" : [ {
+        "REMARK" : "Pensions"
+      } ]
+    }, {
+      "VETTING.TABLE" : "212",
+      "REMARK" : [ {
+        "REMARK" : "Trav. de nat.etr. occupes en UEBL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "220",
+      "REMARK" : [ {
+        "REMARK" : "Royalties"
+      } ]
+    }, {
+      "VETTING.TABLE" : "221",
+      "REMARK" : [ {
+        "REMARK" : "Droits d'auteur"
+      } ]
+    }, {
+      "VETTING.TABLE" : "222",
+      "REMARK" : [ {
+        "REMARK" : "Locations"
+      } ]
+    }, {
+      "VETTING.TABLE" : "223",
+      "REMARK" : [ {
+        "REMARK" : "Cotisations"
+      } ]
+    }, {
+      "VETTING.TABLE" : "224",
+      "REMARK" : [ {
+        "REMARK" : "Assistance technique"
+      } ]
+    }, {
+      "VETTING.TABLE" : "230",
+      "REMARK" : [ {
+        "REMARK" : "Impots et amendes"
+      } ]
+    }, {
+      "VETTING.TABLE" : "240",
+      "REMARK" : [ {
+        "REMARK" : "Representations CD et CC"
+      } ]
+    }, {
+      "VETTING.TABLE" : "241",
+      "REMARK" : [ {
+        "REMARK" : "Pensions gouvernementales"
+      } ]
+    }, {
+      "VETTING.TABLE" : "242",
+      "REMARK" : [ {
+        "REMARK" : "Frais d'admin. d'organismes intern."
+      } ]
+    }, {
+      "VETTING.TABLE" : "243",
+      "REMARK" : [ {
+        "REMARK" : "Depenses militaires"
+      } ]
+    }, {
+      "VETTING.TABLE" : "244",
+      "REMARK" : [ {
+        "REMARK" : "Operations SHAPE et OTAN"
+      } ]
+    }, {
+      "VETTING.TABLE" : "311",
+      "REMARK" : [ {
+        "REMARK" : "Coupons, Dividendes"
+      } ]
+    }, {
+      "VETTING.TABLE" : "312",
+      "REMARK" : [ {
+        "REMARK" : "Interets"
+      } ]
+    }, {
+      "VETTING.TABLE" : "313",
+      "REMARK" : [ {
+        "REMARK" : "Interets bancaires"
+      } ]
+    }, {
+      "VETTING.TABLE" : "321",
+      "REMARK" : [ {
+        "REMARK" : "Repatriements d'investissements etr"
+      } ]
+    }, {
+      "VETTING.TABLE" : "322",
+      "REMARK" : [ {
+        "REMARK" : "Repatriements d'investissements etr"
+      } ]
+    }, {
+      "VETTING.TABLE" : "324",
+      "REMARK" : [ {
+        "REMARK" : "Repatriements d'investissements etr"
+      } ]
+    }, {
+      "VETTING.TABLE" : "325",
+      "REMARK" : [ {
+        "REMARK" : "Repatriements d'investissements etr"
+      } ]
+    }, {
+      "VETTING.TABLE" : "333",
+      "REMARK" : [ {
+        "REMARK" : "Amortissement et remboursement"
+      } ]
+    }, {
+      "VETTING.TABLE" : "334",
+      "REMARK" : [ {
+        "REMARK" : "Amortissement et remboursement"
+      } ]
+    }, {
+      "VETTING.TABLE" : "335",
+      "REMARK" : [ {
+        "REMARK" : "Amortissement et remboursement"
+      } ]
+    }, {
+      "VETTING.TABLE" : "336",
+      "REMARK" : [ {
+        "REMARK" : "Amortissement et remboursement"
+      } ]
+    }, {
+      "VETTING.TABLE" : "400",
+      "REMARK" : [ {
+        "REMARK" : "Dons et soutiens - Secteur prive"
+      } ]
+    }, {
+      "VETTING.TABLE" : "401",
+      "REMARK" : [ {
+        "REMARK" : "Dons et soutiens - Secteur public"
+      } ]
+    }, {
+      "VETTING.TABLE" : "420",
+      "REMARK" : [ {
+        "REMARK" : "Capitaux officiels"
+      } ]
+    }, {
+      "VETTING.TABLE" : "431",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - depots a vue"
+      } ]
+    }, {
+      "VETTING.TABLE" : "432",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - avances"
+      } ]
+    }, {
+      "VETTING.TABLE" : "434",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - Constitutions"
+      } ]
+    }, {
+      "VETTING.TABLE" : "435",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - Acquisitions"
+      } ]
+    }, {
+      "VETTING.TABLE" : "436",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - Immeubles"
+      } ]
+    }, {
+      "VETTING.TABLE" : "437",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - Assurances"
+      } ]
+    }, {
+      "VETTING.TABLE" : "438",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - Garanties"
+      } ]
+    }, {
+      "VETTING.TABLE" : "441",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - Titres etr. A"
+      } ]
+    }, {
+      "VETTING.TABLE" : "442",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - Titres etr. FC"
+      } ]
+    }, {
+      "VETTING.TABLE" : "443",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - Titres etr. OC"
+      } ]
+    }, {
+      "VETTING.TABLE" : "444",
+      "REMARK" : [ {
+        "REMARK" : "Capit.prive (res) - Titres etr. AO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "451",
+      "REMARK" : [ {
+        "REMARK" : "Gest.portef. A&V Titres etr. A"
+      } ]
+    }, {
+      "VETTING.TABLE" : "452",
+      "REMARK" : [ {
+        "REMARK" : "Gest.portef. A&V Titres etr. FC"
+      } ]
+    }, {
+      "VETTING.TABLE" : "453",
+      "REMARK" : [ {
+        "REMARK" : "Gest.portef. A&V Titres etr. OC"
+      } ]
+    }, {
+      "VETTING.TABLE" : "454",
+      "REMARK" : [ {
+        "REMARK" : "Gest.portef. A&V Titres etr. AO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "455",
+      "REMARK" : [ {
+        "REMARK" : "Form.& Liq. de depots a l'etranger"
+      } ]
+    }, {
+      "VETTING.TABLE" : "481",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Constitutions"
+      } ]
+    }, {
+      "VETTING.TABLE" : "482",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Avances"
+      } ]
+    }, {
+      "VETTING.TABLE" : "484",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Constitutions fil"
+      } ]
+    }, {
+      "VETTING.TABLE" : "485",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Acquisitions"
+      } ]
+    }, {
+      "VETTING.TABLE" : "486",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Immeubles"
+      } ]
+    }, {
+      "VETTING.TABLE" : "487",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Assurances"
+      } ]
+    }, {
+      "VETTING.TABLE" : "488",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Garanties"
+      } ]
+    }, {
+      "VETTING.TABLE" : "489",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - LUX Holdings"
+      } ]
+    }, {
+      "VETTING.TABLE" : "490",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - CEDEL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "491",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Titres loc. A"
+      } ]
+    }, {
+      "VETTING.TABLE" : "492",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Titres loc. FC"
+      } ]
+    }, {
+      "VETTING.TABLE" : "493",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Titres loc. OC"
+      } ]
+    }, {
+      "VETTING.TABLE" : "494",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Titres loc. AO"
+      } ]
+    }, {
+      "VETTING.TABLE" : "495",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Titres loc. O l'E"
+      } ]
+    }, {
+      "VETTING.TABLE" : "496",
+      "REMARK" : [ {
+        "REMARK" : "Cap.prive(etr.) - Titres loc. OSP"
+      } ]
+    }, {
+      "VETTING.TABLE" : "500",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - BEF/LUF"
+      } ]
+    }, {
+      "VETTING.TABLE" : "501",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - USD"
+      } ]
+    }, {
+      "VETTING.TABLE" : "502",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - FRF"
+      } ]
+    }, {
+      "VETTING.TABLE" : "503",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - GBP"
+      } ]
+    }, {
+      "VETTING.TABLE" : "504",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - NLG"
+      } ]
+    }, {
+      "VETTING.TABLE" : "505",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - CHF"
+      } ]
+    }, {
+      "VETTING.TABLE" : "506",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - DEM"
+      } ]
+    }, {
+      "VETTING.TABLE" : "507",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - LIT"
+      } ]
+    }, {
+      "VETTING.TABLE" : "513",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - ATS"
+      } ]
+    }, {
+      "VETTING.TABLE" : "514",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - ESP"
+      } ]
+    }, {
+      "VETTING.TABLE" : "515",
+      "REMARK" : [ {
+        "REMARK" : "Billets de Banque - Autres pays"
+      } ]
+    }, {
+      "VETTING.TABLE" : "540",
+      "REMARK" : [ {
+        "REMARK" : "Frais de voyage"
+      } ]
+    }, {
+      "VETTING.TABLE" : "550",
+      "REMARK" : [ {
+        "REMARK" : "Achat et vente d'Or, Monnayees .."
+      } ]
+    }, {
+      "VETTING.TABLE" : "551",
+      "REMARK" : [ {
+        "REMARK" : "Achat et vente de diamants"
+      } ]
+    }, {
+      "VETTING.TABLE" : "560",
+      "REMARK" : [ {
+        "REMARK" : "Remboursement des deposits"
+      } ]
+    }, {
+      "VETTING.TABLE" : "600",
+      "REMARK" : [ {
+        "REMARK" : "Organismes intern. etablis en UEBL"
+      } ]
+    }, {
+      "VETTING.TABLE" : "601",
+      "REMARK" : [ {
+        "REMARK" : "Fonctionnaires d'Organisme spec."
+      } ]
+    }, {
+      "VETTING.TABLE" : "610",
+      "REMARK" : [ {
+        "REMARK" : "Comptes assimiles a des cptes res"
+      } ]
+    }, {
+      "VETTING.TABLE" : "630",
+      "REMARK" : [ {
+        "REMARK" : "Operations par des agents de change"
+      } ]
+    }, {
+      "VETTING.TABLE" : "640",
+      "REMARK" : [ {
+        "REMARK" : "Frais et commissions bancaire"
+      } ]
+    }, {
+      "VETTING.TABLE" : "650",
+      "REMARK" : [ {
+        "REMARK" : "Paiements > 10000 BEF/LUF"
+      } ]
+    }, {
+      "VETTING.TABLE" : "660",
+      "REMARK" : [ {
+        "REMARK" : "Monnaies etrangeres entre residents"
+      } ]
+    }, {
+      "VETTING.TABLE" : "700",
+      "REMARK" : [ {
+        "REMARK" : "Operations non denommees ailleurs"
+      } ]
+    }, {
+      "VETTING.TABLE" : "801",
+      "REMARK" : [ {
+        "REMARK" : "FX Terme BEF/LUF - a des etrangers"
+      } ]
+    }, {
+      "VETTING.TABLE" : "802",
+      "REMARK" : [ {
+        "REMARK" : "FX Terme BEF/LUF - a des Banques A"
+      } ]
+    }, {
+      "VETTING.TABLE" : "803",
+      "REMARK" : [ {
+        "REMARK" : "FX Terme BEF/LUF - a d'autres res"
+      } ]
+    }, {
+      "VETTING.TABLE" : "804",
+      "REMARK" : [ {
+        "REMARK" : "FX terme contre d'autres monn. etr."
+      } ]
+    }, {
+      "VETTING.TABLE" : "821",
+      "REMARK" : [ {
+        "REMARK" : "Liq. FX BEF/LUF - a des etrangers"
+      } ]
+    }, {
+      "VETTING.TABLE" : "822",
+      "REMARK" : [ {
+        "REMARK" : "Liq. FX BEF/LUF - a des Banques Agr"
+      } ]
+    }, {
+      "VETTING.TABLE" : "823",
+      "REMARK" : [ {
+        "REMARK" : "Liq. FX BEF/LUF - a d'autres res."
+      } ]
+    }, {
+      "VETTING.TABLE" : "824",
+      "REMARK" : [ {
+        "REMARK" : "Liq. FX contre d'autres monn. etr."
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "I.B.L.C. CREDIT"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "3"
+  }
+}

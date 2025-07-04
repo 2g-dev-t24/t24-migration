@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "IMMEDIATELY",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "IMMEDIATELY"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "YES",
+      "REMARK" : [ {
+        "REMARK" : "Yes"
+      } ]
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "IMMEDIATELY"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "15"
+  }
+}

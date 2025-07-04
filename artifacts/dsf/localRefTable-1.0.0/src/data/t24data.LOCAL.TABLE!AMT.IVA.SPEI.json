@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "AMT.IVA.SPEI",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "AMT.IVA.SPEI"
+    }, {
+      "SHORT.NAME" : "AMT.IVA.SPEI"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "MOTO DE IVA DE TRANSFERENCIA SPEI"
+    }, {
+      "DESCRIPTION" : "MOTO DE IVA DE TRANSFERENCIA SPEI"
+    } ],
+    "CHAR.TYPE" : "AMTCCY",
+    "MAXIMUM.CHAR" : "15"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "RFC.BENEF.SPEI",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "RFC.BENEF.SPEI"
+    }, {
+      "SHORT.NAME" : "RFC.BENEF.SPEI"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "RFC DEL BENEFICIARIO SPEI"
+    }, {
+      "DESCRIPTION" : "RFC DEL BENEFICIARIO SPEI"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "18"
+  }
+}

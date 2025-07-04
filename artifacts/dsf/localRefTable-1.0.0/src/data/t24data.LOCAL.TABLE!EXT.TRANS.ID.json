@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "EXT.TRANS.ID",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "EXT.TRANS.ID"
+    }, {
+      "SHORT.NAME" : "EXT.TRANS.ID"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EXT.TRANS.ID"
+    }, {
+      "DESCRIPTION" : "EXT.TRANS.ID"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "35"
+  }
+}

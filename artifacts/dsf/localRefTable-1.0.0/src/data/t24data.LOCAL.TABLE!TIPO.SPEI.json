@@ -1,0 +1,61 @@
+{
+  "header" : {
+    "id" : "TIPO.SPEI",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "TIPO.SPEI"
+    }, {
+      "SHORT.NAME" : "TIPO.SPEI"
+    } ],
+    "VETTING.TABLE" : [ {
+      "VETTING.TABLE" : "1"
+    }, {
+      "VETTING.TABLE" : "17"
+    }, {
+      "VETTING.TABLE" : "18"
+    }, {
+      "VETTING.TABLE" : "19"
+    }, {
+      "VETTING.TABLE" : "20"
+    }, {
+      "VETTING.TABLE" : "21"
+    }, {
+      "VETTING.TABLE" : "22"
+    }, {
+      "VETTING.TABLE" : "23"
+    }, {
+      "VETTING.TABLE" : "24"
+    }, {
+      "VETTING.TABLE" : "5"
+    }, {
+      "VETTING.TABLE" : "30"
+    }, {
+      "VETTING.TABLE" : "31"
+    }, {
+      "VETTING.TABLE" : "32"
+    }, {
+      "VETTING.TABLE" : "33"
+    }, {
+      "VETTING.TABLE" : "34"
+    }, {
+      "VETTING.TABLE" : "36"
+    }, {
+      "VETTING.TABLE" : "12"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "TIPO SPEI"
+    }, {
+      "DESCRIPTION" : "TIPO SPEI"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "2"
+  }
+}

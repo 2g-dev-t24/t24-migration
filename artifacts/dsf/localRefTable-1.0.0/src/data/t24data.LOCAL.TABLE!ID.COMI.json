@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "ID.COMI",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "ID.COMI"
+    }, {
+      "SHORT.NAME" : "ID.COMI"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ID.COMI"
+    }, {
+      "DESCRIPTION" : "ID.COMI"
+    } ],
+    "MAXIMUM.CHAR" : "35"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "FLAG.SPEUA",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "FLAG.SPEUA"
+    }, {
+      "SHORT.NAME" : "FLAG.SPEUA"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "INDICADOR DE PROCESADO EN SPEUA"
+    }, {
+      "DESCRIPTION" : "INDICADOR DE PROCESADO EN SPEUA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "1"
+  }
+}

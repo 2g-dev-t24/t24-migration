@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "TIMESTAMP.SPEUA",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "TIMESTAMP.SPEUA"
+    }, {
+      "SHORT.NAME" : "TIMESTAMP.SPEUA"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "FECHA Y HORA DE PROCESADO EN SPEUA"
+    }, {
+      "DESCRIPTION" : "FECHA Y HORA DE PROCESADO EN SPEUA"
+    } ],
+    "CHAR.TYPE" : "A",
+    "MAXIMUM.CHAR" : "16"
+  }
+}
