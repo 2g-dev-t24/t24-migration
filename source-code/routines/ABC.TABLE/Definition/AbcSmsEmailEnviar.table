@@ -1,0 +1,55 @@
+public table AbcSmsEmailEnviar {
+    t24: ABC.SMS.EMAIL.ENVIAR
+    fields:{
+        Customer(ABC.EMA.CUSTOMER) = 1
+        TipoEmail(ABC.EMA.TIPO.EMAIL) = 2
+        AsuntoEmail(ABC.EMA.ASUNTO.EMAIL) = 3
+        Nombre(ABC.EMA.NOMBRE) = 4 
+        NombreEmpresa(ABC.EMA.NOMBRE.EMPRESA) = 5
+        StatusEmail(ABC.EMA.STATUS.EMAIL) = 6
+        Email(ABC.EMA.EMAIL) = 7
+        NombreBen(ABC.EMA.NOMBRE.BEN) = 8
+        Cuenta(ABC.EMA.CUENTA) = 9
+        Banco(ABC.EMA.BANCO) = 10
+        Monto(ABC.EMA.MONTO) = 11
+        Hora(ABC.EMA.HORA) = 12
+        Fecha(ABC.EMA.FECHA) = 13
+        Referencia(ABC.EMA.REFERENCIA) = 14
+        CuentaCliente(ABC.EMA.CUENTA.CLIENTE) = 15
+        NotificaEmail(ABC.EMA.NOTIFICA.EMAIL) = 16
+        NotificaAlterna(ABC.EMA.NOTIFICA.ALTERNA) = 17
+        StatusAlterna(ABC.EMA.STATUS.ALTERNA) = 18
+        SaldoCuenta(ABC.EMA.SALDO.CUENTA) = 19
+        FechaHora(ABC.EMA.FECHA.HORA) = 20
+        Canal(ABC.EMA.CANAL) = 21
+        Prn(ABC.EMA.PRN) = 22
+        NotificaGalileo(ABC.EMA.NOTIFICA.GALILEO) = 23
+        StatusGalileo(ABC.EMA.STATUS.GALILEO) = 24
+        ExtTransId(ABC.EMA.EXT.TRANS.ID) = 25
+
+        Reserved4(ABC.EMA.RESERVED.10) = 26
+        Reserved3(ABC.EMA.RESERVED.9) = 27
+        Reserved4(ABC.EMA.RESERVED.8) = 28
+        Reserved3(ABC.EMA.RESERVED.7) = 29
+        Reserved2(ABC.EMA.RESERVED.6) = 30
+        Reserved1(ABC.EMA.RESERVED.5) = 31
+        Reserved4(ABC.EMA.RESERVED.4) = 32
+        Reserved3(ABC.EMA.RESERVED.3) = 33
+        Reserved2(ABC.EMA.RESERVED.2) = 34
+        Reserved1(ABC.EMA.RESERVED.1) = 35
+        
+        LocalRef(ABC.EMA.LOCAL.REF) = 36
+        
+        Override(ABC.EMA.OVERRIDE) = 37
+        
+        RecordStatus(ABC.EMA.RECORD.STATUS) = 38
+        CurrNo(ABC.EMA.CURR.NO) = 39
+        Inputter(ABC.EMA.INPUTTER) = 40
+        DateTime(ABC.EMA.DATE.TIME) = 41
+        Authoriser(ABC.EMA.AUTHORISER) = 42
+        CoCode(ABC.EMA.CO.CODE) = 43
+        DeptCode(ABC.EMA.DEPT.CODE) = 44
+        AuditorCode(ABC.EMA.AUDITOR.CODE) = 45
+        AuditDateTime(ABC.EMA.AUDIT.DATE.TIME) = 46
+    }
+}

@@ -201,3 +201,15 @@ public method AbcGetBenRfcSpei (
 {
     jBC: ABC.GET.BEN.RFC.SPEI
 }
+
+public method AbcEnvEmailCashinBbva (
+)
+{
+    jBC: ABC.ENV.EMAIL.CASHIN.BBVA
+}
+
+public method AbcLlenaDebitCashinBbva (
+)
+{
+    jBC: ABC.LLENA.DEBIT.CASHIN.BBVA
+}

@@ -649,3 +649,13 @@ private method AbcCuentaL4ApiFields (
    jBC: ABC.CUENTA.L4.API.FIELDS
 }
 
+private method AbcSmsEmailEnviarFields ()
+{
+    jBC: ABC.SMS.EMAIL.ENVIAR.FIELDS
+}
+
+private method AbcSmsEmailEnviar ()
+{
+    jBC: ABC.SMS.EMAIL.ENVIAR
+}
+
