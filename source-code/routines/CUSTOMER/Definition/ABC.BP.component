@@ -557,3 +557,10 @@ private method AbcValidaFolioBiome (
 {
    jBC: ABC.VALIDA.FOLIO.BIOME
 }
+
+private method AbcValMxbInpDist (
+)
+{
+   jBC: ABC.VAL.MXB.INP.DIST
+}
+
