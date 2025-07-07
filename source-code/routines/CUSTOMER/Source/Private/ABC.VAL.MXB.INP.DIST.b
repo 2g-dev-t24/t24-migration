@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNDgxODY1Njc5OkNwMTI1MjoxNzUxOTExOTM1ODc5Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 07 Jul 2025 15:12:15
+* @ValidationCode : MjozNTE3MzA3MDU6Q3AxMjUyOjE3NTE5MTUzMjA4ODk6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 07 Jul 2025 16:08:40
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -19,14 +19,19 @@ SUBROUTINE ABC.VAL.MXB.INP.DIST
 *----------------------------------------------------------------
 
     $USING EB.SystemTables
+    $USING EB.DataAccess
     $USING MXBASE.CustomerRegulatory
 
+    Y.ID = EB.SystemTables.getComi()
     
-    Y.INPUTTER = EB.SystemTables.getRNew(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.Inputter)
+    FN.MXBASE.ADD.CUSTOMER.DETAILS  = 'F.MXBASE.ADD.CUSTOMER.DETAILS$NAU'
+    F.MXBASE.ADD.CUSTOMER.DETAILS   = ''
     
-    IF NOT(Y.INPUTTER) THEN
-        Y.INPUTTER = EB.SystemTables.getRNewLast(MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.Inputter)
-    END
+    EB.DataAccess.Opf(FN.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS)
+    
+    EB.DataAccess.FRead(FN.MXBASE.ADD.CUSTOMER.DETAILS, Y.ID, R.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS, Y.ERR)
+    
+    Y.INPUTTER = R.MXBASE.ADD.CUSTOMER.DETAILS<MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.Inputter>
 
 	Y.INPUTTER = FIELD(Y.INPUTTER, '_', 2)
     Y.USER.ID  = EB.SystemTables.getOperator()
