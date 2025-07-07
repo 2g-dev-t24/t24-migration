@@ -1,0 +1,10 @@
+component AbcTeller
+# Component Isolation Definition
+metamodelVersion 1.6
+
+private method AbcEnvEmailLimCajaBow ()
+{
+    jBC: ABC.ENV.EMAIL.LIM.CAJA.BOV
+}
+
+# ------------------ METHOD END ------------------
