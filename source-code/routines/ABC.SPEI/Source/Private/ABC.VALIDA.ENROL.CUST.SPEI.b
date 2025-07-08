@@ -123,12 +123,15 @@ VALIDA.CLIENTE:
 *---------------------------------------------------------------
     IF Y.ID.CUST THEN
         ABC.BP.AbcValidaClienteEnrol(Y.ID.CUST, Y.ESTATUS)
-*        IF Y.ESTATUS NE '' THEN
-*            IF Y.ESTATUS MATCHES "ENCONTRADO" ELSE
-*                EB.SystemTables.setE(Y.ESTATUS)
-*                EB.ErrorProcessing.Err()
-*            END
-*        END
+        IF Y.ESTATUS NE '' THEN
+            IF Y.ESTATUS MATCHES "ENCONTRADO" THEN
+                RETURN
+            END
+            ELSE
+                EB.SystemTables.setE(Y.ESTATUS)
+                EB.ErrorProcessing.Err()
+            END
+        END
     END
 
     RETURN
