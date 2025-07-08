@@ -20,3 +20,16 @@ public method BamCheckBalCashWthd (
 {
     jBC: BAM.CHECK.BAL.CASH.WTHD
 }
+
+public method AbcEmailOperaValUsdEfec (
+)
+{
+    jBC: ABC.EMAIL.OPERA.VAL.USD.EFEC
+}
+
+public method AbcValAmtUsdEmailAuth (
+    INOUT YFLAG string
+)
+{
+    jBC: ABC.VAL.AMT.USD.EMAIL.AUTH
+}
