@@ -213,3 +213,9 @@ public method AbcLlenaDebitCashinBbva (
 {
     jBC: ABC.LLENA.DEBIT.CASHIN.BBVA
 }
+
+public method AbcValidaEnrolCustSpei (
+)
+{
+    jBC: ABC.VALIDA.ENROL.CUST.SPEI
+}
