@@ -564,3 +564,8 @@ private method AbcValMxbInpDist (
    jBC: ABC.VAL.MXB.INP.DIST
 }
 
+
+private method AbcValidaClienteEnrol (INOUT YIdCust string, INOUT YEstatus string)
+{
+    jBC: ABC.VALIDA.CLIENTE.ENROL
+}
