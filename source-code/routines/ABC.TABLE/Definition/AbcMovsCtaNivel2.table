@@ -1,0 +1,33 @@
+public table AbcMovsCtaNivel2 {
+    t24: ABC.MOVS.CTA.NIVEL2
+    fields:{
+        Customer(ABC.MOV.CUSTPMER) = 1
+        FechaIni(ABC.MOV.FECHA.INI) = 2
+        FechaFin(ABC.MOV.FECHA.FIN) = 3
+        IdOperacion(ABC.MOV.ID.OPERACION) = 4
+        FechaMov(ABC.MOV.FECHA.MOV) = 5
+        MontoMov(ABC.MOV.MONTO.MOV) = 6
+        MontoTotal(ABC.MOV.MONTO.TOTAL) = 7
+        Reserved10(ABC.MOV.RESERVED.10) = 8
+        Reserved9(ABC.MOV.RESERVED.9) = 9
+        Reserved8(ABC.MOV.RESERVED.8) = 10
+        Reserved7(ABC.MOV.RESERVED.7) = 11
+        Reserved6(ABC.MOV.RESERVED.6) = 12
+        Reserved5(ABC.MOV.RESERVED.5) = 13
+        Reserved4(ABC.MOV.RESERVED.4) = 14
+        Reserved3(ABC.MOV.RESERVED.3) = 15
+        Reserved2(ABC.MOV.RESERVED.2) = 16
+        Reserved1(ABC.MOV.RESERVED.1) = 17
+        LocalRef(ABC.MOV.LOCAL.REF) = 18
+        Override(ABC.MOV.OVERRIDE) = 19
+        RecordStatus(ABC.MOV.RECORD.STATUS) = 20
+        CurrNo(ABC.MOV.CURR.NO) = 21
+        Inputter(ABC.MOV.INPUTTER) = 22
+        DateTime(ABC.MOV.DATE.TIME) = 23
+        Authoriser(ABC.MOV.AUTHORISER) = 24
+        CoCode(ABC.MOV.CO.CODE) = 25
+        DeptCode(ABC.MOV.DEPT.CODE) = 26
+        AuditorCode(ABC.MOV.AUDITOR.CODE) = 27
+        AuditDateTime(ABC.MOV.AUDIT.DATE.TIME) = 28
+    }
+}

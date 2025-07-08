@@ -1,0 +1,35 @@
+public table AbcNivelCuenta {
+    t24: ABC.NIVEL.CUENTA
+    fields:{
+        Descripcion(ABC.NIVEL.DESCRIPCION) = 1
+        Limite(ABC.NIVEL.LIMITE) = 2
+        NivelMoneda(ABC.NIVEL.MONEDA) = 3
+        ValorLimite(ABC.NIVEL.VALOR.LIMITE) = 4
+        Aplicacion(ABC.NIVEL.APLICACION) = 5
+        TransaccionCr(ABC.NIVEL.TRANSACCION.CR) = 6
+        TransaccionDr(ABC.NIVEL.TRANSACCION.DR) = 7
+        AplicacionRest(ABC.NIVEL.APLICACION.REST) = 8
+        TransaccionRest(ABC.NIVEL.TRANSACCION.REST) = 9
+        Reserved10(ABC.NIVEL.RESERVED.10) = 10
+        Reserved9(ABC.NIVEL.RESERVED.9) = 11
+        Reserved8(ABC.NIVEL.RESERVED.8) = 12
+        Reserved7(ABC.NIVEL.RESERVED.7) = 13
+        Reserved6(ABC.NIVEL.RESERVED.6) = 14
+        Reserved5(ABC.NIVEL.RESERVED.5) = 15
+        Reserved4(ABC.NIVEL.RESERVED.4) = 16
+        Reserved3(ABC.NIVEL.RESERVED.3) = 17
+        Reserved2(ABC.NIVEL.RESERVED.2) = 18
+        Reserved1(ABC.NIVEL.RESERVED.1) = 19
+        LocalRef(ABC.NIVEL.LOCAL.REF) = 20
+        Override(ABC.NIVEL.OVERRIDE) = 21
+        RecordStatus(ABC.NIVEL.RECORD.STATUS) = 22
+        CurrNo(ABC.NIVEL.CURR.NO) = 23
+        Inputter(ABC.NIVEL.INPUTTER) = 24
+        DateTime(ABC.NIVEL.DATE.TIME) = 25
+        Authoriser(ABC.NIVEL.AUTHORISER) = 26
+        CoCode(ABC.NIVEL.CO.CODE) = 27
+        DeptCode(ABC.NIVEL.DEPT.CODE) = 28
+        AuditorCode(ABC.NIVEL.AUDITOR.CODE) = 29
+        AuditDateTime(ABC.NIVEL.AUDIT.DATE.TIME) = 30
+    }
+}

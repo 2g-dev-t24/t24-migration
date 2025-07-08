@@ -659,3 +659,32 @@ private method AbcSmsEmailEnviar ()
     jBC: ABC.SMS.EMAIL.ENVIAR
 }
 
+private method AbcMovsCtaComisionistaFields ()
+{
+    jBC: ABC.MOVS.CTA.COMISIONISTA.FIELDS
+}
+
+private method AbcMovsCtaComisionista ()
+{
+    jBC: ABC.MOVS.CTA.COMISIONISTA
+}
+
+private method AbcMovsCtaNivel2Fields ()
+{
+    jBC:ABC.MOVS.CTA.NIVEL2.FIELDS
+}
+
+private method AbcMovsCtaNivel2 ()
+{
+    jBC: ABC.MOVS.CTA.NIVEL2
+}
+
+private method AbcNivelCuentaFields ()
+{
+    jBC: ABC.NIVEL.CUENTA.FIELDS
+}
+
+private method AbcNivelCuenta ()
+{
+    jBC: ABC.NIVEL.CUENTA
+}

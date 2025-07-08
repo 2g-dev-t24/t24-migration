@@ -219,3 +219,73 @@ public method AbcValidaEnrolCustSpei (
 {
     jBC: ABC.VALIDA.ENROL.CUST.SPEI
 }
+
+public method AbcFillDebitAcctCashin (
+)
+{
+    jBC: ABC.FILL.DEBIT.ACCT.CASHIN
+}
+
+public method AbcFillInfCashin (
+)
+{
+    jBC: ABC.FILL.INF.CASHIN
+}
+
+public method AbcGetGeneralParam (
+    INOUT yIdParam string,
+    INOUT yListParams string,
+    INOUT yListValues string
+)
+{
+    jBC: ABC.GET.GENERAL.PARAM
+}
+
+public method AbcNivelLimMontoAut (
+)
+{
+    jBC: ABC.NIVEL.LIM.MONTO.AUT
+}
+
+public method AbcRegistraOperCashin (
+)
+{
+    jBC: ABC.REGISTRA.OPER.CASHIN
+}
+
+public method AbcSendEmailCashin (
+)
+{
+    jBC: ABC.SEND.EMAIL.CASHIN
+}
+
+public method AbcValLimitAcCashin (
+)
+{
+    jBC: ABC.VAL.LIMIT.AC.CASHIN
+}
+
+public method AbcValLimitMovsAcComi (
+    INOUT yIdMovsAcComi string,
+    INOUT yMontoTrans string,
+    INOUT yMontoLimitParam string,
+    INOUT yIdNewFt string,
+    INOUT yIdAdmin string,
+    INOUT yIdComi string,
+    INOUT yIdEstab string,
+    INOUT yCliente string
+)
+{
+    jBC: ABC.VAL.LIMIT.MOVS.AC.COMI
+}
+
+public method AbcValidaLimiteMonto (
+    INOUT yIdLimite string,
+    INOUT yMontoTrans string,
+    INOUT yMontoLimite string,
+    INOUT yId string,
+    INOUT yCliente string
+)
+{
+    jBC: ABC.VALIDA.LIMITE.MONTO
+}
