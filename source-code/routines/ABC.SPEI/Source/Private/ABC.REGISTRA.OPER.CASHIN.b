@@ -109,7 +109,7 @@ LEE.PARAM:
 PROCESO:
 *-----------------------------------------------------------------------------
 
-    Y.CTA.CLIENTE = EB.SystemTables.setRNew(FT.Contract.FundsTransfer.CreditAcctNo)
+    Y.CTA.CLIENTE = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.CreditAcctNo)
     GOSUB OBTENER.CLIENTE
     Y.ID.FT.OPER = EB.SystemTables.getIdNew()
     Y.MONTO.OPER = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.DebitAmount)
