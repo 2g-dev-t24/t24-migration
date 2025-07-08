@@ -8,3 +8,11 @@ private method AbcEnvEmailLimCajaBow ()
 }
 
 # ------------------ METHOD END ------------------
+
+public method AbcEmailDepositoEfectivo (
+)
+{
+    jBC: ABC.EMAIL.DEPOSITO.EFECTIVO
+}
+
+# ------------------ METHOD END ------------------
