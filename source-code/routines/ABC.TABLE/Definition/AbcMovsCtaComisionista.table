@@ -1,23 +1,23 @@
 public table AbcMovsCtaComisionista {
     t24: ABC.MOVS.CTA.COMISIONISTA
     fields:{
-        Uuid(MOVS.AC.COMI.CUSTOMER) = 1
-        Saldo(MOVS.AC.COMI.OPERACION.IN) = 2
-        Uuid(MOVS.AC.COMI.MONTO.IN) = 3
-        Saldo(MOVS.AC.COMI.FECHA.MOV.IN) = 4
-        Uuid(MOVS.AC.COMI.CANCELACION.IN) = 5
-        Saldo(MOVS.AC.COMI.ADMIN.COMIS.IN) = 6
-        Uuid(MOVS.AC.COMI.ID.COMI.IN) = 7
-        Saldo(MOVS.AC.COMI.COMI.ESTAB.IN) = 8
-        Uuid(MOVS.AC.COMI.MONTO.TOTAL.IN) = 9
-        Saldo(MOVS.AC.COMI.OPERACION.OUT) = 10
-        Uuid(MOVS.AC.COMI.MONTO.OUT) = 11
-        Saldo(MOVS.AC.COMI.FECHA.MOV.OUT) = 12
-        Uuid(MOVS.AC.COMI.CANCELACION.OUT) = 13
-        Saldo(MOVS.AC.COMI.ADMIN.COMIS.OUT) = 14
-        Uuid(MOVS.AC.COMI.ID.COMI.OUT) = 15
-        Saldo(MOVS.AC.COMI.COMI.ESTAB.OUT) = 16
-        Uuid(MOVS.AC.COMI.MONTO.TOTAL.OUT) = 17
+        Customer(MOVS.AC.COMI.CUSTOMER) = 1
+        OperacionIn(MOVS.AC.COMI.OPERACION.IN) = 2
+        MontoIn(MOVS.AC.COMI.MONTO.IN) = 3
+        FechaMovIn(MOVS.AC.COMI.FECHA.MOV.IN) = 4
+        CancelacionIn(MOVS.AC.COMI.CANCELACION.IN) = 5
+        AdminComisIn(MOVS.AC.COMI.ADMIN.COMIS.IN) = 6
+        IdComiIn(MOVS.AC.COMI.ID.COMI.IN) = 7
+        ComiEstabIn(MOVS.AC.COMI.COMI.ESTAB.IN) = 8
+        MontoTotalIn(MOVS.AC.COMI.MONTO.TOTAL.IN) = 9
+        OperacionOut(MOVS.AC.COMI.OPERACION.OUT) = 10
+        MontoOut(MOVS.AC.COMI.MONTO.OUT) = 11
+        FechaMovOut(MOVS.AC.COMI.FECHA.MOV.OUT) = 12
+        CancelacionOut(MOVS.AC.COMI.CANCELACION.OUT) = 13
+        AdminComisOut(MOVS.AC.COMI.ADMIN.COMIS.OUT) = 14
+        IdComiOut(MOVS.AC.COMI.ID.COMI.OUT) = 15
+        ComiEstabOut(MOVS.AC.COMI.COMI.ESTAB.OUT) = 16
+        MontoTotalOut(MOVS.AC.COMI.MONTO.TOTAL.OUT) = 17
         Reserved20(MOVS.AC.COMI.RESERVED.20) = 18
         Reserved19(MOVS.AC.COMI.RESERVED.19) = 19
         Reserved18(MOVS.AC.COMI.RESERVED.18) = 20

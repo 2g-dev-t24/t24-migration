@@ -143,7 +143,7 @@ PROCESO:
     END
     Y.MONTO.TOTAL = Y.MONTO.TOTAL + Y.MONTO.OPER
 
-    REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.Customer> = Y.CLIENTE
+    REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.IdOperacion> = Y.CLIENTE
     REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.IdOperacion, Y.OPER.SIGUIENTE> = Y.ID.FT.OPER
     REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.MontoMov, Y.OPER.SIGUIENTE> = Y.MONTO.OPER
     REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.FechaMov, Y.OPER.SIGUIENTE> = Y.FECHA.OPER

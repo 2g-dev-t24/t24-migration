@@ -107,7 +107,7 @@ REGISTRA.OPERACION:
     EB.DataAccess.FRead(FN.ABC.NIVEL.CUENTA,Y.NIVEL.CR,R.NIVEL,F.ABC.NIVEL.CUENTA,YERR.NIVEL)
     IF R.NIVEL THEN
         Y.MONTO.LIMITE = R.NIVEL<AbcTable.AbcNivelCuenta.ValorLimite>
-        Y.APP = R.NIVEL<AbcTable.AbcNivelCuenta.ValorLimite.Aplicacion>
+        Y.APP = R.NIVEL<AbcTable.AbcNivelCuenta.Aplicacion>
         Y.APP = RAISE(Y.APP)
 
         LOCATE APPLICATION IN Y.APP SETTING YPOS.APP THEN
