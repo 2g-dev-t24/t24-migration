@@ -11,6 +11,8 @@ $PACKAGE AbcSpei
     $USING AC.AccountOpening
     $USING FT.Contract
     $USING ABC.BP
+    $USING EB.Updates
+    $USING EB.ErrorProcessing
 
     GOSUB INICIALIZA
     IF (Y.NIVEL.CTA NE 'NIVEL.1') AND (Y.NIVEL.CTA NE 'NIVEL.2') THEN
@@ -121,12 +123,12 @@ VALIDA.CLIENTE:
 *---------------------------------------------------------------
     IF Y.ID.CUST THEN
         ABC.BP.AbcValidaClienteEnrol(Y.ID.CUST, Y.ESTATUS)
-        IF Y.ESTATUS NE '' THEN
-            IF Y.ESTATUS MATCHES "ENCONTRADO" ELSE
-                EB.SystemTables.setE(Y.ESTATUS)
-                EB.ErrorProcessing.Err()
-            END
-        END
+*        IF Y.ESTATUS NE '' THEN
+*            IF Y.ESTATUS MATCHES "ENCONTRADO" ELSE
+*                EB.SystemTables.setE(Y.ESTATUS)
+*                EB.ErrorProcessing.Err()
+*            END
+*        END
     END
 
     RETURN

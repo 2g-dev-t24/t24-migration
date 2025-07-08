@@ -565,7 +565,7 @@ private method AbcValMxbInpDist (
 }
 
 
-private method AbcValidaClienteEnrol (INOUT YIdCust string, INOUT YEstatus string)
+public method AbcValidaClienteEnrol (INOUT YIdCust string, INOUT YEstatus string)
 {
     jBC: ABC.VALIDA.CLIENTE.ENROL
 }
