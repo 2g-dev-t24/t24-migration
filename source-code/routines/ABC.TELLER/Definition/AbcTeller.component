@@ -15,4 +15,8 @@ public method AbcEmailDepositoEfectivo (
     jBC: ABC.EMAIL.DEPOSITO.EFECTIVO
 }
 
-# ------------------ METHOD END ------------------
+public method BamCheckBalCashWthd (
+)
+{
+    jBC: BAM.CHECK.BAL.CASH.WTHD
+}
