@@ -10,7 +10,7 @@ $PACKAGE AbcSpei
     $USING EB.Updates
     $USING FT.Contract
     $USING EB.DataAccess
-    $using AC.AccountOpening
+    $USING AC.AccountOpening
 
     $USING AbcTable
 
