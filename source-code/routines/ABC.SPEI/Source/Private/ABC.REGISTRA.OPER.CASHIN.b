@@ -10,7 +10,7 @@ $PACKAGE AbcSpei
     $USING EB.Updates
     $USING FT.Contract
     $USING EB.DataAccess
-    $using AC.AccountOpening
+    $USING AC.AccountOpening
 
     $USING AbcTable
 
@@ -97,7 +97,7 @@ LEE.PARAM:
 
     LOCATE 'COMI.NO.BONIFICA' IN Y.LIST.PARAMS SETTING Y.POS THEN
         Y.COMISIONISTAS = Y.LIST.VALUES<Y.POS>
-        CHANGE '|' TO VM IN Y.COMISIONISTAS
+        CHANGE '|' TO @VM IN Y.COMISIONISTAS
     END
 
     IF Y.ID.COMISIONISTA MATCHES Y.COMISIONISTAS THEN
@@ -109,7 +109,7 @@ LEE.PARAM:
 PROCESO:
 *-----------------------------------------------------------------------------
 
-    Y.CTA.CLIENTE = EB.SystemTables.setRNew(FT.Contract.FundsTransfer.CreditAcctNo)
+    Y.CTA.CLIENTE = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.CreditAcctNo)
     GOSUB OBTENER.CLIENTE
     Y.ID.FT.OPER = EB.SystemTables.getIdNew()
     Y.MONTO.OPER = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.DebitAmount)
@@ -132,8 +132,9 @@ PROCESO:
         Y.MONTO.A.BONIFICAR = REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.MontoABonificar>
     END
 
-    IF V$FUNCTION EQ "R" THEN
-        CHANGE VM TO FM IN Y.LIST.OPER.BONIF
+    Y.V.FUNCTION = EB.SystemTables.getVFunction()
+    IF Y.V.FUNCTION EQ "R" THEN
+        CHANGE @VM TO @FM IN Y.LIST.OPER.BONIF
         Y.MONTO.OPER = Y.MONTO.OPER * -1
         GOSUB OBTEN.DECREMENTO.MONTOS
         Y.TOTAL.OPERACIONES = Y.TOTAL.OPERACIONES- 1
@@ -143,7 +144,7 @@ PROCESO:
     END
     Y.MONTO.TOTAL = Y.MONTO.TOTAL + Y.MONTO.OPER
 
-    REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.Customer> = Y.CLIENTE
+    REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.IdOperacion> = Y.CLIENTE
     REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.IdOperacion, Y.OPER.SIGUIENTE> = Y.ID.FT.OPER
     REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.MontoMov, Y.OPER.SIGUIENTE> = Y.MONTO.OPER
     REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.FechaMov, Y.OPER.SIGUIENTE> = Y.FECHA.OPER

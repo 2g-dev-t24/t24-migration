@@ -98,7 +98,7 @@ REGISTRA.OPERACION:
     END
     Y.TRANS.TYPE = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.TransactionType)
 
-    EB.DataAccess.FRead(FN.ACCOUNT,Y.CUENTA.CR,R.ACCOUNT,F.ACCOUNT,YERR.ACCOUNT)
+    EB.DataAccess.FRead(FN.ACCOUNT,Y.CUENTA.CR,R.ACC.CUS,F.ACCOUNT,YERR.ACCOUNT)
     IF R.ACCOUNT THEN
         Y.CLIENTE = R.ACC.CUS<AC.AccountOpening.Account.Customer>
         Y.NIVEL.CR = R.ACC.CUS<AC.AccountOpening.Account.LocalRef, YPOS.NIVEL>
@@ -107,12 +107,13 @@ REGISTRA.OPERACION:
     EB.DataAccess.FRead(FN.ABC.NIVEL.CUENTA,Y.NIVEL.CR,R.NIVEL,F.ABC.NIVEL.CUENTA,YERR.NIVEL)
     IF R.NIVEL THEN
         Y.MONTO.LIMITE = R.NIVEL<AbcTable.AbcNivelCuenta.ValorLimite>
-        Y.APP = R.NIVEL<AbcTable.AbcNivelCuenta.ValorLimite.Aplicacion>
+        Y.APP = R.NIVEL<AbcTable.AbcNivelCuenta.Aplicacion>
         Y.APP = RAISE(Y.APP)
 
-        LOCATE APPLICATION IN Y.APP SETTING YPOS.APP THEN
+        Y.APPL = EB.SystemTables.getApplication()
+        LOCATE Y.APPL IN Y.APP SETTING YPOS.APP THEN
             Y.TRANS.CR = R.NIVEL<AbcTable.AbcNivelCuenta.TransaccionCr, YPOS.APP>
-            CHANGE SM TO FM IN Y.TRANS.CR
+            CHANGE @SM TO @FM IN Y.TRANS.CR
             LOCATE Y.TRANS.TYPE IN Y.TRANS.CR SETTING YPOS.TRANS.CR THEN
                 Y.ID.LIMITE = Y.CUENTA.CR:"-":Y.FEC.LIMITE
                 AbcSpei.AbcValidaLimiteMonto(Y.ID.LIMITE,Y.MONTO.TRANS,Y.MONTO.LIMITE,ID.NEW,Y.CLIENTE)
@@ -137,7 +138,7 @@ BORRA.OPERACION:
 
     EB.DataAccess.FRead(FN.ABC.MOVS.CTA.NIVEL2,Y.ID.LIMITE,R.MOV.CTA,F.ABC.MOVS.CTA.NIVEL2,YMOV.CTA)
     Y.LISTA.OPERACIONES = R.MOV.CTA<AbcTable.AbcMovsCtaNivel2.IdOperacion>
-    CHANGE VM TO FM IN Y.LISTA.OPERACIONES
+    CHANGE @VM TO @FM IN Y.LISTA.OPERACIONES
     LOCATE Y.ID.OPERACION IN Y.LISTA.OPERACIONES SETTING POS.OPER THEN
         R.MOV.CTA<AbcTable.AbcMovsCtaNivel2.MontoTotal> = R.MOV.CTA<AbcTable.AbcMovsCtaNivel2.MontoTotal> - R.MOV.CTA<AbcTable.AbcMovsCtaNivel2.MontoMov, POS.OPER>
         DEL R.MOV.CTA<AbcTable.AbcMovsCtaNivel2.IdOperacion, POS.OPER>

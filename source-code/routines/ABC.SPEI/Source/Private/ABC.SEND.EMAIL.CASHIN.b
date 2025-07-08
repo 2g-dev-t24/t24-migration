@@ -10,6 +10,7 @@ $PACKAGE AbcSpei
     $USING EB.Updates
     $USING AC.AccountOpening
     $USING FT.Contract
+    $USING ST.Customer
     
     $USING AbcTable
     $USING ABC.BP
@@ -189,7 +190,8 @@ OBTIENE.ID:
 
     Y.CLIENTE = ''
     Y.CLIENTE = Y.ID.CUS
-    ID.ABC.SMS.EMAIL.ENVIAR  = Y.CLIENTE:'-':TODAY:'.':TIMEDATE()[1,2]
+    Y.TODAY = EB.SystemTables.getToday()
+    ID.ABC.SMS.EMAIL.ENVIAR  = Y.CLIENTE:'-':Y.TODAY:'.':TIMEDATE()[1,2]
     ID.ABC.SMS.EMAIL.ENVIAR := TIMEDATE()[4,2]:TIMEDATE()[7,2]:Y.PROCESO.MILI
 
     RETURN
