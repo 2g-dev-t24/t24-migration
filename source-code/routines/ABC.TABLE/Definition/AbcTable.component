@@ -688,3 +688,13 @@ private method AbcNivelCuenta ()
 {
     jBC: ABC.NIVEL.CUENTA
 }
+
+private method AbcLFtTxnDetailFields ()
+{
+    jBC: ABC.L.FT.TXN.DETAIL.FIELDS
+}
+
+private method AbcLFtTxnDetail ()
+{
+    jBC: ABC.L.FT.TXN.DETAIL
+}

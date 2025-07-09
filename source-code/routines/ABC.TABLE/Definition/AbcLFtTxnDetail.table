@@ -1,0 +1,35 @@
+public table AbcLFtTxnDetail {
+    t24: ABC.L.FT.TXN.DETAIL
+    fields:{
+        IdFt(FT.TXN.DET.ID.FT) = 1
+        DebitAcctNo(FT.TXN.DET.DEBIT.ACCT.NO) = 2
+        CreditAcctNo(FT.TXN.DET.CREDIT.ACCT.NO) = 3
+        Reserved6(FT.TXN.DET.RESERVED.15) = 4
+        Reserved5(FT.TXN.DET.RESERVED.14) = 5
+        Reserved4(FT.TXN.DET.RESERVED.13) = 6
+        Reserved6(FT.TXN.DET.RESERVED.12) = 7
+        Reserved5(FT.TXN.DET.RESERVED.11) = 8
+        Reserved4(FT.TXN.DET.RESERVED.10) = 9
+        Reserved3(FT.TXN.DET.RESERVED.9) = 10
+        Reserved2(FT.TXN.DET.RESERVED.8) = 11
+        Reserved1(FT.TXN.DET.RESERVED.7) = 12
+        Reserved6(FT.TXN.DET.RESERVED.6) = 13
+        Reserved5(FT.TXN.DET.RESERVED.5) = 14
+        Reserved4(FT.TXN.DET.RESERVED.4) = 15
+        Reserved3(FT.TXN.DET.RESERVED.3) = 16
+        Reserved2(FT.TXN.DET.RESERVED.2) = 17
+        Reserved1(FT.TXN.DET.RESERVED.1) = 18
+        LocalRef(FT.TXN.DET.LOCAL.REF) = 19
+        Override(FT.TXN.DET.OVERRIDE) = 20
+        RecordStatus(FT.TXN.DET.RECORD.STATUS) = 21
+        CurrNo(FT.TXN.DET.CURR.NO) = 22
+        Inputter(FT.TXN.DET.INPUTTER) = 23
+        DateTime(FT.TXN.DET.DATE.TIME) = 24
+        Authoriser(FT.TXN.DET.AUTHORISER) = 25
+        CoCode(FT.TXN.DET.CO.CODE) = 26
+        DeptCode(FT.TXN.DET.DEPT.CODE) = 27
+        AuditorCode(FT.TXN.DET.AUDITOR.CODE) = 28
+        AuditDateTime(FT.TXN.DET.AUDIT.DATE.TIME) = 29
+
+    }
+}
