@@ -289,3 +289,11 @@ public method AbcValidaLimiteMonto (
 {
     jBC: ABC.VALIDA.LIMITE.MONTO
 }
+
+private method abcEMovFt (
+   INOUT yArr string
+)
+{
+   jBC: ABC.E.MOV.FT
+}
+
