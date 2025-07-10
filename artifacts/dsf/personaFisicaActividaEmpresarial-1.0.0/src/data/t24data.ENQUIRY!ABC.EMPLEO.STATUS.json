@@ -1,6 +1,6 @@
 {
   "header" : {
-    "id" : "ABC.RANGO.EMPLEADOS",
+    "id" : "ABC.EMPLEO.STATUS",
     "dsfApiType" : "ENQUIRY",
     "dsfApiComponent" : "t24data",
     "dsfApiPhase" : "main",
@@ -16,24 +16,28 @@
         "OPERATION" : "@ID"
       } ],
       "CONVERSION" : [ {
-        "CONVERSION" : "EXTRACT 21,1"
+        "CONVERSION" : "EXTRACT 19,1"
       } ],
       "FIELD.NAME" : "@ID",
       "LENGTH.MASK" : "75L",
       "SINGLE.MULTI" : "S",
-      "COLUMN" : "1"
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "id"
+      } ]
     }, {
       "OPERATION" : [ {
         "OPERATION" : "DESCRIPTION"
       } ],
       "FIELD.NAME" : "DESCRIPTION",
-      "LENGTH.MASK" : "65L",
-      "SINGLE.MULTI" : "S",
-      "COLUMN" : "4",
-      "TYPE" : "L"
+      "LENGTH.MASK" : "60L",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "DESCRIPTION"
+      } ]
     } ],
     "FIXED.SELECTION" : [ {
-      "FIXED.SELECTION" : "@ID LK ABC.RANGO.EMPLEADOS..."
+      "FIXED.SELECTION" : "@ID LK EMPLOYMENT.STATUS*9"
     } ],
     "FILE.NAME" : "EB.LOOKUP"
   }

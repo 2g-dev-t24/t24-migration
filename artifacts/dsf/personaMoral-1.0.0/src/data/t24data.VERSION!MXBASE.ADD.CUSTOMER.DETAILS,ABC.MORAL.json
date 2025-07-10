@@ -10,6 +10,8 @@
     }
   },
   "body" : {
+    "NO.OF.AUTH" : "1",
+    "RECORDS.PER.PAGE" : "1",
     "LANGUAGE.CODE" : [ {
       "LANGUAGE.CODE" : "2"
     } ],
@@ -17,6 +19,9 @@
     "AUTOM.FIELD.NO" : [ {
       "AUTOM.FIELD.NO" : "TYPE",
       "AUT.NEW.CONTENT" : "Cheques,Efectivo,Transferencias"
+    }, {
+      "AUTOM.FIELD.NO" : "TYPE.OF.OPERATION-1",
+      "AUT.NEW.CONTENT" : "0"
     }, {
       "AUTOM.FIELD.NO" : "TYPE.OF.OPERATION-2",
       "AUT.NEW.CONTENT" : "Cheques,Efectivo,Transferencias"
@@ -165,9 +170,7 @@
     "DESCRIPTION" : [ {
       "DESCRIPTION" : "Persona Moral"
     } ],
-    "NO.OF.AUTH" : "1",
     "MULTI.POSSIBLE" : "Y",
-    "RECORDS.PER.PAGE" : "1",
     "HDR.1.001..039" : [ {
       "HDR.1.001..039" : "Persona Moral"
     } ],
@@ -183,6 +186,9 @@
     }, {
       "VALIDATION.RTN" : "ABC.CAL.CAP.CONT",
       "VALIDATION.FLD" : "TOTAL.LIABILITY"
+    } ],
+    "ID.RTN" : [ {
+      "ID.RTN" : "ABC.VAL.MXB.INP.DIST"
     } ]
   }
 }

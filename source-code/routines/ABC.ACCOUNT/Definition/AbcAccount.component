@@ -8,3 +8,27 @@ private method AbcCambCatRemunera ()
 }
 
 # ------------------ METHOD END ------------------
+
+
+private method abcValidaEmailBen (
+)
+{
+   jBC: ABC.VALIDA.EMAIL.BEN
+}
+
+
+
+private method abcValFlagUpdateNvl (
+)
+{
+   jBC: ABC.VAL.FLAG.UPDATE.NVL
+}
+
+
+
+private method abcValPorcBenefN4l (
+)
+{
+   jBC: ABC.VAL.PORC.BENEF.N4L
+}
+

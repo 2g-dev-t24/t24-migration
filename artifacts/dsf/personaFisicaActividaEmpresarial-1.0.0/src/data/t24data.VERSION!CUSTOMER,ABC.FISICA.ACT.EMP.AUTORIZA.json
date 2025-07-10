@@ -1,6 +1,6 @@
 {
   "header" : {
-    "id" : "CUSTOMER,ABC.FISICA.AUTORIZA",
+    "id" : "CUSTOMER,ABC.FISICA.ACT.EMP.AUTORIZA",
     "dsfApiType" : "VERSION",
     "dsfApiComponent" : "t24data",
     "dsfApiPhase" : "main",
@@ -12,7 +12,11 @@
   "body" : {
     "LOCAL.REF.FIELD" : "LOCAL.REF",
     "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "ABC.VALIDA.CLIENTE.EXISTENTE"
+    }, {
       "INPUT.ROUTINE" : "ABC.VERIFICA.FOLIO.BIOMETRICO"
+    }, {
+      "INPUT.ROUTINE" : "ABC.VAL.TAX.ID"
     } ],
     "NO.OF.AUTH" : "0",
     "RECORDS.PER.PAGE" : "1",
@@ -25,6 +29,109 @@
       "LANGUAGE.CODE" : "2"
     } ],
     "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "SECTOR",
+      "AUT.NEW.CONTENT" : "1100"
+    }, {
+      "AUTOM.FIELD.NO" : "NATIONALITY",
+      "AUT.NEW.CONTENT" : "MX"
+    }, {
+      "AUTOM.FIELD.NO" : "RESIDENCE",
+      "AUT.NEW.CONTENT" : "MX"
+    }, {
+      "AUTOM.FIELD.NO" : "COUNTRY-1",
+      "AUT.NEW.CONTENT" : "MX"
+    }, {
+      "AUTOM.FIELD.NO" : "ABC.FIRMA.ELECT",
+      "AUT.NEW.CONTENT" : "NO"
+    }, {
+      "AUTOM.FIELD.NO" : "CUSTOMER.TYPE",
+      "AUT.NEW.CONTENT" : "PROSPECT"
+    }, {
+      "AUTOM.FIELD.NO" : "MNEMONIC",
+      "AUT.NEW.CONTENT" : "@ABC.GENERA.MNEMONIC"
+    }, {
+      "AUTOM.FIELD.NO" : "TARGET",
+      "AUT.NEW.CONTENT" : "1"
+    }, {
+      "AUTOM.FIELD.NO" : "BIRTH.INCORP.DATE",
+      "AUT.NEW.CONTENT" : "!TODAY"
+    }, {
+      "AUTOM.FIELD.NO" : "CUSTOMER.STATUS",
+      "AUT.NEW.CONTENT" : "2"
+    }, {
+      "AUTOM.FIELD.NO" : "LANGUAGE",
+      "AUT.NEW.CONTENT" : "2"
+    }, {
+      "AUTOM.FIELD.NO" : "ITF.TAX.EXEMPT",
+      "AUT.NEW.CONTENT" : "NO"
+    }, {
+      "AUTOM.FIELD.NO" : "SHORT.NAME-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.APEPAT"
+    }, {
+      "AUTOM.FIELD.NO" : "NAME.1-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.APEMAT"
+    }, {
+      "AUTOM.FIELD.NO" : "NAME.2-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.NOMBRES"
+    }, {
+      "AUTOM.FIELD.NO" : "DATE.OF.BIRTH",
+      "AUT.NEW.CONTENT" : "!CURRENT.FECNAC"
+    }, {
+      "AUTOM.FIELD.NO" : "GENDER",
+      "AUT.NEW.CONTENT" : "!CURRENT.SEXO"
+    }, {
+      "AUTOM.FIELD.NO" : "IUB",
+      "AUT.NEW.CONTENT" : "!CURRENT.IUB"
+    }, {
+      "AUTOM.FIELD.NO" : "EXTERN.CUS.ID-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.CURP"
+    }, {
+      "AUTOM.FIELD.NO" : "DISTRICT.NAME",
+      "AUT.NEW.CONTENT" : "!CURRENT.ESTNAC"
+    }, {
+      "AUTOM.FIELD.NO" : "ABC.PAIS.ANT",
+      "AUT.NEW.CONTENT" : "MX"
+    }, {
+      "AUTOM.FIELD.NO" : "CUSTOMER.CURRENCY-1",
+      "AUT.NEW.CONTENT" : "MXN"
+    }, {
+      "AUTOM.FIELD.NO" : "CNBV.SECTOR",
+      "AUT.NEW.CONTENT" : "32"
+    }, {
+      "AUTOM.FIELD.NO" : "OFF.PHONE-1",
+      "AUT.NEW.CONTENT" : "52"
+    }, {
+      "AUTOM.FIELD.NO" : "FAX.1-1",
+      "AUT.NEW.CONTENT" : "52"
+    }, {
+      "AUTOM.FIELD.NO" : "RISK.LEVEL-1",
+      "AUT.NEW.CONTENT" : "1"
+    }, {
+      "AUTOM.FIELD.NO" : "LEGAL.DOC.NAME-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.TIPIDE"
+    }, {
+      "AUTOM.FIELD.NO" : "LEGAL.ID-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.NUMID"
+    }, {
+      "AUTOM.FIELD.NO" : "LEGAL.ISS.DATE-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.FECEMI"
+    }, {
+      "AUTOM.FIELD.NO" : "LEGAL.EXP.DATE-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.FECVEN"
+    }, {
+      "AUTOM.FIELD.NO" : "SMS.1-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.CELULAR"
+    }, {
+      "AUTOM.FIELD.NO" : "EMAIL.1-1",
+      "AUT.NEW.CONTENT" : "!CURRENT.EMAIL"
+    }, {
+      "AUTOM.FIELD.NO" : "L.EMAIL.SMS.NOT",
+      "AUT.NEW.CONTENT" : "S"
+    }, {
+      "AUTOM.FIELD.NO" : "STAFF.OFFICIAL",
+      "AUT.NEW.CONTENT" : "N"
+    } ],
     "FIELD.NO" : [ {
       "FIELD.NO" : "SECTOR",
       "COLUMN" : "1",
@@ -48,17 +155,6 @@
       } ],
       "TABLE.LINE" : "1"
     }, {
-      "FIELD.NO" : "CUSTOMER.TYPE",
-      "COLUMN" : "1",
-      "TEXT" : [ {
-        "TEXT" : "Tipo"
-      } ],
-      "TEXT.CHAR.MAX" : "5",
-      "TABLE.COLUMN" : [ {
-        "TABLE.COLUMN" : "1-43-"
-      } ],
-      "TABLE.LINE" : "2"
-    }, {
       "FIELD.NO" : "BIRTH.INCORP.DATE",
       "COLUMN" : "1",
       "TEXT" : [ {
@@ -68,7 +164,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-39-"
       } ],
-      "TABLE.LINE" : "3"
+      "TABLE.LINE" : "2"
     }, {
       "FIELD.NO" : "SHORT.NAME-1",
       "COLUMN" : "1",
@@ -80,7 +176,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-89-"
       } ],
-      "TABLE.LINE" : "4"
+      "TABLE.LINE" : "3"
     }, {
       "FIELD.NO" : "NAME.1-1",
       "COLUMN" : "1",
@@ -92,7 +188,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-89-"
       } ],
-      "TABLE.LINE" : "5"
+      "TABLE.LINE" : "4"
     }, {
       "FIELD.NO" : "NAME.2-1",
       "COLUMN" : "1",
@@ -104,7 +200,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-80-"
       } ],
-      "TABLE.LINE" : "6"
+      "TABLE.LINE" : "5"
     }, {
       "FIELD.NO" : "DATE.OF.BIRTH",
       "COLUMN" : "1",
@@ -115,11 +211,12 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-33-"
       } ],
-      "TABLE.LINE" : "7"
+      "TABLE.LINE" : "6"
     }, {
       "FIELD.NO" : "COUNTRY-1",
       "COLUMN" : "1",
       "EXPANSION" : "NO",
+      "DROP.DOWN" : "%COUNTRY",
       "TEXT" : [ {
         "TEXT" : "Pais de Nacimiento"
       } ],
@@ -127,22 +224,23 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-56-"
       } ],
-      "TABLE.LINE" : "8"
+      "TABLE.LINE" : "7"
     }, {
-      "FIELD.NO" : "BIRTH.PROVINCE",
+      "FIELD.NO" : "DISTRICT.NAME",
       "COLUMN" : "1",
-      "DROP.DOWN" : "MXBASE.BIRTH.PROVINCE",
+      "DROP.DOWN" : "E.ABC.ESTADOS",
       "TEXT" : [ {
         "TEXT" : "Estado de la Republica de Nacimiento"
       } ],
       "TEXT.CHAR.MAX" : "36",
       "TABLE.COLUMN" : [ {
-        "TABLE.COLUMN" : "1-41-"
+        "TABLE.COLUMN" : "1-74-"
       } ],
-      "TABLE.LINE" : "9"
+      "TABLE.LINE" : "8"
     }, {
       "FIELD.NO" : "NATIONALITY",
       "COLUMN" : "24",
+      "DROP.DOWN" : "%COUNTRY",
       "TEXT" : [ {
         "TEXT" : "Nacionalidad"
       } ],
@@ -153,10 +251,11 @@
       "ATTRIBS" : [ {
         "ATTRIBS" : "HOT.FIELD"
       } ],
-      "TABLE.LINE" : "10"
+      "TABLE.LINE" : "9"
     }, {
       "FIELD.NO" : "RESIDENCE",
       "COLUMN" : "1",
+      "DROP.DOWN" : "%COUNTRY",
       "TEXT" : [ {
         "TEXT" : "Pais de Residencia"
       } ],
@@ -167,7 +266,7 @@
       "ATTRIBS" : [ {
         "ATTRIBS" : "HOT.FIELD"
       } ],
-      "TABLE.LINE" : "11"
+      "TABLE.LINE" : "10"
     }, {
       "FIELD.NO" : "GENDER",
       "TEXT" : [ {
@@ -180,7 +279,7 @@
       "ATTRIBS" : [ {
         "ATTRIBS" : "HOT.FIELD"
       } ],
-      "TABLE.LINE" : "11"
+      "TABLE.LINE" : "10"
     }, {
       "FIELD.NO" : "EXTERN.CUS.ID-1",
       "COLUMN" : "1",
@@ -192,7 +291,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-57-"
       } ],
-      "TABLE.LINE" : "12"
+      "TABLE.LINE" : "11"
     }, {
       "CASE.CONV" : "UPPERCASE",
       "FIELD.NO" : "TAX.ID-1",
@@ -208,7 +307,7 @@
       "ATTRIBS" : [ {
         "ATTRIBS" : "HOT.FIELD"
       } ],
-      "TABLE.LINE" : "13"
+      "TABLE.LINE" : "12"
     }, {
       "FIELD.NO" : "IUB",
       "COLUMN" : "1",
@@ -219,7 +318,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-44-"
       } ],
-      "TABLE.LINE" : "14"
+      "TABLE.LINE" : "13"
     }, {
       "FIELD.NO" : "ABC.FIRMA.ELECT",
       "COLUMN" : "1",
@@ -233,7 +332,7 @@
       "ATTRIBS" : [ {
         "ATTRIBS" : "HOT.FIELD"
       } ],
-      "TABLE.LINE" : "15"
+      "TABLE.LINE" : "14"
     }, {
       "FIELD.NO" : "TEXT-1",
       "COLUMN" : "1",
@@ -245,7 +344,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-63-"
       } ],
-      "TABLE.LINE" : "16"
+      "TABLE.LINE" : "15"
     }, {
       "FIELD.NO" : "MARITAL.STATUS",
       "COLUMN" : "1",
@@ -259,7 +358,7 @@
       "ATTRIBS" : [ {
         "ATTRIBS" : "HOT.FIELD"
       } ],
-      "TABLE.LINE" : "17"
+      "TABLE.LINE" : "16"
     }, {
       "FIELD.NO" : "ABC.NOMBRE.CONY",
       "COLUMN" : "1",
@@ -271,7 +370,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-86-"
       } ],
-      "TABLE.LINE" : "18"
+      "TABLE.LINE" : "17"
     }, {
       "FIELD.NO" : "ABC.REGIMEN",
       "COLUMN" : "24",
@@ -286,7 +385,7 @@
       "ATTRIBS" : [ {
         "ATTRIBS" : "HOT.FIELD"
       } ],
-      "TABLE.LINE" : "19"
+      "TABLE.LINE" : "18"
     }, {
       "FIELD.NO" : "ABC.ESTUDIOS",
       "COLUMN" : "1",
@@ -300,7 +399,7 @@
       "ATTRIBS" : [ {
         "ATTRIBS" : "HOT.FIELD"
       } ],
-      "TABLE.LINE" : "20"
+      "TABLE.LINE" : "19"
     }, {
       "FIELD.NO" : "JOB.TITLE-1",
       "COLUMN" : "24",
@@ -311,7 +410,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "24-22-"
       } ],
-      "TABLE.LINE" : "21"
+      "TABLE.LINE" : "20"
     }, {
       "FIELD.NO" : "ACCOUNT.OFFICER",
       "COLUMN" : "1",
@@ -322,7 +421,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "1-15-"
       } ],
-      "TABLE.LINE" : "22"
+      "TABLE.LINE" : "21"
     }, {
       "FIELD.NO" : "OTHER.OFFICER-1",
       "COLUMN" : "24",
@@ -333,7 +432,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "24-26-"
       } ],
-      "TABLE.LINE" : "22"
+      "TABLE.LINE" : "21"
     }, {
       "FIELD.NO" : "ITF.TAX.EXEMPT",
       "COLUMN" : "24",
@@ -345,7 +444,7 @@
       "TABLE.COLUMN" : [ {
         "TABLE.COLUMN" : "24-25-"
       } ],
-      "TABLE.LINE" : "23"
+      "TABLE.LINE" : "22"
     } ],
     "ASSOC.VERSION" : [ {
       "ASSOC.VERSION" : "CUSTOMER,ABC.FISICA.DOCUMENTOS"
@@ -354,7 +453,7 @@
     }, {
       "ASSOC.VERSION" : "CUSTOMER,ABC.FISICA.CONTACTOS"
     }, {
-      "ASSOC.VERSION" : "CUSTOMER,ABC.FISICA.EMPLEO"
+      "ASSOC.VERSION" : "CUSTOMER,ABC.FISICA.EMPLEO2"
     }, {
       "ASSOC.VERSION" : "CUSTOMER,ABC.FISICA.CONOCE.CLIENTE"
     }, {
@@ -368,7 +467,7 @@
     } ],
     "REPORT.LOCKS" : "YES",
     "DESCRIPTION" : [ {
-      "DESCRIPTION" : "Autoriza Cliente Fisico"
+      "DESCRIPTION" : "Creacion Cliente Fisico"
     } ],
     "NOINPUT.FIELD" : [ {
       "NOINPUT.FIELD" : "MNEMONIC"
@@ -377,19 +476,13 @@
     }, {
       "NOINPUT.FIELD" : "SECTOR"
     }, {
-      "NOINPUT.FIELD" : "FLOOR"
+      "NOINPUT.FIELD" : "TOWN.COUNTRY"
     }, {
       "NOINPUT.FIELD" : "CUSTOMER.STATUS"
-    }, {
-      "NOINPUT.FIELD" : "JOB.TITLE"
     }, {
       "NOINPUT.FIELD" : "RISK.LEVEL"
     }, {
       "NOINPUT.FIELD" : "ITF.TAX.EXEMPT"
-    }, {
-      "NOINPUT.FIELD" : "IUB"
-    }, {
-      "NOINPUT.FIELD" : "DEPARTMENT"
     }, {
       "NOINPUT.FIELD" : "COUNTRY.SUBDIVISION"
     }, {
@@ -403,8 +496,6 @@
     }, {
       "NOINPUT.FIELD" : "COUNTRY"
     }, {
-      "NOINPUT.FIELD" : "BIRTH.PROVINCE"
-    }, {
       "NOINPUT.FIELD" : "NATIONALITY"
     }, {
       "NOINPUT.FIELD" : "RESIDENCE"
@@ -415,9 +506,9 @@
     }, {
       "NOINPUT.FIELD" : "TAX.ID"
     }, {
-      "NOINPUT.FIELD" : "ABC.FIRMA.ELECT"
+      "NOINPUT.FIELD" : "IUB"
     }, {
-      "NOINPUT.FIELD" : "TEXT"
+      "NOINPUT.FIELD" : "ABC.FIRMA.ELECT"
     }, {
       "NOINPUT.FIELD" : "MARITAL.STATUS"
     }, {
@@ -426,6 +517,8 @@
       "NOINPUT.FIELD" : "ABC.REGIMEN"
     }, {
       "NOINPUT.FIELD" : "ABC.ESTUDIOS"
+    }, {
+      "NOINPUT.FIELD" : "JOB.TITLE"
     }, {
       "NOINPUT.FIELD" : "ACCOUNT.OFFICER"
     }, {
@@ -451,7 +544,7 @@
     }, {
       "NOINPUT.FIELD" : "SUB.DEPARTMENT"
     }, {
-      "NOINPUT.FIELD" : "TOWN.COUNTRY"
+      "NOINPUT.FIELD" : "DEPARTMENT"
     }, {
       "NOINPUT.FIELD" : "ADDRESS.COUNTRY"
     }, {
@@ -468,6 +561,8 @@
       "NOINPUT.FIELD" : "ABC.NUM.EXT.ANT"
     }, {
       "NOINPUT.FIELD" : "ABC.NUM.INT.ANT"
+    }, {
+      "NOINPUT.FIELD" : "TEXT"
     }, {
       "NOINPUT.FIELD" : "ABC.COD.POS.ANT"
     }, {
@@ -497,53 +592,27 @@
     }, {
       "NOINPUT.FIELD" : "EMPLOYMENT.STATUS"
     }, {
-      "NOINPUT.FIELD" : "OCCUPATION"
-    }, {
       "NOINPUT.FIELD" : "EMPLOYERS.NAME"
-    }, {
-      "NOINPUT.FIELD" : "EMPLOYERS.ADD"
-    }, {
-      "NOINPUT.FIELD" : "EMPLOYERS.BUSS"
     }, {
       "NOINPUT.FIELD" : "EMPLOYMENT.START"
     }, {
-      "NOINPUT.FIELD" : "SALARY"
-    }, {
-      "NOINPUT.FIELD" : "ANNUAL.BONUS"
+      "NOINPUT.FIELD" : "OCCUPATION"
     }, {
       "NOINPUT.FIELD" : "TIPO.EMP.OTRO"
     }, {
-      "NOINPUT.FIELD" : "ESP.SUB.SECTOR"
-    }, {
-      "NOINPUT.FIELD" : "NET.MONTHLY.IN"
-    }, {
-      "NOINPUT.FIELD" : "EMP.PUESTO"
+      "NOINPUT.FIELD" : "L.GIRO.MERC"
     }, {
       "NOINPUT.FIELD" : "L.SECTOR.ECO"
     }, {
       "NOINPUT.FIELD" : "INDUSTRY"
     }, {
+      "NOINPUT.FIELD" : "L.TIPO.IND"
+    }, {
       "NOINPUT.FIELD" : "CNBV.SECTOR"
     }, {
-      "NOINPUT.FIELD" : "STAFF.OFFICIAL"
+      "NOINPUT.FIELD" : "ANNUAL.BONUS"
     }, {
-      "NOINPUT.FIELD" : "EMP.CALLE"
-    }, {
-      "NOINPUT.FIELD" : "EMP.NUM.EXT"
-    }, {
-      "NOINPUT.FIELD" : "EMP.NUM.INT"
-    }, {
-      "NOINPUT.FIELD" : "EMP.COD.POS"
-    }, {
-      "NOINPUT.FIELD" : "EMP.COL"
-    }, {
-      "NOINPUT.FIELD" : "EMP.DEL.MUNI"
-    }, {
-      "NOINPUT.FIELD" : "EMP.CIUDAD"
-    }, {
-      "NOINPUT.FIELD" : "EMP.ENTIDAD"
-    }, {
-      "NOINPUT.FIELD" : "EMP.PAIS"
+      "NOINPUT.FIELD" : "NET.MONTHLY.IN"
     }, {
       "NOINPUT.FIELD" : "CDNIA.RESID.EUA"
     }, {
@@ -572,7 +641,75 @@
     "EXC.INC.RTN" : "YES",
     "MULTI.POSSIBLE" : "Y",
     "HDR.1.001..039" : [ {
-      "HDR.1.001..039" : "Autoriza Cliente Fisico"
+      "HDR.1.001..039" : "Autorizacion Cliente Actividad Emp"
+    } ],
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "DATE.OF.BIRTH"
+    }, {
+      "MANDATORY.FIELD" : "COUNTRY"
+    }, {
+      "MANDATORY.FIELD" : "ACCOUNT.OFFICER"
+    }, {
+      "MANDATORY.FIELD" : "AUTO.BURO.CRED"
+    }, {
+      "MANDATORY.FIELD" : "L.DATOS.MERC"
+    }, {
+      "MANDATORY.FIELD" : "L.TIP.IPAB.GARA"
+    }, {
+      "MANDATORY.FIELD" : "OCCUPATION"
+    }, {
+      "MANDATORY.FIELD" : "PHONE.1"
+    }, {
+      "MANDATORY.FIELD" : "SMS.1"
+    }, {
+      "MANDATORY.FIELD" : "L.EMAIL.SMS.NOT"
+    }, {
+      "MANDATORY.FIELD" : "INDUSTRY"
+    }, {
+      "MANDATORY.FIELD" : "L.SECTOR.ECO"
+    }, {
+      "MANDATORY.FIELD" : "CNBV.SECTOR"
+    }, {
+      "MANDATORY.FIELD" : "STREET"
+    }, {
+      "MANDATORY.FIELD" : "ADDRESS.TYPE"
+    }, {
+      "MANDATORY.FIELD" : "CDNIA.RESID.EUA"
+    }, {
+      "MANDATORY.FIELD" : "POST.CODE"
+    }, {
+      "MANDATORY.FIELD" : "SUB.DEPARTMENT"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "V.ABC.CUS.DOM.ANOS.CHK",
+      "VALIDATION.FLD" : "ABC.DOM.ANOS"
+    }, {
+      "VALIDATION.RTN" : "V.ABC.CUS.MAR.STATUS.CHK",
+      "VALIDATION.FLD" : "MARITAL.STATUS"
+    }, {
+      "VALIDATION.RTN" : "V.ABC.CUS.TAXID2.CHECK",
+      "VALIDATION.FLD" : "ABC.FIRMA.ELECT"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.NACIONALIDAD",
+      "VALIDATION.FLD" : "RESIDENCE"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.NACIONALIDAD",
+      "VALIDATION.FLD" : "NATIONALITY"
+    }, {
+      "VALIDATION.RTN" : "ABC.GET.ADRESS.FISICA",
+      "VALIDATION.FLD" : "POST.CODE-1"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.EMAIL",
+      "VALIDATION.FLD" : "EMAIL.1"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.CUS.RESI.STATUS",
+      "VALIDATION.FLD" : "RESIDENCE.STATUS"
+    }, {
+      "VALIDATION.RTN" : "ABC.GET.ADRESS.FISICA.ANT",
+      "VALIDATION.FLD" : "ABC.COD.POS.ANT"
+    }, {
+      "VALIDATION.RTN" : "VPM.NUM.CLIENTE.UNICO.CHK",
+      "VALIDATION.FLD" : "TAX.ID-1"
     } ]
   }
 }
