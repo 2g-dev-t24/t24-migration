@@ -290,6 +290,13 @@ public method AbcValidaLimiteMonto (
     jBC: ABC.VALIDA.LIMITE.MONTO
 }
 
+public method AbcFmtInstBenef (
+    INOUT yComi string
+)
+{
+    jBC: ABC.FMT.INST.BENEF
+}
+
 private method abcEMovFt (
    INOUT yArr string
 )
