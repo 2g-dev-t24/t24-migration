@@ -12,6 +12,9 @@
   "body" : {
     "NO.OF.AUTH" : "1",
     "RECORDS.PER.PAGE" : "1",
+    "CHECK.REC.RTN" : [ {
+      "CHECK.REC.RTN" : "ABC.CHECK.SET.CUS"
+    } ],
     "LANGUAGE.CODE" : [ {
       "LANGUAGE.CODE" : "2"
     } ],

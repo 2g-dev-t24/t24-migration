@@ -37,7 +37,7 @@
       "FIELD.LBL" : [ {
         "FIELD.LBL" : "Customer No"
       }, {
-        "FIELD.LBL" : "Id Cliente"
+        "FIELD.LBL" : "No de Cliente"
       } ]
     }, {
       "OPERATION" : [ {
@@ -52,10 +52,10 @@
         "OPERATION" : "SHORT.NAME"
       } ],
       "FIELD.NAME" : "SHORT.NAME",
-      "LENGTH.MASK" : "70L",
-      "COLUMN" : "2",
+      "LENGTH.MASK" : "45L",
+      "COLUMN" : "3",
       "FIELD.LBL" : [ {
-        "FIELD.LBL" : "Name"
+        "FIELD.LBL" : "Apellido Paterno"
       }, {
         "FIELD.LBL" : "Apellido Paterno"
       } ]
@@ -64,9 +64,11 @@
         "OPERATION" : "NAME.1"
       } ],
       "FIELD.NAME" : "NAME.1",
-      "LENGTH.MASK" : "70L",
-      "COLUMN" : "4",
-      "FIELD.LBL" : [ { }, {
+      "LENGTH.MASK" : "45L",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Apellido Materno"
+      }, {
         "FIELD.LBL" : "Apellido Materno"
       } ],
       "TYPE" : "L"
@@ -75,8 +77,11 @@
         "OPERATION" : "NAME.2"
       } ],
       "FIELD.NAME" : "NAME.2",
-      "COLUMN" : "6",
-      "FIELD.LBL" : [ { }, {
+      "LENGTH.MASK" : "45L",
+      "COLUMN" : "7",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Nombres"
+      }, {
         "FIELD.LBL" : "Nombres"
       } ]
     }, {
@@ -85,9 +90,25 @@
       } ],
       "FIELD.NAME" : "SECTOR",
       "SINGLE.MULTI" : "S",
-      "COLUMN" : "6",
-      "FIELD.LBL" : [ { }, {
+      "COLUMN" : "9",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Id Tipo Persona"
+      }, {
         "FIELD.LBL" : "Tipo de Persona"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "SECTOR"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "S 1001,Persona Fisica"
+      } ],
+      "FIELD.NAME" : "DESCR.SECTOR",
+      "COLUMN" : "12",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Tipo Persona"
+      }, {
+        "FIELD.LBL" : "Tipo Persona"
       } ]
     }, {
       "OPERATION" : [ {
@@ -95,7 +116,13 @@
       } ],
       "FIELD.NAME" : "ACCT.OFFICER",
       "LENGTH.MASK" : "4R",
-      "SINGLE.MULTI" : "S"
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "15",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Id Ejecutivo"
+      }, {
+        "FIELD.LBL" : "Id Ejecutivo"
+      } ]
     }, {
       "OPERATION" : [ {
         "OPERATION" : "F ACCT.OFFICER"
@@ -103,36 +130,28 @@
       "CONVERSION" : [ {
         "CONVERSION" : "L DEPT.ACCT.OFFICER,NAME"
       } ],
-      "FIELD.NAME" : "ACCT.OFF.NAME"
-    }, {
-      "OPERATION" : [ {
-        "OPERATION" : "\" - \""
-      } ],
-      "FIELD.NAME" : "HYPHEN"
-    }, {
-      "OPERATION" : [ {
-        "OPERATION" : "C ACCT.OFFICER : HYPHEN"
-      } ],
-      "FIELD.NAME" : "DAO.HYPHEN"
-    }, {
-      "OPERATION" : [ {
-        "OPERATION" : "C DAO.HYPHEN : ACCT.OFF.NAME"
-      } ],
-      "FIELD.NAME" : "DISP.DAO",
-      "COLUMN" : "3",
+      "FIELD.NAME" : "ACCT.OFF.NAME",
+      "COLUMN" : "18",
       "FIELD.LBL" : [ {
-        "FIELD.LBL" : "Relationship Officer"
+        "FIELD.LBL" : "Nombre Ejecutivo"
+      }, {
+        "FIELD.LBL" : "Nombre Ejecutivo"
       } ]
     }, {
       "OPERATION" : [ {
-        "OPERATION" : "RECORD.STATUS"
+        "OPERATION" : "CUSTOMER.TYPE"
       } ],
-      "FIELD.NAME" : "RECORD.STATUS",
-      "LENGTH.MASK" : "4L",
+      "CONVERSION" : [ {
+        "CONVERSION" : "S PROSPECT, Por Activar"
+      } ],
+      "FIELD.NAME" : "CUSTOMER.TYPE",
+      "LENGTH.MASK" : "35L",
       "SINGLE.MULTI" : "S",
-      "COLUMN" : "4",
+      "COLUMN" : "20",
       "FIELD.LBL" : [ {
-        "FIELD.LBL" : "Record Status"
+        "FIELD.LBL" : "Record Estatus"
+      }, {
+        "FIELD.LBL" : "Record Estatus"
       } ]
     }, {
       "OPERATION" : [ {
@@ -144,19 +163,12 @@
       "FIELD.NAME" : "INPUTTER",
       "LENGTH.MASK" : "40L",
       "SINGLE.MULTI" : "M",
-      "COLUMN" : "5",
+      "COLUMN" : "24",
       "FIELD.LBL" : [ {
-        "FIELD.LBL" : "Inputter"
+        "FIELD.LBL" : "Usuario"
+      }, {
+        "FIELD.LBL" : "Usuario"
       } ]
-    }, {
-      "OPERATION" : [ {
-        "OPERATION" : "\"No Unauthorised Customers \""
-      } ],
-      "FIELD.NAME" : "ZERORECORDS",
-      "COLUMN" : "1",
-      "FIELD.DISP.TYPE" : "CLASS-ENQ.NORECS",
-      "DISPLAY.BREAK" : "NONE",
-      "SECTION" : "HEADER"
     }, {
       "OPERATION" : [ {
         "OPERATION" : "COMPANY.BOOK"
@@ -164,32 +176,12 @@
       "FIELD.NAME" : "COMPANY.BOOK",
       "LENGTH.MASK" : "11L",
       "SINGLE.MULTI" : "S",
-      "COLUMN" : "6",
+      "COLUMN" : "27",
       "FIELD.LBL" : [ {
         "FIELD.LBL" : "Customer Branch Name"
+      }, {
+        "FIELD.LBL" : "Compañia"
       } ]
-    }, {
-      "OPERATION" : [ {
-        "OPERATION" : "SECTOR"
-      } ],
-      "FIELD.NAME" : "SECTOR",
-      "LENGTH.MASK" : "4R",
-      "SINGLE.MULTI" : "S"
-    }, {
-      "OPERATION" : [ {
-        "OPERATION" : "\"MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIF.BUSINESS\""
-      } ],
-      "FIELD.NAME" : "VER.1"
-    }, {
-      "OPERATION" : [ {
-        "OPERATION" : "\"MXBASE.ADD.CUSTOMER.DETAILS,CR.QUALIFICATION.IND\""
-      } ],
-      "FIELD.NAME" : "VER.2"
-    }, {
-      "OPERATION" : [ {
-        "OPERATION" : "IF SECTOR EQ \"1700\" VER.1 VER.2"
-      } ],
-      "FIELD.NAME" : "DECIDE.VER"
     } ],
     "FIXED.SELECTION" : [ {
       "FIXED.SELECTION" : "SECTOR EQ 1001"

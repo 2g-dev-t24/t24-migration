@@ -106,9 +106,6 @@
     "HDR.1.001..039" : [ {
       "HDR.1.001..039" : "Detalle de Empleo"
     } ],
-    "CHECK.REC.RTN" : [ {
-      "CHECK.REC.RTN" : "ABC.CHECK.SET.CUS"
-    } ],
     "VALIDATION.FLD" : [ {
       "VALIDATION.RTN" : "ABC.VAL.SECTOR.ECONOMICO",
       "VALIDATION.FLD" : "BANXICO.ECO.ACTIVITY"
