@@ -315,3 +315,60 @@ public method AbcInsertFtDetsConcat (
     jBC: ABC.INSERT.FT.DETS.CONCAT
 }
 
+public method AbcSpeiExpressTxnOutgoing (
+)
+{
+    jBC: ABC.SPEI.EXPRESS.TXN.OUTGOING
+}
+
+public method AbcSpeiExpressPreparaRequest (
+    INOUT yStringEscribir string,
+    INOUT yResponse string
+)
+{
+    jBC: ABC.SPEI.EXPRESS.PREPARA.REQUEST
+}
+
+public method AbcSpeiExpressGetdataRequest (
+    INOUT yStringOriginal string,
+    INOUT yCadenaDatos string
+)
+{
+    jBC: ABC.SPEI.EXPRESS.GETDATA.REQUEST
+}
+
+public method AbcTraeGeneralParam (
+    INOUT yIdMod string,
+    INOUT yCadenaParam string,
+    INOUT yCadenaDatos string
+)
+{
+    jBC: ABC.TRAE.GENERAL.PARAM
+}
+
+public method AbcSpeiInterpretaResponse (
+    INOUT yResponse string,
+    INOUT yMessageOut string
+)
+{
+    jBC: ABC.SPEI.INTERPRETA.RESPONSE
+}
+
+public method AbcSpeiArmaRequest (
+    INOUT yTagS string,
+    INOUT yTagI string,
+    INOUT yValores string,
+    INOUT yCadenaSalida string
+)
+{
+    jBC: ABC.SPEI.ARMA.REQUEST
+}
+
+public method AbcSpeiSendRequest (
+    INOUT yCdShell string,
+    INOUT yDatosEnvio string,
+    INOUT yReturnval string
+)
+{
+    jBC: ABC.SPEI.SEND.REQUEST
+}
