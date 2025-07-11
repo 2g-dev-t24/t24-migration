@@ -136,16 +136,16 @@ OBTENER.ID.FT:
     END
 
     IF REC.FT.DETS EQ '' THEN
-        EXT.SEL.CMD = "SELECT " : FN.FUNDS.TRANSFER.DEL : " WITH EXT.TRANS.ID EQ " : DQUOTE(ID.EXT.TRANS)
-        EB.DataAccess.Readlist(EXT.SEL.CMD, Y.LIST.IDS, "", Y.NO.IDS, Y.STATUS)
+*        EXT.SEL.CMD = "SELECT " : FN.FUNDS.TRANSFER.DEL : " WITH EXT.TRANS.ID EQ " : DQUOTE(ID.EXT.TRANS)
+*        EB.DataAccess.Readlist(EXT.SEL.CMD, Y.LIST.IDS, "", Y.NO.IDS, Y.STATUS)
 
-        IF Y.NO.IDS EQ 1 THEN
-            ID.CUENTA.FT = Y.LIST.IDS<1>
-            FINDSTR ";" IN ID.CUENTA.FT SETTING POS.ID.HIS THEN
-                ID.CUENTA.FT = FIELD(ID.CUENTA.FT, ";", 1)
-            END
-        END
-    END
+*        IF Y.NO.IDS EQ 1 THEN
+*            ID.CUENTA.FT = Y.LIST.IDS<1>
+*            FINDSTR ";" IN ID.CUENTA.FT SETTING POS.ID.HIS THEN
+*                ID.CUENTA.FT = FIELD(ID.CUENTA.FT, ";", 1)
+*            END
+*        END
+*    END
 
     IF ID.CUENTA.FT EQ '' THEN
         EB.Reports.setEnqError("NO SE ENCONTRO EL EXT TRANS ID INGRESADO " : ID.EXT.TRANS)
@@ -179,7 +179,7 @@ OPEN.FILES:
     EB.LocalReferences.GetLocRef('FUNDS.TRANSFER','EXT.TRANS.ID',YPOS.EXT.TRANS.ID)
 
 *CAST20220908.I
-    FN.FUNDS.TRANSFER.DEL = 'F.FUNDS.TRANSFER$DEL'; F.FUNDS.TRANSFER.DEL = ''; EB.DataAccess.Opf(FN.FUNDS.TRANSFER.DEL,F.FUNDS.TRANSFER.DEL)
+*    FN.FUNDS.TRANSFER.DEL = 'F.FUNDS.TRANSFER$DEL'; F.FUNDS.TRANSFER.DEL = ''; EB.DataAccess.Opf(FN.FUNDS.TRANSFER.DEL,F.FUNDS.TRANSFER.DEL)
     FN.FUNDS.TRANSFER.NAU = 'F.FUNDS.TRANSFER$NAU'; F.FUNDS.TRANSFER.NAU = ''; EB.DataAccess.Opf(FN.FUNDS.TRANSFER.NAU,F.FUNDS.TRANSFER.NAU)
 
 *CAST20220908.F
@@ -211,20 +211,21 @@ PROCESA.ENCABEZADO:
             DETALLE.MOVIMIENTOS = YSEP.1:YSEP.1:YSEP.1:YSEP.1:ID.CUENTA.FT:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:ID.CUENTA.FT:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:'FUNDS.TRANSFER':YSEP.1:YSEP.1:YSEP.1:'P'
             RETURN
         END ELSE
-            EXT.SEL.CMD = "SELECT " : FN.FUNDS.TRANSFER.DEL : " WITH @ID LIKE " :ID.CUENTA.FT:"..."
-            EB.DataAccess.Readlist(EXT.SEL.CMD, Y.LIST.IDS, "", Y.NO.IDS, Y.STATUS)
-            IF Y.LIST.IDS NE '' THEN    ;*Si la transaccion esta en $DEL
-                ID.CUENTA.FT = Y.LIST.IDS<1>
-                DETALLE.MOVIMIENTOS = YSEP.1:YSEP.1:YSEP.1:YSEP.1:ID.CUENTA.FT:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:ID.CUENTA.FT:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:'FUNDS.TRANSFER':YSEP.1:YSEP.1:YSEP.1:'D'
-                RETURN
-            END ELSE
-                ID.CUENTA.FT = ID.CUENTA.FT :';1'
-                EB.DataAccess.FRead(FN.FT.HIS, ID.CUENTA.FT, REC.FT, F.FT.HIS, ERR.FT.HIS)
-                IF REC.FT NE '' THEN
-                    Y.STATUS = ''
-                    Y.STATUS = REC.FT<FT.Contract.FundsTransfer.RecordStatus>
-                END
-            END
+
+*            EXT.SEL.CMD = "SELECT " : FN.FUNDS.TRANSFER.DEL : " WITH @ID LIKE " :ID.CUENTA.FT:"..."
+*            EB.DataAccess.Readlist(EXT.SEL.CMD, Y.LIST.IDS, "", Y.NO.IDS, Y.STATUS)
+*            IF Y.LIST.IDS NE '' THEN    ;*Si la transaccion esta en $DEL
+*                ID.CUENTA.FT = Y.LIST.IDS<1>
+*                DETALLE.MOVIMIENTOS = YSEP.1:YSEP.1:YSEP.1:YSEP.1:ID.CUENTA.FT:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:ID.CUENTA.FT:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:YSEP.1:'FUNDS.TRANSFER':YSEP.1:YSEP.1:YSEP.1:'D'
+*                RETURN
+*            END ELSE
+*                ID.CUENTA.FT = ID.CUENTA.FT :';1'
+*                EB.DataAccess.FRead(FN.FT.HIS, ID.CUENTA.FT, REC.FT, F.FT.HIS, ERR.FT.HIS)
+*                IF REC.FT NE '' THEN
+*                    Y.STATUS = ''
+*                    Y.STATUS = REC.FT<FT.Contract.FundsTransfer.RecordStatus>
+*                END
+*            END
 *CAST20220908.F
         END
     END
