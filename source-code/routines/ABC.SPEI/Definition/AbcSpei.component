@@ -372,3 +372,39 @@ public method AbcSpeiSendRequest (
 {
     jBC: ABC.SPEI.SEND.REQUEST
 }
+
+public method AbcClearCtaExternaSpei (
+)
+{
+    jBC: ABC.CLEAR.CTA.EXTERNA.SPEI
+}
+
+public method AbcValMontoSpeiExpress (
+)
+{
+    jBC: ABC.VAL.MONTO.SPEI.EXPRESS
+}
+
+public method AbcValidaLenCtaBen (
+)
+{
+    jBC: ABC.VALIDA.LEN.CTA.BEN
+}
+
+public method AbcEnvEmailSpeiAcse2 (
+)
+{
+    jBC: ABC.ENV.EMAIL.SPEI.ACSE.2
+}
+
+public method AbcValDefaultRfc (
+)
+{
+    jBC: ABC.VAL.DEFAULT.RFC
+}
+
+public method AbcValidaExtId (
+)
+{
+    jBC: ABC.VALIDA.EXT.ID
+}

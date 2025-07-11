@@ -156,20 +156,9 @@ PROCESS:
 *-------------------------------------------------------------------------------
 GET.FIELDS.LOCAL:
 *-------------------------------------------------------------------------------
-    Y.NOMBRE.APP<-1> = "FUNDS.TRANSFER"
-    Y.NOMBRE.APP<-1> = "ACCOUNT"
-    Y.NOMBRE.CAMPO<1,1> = "CTA.EXT.TRANSF"
-    Y.NOMBRE.CAMPO<1,2> = "RFC.BENEF.SPEI"
-    Y.NOMBRE.CAMPO<1,3> = "AMT.IVA.SPEI"
-    Y.NOMBRE.CAMPO<1,4> = "TIPO.SPEI"
-    Y.NOMBRE.CAMPO<1,5> = "CANAL"
-    Y.NOMBRE.CAMPO<1,6> = "RASTREO"
-    Y.NOMBRE.CAMPO<1,7> = "TIMESTAMP.SPEUA"
-    Y.NOMBRE.CAMPO<1,8> = "REFERENCIA"
-    Y.NOMBRE.CAMPO<2,1> = "CLABE"
-
-    EB.Updates.MultiGetLocRef(Y.NOMBRE.APP,Y.NOMBRE.CAMPO,R.POS.CAMPO)
-
+    Y.NOMBRE.APP = "FUNDS.TRANSFER":@FM:"ACCOUNT"
+    Y.NOMBRE.CAMPO = "CTA.EXT.TRANSF":@VM:"RFC.BENEF.SPEI":@VM:"AMT.IVA.SPEI":@VM:"TIPO.SPEI":@VM:"CANAL":@VM:"RASTREO":@VM:"TIMESTAMP.SPEUA":@VM:"REFERENCIA":@FM:"CLABE"
+    EB.Updates.MultiGetLocRef(Y.NOMBRE.APP, Y.NOMBRE.CAMPO, R.POS.CAMPO)
     Y.POS.CTA.EXT.TRANSF  = R.POS.CAMPO<1,1>
     Y.POS.RFC.BENEF.SPEI  = R.POS.CAMPO<1,2>
     Y.POS.AMT.IVA.SPEI    = R.POS.CAMPO<1,3>
@@ -179,7 +168,6 @@ GET.FIELDS.LOCAL:
     Y.POS.TIME.SPEUA      = R.POS.CAMPO<1,7>
     Y.POS.REFERENCIA      = R.POS.CAMPO<1,8>
     Y.POS.CLABE           = R.POS.CAMPO<2,1>
-
     RETURN
 
 *-------------------------------------------------------------------------------
