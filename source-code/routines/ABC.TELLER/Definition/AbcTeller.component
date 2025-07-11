@@ -51,3 +51,15 @@ public method AbcBr2TeldenomTotCambio (
 {
     jBC: ABC.BR2.TELDENOM.TOT.CAMBIO
 }
+
+public method Abc2brChecaCajaAbierto (
+)
+{
+    jBC: ABC.2BR.CHECA.CAJA.ABIERTO
+}
+
+public method Abc2brChecaCajaAbierto (
+)
+{
+    jBC: ABC.2BR.CHECA.CAJA.ABIERTO
+}
