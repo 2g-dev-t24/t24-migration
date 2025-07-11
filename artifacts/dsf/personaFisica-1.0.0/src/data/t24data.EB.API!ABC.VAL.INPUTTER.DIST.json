@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.VAL.INPUTTER.DIST",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.VAL.INPUTTER.DIST"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

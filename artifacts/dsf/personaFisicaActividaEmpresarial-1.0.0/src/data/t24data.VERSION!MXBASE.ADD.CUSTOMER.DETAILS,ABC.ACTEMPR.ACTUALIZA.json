@@ -1,6 +1,6 @@
 {
   "header" : {
-    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.CONOCE.CLIENTE",
+    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.ACTEMPR.ACTUALIZA",
     "dsfApiType" : "VERSION",
     "dsfApiComponent" : "t24data",
     "dsfApiPhase" : "main",
@@ -12,9 +12,6 @@
   "body" : {
     "NO.OF.AUTH" : "1",
     "RECORDS.PER.PAGE" : "1",
-    "CHECK.REC.RTN" : [ {
-      "CHECK.REC.RTN" : "ABC.CHECK.SET.CUS"
-    } ],
     "LANGUAGE.CODE" : [ {
       "LANGUAGE.CODE" : "2"
     } ],
@@ -58,7 +55,7 @@
     }, {
       "FIELD.NO" : "ACCOUNT.PURPOSE",
       "COLUMN" : "1",
-      "DROP.DOWN" : "ABC.DESTINO.RECURSO",
+      "DROP.DOWN" : "ABC.DESTINO.RECURSOS",
       "TEXT" : [ {
         "TEXT" : "Destino de los Recursos"
       } ],
@@ -155,14 +152,12 @@
     }, {
       "FIELD.NO" : "COMMENTS",
       "COLUMN" : "1",
-      "DROP.DOWN" : "ABC.OPCION",
-      "ENRICHM.CHAR" : "25",
       "TEXT" : [ {
         "TEXT" : "Cliente Considerado Politicamente"
       } ],
       "TEXT.CHAR.MAX" : "33",
       "TABLE.COLUMN" : [ {
-        "TABLE.COLUMN" : "1-97-"
+        "TABLE.COLUMN" : "1-71-"
       } ],
       "TABLE.LINE" : "10"
     }, {
@@ -212,7 +207,7 @@
       "TABLE.LINE" : "14"
     } ],
     "ASSOC.VERSION" : [ {
-      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.EMPLEO"
+      "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.ACTEMPR.EMPLEO"
     }, {
       "ASSOC.VERSION" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.REFERENCIAS"
     }, {
@@ -226,19 +221,14 @@
     }, {
       "DESCRIPTION" : "Conoce a tu cliente Adicional"
     } ],
-    "NOINPUT.FIELD" : [ {
-      "NOINPUT.FIELD" : "TYPE.OF.OPERATION"
-    }, {
-      "NOINPUT.FIELD" : "TYPE"
-    } ],
     "MULTI.POSSIBLE" : "Y",
     "HDR.1.001..039" : [ {
       "HDR.1.001..039" : "Conoce tu Cliente"
     } ],
     "MANDATORY.FIELD" : [ {
-      "MANDATORY.FIELD" : "TYPE"
-    }, {
       "MANDATORY.FIELD" : "MONTHLY.APPROX.INCOME"
+    }, {
+      "MANDATORY.FIELD" : "TYPE"
     }, {
       "MANDATORY.FIELD" : "TRANSACTION.OPERATION.NUMBER"
     }, {
@@ -247,8 +237,6 @@
       "MANDATORY.FIELD" : "COMMENTS"
     }, {
       "MANDATORY.FIELD" : "RELATION.CLIENT"
-    }, {
-      "MANDATORY.FIELD" : "BANXICO.ECO.ACTIVITY"
     } ],
     "VALIDATION.FLD" : [ {
       "VALIDATION.RTN" : "V.ABC.CUS.ORI.REC.CHK",
@@ -256,9 +244,6 @@
     }, {
       "VALIDATION.RTN" : "V.ABC.CUS.DES.REC.CHK",
       "VALIDATION.FLD" : "ACCOUNT.PURPOSE"
-    } ],
-    "ID.RTN" : [ {
-      "ID.RTN" : "ABC.VAL.MXB.INP.DIST"
     } ]
   }
 }

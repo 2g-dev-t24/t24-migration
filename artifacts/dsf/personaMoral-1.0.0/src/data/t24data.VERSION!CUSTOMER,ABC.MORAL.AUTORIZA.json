@@ -13,6 +13,9 @@
     "LOCAL.REF.FIELD" : "LOCAL.REF",
     "NO.OF.AUTH" : "0",
     "RECORDS.PER.PAGE" : "1",
+    "CHECK.REC.RTN" : [ {
+      "CHECK.REC.RTN" : "ABC.VAL.INPUTTER.DIST"
+    } ],
     "LANGUAGE.CODE" : [ {
       "LANGUAGE.CODE" : "2"
     } ],
@@ -249,6 +252,92 @@
       "NOINPUT.FIELD" : "ACCOUNT.OFFICER"
     }, {
       "NOINPUT.FIELD" : "OTHER.OFFICER"
+    }, {
+      "NOINPUT.FIELD" : "L.GPO.FINANCIER"
+    }, {
+      "NOINPUT.FIELD" : "ADDRESS.TYPE"
+    }, {
+      "NOINPUT.FIELD" : "STREET"
+    }, {
+      "NOINPUT.FIELD" : "BUILDING.NUMBER"
+    }, {
+      "NOINPUT.FIELD" : "FLAT.NUMBER"
+    }, {
+      "NOINPUT.FIELD" : "POST.CODE"
+    }, {
+      "NOINPUT.FIELD" : "SUB.DEPARTMENT"
+    }, {
+      "NOINPUT.FIELD" : "DEPARTMENT"
+    }, {
+      "NOINPUT.FIELD" : "TOWN.COUNTRY"
+    }, {
+      "NOINPUT.FIELD" : "COUNTRY.SUBDIVISION"
+    }, {
+      "NOINPUT.FIELD" : "ADDRESS.COUNTRY"
+    }, {
+      "NOINPUT.FIELD" : "L.LOCALIDAD"
+    }, {
+      "NOINPUT.FIELD" : "ABC.DOM.ANOS"
+    }, {
+      "NOINPUT.FIELD" : "L.CONTACT.NAMES"
+    }, {
+      "NOINPUT.FIELD" : "PHONE.1"
+    }, {
+      "NOINPUT.FIELD" : "SMS.1"
+    }, {
+      "NOINPUT.FIELD" : "EMAIL.1"
+    }, {
+      "NOINPUT.FIELD" : "OFF.PHONE"
+    }, {
+      "NOINPUT.FIELD" : "FAX.1"
+    }, {
+      "NOINPUT.FIELD" : "L.CONTACT.POS"
+    }, {
+      "NOINPUT.FIELD" : "L.EMAIL.SMS.NOT"
+    }, {
+      "NOINPUT.FIELD" : "EMPLOYMENT.START"
+    }, {
+      "NOINPUT.FIELD" : "L.GIRO.MERC"
+    }, {
+      "NOINPUT.FIELD" : "L.SECTOR.ECO"
+    }, {
+      "NOINPUT.FIELD" : "INDUSTRY"
+    }, {
+      "NOINPUT.FIELD" : "L.TIPO.IND"
+    }, {
+      "NOINPUT.FIELD" : "CNBV.SECTOR"
+    }, {
+      "NOINPUT.FIELD" : "RISK.LEVEL"
+    }, {
+      "NOINPUT.FIELD" : "CDNIA.RESID.EUA"
+    }, {
+      "NOINPUT.FIELD" : "L.TIPO.REL.GAR"
+    }, {
+      "NOINPUT.FIELD" : "L.REL.NOMBRE"
+    }, {
+      "NOINPUT.FIELD" : "L.REL.TIPO.REL"
+    }, {
+      "NOINPUT.FIELD" : "L.REL.PART.ECON"
+    }, {
+      "NOINPUT.FIELD" : "L.TIP.IPAB.GARA"
+    }, {
+      "NOINPUT.FIELD" : "L.NOM.ACCIONIST"
+    }, {
+      "NOINPUT.FIELD" : "L.NAC.ACCIONIST"
+    }, {
+      "NOINPUT.FIELD" : "L.RES.ACCIONIST"
+    }, {
+      "NOINPUT.FIELD" : "L.RFC.ACCIONIST"
+    }, {
+      "NOINPUT.FIELD" : "L.ACC.PORCENTAJ"
+    }, {
+      "NOINPUT.FIELD" : "L.DATOS.MERC"
+    }, {
+      "NOINPUT.FIELD" : "AUTO.BURO.CRED"
+    }, {
+      "NOINPUT.FIELD" : "L.VIG.BURO.CRED"
+    }, {
+      "NOINPUT.FIELD" : "FOLIO.CON.BURO"
     } ],
     "EXC.INC.RTN" : "YES",
     "MULTI.POSSIBLE" : "Y",

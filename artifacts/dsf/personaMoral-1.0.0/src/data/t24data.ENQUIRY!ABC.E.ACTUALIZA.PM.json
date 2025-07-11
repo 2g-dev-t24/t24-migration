@@ -74,6 +74,7 @@
       "FIELD.NAME" : "ACCOUNT.OFFICER",
       "LENGTH.MASK" : "4R",
       "SINGLE.MULTI" : "S",
+      "COLUMN" : "3",
       "FIELD.LBL" : [ { }, {
         "FIELD.LBL" : "Ejecutivo"
       } ]
@@ -83,7 +84,8 @@
       } ],
       "FIELD.NAME" : "ACCOUNT.OFFICER",
       "LENGTH.MASK" : "4R",
-      "SINGLE.MULTI" : "S"
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "4"
     }, {
       "OPERATION" : [ {
         "OPERATION" : "\" - \""
@@ -178,11 +180,11 @@
     } ],
     "DESCRIPT" : [ {
       "DESCRIPT" : [ {
-        "DESCRIPT" : "Unauthorised Customer"
+        "DESCRIPT" : "Autorización Customer"
       } ]
     } ],
     "SHORT.DESC" : [ {
-      "SHORT.DESC" : "Unauthorised Customer"
+      "SHORT.DESC" : "Autorizacion Customer"
     } ],
     "FILE.NAME" : "CUSTOMER"
   }

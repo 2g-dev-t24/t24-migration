@@ -1,7 +1,20 @@
+* @ValidationCode : MjoxNzEzNDQ5ODk6Q3AxMjUyOjE3NTIxOTcwNzY3OTQ6dHJhYmFqbzotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 10 Jul 2025 22:24:36
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : trabajo
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : true
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>-9</Rating>
+$PACKAGE AbcTable
 *-----------------------------------------------------------------------------
-    SUBROUTINE ABC.L.FT.TXN.DETAIL.FIELDS
+SUBROUTINE ABC.L.FT.TXN.DETAIL.FIELDS
 *===============================================
     $USING EB.SystemTables
     $USING EB.Template

@@ -10,16 +10,19 @@
     }
   },
   "body" : {
-    "NO.OF.AUTH" : "0",
+    "NO.OF.AUTH" : "1",
     "RECORDS.PER.PAGE" : "1",
     "LANGUAGE.CODE" : [ {
       "LANGUAGE.CODE" : "2"
     } ],
     "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "TYPE.OF.OPERATION-1",
+      "AUT.NEW.CONTENT" : "0"
+    } ],
     "FIELD.NO" : [ {
       "FIELD.NO" : "CORPORATE.CUSTOMER.TYPE",
       "COLUMN" : "1",
-      "DROP.DOWN" : "E.ABC.TIPO.SOCIEDAD",
       "TEXT" : [ {
         "TEXT" : "Tipo de Sociedad"
       } ],

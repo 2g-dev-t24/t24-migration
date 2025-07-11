@@ -16,7 +16,7 @@
     }, {
       "INPUT.ROUTINE" : "ABC.VALIDA.CLIENTE.EXISTENTE"
     } ],
-    "NO.OF.AUTH" : "0",
+    "NO.OF.AUTH" : "1",
     "RECORDS.PER.PAGE" : "1",
     "LANGUAGE.CODE" : [ {
       "LANGUAGE.CODE" : "2"
@@ -266,6 +266,20 @@
       "NOINPUT.FIELD" : "RISK.LEVEL"
     }, {
       "NOINPUT.FIELD" : "L.REL.TIPO.REL"
+    }, {
+      "NOINPUT.FIELD" : "STREET"
+    }, {
+      "NOINPUT.FIELD" : "BUILDING.NUMBER"
+    }, {
+      "NOINPUT.FIELD" : "FLAT.NUMBER"
+    }, {
+      "NOINPUT.FIELD" : "POST.CODE"
+    }, {
+      "NOINPUT.FIELD" : "SUB.DEPARTMENT"
+    }, {
+      "NOINPUT.FIELD" : "SMS.1"
+    }, {
+      "NOINPUT.FIELD" : "EMAIL.1"
     } ],
     "MULTI.POSSIBLE" : "Y",
     "HDR.1.001..039" : [ {

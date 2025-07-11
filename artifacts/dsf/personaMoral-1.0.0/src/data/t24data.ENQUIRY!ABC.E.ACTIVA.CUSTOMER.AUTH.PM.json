@@ -78,6 +78,7 @@
       "FIELD.NAME" : "ACCT.OFFICER",
       "LENGTH.MASK" : "4R",
       "SINGLE.MULTI" : "S",
+      "COLUMN" : "7",
       "FIELD.LBL" : [ { }, {
         "FIELD.LBL" : "Promotor"
       } ]
@@ -89,6 +90,7 @@
         "CONVERSION" : "L DEPT.ACCT.OFFICER,NAME"
       } ],
       "FIELD.NAME" : "ACCT.OFF.NAME",
+      "COLUMN" : "9",
       "FIELD.LBL" : [ { }, {
         "FIELD.LBL" : "Nombre Promotor"
       } ]
@@ -107,7 +109,7 @@
         "OPERATION" : "C DAO.HYPHEN : ACCT.OFF.NAME"
       } ],
       "FIELD.NAME" : "DISP.DAO",
-      "COLUMN" : "3",
+      "COLUMN" : "12",
       "FIELD.LBL" : [ {
         "FIELD.LBL" : "Relationship Officer"
       } ]
@@ -118,7 +120,7 @@
       "FIELD.NAME" : "RECORD.STATUS",
       "LENGTH.MASK" : "4L",
       "SINGLE.MULTI" : "S",
-      "COLUMN" : "4",
+      "COLUMN" : "15",
       "FIELD.LBL" : [ {
         "FIELD.LBL" : "Record Status"
       } ]
@@ -132,7 +134,7 @@
       "FIELD.NAME" : "INPUTTER",
       "LENGTH.MASK" : "40L",
       "SINGLE.MULTI" : "M",
-      "COLUMN" : "5",
+      "COLUMN" : "20",
       "FIELD.LBL" : [ {
         "FIELD.LBL" : "Inputter"
       } ]
@@ -152,7 +154,7 @@
       "FIELD.NAME" : "COMPANY.BOOK",
       "LENGTH.MASK" : "11L",
       "SINGLE.MULTI" : "S",
-      "COLUMN" : "6",
+      "COLUMN" : "30",
       "FIELD.LBL" : [ {
         "FIELD.LBL" : "Customer Branch Name"
       } ]
@@ -163,6 +165,7 @@
       "FIELD.NAME" : "SECTOR",
       "LENGTH.MASK" : "4R",
       "SINGLE.MULTI" : "S",
+      "COLUMN" : "11",
       "FIELD.LBL" : [ { }, {
         "FIELD.LBL" : "Sector"
       } ]

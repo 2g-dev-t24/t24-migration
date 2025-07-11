@@ -11,7 +11,7 @@
   },
   "body" : {
     "ENQUIRY.NAME" : [ {
-      "ENQUIRY.NAME" : "CUSTOMER,ABC.FISICA.ACTUALIZA I CUSTOMERID",
+      "ENQUIRY.NAME" : "CUSTOMER,ABC.FISICA.ACT.EMP.ACTUALIZA I CUSTOMERID",
       "LABEL.FIELD" : "CUSTOMERID 1",
       "NXT.DESC" : [ {
         "NXT.DESC" : "Actualiza Cliente[edit.gif"
@@ -19,7 +19,7 @@
         "NXT.DESC" : "Actualiza Cliente[edit.gif"
       } ]
     }, {
-      "ENQUIRY.NAME" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.ACTEMPR.CONOCE.CLIENTE I CUSTOMERID",
+      "ENQUIRY.NAME" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.ACTEMPR.ACTUALIZA I CUSTOMERID",
       "LABEL.FIELD" : "CUSTOMERID 1",
       "NXT.DESC" : [ {
         "NXT.DESC" : "Actualiza Datos Adicionales[edit.gif"
@@ -48,7 +48,7 @@
       } ]
     }, {
       "OPERATION" : [ {
-        "OPERATION" : "\"Actualiza Cliente Persona Fisica\""
+        "OPERATION" : "\"Actualiza Cliente Persona Fisica con Actividad Empresarial\""
       } ],
       "FIELD.NAME" : "HDR",
       "COLUMN" : "1,0",

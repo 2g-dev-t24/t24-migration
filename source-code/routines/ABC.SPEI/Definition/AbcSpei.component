@@ -297,3 +297,21 @@ private method abcEMovFt (
    jBC: ABC.E.MOV.FT
 }
 
+public method AbcFmtInstBenef (
+)
+{
+    jBC: ABC.FMT.INST.BENEF
+}
+
+public method AbcFmtInstBenef (
+)
+{
+    jBC: ABC.FMT.INST.BENEF
+}
+
+public method AbcInsertFtDetsConcat (
+)
+{
+    jBC: ABC.INSERT.FT.DETS.CONCAT
+}
+

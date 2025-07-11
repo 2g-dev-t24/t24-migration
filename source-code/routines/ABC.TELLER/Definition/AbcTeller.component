@@ -33,3 +33,33 @@ public method AbcValAmtUsdEmailAuth (
 {
     jBC: ABC.VAL.AMT.USD.EMAIL.AUTH
 }
+
+public method VGicAcctCcy (
+)
+{
+    jBC: V.GIC.ACCT.CCY
+}
+
+public method Abc2brValNarr (
+)
+{
+    jBC: ABC.2BR.VAL.NARR
+}
+
+public method AbcBr2TeldenomTotCambio (
+)
+{
+    jBC: ABC.BR2.TELDENOM.TOT.CAMBIO
+}
+
+public method Abc2brChecaCajaAbierto (
+)
+{
+    jBC: ABC.2BR.CHECA.CAJA.ABIERTO
+}
+
+public method Abc2brChecaCajaAbierto (
+)
+{
+    jBC: ABC.2BR.CHECA.CAJA.ABIERTO
+}
