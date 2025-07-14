@@ -6,8 +6,10 @@ SUBROUTINE PBS.INSLOG(Y.ARCHIVO.GUARDAR, Y.MENSAJE, Y.INICIANDO)
 * Modification History :
 *-----------------------------------------------------------------------------
 
+    $USING EB.SystemTables
+    
     Y.HORA.LOG = OCONV(TIME(), "MTS")
-    Y.HOY = TODAY
+    Y.HOY = EB.SystemTables.getToday()
 
     Y.LT = "<"
     Y.TAB = CHAR(9)

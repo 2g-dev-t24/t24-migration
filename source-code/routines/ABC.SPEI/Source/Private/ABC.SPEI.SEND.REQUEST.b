@@ -7,6 +7,7 @@ SUBROUTINE ABC.SPEI.SEND.REQUEST(Y.CD.SHELL, Y.DATOS.ENVIO, Y.RETURNVAL)
 * Modification History :
 *-----------------------------------------------------------------------------
 
+    $USING EB.SystemTables
     GOSUB INIT.VARS
     GOSUB PROCESS
     RETURN
@@ -17,7 +18,7 @@ INIT.VARS:
     Y.SEP = "|"
     YSEP.ORI = ";"
     Y.SEPA3 = "/"
-    Y.HOY = TODAY
+    Y.HOY = EB.SystemTables.getToday()
 
     Y.CADENA.ENVIO = FIELD(Y.DATOS.ENVIO, Y.SEP, 1)
     Y.RUTA.LOG = FIELD(Y.DATOS.ENVIO, Y.SEP, 2)

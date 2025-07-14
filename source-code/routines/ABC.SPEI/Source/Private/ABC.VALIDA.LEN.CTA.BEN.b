@@ -58,7 +58,7 @@ PROCESS:
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
         END
-    CASE OTHERWISE
+    CASE 1
         ETEXT = 'Tipo de cuenta invalida ':Y.TIPO.CTA.BENEF
         EB.SystemTables.setEtext(ETEXT)
         EB.ErrorProcessing.StoreEndError()

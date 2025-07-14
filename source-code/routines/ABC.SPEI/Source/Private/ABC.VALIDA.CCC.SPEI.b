@@ -14,6 +14,7 @@ SUBROUTINE ABC.VALIDA.CCC.SPEI
     $USING FT.Contract
     $USING AC.AccountOpening
     $USING EB.Display
+    $USING EB.Updates
 
     GOSUB OPEN.FILES
     GOSUB PROCESS
@@ -49,10 +50,10 @@ OPEN.FILES:
     IF NOT(R.ABC.PARAMETROS.BANXICO) THEN
         Y.BANCO.PROPIO = "000"
     END ELSE
-        Y.BANCO.PROPIO = R.ABC.PARAMETROS.BANXICO<AbcTable.AbcParametrosBanxico.NumBanco> * 1
+        Y.BANCO.PROPIO = R.ABC.PARAMETROS.BANXICO<AbcTable.AbcParametrosBanxico.BanxicoNumBanco> * 1
     END
 
-    NOM.CAMPOS     = 'CTA.EXT.TRANSF':@VM:'RFC.BENEF.SPEI'
+    NOM.CAMPOS     = 'CTA.EXT.TRANSF' : @VM : 'RFC.BENEF.SPEI'
     POS.CAMP.LOCAL = ""
         
     EB.Updates.MultiGetLocRef("FUNDS.TRANSFER",NOM.CAMPOS,POS.CAMP.LOCAL)
@@ -73,7 +74,7 @@ PROCESS:
         Y.LOCAL.REF = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.LocalRef)
         Y.CTA.EXT.TRANSF = Y.LOCAL.REF<1, YPOS.CTA.EXT.TRANSF>
 
-        IF ( (LEN(Y.COMI) NE 18) AND (Y.CTA.EXT.TRANSF EQ "") ) THEN
+        IF (LEN(Y.COMI) NE 18) AND (Y.CTA.EXT.TRANSF EQ "") THEN
             V.ERROR.MSG = "La cuenta debe ser de 18 digitos"
             EB.SystemTables.setE(V.ERROR.MSG)
             EB.ErrorProcessing.Err()
@@ -113,7 +114,7 @@ PROCESS:
             EB.DataAccess.FRead(FN.ABC.GENERAL.PARAM, "ABC.INSTITUCIONES", R.ABC.GENERAL.PARAM, F.ABC.GENERAL.PARAM, Y.ERR.PARAM)
             IF R.ABC.GENERAL.PARAM THEN
                 LISTA.TIPO = R.ABC.GENERAL.PARAM<AbcTable.AbcGeneralParam.DatoParametro>
-                CONVERT VM TO FM IN LISTA.TIPO
+                CONVERT @VM TO @FM IN LISTA.TIPO
                 NUM.LISTA.TIPO = DCOUNT(LISTA.TIPO,FM)
                 FOR CT = 1 TO NUM.LISTA.TIPO
                     Y.ID.BANCO = LISTA.TIPO<CT>:STR("0",3-LEN(Y.BANCO)):Y.BANCO
@@ -134,26 +135,23 @@ PROCESS:
                 RETURN
             END
 
-            AbcSpei.AbcCalculaCcc(YCADENA,YERROR)
+            AbcSpei.abcCalculaCcc(YCADENA,YERROR)
 
             IF YERROR EQ 1 THEN
                 V.ERROR.MSG = "La cuenta no esta completa"
                 EB.SystemTables.setE(V.ERROR.MSG)
                 EB.ErrorProcessing.Err()
-            END
-            ELSE
+            END ELSE
                 IF YERROR EQ 2 THEN
                     V.ERROR.MSG = "La cuenta no es numerica"
                     EB.SystemTables.setE(V.ERROR.MSG)
                     EB.ErrorProcessing.Err()
-                END
-                ELSE
+                END ELSE
                     IF YCADENA.ORIGINAL NE YCADENA THEN
                         V.ERROR.MSG = "El digito no es correcto"
                         EB.SystemTables.setE(V.ERROR.MSG)
                         EB.ErrorProcessing.Err()
-                    END
-                    ELSE
+                    END ELSE
                         Y.COMI = YCADENA
                         IF EB.SystemTables.getAv() NE YPOS.CTA.EXT.TRANSF THEN
                             GOSUB VALIDATE.AUTH.ACCOUNT
@@ -161,19 +159,17 @@ PROCESS:
                         Y.PGM.VERSION = EB.SystemTables.getPgmVersion()
                         IF (Y.PGM.VERSION NE ",SPEI.T.T.OFS") AND (Y.PGM.VERSION NE ",ABC.2FX.OFS.SPEI") AND (Y.PGM.VERSION NE ",ABC.2BR.OFS.SPEI.DISP") THEN
                             IF EB.SystemTables.getMessage() NE "VAL" THEN
-
                                 Y.LOCAL.REF<1,YPOS.CTA.EXT.TRANSF> = ""
                                 Y.LOCAL.REF<1,YPOS.RFC.BENEF.SPEI> = ""
                                 EB.SystemTables.setRNew(FT.Contract.FundsTransfer.LocalRef, Y.LOCAL.REF)
-                                EB.SystemTables.setRNew(FT.Contract.FundsTransfer.PaymentDetails) = ""
+                                EB.SystemTables.setRNew(FT.Contract.FundsTransfer.PaymentDetails, "")
                             END
                         END
                         EB.Display.RebuildScreen()
                     END
                 END
             END
-        END
-        ELSE
+        END ELSE
             V.ERROR.MSG = "La cuenta debe ser de 18 digitos"
             EB.SystemTables.setE(V.ERROR.MSG)
             EB.ErrorProcessing.Err()
@@ -199,7 +195,7 @@ VALIDATE.AUTH.ACCOUNT:
 
     IF R.ABC.CTAS.AUTORIZADAS EQ '' THEN
 
-        IF (PGM.VERSION NE ",ABC.2FX.OFS.SPEI") AND (PGM.VERSION NE ",ABC.2BR.OFS.SPEI.DISP") THEN
+        IF (Y.PGM.VERSION NE ",ABC.2FX.OFS.SPEI") AND (Y.PGM.VERSION NE ",ABC.2BR.OFS.SPEI.DISP") THEN
             AbcSpei.AbcValidaComisionSpei()
         END
         RETURN
@@ -213,7 +209,7 @@ VALIDATE.AUTH.ACCOUNT:
         RETURN
     END
 
-    IF (PGM.VERSION NE ",ABC.2FX.OFS.SPEI") AND (PGM.VERSION NE ",ABC.2BR.OFS.SPEI.DISP") THEN
+    IF (Y.PGM.VERSION NE ",ABC.2FX.OFS.SPEI") AND (Y.PGM.VERSION NE ",ABC.2BR.OFS.SPEI.DISP") THEN
         AbcSpei.AbcValidaComisionSpei()
     END
 

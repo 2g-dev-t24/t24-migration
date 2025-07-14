@@ -18,7 +18,7 @@ SUBROUTINE ABC.VALIDA.EXT.ID
     RETURN
 
 INICIO:
-    //TODO : FALTA MIGRAR ESTA TABLA
+
     FN.ABC.FT.DETAIL = "F.ABC.L.FT.TXN.DETAIL"
     FV.ABC.FT.DETAIL = ''
     EB.DataAccess.Opf(FN.ABC.FT.DETAIL, FV.ABC.FT.DETAIL)
@@ -47,8 +47,7 @@ PROCESS:
             EB.DataAccess.FReadHistory(FN.ABC.FT.DETAIL.HIS, Y.EXT.TRANS.ID.HIS, REC.FT.DET.CONCAT, FV.ABC.FT.DETAIL.HIS, Y.ERR)
         END
         IF REC.FT.DET.CONCAT NE '' THEN
-            //TODO : CAMBIAR EL PREFIX UNA VEZ MIGRADO
-            Y.ID.FT.ORI = REC.FT.DET.CONCAT<AbcTable.FtTxnDet.IdFt>
+            Y.ID.FT.ORI = REC.FT.DET.CONCAT<AbcTable.AbcLFtTxnDetail.IdFt>
             ETEXT = "EXT TRANS ID: " : Y.EXT.TRANS.ID : " YA REGISTRADO: ": Y.ID.FT.ORI
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()

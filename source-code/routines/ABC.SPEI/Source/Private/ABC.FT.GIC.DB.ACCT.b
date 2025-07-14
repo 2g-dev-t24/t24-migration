@@ -1,5 +1,5 @@
 $PACKAGE AbcSpei
-SUBROUTINE V.FT.GIC.DB.ACCT
+SUBROUTINE ABC.FT.GIC.DB.ACCT
 *-----------------------------------------------------------------------------
 *
 *-----------------------------------------------------------------------------
@@ -11,6 +11,7 @@ SUBROUTINE V.FT.GIC.DB.ACCT
     $USING FT.Contract
     $USING AC.AccountOpening
     $USING AbcSpei
+    $USING EB.Display
 
     GOSUB INITIALIZE
     GOSUB PROCESS
@@ -22,6 +23,7 @@ INITIALIZE:
     FN.ACCOUNT = "F.ACCOUNT"
     F.ACCOUNT = ""
     EB.DataAccess.Opf(FN.ACCOUNT, F.ACCOUNT)
+    
     RETURN
 
 *-----------------------------------------------------------------------------
