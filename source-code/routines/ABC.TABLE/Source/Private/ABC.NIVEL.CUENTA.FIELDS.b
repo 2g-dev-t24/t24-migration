@@ -7,7 +7,7 @@ $PACKAGE AbcTable
     $USING EB.SystemTables
     $USING EB.Template
 *-----------------------------------------------------------------------------
-    EB.Template.TableDefineid("TABLE.NAME.ID", T24_String)        ;* Define Table id
+    EB.Template.TableDefineid("TABLE.NAME.ID", EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
     EB.Template.TableAddfielddefinition('DESCRIPCION', '60', 'ANY', '')     ;* Add a new field
     EB.Template.TableAddfielddefinition('LIMITE', '20', '', '')   ;* Add a new field

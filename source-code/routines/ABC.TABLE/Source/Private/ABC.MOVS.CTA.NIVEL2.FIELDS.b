@@ -7,9 +7,9 @@ $PACKAGE AbcTable
     $USING EB.SystemTables
     $USING EB.Template
 *-----------------------------------------------------------------------------
-    EB.Template.TableDefineid("ID", T24_String)         ;* Define Table id
+    EB.Template.TableDefineid("ID", EB.Template.T24String)         ;* Define Table id
 *-----------------------------------------------------------------------------
-    EB.Template.TableAddfield("CUSTOMER", T24_Customer,Field_Mandatory, "")
+    EB.Template.TableAddfield("CUSTOMER", EB.Template.T24Customer,EB.Template.FieldMandatory, "")
     EB.Template.FieldSetcheckfile("CUSTOMER")
     EB.Template.TableAddfielddefinition("FECHA.INI", '10', 'ANY', '')
     EB.Template.TableAddfielddefinition("FECHA.FIN", '10', 'ANY', '')

@@ -8,9 +8,9 @@ $PACKAGE AbcTable
     $USING EB.SystemTables
     $USING EB.Template
 
-    EB.Template.TableDefineid('ABC.MOVS.COMI', T24_String)
+    EB.Template.TableDefineid('ABC.MOVS.COMI', EB.Template.T24String)
 
-    EB.Template.TableAddfield("CUSTOMER", T24_Customer,Field_Mandatory, "")
+    EB.Template.TableAddfield("CUSTOMER", EB.Template.T24Customer,EB.Template.FieldMandatory, "")
     EB.Template.FieldSetcheckfile("CUSTOMER")
 
     EB.Template.TableAddfielddefinition("XX<OPERACION.IN", '20', 'ANY', '')
