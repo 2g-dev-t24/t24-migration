@@ -1,3 +1,15 @@
+* @ValidationCode : Mjo1Nzk1NzYyNDA6Q3AxMjUyOjE3NTI0NTgwNzQ0NTM6THVjYXNGZXJyYXJpOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 13 Jul 2025 22:54:34
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : LucasFerrari
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE AbcSpei
 
 SUBROUTINE ABC.CALL.RTNS.GEN.FT
@@ -46,7 +58,7 @@ EJECUTA.RTNS:
     Y.CUENTA.DEBIT = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.DebitAcctNo)
     Y.CUENTA.CREDIT = EB.SystemTables.getRNew(FT.Contract.FundsTransfer.CreditAcctNo)
 
-    Y.RTNS.TOTALES = DCOUNT(Y.RTNS.EJECUTABLES, FM)
+    Y.RTNS.TOTALES = DCOUNT(Y.RTNS.EJECUTABLES, @FM)
 
     FOR Y.IT.RTN = 1 TO Y.RTNS.TOTALES
         Y.NOMBRE.RTN = Y.LIST.VALUES<Y.IT.RTN>
@@ -60,4 +72,4 @@ FINAL:
 
 RETURN
 
-END 
+END
