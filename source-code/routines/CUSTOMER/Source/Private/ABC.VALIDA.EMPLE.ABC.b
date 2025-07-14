@@ -40,7 +40,7 @@ $PACKAGE ABC.BP
         EB.SystemTables.setTLocref(tmp)
 
     END
-    Y.LOCAL.REF<1,107> = ""
-    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
+*    Y.LOCAL.REF<1,107> = ""
+*    EB.SystemTables.setRNew(ST.Customer.Customer.EbCusLocalRef,Y.LOCAL.REF)
 RETURN
 END
