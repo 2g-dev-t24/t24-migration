@@ -38,9 +38,8 @@ SUBROUTINE ABC.CLEAR.CTA.EXTERNA.SPEI
         END
     END
 
-    //TODO : FALTAN ESTAS 2 MIGRAR
-    AbcSpei.VFtGicDbAcct()
-    AbcSpei.VpmVFtToday()
+    AbcSpei.AbcFtGicDbAcct()
+    AbcSpei.AbcVFtToday()
     RETURN
 END
 

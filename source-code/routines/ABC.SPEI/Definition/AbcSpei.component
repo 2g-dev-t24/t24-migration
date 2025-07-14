@@ -402,3 +402,27 @@ public method AbcValidaExtId (
 {
     jBC: ABC.VALIDA.EXT.ID
 }
+
+public method AbcFtGicDbAcct ()
+{
+    jBC: ABC.FT.GIC.DB.ACCT
+}
+
+public method AbcVFtToday ()
+{
+    jBC: ABC.V.FT.TODAY
+}
+
+public method PbsInslog (
+    INOUT yArchivoGuardar string,
+    INOUT yMensaje string,
+    INOUT yIniciando int
+)
+{
+    jBC: PBS.INSLOG
+}
+
+public method Abc2BrVCheckSpeiType ()
+{
+    jBC: ABC.2BR.V.CHECK.SPEI.TYPE
+}

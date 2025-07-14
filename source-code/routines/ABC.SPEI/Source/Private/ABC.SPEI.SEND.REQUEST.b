@@ -31,10 +31,10 @@ PROCESS:
 ********
     Y.SALTO = CHAR(10)
     Y.MENSAJE = Y.SALTO : "--------------------------------------------------------------------------"
-    CALL PBS.INSLOG(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
+    AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
     Y.MENSAJE = "PROCESANDO TRANSACCION ...  " : Y.ID.FT
-    CALL PBS.INSLOG(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
+    AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
     str_path = @PATH
     str_filename = "SPEI":RND(2000000):TIME():".sh"
@@ -48,10 +48,10 @@ PROCESS:
     Y.CADENA = 'java -jar GenericSOAPClient.jar "' : Y.CADENA.ENVIO : '"' : Y.SALTO
 
     Y.MENSAJE = "ENVIANDO REQUEST ...  "
-    CALL PBS.INSLOG(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
+    AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
     Y.MENSAJE = Y.CADENA
-    CALL PBS.INSLOG(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
+    AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
 * Armo Archivo
     Y.SHELL  = "#!/bin/ksh" : Y.SALTO
@@ -62,7 +62,7 @@ PROCESS:
 
     WRITESEQ Y.SHELL APPEND TO FILE.VAR1 ELSE
         Y.MENSAJE = "No se Consiguio Escribir el Archivo: " : TEMP.FILE
-        CALL PBS.INSLOG(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
+        AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
         DISPLAY Y.MENSAJE
     END
     CLOSESEQ FILE.VAR1
@@ -72,16 +72,16 @@ PROCESS:
     EXECUTE "rm ./" : str_filename        CAPTURING Y.RESPONSE.RM
 
     Y.MENSAJE = "RECIBIENDO RESPUESTA...... "
-    CALL PBS.INSLOG(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
+    AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
     Y.MENSAJE = Y.RETURNVAL
-    CALL PBS.INSLOG(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
+    AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
     Y.MENSAJE = "PROCESAMIENTO TERMINADO.  TRANSACCION ...  " : Y.ID.FT
-    CALL PBS.INSLOG(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
+    AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
     Y.MENSAJE = "--------------------------------------------------------------------------" : Y.SALTO
-    CALL PBS.INSLOG(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
+    AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
 * PRINT "RETURNVAL  ... " : Y.RETURNVAL
     RETURN
