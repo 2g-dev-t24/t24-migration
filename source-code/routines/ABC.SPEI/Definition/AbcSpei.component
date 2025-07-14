@@ -291,16 +291,10 @@ public method AbcValidaLimiteMonto (
 }
 
 private method abcEMovFt (
-   INOUT yArr string
+    INOUT yArr string
 )
 {
-   jBC: ABC.E.MOV.FT
-}
-
-public method AbcFmtInstBenef (
-)
-{
-    jBC: ABC.FMT.INST.BENEF
+    jBC: ABC.E.MOV.FT
 }
 
 public method AbcFmtInstBenef (
