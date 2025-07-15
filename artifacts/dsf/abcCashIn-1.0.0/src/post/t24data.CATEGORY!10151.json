@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "10151",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Deud Operacion"
+    }, {
+      "SHORT.NAME" : "Deud Operacion"
+    } ],
+    "POSITION.TYPE" : "TR",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Deudores de Operaciones"
+    }, {
+      "DESCRIPTION" : "Deudores de Operaciones"
+    } ],
+    "SYSTEM.IND" : "AC"
+  }
+}

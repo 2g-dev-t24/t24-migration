@@ -1,0 +1,33 @@
+{
+  "header" : {
+    "id" : "MXN101510013",
+    "dsfApiType" : "ACCOUNT",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CURRENCY" : "MXN",
+    "ACCOUNT.OFFICER" : "90101",
+    "ACCOUNT.TITLE.2" : [ { }, {
+      "ACCOUNT.TITLE.2" : "1401900101170000"
+    } ],
+    "MNEMONIC" : "A10151O013",
+    "ACCOUNT.TITLE.1" : [ { }, {
+      "ACCOUNT.TITLE.1" : "DEUDOR / CASHIN"
+    } ],
+    "POSITION.TYPE" : "TR",
+    "ALLOW.NETTING" : "NO",
+    "CATEGORY" : "10151",
+    "HVT.FLAG" : "YES",
+    "PASSBOOK" : "NO",
+    "CURRENCY.MARKET" : "1",
+    "SHORT.TITLE" : [ { }, {
+      "SHORT.TITLE" : "DEUDOR / CASHIN"
+    } ],
+    "OPENING.DATE" : "20240416"
+  }
+}
