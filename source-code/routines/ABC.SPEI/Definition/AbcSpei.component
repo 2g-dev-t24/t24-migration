@@ -426,3 +426,10 @@ public method Abc2BrVCheckSpeiType ()
 {
     jBC: ABC.2BR.V.CHECK.SPEI.TYPE
 }
+
+private method abcExtDescSpei (
+)
+{
+   jBC: ABC.EXT.DESC.SPEI
+}
+

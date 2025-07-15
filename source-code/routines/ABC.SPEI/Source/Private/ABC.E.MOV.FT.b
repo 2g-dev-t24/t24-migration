@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNTA0NDQxODYwOkNwMTI1MjoxNzUyNTQ2MDI3Mzk1Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 14 Jul 2025 23:20:27
+* @ValidationCode : MjoxNzk5Mjg0NDc6Q3AxMjUyOjE3NTI1NDg5NjMyMTE6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 15 Jul 2025 00:09:23
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -421,7 +421,7 @@ PROCESA.TRANSACCION:
         END
 
         DETAIL.PAY = ''
-        DETAIL.PAY = REC.FT<FT.Contract.FundsTransfer.InPaymentDetails,1>
+        DETAIL.PAY = REC.FT<FT.Contract.FundsTransfer.PaymentDetails,1>
         CHANGE @SM TO '' IN DETAIL.PAY
         DETAIL.PAY = TRIM(DETAIL.PAY)
 
