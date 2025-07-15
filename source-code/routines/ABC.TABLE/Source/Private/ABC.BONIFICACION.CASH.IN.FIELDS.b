@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMjkzNjY1ODEyOkNwMTI1MjoxNzQ0ODEzOTkxMjU2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 16 Apr 2025 11:33:11
+* @ValidationCode : MjotNzM2OTI0Njc4OkNwMTI1MjoxNzUyNTM4NTM3ODI4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 14 Jul 2025 21:15:37
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -25,7 +25,7 @@ SUBROUTINE ABC.BONIFICACION.CASH.IN.FIELDS
     EB.Template.TableDefineid('ACCT.ID', EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
 
-    EB.Template.TableAddfield          ("CUSTOMER", EB.Template.T24Customer, EB.Template.FieldMandatory, "")
+    EB.Template.TableAddfield("CUSTOMER", EB.Template.T24Customer, EB.Template.FieldMandatory, "")
     EB.Template.FieldSetcheckfile("CUSTOMER")
     
     
@@ -37,8 +37,8 @@ SUBROUTINE ABC.BONIFICACION.CASH.IN.FIELDS
     EB.Template.TableAddfielddefinition("MONTO.TOTAL", '20', 'ANY', '')
     EB.Template.TableAddfielddefinition("NUM.OPER.BONIFICAN", '20', 'ANY', '')
     EB.Template.TableAddfielddefinition("MONTO.A.BONIFICAR", '20', 'ANY', '')
-    
     EB.Template.TableAddoptionsfield   ("BONIFICADO", 'SI_NO', '', '')
+    EB.Template.TableAddoptionsfield   ("ID.BONIFICACION", '20', 'ANY', '')
     
     EB.Template.TableAddreservedfield("RESERVED.15")
     EB.Template.TableAddreservedfield("RESERVED.14")
