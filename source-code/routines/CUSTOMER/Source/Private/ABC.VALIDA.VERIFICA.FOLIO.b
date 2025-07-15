@@ -34,6 +34,10 @@ INICIALIZA:
     FN.ACCOUNT = 'F.ACCOUNT'
     F.ACCOUNT = ''
     EB.DataAccess.Opf(FN.ACCOUNT,F.ACCOUNT)
+    
+    FN.EB.LOOKUP    = 'F.EB.LOOKUP'
+    F.EB.LOOKUP    = ''
+    EB.DataAccess.Opf(FN.EB.LOOKUP,F.EB.LOOKUP)
 
     Y.ID.GEN.PARAM = 'ABC.MONTO.UDIS'
     Y.LIST.PARAMS = ''
@@ -45,7 +49,6 @@ INICIALIZA:
     END
 
     EB.LocalReferences.GetLocRef('FUNDS.TRANSFER', 'FOL.VALIDACION', POS.FOL.VAL)
-    EB.LocalReferences.GetLocRef('ACCOUNT', 'NIVEL', POS.NIVEL)
     EB.LocalReferences.GetLocRef("CUSTOMER", "CLASSIFICATION", POS.CLASSIFICATION)
 
     Y.ACC.CUS = ''
@@ -73,7 +76,8 @@ PROCESO:
 
     IF R.ACC.CUS THEN
         Y.ID.CUST = R.ACC.CUS<AC.AccountOpening.Account.Customer>
-        Y.NIVEL.CTA = R.ACC.CUS<AC.AccountOpening.Account.LocalRef, POS.NIVEL>
+        Y.ACCOUNT.CATEGORY = R.ACCOUNT<AC.AccountOpening.Account.Category>
+        GOSUB LEER.NIVEL
     END
 
 *LEEMOS EL REGISTRO DEL CLIENTE PARA OBTENER CLASSIFICATION
@@ -165,4 +169,21 @@ REVERSA.FOLIO:
 
     BANDE.EST = ''
 
-    RETURN
+RETURN
+
+*---------------------------------------------------------------
+LEER.NIVEL:
+*---------------------------------------------------------------
+
+    Y.EB.LOOKUP = "ABC.NIVEL.CUENTA*":Y.ACCOUNT.CATEGORY
+    EB.DataAccess.FRead(FN.EB.LOOKUP, Y.EB.LOOKUP, R.EB.LOOKUP, F.EB.LOOKUP, ERR.EB.LOOKUP)
+
+    IF R.EB.LOOKUP NE '' THEN
+        Y.NIVEL.CTA = R.EB.LOOKUP<EB.Template.Lookup.LuDescription,1>
+    END ELSE
+        Y.ERROR = "NIVEL DE CUENTA NO CONFIGURADO"
+    END
+
+RETURN
+
+END
