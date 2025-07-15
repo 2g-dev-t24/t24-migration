@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo4OTAxMjczNDpDcDEyNTI6MTc1MjExMzE4MzM1MzptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 09 Jul 2025 23:06:23
+* @ValidationCode : MjoxNTA0NDQxODYwOkNwMTI1MjoxNzUyNTQ2MDI3Mzk1Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 14 Jul 2025 23:20:27
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -132,10 +132,10 @@ OBTENER.ID.FT:
     Y.ERR = ""
     EB.DataAccess.FRead(FN.ABC.FT.DETAIL, ID.EXT.TRANS, REC.FT.DETS, FV.ABC.FT.DETAIL, Y.ERR)
     IF NOT(Y.ERR) THEN
-        ID.CUENTA.FT = REC.FT.DETS<FT.TXN.DET.ID.FT>
+        ID.CUENTA.FT = REC.FT.DETS<AbcTable.AbcLFtTxnDetail.IdFt>
     END ELSE
         EB.DataAccess.FReadHistory(FN.ABC.FT.DETAIL.HIS, ID.EXT.TRANS, REC.FT.DETS, FV.ABC.FT.DETAIL.HIS, Y.ERR)
-        ID.CUENTA.FT = FIELD(REC.FT.DETS<FT.TXN.DET.ID.FT>,';',1)
+        ID.CUENTA.FT = FIELD(REC.FT.DETS<AbcTable.AbcLFtTxnDetail.IdFt>,';',1)
     END
 
     IF REC.FT.DETS EQ '' THEN
