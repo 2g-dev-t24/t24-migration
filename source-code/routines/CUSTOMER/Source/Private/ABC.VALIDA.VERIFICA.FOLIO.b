@@ -12,6 +12,7 @@ $PACKAGE ABC.BP
     $USING ST.Customer
     $USING AC.AccountOpening
     $USING EB.LocalReferences
+    $USING EB.Template
     $USING AbcGetGeneralParam
     $USING AbcTable
     
@@ -76,7 +77,7 @@ PROCESO:
 
     IF R.ACC.CUS THEN
         Y.ID.CUST = R.ACC.CUS<AC.AccountOpening.Account.Customer>
-        Y.ACCOUNT.CATEGORY = R.ACCOUNT<AC.AccountOpening.Account.Category>
+        Y.ACCOUNT.CATEGORY = R.ACC.CUS<AC.AccountOpening.Account.Category>
         GOSUB LEER.NIVEL
     END
 
