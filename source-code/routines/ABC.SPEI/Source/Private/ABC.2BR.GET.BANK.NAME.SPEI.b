@@ -1,20 +1,30 @@
+* @ValidationCode : Mjo1MDU3OTI3OTQ6Q3AxMjUyOjE3NTI1Mzk2OTk1NTg6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 14 Jul 2025 21:34:59
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : mauricio.lopez
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>-20</Rating>
 *-----------------------------------------------------------------------------
 $PACKAGE AbcSpei
-    SUBROUTINE ABC.2BR.GET.BANK.NAME.SPEI(YINPUT.DATA)
+SUBROUTINE ABC.2BR.GET.BANK.NAME.SPEI(YINPUT.DATA)
 
 *--------------------------------------------------------------------
-    $USING EB.DataAccess
-    $USING AbcTable
+    $USING EB.Template
 *-----------------------
 * Main Loop Program
 *-----------------------
 
-    GOSUB INITIALIZE
     GOSUB PROCESS
 
-    RETURN
+RETURN
 
 *-------
 PROCESS:
@@ -23,25 +33,17 @@ PROCESS:
     YBANK.ID = YINPUT.DATA[1,3]
     YBANK.ID = '40':YBANK.ID
     YBANK.ID = TRIM(YBANK.ID,"0","L")
+    
+    R.VPM.BANCOS = EB.Template.Lookup.Read(YBANK.ID, Error)
 
-    EB.DataAccess.FRead(FN.VPM.BANCOS,YBANK.ID,R.VPM.BANCOS,FV.VPM.BANCOS,YF.ERROR)
     IF R.VPM.BANCOS THEN
-        YINPUT.DATA = R.VPM.BANCOS<AbcTable.AbcBancos.ClavePuntoTrans>
+        YINPUT.DATA = R.VPM.BANCOS<EB.Template.Lookup.LuDescription>
     END ELSE
         YINPUT.DATA = "BANCO NO ESTA EN CATALOGO"
     END
 
-    RETURN
-*----------
-INITIALIZE:
-*----------
+RETURN
 
-    FN.VPM.BANCOS = "F.ABC.BANCOS"
-    FV.VPM.BANCOS = ""
-    EB.DataAccess.Opf(FN.VPM.BANCOS,FV.VPM.BANCOS)
-
-    RETURN
-**********
 END
 
 
