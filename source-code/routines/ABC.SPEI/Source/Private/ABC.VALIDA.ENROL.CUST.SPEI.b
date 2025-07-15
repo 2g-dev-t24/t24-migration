@@ -12,6 +12,8 @@ $PACKAGE AbcSpei
     $USING FT.Contract
     $USING EB.Template
     $USING ABC.BP
+    $USING EB.ErrorProcessing
+    $USING EB.Updates
 
     GOSUB INICIALIZA
     IF (Y.NIVEL.CTA NE 'NIVEL.1') AND (Y.NIVEL.CTA NE 'NIVEL.2') THEN
