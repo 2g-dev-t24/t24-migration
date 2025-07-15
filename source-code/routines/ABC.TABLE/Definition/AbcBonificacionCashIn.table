@@ -11,8 +11,9 @@ public table AbcBonificacionCashIn {
         MontoTotal(CASH.IN.MONTO.TOTAL) = 7
         NumOperBonifican(CASH.IN.NUM.OPER.BONIFICAN) = 8
         MontoABonificar(CASH.IN.MONTO.A.BONIFICAR) = 9
-        IdBonificacion(CASH.IN.ID.BONIFICACION) = 10
-        Bonificado(CASH.IN.BONIFICADO) = 11
+        Bonificado(CASH.IN.BONIFICADO) = 10
+        IdBonificacion(CASH.IN.ID.BONIFICACION) = 11
+        
         
         Reserved15(CASH.IN.RESERVED.15) = 12
         Reserved14(CASH.IN.RESERVED.14) = 13
