@@ -10,9 +10,8 @@ $PACKAGE AbcSpei
     $USING EB.DataAccess
     $USING AC.AccountOpening
     $USING FT.Contract
+    $USING EB.Template
     $USING ABC.BP
-    $USING EB.Updates
-    $USING EB.ErrorProcessing
 
     GOSUB INICIALIZA
     IF (Y.NIVEL.CTA NE 'NIVEL.1') AND (Y.NIVEL.CTA NE 'NIVEL.2') THEN
@@ -40,6 +39,10 @@ INICIALIZA:
     FN.FT.HIS = 'F.FUNDS.TRANSFER$HIS'
     F.FT.HIS = ''
     EB.DataAccess.Opf(FN.FT.HIS,F.FT.HIS)
+
+    FN.EB.LOOKUP    = 'F.EB.LOOKUP'
+    F.EB.LOOKUP    = ''
+    EB.DataAccess.Opf(FN.EB.LOOKUP,F.EB.LOOKUP)
 
     EB.Updates.MultiGetLocRef('ACCOUNT', 'NIVEL', POS.NIVEL)
 
@@ -111,7 +114,8 @@ INICIALIZA:
 
     IF R.ACC.CUS THEN
         Y.ID.CUST = R.ACC.CUS<AC.AccountOpening.Account.Customer>
-        Y.NIVEL.CTA = R.ACC.CUS<AC.AccountOpening.Account.LocalRef, POS.NIVEL>
+        Y.ACCOUNT.CATEGORY = R.ACC.CUS<AC.AccountOpening.Account.Category>
+        GOSUB LEER.NIVEL
     END
 
 
@@ -135,5 +139,20 @@ VALIDA.CLIENTE:
     END
 
     RETURN
+
+*---------------------------------------------------------------
+LEER.NIVEL:
+*---------------------------------------------------------------
+
+    Y.EB.LOOKUP = "ABC.NIVEL.CUENTA*":Y.ACCOUNT.CATEGORY
+    EB.DataAccess.FRead(FN.EB.LOOKUP, Y.EB.LOOKUP, R.EB.LOOKUP, F.EB.LOOKUP, ERR.EB.LOOKUP)
+
+    IF R.EB.LOOKUP NE '' THEN
+        Y.NIVEL.CTA = R.EB.LOOKUP<EB.Template.Lookup.LuDescription,1>
+    END ELSE
+        Y.ERROR = "NIVEL DE CUENTA NO CONFIGURADO"
+    END
+
+RETURN
 
 END
