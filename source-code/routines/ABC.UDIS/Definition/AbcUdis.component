@@ -1,0 +1,12 @@
+component AbcUdis
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+
+
+private method abcIUdisCtrl (
+)
+{
+   jBC: ABC.I.UDIS.CTRL
+}
+

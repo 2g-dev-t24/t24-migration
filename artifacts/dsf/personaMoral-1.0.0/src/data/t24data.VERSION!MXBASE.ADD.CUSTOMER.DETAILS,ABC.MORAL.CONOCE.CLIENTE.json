@@ -152,6 +152,7 @@
     }, {
       "FIELD.NO" : "COMMENTS",
       "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.OPCION",
       "TEXT" : [ {
         "TEXT" : "Cliente Considerado Politicamente"
       } ],

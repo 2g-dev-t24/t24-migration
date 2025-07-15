@@ -17,6 +17,7 @@ SUBROUTINE ABC.FMT.INST.BENEF
 
     GOSUB INITIALIZE
     GOSUB PROCESS
+
     RETURN
 
 ***********
@@ -47,7 +48,7 @@ PROCESS:
                 EB.SystemTables.setEtext(ETEXT)
                 EB.ErrorProcessing.StoreEndError()
                 RETURN
-            ELSE
+            END ELSE
                 IF Y.INST.BENEF NE Y.CTA.EXT.TRANSF[1,3] AND LEN(Y.CTA.EXT.TRANSF) EQ 18 THEN
                     ETEXT = 'La cuenta beneficiaria no pertenece al banco ingresado'
                     EB.SystemTables.setEtext(ETEXT)
@@ -92,7 +93,7 @@ PROCESS:
                 EB.SystemTables.setEtext(ETEXT)
                 EB.ErrorProcessing.StoreEndError()
                 RETURN
-            ELSE
+            END ELSE
                 IF Y.INST.BENEF[3,3] NE Y.CTA.EXT.TRANSF[1,3] AND LEN(Y.CTA.EXT.TRANSF) EQ 18 THEN
                     ETEXT = 'La cuenta beneficiaria no pertenece al banco ingresado'
                     EB.SystemTables.setEtext(ETEXT)

@@ -27,11 +27,11 @@
         "TABLE.COLUMN" : "1-73-"
       } ],
       "ATTRIBS" : [ {
-        "ATTRIBS" : "POPUP.DROPDOWN"
+        "ATTRIBS" : "HOT.VALIDATE"
       } ],
       "TABLE.LINE" : "0"
     }, {
-      "FIELD.NO" : "CNBV.ECO.ACTIVITY.CODE",
+      "FIELD.NO" : "BANXICO.ECO.ACTIVITY.CODE",
       "COLUMN" : "1",
       "TEXT" : [ {
         "TEXT" : "Código Actividad Económica"
@@ -53,7 +53,7 @@
       } ],
       "TABLE.LINE" : "2"
     }, {
-      "FIELD.NO" : "BANXICO.ECO.ACTIVITY.CODE",
+      "FIELD.NO" : "CNBV.ECO.ACTIVITY.CODE",
       "COLUMN" : "1",
       "TEXT" : [ {
         "TEXT" : "Código Sector Económico"

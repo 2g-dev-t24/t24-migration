@@ -58,8 +58,8 @@ public method Abc2brChecaCajaAbierto (
     jBC: ABC.2BR.CHECA.CAJA.ABIERTO
 }
 
-public method Abc2brChecaCajaAbierto (
+public method Abc2brChecaCajaCerrada (
 )
 {
-    jBC: ABC.2BR.CHECA.CAJA.ABIERTO
+    jBC: ABC.2BR.CHECA.CAJA.CERRADA
 }

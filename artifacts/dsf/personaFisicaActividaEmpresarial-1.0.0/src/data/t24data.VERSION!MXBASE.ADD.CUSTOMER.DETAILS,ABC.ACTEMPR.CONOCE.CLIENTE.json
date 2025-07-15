@@ -12,6 +12,9 @@
   "body" : {
     "NO.OF.AUTH" : "1",
     "RECORDS.PER.PAGE" : "1",
+    "CHECK.REC.RTN" : [ {
+      "CHECK.REC.RTN" : "ABC.CHECK.SET.CUS"
+    } ],
     "LANGUAGE.CODE" : [ {
       "LANGUAGE.CODE" : "2"
     } ],
@@ -152,6 +155,7 @@
     }, {
       "FIELD.NO" : "COMMENTS",
       "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.OPCION",
       "TEXT" : [ {
         "TEXT" : "Cliente Considerado Politicamente"
       } ],
@@ -217,9 +221,9 @@
     } ],
     "REPORT.LOCKS" : "YES",
     "DESCRIPTION" : [ {
-      "DESCRIPTION" : "Conoce a tu cliente Adicional"
+      "DESCRIPTION" : "Conoce A Tu Cliente Adicional"
     }, {
-      "DESCRIPTION" : "Conoce a tu cliente Adicional"
+      "DESCRIPTION" : "Conoce A Tu Cliente Adicional"
     } ],
     "MULTI.POSSIBLE" : "Y",
     "HDR.1.001..039" : [ {
@@ -244,6 +248,9 @@
     }, {
       "VALIDATION.RTN" : "V.ABC.CUS.DES.REC.CHK",
       "VALIDATION.FLD" : "ACCOUNT.PURPOSE"
+    }, {
+      "VALIDATION.RTN" : "ABC.VAL.SECTOR.ECONOMICO",
+      "VALIDATION.FLD" : "BANXICO.ECO.ACTIVITY"
     } ],
     "ID.RTN" : [ {
       "ID.RTN" : "ABC.VAL.MXB.INP.DIST"

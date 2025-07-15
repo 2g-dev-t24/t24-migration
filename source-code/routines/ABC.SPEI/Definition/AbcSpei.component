@@ -291,16 +291,10 @@ public method AbcValidaLimiteMonto (
 }
 
 private method abcEMovFt (
-   INOUT yArr string
+    INOUT yArr string
 )
 {
-   jBC: ABC.E.MOV.FT
-}
-
-public method AbcFmtInstBenef (
-)
-{
-    jBC: ABC.FMT.INST.BENEF
+    jBC: ABC.E.MOV.FT
 }
 
 public method AbcFmtInstBenef (
@@ -315,3 +309,120 @@ public method AbcInsertFtDetsConcat (
     jBC: ABC.INSERT.FT.DETS.CONCAT
 }
 
+public method AbcSpeiExpressTxnOutgoing (
+)
+{
+    jBC: ABC.SPEI.EXPRESS.TXN.OUTGOING
+}
+
+public method AbcSpeiExpressPreparaRequest (
+    INOUT yStringEscribir string,
+    INOUT yResponse string
+)
+{
+    jBC: ABC.SPEI.EXPRESS.PREPARA.REQUEST
+}
+
+public method AbcSpeiExpressGetdataRequest (
+    INOUT yStringOriginal string,
+    INOUT yCadenaDatos string
+)
+{
+    jBC: ABC.SPEI.EXPRESS.GETDATA.REQUEST
+}
+
+public method AbcTraeGeneralParam (
+    INOUT yIdMod string,
+    INOUT yCadenaParam string,
+    INOUT yCadenaDatos string
+)
+{
+    jBC: ABC.TRAE.GENERAL.PARAM
+}
+
+public method AbcSpeiInterpretaResponse (
+    INOUT yResponse string,
+    INOUT yMessageOut string
+)
+{
+    jBC: ABC.SPEI.INTERPRETA.RESPONSE
+}
+
+public method AbcSpeiArmaRequest (
+    INOUT yTagS string,
+    INOUT yTagI string,
+    INOUT yValores string,
+    INOUT yCadenaSalida string
+)
+{
+    jBC: ABC.SPEI.ARMA.REQUEST
+}
+
+public method AbcSpeiSendRequest (
+    INOUT yCdShell string,
+    INOUT yDatosEnvio string,
+    INOUT yReturnval string
+)
+{
+    jBC: ABC.SPEI.SEND.REQUEST
+}
+
+public method AbcClearCtaExternaSpei (
+)
+{
+    jBC: ABC.CLEAR.CTA.EXTERNA.SPEI
+}
+
+public method AbcValMontoSpeiExpress (
+)
+{
+    jBC: ABC.VAL.MONTO.SPEI.EXPRESS
+}
+
+public method AbcValidaLenCtaBen (
+)
+{
+    jBC: ABC.VALIDA.LEN.CTA.BEN
+}
+
+public method AbcEnvEmailSpeiAcse2 (
+)
+{
+    jBC: ABC.ENV.EMAIL.SPEI.ACSE.2
+}
+
+public method AbcValDefaultRfc (
+)
+{
+    jBC: ABC.VAL.DEFAULT.RFC
+}
+
+public method AbcValidaExtId (
+)
+{
+    jBC: ABC.VALIDA.EXT.ID
+}
+
+public method AbcFtGicDbAcct ()
+{
+    jBC: ABC.FT.GIC.DB.ACCT
+}
+
+public method AbcVFtToday ()
+{
+    jBC: ABC.V.FT.TODAY
+}
+
+public method PbsInslog (
+    INOUT yArchivoGuardar string,
+    INOUT yMensaje string,
+    INOUT yIniciando int
+)
+{
+    jBC: PBS.INSLOG
+}
+
+public method Abc2BrVCheckSpeiType ()
+{
+    jBC: ABC.2BR.V.CHECK.SPEI.TYPE
+}

@@ -1,0 +1,10 @@
+private table AbcUdisConcatHis {
+    t24: ABC.UDIS.CONCAT.HIS
+    fields:{
+        Periodo(ABC.UDIS.CONCAT.HIS.PERIODO)        = 1
+        TotalUdis(ABC.UDIS.CONCAT.HIS.TOTAL.UDIS)   = 2
+        TotalLcy(ABC.UDIS.CONCAT.HIS.TOTAL.LCY)     = 3
+        DDetalleTxn(ABC.UDIS.CONCAT.HIS.DETALLE.TXN)= 4
+        FecUltMov(ABC.UDIS.CONCAT.HIS.FEC.ULT.MOV)  = 5
+    }
+}

@@ -698,3 +698,24 @@ private method AbcLFtTxnDetail ()
 {
     jBC: ABC.L.FT.TXN.DETAIL
 }
+
+private method AbcUdisConcat ()
+{
+   jBC: ABC.UDIS.CONCAT
+}
+
+private method AbcUdisConcatFields ()
+{
+   jBC: ABC.UDIS.CONCAT.FIELDS
+}
+
+private method AbcUdisConcatHis ()
+{
+   jBC: ABC.UDIS.CONCAT.HIS
+}
+
+private method AbcUdisConcatHisFields ()
+{
+   jBC: ABC.UDIS.CONCAT.HIS.FIELDS
+}
+

@@ -27,7 +27,7 @@
         "TABLE.COLUMN" : "1-73-"
       } ],
       "ATTRIBS" : [ {
-        "ATTRIBS" : "POPUP.DROPDOWN"
+        "ATTRIBS" : "HOT.VALIDATE"
       } ],
       "TABLE.LINE" : "0"
     }, {
