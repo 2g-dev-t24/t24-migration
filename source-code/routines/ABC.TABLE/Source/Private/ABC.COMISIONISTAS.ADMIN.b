@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMjA5NjQ5OTA0ODpDcDEyNTI6MTc0MzczNTY4MjgwNjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 04 Apr 2025 00:01:22
+* @ValidationCode : MjotMjA0MzYyNjI5MTpDcDEyNTI6MTc1MjUzOTgwNDQzMzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 14 Jul 2025 21:36:44
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -30,7 +30,7 @@ SUBROUTINE ABC.COMISIONISTAS.ADMIN
     EB.Template.setTableProduct('EB')      ;* Must be on EB.PRODUCT
     EB.Template.setTableSubproduct('')     ;* Must be on EB.SUB.PRODUCT
     EB.Template.setTableClassification('CUS')        ;* As per FILE.CONTROL
-    EB.Template.setTableSystemclearfile('Y')         ;* As per FILE.CONTROL
+    EB.Template.setTableSystemclearfile('N')         ;* As per FILE.CONTROL
     EB.Template.setTableRelatedfiles('')   ;* As per FILE.CONTROL
     EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL
     EB.Template.setTableEquateprefix('ACA')          ;* Use to create I_F.EB.LOG.PARAMETER

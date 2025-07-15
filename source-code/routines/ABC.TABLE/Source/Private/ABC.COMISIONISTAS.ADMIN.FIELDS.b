@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMTgyMTM2ODY2OkNwMTI1MjoxNzQzNzM1Njk3MjAyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 04 Apr 2025 00:01:37
+* @ValidationCode : MjotMTIyMDA0MDgxOkNwMTI1MjoxNzUyNTM5OTY1NTY4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 14 Jul 2025 21:39:25
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -36,9 +36,10 @@ SUBROUTINE ABC.COMISIONISTAS.ADMIN.FIELDS
     EB.Template.TableAddfielddefinition('NOMBRE.ADMIN'               ,'100', 'ANY', '')
     EB.Template.TableAddfielddefinition('RFC'                 ,'13', 'ANY', '')
     EB.Template.TableAddoptionsfield   ('PER.JURI.ADMIN','_FISICA_MORAL', '','')
+    EB.Template.TableAddfielddefinition('CAUSA.BAJA'                ,'1', 'ANY', '')
     EB.Template.FieldSetcheckfile      ('ABC.CAUSA.BAJA')
     EB.Template.TableAddfielddefinition('LOCALIDAD'          ,'75', 'ANY', '')
-    EB.Template.FieldSetcheckfile      ('VPM.LOCALIDAD')
+    EB.Template.FieldSetcheckfile      ('ABC.LOCALIDADES')
     EB.Template.TableAddfielddefinition('MUNICIPIO'          ,'75', 'ANY', '')
     EB.Template.TableAddfielddefinition('COD.POSTAL'         ,'10', 'ANY', '')
     

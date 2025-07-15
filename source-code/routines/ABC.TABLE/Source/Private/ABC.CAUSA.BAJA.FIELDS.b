@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTA1MDExMTMzMDpDcDEyNTI6MTc0MzczNTY3ODY3NjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 04 Apr 2025 00:01:18
+* @ValidationCode : MjotMjk4NzcyNjYzOkNwMTI1MjoxNzUyNTQyMzc1MTAyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 14 Jul 2025 22:19:35
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -42,7 +42,7 @@ SUBROUTINE ABC.CAUSA.BAJA.FIELDS
     EB.Template.TableAddreservedfield("RESERVED.2")
     EB.Template.TableAddreservedfield("RESERVED.1")
 
-
+    EB.Template.TableAddlocalreferencefield('')
     EB.Template.TableAddoverridefield()
     EB.Template.TableSetauditposition()
 

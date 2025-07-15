@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNzc2MTgzMDExOkNwMTI1MjoxNzUyNTIzNDkyNTExOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 14 Jul 2025 17:04:52
+* @ValidationCode : MjotMTYwMzg2MTEzOkNwMTI1MjoxNzUyNTQxNTU4NjAwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 14 Jul 2025 22:05:58
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -66,12 +66,11 @@ CARGAR.CAMPOS:
     R.ACCOUNT           = AC.AccountOpening.Account.Read(Y.NUMERO.CUENTA, Error)
     
     Y.ACCOUNT.CATEGORY  = R.ACCOUNT<AC.AccountOpening.Account.Category>
+    
+    Y.MONTO.LCY     = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnAmountLcy>
         
     GOSUB OBTENER.TRANSACTION.CODE
     
-    GOSUB OBTENER.DATOS.AA
-
-
 
     
 RETURN
@@ -104,26 +103,7 @@ OBTENER.TRANSACTION.CODE:
     
 RETURN
 
-**********************
-OBTENER.DATOS.AA:
-**********************
 
-    IF(Y.TRANSACTION.CODE EQ '104') THEN
-        
-        IF(Y.MONEDA EQ 'MXN') THEN
-            
-            Y.MONTO     = R.ARR<AA.Framework.ArrangementActivity.ArrActOrigTxnAmt>
-            
-        END ELSE
-        
-            Y.MONTO.lcy     = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnAmountLcy>
-            
-        END
-        
-
-    END
-    
-RETURN
 
 
 
@@ -152,7 +132,7 @@ OBTENER.LIMITE:
     
     Y.TASA = R.CURRENCY<ST.CurrencyConfig.Currency.EbCurMidRevalRate>
     
-    Y.MONTO.UDIS = Y.MONTO / Y.TASA
+    Y.MONTO.UDIS = Y.MONTO.LCY / Y.TASA
     
     
     
@@ -194,8 +174,8 @@ ACUMULAR.LIMITES:
         
         R.UDIS.CONCAT<AbcTable.AbcUdisConcat.Periodo>       = Y.PROCESS.DATE[1,6]
         R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalUdis>     = Y.MONTO.UDIS
-        R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalLcy>      = Y.MONTO
-        R.UDIS.CONCAT<AbcTable.AbcUdisConcat.DDetalleTxn>   = Y.TRANSACTION.CODE:'^':Y.MONTO.UDIS:'^':Y.MONTO
+        R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalLcy>      = Y.MONTO.LCY
+        R.UDIS.CONCAT<AbcTable.AbcUdisConcat.DDetalleTxn>   = Y.TRANSACTION.CODE:'^':Y.MONTO.UDIS:'^':Y.MONTO.LCY
         R.UDIS.CONCAT<AbcTable.AbcUdisConcat.FecUltMov>     = Y.PROCESS.DATE
 
         EB.DataAccess.FWrite(FN.ABC.UDIS.CONCAT,Y.ID.UDI.CONCAT,R.UDIS.CONCAT)
@@ -207,8 +187,8 @@ ACUMULAR.LIMITES:
         IF (Y.LIMITE.MENSUAL.PERMITIDO LE Y.MONTO.UDIS.ACTUAL) THEN
             
             R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalUdis>     = R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalUdis> + Y.MONTO.UDIS
-            R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalLcy>      = R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalLcy> + Y.MONTO
-            R.UDIS.CONCAT<AbcTable.AbcUdisConcat.DDetalleTxn>   = Y.TRANSACTION.CODE:'^':Y.MONTO.UDIS:'^':Y.MONTO
+            R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalLcy>      = R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalLcy> + Y.MONTO.LCY
+            R.UDIS.CONCAT<AbcTable.AbcUdisConcat.DDetalleTxn>   = Y.TRANSACTION.CODE:'^':Y.MONTO.UDIS:'^':Y.MONTO.LCY
             R.UDIS.CONCAT<AbcTable.AbcUdisConcat.FecUltMov>     = Y.PROCESS.DATE
             
             EB.DataAccess.FWrite(FN.ABC.UDIS.CONCAT,Y.ID.UDI.CONCAT,R.UDIS.CONCAT)
