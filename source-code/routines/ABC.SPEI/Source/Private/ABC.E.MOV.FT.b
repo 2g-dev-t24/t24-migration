@@ -72,6 +72,7 @@ SUBROUTINE ABC.E.MOV.FT(Y.ARR)
     $USING ST.Config
     $USING AbcTable
     $USING EB.SystemTables
+    $USING EB.Template
 
     GOSUB OPEN.FILES
     GOSUB INITIALISE
@@ -145,7 +146,7 @@ OBTENER.ID.FT:
 *                ID.CUENTA.FT = FIELD(ID.CUENTA.FT, ";", 1)
 *            END
 *        END
-*    END
+    END
 
     IF ID.CUENTA.FT EQ '' THEN
         EB.Reports.setEnqError("NO SE ENCONTRO EL EXT TRANS ID INGRESADO " : ID.EXT.TRANS)
@@ -164,7 +165,6 @@ OPEN.FILES:
     FN.DC          = 'F.DATA.CAPTURE'           ; F.DC          = ''; EB.DataAccess.Opf(FN.DC,F.DC)
     FN.FT          = 'F.FUNDS.TRANSFER'         ; F.FT          = ''; EB.DataAccess.Opf(FN.FT,F.FT)
     FN.FT.HIS      = 'F.FUNDS.TRANSFER$HIS'     ; F.FT.HIS      = ''; EB.DataAccess.Opf(FN.FT.HIS,F.FT.HIS)
-    FN.BANCOS      = 'F.ABC.BANCOS'             ; F.BANCOS      = ''; EB.DataAccess.Opf(FN.BANCOS,F.BANCOS)
     FN.EB.SYSTEM.ID= 'F.EB.SYSTEM.ID'           ; F.EB.SYSTEM.ID= ''; EB.DataAccess.Opf(FN.EB.SYSTEM.ID,F.EB.SYSTEM.IDS)
     FN.FT.TXN.TYPE='F.FT.TXN.TYPE.CONDITION'; F.FT.TXN.TYPE= ''; EB.DataAccess.Opf(FN.FT.TXN.TYPE,F.FT.TXN.TYPE)
     YSEP.1 = '*'
@@ -450,13 +450,13 @@ PROCESA.TRANSACCION:
                 NUM.REFERENCIA=REC.FT<FT.Contract.FundsTransfer.LocalRef,YPOS.REFERENCIA>
                 YBANK.ID = ''; R.BANCOS = ''; NOMBRE.BANCO = '';
                 YBANK.ID = '40':CTA.BENEF.ORDEN[1,3]
-                EB.DataAccess.FRead(FN.BANCOS,YBANK.ID,R.BANCOS,F.BANCOS,YF.ERROR)
+                R.BANCOS = EB.Template.Lookup.Read(YBANK.ID, YF.ERROR)
                 IF R.BANCOS EQ '' THEN
                     YBANK.ID = '40':REC.FT<FT.Contract.FundsTransfer.CreditTheirRef>
-                    EB.DataAccess.FRead(FN.BANCOS,YBANK.ID,R.BANCOS,F.BANCOS,YF.ERROR)
+                    R.BANCOS = EB.Template.Lookup.Read(YBANK.ID, YF.ERROR)
                 END
                 IF R.BANCOS THEN
-                    NOMBRE.BANCO = R.BANCOS<AbcTable.AbcBancos.ClavePuntoTrans>
+                    NOMBRE.BANCO = R.BANCOS<EB.Template.Lookup.LuDescription>
                 END
                 REFERENCIA = 'TRANSFERENCIA SPEI ENVIADO'
                 REFERENCIA := ' ':NOMBRE.BANCO
@@ -470,9 +470,9 @@ PROCESA.TRANSACCION:
                 NUM.REFERENCIA=REC.FT<FT.Contract.FundsTransfer.LocalRef,YPOS.REFERENCIA>
                 YBANK.ID = ''; R.BANCOS = ''; NOMBRE.BANCO = '';
                 YBANK.ID = REC.FT<FT.Contract.FundsTransfer.CreditTheirRef>
-                EB.DataAccess.FRead(FN.BANCOS,YBANK.ID,R.BANCOS,F.BANCOS,YF.ERROR)
+                R.BANCOS = EB.Template.Lookup.Read(YBANK.ID, YF.ERROR)
                 IF R.BANCOS THEN
-                    NOMBRE.BANCO = R.BANCOS<AbcTable.AbcBancos.ClavePuntoTrans>
+                    NOMBRE.BANCO = R.BANCOS<EB.Template.Lookup.LuDescription>
                 END
                 REFERENCIA = 'TRANSFERENCIA SPEI RECIBIDO'
                 REFERENCIA := ' ':NOMBRE.BANCO
@@ -495,9 +495,9 @@ PROCESA.TRANSACCION:
                 CLAVE.RASTREO = REC.FT<FT.Contract.FundsTransfer.LocalRef,YPOS.RASTREO>
                 YBANK.ID = ''; R.BANCOS = ''; NOMBRE.BANCO = '';
                 YBANK.ID = '40':CTA.BENEF.ORDEN[1,3]
-                EB.DataAccess.FRead(FN.BANCOS,YBANK.ID,R.BANCOS,F.BANCOS,YF.ERROR)
+                R.BANCOS = EB.Template.Lookup.Read(YBANK.ID, YF.ERROR)
                 IF R.BANCOS THEN
-                    NOMBRE.BANCO = R.BANCOS<AbcTable.AbcBancos.ClavePuntoTrans>
+                    NOMBRE.BANCO = R.BANCOS<EB.Template.Lookup.LuDescription>
                 END
                 REFERENCIA = 'TRANSFERENCIA SPEI DEVUELTO'
                 REFERENCIA := ' ':NOMBRE.BANCO
