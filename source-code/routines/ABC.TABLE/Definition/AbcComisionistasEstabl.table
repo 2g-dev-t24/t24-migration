@@ -25,14 +25,17 @@ public table AbcComisionistasEstabl {
         Reserved1(ACE.RESERVED.1)              = 21
         Reserved2(ACE.RESERVED.2)              = 22
         Reserved3(ACE.RESERVED.3)              = 23
-        RecordStatus(ACE.RECORD.STATUS)        = 24
-        CurrNo(ACE.CURR.NO)                    = 25
-        Inputter(ACE.INPUTTER)                 = 26
-        DateTime(ACE.DATE.TIME)                = 27
-        Authoriser(ACE.AUTHORISER)             = 28
-        CoCode(ACE.CO.CODE)                    = 29
-        DeptCode(ACE.DEPT.CODE)                = 30
-        AuditorCode(ACE.AUDITOR.CODE)          = 31
-        AuditDateTime(ACE.AUDIT.DATE.TIME)     = 32
+        
+        LocalRef(ACE.LOCAL.REF) = 24
+        Override(ACE.OVERRIDE) = 25
+        RecordStatus(ACE.RECORD.STATUS)        = 26
+        CurrNo(ACE.CURR.NO)                    = 27
+        Inputter(ACE.INPUTTER)                 = 28
+        DateTime(ACE.DATE.TIME)                = 29
+        Authoriser(ACE.AUTHORISER)             = 30
+        CoCode(ACE.CO.CODE)                    = 31
+        DeptCode(ACE.DEPT.CODE)                = 32
+        AuditorCode(ACE.AUDITOR.CODE)          = 33
+        AuditDateTime(ACE.AUDIT.DATE.TIME)     = 34
     }
 }
