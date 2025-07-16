@@ -622,7 +622,7 @@ private method AbcMoDeCe ()
 private method AbcBeneficiariosAccount (
 )
 {
-   jBC: ABC.BENEFICIARIOS.ACCOUNT
+    jBC: ABC.BENEFICIARIOS.ACCOUNT
 }
 
 
@@ -630,7 +630,7 @@ private method AbcBeneficiariosAccount (
 private method AbcBeneficiariosAccountFields (
 )
 {
-   jBC: ABC.BENEFICIARIOS.ACCOUNT.FIELDS
+    jBC: ABC.BENEFICIARIOS.ACCOUNT.FIELDS
 }
 
 
@@ -638,7 +638,7 @@ private method AbcBeneficiariosAccountFields (
 private method AbcCuentaL4Api (
 )
 {
-   jBC: ABC.CUENTA.L4.API
+    jBC: ABC.CUENTA.L4.API
 }
 
 
@@ -646,7 +646,7 @@ private method AbcCuentaL4Api (
 private method AbcCuentaL4ApiFields (
 )
 {
-   jBC: ABC.CUENTA.L4.API.FIELDS
+    jBC: ABC.CUENTA.L4.API.FIELDS
 }
 
 private method AbcSmsEmailEnviarFields ()
@@ -701,21 +701,45 @@ private method AbcLFtTxnDetail ()
 
 private method AbcUdisConcat ()
 {
-   jBC: ABC.UDIS.CONCAT
+    jBC: ABC.UDIS.CONCAT
 }
 
 private method AbcUdisConcatFields ()
 {
-   jBC: ABC.UDIS.CONCAT.FIELDS
+    jBC: ABC.UDIS.CONCAT.FIELDS
 }
 
 private method AbcUdisConcatHis ()
 {
-   jBC: ABC.UDIS.CONCAT.HIS
+    jBC: ABC.UDIS.CONCAT.HIS
 }
 
 private method AbcUdisConcatHisFields ()
 {
-   jBC: ABC.UDIS.CONCAT.HIS.FIELDS
+    jBC: ABC.UDIS.CONCAT.HIS.FIELDS
+}
+
+
+
+private method AbcParamProceso (
+)
+{
+    jBC: ABC.PARAM.PROCESO
+}
+
+
+
+private method AbcParamProcesoFields (
+)
+{
+    jBC: ABC.PARAM.PROCESO.FIELDS
+}
+
+
+
+private method AbcParamProcesoValidate (
+)
+{
+    jBC: ABC.PARAM.PROCESO.VALIDATE
 }
 
