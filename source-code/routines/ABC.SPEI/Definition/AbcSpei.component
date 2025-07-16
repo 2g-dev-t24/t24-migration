@@ -449,3 +449,7 @@ private method abcHoraCaptura (
    jBC: ABC.HORA.CAPTURA
 }
 
+public method AbcStoreInfoSmsEmail ()
+{
+    jBC: ABC.STORE.INFO.SMS.EMAIL
+}

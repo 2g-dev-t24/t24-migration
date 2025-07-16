@@ -1,0 +1,24 @@
+public table AbcSmsEmailToSend {
+    t24: ABC.SMS.EMAIL.TO.SEND
+    fields:{
+        CustomerId(ABC.SMS.CUSTOMER.ID) = 1
+        DebitAcctNo(ABC.SMS.DEBIT.ACCT.NO) = 2
+        CreditAcctNo(ABC.SMS.CREDIT.ACCT.NO) = 3
+        TransType(ABC.SMS.TRANS.TYPE) = 4
+        Amount(ABC.SMS.AMOUNT) = 5
+        DateTime(ABC.SMS.DATE.TIME) = 6
+        Status(ABC.SMS.STATUS) = 7
+        OldEmail(ABC.SMS.OLD.EMAIL) = 8
+        OldMovil(ABC.SMS.OLD.MOVIL) = 9
+        NewEmail(ABC.SMS.NEW.EMAIL) = 10
+        NewMovil(ABC.SMS.NEW.MOVIL) = 11
+        CtaTercero(ABC.SMS.CTA.TERCERO) = 12
+        CtaInterba(ABC.SMS.CTA.INTERBA) = 13
+        CtaCredito(ABC.SMS.CTA.CREDITO) = 14
+        CtaDebito(ABC.SMS.CTA.DEBITO) = 15
+        CtaCelular(ABC.SMS.CTA.CELULAR) = 16
+        ValueDate(ABC.SMS.VALUE.DATE) = 17
+        Inputter(ABC.SMS.INPUTTER) = 18
+        Authoriser(ABC.SMS.AUTHORISER) = 19
+    }
+}

@@ -743,3 +743,44 @@ private method AbcParamProcesoValidate (
     jBC: ABC.PARAM.PROCESO.VALIDATE
 }
 
+private method AbcEmailSmsParameter (
+)
+{
+    jBC: ABC.EMAIL.SMS.PARAMETER
+}
+
+
+
+private method AbcEmailSmsParameterFields (
+)
+{
+    jBC: ABC.EMAIL.SMS.PARAMETER.FIELDS
+}
+
+private method AbcSmsEmailToSend (
+)
+{
+    jBC: ABC.SMS.EMAIL.TO.SEND
+}
+
+
+
+private method AbcSmsEmailToSendFields (
+)
+{
+    jBC: ABC.SMS.EMAIL.TO.SEND.FIELDS
+}
+
+private method AbcBancIntImp (
+)
+{
+    jBC: ABC.BANC.INT.IMP
+}
+
+
+
+private method AbcBancIntImpFields (
+)
+{
+    jBC: ABC.BANC.INT.IMP.FIELDS
+}
