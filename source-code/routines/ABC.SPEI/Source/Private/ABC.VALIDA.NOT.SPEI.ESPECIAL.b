@@ -1,5 +1,5 @@
-* @ValidationCode : MjozMTg4MDQwMTQ6Q3AxMjUyOjE3NTI2MjY2NjE5MDI6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 15 Jul 2025 21:44:21
+* @ValidationCode : MjotMTA0ODc2MTczODpDcDEyNTI6MTc1MjYyODA4MjU3NjptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 15 Jul 2025 22:08:02
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -62,7 +62,7 @@ VALIDA:
         Y.FOL.REG = R.FT<FT.Contract.FundsTransfer.LocalRef, POS.FOL.VAL>
         IF Y.FOL.REG EQ "ESP" THEN
             E = "TRANSACCION SPEI ESPECIAL, UTILIZAR OPCION DE AUTORIZACION ESPECIAL"
-            EB.SystemTables.setE("TRANSACCION SPEI ESPECIAL, UTILIZAR OPCION DE AUTORIZACION ESPECIAL")
+            EB.SystemTables.setE(E)
             EB.ErrorProcessing.Err()
         END
     END
