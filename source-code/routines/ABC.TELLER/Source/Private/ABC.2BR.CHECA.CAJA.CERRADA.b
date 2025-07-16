@@ -32,7 +32,7 @@ $PACKAGE AbcTeller
         Y.ESTADO = R.TELLER.ID<TT.Contract.TellerId.TidStatus>
     END
 
-     IF ESTADO="CLOSE" THEN
+     IF Y.ESTADO EQ "CLOSE" THEN
         E="CAJA YA CERRADA"
      END
 
