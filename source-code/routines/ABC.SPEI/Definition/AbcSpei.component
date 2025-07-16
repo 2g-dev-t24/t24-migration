@@ -433,3 +433,19 @@ private method abcExtDescSpei (
    jBC: ABC.EXT.DESC.SPEI
 }
 
+
+
+private method abcValidaNotSpeiEspecial (
+)
+{
+   jBC: ABC.VALIDA.NOT.SPEI.ESPECIAL
+}
+
+
+
+private method abcHoraCaptura (
+)
+{
+   jBC: ABC.HORA.CAPTURA
+}
+
