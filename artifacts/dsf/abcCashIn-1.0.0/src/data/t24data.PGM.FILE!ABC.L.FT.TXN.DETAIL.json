@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.L.FT.TXN.DETAIL",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "FT TXN Details"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "H"
+  }
+}

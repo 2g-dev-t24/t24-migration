@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTYwMzg2MTEzOkNwMTI1MjoxNzUyNTQxNTU4NjAwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 14 Jul 2025 22:05:58
+* @ValidationCode : MjotMTA4ODY1NTY1NjpDcDEyNTI6MTc1MjYyOTU5ODQzMzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 15 Jul 2025 22:33:18
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -33,6 +33,10 @@ SUBROUTINE ABC.I.UDIS.CTRL
     $USING AA.Framework
 
     activity.status = AA.Framework.getC_aalocactivitystatus()
+    
+    ETEXT = 'ENTRE --> ':activity.status
+    EB.SystemTables.setEtext(ETEXT)
+    EB.ErrorProcessing.StoreEndError()
 
     IF (activity.status EQ 'AUTH') THEN
         GOSUB CARGAR.CAMPOS
