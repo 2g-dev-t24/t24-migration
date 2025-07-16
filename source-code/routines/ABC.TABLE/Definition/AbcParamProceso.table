@@ -1,0 +1,25 @@
+public table AbcParamProceso {
+    t24: ABC.PARAM.PROCESO
+    fields:{
+        Aplicacion(ABC.APLICACION)          = 1
+        Categoria(ABC.CATEGORIA)            = 2
+        HoraIni(ABC.HORA.INI)               = 3
+        HoraFin(ABC.HORA.FIN)               = 4
+        Narrativa(ABC.NARRATIVA)            = 5
+        Estatus(ABC.ESTATUS)                = 6
+        Reserved5(ABC.RESERVED.5)           = 7
+        Reserved4(ABC.RESERVED.4)           = 8
+        Reserved3(ABC.RESERVED.3)           = 9
+        Reserved2(ABC.RESERVED.2)           = 10
+        Reserved1(ABC.RESERVED.1)           = 11
+        RecordStatus(ABC.RECORD.STATUS)     = 12
+        CurrNo(ABC.CURR.NO)                 = 13
+        Inputter(ABC.INPUTTER)              = 14
+        DateTime(ABC.DATE.TIME)             = 15
+        Authoriser(ABC.AUTHORISER)          = 16
+        CoCode(ABC.CO.CODE)                 = 17
+        DeptCode(ABC.DEPT.CODE)             = 18
+        AuditorCode(ABC.AUDITOR.CODE)       = 19
+        AuditDateTime(ABC.AUDIT.DATE.TIME)  = 20
+    }
+}
