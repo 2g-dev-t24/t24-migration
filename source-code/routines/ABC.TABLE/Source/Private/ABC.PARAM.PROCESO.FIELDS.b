@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTIxNjU2MDQ1NDpDcDEyNTI6MTc1MjYzMDQ1MDc2MzptYXVyaWNpby5sb3BlejotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 15 Jul 2025 22:47:30
+* @ValidationCode : MjoyMTMwNTU4ODE0OkNwMTI1MjoxNzUyNjM0MTY1Mjg1Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 15 Jul 2025 23:49:25
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -31,7 +31,7 @@ SUBROUTINE ABC.PARAM.PROCESO.FIELDS
     fieldType       = 'A'
     neighbour       = ''
     EB.Template.TableAddfielddefinition(fieldName, fieldLength, fieldType, neighbour)
-    EB.Template.FieldSetcheckfile('CATEGORY':FM:EB.CAT.SHORT.NAME:FM:'L')
+    EB.Template.FieldSetcheckfile('CATEGORY')
 
     fieldName       = 'XX-HORA.INI'
     fieldLength     = '8.1.C'
