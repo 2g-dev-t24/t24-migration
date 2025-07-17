@@ -97,7 +97,6 @@ PROCESO:
 *LEEMOS EL REGISTRO DE LA CUENTA PARA OBTENER EL CLIENTE Y EL NIVEL
 
     R.ACC.CUS = AC.AccountOpening.Account.Read(Y.ACC.CUS, Error)
-*    CALL F.READ(FN.ACCOUNT, Y.ACC.CUS, R.ACC.CUS, F.ACCOUNT, ERR.FOL)
 
     IF R.ACC.CUS THEN
         Y.ID.CUST = R.ACC.CUS<AC.AccountOpening.Account.Customer>
@@ -105,7 +104,6 @@ PROCESO:
 
 *LEEMOS EL REGISTRO DEL CLIENTE PARA OBTENER CLASSIFICATION
     REC.CUSTO = ST.Customer.Customer.Read(Y.ID.CUST, Error)
-* CALL F.READ(FN.CUSTOMER, Y.ID.CUST, REC.CUSTO, F.CUSTOMER, ERR.CUS)
 
     IF REC.CUSTO THEN
         Y.CLASS.CUST = REC.CUSTO<ST.Customer.Customer.EbCusSector>
@@ -123,7 +121,8 @@ PROCESO:
         Y.LOCAL.REF<1, POS.FOL.VAL> = ''
         EB.SystemTables.setRNew(FT.Contract.FundsTransfer.LocalRef,Y.LOCAL.REF)
     END
-*    CALL REBUILD.SCREEN
+
+    EB.Display.RebuildScreen()
 
 RETURN
 END
