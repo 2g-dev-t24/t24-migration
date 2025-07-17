@@ -165,7 +165,7 @@ PROCESO:
     REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.NumOperBonifican> = Y.NUM.OPER.BONIFICAN
     REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.MontoABonificar> = Y.MONTO.A.BONIFICAR
 
-    EB.DataAccess.FWrite(FN.BONIF.CASHIN,Y.ID.BONIFICACION,REG.BONIFICACION)
+    EB.DataAccess.FWrite(FN.BONIF.CASHIN, Y.ID.BONIFICACION, REG.BONIFICACION)
 
 RETURN
 *-----------------------------------------------------------------------------
