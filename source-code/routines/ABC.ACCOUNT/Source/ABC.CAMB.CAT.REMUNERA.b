@@ -68,31 +68,34 @@ PROCESS:
     Y.ARRANGEMENT.ID = EB.SystemTables.getComi()
     
     IF Y.ARRANGEMENT.ID THEN
-        Y.ACCOUNT.NO = Y.ARRANGEMENT.ID
-        R.ACCOUNT = ''
-        Y.ERR.ACCOUNT = ''
-        EB.DataAccess.FRead(FN.ACCOUNT, Y.ACCOUNT.NO, R.ACCOUNT, F.ACCOUNT, Y.ERR.ACCOUNT)
-        
-        IF R.ACCOUNT THEN
-            Y.ACCOUNT.CATEGORY = R.ACCOUNT<AC.AccountOpening.Account.Category>
+        R.ARRANGEMENT = AA.Framework.Arrangement.Read(Y.ARRANGEMENT.ID, Error)
+        Y.ACCOUNT.NO = R.ARRANGEMENT<AA.Framework.Arrangement.ArrLinkedApplId>
+        IF Y.ACCOUNT.NO THEN
+            R.ACCOUNT = ''
+            Y.ERR.ACCOUNT = ''
+            EB.DataAccess.FRead(FN.ACCOUNT, Y.ACCOUNT.NO, R.ACCOUNT, F.ACCOUNT, Y.ERR.ACCOUNT)
             
-            * Validar si la cuenta tiene posting restriction
-            IF R.ACCOUNT<AC.AccountOpening.Account.PostingRestrict> THEN
-                ETEXT = 'La cuenta ':Y.ACCOUNT.NO:' tiene posting restriction'
-                EB.SystemTables.setEtext(ETEXT)
-                EB.ErrorProcessing.StoreEndError()
-                RETURN
-            END
-            
-            LOCATE Y.ACCOUNT.CATEGORY IN Y.LIST.PARAMS SETTING Y.POS.CATEGORY ELSE
-                ETEXT = 'Categoría ':Y.ACCOUNT.CATEGORY:' no encontrada en la lista de parámetros'
-                EB.SystemTables.setEtext(ETEXT)
-                EB.ErrorProcessing.StoreEndError()
-                RETURN
-            END
-            Y.NEW.PRODUCT = Y.LIST.VALUES<Y.POS.CATEGORY>
-            EB.SystemTables.setRNew(AA.Framework.ArrangementActivity.ArrActProduct, Y.NEW.PRODUCT)
-        END 
+            IF R.ACCOUNT THEN
+                Y.ACCOUNT.CATEGORY = R.ACCOUNT<AC.AccountOpening.Account.Category>
+                
+                * Validar si la cuenta tiene posting restriction
+                IF R.ACCOUNT<AC.AccountOpening.Account.PostingRestrict> THEN
+                    ETEXT = 'La cuenta ':Y.ACCOUNT.NO:' tiene posting restriction'
+                    EB.SystemTables.setEtext(ETEXT)
+                    EB.ErrorProcessing.StoreEndError()
+                    RETURN
+                END
+                
+                LOCATE Y.ACCOUNT.CATEGORY IN Y.LIST.PARAMS SETTING Y.POS.CATEGORY ELSE
+                    ETEXT = 'Categoría ':Y.ACCOUNT.CATEGORY:' no encontrada en la lista de parámetros'
+                    EB.SystemTables.setEtext(ETEXT)
+                    EB.ErrorProcessing.StoreEndError()
+                    RETURN
+                END
+                Y.NEW.PRODUCT = Y.LIST.VALUES<Y.POS.CATEGORY>
+                EB.SystemTables.setRNew(AA.Framework.ArrangementActivity.ArrActProduct, Y.NEW.PRODUCT)
+            END 
+        END
     END
 
 RETURN
