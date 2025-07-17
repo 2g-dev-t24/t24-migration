@@ -1,0 +1,25 @@
+private table AbcOperacionesContratadas {
+    t24: ABC.OPERACIONES.CONTRATADAS
+    fields:{
+        Clave(AOC.CLAVE) = 1
+        Descripcion(AOC.DESCRIPCION) = 2
+        Reserved6(AOC.RESERVED.6) = 3
+        Reserved5(AOC.RESERVED.5) = 4
+        Reserved4(AOC.RESERVED.4) = 5
+        Reserved3(AOC.RESERVED.3) = 6
+        Reserved2(AOC.RESERVED.2) = 7
+        Reserved1(AOC.RESERVED.1) = 8
+        LocalRef(AOC.LOCAL.REF) = 9
+        Override(AOC.OVERRIDE) = 10
+        RecordStatus(AOC.RECORD.STATUS) = 11
+        CurrNo(AOC.CURR.NO) = 12
+        Inputter(AOC.INPUTTER) = 13
+        DateTime(AOC.DATE.TIME) = 14
+        Authoriser(AOC.AUTHORISER) = 15
+        CoCode(AOC.CO.CODE) = 16
+        DeptCode(AOC.DEPT.CODE) = 17
+        AuditorCode(AOC.AUDITOR.CODE) = 18
+        AuditDateTime(AOC.AUDIT.DATE.TIME) = 19
+
+    }
+}

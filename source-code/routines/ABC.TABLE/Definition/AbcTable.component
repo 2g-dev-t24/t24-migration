@@ -784,3 +784,18 @@ private method AbcBancIntImpFields (
 {
     jBC: ABC.BANC.INT.IMP.FIELDS
 }
+
+private method AbcOperacionesContratadas (
+)
+{
+   jBC: ABC.OPERACIONES.CONTRATADAS
+}
+
+
+
+private method AbcOperacionesContratadasFields (
+)
+{
+   jBC: ABC.OPERACIONES.CONTRATADAS.FIELDS
+}
+
