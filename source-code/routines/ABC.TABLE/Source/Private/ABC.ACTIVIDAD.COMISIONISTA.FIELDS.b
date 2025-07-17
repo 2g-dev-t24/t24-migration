@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTM0NzU0NDEyMjpDcDEyNTI6MTc1MjcxNTQ1MTE4MTpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 16 Jul 2025 22:24:11
+* @ValidationCode : MjoyMDY0MTEzNTc2OkNwMTI1MjoxNzUyNzE3ODYwMTUzOkx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 16 Jul 2025 23:04:20
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -19,12 +19,7 @@ SUBROUTINE ABC.ACTIVIDAD.COMISIONISTA.FIELDS
     EB.Template.TableDefineid("ABC.ACT.COMI.ID", EB.Template.T24String)
 *-----------------------------------------------------------------------------
 
-    fieldName	= 'ACT.COMI'
-	fieldLength = '2'
-    fieldType	= ''
-    neighbour	= ''
-	EB.Template.TableAddfielddefinition(fieldName, fieldLength, fieldType, neighbour)
-
+	EB.Template.TableAddfield('ACT.COMI', '2','', '')
     EB.Template.TableAddfield('DESCRIPCION', EB.Template.T24String,'', '')
 
     EB.Template.TableAddreservedfield("RESERVED.6")
@@ -34,7 +29,7 @@ SUBROUTINE ABC.ACTIVIDAD.COMISIONISTA.FIELDS
     EB.Template.TableAddreservedfield("RESERVED.2")
     EB.Template.TableAddreservedfield("RESERVED.1")
 
-	EB.Template.TableAddlocalreferencefield('LOCAL.REF')
+    EB.Template.TableAddlocalreferencefield('')
     EB.Template.TableAddoverridefield()
     EB.Template.TableSetauditposition()
 
