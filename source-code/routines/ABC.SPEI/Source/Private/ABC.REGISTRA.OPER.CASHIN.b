@@ -1,8 +1,20 @@
+* @ValidationCode : MjotMTUwNDE2ODIyOkNwMTI1MjoxNzUyNzExODYyNzY1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 16 Jul 2025 21:24:22
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>-74</Rating>
 *-----------------------------------------------------------------------------
 $PACKAGE AbcSpei
-    SUBROUTINE ABC.REGISTRA.OPER.CASHIN
+SUBROUTINE ABC.REGISTRA.OPER.CASHIN
 *===============================================================================
 *===============================================================================
 
@@ -22,7 +34,7 @@ $PACKAGE AbcSpei
     END
     GOSUB FINAL
 
-    RETURN
+RETURN
 
 *-----------------------------------------------------------------------------
 INICIO:
@@ -50,7 +62,7 @@ INICIO:
 
     Y.ID.COMISIONISTA = ''
     Y.BANDERA.DEPO.BONIFICA = 'SI'
-    Y.ID.COMISIONISTA = Y.LOCAL.REF<1,Y.POS.ID.COMI>          
+    Y.ID.COMISIONISTA = Y.LOCAL.REF<1,Y.POS.ID.COMI>
 
     Y.CTA.CLIENTE = ""
     Y.ID.BONIFICACION = ""
@@ -67,7 +79,7 @@ INICIO:
 
     Y.FECHA.LIMIT = OCONV(DATE(), "DY4"):FMT(OCONV(DATE(), "DM"), "2'0'R")
 
-    RETURN
+RETURN
 *-----------------------------------------------------------------------------
 LEE.PARAM:
 *-----------------------------------------------------------------------------
@@ -102,9 +114,9 @@ LEE.PARAM:
 
     IF Y.ID.COMISIONISTA MATCHES Y.COMISIONISTAS THEN
         Y.BANDERA.DEPO.BONIFICA = 'NO'
-    END  
+    END
 
-    RETURN
+RETURN
 *-----------------------------------------------------------------------------
 PROCESO:
 *-----------------------------------------------------------------------------
@@ -118,7 +130,7 @@ PROCESO:
     Y.ID.BONIFICACION = Y.CTA.CLIENTE:".":Y.FECHA.LIMIT
     REG.BONIFICACION = ""
 
-    CALL F.READ(FN.BONIF.CASHIN, Y.ID.BONIFICACION, REG.BONIFICACION, F.BONIF.CASHIN, ERR.BONIF)
+    REG.BONIFICACION = AbcTable.AbcBonificacionCashIn.Read(Y.ID.BONIFICACION, Error)
 
     IF REG.BONIFICACION NE "" THEN
         Y.TOTAL.OPERACIONES =  REG.BONIFICACION<AbcTable.AbcBonificacionCashIn.NumOperaciones>
@@ -155,7 +167,7 @@ PROCESO:
 
     EB.DataAccess.FWrite(FN.BONIF.CASHIN,Y.ID.BONIFICACION,REG.BONIFICACION)
 
-    RETURN
+RETURN
 *-----------------------------------------------------------------------------
 OBTENER.CLIENTE:
 *-----------------------------------------------------------------------------
@@ -166,7 +178,7 @@ OBTENER.CLIENTE:
         Y.CLIENTE = R.ACCOUNT<AC.AccountOpening.Account.Customer>
     END
 
-    RETURN
+RETURN
 *-----------------------------------------------------------------------------
 OBTEN.INCREMENTO.MONTOS:
 *-----------------------------------------------------------------------------
@@ -176,7 +188,7 @@ OBTEN.INCREMENTO.MONTOS:
         Y.MONTO.A.BONIFICAR = Y.MONTO.A.BONIFICAR + Y.MONTO.BON
     END
 
-    RETURN
+RETURN
 *-----------------------------------------------------------------------------
 OBTEN.DECREMENTO.MONTOS:
 *-----------------------------------------------------------------------------
@@ -186,13 +198,13 @@ OBTEN.DECREMENTO.MONTOS:
         Y.MONTO.A.BONIFICAR = Y.MONTO.A.BONIFICAR - Y.MONTO.BON
     END
 
-    RETURN
+RETURN
 *-----------------------------------------------------------------------------
 FINAL:
 *-----------------------------------------------------------------------------
 
 
-    RETURN
+RETURN
 
 END
 *-----------------------------------------------------------------------------

@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNDA5MTUxOTIxOkNwMTI1MjoxNzUyNjk1OTY0MDY2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 16 Jul 2025 16:59:24
+* @ValidationCode : MjotMTI1MjU5ODcyMjpDcDEyNTI6MTc1MjcxMTA1MTI4MzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 16 Jul 2025 21:10:51
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -58,9 +58,9 @@ CARGAR.CAMPOS:
     F.ABC.UDIS.CONCAT  = ""
     EB.DataAccess.Opf(FN.ABC.UDIS.CONCAT,F.ABC.UDIS.CONCAT)
         
-    
+    EB.DataAccess.
     R.ARR = AA.Framework.getRArrangementActivity()
-    
+
     Y.NUMERO.CUENTA.AA     = R.ARR<AA.Framework.ArrangementActivity.ArrActArrangement>
     
     
@@ -160,10 +160,6 @@ NIVEL.UDIS:
     END
 
     Y.CODIGO = Y.LISTA.DE.CODIGOS<Y.POS.CODE>
-    
-    ETEXT = '//Y.ACCOUNT.CATEGORY -->':Y.ACCOUNT.CATEGORY:'//Y.CODIGO -->':Y.LIMITE.MENSUAL.PERMITIDO
-    EB.SystemTables.setEtext(ETEXT)
-    EB.ErrorProcessing.StoreEndError()
 
     
 RETURN
@@ -171,12 +167,18 @@ RETURN
 **********************
 OBTENER.LIMITE:
 **********************
+    
+    Y.MONEDA            = R.ARR<AA.Framework.ArrangementActivity.ArrActCurrency>
+    
     R.CURRENCY = ST.CurrencyConfig.Currency.Read(Y.MONEDA, Error)
     
     Y.TASA = R.CURRENCY<ST.CurrencyConfig.Currency.EbCurMidRevalRate>
     
     Y.MONTO.UDIS = Y.MONTO.LCY / Y.TASA
     
+    ETEXT = 'Y.TASA -->':Y.MONEDA:'//Y.MONTO.UDIS -->':Y.MONTO.UDIS
+    EB.SystemTables.setEtext(ETEXT)
+    EB.ErrorProcessing.StoreEndError()
     
     
 RETURN

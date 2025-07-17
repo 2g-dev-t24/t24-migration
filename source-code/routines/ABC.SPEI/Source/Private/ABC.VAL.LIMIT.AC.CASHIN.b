@@ -1,8 +1,20 @@
+* @ValidationCode : MjotMzkwMDQ4MDk2OkNwMTI1MjoxNzUyNzExMjAwMDcyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 16 Jul 2025 21:13:20
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *===============================================================================
 * <Rating>-60</Rating>
 *===============================================================================
 $PACKAGE AbcSpei
-    SUBROUTINE ABC.VAL.LIMIT.AC.CASHIN
+SUBROUTINE ABC.VAL.LIMIT.AC.CASHIN
 *===============================================================================
 *===============================================================================
 * Modificaciones:
@@ -23,7 +35,7 @@ $PACKAGE AbcSpei
     GOSUB PROCESS
     GOSUB FINALLY
 
-    RETURN
+RETURN
 
 *-------------------------------------------------------------------------------
 INITIALIZE:
@@ -49,7 +61,7 @@ INITIALIZE:
     Y.POS.ID.COMI  = R.POS.CAMPO<2,2>
     Y.POS.ID.ESTAB = R.POS.CAMPO<2,3>
 
-    RETURN
+RETURN
 
 *-------------------------------------------------------------------------------
 OPEN.FILES:
@@ -67,7 +79,7 @@ OPEN.FILES:
     F.ABC.MOVS.CTA.COMISIONISTA  = ""
     EB.DataAccess.Opf(FN.ABC.MOVS.CTA.COMISIONISTA,F.ABC.MOVS.CTA.COMISIONISTA)
 
-    RETURN
+RETURN
 
 *-------------------------------------------------------------------------------
 PROCESS:
@@ -86,7 +98,7 @@ PROCESS:
     EB.DataAccess.FRead(FN.ACCOUNT,Y.CUENTA.CR,R.ACC.CUS,F.ACCOUNT,Y.ERR.ACCOUNT)
     IF R.ACC.CUS THEN
         Y.CLIENTE = R.ACC.CUS<AC.AccountOpening.Account.Customer>
-        Y.NIVEL.CR = R.ACCOUNT<AC.AccountOpening.Account.LocalRef,Y.POS.NIVEL>
+* Y.NIVEL.CR = R.ACCOUNT<AC.AccountOpening.Account.LocalRef,Y.POS.NIVEL>
     END
 
     GOSUB GET.PARAM.LIMIT.CASHIN.COMI
@@ -106,7 +118,7 @@ PROCESS:
         END
     END
 
-    RETURN
+RETURN
 
 *-------------------------------------------------------------------------------
 GET.PARAM.LIMIT.CASHIN.COMI:
@@ -144,7 +156,7 @@ GET.PARAM.LIMIT.CASHIN.COMI:
         END
     END
 
-    RETURN
+RETURN
 
 *-------------------------------------------------------------------------------
 BORRA.MOVS.AC.COMI:
@@ -168,15 +180,15 @@ BORRA.MOVS.AC.COMI:
             DEL R.ABC.MOVS.CTA.COMISIONISTA<AbcTable.AbcMovsCtaComisionista.IdComiIn, Y.POS.MOV>
             DEL R.ABC.MOVS.CTA.COMISIONISTA<AbcTable.AbcMovsCtaComisionista.ComiEstabIn, Y.POS.MOV>
 
-            EB.DataAccess.FWrite(FN.ABC.MOVS.CTA.COMISIONISTA,Y.ID.MOVS.AC.COMI,R.ABC.MOVS.CTA.COMISIONISTA)  
-    END
+            EB.DataAccess.FWrite(FN.ABC.MOVS.CTA.COMISIONISTA,Y.ID.MOVS.AC.COMI,R.ABC.MOVS.CTA.COMISIONISTA)
+        END
 
-    RETURN
+        RETURN
 
 *-------------------------------------------------------------------------------
 FINALLY:
 *-------------------------------------------------------------------------------
 
-    RETURN
+        RETURN
 
-END
+    END
