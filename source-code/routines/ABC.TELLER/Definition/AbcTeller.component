@@ -63,3 +63,27 @@ public method Abc2brChecaCajaCerrada (
 {
     jBC: ABC.2BR.CHECA.CAJA.CERRADA
 }
+
+public method Abc2BrTtChkallowAmt (
+)
+{
+    jBC: ABC.2BR.TT.CHKALLOW.AMT
+}
+
+public method AbcBr2TtChkLimit (
+)
+{
+    jBC: ABC.BR2.TT.CHK.LIMIT
+}
+
+public method AbcValAmtUsdOpera (
+)
+{
+    jBC: ABC.VAL.AMT.USD.OPERA
+}
+
+public method BmvTtChklimit (
+)
+{
+    jBC: BMV.TT.CHKLIMIT
+}
