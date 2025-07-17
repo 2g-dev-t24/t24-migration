@@ -27,7 +27,7 @@ SUBROUTINE ABC.VAL.MONTO.MENOR.UDI
     $USING EB.ErrorProcessing
     $USING AC.AccountOpening
     $USING ST.Customer
-    
+    $USING EB.Display
     
     GOSUB INICIALIZA
     GOSUB PROCESO
