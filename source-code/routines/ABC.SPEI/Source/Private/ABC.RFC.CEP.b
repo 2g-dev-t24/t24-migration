@@ -1,16 +1,28 @@
+* @ValidationCode : MjotMTE4MjM5NDkwMTpDcDEyNTI6MTc1MjcxNjc4OTc4MzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 16 Jul 2025 22:46:29
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE AbcSpei
-    SUBROUTINE ABC.RFC.CEP
+SUBROUTINE ABC.RFC.CEP
 *=============================================================================
 * DESCRIPCION: Se guarda en el registro de la transacción SPEI entrante el RFC
 *              que se tiene registrado en el Cliente para que el CDA cumpla con RFC
 * FECHA:       2018/07/18
 * AUTOR:
 *=============================================================================
-* Modificacion: 
-* Objetivo           : 
-* Desarrollador      :  
-* Compania           :  
-* Fecha Creacion     :  
+* Modificacion:
+* Objetivo           :
+* Desarrollador      :
+* Compania           :
+* Fecha Creacion     :
 *=============================================================================
 
     $USING EB.DataAccess
@@ -25,7 +37,7 @@ $PACKAGE AbcSpei
     GOSUB OPEN.FILES
     GOSUB PROCESS
 
-    RETURN
+RETURN
 
 ********
 PROCESS:
@@ -59,7 +71,7 @@ PROCESS:
             EB.SystemTables.setRNew(FT.Contract.FundsTransfer.LocalRef,Y.LOCAL.REF)
         END
     END
-    RETURN
+RETURN
 
 ***********
 OPEN.FILES:
@@ -67,9 +79,9 @@ OPEN.FILES:
 
     FN.CUSTOMER = 'F.CUSTOMER'
     F.CUSTOMER = ''
-    CALL OPF(FN.CUSTOMER,F.CUSTOMER)
+    EB.DataAccess.Opf(FN.CUSTOMER,F.CUSTOMER)
 
-    FN.CUSTOMER = 'F.CUSTOMER' 
+    FN.CUSTOMER = 'F.CUSTOMER'
     F.CUSTOMER = ''
     EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
 
@@ -80,6 +92,6 @@ OPEN.FILES:
     Y.POS.RFC.CTE        = FIELD.POS<1,1>
     Y.POS.FT.CUS.NAME    = FIELD.POS<1,2>
 
-    RETURN
+RETURN
 
 END

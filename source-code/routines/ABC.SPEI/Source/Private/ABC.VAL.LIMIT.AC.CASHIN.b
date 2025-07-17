@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMzkwMDQ4MDk2OkNwMTI1MjoxNzUyNzExMjAwMDcyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 16 Jul 2025 21:13:20
+* @ValidationCode : MjotMzgxNTE3NjQyOkNwMTI1MjoxNzUyNzE2OTcyODg2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 16 Jul 2025 22:49:32
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -106,12 +106,12 @@ PROCESS:
     Y.FNCTION = EB.SystemTables.getVFunction()
 
     IF Y.FNCTION EQ 'I' THEN
-        IF Y.NIVEL.CR EQ Y.NIVEL.CUENTA.PARAM THEN
-            IF Y.ID.COMI MATCHES Y.COMISIONISTA THEN
-                Y.ID.MOVS.AC.COMI = Y.CUENTA.CR:"-":Y.FEC.LIMIT.COMI
-                AbcSpei.AbcValLimitMovsAcComi(Y.ID.MOVS.AC.COMI,Y.MONTO.TRANS,Y.MONTO.LIMIT.PARAM,ID.NEW,Y.ID.ADMIN,Y.ID.COMI,Y.ID.ESTAB,Y.CLIENTE)
-            END
+*    IF Y.NIVEL.CR EQ Y.NIVEL.CUENTA.PARAM THEN
+        IF Y.ID.COMI MATCHES Y.COMISIONISTA THEN
+            Y.ID.MOVS.AC.COMI = Y.CUENTA.CR:"-":Y.FEC.LIMIT.COMI
+            AbcSpei.AbcValLimitMovsAcComi(Y.ID.MOVS.AC.COMI,Y.MONTO.TRANS,Y.MONTO.LIMIT.PARAM,ID.NEW,Y.ID.ADMIN,Y.ID.COMI,Y.ID.ESTAB,Y.CLIENTE)
         END
+*   END
     END ELSE
         IF Y.FNCTION EQ 'D' OR Y.FNCTION EQ 'R' THEN
             GOSUB BORRA.MOVS.AC.COMI
