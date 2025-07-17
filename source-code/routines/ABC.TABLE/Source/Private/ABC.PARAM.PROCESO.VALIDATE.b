@@ -114,7 +114,7 @@ SUBROUTINE ABC.PARAM.PROCESO.VALIDATE
     FOR I.H = 1 TO DCOUNT(REC.HI, VM)
         N.HI = EB.SystemTables.getRNew(AbcTable.AbcParamProceso.HoraIni)
         N.HI = N.HI<1, I.H>
-        N.HF = EB.SystemTables.getRNew(AbcTable.AbcParamProceso.HoraFin)<1, I.H>
+        N.HF = EB.SystemTables.getRNew(AbcTable.AbcParamProceso.HoraFin)
         N.HF = N.HF<1, I.H>
 
         IF (N.HI[1,2] GT N.HF[1,2]) THEN
