@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTA4ODY1NTY1NjpDcDEyNTI6MTc1MjYyOTU5ODQzMzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 15 Jul 2025 22:33:18
+* @ValidationCode : MjotMTI1MjU5ODcyMjpDcDEyNTI6MTc1MjcxMTA1MTI4MzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 16 Jul 2025 21:10:51
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -34,15 +34,11 @@ SUBROUTINE ABC.I.UDIS.CTRL
 
     activity.status = AA.Framework.getC_aalocactivitystatus()
     
-    ETEXT = 'ENTRE --> ':activity.status
-    EB.SystemTables.setEtext(ETEXT)
-    EB.ErrorProcessing.StoreEndError()
-
     IF (activity.status EQ 'AUTH') THEN
         GOSUB CARGAR.CAMPOS
         GOSUB NIVEL.UDIS
     
-        IF (Y.CODIGO NE '') THEN
+        IF (Y.CODIGO EQ '') THEN
        
             GOSUB OBTENER.LIMITE
             GOSUB VALIDA.ACUMULA.LIMITE
@@ -62,18 +58,41 @@ CARGAR.CAMPOS:
     F.ABC.UDIS.CONCAT  = ""
     EB.DataAccess.Opf(FN.ABC.UDIS.CONCAT,F.ABC.UDIS.CONCAT)
         
-    
+    EB.DataAccess.
     R.ARR = AA.Framework.getRArrangementActivity()
-    
-    Y.NUMERO.CUENTA     = R.ARR<AA.Framework.ArrangementActivity.ArrActArrangement>
 
+    Y.NUMERO.CUENTA.AA     = R.ARR<AA.Framework.ArrangementActivity.ArrActArrangement>
+    
+    
+    R.ARRANGEMENT = AA.Framework.Arrangement.Read(Y.NUMERO.CUENTA.AA, Error)
+    
+    IF (Error) THEN
+        
+        ETEXT = Error:'ACCOUNT': '-->':Y.NUMERO.CUENTA.AA
+        EB.SystemTables.setEtext(ETEXT)
+        EB.ErrorProcessing.StoreEndError()
+        RETURN
+        
+    END
+    
+    Y.NUMERO.CUENTA = R.ARRANGEMENT<AA.Framework.Arrangement.ArrLinkedApplId>
+    
     R.ACCOUNT           = AC.AccountOpening.Account.Read(Y.NUMERO.CUENTA, Error)
+    
+    IF (Error) THEN
+        
+        ETEXT = Error:'ACCOUNT': '-->':Y.NUMERO.CUENTA
+        EB.SystemTables.setEtext(ETEXT)
+        EB.ErrorProcessing.StoreEndError()
+        RETURN
+        
+    END
     
     Y.ACCOUNT.CATEGORY  = R.ACCOUNT<AC.AccountOpening.Account.Category>
     
     Y.MONTO.LCY     = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnAmountLcy>
         
-    GOSUB OBTENER.TRANSACTION.CODE
+*  GOSUB OBTENER.TRANSACTION.CODE
     
 
     
@@ -85,7 +104,7 @@ OBTENER.TRANSACTION.CODE:
 
     Y.TXN.CONTRACT.ID = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnContractId>
     
-    Y.TXN.CONTRACT.ID = FIELDS(Y.TXN.CONTRACT.ID,"\\", 1)
+    Y.TXN.CONTRACT.ID = FIELDS(Y.TXN.CONTRACT.ID,"\", 1)
     
     Y.TXN.SYSTEM.ID = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnSystemId>
     
@@ -95,12 +114,29 @@ OBTENER.TRANSACTION.CODE:
     
     IF (Y.TXN.SYSTEM.ID EQ 'FT') THEN
     
-        R.FT = FT.Contract.FundsTransfer.Read(RecId, Error)
+        R.FT = FT.Contract.FundsTransfer.CacheRead(RecId, Error)
+        
+        IF (Error) THEN
+        
+            ETEXT = Error:'FT --> ':Y.TXN.CONTRACT.ID:'  --->  ':R.ARR
+            EB.SystemTables.setEtext(ETEXT)
+            EB.ErrorProcessing.StoreEndError()
+            RETURN
+        
+        END
         Y.TRANSACTION.CODE  = R.FT<FT.Contract.FundsTransfer.TransactionType>
     
     END ELSE
     
         R.TT = TT.Contract.Teller.Read(RecId, Error)
+        IF (Error) THEN
+        
+            ETEXT = Error:'TT'
+            EB.SystemTables.setEtext(ETEXT)
+            EB.ErrorProcessing.StoreEndError()
+            RETURN
+        
+        END
         Y.TRANSACTION.CODE  = R.TT<TT.Contract.Teller.TeTransactionCode>
         
     END
@@ -119,25 +155,30 @@ NIVEL.UDIS:
     Y.LIMITE.MENSUAL.PERMITIDO =  Y.REGISTRO.LIMITE<AbcTable.AbcNivelCuenta.Limite>
     Y.LISTA.DE.CODIGOS = Y.REGISTRO.LIMITE<AbcTable.AbcNivelCuenta.TransaccionCr>
     
-    Y.TRANSACTION.CODE = 0
+    
     LOCATE Y.TRANSACTION.CODE IN Y.LISTA.DE.CODIGOS SETTING Y.POS.CODE ELSE
     END
 
     Y.CODIGO = Y.LISTA.DE.CODIGOS<Y.POS.CODE>
-    
-    
+
     
 RETURN
 
 **********************
 OBTENER.LIMITE:
 **********************
+    
+    Y.MONEDA            = R.ARR<AA.Framework.ArrangementActivity.ArrActCurrency>
+    
     R.CURRENCY = ST.CurrencyConfig.Currency.Read(Y.MONEDA, Error)
     
     Y.TASA = R.CURRENCY<ST.CurrencyConfig.Currency.EbCurMidRevalRate>
     
     Y.MONTO.UDIS = Y.MONTO.LCY / Y.TASA
     
+    ETEXT = 'Y.TASA -->':Y.MONEDA:'//Y.MONTO.UDIS -->':Y.MONTO.UDIS
+    EB.SystemTables.setEtext(ETEXT)
+    EB.ErrorProcessing.StoreEndError()
     
     
 RETURN

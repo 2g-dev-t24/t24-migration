@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTcwMjM1OTk3OkNwMTI1MjoxNzQzNzM1NzA4NDk5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 04 Apr 2025 00:01:48
+* @ValidationCode : MjoxMDU1NjA2NTcxOkNwMTI1MjoxNzUyNzE0NDIzNDI0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 16 Jul 2025 22:07:03
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -33,7 +33,8 @@ SUBROUTINE ABC.COMISIONISTAS.FIELDS
     EB.Template.TableAddoptionsfield   ('OP.ADMIN','_SI_NO', '','')
     EB.Template.TableAddfielddefinition('ID.ADMINISTRADOR'          ,'24', 'ANY', '')
     EB.Template.FieldSetcheckfile      ('ABC.COMISIONISTAS.ADMIN')
-    EB.Template.FieldSetcheckfile      ("FILE.CONTROL")
+   
+    
     EB.Template.TableAddfielddefinition('RFC.ADMIN'                 ,'13', 'ANY', '')
     EB.Template.TableAddoptionsfield   ('TIPO.MOVIMIENTO','ALTA_BAJA_ACTUALIZACION_', '','')
     EB.Template.TableAddfielddefinition('ID.COMISIONISTA'           ,'24', 'ANY', '')
@@ -42,12 +43,15 @@ SUBROUTINE ABC.COMISIONISTAS.FIELDS
     EB.Template.TableAddoptionsfield   ('PER.JURI.COMI','_FISICA_MORAL', '','')
     EB.Template.TableAddfielddefinition('ACT.COMI'                  ,'2', 'ANY', '')
     EB.Template.FieldSetcheckfile      ('ABC.ACTIVIDAD.COMISIONISTA')
+    
     EB.Template.TableAddfielddefinition('OP.CONTRATADAS'            ,'5', 'ANY', '')
     EB.Template.FieldSetcheckfile      ('ABC.OPERACIONES.CONTRATADAS')
+    
     EB.Template.TableAddfielddefinition('CAUSA.BAJA'                ,'1', 'ANY', '')
     EB.Template.FieldSetcheckfile      ('ABC.CAUSA.BAJA')
     EB.Template.TableAddfielddefinition('LOCALIDAD'          ,'75', 'ANY', '')
-    EB.Template.FieldSetcheckfile      ('VPM.LOCALIDAD')
+    EB.Template.FieldSetcheckfile      ('ABC.LOCALIDADES')
+    
     EB.Template.TableAddfielddefinition('MUNICIPIO'          ,'75', 'ANY', '')
     EB.Template.TableAddfielddefinition('COD.POSTAL'         ,'10', 'ANY', '')
     

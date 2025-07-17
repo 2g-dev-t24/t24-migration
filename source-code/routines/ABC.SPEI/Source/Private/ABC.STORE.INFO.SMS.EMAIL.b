@@ -1,8 +1,20 @@
+* @ValidationCode : MjotMTQzNDE0OTQ5MjpDcDEyNTI6MTc1MjcxNzE0NDE2MjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 16 Jul 2025 22:52:24
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 *-----------------------------------------------------------------------------
 * <Rating>928</Rating>
 *-----------------------------------------------------------------------------
 $PACKAGE AbcSpei
-    SUBROUTINE ABC.STORE.INFO.SMS.EMAIL
+SUBROUTINE ABC.STORE.INFO.SMS.EMAIL
 
 *-----------------------------------------------------------------------------
     
@@ -14,7 +26,9 @@ $PACKAGE AbcSpei
     $USING ST.Customer
     $USING AbcTable
     $USING EB.Utility
+    
 
+    TODAY = EB.SystemTables.getToday()
     GOSUB INIT
 
     FN.ACCOUNT = 'F.ACCOUNT'
@@ -63,25 +77,25 @@ $PACKAGE AbcSpei
 
     END ELSE
         BEGIN CASE
-        CASE EB.SystemTables.getApplication() EQ 'AC.LOCKED.EVENTS'
-            GOSUB COMPRA.POS
-        CASE EB.SystemTables.getApplication() EQ 'ABC.CUENTAS.DESTINO'
-            IF INDEX('I',Y.FNCTION,1) OR Y.FNCTION EQ ''  THEN
-                GOSUB TRANSACCION.BANCA.INTERNET.2
-            END ELSE
-                GOSUB TRANSACCION.BANCA.INTERNET
-            END
+            CASE EB.SystemTables.getApplication() EQ 'AC.LOCKED.EVENTS'
+                GOSUB COMPRA.POS
+            CASE EB.SystemTables.getApplication() EQ 'ABC.CUENTAS.DESTINO'
+                IF INDEX('I',Y.FNCTION,1) OR Y.FNCTION EQ ''  THEN
+                    GOSUB TRANSACCION.BANCA.INTERNET.2
+                END ELSE
+                    GOSUB TRANSACCION.BANCA.INTERNET
+                END
 
-        CASE EB.SystemTables.getApplication() EQ 'CUSTOMER'
-            GOSUB TRANSACCION.CUSTOMER
-        CASE EB.SystemTables.getApplication() EQ 'FUNDS.TRANSFER'
-            GOSUB TRANSACCION.ATM.SPEI
+            CASE EB.SystemTables.getApplication() EQ 'CUSTOMER'
+                GOSUB TRANSACCION.CUSTOMER
+            CASE EB.SystemTables.getApplication() EQ 'FUNDS.TRANSFER'
+                GOSUB TRANSACCION.ATM.SPEI
         END CASE
 
 
     END
 
-    RETURN
+RETURN
 ***********
 COMPRA.POS:
 ***********
@@ -98,7 +112,7 @@ COMPRA.POS:
 
     GOSUB ESCRIBE.REGISTRO
 
-    RETURN
+RETURN
 *********************
 TRANSACCION.ATM.SPEI:
 *********************
@@ -147,7 +161,7 @@ TRANSACCION.ATM.SPEI:
 
     GOSUB ESCRIBE.REGISTRO
 
-    RETURN
+RETURN
 *********************
 TRANSACCION.CUSTOMER:
 *********************
@@ -174,7 +188,7 @@ TRANSACCION.CUSTOMER:
         GOSUB ESCRIBE.REGISTRO
     END
 
-    RETURN
+RETURN
 ***************************
 TRANSACCION.BANCA.INTERNET:
 ***************************
@@ -367,7 +381,7 @@ TRANSACCION.BANCA.INTERNET:
         Y.CTA.INTERBA = ''
     END
 
-    RETURN
+RETURN
 *****************************
 TRANSACCION.BANCA.INTERNET.2:
 *****************************
@@ -541,7 +555,7 @@ TRANSACCION.BANCA.INTERNET.2:
         Y.CTA.INTERBA = ''
     END
 
-    RETURN
+RETURN
 *************
 GET.CUSTOMER:
 *************
@@ -554,7 +568,7 @@ GET.CUSTOMER:
 
     END
 
-    RETURN
+RETURN
 *****************
 NOTIFICA.SUC.OPE:
 *****************
@@ -575,7 +589,7 @@ NOTIFICA.SUC.OPE:
         END
     END
 
-    RETURN
+RETURN
 ***************
 REVISA.CUENTAS:
 ***************
@@ -593,59 +607,59 @@ REVISA.CUENTAS:
     END
 
     BEGIN CASE
-    CASE Y.STATUS.CTA EQ 'A'
-        BEGIN CASE
-        CASE Y.TIPO.CTA EQ 'CUENTA'
-            Y.CTA.TERCERO.ALTA<-1> = Y.CUENTA
-        CASE Y.TIPO.CTA EQ 'CLABE'
-            Y.CTA.INTERBA.ALTA<-1> = Y.CUENTA
-        CASE Y.TIPO.CTA EQ 'TARJETA DE CREDITO'
-            Y.CTA.CREDITO.ALTA<-1> = Y.CUENTA
-        CASE Y.TIPO.CTA EQ 'TARJETA DEBITO'
-            Y.CTA.DEBITO.ALTA<-1> = Y.CUENTA
-        CASE Y.TIPO.CTA EQ 'CELULAR'
-            Y.CTA.CELULAR.ALTA<-1> = Y.CUENTA
-        END CASE
-
-    CASE Y.STATUS.CTA EQ 'M'
-        Y.BANDERA = ''
-
-        IF EB.SystemTables.getROld(AbcTable.AbcCuentasDestino.Alias) NE EB.SystemTables.getRNew(AbcTable.AbcCuentasDestino.Alias) OR EB.SystemTables.getROld(AbcTable.AbcCuentasDestino.Beneficiario) NE EB.SystemTables.getRNew(AbcTable.AbcCuentasDestino.Beneficiario) OR EB.SystemTables.getROld(AbcTable.AbcCuentasDestino.Email) NE EB.SystemTables.getRNew(AbcTable.AbcCuentasDestino.Email) OR EB.SystemTables.getROld(AbcTable.AbcCuentasDestino.Movil) NE EB.SystemTables.getRNew(AbcTable.AbcCuentasDestino.Movil) THEN
-            Y.BANDERA = 'S'
-        END
-
-        IF Y.BANDERA EQ 'S' THEN
+        CASE Y.STATUS.CTA EQ 'A'
             BEGIN CASE
-            CASE Y.TIPO.CTA EQ 'CUENTA'
-                Y.CTA.TERCERO.MODI<-1> = Y.CUENTA
-            CASE Y.TIPO.CTA EQ 'CLABE'
-                Y.CTA.INTERBA.MODI<-1> = Y.CUENTA
-            CASE Y.TIPO.CTA EQ 'TARJETA DE CREDITO'
-                Y.CTA.CREDITO.MODI<-1> = Y.CUENTA
-            CASE Y.TIPO.CTA EQ 'TARJETA DEBITO'
-                Y.CTA.DEBITO.MODI<-1> = Y.CUENTA
-            CASE Y.TIPO.CTA EQ 'CELULAR'
-                Y.CTA.CELULAR.MODI<-1> = Y.CUENTA
+                CASE Y.TIPO.CTA EQ 'CUENTA'
+                    Y.CTA.TERCERO.ALTA<-1> = Y.CUENTA
+                CASE Y.TIPO.CTA EQ 'CLABE'
+                    Y.CTA.INTERBA.ALTA<-1> = Y.CUENTA
+                CASE Y.TIPO.CTA EQ 'TARJETA DE CREDITO'
+                    Y.CTA.CREDITO.ALTA<-1> = Y.CUENTA
+                CASE Y.TIPO.CTA EQ 'TARJETA DEBITO'
+                    Y.CTA.DEBITO.ALTA<-1> = Y.CUENTA
+                CASE Y.TIPO.CTA EQ 'CELULAR'
+                    Y.CTA.CELULAR.ALTA<-1> = Y.CUENTA
             END CASE
-        END
 
-    CASE Y.STATUS.CTA EQ 'B'
-        BEGIN CASE
-        CASE Y.TIPO.CTA EQ 'CUENTA'
-            Y.CTA.TERCERO.BAJA<-1> = Y.CUENTA
-        CASE Y.TIPO.CTA EQ 'CLABE'
-            Y.CTA.INTERBA.BAJA<-1> = Y.CUENTA
-        CASE Y.TIPO.CTA EQ 'TARJETA DE CREDITO'
-            Y.CTA.CREDITO.BAJA<-1> = Y.CUENTA
-        CASE Y.TIPO.CTA EQ 'TARJETA DEBITO'
-            Y.CTA.DEBITO.BAJA<-1> = Y.CUENTA
-        CASE Y.TIPO.CTA EQ 'CELULAR'
-            Y.CTA.CELULAR.BAJA<-1> = Y.CUENTA
-        END CASE
+        CASE Y.STATUS.CTA EQ 'M'
+            Y.BANDERA = ''
+
+            IF EB.SystemTables.getROld(AbcTable.AbcCuentasDestino.Alias) NE EB.SystemTables.getRNew(AbcTable.AbcCuentasDestino.Alias) OR EB.SystemTables.getROld(AbcTable.AbcCuentasDestino.Beneficiario) NE EB.SystemTables.getRNew(AbcTable.AbcCuentasDestino.Beneficiario) OR EB.SystemTables.getROld(AbcTable.AbcCuentasDestino.Email) NE EB.SystemTables.getRNew(AbcTable.AbcCuentasDestino.Email) OR EB.SystemTables.getROld(AbcTable.AbcCuentasDestino.Movil) NE EB.SystemTables.getRNew(AbcTable.AbcCuentasDestino.Movil) THEN
+                Y.BANDERA = 'S'
+            END
+
+            IF Y.BANDERA EQ 'S' THEN
+                BEGIN CASE
+                    CASE Y.TIPO.CTA EQ 'CUENTA'
+                        Y.CTA.TERCERO.MODI<-1> = Y.CUENTA
+                    CASE Y.TIPO.CTA EQ 'CLABE'
+                        Y.CTA.INTERBA.MODI<-1> = Y.CUENTA
+                    CASE Y.TIPO.CTA EQ 'TARJETA DE CREDITO'
+                        Y.CTA.CREDITO.MODI<-1> = Y.CUENTA
+                    CASE Y.TIPO.CTA EQ 'TARJETA DEBITO'
+                        Y.CTA.DEBITO.MODI<-1> = Y.CUENTA
+                    CASE Y.TIPO.CTA EQ 'CELULAR'
+                        Y.CTA.CELULAR.MODI<-1> = Y.CUENTA
+                END CASE
+            END
+
+        CASE Y.STATUS.CTA EQ 'B'
+            BEGIN CASE
+                CASE Y.TIPO.CTA EQ 'CUENTA'
+                    Y.CTA.TERCERO.BAJA<-1> = Y.CUENTA
+                CASE Y.TIPO.CTA EQ 'CLABE'
+                    Y.CTA.INTERBA.BAJA<-1> = Y.CUENTA
+                CASE Y.TIPO.CTA EQ 'TARJETA DE CREDITO'
+                    Y.CTA.CREDITO.BAJA<-1> = Y.CUENTA
+                CASE Y.TIPO.CTA EQ 'TARJETA DEBITO'
+                    Y.CTA.DEBITO.BAJA<-1> = Y.CUENTA
+                CASE Y.TIPO.CTA EQ 'CELULAR'
+                    Y.CTA.CELULAR.BAJA<-1> = Y.CUENTA
+            END CASE
 
     END CASE
 
-    RETURN
+RETURN
 *****************
 ESCRIBE.REGISTRO:
 *****************
@@ -711,7 +725,7 @@ ESCRIBE.REGISTRO:
 
     Y.REC = ''
 
-    RETURN
+RETURN
 *****
 INIT:
 *****
@@ -723,7 +737,7 @@ INIT:
     Y.CREDIT.ACCT = ''
     Y.DEBIT.ACCT = ''
     Y.AMOUNT = ''
-    Y.REFERENCE = ID.NEW
+    Y.REFERENCE = EB.SystemTables.getIdNew()
     Y.TIME = ''
     Y.TRANS.TYPE = ''
     Y.REC.PARAMETER = ''
@@ -763,7 +777,7 @@ INIT:
     Y.BANDERA.REV = ''
     Y.SAVE.REF = ''
 
-    RETURN
+RETURN
 ***********
 END
 
