@@ -78,7 +78,6 @@ PROCESS:
             IF R.ACCOUNT THEN
                 Y.ACCOUNT.CATEGORY = R.ACCOUNT<AC.AccountOpening.Account.Category>
                 
-                * Validar si la cuenta tiene posting restriction
                 IF R.ACCOUNT<AC.AccountOpening.Account.PostingRestrict> THEN
                     ETEXT = 'La cuenta ':Y.ACCOUNT.NO:' tiene posting restriction'
                     EB.SystemTables.setEtext(ETEXT)
