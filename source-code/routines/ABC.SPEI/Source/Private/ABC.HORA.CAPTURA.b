@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTc5MjQwNDgxNjpDcDEyNTI6MTc1MjYzODgwOTk3NTptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 16 Jul 2025 01:06:49
+* @ValidationCode : MjoxNTk3OTg4MzgzOkNwMTI1MjoxNzUyNjM5MDMwNjQxOm1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 16 Jul 2025 01:10:30
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -92,7 +92,7 @@ INICIA.TABLAS:
     EB.DataAccess.Opf(FN.VERSION, F.VERSION)
 
     F.VPM.PARAM.PROCESO = ''
-    FN.VPM.PARAM.PROCESO = 'F.VPM.PARAM.PROCESO'
+    FN.VPM.PARAM.PROCESO = 'F.ABC.PARAM.PROCESO'
     EB.DataAccess.Opf(FN.VPM.PARAM.PROCESO, F.VPM.PARAM.PROCESO)
 
     F.FUNSDS.TRANSFER = ''
