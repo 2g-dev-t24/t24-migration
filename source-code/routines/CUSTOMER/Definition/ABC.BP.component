@@ -251,7 +251,12 @@ private method AbcValidaRfcCurp(INOUT YRfc string, INOUT YCurp string, INOUT Tip
     jBC: ABC.VALIDA.RFC.CURP
 }
 # ------------------ METHOD END ------------------
-
+private method abcNofileActCusAuthPf (
+    INOUT rData string
+)
+{
+    jBC: ABC.NOFILE.ACT.CUS.AUTH.PF
+}
 
 private method abcNofileBiometricosAlta (
     INOUT rData string

@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTg5OTI5NjE3OTpDcDEyNTI6MTc1MjE5NzY2Njg0MTp0cmFiYWpvOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 10 Jul 2025 22:34:26
+* @ValidationCode : Mjo5ODkxNTM5MjU6Q3AxMjUyOjE3NTIzNjczMjQ3NTY6dHJhYmFqbzotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 12 Jul 2025 21:42:04
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : trabajo
 * @ValidationInfo : Nb tests success  : N/A
@@ -26,9 +26,10 @@ SUBROUTINE ABC.2BR.CHECA.CAJA.ABIERTO
     $USING EB.DataAccess
     $USING EB.Updates
     $USING TT.Contract
+    $USING abcTable
 *************************************************************************
 *INICIALIZA
-*
+
     TELLER.ID= EB.SystemTables.getComi()
     FN.TELLER.ID = "F.TELLER.ID"
     F.TELLER.ID = ""
@@ -47,5 +48,5 @@ SUBROUTINE ABC.2BR.CHECA.CAJA.ABIERTO
     IF Y.ESTADO EQ "OPEN" THEN
         E="CAJA YA ABIERTA"
     END
-
+RETURN
 END
