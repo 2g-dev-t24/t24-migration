@@ -62,18 +62,23 @@ PROCESA:
 
     Y.SEL.CMD = "SELECT " : FN.CUSTOMER : " WITH SECTOR EQ 1001 AND CUSTOMER.TYPE EQ PROSPECT"
     Y.REG.LIST = '' ; Y.NO.REG = ''
-    EB.DataAccess.Readlist(Y.SEL.CMD, Y.REG.LIST1, '', Y.NO.REG1, Y.ERROR1)
-
+    EB.DataAccess.Readlist(Y.SEL.CMD, Y.REG.LIST, '', Y.NO.REG, Y.ERROR)
+    GOSUB IMPRIME.TODO
     Y.SEL.CMD = "SELECT " : FN.CUST$NAU : " WITH SECTOR EQ 1001 AND CUSTOMER.TYPE EQ PROSPECT"
     Y.REG.LIST = '' ; Y.NO.REG = ''
-    EB.DataAccess.Readlist(Y.SEL.CMD, Y.REG.LIST2, '', Y.NO.REG2, Y.ERROR2)
-    
-    Y.SEL.CMD = "SELECT " : FN.CUSTOMER.HIS : " WITH SECTOR EQ 1001 AND CUSTOMER.TYPE EQ PROSPECT"
-    Y.REG.LIST = '' ; Y.NO.REG = ''
-    EB.DataAccess.Readlist(Y.SEL.CMD, Y.REG.LIST3, '', Y.NO.REG3, Y.ERROR2)
+    EB.DataAccess.Readlist(Y.SEL.CMD, Y.REG.LIST, '', Y.NO.REG, Y.ERROR)
+    GOSUB IMPRIME.TODO
+*    Y.SEL.CMD = "SELECT " : FN.CUSTOMER.HIS : " WITH SECTOR EQ 1001 AND CUSTOMER.TYPE EQ PROSPECT"
+*    Y.REG.LIST = '' ; Y.NO.REG = ''
+*    EB.DataAccess.Readlist(Y.SEL.CMD, Y.REG.LIST, '', Y.NO.REG, Y.ERROR)
+*    GOSUB IMPRIME.TODO
 
-    Y.NO.REG = Y.NO.REG1:@FM:Y.NO.REG2:@FM:Y.NO.REG3
-    Y.REG.LIST= Y.REG.LIST1:@FM:Y.REG.LIST2:@FM:Y.REG.LIST3
+RETURN
+*---------------------------------------------------------------
+IMPRIME.TODO:
+*---------------------------------------------------------------
+*    Y.NO.REG = Y.NO.REG1:@FM:Y.NO.REG2:@FM:Y.NO.REG3
+*    Y.REG.LIST= Y.REG.LIST1:@FM:Y.REG.LIST2:@FM:Y.REG.LIST3
     Y.I = 1
     LOOP
     WHILE Y.I LE Y.NO.REG
