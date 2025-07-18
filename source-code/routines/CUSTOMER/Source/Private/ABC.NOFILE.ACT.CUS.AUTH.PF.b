@@ -88,7 +88,14 @@ PROCESA:
 *        R.DATA := 'Por Activar'     : Y.SEP:
 *        R.DATA := R.CUSTOMER<ST.Customer.Customer.EbCusInputter>  : Y.SEP:
 *        R.DATA := R.CUSTOMER<ST.Customer.Customer.EbCusCompanyBook>  : Y.SEP:
-        R.DATA<-1>  = Y.REG.ACT : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusShortName> : Y.SEP: R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>  : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>  : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusSector>  : Y.SEP:'1001'     : Y.SEP:Y.ID.OFFICER  : Y.SEP:R.DAO<ST.Config.DeptAcctOfficer.EbDaoName> : Y.SEP:Por Activar'     : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusInputter>  : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusCompanyBook>  : Y.SEP:
+        Y.SHORT.NAME = R.CUSTOMER<ST.Customer.Customer.EbCusShortName>
+        Y.NAME.ONE = R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>
+        Y.NAME.TWO = R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>
+        Y.SECTOR = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
+        Y.DAO.NAME = R.DAO<ST.Config.DeptAcctOfficer.EbDaoName>
+        Y.INPUTTER = R.CUSTOMER<ST.Customer.Customer.EbCusInputter>
+        Y.COMPANY = R.CUSTOMER<ST.Customer.Customer.EbCusCompanyBook>
+        R.DATA<-1> = Y.REG.ACT:Y.SEP:Y.SHORT.NAME:Y.SEP:Y.NAME.ONE:Y.SEP:Y.NAME.TWO:Y.SEP:Y.SECTOR:Y.SEP:'1001':Y.SEP:Y.ID.OFFICER:Y.SEP:Y.DAO.NAME:Y.SEP:'Por Activar':Y.SEP:Y.INPUTTER:Y.SEP:Y.COMPANY
 
         
         Y.I++
