@@ -75,22 +75,21 @@ PROCESA:
         IF Y.REG.ACT THEN
            EB.DataAccess.FRead(FN.CUST$NAU, Y.REG.ACT, R.CUSTOMER, F.CUST$NAU, CUST.ERR)
         END
-        R.DATA.CARGA  = Y.REG.ACT : Y.SEP
-        R.DATA.CARGA := R.CUSTOMER<ST.Customer.Customer.EbCusShortName> : Y.SEP
-        R.DATA.CARGA := R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>  : Y.SEP
-        R.DATA.CARGA := R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>  : Y.SEP
-        R.DATA.CARGA := R.CUSTOMER<ST.Customer.Customer.EbCusSector>  : Y.SEP
-        R.DATA.CARGA := '1001'     : Y.SEP
+*        R.DATA<-1>  = Y.REG.ACT : Y.SEP:
+*        R.DATA := R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>  : Y.SEP:
+*        R.DATA := R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>  : Y.SEP:
+*        R.DATA := R.CUSTOMER<ST.Customer.Customer.EbCusSector>  : Y.SEP:
+*        R.DATA := '1001'     : Y.SEP:
         Y.ID.OFFICER = R.CUSTOMER<ST.Customer.Customer.EbCusAccountOfficer>
-        R.DATA.CARGA := Y.ID.OFFICER  : Y.SEP
+*        R.DATA := Y.ID.OFFICER  : Y.SEP:
         EB.DataAccess.FRead(FN.DEPT.ACCT.OFFICER, Y.ID.OFFICER, R.DAO, F.DEPT.ACCT.OFFICER, Y.ERR.DAO)
 
-        R.DATA.CARGA := R.DAO<ST.Config.DeptAcctOfficer.EbDaoName> : Y.SEP
-        R.DATA.CARGA := 'Por Activar'     : Y.SEP
-        R.DATA.CARGA := R.CUSTOMER<ST.Customer.Customer.EbCusInputter>  : Y.SEP
-        R.DATA.CARGA := R.CUSTOMER<ST.Customer.Customer.EbCusCompanyBook>  : Y.SEP
+*        R.DATA := R.DAO<ST.Config.DeptAcctOfficer.EbDaoName> : Y.SEP:
+*        R.DATA := 'Por Activar'     : Y.SEP:
+*        R.DATA := R.CUSTOMER<ST.Customer.Customer.EbCusInputter>  : Y.SEP:
+*        R.DATA := R.CUSTOMER<ST.Customer.Customer.EbCusCompanyBook>  : Y.SEP:
+        R.DATA<-1>  = Y.REG.ACT : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusShortName> : Y.SEP: R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>  : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>  : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusSector>  : Y.SEP:'1001'     : Y.SEP:Y.ID.OFFICER  : Y.SEP:R.DAO<ST.Config.DeptAcctOfficer.EbDaoName> : Y.SEP:Por Activar'     : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusInputter>  : Y.SEP:R.CUSTOMER<ST.Customer.Customer.EbCusCompanyBook>  : Y.SEP:
 
-        R.DATA<-1> = R.DATA.CARGA
         
         Y.I++
     REPEAT
