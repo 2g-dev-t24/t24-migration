@@ -113,7 +113,7 @@ PROCESO:
             GOSUB VALIDA.CLIENTE.PF
         END
         IF Y.ERROR EQ '' THEN
-            ABC.BP.AbcInfoValCus.Write(Y.RFC.ID, R.VAL.CUS)
+            ABC.BP.AbcInfoValCus.Write(Y.CURP.ID, R.VAL.CUS)
 
             *IF Y.RFC.BAN EQ '1' THEN
             *    Y.INSERT<1,1> = Y.RFC
@@ -127,6 +127,8 @@ PROCESO:
             *Y.ESTADO = Y.LOCAL.REF<1,Y.POS.LUGAR.CONST>
             Y.RFC.ID = Y.RFC[1,9]
             Y.RFC.OLD.ID = Y.RFC.OLD[1,9]
+            Y.CURP.ID = Y.CURP[1,9]
+            Y.CURP.OLD.ID = Y.CURP.OLD[1,9]
             GOSUB VALIDA.CLIENTE.PM
         END
     END
@@ -134,7 +136,7 @@ RETURN
 ******************
 VALIDA.CLIENTE.PM:
 ******************
-    EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.RFC.ID,R.VAL.CUS,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS)
+    EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.CURP.ID,R.VAL.CUS,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS)
     IF R.VAL.CUS THEN
         Y.RFC.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc>
         Y.CURP.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCurp>
@@ -190,8 +192,8 @@ VALIDA.CLIENTE.PM:
             
         NEXT X
 
-        IF Y.RFC.OLD.ID NE '' THEN
-            IF Y.RFC.OLD.ID NE Y.RFC.ID THEN
+        IF Y.CURP.OLD.ID NE '' THEN
+            IF Y.CURP.OLD.ID NE Y.CURP.ID THEN
                 GOSUB ELIMINA.INFO.ANTERIOR
             END
         END
@@ -220,8 +222,8 @@ VALIDA.CLIENTE.PM:
             R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusEstado> := @VM:Y.ESTADO
         END
     END ELSE
-        IF Y.RFC.OLD.ID NE '' THEN
-            IF Y.RFC.OLD.ID NE Y.RFC.ID THEN
+        IF Y.CURP.OLD.ID NE '' THEN
+            IF Y.CURP.OLD.ID NE Y.CURP.ID THEN
                 GOSUB ELIMINA.INFO.ANTERIOR
             END
         END
@@ -238,7 +240,7 @@ VALIDA.CLIENTE.PM:
         R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusEstado> = Y.ESTADO
     END
 
-    ABC.BP.AbcInfoValCus.Write(Y.RFC.ID, R.VAL.CUS)
+    ABC.BP.AbcInfoValCus.Write(Y.CURP.ID, R.VAL.CUS)
 
 
     IF Y.RFC.BAN EQ '1' THEN
@@ -251,7 +253,7 @@ RETURN
 ******************
 VALIDA.CLIENTE.PF:
 ******************
-EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.RFC.ID,R.VAL.CUS,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS)
+EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.CURP.ID,R.VAL.CUS,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS)
     IF R.VAL.CUS THEN
         Y.RFC.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusRfc>
         Y.CURP.LIST = R.VAL.CUS<ABC.BP.AbcInfoValCus.ValCusCurp>
@@ -351,7 +353,7 @@ RETURN
 ELIMINA.INFO.ANTERIOR:
 **********************
 
-    EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.RFC.OLD.ID,R.VAL.CUS.OLD,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS.OLD)
+    EB.DataAccess.FRead(FN.ABC.INFO.VAL.CUS,Y.CURP.OLD.ID,R.VAL.CUS.OLD,F.ABC.INFO.VAL.CUS,ERROR.VAL.CUS.OLD)
     IF R.VAL.CUS.OLD THEN
         Y.RFC.LIST.OLD = R.VAL.CUS.OLD<ABC.BP.AbcInfoValCus.ValCusRfc>
         Y.CURP.LIST.OLD = R.VAL.CUS.OLD<ABC.BP.AbcInfoValCus.ValCusCurp>
@@ -381,7 +383,7 @@ ELIMINA.INFO.ANTERIOR:
                 NUM.RFC.OLD = DCOUNT(Y.RFC.LIST.OLD, FM)
 
                 IF NUM.RFC.OLD LT 2 THEN
-                    DELETE F.ABC.INFO.VAL.CUS, Y.RFC.OLD.ID
+                    DELETE F.ABC.INFO.VAL.CUS, Y.CURP.OLD.ID
                 END ELSE
                     R.VAL.CUS.NEW = ''
                     FOR Y = 1 TO NUM.RFC.OLD
@@ -412,7 +414,7 @@ ELIMINA.INFO.ANTERIOR:
                         END
                     NEXT Y
 
-                    ABC.BP.AbcInfoValCus.Write(Y.RFC.OLD.ID, R.VAL.CUS.NEW)
+                    ABC.BP.AbcInfoValCus.Write(Y.CURP.OLD.ID, R.VAL.CUS.NEW)
 
                 END
             END
