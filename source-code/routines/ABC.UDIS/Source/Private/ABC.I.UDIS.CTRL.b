@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTI1MjU5ODcyMjpDcDEyNTI6MTc1MjcxMTA1MTI4MzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 16 Jul 2025 21:10:51
+* @ValidationCode : MjotMTQ0NTQ3OTA1MDpDcDEyNTI6MTc1Mjg1ODgzNjI0NDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 18 Jul 2025 14:13:56
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -34,31 +34,41 @@ SUBROUTINE ABC.I.UDIS.CTRL
 
     activity.status = AA.Framework.getC_aalocactivitystatus()
     
+    GOSUB INITIALIZE
+    
     IF (activity.status EQ 'AUTH') THEN
         GOSUB CARGAR.CAMPOS
         GOSUB NIVEL.UDIS
-    
-        IF (Y.CODIGO EQ '') THEN
-       
+        IF (Y.LIMITE.MENSUAL.PERMITIDO NE '') THEN
             GOSUB OBTENER.LIMITE
             GOSUB VALIDA.ACUMULA.LIMITE
-        
         END
-    
     END
 
 RETURN
 
+***********************
+INITIALIZE:
+***********************
+
+    FN.FUNDS.TRANSFER = 'F.FUNDS.TRANSFER'
+    F.FUNDS.TRANSFER  = ''
+    EB.DataAccess.Opf(FN.FUNDS.TRANSFER, F.FUNDS.TRANSFER)
+    
+    FN.TELLER = 'F.TELLER'
+    F.TELLER  = ''
+    EB.DataAccess.Opf(FN.TELLER, F.TELLER)
+
+    FN.ABC.UDIS.CONCAT = "F.ABC.UDIS.CONCAT"
+    F.ABC.UDIS.CONCAT  = ""
+    EB.DataAccess.Opf(FN.ABC.UDIS.CONCAT,F.ABC.UDIS.CONCAT)
+    
+RETURN
 
 ***********************
 CARGAR.CAMPOS:
 ***********************
         
-    FN.ABC.UDIS.CONCAT = "F.ABC.UDIS.CONCAT"
-    F.ABC.UDIS.CONCAT  = ""
-    EB.DataAccess.Opf(FN.ABC.UDIS.CONCAT,F.ABC.UDIS.CONCAT)
-        
-    EB.DataAccess.
     R.ARR = AA.Framework.getRArrangementActivity()
 
     Y.NUMERO.CUENTA.AA     = R.ARR<AA.Framework.ArrangementActivity.ArrActArrangement>
@@ -92,7 +102,7 @@ CARGAR.CAMPOS:
     
     Y.MONTO.LCY     = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnAmountLcy>
         
-*  GOSUB OBTENER.TRANSACTION.CODE
+    GOSUB OBTENER.TRANSACTION.CODE
     
 
     
@@ -102,11 +112,11 @@ RETURN
 OBTENER.TRANSACTION.CODE:
 **********************
 
-    Y.TXN.CONTRACT.ID = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnContractId>
+    Y.TXN.CONTRACT.ID   = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnContractId>
     
-    Y.TXN.CONTRACT.ID = FIELDS(Y.TXN.CONTRACT.ID,"\", 1)
+    Y.TXN.CONTRACT.ID   = FIELDS(Y.TXN.CONTRACT.ID,"\", 1)
     
-    Y.TXN.SYSTEM.ID = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnSystemId>
+    Y.TXN.SYSTEM.ID     = R.ARR<AA.Framework.ArrangementActivity.ArrActTxnSystemId>
     
     Y.MONEDA            = R.ARR<AA.Framework.ArrangementActivity.ArrActCurrency>
     
@@ -114,11 +124,11 @@ OBTENER.TRANSACTION.CODE:
     
     IF (Y.TXN.SYSTEM.ID EQ 'FT') THEN
     
-        R.FT = FT.Contract.FundsTransfer.CacheRead(RecId, Error)
+        EB.DataAccess.FRead(FN.FUNDS.TRANSFER, Y.TXN.CONTRACT.ID, R.FT, F.FUNDS.TRANSFER, Error)
         
         IF (Error) THEN
         
-            ETEXT = Error:'FT --> ':Y.TXN.CONTRACT.ID:'  --->  ':R.ARR
+            ETEXT = Error:' ':Y.TXN.CONTRACT.ID
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
             RETURN
@@ -128,10 +138,12 @@ OBTENER.TRANSACTION.CODE:
     
     END ELSE
     
-        R.TT = TT.Contract.Teller.Read(RecId, Error)
+    
+        EB.DataAccess.FRead(FN.TELLER, Y.TXN.CONTRACT.ID, R.TT, F.TELLER, Error)
+
         IF (Error) THEN
         
-            ETEXT = Error:'TT'
+            ETEXT = Error:' ':Y.TXN.CONTRACT.ID
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
             RETURN
@@ -143,24 +155,26 @@ OBTENER.TRANSACTION.CODE:
     
 RETURN
 
-
-
-
-
 **********************
 NIVEL.UDIS:
 **********************
 
     Y.REGISTRO.LIMITE = AbcTable.AbcNivelCuenta.Read(Y.ACCOUNT.CATEGORY, Error)
     Y.LIMITE.MENSUAL.PERMITIDO =  Y.REGISTRO.LIMITE<AbcTable.AbcNivelCuenta.Limite>
+
     Y.LISTA.DE.CODIGOS = Y.REGISTRO.LIMITE<AbcTable.AbcNivelCuenta.TransaccionCr>
     
     
-    LOCATE Y.TRANSACTION.CODE IN Y.LISTA.DE.CODIGOS SETTING Y.POS.CODE ELSE
+   
+    IF (Y.LISTA.DE.CODIGOS NE '') THEN
+    
+        FINDSTR Y.TRANSACTION.CODE IN Y.LISTA.DE.CODIGOS SETTING Y.POS ELSE
+            ETEXT = 'TRANSACTION.CODE no valido ':Y.TRANSACTION.CODE:'>>>>':Y.LISTA.DE.CODIGOS:'||||||'
+            EB.SystemTables.setEtext(ETEXT)
+            EB.ErrorProcessing.StoreEndError()
+            RETURN
+        END
     END
-
-    Y.CODIGO = Y.LISTA.DE.CODIGOS<Y.POS.CODE>
-
     
 RETURN
 
@@ -168,18 +182,11 @@ RETURN
 OBTENER.LIMITE:
 **********************
     
-    Y.MONEDA            = R.ARR<AA.Framework.ArrangementActivity.ArrActCurrency>
-    
-    R.CURRENCY = ST.CurrencyConfig.Currency.Read(Y.MONEDA, Error)
+    R.CURRENCY = ST.CurrencyConfig.Currency.Read('UDI', Error)
     
     Y.TASA = R.CURRENCY<ST.CurrencyConfig.Currency.EbCurMidRevalRate>
     
     Y.MONTO.UDIS = Y.MONTO.LCY / Y.TASA
-    
-    ETEXT = 'Y.TASA -->':Y.MONEDA:'//Y.MONTO.UDIS -->':Y.MONTO.UDIS
-    EB.SystemTables.setEtext(ETEXT)
-    EB.ErrorProcessing.StoreEndError()
-    
     
 RETURN
 
@@ -192,13 +199,13 @@ VALIDA.ACUMULA.LIMITE:
     R.UDIS.CONCAT = AbcTable.AbcUdisConcat.Read(Y.ID.UDI.CONCAT, Error)
     
       
-    IF (Y.LIMITE.MENSUAL.PERMITIDO LE Y.MONTO.UDIS) THEN
+    IF (Y.MONTO.UDIS LE Y.LIMITE.MENSUAL.PERMITIDO) THEN
         
         GOSUB ACUMULAR.LIMITES
         
     END ELSE
                 
-        Y.MONTO.EX = Y.MONTO.UDIS - Y.LIMITE.MENSUAL.PERMITIDO
+        Y.MONTO.EX = Y.LIMITE.MENSUAL.PERMITIDO - Y.MONTO.UDIS
         ETEXT = 'el monto excede el limite permitido por un valor de: ':Y.MONTO.EX
         EB.SystemTables.setEtext(ETEXT)
         EB.ErrorProcessing.StoreEndError()
@@ -229,7 +236,7 @@ ACUMULAR.LIMITES:
         
         Y.MONTO.UDIS.ACTUAL = Y.MONTO.UDIS + Y.MONTO.UDIS.CONCAT
         
-        IF (Y.LIMITE.MENSUAL.PERMITIDO LE Y.MONTO.UDIS.ACTUAL) THEN
+        IF (Y.MONTO.UDIS.ACTUAL LE Y.LIMITE.MENSUAL.PERMITIDO) THEN
             
             R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalUdis>     = R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalUdis> + Y.MONTO.UDIS
             R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalLcy>      = R.UDIS.CONCAT<AbcTable.AbcUdisConcat.TotalLcy> + Y.MONTO.LCY
@@ -241,7 +248,7 @@ ACUMULAR.LIMITES:
         END ELSE
         
             Y.MONTO.EX = Y.MONTO.UDIS.ACTUAL - Y.LIMITE.MENSUAL.PERMITIDO
-            ETEXT = 'el monto excede el limite permitido por un valor de: ':Y.MONTO.EX
+            ETEXT = 'el monto excede el limite permitido por un valor de: ':Y.MONTO.EX:'>> Y.MONTO.UDIS.ACTUAL --> ':Y.MONTO.UDIS.ACTUAL:'|||Y.LIMITE.MENSUAL.PERMITIDO>>':Y.LIMITE.MENSUAL.PERMITIDO
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
             RETURN
