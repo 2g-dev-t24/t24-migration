@@ -94,3 +94,9 @@ public method Abc2BrAutoAcct (
 {
     jBC: ABC.2BR.AUTO.ACCT
 }
+
+public method AbcFtRevCajero (
+)
+{
+    jBC: ABC.FT.REV.CAJERO
+}
