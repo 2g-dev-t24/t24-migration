@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTQ0NTQ3OTA1MDpDcDEyNTI6MTc1Mjg1ODgzNjI0NDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 18 Jul 2025 14:13:56
+* @ValidationCode : MjoxMTgyMDYxNjAzOkNwMTI1MjoxNzUyODYzNzc3NDA5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 18 Jul 2025 15:36:17
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -128,7 +128,7 @@ OBTENER.TRANSACTION.CODE:
         
         IF (Error) THEN
         
-            ETEXT = Error:' ':Y.TXN.CONTRACT.ID
+            ETEXT = Error:' UDI ':Y.TXN.CONTRACT.ID
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
             RETURN
@@ -143,7 +143,7 @@ OBTENER.TRANSACTION.CODE:
 
         IF (Error) THEN
         
-            ETEXT = Error:' ':Y.TXN.CONTRACT.ID
+            ETEXT = Error:' UDI ':Y.TXN.CONTRACT.ID
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
             RETURN
@@ -169,7 +169,7 @@ NIVEL.UDIS:
     IF (Y.LISTA.DE.CODIGOS NE '') THEN
     
         FINDSTR Y.TRANSACTION.CODE IN Y.LISTA.DE.CODIGOS SETTING Y.POS ELSE
-            ETEXT = 'TRANSACTION.CODE no valido ':Y.TRANSACTION.CODE:'>>>>':Y.LISTA.DE.CODIGOS:'||||||'
+            ETEXT = 'TRANSACTION.CODE no valido ':Y.TRANSACTION.CODE
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
             RETURN
@@ -248,7 +248,7 @@ ACUMULAR.LIMITES:
         END ELSE
         
             Y.MONTO.EX = Y.MONTO.UDIS.ACTUAL - Y.LIMITE.MENSUAL.PERMITIDO
-            ETEXT = 'el monto excede el limite permitido por un valor de: ':Y.MONTO.EX:'>> Y.MONTO.UDIS.ACTUAL --> ':Y.MONTO.UDIS.ACTUAL:'|||Y.LIMITE.MENSUAL.PERMITIDO>>':Y.LIMITE.MENSUAL.PERMITIDO
+            ETEXT = 'el monto excede el limite permitido por un valor de: ':Y.MONTO.EX
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
             RETURN
