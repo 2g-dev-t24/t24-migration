@@ -26,7 +26,7 @@ SUBROUTINE ABC.2BR.CHECA.CAJA.ABIERTO
     $USING EB.DataAccess
     $USING EB.Updates
     $USING TT.Contract
-    $USING abcTable
+  
 *************************************************************************
 *INICIALIZA
 

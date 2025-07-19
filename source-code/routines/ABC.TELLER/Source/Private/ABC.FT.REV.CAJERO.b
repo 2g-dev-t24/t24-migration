@@ -19,8 +19,8 @@ $PACKAGE AbcTeller
     $USING ST.Customer
     $USING EB.Security
     $USING FT.Contract
-    $USING EB.Security
-
+    $USING EB.ErrorProcessing
+    
     FN.FUNDS.TRANSFER = 'F.FUNDS.TRANSFER'
     F.FUNDS.TRANSFER = ''
     EB.DataAccess.Opf(FN.FUNDS.TRANSFER,F.FUNDS.TRANSFER)
@@ -36,10 +36,10 @@ $PACKAGE AbcTeller
 
     ID.TRANSACCION = EB.SystemTables.getComi()
     EB.DataAccess.FRead(FN.FUNDS.TRANSFER,ID.TRANSACCION,REC.FT,F.FUNDS.TRANSFER,ERR.FUNDS.TRANSFER)
-    FT.ESTATUS = REC.FT<FT.RECORD.STATUS>
+    FT.ESTATUS = REC.FT<FT.Contract.FundsTransfer.RecordStatus>
 
     EB.DataAccess.FRead(FN.FUNDS.TRANSFER$NAU,ID.TRANSACCION,REC.FTH,F.FUNDS.TRANSFER$NAU,ERR.FUNDS.TRANSFER$NAU)
-    FT.ESTATUSH = REC.FTH<FT.RECORD.STATUS>
+    FT.ESTATUSH = REC.FTH<FT.Contract.FundsTransfer.RecordStatus>
 
 *... unicamente podra reversar sus movimientos usuarios de la misma caja
 
@@ -47,12 +47,12 @@ $PACKAGE AbcTeller
     EB.DataAccess.FRead(FN.USER, Y.OPERADOR, R.USER, F.USER, ERR.USER)
     Y.USER.CAJERO = R.USER<EB.Security.User.UseDepartmentCode>
     IF REC.FT NE '' THEN
-        Y.TRANS.CAJERO = REC.FT<FT.DEPT.CODE>[1,5]
+        Y.TRANS.CAJERO = REC.FT<FT.Contract.FundsTransfer.DeptCode>[1,5]
 
         IF NOT(Y.USER.CAJERO EQ Y.TRANS.CAJERO) THEN
             ETEXT = "TRANSACCION NO CORRESPONDE A CAJERO/SUCURSAL"
             EB.SystemTables.setEtext(ETEXT)
-            B.ErrorProcessing.StoreEndError()
+            EB.ErrorProcessing.StoreEndError()
             RETURN
         END
     END

@@ -45,7 +45,7 @@ PROCESS:
 
     ID.TT = ID.TT.F:"-":ID.TT.L
 
-    EB.DataAccess.FReadD(FN.TT,ID.TT,REC.TT,FV.TT,TT.ERR)
+    EB.DataAccess.FRead(FN.TT,ID.TT,REC.TT,FV.TT,TT.ERR)
     IF REC.TT THEN
         Y.REC.TT = REC.TT<TT.Contract.Teller.TeAccountTwo>
  
