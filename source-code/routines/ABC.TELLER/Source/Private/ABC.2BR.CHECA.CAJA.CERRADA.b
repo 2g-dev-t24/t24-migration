@@ -33,7 +33,7 @@ $PACKAGE AbcTeller
     END
 
      IF Y.ESTADO EQ "CLOSE" THEN
-        E="CAJA YA CERRADA"
+        EB.SystemTables.setE("CAJA YA CERRADA")
      END
 
 END

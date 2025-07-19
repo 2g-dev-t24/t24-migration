@@ -87,3 +87,10 @@ public method BmvTtChklimit (
 {
     jBC: BMV.TT.CHKLIMIT
 }
+
+
+public method Abc2BrAutoAcct (
+)
+{
+    jBC: ABC.2BR.AUTO.ACCT
+}
