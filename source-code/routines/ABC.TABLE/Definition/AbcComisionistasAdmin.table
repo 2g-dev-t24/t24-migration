@@ -9,27 +9,25 @@ public table AbcComisionistasAdmin {
         NombreComi(ACA.NOMBRE.ADMIN) = 6 
         Rfc(ACA.RFC) = 7       
         PerJuriAdmin(ACA.PER.JURI.ADMIN) = 8
-        CausaBaja(ACA.CAUSA.BAJA) = 9                
-        AbcCausaBaja(ACA.ABC.CAUSA.BAJA) = 10
-        Localidad(ACA.LOCALIDAD) = 11
-        VpmLocalidad(ACA.VPM.LOCALIDAD) = 12
-        Municipio(ACA.MUNICIPIO) = 13
-        CodPostal(ACA.COD.POSTAL) = 14                
+        AbcCausaBaja(ACA.ABC.CAUSA.BAJA) = 9
+        Localidad(ACA.LOCALIDAD) = 10
+        Municipio(ACA.MUNICIPIO) = 11
+        CodPostal(ACA.COD.POSTAL) = 12                
 
         
-        Reserved1(ACA.RESERVED.1)                    = 15
-        Reserved2(ACA.RESERVED.2)                    = 16
-        Reserved3(ACA.RESERVED.3)                    = 17
-        LocalRef(ACA.LOCAL.REF)                      = 18
-        Override(ACA.OVERRIDE)                       = 19
-        RecordStatus(ACA.RECORD.STATUS)              = 20
-        CurrNo(ACA.CURR.NO)                          = 21
-        Inputter(ACA.INPUTTER)                       = 22
-        DateTime(ACA.DATE.TIME)                      = 23
-        Authoriser(ACA.AUTHORISER)                   = 24
-        CoCode(ACA.CO.CODE)                          = 25
-        DeptCode(ACA.DEPT.CODE)                      = 26
-        AuditorCode(ACA.AUDITOR.CODE)                = 27
-        AuditDateTime(ACA.AUDIT.DATE.TIME)           = 28
+        Reserved1(ACA.RESERVED.1)                    = 13
+        Reserved2(ACA.RESERVED.2)                    = 14
+        Reserved3(ACA.RESERVED.3)                    = 15
+        LocalRef(ACA.LOCAL.REF)                      = 16
+        Override(ACA.OVERRIDE)                       = 17
+        RecordStatus(ACA.RECORD.STATUS)              = 18
+        CurrNo(ACA.CURR.NO)                          = 19
+        Inputter(ACA.INPUTTER)                       = 20
+        DateTime(ACA.DATE.TIME)                      = 21
+        Authoriser(ACA.AUTHORISER)                   = 22
+        CoCode(ACA.CO.CODE)                          = 23
+        DeptCode(ACA.DEPT.CODE)                      = 24
+        AuditorCode(ACA.AUDITOR.CODE)                = 25
+        AuditDateTime(ACA.AUDIT.DATE.TIME)           = 26
     }
 }
