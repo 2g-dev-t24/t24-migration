@@ -430,7 +430,7 @@ public method Abc2BrVCheckSpeiType ()
 private method abcExtDescSpei (
 )
 {
-   jBC: ABC.EXT.DESC.SPEI
+    jBC: ABC.EXT.DESC.SPEI
 }
 
 
@@ -438,7 +438,7 @@ private method abcExtDescSpei (
 private method abcValidaNotSpeiEspecial (
 )
 {
-   jBC: ABC.VALIDA.NOT.SPEI.ESPECIAL
+    jBC: ABC.VALIDA.NOT.SPEI.ESPECIAL
 }
 
 
@@ -446,10 +446,95 @@ private method abcValidaNotSpeiEspecial (
 private method abcHoraCaptura (
 )
 {
-   jBC: ABC.HORA.CAPTURA
+    jBC: ABC.HORA.CAPTURA
 }
 
 public method AbcStoreInfoSmsEmail ()
 {
     jBC: ABC.STORE.INFO.SMS.EMAIL
+}
+
+public method AbcValCausaBaja ()
+{
+    jBC: ABC.VAL.CAUSA.BAJA
+}
+
+public method AbcActualizaFecha ()
+{
+    jBC: ABC.ACTUALIZA.FECHA
+}
+
+public method AbcCreaIdAdmin ()
+{
+    jBC: ABC.CREA.ID.ADMIN
+}
+
+public method AbcValidaIdAdmin ()
+{
+    jBC: ABC.VALIDA.ID.ADMIN
+}
+
+public method AbcValRfc ()
+{
+    jBC: ABC.VAL.RFC
+}
+
+
+public method AbcValidaOpAdmin ()
+{
+    jBC: ABC.VALIDA.OP.ADMIN
+}
+
+
+public method AbcVerificaRfcAdmin ()
+{
+    jBC: ABC.VERIFICA.RFC.ADMIN
+}
+
+
+public method AbcValCausaBajaComi ()
+{
+    jBC: ABC.VAL.CAUSA.BAJA.COMI
+}
+
+
+public method AbcCreaIdComi ()
+{
+    jBC: ABC.CREA.ID.COMI
+}
+
+
+public method AbcActualizaFechaComi ()
+{
+    jBC: ABC.ACTUALIZA.FECHA.COMI
+}
+
+
+public method AbcValidaIdComi ()
+{
+    jBC: ABC.VALIDA.ID.COMI
+}
+
+
+public method AbcVerificaRfcComi ()
+{
+    jBC: ABC.VERIFICA.RFC.COMI
+}
+
+
+public method AbcValCausaBajaEstabl ()
+{
+    jBC: ABC.VAL.CAUSA.BAJA.ESTABL
+}
+
+
+public method AbcActualizaFechaEstabl ()
+{
+    jBC: ABC.ACTUALIZA.FECHA.ESTABL
+}
+
+
+public method AbcValidaIdEstabl ()
+{
+    jBC: ABC.VALIDA.ID.ESTABL
 }
