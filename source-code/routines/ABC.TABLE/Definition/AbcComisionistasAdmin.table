@@ -2,7 +2,7 @@ public table AbcComisionistasAdmin {
     t24: ABC.COMISIONISTAS.ADMIN
     fields:{
         FecMov(ACA.FEC.MOV) = 1
-        ClaveIdentidad(ACA.CLAVE.ENTIDAD) = 2
+        ClaveEntidad(ACA.CLAVE.ENTIDAD) = 2
         ClaveFormulario(ACA.CLAVE.FORMULARIO) = 3
         TipoMovimiento(ACA.TIPO.MOVIMIENTO) = 4
         IdAdministrador(ACA.ID.ADMINISTRADOR) = 5
