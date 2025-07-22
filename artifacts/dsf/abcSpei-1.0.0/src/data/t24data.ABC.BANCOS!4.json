@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "4",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "402514"
+    }, {
+      "BINES" : "407339"
+    }, {
+      "BINES" : "600973"
+    }, {
+      "BINES" : "421648"
+    }, {
+      "BINES" : "603778"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "CONTROL DE CARTERAS ESPECIALES"
+  }
+}

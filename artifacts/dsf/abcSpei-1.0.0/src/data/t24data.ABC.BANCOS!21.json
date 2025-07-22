@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "21",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506336"
+    }, {
+      "BINES" : "506273"
+    }, {
+      "BINES" : "627535"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "SODEXO MOTIVATION SOLUTIONS"
+  }
+}

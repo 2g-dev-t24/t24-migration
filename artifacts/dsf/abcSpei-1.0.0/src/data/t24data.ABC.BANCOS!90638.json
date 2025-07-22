@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "90638",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506199"
+    }, {
+      "BINES" : "506305"
+    }, {
+      "BINES" : "506306"
+    }, {
+      "BINES" : "506307"
+    }, {
+      "BINES" : "506332"
+    }, {
+      "BINES" : "506333"
+    }, {
+      "BINES" : "588772"
+    }, {
+      "BINES" : "588773"
+    }, {
+      "BINES" : "588774"
+    }, {
+      "BINES" : "588775"
+    }, {
+      "BINES" : "588776"
+    } ],
+    "TIPO" : "090",
+    "BANCO" : "NU MEXICO"
+  }
+}

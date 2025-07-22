@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "40154",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "485043"
+    }, {
+      "BINES" : "485044"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "BANCO COVALTO"
+  }
+}

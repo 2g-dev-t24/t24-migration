@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "51518",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "536240"
+    } ],
+    "TIPO" : "51",
+    "BANCO" : "CONFIABLE Y EFECTIVO A LA MANO"
+  }
+}

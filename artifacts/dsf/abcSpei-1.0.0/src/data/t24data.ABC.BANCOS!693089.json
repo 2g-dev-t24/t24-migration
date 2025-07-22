@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "693089",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506357"
+    } ],
+    "TIPO" : "069",
+    "BANCO" : "CONCREEC"
+  }
+}

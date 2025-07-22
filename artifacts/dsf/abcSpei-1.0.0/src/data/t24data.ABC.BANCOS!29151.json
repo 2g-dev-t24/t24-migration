@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "29151",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506320"
+    } ],
+    "TIPO" : "29",
+    "BANCO" : "CAJA SOLIDARIA NUEVA GALICIA"
+  }
+}

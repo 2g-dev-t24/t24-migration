@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "69973",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "637480"
+    }, {
+      "BINES" : "511765"
+    }, {
+      "BINES" : "535072"
+    }, {
+      "BINES" : "506202"
+    }, {
+      "BINES" : "506302"
+    }, {
+      "BINES" : "420839"
+    } ],
+    "TIPO" : "069",
+    "BANCO" : "TOKA INVESTMENT"
+  }
+}

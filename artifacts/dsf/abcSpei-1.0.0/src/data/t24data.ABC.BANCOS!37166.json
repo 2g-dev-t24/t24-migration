@@ -1,0 +1,45 @@
+{
+  "header" : {
+    "id" : "37166",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "438099"
+    }, {
+      "BINES" : "506206"
+    }, {
+      "BINES" : "502275"
+    }, {
+      "BINES" : "413131"
+    }, {
+      "BINES" : "419335"
+    }, {
+      "BINES" : "419334"
+    }, {
+      "BINES" : "459497"
+    }, {
+      "BINES" : "405063"
+    }, {
+      "BINES" : "551507"
+    }, {
+      "BINES" : "551509"
+    }, {
+      "BINES" : "526192"
+    }, {
+      "BINES" : "526194"
+    }, {
+      "BINES" : "526196"
+    }, {
+      "BINES" : "526197"
+    } ],
+    "TIPO" : "037",
+    "BANCO" : "BaBien"
+  }
+}

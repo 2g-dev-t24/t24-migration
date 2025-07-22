@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "691148",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506276"
+    }, {
+      "BINES" : "506277"
+    }, {
+      "BINES" : "506278"
+    }, {
+      "BINES" : "506279"
+    }, {
+      "BINES" : "506280"
+    } ],
+    "TIPO" : "069",
+    "BANCO" : "FINUTIL"
+  }
+}

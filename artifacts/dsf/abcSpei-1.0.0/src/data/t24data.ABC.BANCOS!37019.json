@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "37019",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "491343"
+    }, {
+      "BINES" : "491346"
+    }, {
+      "BINES" : "547080"
+    }, {
+      "BINES" : "491344"
+    }, {
+      "BINES" : "557602"
+    }, {
+      "BINES" : "481279"
+    } ],
+    "TIPO" : "037",
+    "BANCO" : "BANJERCITO"
+  }
+}

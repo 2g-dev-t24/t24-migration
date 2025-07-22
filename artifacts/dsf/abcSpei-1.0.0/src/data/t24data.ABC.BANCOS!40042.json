@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "40042",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "446878"
+    }, {
+      "BINES" : "519946"
+    }, {
+      "BINES" : "526972"
+    }, {
+      "BINES" : "549909"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "MIFEL"
+  }
+}

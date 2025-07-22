@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "74100",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "523585"
+    }, {
+      "BINES" : "523941"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "CORPORACION NOMI FIN"
+  }
+}

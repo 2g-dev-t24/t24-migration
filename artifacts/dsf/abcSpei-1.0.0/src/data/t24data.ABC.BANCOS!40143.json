@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "40143",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "460068"
+    }, {
+      "BINES" : "474646"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "CIBANCO"
+  }
+}

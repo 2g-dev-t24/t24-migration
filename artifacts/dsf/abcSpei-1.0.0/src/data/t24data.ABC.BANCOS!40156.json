@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "40156",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "547022"
+    }, {
+      "BINES" : "549912"
+    }, {
+      "BINES" : "548640"
+    }, {
+      "BINES" : "553548"
+    }, {
+      "BINES" : "549685"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "SABADELL"
+  }
+}

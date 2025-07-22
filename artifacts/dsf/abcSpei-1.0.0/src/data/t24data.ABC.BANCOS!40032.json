@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "40032",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "402318"
+    }, {
+      "BINES" : "425981"
+    }, {
+      "BINES" : "425982"
+    }, {
+      "BINES" : "512745"
+    }, {
+      "BINES" : "554764"
+    }, {
+      "BINES" : "480862"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "IXE BANCO"
+  }
+}

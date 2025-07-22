@@ -1,0 +1,31 @@
+{
+  "header" : {
+    "id" : "252",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "522375"
+    }, {
+      "BINES" : "627180"
+    }, {
+      "BINES" : "506430"
+    }, {
+      "BINES" : "854881"
+    }, {
+      "BINES" : "854899"
+    }, {
+      "BINES" : "881006"
+    }, {
+      "BINES" : "881052"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "SOCIEDAD DE FAC MULTIROTATIVAS SAPI"
+  }
+}

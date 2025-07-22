@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "29016",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "555924"
+    }, {
+      "BINES" : "506350"
+    } ],
+    "TIPO" : "029",
+    "BANCO" : "CAJA POPULAR OBLATOS"
+  }
+}

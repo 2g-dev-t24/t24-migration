@@ -1,0 +1,59 @@
+{
+  "header" : {
+    "id" : "693643",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "521300"
+    }, {
+      "BINES" : "523285"
+    }, {
+      "BINES" : "529081"
+    }, {
+      "BINES" : "549920"
+    }, {
+      "BINES" : "522339"
+    }, {
+      "BINES" : "511747"
+    }, {
+      "BINES" : "517586"
+    }, {
+      "BINES" : "522618"
+    }, {
+      "BINES" : "547751"
+    }, {
+      "BINES" : "516603"
+    }, {
+      "BINES" : "534541"
+    }, {
+      "BINES" : "534544"
+    }, {
+      "BINES" : "534548"
+    }, {
+      "BINES" : "534550"
+    }, {
+      "BINES" : "516094"
+    }, {
+      "BINES" : "519983"
+    }, {
+      "BINES" : "531081"
+    }, {
+      "BINES" : "555326"
+    }, {
+      "BINES" : "534629"
+    }, {
+      "BINES" : "506403"
+    }, {
+      "BINES" : "425763"
+    } ],
+    "TIPO" : "069",
+    "BANCO" : "OPERADORA BROXEL"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "37009",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TIPO" : "037",
+    "BANCO" : "BANOBRAS"
+  }
+}

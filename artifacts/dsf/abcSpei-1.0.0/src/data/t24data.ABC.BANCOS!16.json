@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "16",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506309"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "OPERADORAS DE VALES Y DESPENSAS"
+  }
+}

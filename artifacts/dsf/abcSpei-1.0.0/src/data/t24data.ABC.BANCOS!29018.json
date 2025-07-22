@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "29018",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "531294"
+    } ],
+    "TIPO" : "29",
+    "BANCO" : "TE CREEMOS"
+  }
+}

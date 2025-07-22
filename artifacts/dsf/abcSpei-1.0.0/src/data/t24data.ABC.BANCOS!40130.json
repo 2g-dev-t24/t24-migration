@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "40130",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506222"
+    }, {
+      "BINES" : "506236"
+    }, {
+      "BINES" : "506257"
+    }, {
+      "BINES" : "457249"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "COMPARTAMOS"
+  }
+}

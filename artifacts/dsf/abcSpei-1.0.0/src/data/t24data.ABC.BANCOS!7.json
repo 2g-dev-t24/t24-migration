@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "7",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506214"
+    }, {
+      "BINES" : "506215"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "INVEX PROSA"
+  }
+}

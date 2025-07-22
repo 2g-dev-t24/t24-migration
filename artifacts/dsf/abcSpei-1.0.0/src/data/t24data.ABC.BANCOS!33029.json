@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "33029",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506343"
+    } ],
+    "TIPO" : "033",
+    "BANCO" : "COOPERATIVA ACREIMEX"
+  }
+}

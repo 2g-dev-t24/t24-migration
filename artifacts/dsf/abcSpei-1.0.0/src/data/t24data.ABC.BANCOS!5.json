@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "5",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506312"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "HOLLYWOOD"
+  }
+}

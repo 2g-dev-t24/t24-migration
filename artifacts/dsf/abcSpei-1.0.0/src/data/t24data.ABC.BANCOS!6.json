@@ -1,0 +1,49 @@
+{
+  "header" : {
+    "id" : "6",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "446351"
+    }, {
+      "BINES" : "286900"
+    }, {
+      "BINES" : "469849"
+    }, {
+      "BINES" : "506301"
+    }, {
+      "BINES" : "506329"
+    }, {
+      "BINES" : "506330"
+    }, {
+      "BINES" : "506359"
+    }, {
+      "BINES" : "506360"
+    }, {
+      "BINES" : "506369"
+    }, {
+      "BINES" : "506370"
+    }, {
+      "BINES" : "506371"
+    }, {
+      "BINES" : "506372"
+    }, {
+      "BINES" : "464811"
+    }, {
+      "BINES" : "481284"
+    }, {
+      "BINES" : "464812"
+    }, {
+      "BINES" : "481283"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "BRADESCARD DE MICO"
+  }
+}

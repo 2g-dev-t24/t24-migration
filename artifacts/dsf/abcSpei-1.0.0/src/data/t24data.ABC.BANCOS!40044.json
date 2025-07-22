@@ -1,0 +1,107 @@
+{
+  "header" : {
+    "id" : "40044",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "202027"
+    }, {
+      "BINES" : "491871"
+    }, {
+      "BINES" : "491872"
+    }, {
+      "BINES" : "491873"
+    }, {
+      "BINES" : "520502"
+    }, {
+      "BINES" : "531444"
+    }, {
+      "BINES" : "544204"
+    }, {
+      "BINES" : "545375"
+    }, {
+      "BINES" : "547407"
+    }, {
+      "BINES" : "552263"
+    }, {
+      "BINES" : "627467"
+    }, {
+      "BINES" : "557920"
+    }, {
+      "BINES" : "557921"
+    }, {
+      "BINES" : "557922"
+    }, {
+      "BINES" : "557923"
+    }, {
+      "BINES" : "557924"
+    }, {
+      "BINES" : "601999"
+    }, {
+      "BINES" : "550454"
+    }, {
+      "BINES" : "588772"
+    }, {
+      "BINES" : "02"
+    }, {
+      "BINES" : "588772"
+    }, {
+      "BINES" : "66"
+    }, {
+      "BINES" : "588772"
+    }, {
+      "BINES" : "67"
+    }, {
+      "BINES" : "588772"
+    }, {
+      "BINES" : "68"
+    }, {
+      "BINES" : "627318"
+    }, {
+      "BINES" : "11"
+    }, {
+      "BINES" : "588772"
+    }, {
+      "BINES" : "65"
+    }, {
+      "BINES" : "588772"
+    }, {
+      "BINES" : "71"
+    }, {
+      "BINES" : "588772"
+    }, {
+      "BINES" : "72"
+    }, {
+      "BINES" : "603681"
+    }, {
+      "BINES" : "603681"
+    }, {
+      "BINES" : "01"
+    }, {
+      "BINES" : "603681"
+    }, {
+      "BINES" : "02"
+    }, {
+      "BINES" : "603681"
+    }, {
+      "BINES" : "03"
+    }, {
+      "BINES" : "627535"
+    }, {
+      "BINES" : "00"
+    }, {
+      "BINES" : "627535"
+    }, {
+      "BINES" : "477260"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "SCOTIABANK"
+  }
+}

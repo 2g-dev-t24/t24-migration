@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "3",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506303"
+    }, {
+      "BINES" : "636318"
+    }, {
+      "BINES" : "558306"
+    }, {
+      "BINES" : "526949"
+    }, {
+      "BINES" : "526951"
+    }, {
+      "BINES" : "526953"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "EDENRED"
+  }
+}

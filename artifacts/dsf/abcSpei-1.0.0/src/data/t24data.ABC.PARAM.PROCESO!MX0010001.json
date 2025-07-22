@@ -1,0 +1,49 @@
+{
+  "header" : {
+    "id" : "MX0010001",
+    "dsfApiType" : "ABC.PARAM.PROCESO",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "APLICACION" : [ {
+      "NARRATIVA" : "VALIDA CAPTURA SPEI",
+      "HORA.INI" : "000000",
+      "ESTATUS" : "ACTIVA",
+      "HORA.FIN" : "235959",
+      "APLICACION" : "FUNDS.TRANSFER"
+    }, {
+      "NARRATIVA" : "VALIDA CAPTURA INVERSIONES",
+      "HORA.INI" : "090000",
+      "ESTATUS" : "ACTIVA",
+      "HORA.FIN" : "170000",
+      "APLICACION" : "ABC.AA.PRE.PROCESS",
+      "CATEGORIA" : "6605"
+    }, {
+      "NARRATIVA" : "VALIDA CAPTURA CEDES FIJA",
+      "HORA.INI" : "090000",
+      "ESTATUS" : "ACTIVA",
+      "HORA.FIN" : "170000",
+      "APLICACION" : "ABC.AA.PRE.PROCESS",
+      "CATEGORIA" : "6606"
+    }, {
+      "NARRATIVA" : "VALIDA CAPTURA CEDES VARIABLE",
+      "HORA.INI" : "060000",
+      "ESTATUS" : "ACTIVA",
+      "HORA.FIN" : "060000",
+      "APLICACION" : "ABC.AA.PRE.PROCESS",
+      "CATEGORIA" : "6607"
+    }, {
+      "NARRATIVA" : "VALIDA CAPTURA CEDES REVISABLE",
+      "HORA.INI" : "090000",
+      "ESTATUS" : "ACTIVA",
+      "HORA.FIN" : "170000",
+      "APLICACION" : "ABC.AA.PRE.PROCESS",
+      "CATEGORIA" : "6608"
+    } ]
+  }
+}

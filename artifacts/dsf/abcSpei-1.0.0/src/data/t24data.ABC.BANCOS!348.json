@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "348",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TIPO" : "000",
+    "BANCO" : "RED AMIGO DAL SAPI DE CV SOFOM ENR"
+  }
+}

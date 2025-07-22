@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "id" : "40060",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "435769"
+    }, {
+      "BINES" : "539978"
+    }, {
+      "BINES" : "465762"
+    }, {
+      "BINES" : "428464"
+    }, {
+      "BINES" : "523595"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "BANSI"
+  }
+}

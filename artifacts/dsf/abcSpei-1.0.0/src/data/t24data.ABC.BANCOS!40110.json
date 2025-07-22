@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "40110",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TIPO" : "040",
+    "BANCO" : "JP MORGAN"
+  }
+}

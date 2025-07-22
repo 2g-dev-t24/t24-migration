@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "900001",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "439185"
+    }, {
+      "BINES" : "439186"
+    }, {
+      "BINES" : "439187"
+    }, {
+      "BINES" : "400486"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "CREDOMATIC"
+  }
+}

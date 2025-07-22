@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "14",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506351"
+    }, {
+      "BINES" : "506478"
+    }, {
+      "BINES" : "407241"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "NCUBO"
+  }
+}

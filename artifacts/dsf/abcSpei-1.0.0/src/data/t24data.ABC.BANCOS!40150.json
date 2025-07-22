@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "40150",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "550897"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "INMOBILIARIO"
+  }
+}

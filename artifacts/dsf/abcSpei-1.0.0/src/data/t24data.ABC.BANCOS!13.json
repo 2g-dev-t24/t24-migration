@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "13",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506299"
+    }, {
+      "BINES" : "506300"
+    }, {
+      "BINES" : "506354"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "ONE CARD"
+  }
+}

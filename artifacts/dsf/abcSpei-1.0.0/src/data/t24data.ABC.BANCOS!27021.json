@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "27021",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506356"
+    } ],
+    "TIPO" : "27",
+    "BANCO" : "LA PERSEVERANCIA DEL VALLE DE TEHUACAN"
+  }
+}

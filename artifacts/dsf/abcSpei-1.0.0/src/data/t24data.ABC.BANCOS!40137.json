@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "40137",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "426807"
+    }, {
+      "BINES" : "400819"
+    }, {
+      "BINES" : "416916"
+    }, {
+      "BINES" : "554948"
+    }, {
+      "BINES" : "559471"
+    }, {
+      "BINES" : "510148"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "BANCOPPEL"
+  }
+}

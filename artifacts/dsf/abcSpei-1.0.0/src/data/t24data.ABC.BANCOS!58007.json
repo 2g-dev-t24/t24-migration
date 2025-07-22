@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "58007",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "526404"
+    } ],
+    "TIPO" : "58",
+    "BANCO" : "CAJA POPULAR GONZALO VEGA"
+  }
+}

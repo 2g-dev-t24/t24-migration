@@ -1,0 +1,31 @@
+{
+  "header" : {
+    "id" : "40134",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "537830"
+    }, {
+      "BINES" : "530113"
+    }, {
+      "BINES" : "444888"
+    }, {
+      "BINES" : "444889"
+    }, {
+      "BINES" : "539975"
+    }, {
+      "BINES" : "520318"
+    }, {
+      "BINES" : "506275"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "WAL-MART"
+  }
+}

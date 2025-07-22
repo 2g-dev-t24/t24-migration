@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "40113",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "553800"
+    }, {
+      "BINES" : "554173"
+    }, {
+      "BINES" : "506400"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "VE POR MAS"
+  }
+}

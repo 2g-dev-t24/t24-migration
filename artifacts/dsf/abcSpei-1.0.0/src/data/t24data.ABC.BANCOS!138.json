@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "138",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "445016"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "ABC CAPITAL"
+  }
+}

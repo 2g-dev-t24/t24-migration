@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "40147",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "551515"
+    }, {
+      "BINES" : "523691"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "BANKAOOL"
+  }
+}

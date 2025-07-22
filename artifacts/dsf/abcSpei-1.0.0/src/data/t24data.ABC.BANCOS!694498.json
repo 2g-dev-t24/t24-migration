@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "694498",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506269"
+    } ],
+    "TIPO" : "069",
+    "BANCO" : "AKII GLOBAL TRANSACTIONAL PLATFORM"
+  }
+}

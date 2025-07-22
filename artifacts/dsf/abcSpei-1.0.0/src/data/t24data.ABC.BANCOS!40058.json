@@ -1,0 +1,39 @@
+{
+  "header" : {
+    "id" : "40058",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "417967"
+    }, {
+      "BINES" : "417968"
+    }, {
+      "BINES" : "474175"
+    }, {
+      "BINES" : "474174"
+    }, {
+      "BINES" : "436401"
+    }, {
+      "BINES" : "476840"
+    }, {
+      "BINES" : "480063"
+    }, {
+      "BINES" : "423429"
+    }, {
+      "BINES" : "493165"
+    }, {
+      "BINES" : "490897"
+    }, {
+      "BINES" : "491047"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "BANREGIO"
+  }
+}

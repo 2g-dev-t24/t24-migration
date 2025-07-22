@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "90616",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TIPO" : "090",
+    "BANCO" : "FINAMEX"
+  }
+}

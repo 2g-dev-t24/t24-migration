@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "694925",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TIPO" : "069",
+    "BANCO" : "SERVICIOS FINANCIEROS SORIANA"
+  }
+}

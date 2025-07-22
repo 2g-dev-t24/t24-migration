@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "20",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506379"
+    }, {
+      "BINES" : "506380"
+    } ],
+    "TIPO" : "000",
+    "BANCO" : "PROGRAMAS DE RELACIONAMIENTO MEDA"
+  }
+}

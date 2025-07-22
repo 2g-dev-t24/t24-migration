@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "691396",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506203"
+    }, {
+      "BINES" : "544511"
+    }, {
+      "BINES" : "523541"
+    }, {
+      "BINES" : "230668"
+    } ],
+    "TIPO" : "069",
+    "BANCO" : "FINANCIERA CUALLIX"
+  }
+}

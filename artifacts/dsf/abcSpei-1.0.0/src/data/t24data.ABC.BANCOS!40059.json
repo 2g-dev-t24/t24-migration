@@ -1,0 +1,59 @@
+{
+  "header" : {
+    "id" : "40059",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "421811"
+    }, {
+      "BINES" : "463186"
+    }, {
+      "BINES" : "463187"
+    }, {
+      "BINES" : "406130"
+    }, {
+      "BINES" : "446137"
+    }, {
+      "BINES" : "446138"
+    }, {
+      "BINES" : "492143"
+    }, {
+      "BINES" : "506201"
+    }, {
+      "BINES" : "506205"
+    }, {
+      "BINES" : "529506"
+    }, {
+      "BINES" : "529575"
+    }, {
+      "BINES" : "547736"
+    }, {
+      "BINES" : "639388"
+    }, {
+      "BINES" : "419690"
+    }, {
+      "BINES" : "419691"
+    }, {
+      "BINES" : "546804"
+    }, {
+      "BINES" : "546759"
+    }, {
+      "BINES" : "420807"
+    }, {
+      "BINES" : "439185"
+    }, {
+      "BINES" : "439186"
+    }, {
+      "BINES" : "439187"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "INVEX"
+  }
+}

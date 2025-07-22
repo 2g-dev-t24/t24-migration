@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "29086",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506334"
+    } ],
+    "TIPO" : "029",
+    "BANCO" : "CAJA SOLIDARIA GUACHINANGO"
+  }
+}

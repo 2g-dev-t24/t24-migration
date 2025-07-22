@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "29015",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "539944"
+    } ],
+    "TIPO" : "029",
+    "BANCO" : "CAJA POPULAR 15 DE MAYO"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.PARAM.PROCESO",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "PARAM PROCESO"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "U"
+  }
+}

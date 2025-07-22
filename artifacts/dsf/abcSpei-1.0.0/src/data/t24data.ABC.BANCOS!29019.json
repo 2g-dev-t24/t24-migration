@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "29019",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506314"
+    } ],
+    "TIPO" : "29",
+    "BANCO" : "CAJA POPULAR APASEO EL ALTO"
+  }
+}

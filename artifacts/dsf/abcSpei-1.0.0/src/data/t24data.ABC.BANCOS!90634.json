@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "90634",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506213"
+    } ],
+    "TIPO" : "090",
+    "BANCO" : "FINCOMUN"
+  }
+}

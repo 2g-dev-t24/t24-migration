@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "90687",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TIPO" : "044",
+    "BANCO" : "1FIRSTBANK OF PUERTO RICO"
+  }
+}

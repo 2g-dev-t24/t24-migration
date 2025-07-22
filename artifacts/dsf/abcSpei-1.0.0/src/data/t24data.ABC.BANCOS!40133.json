@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "40133",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "469693"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "ACTINVER"
+  }
+}

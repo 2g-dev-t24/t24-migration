@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "29133",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506361"
+    } ],
+    "TIPO" : "29",
+    "BANCO" : "CAJA POPULAR TATAVASCO"
+  }
+}

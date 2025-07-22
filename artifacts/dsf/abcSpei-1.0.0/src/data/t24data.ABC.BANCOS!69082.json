@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "69082",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "506261"
+    } ],
+    "TIPO" : "069",
+    "BANCO" : "FINANCIERA INDEPENDENCIA SAB"
+  }
+}

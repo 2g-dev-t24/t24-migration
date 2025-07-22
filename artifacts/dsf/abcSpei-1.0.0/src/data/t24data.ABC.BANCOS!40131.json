@@ -1,0 +1,31 @@
+{
+  "header" : {
+    "id" : "40131",
+    "dsfApiType" : "ABC.BANCOS",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "BINES" : [ {
+      "BINES" : "400820"
+    }, {
+      "BINES" : "543691"
+    }, {
+      "BINES" : "428575"
+    }, {
+      "BINES" : "428574"
+    }, {
+      "BINES" : "474494"
+    }, {
+      "BINES" : "506341"
+    }, {
+      "BINES" : "554964"
+    } ],
+    "TIPO" : "040",
+    "BANCO" : "BANCO FAMSA"
+  }
+}
