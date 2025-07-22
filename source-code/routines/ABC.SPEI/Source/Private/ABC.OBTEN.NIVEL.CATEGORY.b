@@ -28,6 +28,7 @@ INICIA:
     Y.ID.CATEGORY = EB.Reports.getOData()
 
     EB.Reports.setOData("")
+    Y.GO.A.HEAD = ""
     RETURN
 
 
@@ -51,19 +52,25 @@ PROCESO:
     Y.LIST.PARAMS = ''
     Y.LIST.VALUES = ''
     AbcGetGeneralParam.AbcGetGeneralParam(Y.ID.GEN.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
-    Y.NO.VALORES = DCOUNT(Y.LIST.PARAMS,FM)
+    Y.NO.VALORES = DCOUNT(Y.LIST.PARAMS,@FM)
     FOR Y.AA=1 TO Y.NO.VALORES
         Y.PARAM = Y.LIST.PARAMS<Y.AA>
         Y.CATEGORIA = Y.LIST.VALUES<Y.AA>
-        LOCATE Y.ID.CATEGORY IN Y.CATEGORIA SETTING POS THEN
-             EB.Reports.setOData(Y.PARAM)
-        END
-    END
+        CHANGE '|' TO @FM IN Y.CATEGORIA
+        Y.NO.CATEGORY = DCOUNT (Y.CATEGORIA,@FM)
+        FOR Y.BB = 1 TO Y.NO.CATEGORY
+            IF Y.ID.CATEGORY EQ Y.CATEGORY<Y.ABB> THEN
+               Y.NIVEL = Y.PARAM
+               Y.GO.A.HEAD = 1
+            END
+        NEXT Y.BB
         
     NEXT Y.AA
 
     IF Y.GO.A.HEAD EQ "" THEN
-        EB.Reports.setEnqError("NIVEL NO ENCONTRADO")
+        EB.Reports.setEnqError("NIVEL NO ENCONTRADO ":Y.LIST.VALUES)
+    END ELSE
+       EB.Reports.setOData(Y.NIVEL)
     END
 
 
