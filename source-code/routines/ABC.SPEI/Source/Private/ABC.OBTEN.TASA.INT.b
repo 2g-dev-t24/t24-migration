@@ -24,9 +24,9 @@ $PACKAGE AbcSpei
 INICIA:
 ***********
 
-    Y.ACCT.GEN.CONDITION.ID = O.DATA
-    O.DATA = ""
+    Y.ACCT.GEN.CONDITION.ID = EB.Reports.getOData()
 
+    EB.Reports.setOData("")
     RETURN
 
 
@@ -57,7 +57,7 @@ PROCESO:
     EB.DataAccess.FRead(FN.GROUP.CREDIT.INT,Y.ID.GROUP.CREDIT.INT,R.GROUP.CREDIT.INT,F.GROUP.CREDIT.INT,Y.GROUP.CREDIT.INT.ERR)
     IF R.GROUP.CREDIT.INT THEN
 
-	O.DATA = R.GROUP.CREDIT.INT<IC.Config.GroupCreditInt.GciCrIntRate>
+	EB.Reports.setOData(R.GROUP.CREDIT.INT<IC.Config.GroupCreditInt.GciCrIntRate>)
 
     END ELSE
         EB.Reports.setEnqError('TASA NO DISPONIBLE')

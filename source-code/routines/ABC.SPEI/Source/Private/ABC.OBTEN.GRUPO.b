@@ -33,9 +33,9 @@ $PACKAGE AbcSpei
 INICIA:
 ***********
 
-    Y.ACCT.GEN.CONDITION.ID = O.DATA
+    Y.ACCT.GEN.CONDITION.ID = EB.Reports.getOData()
 
-    O.DATA = ""
+    EB.Reports.setOData("")
 
     Y.GRUPO.ESTANDAR = "4"
     Y.GRUPO.PLUS = "8"
@@ -73,9 +73,9 @@ PROCESO:
         CHANGE '|' TO @FM IN Y.DESCRIPTION
         Y.GRUPO = Y.DESCRIPTION<2>
         IF Y.GRUPO EQ Y.GRUPO.PLUS THEN
-            O.DATA = Y.GRUPO.PLUS
+            EB.Reports.setOData(Y.GRUPO.PLUS)
         END ELSE
-            O.DATA = Y.GRUPO.ESTANDAR
+            EB.Reports.setOData(Y.GRUPO.ESTANDAR)
         END
     END ELSE
         EB.Reports.setEnqError("Sin grupo")
