@@ -51,7 +51,7 @@ PROCESO:
     Y.LIST=''
     Y.NO.REG=''
     Y.SEL.ERR=''
-    EB.DataAccess.Readlist(Y.SELECT,Y.LIST,"",Y.TOT.REC,Y.ERROR)(Y.SEL.CMD,Y.LIST,'',Y.NO.REG,Y.SEL.ERR)
+    EB.DataAccess.Readlist(Y.SEL.CMD,Y.LIST,'',Y.NO.REG,Y.SEL.ERR)
     Y.ID.GROUP.CREDIT.INT = Y.LIST<1>
 
     EB.DataAccess.FRead(FN.GROUP.CREDIT.INT,Y.ID.GROUP.CREDIT.INT,R.GROUP.CREDIT.INT,F.GROUP.CREDIT.INT,Y.GROUP.CREDIT.INT.ERR)
@@ -60,7 +60,7 @@ PROCESO:
 	O.DATA = R.GROUP.CREDIT.INT<IC.Config.GroupCreditInt.GciCrIntRate>
 
     END ELSE
-        EB.Reports.setEnqError("TASA NO DISPONIBLE')
+        EB.Reports.setEnqError('TASA NO DISPONIBLE')
     END
 
 
