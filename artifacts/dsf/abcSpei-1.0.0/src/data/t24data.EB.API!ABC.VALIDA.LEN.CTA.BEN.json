@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.VALIDA.LEN.CTA.BEN",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.VALIDA.LEN.CTA.BEN"
+    } ],
+    "PROTECTION.LEVEL" : "NONE"
+  }
+}

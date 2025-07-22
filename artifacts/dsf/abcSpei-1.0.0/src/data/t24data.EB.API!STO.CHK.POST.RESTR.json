@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "STO.CHK.POST.RESTR",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "STO.CHK.POST.RESTR"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

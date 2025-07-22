@@ -1,0 +1,338 @@
+{
+  "header" : {
+    "id" : "FUNDS.TRANSFER,ABC.SPEI.EXPRESS.PRN.2",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "ABC.VALIDA.CANAL.FT"
+    }, {
+      "INPUT.ROUTINE" : "STO.CHK.POST.RESTR"
+    }, {
+      "INPUT.ROUTINE" : "ABC.VALIDA.AUT.SPEI"
+    }, {
+      "INPUT.ROUTINE" : "ABC.VAL.DEFAULT.RFC"
+    }, {
+      "INPUT.ROUTINE" : "ABC.CALL.RTNS.GEN.FT"
+    } ],
+    "AUTH.ROUTINE" : [ {
+      "AUTH.ROUTINE" : "ABC.SPEI.EXPRESS.TXN.OUTGOING"
+    }, {
+      "AUTH.ROUTINE" : "ABC.ENV.EMAIL.SPEI.ACSE.2"
+    } ],
+    "NO.OF.AUTH" : "1",
+    "RECORDS.PER.PAGE" : "1",
+    "CHECK.REC.RTN" : [ {
+      "CHECK.REC.RTN" : "ABC.2BR.V.CHECK.SPEI.TYPE"
+    } ],
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "TRANSACTION.TYPE",
+      "AUT.NEW.CONTENT" : "ACSE"
+    }, {
+      "AUTOM.FIELD.NO" : "DEBIT.CURRENCY",
+      "AUT.NEW.CONTENT" : "MXN"
+    }, {
+      "AUTOM.FIELD.NO" : "CREDIT.CURRENCY",
+      "AUT.NEW.CONTENT" : "MXN"
+    }, {
+      "AUTOM.FIELD.NO" : "MT103.TYPE",
+      "AUT.NEW.CONTENT" : "Mt103extend"
+    }, {
+      "AUTOM.FIELD.NO" : "COMMISSION.CODE",
+      "AUT.NEW.CONTENT" : "DEBIT PLUS CHARGES"
+    }, {
+      "AUTOM.FIELD.NO" : "COMMISSION.TYPE-1",
+      "AUT.NEW.CONTENT" : "FTSPEIR6"
+    }, {
+      "AUTOM.FIELD.NO" : "FLAG.SPEUA",
+      "AUT.NEW.CONTENT" : "N"
+    }, {
+      "AUTOM.FIELD.NO" : "FLAG.SPEI",
+      "AUT.NEW.CONTENT" : "N"
+    }, {
+      "AUTOM.FIELD.NO" : "TIPO.SPEI",
+      "AUT.NEW.CONTENT" : "1"
+    }, {
+      "AUTOM.FIELD.NO" : "CHQ.ISSUE.ID",
+      "AUT.NEW.CONTENT" : "@BMV.ID.CAJA"
+    }, {
+      "AUTOM.FIELD.NO" : "CREDIT.ACCT.NO",
+      "AUT.NEW.CONTENT" : "4013800001"
+    }, {
+      "AUTOM.FIELD.NO" : "CANAL.ENTIDAD",
+      "AUT.NEW.CONTENT" : "1"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Informacion de Cargo"
+      } ],
+      "TEXT.CHAR.MAX" : "20",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "DEBIT.ACCT.NO",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Cuenta de retiro"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-55-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "DEBIT.CURRENCY",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Moneda"
+      } ],
+      "TEXT.CHAR.MAX" : "6",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-12-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "DEBIT.AMOUNT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Monto del retiro"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-37-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.VALIDATE"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "DEBIT.VALUE.DATE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Fecha de aplicacion"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-33-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Informacion de Abono"
+      } ],
+      "TEXT.CHAR.MAX" : "20",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "CREDIT.THEIR.REF",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Institucion Beneficiaria"
+      } ],
+      "TEXT.CHAR.MAX" : "24",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "TIPO.CTA.BEN",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo Cta Beneficiario"
+      } ],
+      "TEXT.CHAR.MAX" : "21",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-26-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "CTA.EXT.TRANSF",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Cuenta Beneficiario"
+      } ],
+      "TEXT.CHAR.MAX" : "19",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-42-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "PAYMENT.DETAILS-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "A Favor de"
+      } ],
+      "TEXT.CHAR.MAX" : "10",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "RFC.BENEF.SPEI",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "RFC Beneficiario"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-37-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "EXTEND.INFO-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Motivo del Pago"
+      } ],
+      "TEXT.CHAR.MAX" : "15",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-83-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "CANAL.ENTIDAD",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "PROMPT.TEXT" : "Canal Entidad"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Canal Entidad:"
+      } ],
+      "TEXT.CHAR.MAX" : "14",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-52-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "FIRMA",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Firma"
+      } ],
+      "TEXT.CHAR.MAX" : "5",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-48-"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "FIELD.NO" : "GEOLOCALIZACION",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "PROMPT.TEXT" : "Geolocalización"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Geolocalización:"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-59-"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "CHQ.ISSUE.ID",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Caja"
+      } ],
+      "TEXT.CHAR.MAX" : "4",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-42-"
+      } ],
+      "TABLE.LINE" : "16"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "TRANSACTION.TYPE"
+    }, {
+      "NOINPUT.FIELD" : "CREDIT.ACCT.NO"
+    }, {
+      "NOINPUT.FIELD" : "DEBIT.VALUE.DATE"
+    }, {
+      "NOINPUT.FIELD" : "DEBIT.CURRENCY"
+    }, {
+      "NOINPUT.FIELD" : "COMMISSION.CODE"
+    }, {
+      "NOINPUT.FIELD" : "COMMISSION.AMT"
+    }, {
+      "NOINPUT.FIELD" : "COMMISSION.TYPE"
+    }, {
+      "NOINPUT.FIELD" : "AMT.IVA.SPEI"
+    }, {
+      "NOINPUT.FIELD" : "CHQ.ISSUE.ID"
+    } ],
+    "MULTI.POSSIBLE" : "Y",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "EXPRESS DIGITAL"
+    } ],
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "DEBIT.ACCT.NO"
+    }, {
+      "MANDATORY.FIELD" : "CREDIT.ACCT.NO"
+    }, {
+      "MANDATORY.FIELD" : "CTA.EXT.TRANSF"
+    }, {
+      "MANDATORY.FIELD" : "PAYMENT.DETAILS"
+    }, {
+      "MANDATORY.FIELD" : "CREDIT.THEIR.REF"
+    }, {
+      "MANDATORY.FIELD" : "DEBIT.AMOUNT"
+    }, {
+      "MANDATORY.FIELD" : "EXTEND.INFO"
+    }, {
+      "MANDATORY.FIELD" : "TIPO.CTA.BEN"
+    }, {
+      "MANDATORY.FIELD" : "CANAL.ENTIDAD"
+    }, {
+      "MANDATORY.FIELD" : "FIRMA"
+    }, {
+      "MANDATORY.FIELD" : "GEOLOCALIZACION"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.CLEAR.CTA.EXTERNA.SPEI",
+      "VALIDATION.FLD" : "DEBIT.ACCT.NO"
+    }, {
+      "VALIDATION.RTN" : "ABC.VAL.MONTO.SPEI.EXPRESS",
+      "VALIDATION.FLD" : "DEBIT.AMOUNT"
+    }, {
+      "VALIDATION.RTN" : "ABC.2BR.RTN.VALIDA.RFC",
+      "VALIDATION.FLD" : "RFC.BENEF.SPEI"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDATE.IVA.SPEI",
+      "VALIDATION.FLD" : "AMT.IVA.SPEI"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.LEN.CTA.BEN",
+      "VALIDATION.FLD" : "CTA.EXT.TRANSF"
+    }, {
+      "VALIDATION.RTN" : "ABC.FMT.INST.BENEF",
+      "VALIDATION.FLD" : "CREDIT.THEIR.REF"
+    }, {
+      "VALIDATION.RTN" : "ABC.VALIDA.EXT.ID",
+      "VALIDATION.FLD" : "EXT.TRANS.ID"
+    } ],
+    "ID.RTN" : [ {
+      "ID.RTN" : "ABC.HORA.CAPTURA"
+    } ]
+  }
+}

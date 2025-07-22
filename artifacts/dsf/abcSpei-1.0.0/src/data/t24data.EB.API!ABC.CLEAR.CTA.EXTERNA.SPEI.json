@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.CLEAR.CTA.EXTERNA.SPEI",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.CLEAR.CTA.EXTERNA.SPEI"
+    } ],
+    "PROTECTION.LEVEL" : "NONE"
+  }
+}

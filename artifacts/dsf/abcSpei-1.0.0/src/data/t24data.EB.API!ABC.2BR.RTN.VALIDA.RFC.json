@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.2BR.RTN.VALIDA.RFC",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.2BR.RTN.VALIDA.RFC"
+    } ],
+    "PROTECTION.LEVEL" : "NONE"
+  }
+}

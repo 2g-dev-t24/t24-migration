@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.HORA.CAPTURA",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.HORA.CAPTURA"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

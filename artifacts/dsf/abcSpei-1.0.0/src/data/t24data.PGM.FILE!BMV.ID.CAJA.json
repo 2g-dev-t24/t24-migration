@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "BMV.ID.CAJA",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PRODUCT" : "EB",
+    "TYPE" : "S",
+    "APPL.FOR.SUBR" : [ {
+      "APPL.FOR.SUBR" : "FUNDS.TRANSFER"
+    } ]
+  }
+}
