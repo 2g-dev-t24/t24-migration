@@ -15,15 +15,13 @@
     }, {
       "SHORT.NAME" : "CANAL.ENTIDAD"
     } ],
-    "VETTING.TABLE" : [ {
-      "VETTING.TABLE" : "ABC.CANAL"
-    } ],
     "DESCRIPTION" : [ {
       "DESCRIPTION" : "CANAL QUE REGISTRO LA CUENTA"
     }, {
       "DESCRIPTION" : "CANAL QUE REGISTRO LA CUENTA"
     } ],
-    "CHAR.TYPE" : "A",
+    "APPLICATION.VET" : "ABC.CANAL",
+    "APPL.ENRICHM.FIELD" : "1",
     "MAXIMUM.CHAR" : "35"
   }
 }
