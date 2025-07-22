@@ -9,7 +9,7 @@ public table AbcComisionistasAdmin {
         NombreComi(ACA.NOMBRE.ADMIN) = 6 
         Rfc(ACA.RFC) = 7       
         PerJuriAdmin(ACA.PER.JURI.ADMIN) = 8
-        AbcCausaBaja(ACA.ABC.CAUSA.BAJA) = 9
+        CausaBaja(ACA.ABC.CAUSA.BAJA) = 9
         Localidad(ACA.LOCALIDAD) = 10
         Municipio(ACA.MUNICIPIO) = 11
         CodPostal(ACA.COD.POSTAL) = 12                
