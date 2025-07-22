@@ -4,6 +4,24 @@ component AbcSpei
 metamodelVersion 1.6
 
  
+private method AbcGetProductosInteres (
+)
+{
+    jBC: ABC.GET.PRODUCTOS.INTERES
+}
+
+private method AbcObtenGrupo (
+)
+{
+    jBC: ABC.OBTEN.GRUPO
+}
+
+private method abcObtenTasaInt (
+)
+{
+    jBC: ABC.OBTEN.TASA.INT
+}
+
 
 private method bmvIdCaja (
 )
