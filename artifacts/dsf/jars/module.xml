@@ -2,6 +2,7 @@
   <resources>
     <!-- Insert resources here -->
     <resource-root path="./L3lib/ABC_BP.jar" />
+    <resource-root path="./L3lib/AbcAccount.jar" />
     <resource-root path="./L3lib/AbcAssign.jar" />
     <resource-root path="./L3lib/AbcCusValLoc.jar" />
     <resource-root path="./L3lib/AbcCustomerApi.jar" />
@@ -11,11 +12,12 @@
     <resource-root path="./L3lib/AbcSpei.jar" />
     <resource-root path="./L3lib/AbcTable.jar" />
     <resource-root path="./L3lib/AbcTaxes.jar" />
-    <resource-root path="./L3lib/AbcValCusHasDig.jar" />
-    <resource-root path="./L3lib/AbcValCusHasDig_component.jar" />
+    <resource-root path="./L3lib/AbcTeller.jar" />
+    <resource-root path="./L3lib/AbcUdis.jar" />
     <resource-root path="./L3lib/AbcValDatoFiscal.jar" />
     <resource-root path="./L3lib/AbcValidaLongCelular.jar" />
     <resource-root path="./L3lib/BaValListaCol.jar" />
+    <resource-root path="./L3lib/T24_NoPackage.jar" />
     <resource-root path="./L3lib/Tables.jar" />
   </resources>
   <dependencies>
