@@ -75,7 +75,7 @@ PROCESO:
         IF Y.GRUPO EQ Y.GRUPO.PLUS THEN
             EB.Reports.setOData(Y.GRUPO.PLUS)
         END ELSE
-            EB.Reports.setOData(Y.GRUPO.ESTANDAR)
+            EB.Reports.setOData(Y.GRUPO.ESTANDAR:' prueba')
         END
     END ELSE
         EB.Reports.setEnqError("Sin grupo")
