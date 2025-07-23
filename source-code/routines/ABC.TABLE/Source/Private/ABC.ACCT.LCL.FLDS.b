@@ -1,18 +1,6 @@
-* @ValidationCode : MjotODQ1ODA1ODQwOkNwMTI1MjoxNzUxNTEwOTkxNDkzOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 02 Jul 2025 23:49:51
-* @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
-* @ValidationInfo : Nb tests success  : N/A
-* @ValidationInfo : Nb tests failure  : N/A
-* @ValidationInfo : Rating            : N/A
-* @ValidationInfo : Coverage          : N/A
-* @ValidationInfo : Strict flag       : N/A
-* @ValidationInfo : Bypass GateKeeper : false
-* @ValidationInfo : Compiler Version  : R24_SP1.0
-* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
 $PACKAGE AbcTable
 
-SUBROUTINE ABC.BENEFICIARIOS.ACCOUNT
+SUBROUTINE ABC.ACCT.LCL.FLDS
 *-----------------------------------------------------------------------------
 *
 *-----------------------------------------------------------------------------
@@ -32,8 +20,8 @@ SUBROUTINE ABC.BENEFICIARIOS.ACCOUNT
 
 *-----------------------------------------------------------------------------
 *-----------------------------------------------------------------------------
-    EB.Template.setTableName('ABC.BENEFICIARIOS.ACCOUNT')       ;* Full application name including product prefix
-    EB.Template.setTableTitle('Benficiarios de la cuenta')   ;* Screen title
+    EB.Template.setTableName('ABC.ACCT.LCL.FLDS')       ;* Full application name including product prefix
+    EB.Template.setTableTitle('Campos locales de account')   ;* Screen title
     EB.Template.setTableStereotype('H')    ;* H, U, L, W or T
     EB.Template.setTableProduct('EB')      ;* Must be on EB.PRODUCT
     EB.Template.setTableSubproduct('')     ;* Must be on EB.SUB.PRODUCT
@@ -41,7 +29,7 @@ SUBROUTINE ABC.BENEFICIARIOS.ACCOUNT
     EB.Template.setTableSystemclearfile('Y')         ;* As per FILE.CONTROL
     EB.Template.setTableRelatedfiles('')   ;* As per FILE.CONTROL
     EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL
-    EB.Template.setTableEquateprefix('ABC.BEN.ACCT')          ;* Use to create I_F.EB.LOG.PARAMETER
+    EB.Template.setTableEquateprefix('ABC.LCL.FLDS')          ;* Use to create I_F.EB.LOG.PARAMETER
 *-----------------------------------------------------------------------------
     EB.Template.setTableIdprefix('')       ;* Used by EB.FORMAT.ID if set
     EB.Template.setTableBlockedfunctions('')         ;* Space delimeted list of blocked functions

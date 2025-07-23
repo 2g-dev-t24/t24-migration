@@ -1,5 +1,5 @@
-public table AbcBeneficiariosAccount {
-    t24: ABC.BENEFICIARIOS.ACCOUNT
+public table AbcAcctLclFlds {
+    t24: ABC.ACCT.LCL.FLDS
     fields:{
         ApePaterno(ABC.BEN.ACCT.APE.PATERNO) = 1
         ApeMaterno(ABC.BEN.ACCT.APE.MATERNO)= 2

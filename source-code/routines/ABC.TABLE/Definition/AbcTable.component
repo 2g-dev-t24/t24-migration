@@ -619,21 +619,6 @@ private method AbcMoDeCe ()
     jBC: ABC.MO.DE.CE
 }
 
-private method AbcBeneficiariosAccount (
-)
-{
-    jBC: ABC.BENEFICIARIOS.ACCOUNT
-}
-
-
-
-private method AbcBeneficiariosAccountFields (
-)
-{
-    jBC: ABC.BENEFICIARIOS.ACCOUNT.FIELDS
-}
-
-
 
 private method AbcCuentaL4Api (
 )
@@ -788,7 +773,7 @@ private method AbcBancIntImpFields (
 private method AbcOperacionesContratadas (
 )
 {
-   jBC: ABC.OPERACIONES.CONTRATADAS
+    jBC: ABC.OPERACIONES.CONTRATADAS
 }
 
 
@@ -796,6 +781,22 @@ private method AbcOperacionesContratadas (
 private method AbcOperacionesContratadasFields (
 )
 {
-   jBC: ABC.OPERACIONES.CONTRATADAS.FIELDS
+    jBC: ABC.OPERACIONES.CONTRATADAS.FIELDS
+}
+
+
+
+private method AbcAcctLclFlds (
+)
+{
+    jBC: ABC.ACCT.LCL.FLDS
+}
+
+
+
+private method AbcAcctLclFldsFields (
+)
+{
+    jBC: ABC.ACCT.LCL.FLDS.FIELDS
 }
 
