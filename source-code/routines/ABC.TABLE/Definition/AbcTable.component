@@ -816,3 +816,19 @@ private method AbcTarjetasMcFields (
    jBC: ABC.TARJETAS.MC.FIELDS
 }
 
+
+
+private method AbcProductosGalileo (
+)
+{
+   jBC: ABC.PRODUCTOS.GALILEO
+}
+
+
+
+private method AbcProductosGalileoFields (
+)
+{
+   jBC: ABC.PRODUCTOS.GALILEO.FIELDS
+}
+
