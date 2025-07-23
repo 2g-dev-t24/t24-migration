@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: AbcSpei038
+Implementation-Version: 1.0.1
+Implementation-Vendor: Temenos
+

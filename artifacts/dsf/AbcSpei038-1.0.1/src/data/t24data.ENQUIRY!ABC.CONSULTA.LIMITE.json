@@ -1,0 +1,201 @@
+{
+  "header" : {
+    "id" : "ABC.CONSULTA.LIMITE",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "IdCuenta"
+      }, {
+        "SEL.LABEL" : "IdCuenta"
+      } ],
+      "SELECTION.FLDS" : "@ID"
+    }, {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "CLABE"
+      }, {
+        "SEL.LABEL" : "CLABE"
+      } ],
+      "SELECTION.FLDS" : "ALT.ACCT.ID"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "19L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "IdCuenta"
+      }, {
+        "FIELD.LBL" : "IdCuenta"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "ALT.ACCT.ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "EXTRCT 1,21"
+      } ],
+      "FIELD.NAME" : "CLABE",
+      "LENGTH.MASK" : "36L",
+      "SINGLE.MULTI" : "M",
+      "COLUMN" : "15",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Clabe"
+      }, {
+        "FIELD.LBL" : "Clabe"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "!TODAY"
+      } ],
+      "FIELD.NAME" : "FECHA",
+      "FIELD.LBL" : [ { }, {
+        "FIELD.LBL" : "CATEGORY"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "FIELD FECHA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "EXTRCT 1,6"
+      } ],
+      "FIELD.NAME" : "PERIODO",
+      "COLUMN" : "30",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Periodo"
+      }, {
+        "FIELD.LBL" : "Periodo"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "CATEGORY"
+      } ],
+      "FIELD.NAME" : "CATEGORY",
+      "SINGLE.MULTI" : "S",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "CATEGORY"
+      }, {
+        "FIELD.LBL" : "CATEGORY"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F CATEGORY"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "@ ABC.OBTEN.NIVEL.CATEGORY"
+      } ],
+      "FIELD.NAME" : "NIVEL",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "37",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Nivel"
+      }, {
+        "FIELD.LBL" : "Nivel"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F NIVEL"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "L ABC.NIVEL.CUENTA,VALOR.LIMITE"
+      } ],
+      "FIELD.NAME" : "NIVEL2",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F NIVEL2"
+      } ],
+      "FIELD.NAME" : "MONTO",
+      "COLUMN" : "45",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Limite"
+      }, {
+        "FIELD.LBL" : "Limite"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"-\""
+      } ],
+      "FIELD.NAME" : "GUION"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "FIELD @ID"
+      } ],
+      "FIELD.NAME" : "ID.CTA"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "CALC ID.CTA : GUION"
+      } ],
+      "FIELD.NAME" : "ID1"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "CALC ID1 : PERIODO"
+      } ],
+      "FIELD.NAME" : "ID2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "IdMov"
+      }, {
+        "FIELD.LBL" : "IdMov"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F ID2"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "L ABC.MOVS.CTA.NIVEL2,MONTO.TOTAL"
+      } ],
+      "FIELD.NAME" : "DEPOSITOS",
+      "COLUMN" : "50",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "MontoDepositos"
+      }, {
+        "FIELD.LBL" : "MontoDepositos"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "CALC MONTO - DEPOSITOS&lf;"
+      } ],
+      "FIELD.NAME" : "DISPONIBLE",
+      "COLUMN" : "70",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Disponible"
+      }, {
+        "FIELD.LBL" : "Disponible"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "CUSTOMER"
+      } ],
+      "FIELD.NAME" : "CUSTOMER",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "FIELD CUSTOMER"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "L CUSTOMER,EMAIL.1"
+      } ],
+      "FIELD.NAME" : "EMAIL1",
+      "COLUMN" : "90",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "CorreoElectronico"
+      }, {
+        "FIELD.LBL" : "CorreoElectronico"
+      } ]
+    } ],
+    "FILE.NAME" : "ACCOUNT"
+  }
+}

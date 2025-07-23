@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "ABC.NIVEL.CUENTAS",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "NIVEL.2",
+      "COMENTARIO" : "Cuentas nivel dos",
+      "DATO.PARAMETRO" : "1006|6002|6006"
+    }, {
+      "NOMB.PARAMETRO" : "NIVEL.4",
+      "COMENTARIO" : "cuentas nivel cuatro",
+      "DATO.PARAMETRO" : "1014|6007"
+    } ],
+    "MODULO" : "Asignacion de nivel por categoria de cuentas"
+  }
+}

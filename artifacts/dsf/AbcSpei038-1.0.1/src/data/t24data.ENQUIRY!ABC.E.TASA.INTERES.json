@@ -1,0 +1,77 @@
+{
+  "header" : {
+    "id" : "ABC.E.TASA.INTERES",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "Clave Producto"
+      }, {
+        "SEL.LABEL" : "Clave Producto"
+      } ],
+      "SELECTION.FLDS" : "VALUE",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "ID",
+      "LENGTH.MASK" : "23R",
+      "SINGLE.MULTI" : "S",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ID"
+      }, {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "@ ABC.OBTEN.TASA.INT"
+      } ],
+      "FIELD.NAME" : "TASA.INT",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Tasa Interes"
+      }, {
+        "FIELD.LBL" : "Tasa Interes"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "@ ABC.OBTEN.GRUPO"
+      } ],
+      "FIELD.NAME" : "GRUPO",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "Grupo"
+      }, {
+        "FIELD.LBL" : "Grupo"
+      } ]
+    } ],
+    "BUILD.ROUTINE" : [ {
+      "BUILD.ROUTINE" : "ABC.GET.PRODUCTOS.INTERES"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Tasa Interes"
+    }, {
+      "SHORT.DESC" : "Tasa Interes"
+    } ],
+    "FILE.NAME" : "ACCT.GEN.CONDITION"
+  }
+}

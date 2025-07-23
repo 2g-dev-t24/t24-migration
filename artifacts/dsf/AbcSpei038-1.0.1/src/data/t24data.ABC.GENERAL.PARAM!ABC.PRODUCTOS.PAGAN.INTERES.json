@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "ABC.PRODUCTOS.PAGAN.INTERES",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "CATEGORY",
+      "COMENTARIO" : "0",
+      "DATO.PARAMETRO" : "6006"
+    }, {
+      "NOMB.PARAMETRO" : "CATEGORY",
+      "COMENTARIO" : "0",
+      "DATO.PARAMETRO" : "6007"
+    }, {
+      "NOMB.PARAMETRO" : "CATEGORY",
+      "COMENTARIO" : "0",
+      "DATO.PARAMETRO" : "6008"
+    } ],
+    "MODULO" : "ABC.PRODUCTOS.PAGAN.INTERES"
+  }
+}

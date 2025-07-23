@@ -1,0 +1,16 @@
+{
+  "header" : {
+    "id" : "ABC.GET.PRODUCTOS.INTERES",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "PRODUCT" : "EB",
+    "TYPE" : "S"
+  }
+}

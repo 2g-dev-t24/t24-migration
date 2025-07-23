@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.OBTEN.GRUPO",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ { }, {
+      "DESCRIPTION" : "ABC.OBTEN.GRUPO"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}
