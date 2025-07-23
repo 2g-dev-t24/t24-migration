@@ -1,0 +1,40 @@
+private table AbcTarjetasMc {
+    t24: ABC.TARJETAS.MC
+    fields:{
+        Prn(MC.TAR.PRN)                     = 1
+        Estatus(MC.TAR.ESTATUS)             = 2
+        Producto(MC.TAR.PRODUCTO)           = 3
+        Programa(MC.TAR.PROGRAMA)           = 4
+        IdSolicitud(MC.TAR.ID.SOLICITUD)    = 5
+        Reserved17(MC.TAR.RESERVED.17)      = 6
+        Reserved16(MC.TAR.RESERVED.16)      = 7
+        Reserved15(MC.TAR.RESERVED.15)      = 8
+        Reserved14(MC.TAR.RESERVED.14)      = 9
+        Reserved13(MC.TAR.RESERVED.13)      = 10
+        Reserved12(MC.TAR.RESERVED.12)      = 11
+        Reserved11(MC.TAR.RESERVED.11)      = 12
+        Reserved10(MC.TAR.RESERVED.10)      = 13
+        Reserved9(MC.TAR.RESERVED.9)        = 14
+        Reserved8(MC.TAR.RESERVED.8)        = 15
+        Reserved7(MC.TAR.RESERVED.7)        = 16
+        Reserved6(MC.TAR.RESERVED.6)        = 17
+        Reserved5(MC.TAR.RESERVED.5)        = 18
+        Reserved4(MC.TAR.RESERVED.4)        = 19
+        Reserved3(MC.TAR.RESERVED.3)        = 20
+        Reserved2(MC.TAR.RESERVED.2)        = 21
+        Reserved1(MC.TAR.RESERVED.1)        = 22
+        
+        
+        LocalRef(MC.TAR.LOCAL.REF)                = 23
+        Override(MC.TAR.OVERRIDE)                 = 24
+        RecordStatus(MC.TAR.RECORD.STATUS)        = 25
+        CurrNo(MC.TAR.CURR.NO)                    = 26
+        Inputter(MC.TAR.INPUTTER)                 = 27
+        DateTime(MC.TAR.DATE.TIME)                = 28
+        Authoriser(MC.TAR.AUTHORISER)             = 29
+        CoCode(MC.TAR.CO.CODE)                    = 30
+        DeptCode(MC.TAR.DEPT.CODE)                = 31
+        AuditorCode(MC.TAR.AUDITOR.CODE)          = 32
+        AuditDateTime(MC.TAR.AUDIT.DATE.TIME)     = 33
+    }
+}

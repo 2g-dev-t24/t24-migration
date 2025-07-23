@@ -800,3 +800,19 @@ private method AbcAcctLclFldsFields (
     jBC: ABC.ACCT.LCL.FLDS.FIELDS
 }
 
+
+
+private method AbcTarjetasMc (
+)
+{
+   jBC: ABC.TARJETAS.MC
+}
+
+
+
+private method AbcTarjetasMcFields (
+)
+{
+   jBC: ABC.TARJETAS.MC.FIELDS
+}
+
