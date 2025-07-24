@@ -1,0 +1,21 @@
+private table AbcCatagRangos {
+    t24: ABC.CATAG.RANGOS
+    fields:{
+        
+        DescRango(RAN.DESC.RANGO)               = 1
+        
+        Reserved3(RAN.RESERVED.3)             = 2
+        Reserved2(RAN.RESERVED.2)             = 3
+        Reserved1(RAN.RESERVED.1)             = 4
+        
+        RecordStatus(RAN.RECORD.STATUS)       = 5
+        CurrNo(RAN.CURR.NO)                   = 6
+        Inputter(RAN.INPUTTER)                = 7
+        DateTime(RAN.DATE.TIME)               = 8
+        Authoriser(RAN.AUTHORISER)            = 9
+        CoCode(RAN.CO.CODE)                   = 10
+        DeptCode(RAN.DEPT.CODE)               = 11
+        AuditorCode(RAN.AUDITOR.CODE)         = 12
+        AuditDateTime(RAN.AUDIT.DATE.TIME)    = 13
+    }
+}

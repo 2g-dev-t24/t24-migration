@@ -864,3 +864,19 @@ private method AbcOcupacionFields (
    jBC: ABC.OCUPACION.FIELDS
 }
 
+
+
+private method AbcCatagRangos (
+)
+{
+   jBC: ABC.CATAG.RANGOS
+}
+
+
+
+private method AbcCatagRangosFields (
+)
+{
+   jBC: ABC.CATAG.RANGOS.FIELDS
+}
+
