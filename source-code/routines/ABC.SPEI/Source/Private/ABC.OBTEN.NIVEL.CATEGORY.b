@@ -57,13 +57,19 @@ PROCESO:
         Y.PARAM = Y.LIST.PARAMS<Y.AA>
         Y.CATEGORIA = Y.LIST.VALUES<Y.AA>
         CHANGE '|' TO @FM IN Y.CATEGORIA
-        Y.NO.CATEGORY = DCOUNT (Y.CATEGORIA,@FM)
-        FOR Y.BB = 1 TO Y.NO.CATEGORY
-            IF Y.ID.CATEGORY EQ Y.CATEGORY<Y.ABB> THEN
-               Y.NIVEL = Y.PARAM
-               Y.GO.A.HEAD = 1
-            END
-        NEXT Y.BB
+        LOCATE Y.ID.CATEGORY IN Y.CATEGORIA SETTING Y.POS THEN
+            Y.NIVEL = Y.PARAM
+            Y.GO.A.HEAD = 1
+
+        END
+
+*        Y.NO.CATEGORY = DCOUNT (Y.CATEGORIA,@FM)
+*        FOR Y.BB = 1 TO Y.NO.CATEGORY
+*            IF Y.ID.CATEGORY EQ Y.CATEGORIA<Y.BB> THEN
+*               Y.NIVEL = Y.PARAM
+*               Y.GO.A.HEAD = 1
+*            END
+*        NEXT Y.BB
         
     NEXT Y.AA
 
