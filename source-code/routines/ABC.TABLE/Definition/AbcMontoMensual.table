@@ -1,9 +1,9 @@
 private table AbcMontoMensual {
-    t24: T24.NAME
+    t24: ABC.MONTO.MENSUAL
     fields:{
         
-        FecMov(GIC.TITLE.DESCRIPTION)               = 1
-        FecMov(GIC.TITLE.CURRENCY)                  = 2
+        Description(GIC.TITLE.DESCRIPTION)               = 1
+        Currency(GIC.TITLE.CURRENCY)                  = 2
         
         Reserved3(GIC.TITLE.RESERVED.3)             = 3
         Reserved2(GIC.TITLE.RESERVED.2)             = 4

@@ -1,0 +1,21 @@
+private table AbcOcupacion {
+    t24: ABC.OCUPACION
+    fields:{
+        Description(ABC.OCU.DESCRIPTION)          = 1
+
+        
+        Reserved3(ABC.OCU.RESERVED.3)             = 2
+        Reserved2(ABC.OCU.RESERVED.2)             = 3
+        Reserved1(ABC.OCU.RESERVED.1)             = 4
+        
+        RecordStatus(ABC.OCU.RECORD.STATUS)       = 5
+        CurrNo(ABC.OCU.CURR.NO)                   = 6
+        Inputter(ABC.OCU.INPUTTER)                = 7
+        DateTime(ABC.OCU.DATE.TIME)               = 8
+        Authoriser(ABC.OCU.AUTHORISER)            = 9
+        CoCode(ABC.OCU.CO.CODE)                   = 10
+        DeptCode(ABC.OCU.DEPT.CODE)               = 11
+        AuditorCode(ABC.OCU.AUDITOR.CODE)         = 12
+        AuditDateTime(ABC.OCU.AUDIT.DATE.TIME)    = 13
+    }
+}

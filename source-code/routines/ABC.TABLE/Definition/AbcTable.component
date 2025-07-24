@@ -848,3 +848,19 @@ private method AbcMontoMensualFields (
    jBC: ABC.MONTO.MENSUAL.FIELDS
 }
 
+
+
+private method AbcOcupacion (
+)
+{
+   jBC: ABC.OCUPACION
+}
+
+
+
+private method AbcOcupacionFields (
+)
+{
+   jBC: ABC.OCUPACION.FIELDS
+}
+
