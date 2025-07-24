@@ -1,0 +1,40 @@
+private table AbcProductosGalileo {
+    t24: ABC.PRODUCTOS.GALILEO
+    fields:{
+        NombreProd(ABC.PROD.NOMBRE.PROD)      = 1
+        NomCorto(ABC.PROD.NOMB.CORTO)         = 2
+        Descripcion(ABC.PROD.DESCRIPCION)     = 3
+        IdPrograma(ABC.PROD.ID.PROGRAMA)      = 4
+        NombPrograma(ABC.PROD.NOM.PROGRAMA)   = 5
+        Reserved17(ABC.PROD.RESERVED.17)      = 6
+        Reserved16(ABC.PROD.RESERVED.16)      = 7
+        Reserved15(ABC.PROD.RESERVED.15)      = 8
+        Reserved14(ABC.PROD.RESERVED.14)      = 9
+        Reserved13(ABC.PROD.RESERVED.13)      = 10
+        Reserved12(ABC.PROD.RESERVED.12)      = 11
+        Reserved11(ABC.PROD.RESERVED.11)      = 12
+        Reserved10(ABC.PROD.RESERVED.10)      = 13
+        Reserved9(ABC.PROD.RESERVED.9)        = 14
+        Reserved8(ABC.PROD.RESERVED.8)        = 15
+        Reserved7(ABC.PROD.RESERVED.7)        = 16
+        Reserved6(ABC.PROD.RESERVED.6)        = 17
+        Reserved5(ABC.PROD.RESERVED.5)        = 18
+        Reserved4(ABC.PROD.RESERVED.4)        = 19
+        Reserved3(ABC.PROD.RESERVED.3)        = 20
+        Reserved2(ABC.PROD.RESERVED.2)        = 21
+        Reserved1(ABC.PROD.RESERVED.1)        = 22
+        
+        
+        LocalRef(ABC.PROD.LOCAL.REF)                = 23
+        Override(ABC.PROD.OVERRIDE)                 = 24
+        RecordStatus(ABC.PROD.RECORD.STATUS)        = 25
+        CurrNo(ABC.PROD.CURR.NO)                    = 26
+        Inputter(ABC.PROD.INPUTTER)                 = 27
+        DateTime(ABC.PROD.DATE.TIME)                = 28
+        Authoriser(ABC.PROD.AUTHORISER)             = 29
+        CoCode(ABC.PROD.CO.CODE)                    = 30
+        DeptCode(ABC.PROD.DEPT.CODE)                = 31
+        AuditorCode(ABC.PROD.AUDITOR.CODE)          = 32
+        AuditDateTime(ABC.PROD.AUDIT.DATE.TIME)     = 33
+    }
+}
