@@ -1,5 +1,5 @@
-* @ValidationCode : MjozMDQ1Njg3NjpDcDEyNTI6MTc1MzMzNjE3NDY0MjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 24 Jul 2025 02:49:34
+* @ValidationCode : MjotMjExNTk4MjM5NzpDcDEyNTI6MTc1MzM2ODM5NjM3MjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 24 Jul 2025 11:46:36
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -63,32 +63,32 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddfielddefinition('XX-BEN.RFC'            ,'5'     , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.CURP'           ,'18'    , 'A', '')
     EB.Template.TableAddoptionsfield   ('XX-BEN.IDENTIFICA'     ,'Credencial para Votar_Pasaporte Vigente_Cédula Profesional_Forma Migratoria FM2_Forma Migratoria FM3'    , 'A', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.NRO.IDENTI'     ,'25'    , 'D', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.NRO.IDENTI'     ,'25'    , 'A', '')
     EB.Template.TableAddoptionsfield   ('XX-PARENTESCO.BEN'     ,'PADRE_MADRE_HIJO(A)_ABUELO(A)_NIETO(A)_HERMANO(A)_TIO(A)_PRIMO(A)_SOBRINO(A)_ESPOSO(A)_SUEGRO(A)_CU?ADO(A)_AMIGO(A)_COMPADRE/COMADRE_MISMO CLIENTE_EMPRESA RELACIONADA_SOC EMP RELACIONADA', '', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.PAIS.NAC'       ,'9'     , 'D', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.PAIS.NAC'       ,'9'     , 'A', '')
     EB.Template.FieldSetcheckfile      ("COUNTRY")
     EB.Template.TableAddfielddefinition('XX-BEN.FEC.NAC'        ,'8'     , 'D', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.NACIONAL'       ,'8'     , 'D', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.NACIONAL'       ,'8'     , 'A', '')
     EB.Template.FieldSetcheckfile      ("COUNTRY")
-    EB.Template.TableAddfielddefinition('XX-BEN.CALLE'          ,'65'    , 'D', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.NUM.EXT'        ,'10'    , 'D', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.NUM.INT'        ,'10'    , 'D', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.ESTADO'         ,'2'     , 'D', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.CALLE'          ,'65'    , 'A', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.NUM.EXT'        ,'10'    , 'A', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.NUM.INT'        ,'10'    , 'A', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.ESTADO'         ,'2'     , 'A', '')
     EB.Template.FieldSetcheckfile      ("ABC.ESTADO")
-    EB.Template.TableAddfielddefinition('XX-BEN.MUNICIPIO'      ,'5'     , 'D', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.MUNICIPIO'      ,'5'     , 'A', '')
     EB.Template.FieldSetcheckfile      ("ABC.MUNICIPIO")
-    EB.Template.TableAddfielddefinition('XX-BEN.COLONIA'        ,'15'    , 'D', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.COLONIA'        ,'15'    , 'A', '')
     EB.Template.FieldSetcheckfile      ("ABC.COLONIA")
-    EB.Template.TableAddfielddefinition('XX-BEN.CIUDAD'         ,'8'     , 'D', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.CIUDAD'         ,'8'     , 'A', '')
     EB.Template.FieldSetcheckfile      ("ABC.CIUDAD")
-    EB.Template.TableAddfielddefinition('XX-BEN.COD.POS'        ,'8'     , 'D', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.PAIS'           ,'9'     , 'D', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.COD.POS'        ,'8'     , 'A', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.PAIS'           ,'9'     , 'A', '')
     EB.Template.FieldSetcheckfile      ("COUNTRY")
-    EB.Template.TableAddfielddefinition('XX-BEN.TEL.CEL'        ,'13'    , 'D', '')
-    EB.Template.TableAddfielddefinition('BEN.EMAIL'             ,'65'    , 'D', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.NOM.EMP'        ,'65'    , 'D', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.PROF.PUES'      ,'65'    , 'D', '')
-    EB.Template.TableAddfielddefinition('XX>BEN.OCUP.ACT'       ,'8'     , 'D', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.TEL.CEL'        ,'13'    , 'A', '')
+    EB.Template.TableAddfielddefinition('BEN.EMAIL'             ,'65'    , 'A', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.NOM.EMP'        ,'65'    , 'A', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.PROF.PUES'      ,'65'    , 'A', '')
+    EB.Template.TableAddfielddefinition('XX>BEN.OCUP.ACT'       ,'8'     , 'A', '')
     EB.Template.FieldSetcheckfile      ("ABC.OCUPACION")
     
 *****************************************************************************
