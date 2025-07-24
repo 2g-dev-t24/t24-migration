@@ -79,10 +79,11 @@ IMPRIME.TODO:
         EB.DataAccess.FRead(FN.CUSTOMER, Y.REG.ACT, R.CUSTOMER, F.CUSTOMER, CUST.ERR)
         IF NOT(R.CUSTOMER) THEN
            EB.DataAccess.FRead(FN.CUSTOMER$NAU, Y.REG.ACT, R.CUSTOMER, F.CUSTOMER$NAU, CUST.ERR)
-*           Y.SECTOR = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
-*           IF Y.SECTOR NE 1001 THEN
-*              RETURN
-*           END
+           Y.SECTOR = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
+           Y.SECTOR = Y.SECTOR[1,4]
+           IF Y.SECTOR NE "1001" THEN
+              RETURN
+           END
         END
     
         IF NOT(R.CUSTOMER) THEN
