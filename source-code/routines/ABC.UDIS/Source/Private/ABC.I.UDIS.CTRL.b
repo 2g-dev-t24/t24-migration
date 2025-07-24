@@ -175,16 +175,19 @@ NIVEL.UDIS:
 
     Y.LISTA.DE.CODIGOS = Y.REGISTRO.LIMITE<AbcTable.AbcNivelCuenta.TransaccionCr>
     
-    
-   
     IF (Y.LISTA.DE.CODIGOS NE '') THEN
-    
         FINDSTR Y.TRANSACTION.CODE IN Y.LISTA.DE.CODIGOS SETTING Y.POS ELSE
             ETEXT = 'TRANSACTION.CODE no valido ':Y.TRANSACTION.CODE
             EB.SystemTables.setEtext(ETEXT)
             EB.ErrorProcessing.StoreEndError()
             RETURN
         END
+    END
+    ELSE
+        ETEXT = 'Categoria ' : Y.ACCOUNT.CATEGORY : ' no se encuentra en ABC.NIVEL.CUENTA'
+        EB.SystemTables.setEtext(ETEXT)
+        EB.ErrorProcessing.StoreEndError()
+        RETURN
     END
     
 RETURN
