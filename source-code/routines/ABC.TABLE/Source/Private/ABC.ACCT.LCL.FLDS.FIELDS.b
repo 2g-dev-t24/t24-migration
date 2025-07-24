@@ -62,7 +62,7 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddfielddefinition('XX-BEN.PORCENTAJE'     ,'5'     , 'AMTLCCY', '')
     EB.Template.TableAddfielddefinition('XX-BEN.RFC'            ,'5'     , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.CURP'           ,'18'    , 'A', '')
-    EB.Template.TableAddoptionsfield   ('XX-BEN.IDENTIFICA'     ,'Credencial para Votar_Pasaporte Vigente_C�dula Profesional_Forma Migratoria FM2_Forma Migratoria FM3'    , 'A', '')
+    EB.Template.TableAddoptionsfield   ('XX-BEN.IDENTIFICA'     ,'Credencial para Votar_Pasaporte Vigente_Cedula Profesional_Forma Migratoria FM2_Forma Migratoria FM3'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.NRO.IDENTI'     ,'25'    , 'A', '')
     EB.Template.TableAddoptionsfield   ('XX-PARENTESCO.BEN'     ,'PADRE_MADRE_HIJO(A)_ABUELO(A)_NIETO(A)_HERMANO(A)_TIO(A)_PRIMO(A)_SOBRINO(A)_ESPOSO(A)_SUEGRO(A)_CU?ADO(A)_AMIGO(A)_COMPADRE/COMADRE_MISMO CLIENTE_EMPRESA RELACIONADA_SOC EMP RELACIONADA', '', '')
     EB.Template.TableAddfielddefinition('XX-BEN.PAIS.NAC'       ,'9'     , 'A', '')
