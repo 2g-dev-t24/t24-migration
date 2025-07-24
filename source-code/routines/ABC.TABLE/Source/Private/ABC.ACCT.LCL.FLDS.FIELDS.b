@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMjIwNTQzNjgwOkNwMTI1MjoxNzUzMzg2MDQ4MDY5Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 24 Jul 2025 16:40:48
+* @ValidationCode : MjoyODI1Nzk3NDk6Q3AxMjUyOjE3NTMzNzA1MzYwNTY6THVpcyBDYXByYTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 24 Jul 2025 12:22:16
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -62,7 +62,7 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddfielddefinition('XX-BEN.PORCENTAJE'     ,'5'     , 'AMTLCCY', '')
     EB.Template.TableAddfielddefinition('XX-BEN.RFC'            ,'5'     , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.CURP'           ,'18'    , 'A', '')
-    EB.Template.TableAddoptionsfield   ('XX-BEN.IDENTIFICA'     ,'Credencial para Votar_Pasaporte Vigente_Cedula Profesional_Forma Migratoria FM2_Forma Migratoria FM3'    , 'A', '')
+    EB.Template.TableAddoptionsfield   ('XX-BEN.IDENTIFICA'     ,'Credencial para Votar_Pasaporte Vigente_C�dula Profesional_Forma Migratoria FM2_Forma Migratoria FM3'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.NRO.IDENTI'     ,'25'    , 'A', '')
     EB.Template.TableAddoptionsfield   ('XX-PARENTESCO.BEN'     ,'PADRE_MADRE_HIJO(A)_ABUELO(A)_NIETO(A)_HERMANO(A)_TIO(A)_PRIMO(A)_SOBRINO(A)_ESPOSO(A)_SUEGRO(A)_CU?ADO(A)_AMIGO(A)_COMPADRE/COMADRE_MISMO CLIENTE_EMPRESA RELACIONADA_SOC EMP RELACIONADA', '', '')
     EB.Template.TableAddfielddefinition('XX-BEN.PAIS.NAC'       ,'9'     , 'A', '')
@@ -85,7 +85,7 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddfielddefinition('XX-BEN.PAIS'           ,'9'     , 'A', '')
     EB.Template.FieldSetcheckfile      ("COUNTRY")
     EB.Template.TableAddfielddefinition('XX-BEN.TEL.CEL'        ,'13'    , 'A', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.EMAIL'          ,'65'    , 'A', '')
+    EB.Template.TableAddfielddefinition('BEN.EMAIL'             ,'65'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.NOM.EMP'        ,'65'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.PROF.PUES'      ,'65'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX>BEN.OCUP.ACT'       ,'8'     , 'A', '')
@@ -292,8 +292,7 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddreservedfield('RESERVED.2')
     EB.Template.TableAddreservedfield('RESERVED.1')
     
-    
-
+    EB.Template.TableSetauditposition()
 
 END
 
