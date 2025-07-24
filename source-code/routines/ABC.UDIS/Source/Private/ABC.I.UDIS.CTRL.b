@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo0MTg3OTQ5NTU6Q3AxMjUyOjE3NTMwNjY0MzkwNzY6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 20 Jul 2025 23:53:59
+* @ValidationCode : MjotMTYzNDU0NDgzMDpDcDEyNTI6MTc1MzMxNTMyNDg5NzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 23 Jul 2025 21:02:04
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -133,36 +133,16 @@ OBTENER.TRANSACTION.CODE:
             EB.DataAccess.FRead(FN.FUNDS.TRANSFER, Y.TXN.CONTRACT.ID, R.FT, F.FUNDS.TRANSFER, Error)
             
             IF (Error) THEN
-                
-                EB.DataAccess.FReadu(FN.FUNDS.TRANSFER, Y.TXN.CONTRACT.ID, R.FT, F.FUNDS.TRANSFER, Error, Retry)
-                
                 IF (Error) THEN
-                    
-                    EB.DataAccess.FReadUnique(FN.FUNDS.TRANSFER, Y.TXN.CONTRACT.ID, R.FT, F.FUNDS.TRANSFER, Error, Retry)
-                    
-                    IF (Error) THEN
-                        
-                        R.FT = FT.Contract.FundsTransfer.CacheRead(Y.TXN.CONTRACT.ID, Error)
-                        
-                        IF (Error) THEN
-                            
-                            R.FT = FT.Contract.FundsTransfer.Read(Y.TXN.CONTRACT.ID, Error)
-                            IF (Error) THEN
-                                
-                                R.FT = FT.Contract.FundsTransfer.ReadNau(Y.TXN.CONTRACT.ID, Error)
-                                IF (Error) THEN
                                    
-                                    ETEXT = Error:' UDI ':Y.TXN.CONTRACT.ID
-                                    EB.SystemTables.setEtext(ETEXT)
-                                    EB.ErrorProcessing.StoreEndError()
-                                    RETURN
-                                END
-                            END
-                        END
-                    END
+                    ETEXT = Error:' UDI ':Y.TXN.CONTRACT.ID
+                    EB.SystemTables.setEtext(ETEXT)
+                    EB.ErrorProcessing.StoreEndError()
+                    RETURN
                 END
             END
         END
+ 
 
 
         Y.TRANSACTION.CODE  = R.FT<FT.Contract.FundsTransfer.TransactionType>
