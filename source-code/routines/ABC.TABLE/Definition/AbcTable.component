@@ -880,3 +880,19 @@ private method AbcCatagRangosFields (
    jBC: ABC.CATAG.RANGOS.FIELDS
 }
 
+
+
+private method AbcPromEnlace (
+)
+{
+   jBC: ABC.PROM.ENLACE
+}
+
+
+
+private method AbcPromEnlaceFields (
+)
+{
+   jBC: ABC.PROM.ENLACE.FIELDS
+}
+

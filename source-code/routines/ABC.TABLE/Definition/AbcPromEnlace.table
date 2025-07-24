@@ -1,0 +1,23 @@
+private table AbcPromEnlace {
+    t24: ABC.PROM.ENLACE
+    fields:{
+        Promotr(ABC.PE.PROMOTR)               = 1
+
+        
+        Reserved3(ABC.PE.RESERVED.3)             = 2
+        Reserved2(ABC.PE.RESERVED.2)             = 3
+        Reserved1(ABC.PE.RESERVED.1)             = 4
+        
+        Override(ACR.OVERRIDE)                   = 5
+        RecordStatus(ABC.PE.RECORD.STATUS)       = 6
+        CurrNo(ABC.PE.CURR.NO)                   = 7
+        Inputter(ABC.PE.INPUTTER)                = 8
+        DateTime(ABC.PE.DATE.TIME)               = 9
+        Authoriser(ABC.PE.AUTHORISER)            = 10
+        CoCode(ABC.PE.CO.CODE)                   = 11
+        DeptCode(ABC.PE.DEPT.CODE)               = 12
+        AuditorCode(ABC.PE.AUDITOR.CODE)         = 13
+        AuditDateTime(ABC.PE.AUDIT.DATE.TIME)    = 14
+    }
+}
+
