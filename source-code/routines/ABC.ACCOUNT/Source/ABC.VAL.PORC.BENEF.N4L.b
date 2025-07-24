@@ -45,7 +45,7 @@ PROCESS:
 *-------------------------------------------------------------------------------
 
 
-    Y.PORCENTAJES = EB.SystemTables.getRNew(AbcTable.AbcBeneficiariosAccount.Porcentaje)
+    Y.PORCENTAJES = EB.SystemTables.getRNew(AbcTable.AbcAcctLclFlds.Porcentaje)
     
     CHANGE @SM TO @FM IN Y.PORCENTAJES
 

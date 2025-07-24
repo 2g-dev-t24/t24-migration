@@ -1,7 +1,7 @@
-* @ValidationCode : MjoxMjEzOTQ1ODM1OkNwMTI1MjoxNzUxNTk1MjkzNTQxOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 03 Jul 2025 23:14:53
+* @ValidationCode : MjoxNDE3ODE0MzQ1OkNwMTI1MjoxNzUzMzIzMjgxMzQzOm1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 23 Jul 2025 23:14:41
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -60,17 +60,17 @@ MAP.BENEFICIARIO:
 *** <desc>Mapea los campos de BENEFICIARIO </desc>
 
     
-    R.BENEFICAIRIO<AbcTable.AbcBeneficiariosAccount.ApePaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApePaterno)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.ApePaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApePaterno)
     
-    R.BENEFICAIRIO<AbcTable.AbcBeneficiariosAccount.ApeMaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApeMaterno)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.ApeMaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApeMaterno)
     
-    R.BENEFICAIRIO<AbcTable.AbcBeneficiariosAccount.Nombres>    = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Nombres)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.Nombres>    = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Nombres)
     
-    R.BENEFICAIRIO<AbcTable.AbcBeneficiariosAccount.FecNac>     = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.FecNac)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.FecNac>     = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.FecNac)
     
-    R.BENEFICAIRIO<AbcTable.AbcBeneficiariosAccount.Porcentaje> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Porcentaje)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.Porcentaje> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Porcentaje)
     
-    R.BENEFICAIRIO<AbcTable.AbcBeneficiariosAccount.Email>      = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Email)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.Email>      = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Email)
     
 
 RETURN
@@ -105,8 +105,8 @@ CREAR.OFS.BENEFICIARIO:
 *** <desc>Crea y ejecuta el OFS de BENEICIARIO</desc>
 *-----------------------------------------------------------------------------
     Y.OFS.REQUEST   = ''
-    Y.OFS.APP       = 'ABC.BENEFICIARIOS.ACCOUNT'
-    Y.OFS.VERSION   = 'ABC.BENEFICIARIOS.ACCOUNT,ABC.ACCOUNT.API'
+    Y.OFS.APP       = 'ABC.ACCT.LCL.FLDS'
+    Y.OFS.VERSION   = 'ABC.ACCT.LCL.FLDS,ABC.ACCOUNT.API'
     Y.RECORD        = ''
     Y.NO.OF.AUTH    = 0
     Y.OFS.RECORD    = ''
