@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMjExNTk4MjM5NzpDcDEyNTI6MTc1MzM2ODM5NjM3MjpMdWlzIENhcHJhOi0xOi0xOjA6MDp0cnVlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 24 Jul 2025 11:46:36
+* @ValidationCode : MjoyODI1Nzk3NDk6Q3AxMjUyOjE3NTMzNzA1MzYwNTY6THVpcyBDYXByYTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 24 Jul 2025 12:22:16
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -292,7 +292,8 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddreservedfield('RESERVED.2')
     EB.Template.TableAddreservedfield('RESERVED.1')
     
-    EB.Template.TableSetauditposition()
+    
+
 
 END
 
