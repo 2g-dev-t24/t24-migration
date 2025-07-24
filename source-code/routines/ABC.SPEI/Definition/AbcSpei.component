@@ -10,12 +10,6 @@ public method AbcObtenNivelCategory (
     jBC: ABC.OBTEN.NIVEL.CATEGORY
 }
 
-public method AbcGetProductosInteres (
-)
-{
-    jBC: ABC.GET.PRODUCTOS.INTERES
-}
-
 public method AbcObtenGrupo (
 )
 {
@@ -562,3 +556,12 @@ public method AbcValidaIdEstabl ()
 {
     jBC: ABC.VALIDA.ID.ESTABL
 }
+
+
+private method AbcGetProductosInteres (
+    INOUT enqParam string
+)
+{
+    jBC: ABC.GET.PRODUCTOS.INTERES
+}
+
