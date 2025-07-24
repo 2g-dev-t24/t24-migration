@@ -21,6 +21,11 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddfielddefinition('XX-PORCENTAJE'     ,'3'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX>EMAIL'          ,'100'  , 'A', '')
 
+    fieldName = 'PREG.FON.TER'
+    fieldType = "SI_NO"
+    neighbour = ''
+    EB.Template.TableAddoptionsfield(fieldName, fieldType, '', neighbour)
+
 
     EB.Template.TableSetauditposition()
 

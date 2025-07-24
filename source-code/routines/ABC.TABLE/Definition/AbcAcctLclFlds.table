@@ -1,22 +1,22 @@
 public table AbcAcctLclFlds {
     t24: ABC.ACCT.LCL.FLDS
     fields:{
-        ApePaterno(ABC.BEN.ACCT.APE.PATERNO) = 1
-        ApeMaterno(ABC.BEN.ACCT.APE.MATERNO)= 2
-        Nombres(ABC.BEN.ACCT.NOMBRES)= 3
-        FecNac(ABC.BEN.ACCT.FEC.NAC)= 4
-        Porcentaje(ABC.BEN.ACCT.PORCENTAJE)= 5
-        Email(ABC.BEN.ACCT.EMAIL)= 6
+        ApePaterno(ABC.LCL.FLDS.APE.PATERNO) = 1
+        ApeMaterno(ABC.LCL.FLDS.APE.MATERNO)= 2
+        Nombres(ABC.LCL.FLDS.NOMBRES)= 3
+        FecNac(ABC.LCL.FLDS.FEC.NAC)= 4
+        Porcentaje(ABC.LCL.FLDS.PORCENTAJE)= 5
+        Email(ABC.LCL.FLDS.EMAIL)= 6
+        PregFonTer(ABC.LCL.FLDS.PREG.FON.TER)= 7
 
-
-        RecordStatus(ABC.BEN.ACCT.RECORD.STATUS) = 7
-        CurrNo(ABC.BEN.ACCT.CURR.NO) = 8
-        Inputter(ABC.BEN.ACCT.INPUTTER) = 9
-        DateTime(ABC.BEN.ACCT.DATE.TIME) = 10
-        Authoriser(ABC.BEN.ACCT.AUTHORISER) = 11
-        CoCode(ABC.BEN.ACCT.CO.CODE) = 12
-        DeptCode(ABC.BEN.ACCT.DEPT.CODE) = 13
-        AuditorCode(ABC.BEN.ACCT.AUDITOR.CODE) = 14
-        AuditDateTime(ABC.BEN.ACCT.AUDIT.DATE.TIME) = 15
+        RecordStatus(ABC.LCL.FLDS.RECORD.STATUS) = 8
+        CurrNo(ABC.LCL.FLDS.CURR.NO) = 9
+        Inputter(ABC.LCL.FLDS.INPUTTER) = 10
+        DateTime(ABC.LCL.FLDS.DATE.TIME) = 11
+        Authoriser(ABC.LCL.FLDS.AUTHORISER) = 12
+        CoCode(ABC.LCL.FLDS.CO.CODE) = 13
+        DeptCode(ABC.LCL.FLDS.DEPT.CODE) = 14
+        AuditorCode(ABC.LCL.FLDS.AUDITOR.CODE) = 15
+        AuditDateTime(ABC.LCL.FLDS.AUDIT.DATE.TIME) = 16
     }
 }
