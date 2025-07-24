@@ -2,21 +2,21 @@ private table AbcMontoMensual {
     t24: T24.NAME
     fields:{
         
-        FecMov(ABC.MONTO.DESCRIPTION)               = 1
-        FecMov(ABC.MONTO.CURRENCY)                  = 2
+        FecMov(GIC.TITLE.DESCRIPTION)               = 1
+        FecMov(GIC.TITLE.CURRENCY)                  = 2
         
-        Reserved3(ABC.MONTO.RESERVED.3)             = 3
-        Reserved2(ABC.MONTO.RESERVED.2)             = 4
-        Reserved1(ABC.MONTO.RESERVED.1)             = 5
+        Reserved3(GIC.TITLE.RESERVED.3)             = 3
+        Reserved2(GIC.TITLE.RESERVED.2)             = 4
+        Reserved1(GIC.TITLE.RESERVED.1)             = 5
         
-        RecordStatus(ABC.MONTO.RECORD.STATUS)       = 6
-        CurrNo(ABC.MONTO.CURR.NO)                   = 7
-        Inputter(ABC.MONTO.INPUTTER)                = 8
-        DateTime(ABC.MONTO.DATE.TIME)               = 9
-        Authoriser(ABC.MONTO.AUTHORISER)            = 10
-        CoCode(ABC.MONTO.CO.CODE)                   = 11
-        DeptCode(ABC.MONTO.DEPT.CODE)               = 12
-        AuditorCode(ABC.MONTO.AUDITOR.CODE)         = 13
-        AuditDateTime(ABC.MONTO.AUDIT.DATE.TIME)    = 14
+        RecordStatus(GIC.TITLE.RECORD.STATUS)       = 6
+        CurrNo(GIC.TITLE.CURR.NO)                   = 7
+        Inputter(GIC.TITLE.INPUTTER)                = 8
+        DateTime(GIC.TITLE.DATE.TIME)               = 9
+        Authoriser(GIC.TITLE.AUTHORISER)            = 10
+        CoCode(GIC.TITLE.CO.CODE)                   = 11
+        DeptCode(GIC.TITLE.DEPT.CODE)               = 12
+        AuditorCode(GIC.TITLE.AUDITOR.CODE)         = 13
+        AuditDateTime(GIC.TITLE.AUDIT.DATE.TIME)    = 14
     }
 }

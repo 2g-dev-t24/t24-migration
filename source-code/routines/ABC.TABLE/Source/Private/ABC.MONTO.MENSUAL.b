@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMjEyODU3NDEzOkNwMTI1MjoxNzUzMzcwNDUxNjUyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 24 Jul 2025 12:20:51
+* @ValidationCode : MjotMTMxNzE4NzUzMTpDcDEyNTI6MTc1MzM3MDY1NTQ3MDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 24 Jul 2025 12:24:15
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -34,7 +34,7 @@ SUBROUTINE ABC.MONTO.MENSUAL
     EB.Template.setTableSystemclearfile('Y')         ;* As per FILE.CONTROL
     EB.Template.setTableRelatedfiles('')   ;* As per FILE.CONTROL
     EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL
-    EB.Template.setTableEquateprefix('ABC.MONTO')          ;* Use to create I_F.EB.LOG.PARAMETER
+    EB.Template.setTableEquateprefix('GIC.TITLE')          ;* Use to create I_F.EB.LOG.PARAMETER
 *-----------------------------------------------------------------------------
     EB.Template.setTableIdprefix('')       ;* Used by EB.FORMAT.ID if set
     EB.Template.setTableBlockedfunctions('')         ;* Space delimeted list of blocked functions
