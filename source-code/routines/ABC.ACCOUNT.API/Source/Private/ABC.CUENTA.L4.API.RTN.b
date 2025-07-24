@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNDE3ODE0MzQ1OkNwMTI1MjoxNzUzMzIzMjgxMzQzOm1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 23 Jul 2025 23:14:41
+* @ValidationCode : MjotNDQ1NDM1OTM6Q3AxMjUyOjE3NTMzNzg3NzcwOTY6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 24 Jul 2025 14:39:37
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -60,17 +60,17 @@ MAP.BENEFICIARIO:
 *** <desc>Mapea los campos de BENEFICIARIO </desc>
 
     
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.ApePaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApePaterno)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenApePaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApePaterno)
     
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.ApeMaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApeMaterno)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenApeMaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApeMaterno)
     
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.Nombres>    = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Nombres)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenNombres>    = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Nombres)
     
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.FecNac>     = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.FecNac)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenFecNac>     = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.FecNac)
     
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.Porcentaje> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Porcentaje)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenPorcentaje> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Porcentaje)
     
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.Email>      = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Email)
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenEmail>      = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Email)
     
 
 RETURN
