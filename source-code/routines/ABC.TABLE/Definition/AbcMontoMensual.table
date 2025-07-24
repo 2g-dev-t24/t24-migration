@@ -1,0 +1,22 @@
+private table AbcMontoMensual {
+    t24: T24.NAME
+    fields:{
+        
+        FecMov(ABC.MONTO.DESCRIPTION)               = 1
+        FecMov(ABC.MONTO.CURRENCY)                  = 2
+        
+        Reserved3(ABC.MONTO.RESERVED.3)             = 3
+        Reserved2(ABC.MONTO.RESERVED.2)             = 4
+        Reserved1(ABC.MONTO.RESERVED.1)             = 5
+        
+        RecordStatus(ABC.MONTO.RECORD.STATUS)       = 6
+        CurrNo(ABC.MONTO.CURR.NO)                   = 7
+        Inputter(ABC.MONTO.INPUTTER)                = 8
+        DateTime(ABC.MONTO.DATE.TIME)               = 9
+        Authoriser(ABC.MONTO.AUTHORISER)            = 10
+        CoCode(ABC.MONTO.CO.CODE)                   = 11
+        DeptCode(ABC.MONTO.DEPT.CODE)               = 12
+        AuditorCode(ABC.MONTO.AUDITOR.CODE)         = 13
+        AuditDateTime(ABC.MONTO.AUDIT.DATE.TIME)    = 14
+    }
+}

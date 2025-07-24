@@ -832,3 +832,19 @@ private method AbcProductosGalileoFields (
    jBC: ABC.PRODUCTOS.GALILEO.FIELDS
 }
 
+
+
+private method AbcMontoMensual (
+)
+{
+   jBC: ABC.MONTO.MENSUAL
+}
+
+
+
+private method AbcMontoMensualFields (
+)
+{
+   jBC: ABC.MONTO.MENSUAL.FIELDS
+}
+
