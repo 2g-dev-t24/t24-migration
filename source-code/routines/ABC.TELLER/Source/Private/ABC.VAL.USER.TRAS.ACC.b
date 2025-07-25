@@ -60,7 +60,7 @@ VALIDA:
     NEXT Y.IT
 
     IF Y.BAND.AUT EQ '' THEN
-        AF = FT.AUTHORISER
+        
         E = "USUARIO NO PUEDE AUTORIZAR TRANSACCION"
         EB.SystemTables.setEtext(E)
         EB.ErrorProcessing.StoreEndError()
