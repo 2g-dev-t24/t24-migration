@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method Abc2BrFaltanteSobrante (
+)
+{
+    jBC: ABC.2BR.FALTANTE.SOBRANTE
+}
+
 public method AbcEmailDepositoEfectivo (
 )
 {
