@@ -9,6 +9,13 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method Abc2BrExtraeDefault (
+)
+{
+    jBC: ABC.2BR.EXTRAE.DEFAULT
+}
+
+
 public method Abc2BrFaltanteSobrante (
 )
 {
