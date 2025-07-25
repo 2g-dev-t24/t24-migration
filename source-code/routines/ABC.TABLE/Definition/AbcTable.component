@@ -896,3 +896,18 @@ private method AbcPromEnlaceFields (
    jBC: ABC.PROM.ENLACE.FIELDS
 }
 
+
+private method Abc2brBovedas (
+)
+{
+   jBC: ABC.2BR.BOVEDAS
+}
+
+
+
+private method Abc2brBovedasFields (
+)
+{
+   jBC: ABC.2BR.BOVEDAS.FIELDS
+}
+
