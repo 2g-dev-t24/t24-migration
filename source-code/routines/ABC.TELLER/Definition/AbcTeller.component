@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method AbcValUserTrasAcc (
+)
+{
+    jBC: ABC.VAL.USER.TRAS.ACC
+}
+
 public method Abc2BrExtraeDefault (
 )
 {
