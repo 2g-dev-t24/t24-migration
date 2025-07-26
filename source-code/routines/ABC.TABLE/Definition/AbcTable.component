@@ -805,7 +805,7 @@ private method AbcAcctLclFldsFields (
 private method AbcTarjetasMc (
 )
 {
-   jBC: ABC.TARJETAS.MC
+    jBC: ABC.TARJETAS.MC
 }
 
 
@@ -813,7 +813,7 @@ private method AbcTarjetasMc (
 private method AbcTarjetasMcFields (
 )
 {
-   jBC: ABC.TARJETAS.MC.FIELDS
+    jBC: ABC.TARJETAS.MC.FIELDS
 }
 
 
@@ -821,7 +821,7 @@ private method AbcTarjetasMcFields (
 private method AbcProductosGalileo (
 )
 {
-   jBC: ABC.PRODUCTOS.GALILEO
+    jBC: ABC.PRODUCTOS.GALILEO
 }
 
 
@@ -829,7 +829,7 @@ private method AbcProductosGalileo (
 private method AbcProductosGalileoFields (
 )
 {
-   jBC: ABC.PRODUCTOS.GALILEO.FIELDS
+    jBC: ABC.PRODUCTOS.GALILEO.FIELDS
 }
 
 
@@ -837,7 +837,7 @@ private method AbcProductosGalileoFields (
 private method AbcMontoMensual (
 )
 {
-   jBC: ABC.MONTO.MENSUAL
+    jBC: ABC.MONTO.MENSUAL
 }
 
 
@@ -845,7 +845,7 @@ private method AbcMontoMensual (
 private method AbcMontoMensualFields (
 )
 {
-   jBC: ABC.MONTO.MENSUAL.FIELDS
+    jBC: ABC.MONTO.MENSUAL.FIELDS
 }
 
 
@@ -853,7 +853,7 @@ private method AbcMontoMensualFields (
 private method AbcOcupacion (
 )
 {
-   jBC: ABC.OCUPACION
+    jBC: ABC.OCUPACION
 }
 
 
@@ -861,7 +861,7 @@ private method AbcOcupacion (
 private method AbcOcupacionFields (
 )
 {
-   jBC: ABC.OCUPACION.FIELDS
+    jBC: ABC.OCUPACION.FIELDS
 }
 
 
@@ -869,7 +869,7 @@ private method AbcOcupacionFields (
 private method AbcCatagRangos (
 )
 {
-   jBC: ABC.CATAG.RANGOS
+    jBC: ABC.CATAG.RANGOS
 }
 
 
@@ -877,7 +877,7 @@ private method AbcCatagRangos (
 private method AbcCatagRangosFields (
 )
 {
-   jBC: ABC.CATAG.RANGOS.FIELDS
+    jBC: ABC.CATAG.RANGOS.FIELDS
 }
 
 
@@ -885,7 +885,7 @@ private method AbcCatagRangosFields (
 private method AbcPromEnlace (
 )
 {
-   jBC: ABC.PROM.ENLACE
+    jBC: ABC.PROM.ENLACE
 }
 
 
@@ -893,16 +893,13 @@ private method AbcPromEnlace (
 private method AbcPromEnlaceFields (
 )
 {
-   jBC: ABC.PROM.ENLACE.FIELDS
+    jBC: ABC.PROM.ENLACE.FIELDS
 }
-
-
-<<<<<<< HEAD
 
 private method AbcConcatGalileo (
 )
 {
-   jBC: ABC.CONCAT.GALILEO
+    jBC: ABC.CONCAT.GALILEO
 }
 
 
@@ -910,7 +907,7 @@ private method AbcConcatGalileo (
 private method AbcConcatGalileoFields (
 )
 {
-   jBC: ABC.CONCAT.GALILEO.FIELDS
+    jBC: ABC.CONCAT.GALILEO.FIELDS
 }
 
 
@@ -918,7 +915,7 @@ private method AbcConcatGalileoFields (
 private method AbcTempGeneFt (
 )
 {
-   jBC: ABC.TEMP.GENE.FT
+    jBC: ABC.TEMP.GENE.FT
 }
 
 
@@ -926,7 +923,7 @@ private method AbcTempGeneFt (
 private method AbcTempGeneFtFields (
 )
 {
-   jBC: ABC.TEMP.GENE.FT.FIELDS
+    jBC: ABC.TEMP.GENE.FT.FIELDS
 }
 
 
@@ -934,12 +931,13 @@ private method AbcTempGeneFtFields (
 private method AbcTempGeneFtId (
 )
 {
-   jBC: ABC.TEMP.GENE.FT.ID
-=======
+    jBC: ABC.TEMP.GENE.FT.ID
+}
+
 private method Abc2brBovedas (
 )
 {
-   jBC: ABC.2BR.BOVEDAS
+    jBC: ABC.2BR.BOVEDAS
 }
 
 
@@ -947,7 +945,6 @@ private method Abc2brBovedas (
 private method Abc2brBovedasFields (
 )
 {
-   jBC: ABC.2BR.BOVEDAS.FIELDS
->>>>>>> branch 'master' of https://github.com/2g-dev-t24/t24-migration.git
-}
+    jBC: ABC.2BR.BOVEDAS.FIELDS
 
+}
