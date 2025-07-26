@@ -3,6 +3,7 @@
     <!-- Insert resources here -->
     <resource-root path="./L3lib/ABC_BP.jar" />
     <resource-root path="./L3lib/AbcAccount.jar" />
+    <resource-root path="./L3lib/AbcAccountApi.jar" />
     <resource-root path="./L3lib/AbcAssign.jar" />
     <resource-root path="./L3lib/AbcCusValLoc.jar" />
     <resource-root path="./L3lib/AbcCustomerApi.jar" />

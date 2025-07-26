@@ -896,3 +896,43 @@ private method AbcPromEnlaceFields (
    jBC: ABC.PROM.ENLACE.FIELDS
 }
 
+
+
+private method AbcConcatGalileo (
+)
+{
+   jBC: ABC.CONCAT.GALILEO
+}
+
+
+
+private method AbcConcatGalileoFields (
+)
+{
+   jBC: ABC.CONCAT.GALILEO.FIELDS
+}
+
+
+
+private method AbcTempGeneFt (
+)
+{
+   jBC: ABC.TEMP.GENE.FT
+}
+
+
+
+private method AbcTempGeneFtFields (
+)
+{
+   jBC: ABC.TEMP.GENE.FT.FIELDS
+}
+
+
+
+private method AbcTempGeneFtId (
+)
+{
+   jBC: ABC.TEMP.GENE.FT.ID
+}
+

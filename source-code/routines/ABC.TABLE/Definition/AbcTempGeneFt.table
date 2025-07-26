@@ -1,0 +1,33 @@
+private table AbcTempGeneFt {
+    t24: ABC.TEMP.GENE.FT
+    fields:{
+        DebitAmount(GENE.DEBIT.AMOUNT)          = 1
+        FtGenerado(GENE.FT.GENERADO)            = 2
+        Status(GENE.STATUS)                     = 3
+        MsgError(GENE.MSG.ERROR)                = 4
+        FecReversa(GENE.FEC.REVERSA)            = 5
+        OrigAmount(GENE.ORIG.AMOUNT)            = 6
+        OrigCurrency(GENE.ORIG.CURRENCY)        = 7
+        Comision(GENE.COMISION)                 = 8
+        TipoCamb(GENE.TIPO.CAMB)                = 9
+        PorcFluc(GENE.PORC.FLUC)                = 10
+        MontoPerdida(GENE.MONTO.PERDIDA)        = 11
+        AuthId(GENE.AUTH.ID)                    = 12
+        OrigAuthId(GENE.ORIG.AUTH.ID)           = 13
+        MontoRevParcial(GENE.MONTO.REV.PARCIAL) = 14                                        
+
+
+
+        Reserved2(GENE.RESERVED.2) = 15
+        Reserved1(GENE.RESERVED.1) = 16
+        RecordStatus(GENE.RECORD.STATUS) = 17
+        CurrNo(GENE.CURR.NO) = 18
+        Inputter(GENE.INPUTTER) = 19
+        DateTime(GENE.DATE.TIME) = 20
+        Authoriser(GENE.AUTHORISER) = 21
+        CoCode(GENE.CO.CODE) = 22
+        DeptCode(GENE.DEPT.CODE) = 23
+        AuditorCode(GENE.AUDITOR.CODE) = 24
+        AuditDateTime(GENE.AUDIT.DATE.TIME) = 25
+    }
+}

@@ -32,3 +32,15 @@ private method abcValPorcBenefN4l (
    jBC: ABC.VAL.PORC.BENEF.N4L
 }
 
+
+
+private method SapCheckBalCashWthd (
+   INOUT yinCuenta string,
+   INOUT yinMonto string,
+   INOUT yinComision string,
+   INOUT yout string
+)
+{
+   jBC: SAP.CHECK.BAL.CASH.WTHD
+}
+

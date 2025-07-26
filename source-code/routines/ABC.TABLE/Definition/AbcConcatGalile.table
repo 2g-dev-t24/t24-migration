@@ -1,0 +1,10 @@
+private table AbcConcatGalile {
+    t24: ABC.CONCAT.GALILEO
+    fields:{
+        AclkId(GALI.ACLK.ID)            = 1
+        FtGenerado(GALI.FT.GENERADO)    = 2
+        Fecha(GALI.FECHA)               = 3
+        ReveId(GALI.REVE.ID)            = 4
+        Estatus(GALI.ESTATUS)           = 5
+    }
+}
