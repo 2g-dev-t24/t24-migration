@@ -897,6 +897,7 @@ private method AbcPromEnlaceFields (
 }
 
 
+<<<<<<< HEAD
 
 private method AbcConcatGalileo (
 )
@@ -934,5 +935,19 @@ private method AbcTempGeneFtId (
 )
 {
    jBC: ABC.TEMP.GENE.FT.ID
+=======
+private method Abc2brBovedas (
+)
+{
+   jBC: ABC.2BR.BOVEDAS
+}
+
+
+
+private method Abc2brBovedasFields (
+)
+{
+   jBC: ABC.2BR.BOVEDAS.FIELDS
+>>>>>>> branch 'master' of https://github.com/2g-dev-t24/t24-migration.git
 }
 
