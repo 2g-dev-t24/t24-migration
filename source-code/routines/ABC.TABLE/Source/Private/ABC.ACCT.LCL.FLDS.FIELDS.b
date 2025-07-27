@@ -1,5 +1,5 @@
-* @ValidationCode : MjotODk2ODQ3OTY5OkNwMTI1MjoxNzUzNDc0Mjg0MDg4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 25 Jul 2025 17:11:24
+* @ValidationCode : MjoyMTI0NTk5Nzk1OkNwMTI1MjoxNzUzNTgzMTY0MzY4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 26 Jul 2025 23:26:04
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -59,7 +59,7 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddfielddefinition('XX-BEN.APE.MATERNO'    ,'50'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.NOMBRES'        ,'100'   , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.TELEFONO'       ,'10'    , 'A', '')
-    EB.Template.TableAddfielddefinition('XX-BEN.PORCENTAJE'     ,'5'     , 'AMTLCCY', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.PORCENTAJE'     ,'5'     , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.RFC'            ,'5'     , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.CURP'           ,'18'    , 'A', '')
     EB.Template.TableAddoptionsfield   ('XX-BEN.IDENTIFICA'     ,'Credencial para Votar_Pasaporte Vigente_C�dula Profesional_Forma Migratoria FM2_Forma Migratoria FM3'    , 'A', '')

@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTkxMzU1MTkyMTpDcDEyNTI6MTc1MzU3MzA3MTI5MDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 26 Jul 2025 20:37:51
+* @ValidationCode : MjoxMDMzNzI2MjgyOkNwMTI1MjoxNzUzNTgxOTcxMzg1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 26 Jul 2025 23:06:11
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -50,7 +50,7 @@ MAP.ACCOUNT:
     
     Y.ID.CUENTA = EB.SystemTables.getIdNew()
     
-    EB.DataAccess.FRead(FN.ACCOUNT, Y.ACCOUNT.NO, R.ACCOUNT, F.ACCOUNT, Y.ERR.ACCOUNT)
+    EB.DataAccess.FRead(FN.ACCOUNT, Y.ID.CUENTA, R.ACCOUNT, F.ACCOUNT, Y.ERR.ACCOUNT)
 
 
     R.AA<AA.Framework.ArrangementActivity.ArrActArrangement> = R.ACCOUNT<AC.AccountOpening.Account.ArrangementId>
@@ -120,7 +120,7 @@ CREAR.OFS.BENEFICIARIO:
     Y.GTSMODE       = ''
     Error           = ''
 
-    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.BENEFICAIRIO,Y.OFS.REQUEST)
+    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUENTA,R.BENEFICAIRIO,Y.OFS.REQUEST)
  
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
 
