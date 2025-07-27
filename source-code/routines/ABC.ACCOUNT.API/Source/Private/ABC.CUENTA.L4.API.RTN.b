@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxMDMzNzI2MjgyOkNwMTI1MjoxNzUzNTgxOTcxMzg1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 26 Jul 2025 23:06:11
+* @ValidationCode : MjotMTQzNDQ0MTg4OTpDcDEyNTI6MTc1MzY0MDEzNTA4NzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 27 Jul 2025 15:15:35
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -79,6 +79,19 @@ MAP.BENEFICIARIO:
     R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenEmail>      = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Email)
     
     R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.PregFonTer>    = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.PregFonTer)
+    
+    Y.LIST.PORCENTAJE = R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenPorcentaje>
+    
+    Y.NO.VALORES = DCOUNT(Y.LIST.PORCENTAJE,@FM)
+    FOR Y.AA=1 TO Y.NO.VALORES
+        TOTAL = TOTAL + Y.LIST.PORCENTAJE<Y.AA>
+    NEXT Y.AA
+    IF (TOTAL NE 100) THEN
+        EB.SystemTables.setEtext('El Porcentaje es diferente a 100')
+        EB.ErrorProcessing.StoreEndError()
+        RETURN
+    END
+    
 
 RETURN
 *** </region>
