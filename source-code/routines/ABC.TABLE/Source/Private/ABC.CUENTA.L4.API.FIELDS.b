@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNjEwNzM3Nzk2OkNwMTI1MjoxNzUxNTgwMDk0MTE0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 03 Jul 2025 19:01:34
+* @ValidationCode : MjoxNzg2NjkzOTY0OkNwMTI1MjoxNzUzNTcyNTcyNDc1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 26 Jul 2025 20:29:32
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -31,6 +31,7 @@ SUBROUTINE ABC.CUENTA.L4.API.FIELDS
     EB.Template.TableAddfielddefinition('XX-FEC.NAC'        ,'8'    , 'D', '')
     EB.Template.TableAddfielddefinition('XX-PORCENTAJE'     ,'3'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX>EMAIL'          ,'100'  , 'A', '')
+    EB.Template.TableAddfielddefinition('PREG.FON.TER'      ,'100'  , 'A', '')
 
 
     EB.Template.TableSetauditposition()

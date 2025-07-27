@@ -1,7 +1,7 @@
-* @ValidationCode : MjotNDQ1NDM1OTM6Q3AxMjUyOjE3NTMzNzg3NzcwOTY6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 24 Jul 2025 14:39:37
+* @ValidationCode : MjotMTkxMzU1MTkyMTpDcDEyNTI6MTc1MzU3MzA3MTI5MDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 26 Jul 2025 20:37:51
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : mauricio.lopez
+* @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -25,6 +25,7 @@ SUBROUTINE ABC.CUENTA.L4.API.RTN
     $USING EB.Service
     $USING EB.API
     $USING EB.Interface
+    $USING AC.AccountOpening
     $USING AA.Framework
     $USING AbcTable
     $USING EB.Updates
@@ -43,11 +44,16 @@ SUBROUTINE ABC.CUENTA.L4.API.RTN
 MAP.ACCOUNT:
 *** <desc>Mapea los campos de AA ACTIVITY </desc>
 
-    R.ACCOUNT<AA.Framework.Arrangement.ArrProperty> = 'BALANCE'
+    FN.ACCOUNT = 'F.ACCOUNT'
+    F.ACCOUNT = ''
+    EB.DataAccess.Opf(FN.ACCOUNT, F.ACCOUNT)
     
-    R.ACCOUNT<AA.Framework.ArrangementActivity.ArrActActivity> = 'ACCOUNTS-CHANGE.PRODUCT-ARRANGEMENT'
+    Y.ID.CUENTA = EB.SystemTables.getIdNew()
     
-    R.ACCOUNT<AA.Framework.ArrangementActivity.ArrActArrangement> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Account)
+    EB.DataAccess.FRead(FN.ACCOUNT, Y.ACCOUNT.NO, R.ACCOUNT, F.ACCOUNT, Y.ERR.ACCOUNT)
+
+
+    R.AA<AA.Framework.ArrangementActivity.ArrActArrangement> = R.ACCOUNT<AC.AccountOpening.Account.ArrangementId>
     
 RETURN
 *** </region>
@@ -59,7 +65,7 @@ RETURN
 MAP.BENEFICIARIO:
 *** <desc>Mapea los campos de BENEFICIARIO </desc>
 
-    
+
     R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenApePaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApePaterno)
     
     R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenApeMaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApeMaterno)
@@ -72,6 +78,7 @@ MAP.BENEFICIARIO:
     
     R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenEmail>      = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Email)
     
+    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.PregFonTer>    = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.PregFonTer)
 
 RETURN
 *** </region>
@@ -84,13 +91,13 @@ CREAR.OFS.ACCOUNT:
 
     Y.OFS.REQUEST   = ''
     Y.OFS.APP       = 'AA.ARRANGEMENT.ACTIVITY'
-    Y.OFS.VERSION   = 'AA.ARRANGEMENT.ACTIVITY,ABC.ACCOUNT.API'
+    Y.OFS.VERSION   = 'AA.ARRANGEMENT.ACTIVITY,ABC.CUENTA.NIVEL.4L'
     Y.ID            = ''
     Y.ID.CUSTOMER   = ''
     Y.NO.OF.AUTH    = 0
     Y.GTSMODE       = ''
     
-    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.ACCOUNT,Y.OFS.REQUEST)
+    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUSTOMER,R.AA,Y.OFS.REQUEST)
 
     EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
     IF Error THEN
