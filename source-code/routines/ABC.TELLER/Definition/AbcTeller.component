@@ -9,6 +9,13 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABcValMntMnorUdiTell (
+)
+{
+    jBC: ABC.VAL.MNT.MNOR.UDI.TELL
+}
+
+
 public method ABc2brRtnNoCambioChqdep (
 )
 {
