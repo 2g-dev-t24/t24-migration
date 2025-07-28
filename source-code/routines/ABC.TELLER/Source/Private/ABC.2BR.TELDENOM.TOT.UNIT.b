@@ -14,7 +14,7 @@ $PACKAGE AbcTeller
     $USING TT.Contract
 
     VPM.UNIT.VAL = EB.SystemTables.getComi()
-    POSN = AV
+    POSN = EB.SystemTables.setAv(0)
     DENOM.VAL = EB.SystemTables.getRNew(TT.Contract.Teller.TeDenomination)<1,POSN>
     DENOM.VAL = DENOM.VAL[4,6]
 
@@ -24,7 +24,9 @@ $PACKAGE AbcTeller
     END
 
     IF POSN = 1 THEN
-        EB.SystemTables.getRNew(TT.Contract.Teller.TeLocalRef)<1,13> = VPM.UNIT.VAL * DENOM.VAL
+        Y.VALOR.POR = VPM.UNIT.VAL * DENOM.VAL
+        TT.LOCAL.REF<1,13> = Y.VALOR.POR
+        EB.SystemTables.setRNew(TT.Contract.Teller.TeLocalRef, TT.LOCAL.REF)
     END ELSE
         CURR.VAL = VPM.UNIT.VAL * DENOM.VAL
         POSN = POSN - 1
@@ -43,7 +45,9 @@ $PACKAGE AbcTeller
             PREV.VAL = VPM.UNIT.VAL * DENOM.VAL
             SUM.DR += PREV.VAL
         NEXT NO.OF.DENOM
-        EB.SystemTables.getRNew(TT.Contract.Teller.TeLocalRef)<1,13> = CURR.VAL + SUM.DR
+        Y.VALOR = CURR.VAL + SUM.DR
+        TT.LOCAL.REF<1,13> = Y.VALOR
+        EB.SystemTables.setRNew(TT.Contract.Teller.TeLocalRef, TT.LOCAL.REF)
     END
     EB.Display.RebuildScreen()
 
