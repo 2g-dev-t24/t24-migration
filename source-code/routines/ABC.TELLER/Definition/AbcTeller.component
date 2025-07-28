@@ -8,6 +8,11 @@ private method AbcEnvEmailLimCajaBow ()
 }
 
 # ------------------ METHOD END ------------------
+public method ABcV2ttGetTellerId2 (
+)
+{
+    jBC: ABC.V.2TT.GET.TELLER.ID.2
+}
 
 public method ABcVFtToday (
 )
