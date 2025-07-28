@@ -8,6 +8,12 @@ private method AbcEnvEmailLimCajaBow ()
 }
 
 # ------------------ METHOD END ------------------
+public method ABc2brTeldenomTotUnit (
+)
+{
+    jBC: ABC.2BR.TELDENOM.TOT.UNIT
+}
+
 public method ABcV2ttGetTellerId2 (
 )
 {
