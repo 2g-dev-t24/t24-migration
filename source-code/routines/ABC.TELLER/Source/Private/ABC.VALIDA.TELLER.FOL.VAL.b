@@ -59,9 +59,9 @@ PROCESO:
         Y.FOL.VAL = REC.TT<TT.Contract.Teller.TeLocalRef, POS.FOL.VAL>
     END ELSE
 
-        Y.FOL.VAL = R.NEW(TT.Contract.Teller.TeLocalRef)<1, POS.FOL.VAL>
-        Y.ACC.CUS = R.NEW(TT.Contract.Teller.TeAccountOne)
-        Y.MONT.TR = R.NEW(TT.TE.AMOUNT.LOCAL.1)
+        Y.FOL.VAL = EB.SystemTables.getRNew(TT.Contract.Teller.TeLocalRef)<1, POS.FOL.VAL>
+        Y.ACC.CUS = EB.SystemTables.getRNew(TT.Contract.Teller.TeAccountOne)
+        Y.MONT.TR = EB.SystemTables.getRNew(TT.Contract.Teller.TeAmountLocalOne)
     END
 
     Y.DATOS<-1> = Y.ACC.CUS
