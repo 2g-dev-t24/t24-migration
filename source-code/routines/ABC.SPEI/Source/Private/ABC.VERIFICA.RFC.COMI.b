@@ -48,7 +48,7 @@ PROCESS:
         IF RECORD.COMI THEN
             Y.RFC.COMISIONISTA = RECORD.COMI<AbcTable.AbcComisionistas.RfcComisionista>
             
-            EB.SystemTables.setRNew(AbcTable.AbcComisionistasEstabl.RfcComisionista, '')
+            EB.SystemTables.setRNew(AbcTable.AbcComisionistasEstabl.RfcComisionista, Y.RFC.COMISIONISTA)
             
             tmp = EB.SystemTables.getT(AbcTable.AbcComisionistasEstabl.RfcComisionista)
             tmp<3>="NOINPUT"
