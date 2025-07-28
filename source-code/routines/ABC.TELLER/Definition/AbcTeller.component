@@ -8,6 +8,14 @@ private method AbcEnvEmailLimCajaBow ()
 }
 
 # ------------------ METHOD END ------------------
+
+public method ABc2brRtnNoCambioChqdep (
+)
+{
+    jBC: ABC.2BR.RTN.NO.CAMBIO.CHQDEP
+}
+
+
 public method ABc2brTeldenomTotUnit (
 )
 {
