@@ -10,7 +10,8 @@ $PACKAGE AbcTeller
     $USING EB.DataAccess
     $USING EB.Updates
     $USING TT.Contract
-
+    $USING EB.ErrorProcessing
+    
     GOSUB INITIALIZE
     GOSUB PROCESS
 
