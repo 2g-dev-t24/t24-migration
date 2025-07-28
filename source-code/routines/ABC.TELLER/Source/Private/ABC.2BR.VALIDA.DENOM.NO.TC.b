@@ -11,7 +11,7 @@ $PACKAGE AbcTeller
     $USING EB.Updates
     $USING TT.Contract
     $USING EB.Security
-    $USING EB.ErrorProcessin
+    $USING EB.ErrorProcessing
     $USING EB.Display
 
     Y.TOT.DEN = DCOUNT(EB.SystemTables.getRNew(TT.Contract.Teller.TeUnit), VM)
