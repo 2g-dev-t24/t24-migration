@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABcVFtToday (
+)
+{
+    jBC: ABC.V.FT.TODAY
+}
+
 public method ABcValidaTellerFolVal (
 )
 {
