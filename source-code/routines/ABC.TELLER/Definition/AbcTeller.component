@@ -9,6 +9,13 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABc2brValidaDenomNoTc (
+)
+{
+    jBC: ABC.2BR.VALIDA.DENOM.NO.TC
+}
+
+
 public method AbcValRevCajero (
 )
 {
