@@ -23,7 +23,8 @@ $PACKAGE AbcTeller
     $USING ST.Customer
     $USING AC.AccountOpening
     $USING AbcGetGeneralParam
-   
+    $USING EB.LocalReferences
+
     GOSUB INICIALIZA
     GOSUB PROCESO
     RETURN
@@ -76,7 +77,7 @@ PROCESO:
 
     IF REC.CUSTO THEN
 *        Y.CLASS.CUST = REC.CUSTO<EB.CUS.LOCAL.REF, POS.CLASSIFICATION>
-        Y.SECTOR = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
+        Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
     END
 
     IF (Y.SECTOR NE 1300) AND (Y.SECTOR NE 1301) THEN
