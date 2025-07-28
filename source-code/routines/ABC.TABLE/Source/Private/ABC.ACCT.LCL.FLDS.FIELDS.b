@@ -268,9 +268,36 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddoptionsfield   ('UPDATE.NIVEL'       ,'CAMBIO.N4', 'A', '')
     EB.Template.TableAddfielddefinition('FECHA.UPD.NVL'    ,'15'   , 'A', '')
 
+    EB.Template.TableAddfielddefinition('CUSTOMER'        ,T24_Customer      , '', '')
+    EB.Template.FieldSetcheckfile      ("CUSTOMER")
+    EB.Template.TableAddfielddefinition('MONEDA'        ,T24_String      , '', '')
+    EB.Template.FieldSetcheckfile      ("CURRENCY")
+    EB.Template.TableAddfielddefinition('ROL'        ,T24_String      , '', '')
+    EB.Template.FieldSetcheckfile      ("AA.CUSTOMER.ROLE")
+    EB.Template.TableAddfielddefinition('CREATE.DATE'        ,'8'      , 'D', '')            
+    EB.Template.TableAddfielddefinition('PRODUCTO'        ,T24_String      , '', '')
+    EB.Template.FieldSetcheckfile      ("AA.PRODUCT")
 
-
-
+    EB.Template.TableAddreservedfield('RESERVED.40')
+    EB.Template.TableAddreservedfield('RESERVED.39')
+    EB.Template.TableAddreservedfield('RESERVED.38')
+    EB.Template.TableAddreservedfield('RESERVED.37')
+    EB.Template.TableAddreservedfield('RESERVED.36')
+    EB.Template.TableAddreservedfield('RESERVED.35')
+    EB.Template.TableAddreservedfield('RESERVED.34')
+    EB.Template.TableAddreservedfield('RESERVED.33')
+    EB.Template.TableAddreservedfield('RESERVED.32')
+    EB.Template.TableAddreservedfield('RESERVED.31')
+    EB.Template.TableAddreservedfield('RESERVED.30')
+    EB.Template.TableAddreservedfield('RESERVED.29')
+    EB.Template.TableAddreservedfield('RESERVED.28')
+    EB.Template.TableAddreservedfield('RESERVED.27')
+    EB.Template.TableAddreservedfield('RESERVED.26')
+    EB.Template.TableAddreservedfield('RESERVED.25')
+    EB.Template.TableAddreservedfield('RESERVED.24')
+    EB.Template.TableAddreservedfield('RESERVED.23')
+    EB.Template.TableAddreservedfield('RESERVED.22')
+    EB.Template.TableAddreservedfield('RESERVED.21')
     EB.Template.TableAddreservedfield('RESERVED.20')
     EB.Template.TableAddreservedfield('RESERVED.19')
     EB.Template.TableAddreservedfield('RESERVED.18')
@@ -291,7 +318,7 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddreservedfield('RESERVED.3')
     EB.Template.TableAddreservedfield('RESERVED.2')
     EB.Template.TableAddreservedfield('RESERVED.1')
-    
+
     EB.Template.TableSetauditposition()
 
 
