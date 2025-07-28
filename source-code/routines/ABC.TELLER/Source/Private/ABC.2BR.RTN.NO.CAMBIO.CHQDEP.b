@@ -16,7 +16,8 @@ $PACKAGE AbcTeller
 
     IF EB.SystemTables.getMessage() NE 'VAL' THEN
         IF EB.SystemTables.getAf() EQ TT.Contract.Teller.TeAmountLocalOne AND EB.SystemTables.getRNew(TT.Contract.Teller.TeCurrencyOne) EQ "MXN" THEN
-            T(TT.TE.AMOUNT.FCY.1)<3> = "NOINPUT"
+            tmp<3>="NOINPUT"
+            EB.SystemTables.setT(TT.Contract.Teller.TeAmountFcyOne, tmp)
         END
 
         VER.SOL = EB.SystemTables.getPgmVersion()
