@@ -11,7 +11,7 @@ $PACKAGE AbcTeller
     $USING EB.Updates
     $USING TT.Contract
     $USING EB.LocalReferences
-
+    $USING EB.Display
 
     EB.LocalReferences.GetLocRef("TELLER","GRAN.TOTAL",Y.POS.GRAN.TOTAL)
 

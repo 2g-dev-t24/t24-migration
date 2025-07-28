@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABc2brValidaDigitoTarjeta (
+)
+{
+    jBC: ABC.2BR.VALIDA.DIGITO.TARJETA
+}
+
 public method ABcBr2TeldenomTot (
 )
 {
