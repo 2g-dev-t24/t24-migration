@@ -18,7 +18,8 @@ $PACKAGE AbcTeller
     $USING EB.Security
     $USING FT.Contract
     $USING EB.ErrorProcessing
-
+    $USING  EB.Display
+    
     GOSUB INICIALIZA
     GOSUB VALIDA
     RETURN

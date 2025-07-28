@@ -552,7 +552,7 @@ private method AbcUpdCustStatus (
 }
 
 
-private method AbcValidaVerificaFolio (INOUT YDatos string, INOUT YError string)
+public method AbcValidaVerificaFolio (INOUT YDatos string, INOUT YError string)
 {
     jBC: ABC.VALIDA.VERIFICA.FOLIO
 }
