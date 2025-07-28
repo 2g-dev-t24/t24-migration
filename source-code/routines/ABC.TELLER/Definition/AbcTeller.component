@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABcValidaTransTypeAc (
+)
+{
+    jBC: ABC.VALIDA.TRANS.TYPE.AC
+}
+
 public method ABc2brValidaDenomNoTc (
 )
 {
