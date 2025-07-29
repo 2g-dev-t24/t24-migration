@@ -80,9 +80,11 @@ PROCESS:
     Y.INDUSTRY = R.CUSTOMER<ST.Customer.Customer.EbCusIndustry>
     IF LEN(Y.INDUSTRY) < 4 THEN
         Y.FILTRO = FMT(Y.INDUSTRY, "R%4")
+        Y.FILTRO = Y.INDUSTRY[1,2]
+    END ELSE
+        Y.FILTRO = Y.INDUSTRY[1,3]
     END
 
-    Y.FILTRO = Y.INDUSTRY[1,2]
 
     R.DATA = ""
     Y.CADENA.SALIDA = ""
