@@ -1,0 +1,38 @@
+public table AbcTtArqueo {
+    t24: ABC.TT.ARQUEO
+    fields:{
+        Cajero(TT.ARQ.CAJERO) = 1
+        TellerID(TT.ARQ.TELLER.ID) = 2
+        Moneda(TT.ARQ.MONEDA) = 3
+        Currency(TT.ARQ.CURRENCY) = 4
+        Narrative(TT.ARQ.NARRATIVE) = 5
+        Denom(TT.ARQ.DENOM) = 6
+        TellerDenomination(TT.ARQ.TELLER.DENOMINATION) = 7
+        Cantidad(TT.ARQ.CANTIDAD) = 8
+        CantidadFis(TT.ARQ.CANTIDAD.FIS) = 9
+        Reservado5(TT.ARQ.RESERVADO.1.5) = 10
+        Reservado4(TT.ARQ.RESERVADO.1.4) = 11
+        Reservado3(TT.ARQ.RESERVADO.1.3) = 12
+        Reservado2(TT.ARQ.RESERVADO.1.2) = 13
+        Reservado1(TT.ARQ.RESERVADO.1.1) = 14
+        Total(TT.ARQ.TOTAL) = 15
+        TotalFis(TT.ARQ.TOTAL.FIS) = 16
+        Diferencia(TT.ARQ.DIFERENCIA) = 17
+        Reserved5(TT.ARQ.RESERVED.5) = 18
+        Reserved4(TT.ARQ.RESERVED.4) = 19
+        Reserved3(TT.ARQ.RESERVED.3) = 20
+        Reserved2(TT.ARQ.RESERVED.2) = 21
+        Reserved1(TT.ARQ.RESERVED.1) = 22
+        LocalRef(TT.ARQ.LOCAL.REF) = 23
+        Override(TT.ARQ.OVERRIDE) = 24
+        RecordStatus(TT.ARQ.RECORD.STATUS) = 25
+        CurrNo(TT.ARQ.CURR.NO) = 26
+        Inputter(TT.ARQ.INPUTTER) = 27
+        DateTime(TT.ARQ.DATE.TIME) = 28
+        Authoriser(TT.ARQ.AUTHORISER) = 29
+        CoCode(TT.ARQ.CO.CODE) = 30
+        DeptCode(TT.ARQ.DEPT.CODE) = 31
+        AuditorCode(TT.ARQ.AUDITOR.CODE) = 32
+        AuditDateTime(TT.ARQ.AUDIT.DATE.TIME) = 33
+    }
+}

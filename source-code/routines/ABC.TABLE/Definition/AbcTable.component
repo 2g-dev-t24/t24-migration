@@ -12,6 +12,16 @@ private method AbcParametrosSpeiFields ()
 {
     jBC: ABC.PARAMETROS.SPEI.FIELDS
 }
+# -------------------------------------------------
+private method AbcTtArqueo ()
+{
+    jBC: ABC.TT.ARQUEO
+}
+
+private method AbcTtArqueoFields ()
+{
+    jBC: ABC.TT.ARQUEO.FIELDS
+}
 
 # -------------------------------------------------
 private method AbcActividadEconomica ()
