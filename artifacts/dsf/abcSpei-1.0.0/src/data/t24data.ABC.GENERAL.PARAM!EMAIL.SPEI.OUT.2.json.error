@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "EMAIL.SPEI.OUT.2",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "error" : {
+    "code" : "TGVCP-002",
+    "message" : "Resource not found",
+    "type" : "BUSINESS"
+  }
+}

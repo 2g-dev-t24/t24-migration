@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "ABC.ACCT.LCL.FLDS,ABC.ACCOUNT.API",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "FIELDS.PER.LINE" : "1",
+    "REPORT.LOCKS" : "YES",
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1"
+  }
+}

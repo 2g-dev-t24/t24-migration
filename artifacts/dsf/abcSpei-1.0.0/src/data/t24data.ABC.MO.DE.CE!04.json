@@ -1,0 +1,15 @@
+{
+  "header" : {
+    "id" : "04",
+    "dsfApiType" : "ABC.MO.DE.CE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPCION" : "La firma del librador no es como la tenemos registrada"
+  }
+}

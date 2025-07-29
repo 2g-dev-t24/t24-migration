@@ -1,0 +1,15 @@
+{
+  "header" : {
+    "id" : "16",
+    "dsfApiType" : "ABC.MO.DE.CE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPCION" : "Cheque con el mismo numero de uno ya ha sido pagado"
+  }
+}

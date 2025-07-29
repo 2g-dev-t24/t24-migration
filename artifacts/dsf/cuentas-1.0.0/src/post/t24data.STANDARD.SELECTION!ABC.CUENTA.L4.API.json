@@ -1,0 +1,287 @@
+{
+  "header" : {
+    "id" : "ABC.CUENTA.L4.API",
+    "dsfApiType" : "STANDARD.SELECTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SYS.FIELD.NAME" : [ {
+      "SYS.DISPLAY.FMT" : "35L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "0"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "@ID"
+    }, {
+      "SYS.DISPLAY.FMT" : "35L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "0"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "ID"
+    }, {
+      "SYS.DISPLAY.FMT" : "20L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "1"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "ACCOUNT"
+    }, {
+      "SYS.DISPLAY.FMT" : "50L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "2"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "APE.PATERNO"
+    }, {
+      "SYS.DISPLAY.FMT" : "50L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "3"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "APE.MATERNO"
+    }, {
+      "SYS.DISPLAY.FMT" : "100L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "4"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "NOMBRES"
+    }, {
+      "SYS.DISPLAY.FMT" : "8R",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2D"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "5"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "FEC.NAC"
+    }, {
+      "SYS.DISPLAY.FMT" : "3L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "6"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "PORCENTAJE"
+    }, {
+      "SYS.DISPLAY.FMT" : "100L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "7"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "EMAIL"
+    }, {
+      "SYS.DISPLAY.FMT" : "6L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "9"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "RECORD.STATUS"
+    }, {
+      "SYS.DISPLAY.FMT" : "6R",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "10"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "CURR.NO"
+    }, {
+      "SYS.DISPLAY.FMT" : "100L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "11"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "INPUTTER"
+    }, {
+      "SYS.DISPLAY.FMT" : "15R",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "12"
+      } ],
+      "SYS.SINGLE.MULT" : "M",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "DATE.TIME"
+    }, {
+      "SYS.DISPLAY.FMT" : "100L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "13"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "AUTHORISER"
+    }, {
+      "SYS.DISPLAY.FMT" : "11L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "14"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.REL.FILE" : [ {
+        "SYS.REL.FILE" : "COMPANY"
+      } ],
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "CO.CODE"
+    }, {
+      "SYS.DISPLAY.FMT" : "4L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "15"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.REL.FILE" : [ {
+        "SYS.REL.FILE" : "DEPT.ACCT.OFFICER"
+      } ],
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "DEPT.CODE"
+    }, {
+      "SYS.DISPLAY.FMT" : "16L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "16"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "AUDITOR.CODE"
+    }, {
+      "SYS.DISPLAY.FMT" : "15R",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "17"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "AUDIT.DATE.TIME"
+    }, {
+      "SYS.DISPLAY.FMT" : "100L",
+      "SYS.TYPE" : "D",
+      "SYS.GENERATED" : "Y",
+      "SYS.VAL.PROG" : [ {
+        "SYS.VAL.PROG" : "IN2A"
+      } ],
+      "SYS.FIELD.NO" : [ {
+        "SYS.FIELD.NO" : "8"
+      } ],
+      "SYS.SINGLE.MULT" : "S",
+      "SYS.ALT.INDEX" : "N",
+      "SYS.LANG.FIELD" : "N",
+      "SYS.FIELD.NAME" : "PREG.FON.TER"
+    } ]
+  }
+}

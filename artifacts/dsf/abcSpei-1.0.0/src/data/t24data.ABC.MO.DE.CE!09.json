@@ -1,0 +1,15 @@
+{
+  "header" : {
+    "id" : "09",
+    "dsfApiType" : "ABC.MO.DE.CE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPCION" : "Librador esta en quiebra, concurso o suspension de pagos"
+  }
+}

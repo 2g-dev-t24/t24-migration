@@ -66,12 +66,6 @@
     }, {
       "AUTOM.FIELD.NO" : "CHQ.ISSUE.ID",
       "AUT.NEW.CONTENT" : "@BMV.ID.CAJA"
-    }, {
-      "AUTOM.FIELD.NO" : "CREDIT.ACCT.NO",
-      "AUT.NEW.CONTENT" : "4013800001"
-    }, {
-      "AUTOM.FIELD.NO" : "CANAL.ENTIDAD",
-      "AUT.NEW.CONTENT" : "1"
     } ],
     "FIELD.NO" : [ {
       "FIELD.NO" : "*",

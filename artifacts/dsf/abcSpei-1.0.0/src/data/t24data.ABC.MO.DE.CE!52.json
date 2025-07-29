@@ -1,0 +1,15 @@
+{
+  "header" : {
+    "id" : "52",
+    "dsfApiType" : "ABC.MO.DE.CE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPCION" : "Corresponde a un talonario reportado como extraviado"
+  }
+}

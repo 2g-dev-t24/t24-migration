@@ -1,0 +1,32 @@
+{
+  "header" : {
+    "id" : "SYSTEM",
+    "dsfApiType" : "ABC.PARAMETROS.SPEI",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TIPO.TERC.TERC" : "1",
+    "DAYS.TO.HIS" : "30",
+    "TIPO.BCO.TERCERO" : "5",
+    "TXN.TIPO.ENV" : "ACSE",
+    "SPEI.DEVOL.REC" : "../interfaces/datos/transfer/speua/enviados/validos",
+    "DISP.PATH" : "../interfaces/datos/transfer/dispersion/files",
+    "TXN.TIPO.REC" : "ACSR",
+    "DISP.AMT" : "50000",
+    "TXN.TIPO.DEV" : "ACSD",
+    "TXN.TIPO.MEN" : "ACSE",
+    "SPEI.CTA.BANXICO" : "04013800001",
+    "SPEI.MONTO.MAX" : "100000",
+    "SPEI.ORD.REC" : "../interfaces/datos/transfer/speua/recibidos/validos",
+    "NUM.DIAS.DISP" : "5",
+    "SPEI.CTA.MENORES" : "04013800001",
+    "DAYS.TO.DEL" : "365",
+    "SPEI.ORD.REC.DEVOL" : "../interfaces/datos/transfer/speua/recibidos/devueltos",
+    "DISP.ERR.PATH" : "../interfaces/datos/transfer/dispersion/log.err"
+  }
+}

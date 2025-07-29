@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "ABC.CUENTA.L4.API",
+    "dsfApiType" : "FILE.CONTROL",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "FILE.MODULO" : "11",
+    "CUS.CLEAR.FILES" : "N",
+    "SYS.CLEAR.FILES" : "Y",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.CUENTA.L4.API"
+    } ],
+    "PRODUCT" : "EB",
+    "CLASSIFICATION" : "INT",
+    "SUFFIXES" : [ {
+      "SUFFIXES" : "$NAU"
+    }, {
+      "SUFFIXES" : "$HIS"
+    } ],
+    "FILE.TYPE" : "3"
+  }
+}

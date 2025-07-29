@@ -1,0 +1,131 @@
+{
+  "header" : {
+    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,ABC.FISICA.CON.CTE.NIVEL4L",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "BANXICO.ECO.ACTIVITY",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Actividad Económica"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "SOURCE.REC",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.ORIGEN.RECURSOS",
+      "TEXT" : [ {
+        "TEXT" : "Origen de los Recursos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "ACCOUNT.PURPOSE",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.DESTINO.RECURSO",
+      "TEXT" : [ {
+        "TEXT" : "Destino de los Recursos"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "COMMENTS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Cliente Considerado Politicamente"
+      } ],
+      "TEXT.CHAR.MAX" : "33",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-71-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "RELATION.CLIENT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Cliente Relacionado a una Persona"
+      } ],
+      "TEXT.CHAR.MAX" : "33",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-71-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "JOB.POSITION",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Puesto en el último ano"
+      } ],
+      "TEXT.CHAR.MAX" : "23",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-46-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "OTHERS",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Nombre persona PPE"
+      } ],
+      "TEXT.CHAR.MAX" : "18",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-51-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "RELATION.TYPE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Relacion"
+      } ],
+      "TEXT.CHAR.MAX" : "16",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-54-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "SAT.TAX.REGIME.CODE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Régimen Fiscal"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-58-"
+      } ],
+      "TABLE.LINE" : "8"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Conoce a tu cliente Adicional"
+    }, {
+      "DESCRIPTION" : "Conoce a tu cliente"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Conoce tu ClienteL4"
+    } ]
+  }
+}

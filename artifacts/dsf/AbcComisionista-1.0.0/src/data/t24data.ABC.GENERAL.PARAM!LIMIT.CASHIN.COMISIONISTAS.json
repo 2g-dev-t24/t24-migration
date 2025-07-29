@@ -1,0 +1,36 @@
+{
+  "header" : {
+    "id" : "LIMIT.CASHIN.COMISIONISTAS",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "LIMITE.COMI",
+      "COMENTARIO" : "Limite en UDIS",
+      "DATO.PARAMETRO" : "4000"
+    }, {
+      "NOMB.PARAMETRO" : "MONEDA",
+      "COMENTARIO" : "Moneda",
+      "DATO.PARAMETRO" : "UDI"
+    }, {
+      "NOMB.PARAMETRO" : "VALOR.LIMITE",
+      "COMENTARIO" : "Valor Limite",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "COMISIONISTA",
+      "COMENTARIO" : "Configurar los comisionistas para los cuales se aplica la validación de limite",
+      "DATO.PARAMETRO" : "1001|856"
+    }, {
+      "NOMB.PARAMETRO" : "NIVEL.CUENTA",
+      "COMENTARIO" : "Nivel Cuenta",
+      "DATO.PARAMETRO" : "NIVEL.4L"
+    } ],
+    "MODULO" : "Parametrizacion para limite de comisionistas"
+  }
+}

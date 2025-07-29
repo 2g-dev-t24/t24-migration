@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "ABC.INSTITUCIONES",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "BANCOS",
+      "COMENTARIO" : ".",
+      "DATO.PARAMETRO" : "40"
+    }, {
+      "NOMB.PARAMETRO" : "CASA.BOLSA",
+      "COMENTARIO" : "-",
+      "DATO.PARAMETRO" : "90"
+    }, {
+      "NOMB.PARAMETRO" : "GOBIERNO",
+      "COMENTARIO" : ".",
+      "DATO.PARAMETRO" : "37"
+    } ],
+    "MODULO" : "TIPO DE INSTITUCIONES"
+  }
+}

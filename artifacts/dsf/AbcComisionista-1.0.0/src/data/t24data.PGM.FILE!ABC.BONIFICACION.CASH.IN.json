@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.BONIFICACION.CASH.IN",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "Bonificaciones CashIn"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "H"
+  }
+}

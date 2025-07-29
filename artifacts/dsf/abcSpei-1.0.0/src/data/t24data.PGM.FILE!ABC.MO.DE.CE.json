@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.MO.DE.CE",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "ABC.MO.DE.CE"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "H"
+  }
+}

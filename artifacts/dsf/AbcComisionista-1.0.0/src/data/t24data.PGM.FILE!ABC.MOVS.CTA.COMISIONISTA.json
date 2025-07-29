@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.MOVS.CTA.COMISIONISTA",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "Movimientos CashIn Comisionistas"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "H"
+  }
+}

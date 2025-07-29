@@ -1,0 +1,40 @@
+{
+  "header" : {
+    "id" : "909734",
+    "dsfApiType" : "ACCOUNT",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "CURRENCY" : "MXN",
+    "ACCOUNT.OFFICER" : "90250",
+    "ACCOUNT.TITLE.1" : [ {
+      "ACCOUNT.TITLE.1" : "OPTIMIZACION DE RECURSOS REGALII S"
+    }, {
+      "ACCOUNT.TITLE.1" : "OPTIMIZACION DE RECURSOS REGALII S"
+    } ],
+    "POSITION.TYPE" : "TR",
+    "ALT.ACCT.TYPE" : [ { }, { }, { }, {
+      "ALT.ACCT.ID" : "138580000009097341"
+    } ],
+    "AVAILABLE.BAL.UPD" : "DEBITS",
+    "ALLOW.NETTING" : "YES",
+    "CATEGORY" : "1004",
+    "SINGLE.LIMIT" : "N",
+    "HVT.FLAG" : "NO",
+    "CUSTOMER" : "1000319590",
+    "CREDIT.CHECK" : "WORKING",
+    "PASSBOOK" : "NO",
+    "CURRENCY.MARKET" : "1",
+    "SHORT.TITLE" : [ {
+      "SHORT.TITLE" : "OPTIMIZACION DE RECURSOS REGALII S"
+    }, {
+      "SHORT.TITLE" : "OPTIMIZACION DE RECURSOS REGALII S"
+    } ],
+    "OPENING.DATE" : "20220715"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "header" : {
+    "id" : "08",
+    "dsfApiType" : "ABC.MO.DE.CE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPCION" : "Ha sido revocado y ya se vencio plazo legal de presentacion"
+  }
+}

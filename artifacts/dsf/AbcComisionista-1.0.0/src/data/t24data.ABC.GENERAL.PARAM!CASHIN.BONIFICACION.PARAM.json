@@ -1,0 +1,44 @@
+{
+  "header" : {
+    "id" : "CASHIN.BONIFICACION.PARAM",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "MONTO.MIN",
+      "COMENTARIO" : "Monto minimo para considerar bonificacion",
+      "DATO.PARAMETRO" : "50"
+    }, {
+      "NOMB.PARAMETRO" : "MONTO.BON",
+      "COMENTARIO" : "Monto a bonificar por cada operacion que emite bonificacion",
+      "DATO.PARAMETRO" : "10"
+    }, {
+      "NOMB.PARAMETRO" : "NUM.OPERACIONES",
+      "COMENTARIO" : "Numero maximo de operaciones que emiten bonificacion",
+      "DATO.PARAMETRO" : "3"
+    }, {
+      "NOMB.PARAMETRO" : "COMI.NO.BONIFICA",
+      "COMENTARIO" : "IDs Comisionistas que no emiten bonificacion, separar con |",
+      "DATO.PARAMETRO" : "1001|"
+    }, {
+      "NOMB.PARAMETRO" : "OFS.SOURCE",
+      "COMENTARIO" : "Para proceso de bonificacion y cancelaciones",
+      "DATO.PARAMETRO" : "ATM.ONLINE"
+    }, {
+      "NOMB.PARAMETRO" : "USUARIO.OFS",
+      "COMENTARIO" : "Para proceso de bonificacion y cancelaciones",
+      "DATO.PARAMETRO" : "T24PROCESOS"
+    }, {
+      "NOMB.PARAMETRO" : "PASSWORD.OFS",
+      "COMENTARIO" : "Para proceso de bonificacion y cancelaciones",
+      "DATO.PARAMETRO" : "QWASZX@12"
+    } ],
+    "MODULO" : "PARAMETROS DE BONIFICACION CASH.IN UALA"
+  }
+}

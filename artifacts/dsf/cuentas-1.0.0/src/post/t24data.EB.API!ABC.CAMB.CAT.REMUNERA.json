@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.CAMB.CAT.REMUNERA",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.CAMB.CAT.REMUNERA"
+    } ],
+    "PROTECTION.LEVEL" : "NONE"
+  }
+}

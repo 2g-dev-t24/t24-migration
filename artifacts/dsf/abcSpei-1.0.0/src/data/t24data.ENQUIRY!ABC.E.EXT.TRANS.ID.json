@@ -1,0 +1,56 @@
+{
+  "header" : {
+    "id" : "ABC.E.EXT.TRANS.ID",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "REQUIRED.SEL" : "Y",
+      "SEL.LABEL" : [ { }, {
+        "SEL.LABEL" : "EXT.TRANS.ID"
+      } ],
+      "SELECTION.FLDS" : "@ID",
+      "SEL.FLD.OPER" : "EQ"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "60L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ID"
+      }, {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "ID.FT"
+      } ],
+      "FIELD.NAME" : "ID.FT",
+      "LENGTH.MASK" : "20L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "FT"
+      }, {
+        "FIELD.LBL" : "FT"
+      } ]
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Consulta para cancelacion"
+    }, {
+      "SHORT.DESC" : "Consulta para cancelacion"
+    } ],
+    "FILE.NAME" : "ABC.L.FT.TXN.DETAIL"
+  }
+}

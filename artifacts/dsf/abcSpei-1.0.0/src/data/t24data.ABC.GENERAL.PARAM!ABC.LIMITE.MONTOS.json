@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "ABC.LIMITE.MONTOS",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "LIMITE.CODI",
+      "COMENTARIO" : ".",
+      "DATO.PARAMETRO" : "8000"
+    }, {
+      "NOMB.PARAMETRO" : "LIMITE.OPER.EXPRESS",
+      "COMENTARIO" : ".",
+      "DATO.PARAMETRO" : "11500"
+    }, {
+      "NOMB.PARAMETRO" : "LIMITE.OPER.TRANSFER.EXPRESS",
+      "COMENTARIO" : ".",
+      "DATO.PARAMETRO" : "11500"
+    } ],
+    "MODULO" : "Parametrizacion de los montos para SPEI y CODI"
+  }
+}

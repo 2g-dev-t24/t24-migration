@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "52161",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Comm Acc on LD"
+    }, {
+      "SHORT.NAME" : "Comm Acc on LD"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Commission Accrual on LD"
+    }, {
+      "DESCRIPTION" : "Commission Accrual on LD"
+    } ],
+    "SYSTEM.IND" : "PL"
+  }
+}

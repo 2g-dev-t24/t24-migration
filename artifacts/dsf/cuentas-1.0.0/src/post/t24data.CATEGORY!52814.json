@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "52814",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "BrokMiscFees"
+    }, {
+      "SHORT.NAME" : "BrokMiscFees"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Broker Miscellaneous Fees"
+    }, {
+      "DESCRIPTION" : "Broker Miscellaneous Fees"
+    } ],
+    "SYSTEM.IND" : "PL"
+  }
+}

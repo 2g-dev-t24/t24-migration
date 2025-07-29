@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "52440",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Com.Ptmo (Ant)"
+    }, {
+      "SHORT.NAME" : "Com.Ptmo (Ant)"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Comision Ganada Prestamos (Antic.)"
+    }, {
+      "DESCRIPTION" : "Comision Ganada Prestamos (Antic.)"
+    } ],
+    "SYSTEM.IND" : "PL"
+  }
+}

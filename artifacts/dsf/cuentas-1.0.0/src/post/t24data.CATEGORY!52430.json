@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "id" : "52430",
+    "dsfApiType" : "CATEGORY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "Com. Ptmos."
+    }, {
+      "SHORT.NAME" : "Com. Ptmos."
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Comisiones ganadas sobre prestamos"
+    }, {
+      "DESCRIPTION" : "Comisiones ganadas sobre prestamos"
+    } ],
+    "SYSTEM.IND" : "PL"
+  }
+}

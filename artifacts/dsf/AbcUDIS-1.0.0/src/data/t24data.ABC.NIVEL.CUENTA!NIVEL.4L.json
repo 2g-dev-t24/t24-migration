@@ -1,0 +1,73 @@
+{
+  "header" : {
+    "id" : "NIVEL.4L",
+    "dsfApiType" : "ABC.NIVEL.CUENTA",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LIMITE" : "30000",
+    "MONEDA" : "UDI",
+    "VALOR.LIMITE" : "251898.30",
+    "DESCRIPCION" : "Depósitos : Hasta 30000 UDIS",
+    "APLICACION" : [ {
+      "TRANSACCION.CR" : [ {
+        "TRANSACCION.CR" : "AC"
+      }, {
+        "TRANSACCION.CR" : "ACMI"
+      }, {
+        "TRANSACCION.CR" : "ACBI"
+      }, {
+        "TRANSACCION.CR" : "ACSR"
+      }, {
+        "TRANSACCION.CR" : "ACCR"
+      }, {
+        "TRANSACCION.CR" : "ACFF"
+      }, {
+        "TRANSACCION.CR" : "ACVC"
+      }, {
+        "TRANSACCION.CR" : "ACBC"
+      }, {
+        "TRANSACCION.CR" : "ACRM"
+      }, {
+        "TRANSACCION.CR" : "ACDC"
+      }, {
+        "TRANSACCION.CR" : "ACCI"
+      }, {
+        "TRANSACCION.CR" : "ACPT"
+      }, {
+        "TRANSACCION.CR" : "ACCB"
+      } ],
+      "TRANSACCION.DR" : [ {
+        "TRANSACCION.DR" : "ACRT"
+      }, {
+        "TRANSACCION.DR" : "ACRR"
+      }, {
+        "TRANSACCION.DR" : "ACER"
+      }, {
+        "TRANSACCION.DR" : "ACEE"
+      }, {
+        "TRANSACCION.DR" : "ACVC"
+      }, {
+        "TRANSACCION.DR" : "ACBC"
+      }, {
+        "TRANSACCION.DR" : "ACMI"
+      }, {
+        "TRANSACCION.DR" : "ACRM"
+      }, {
+        "TRANSACCION.DR" : "ACDC"
+      }, {
+        "TRANSACCION.DR" : "ACID"
+      }, {
+        "TRANSACCION.DR" : "ACPT"
+      }, {
+        "TRANSACCION.DR" : "ACBI"
+      } ],
+      "APLICACION" : "FUNDS.TRANSFER"
+    } ]
+  }
+}

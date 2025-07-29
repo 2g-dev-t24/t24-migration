@@ -1,0 +1,161 @@
+{
+  "header" : {
+    "id" : "SYSTEM",
+    "dsfApiType" : "ABC.EMAIL.SMS.PARAMETER",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SMS.ACTIVO" : "N",
+    "BANK.NAME" : "ABC Capital S.A Institucion de Banca Multiple",
+    "INVALID.CHAR" : "°!\"#$%&/()=?¡|¿\\¬¨*~[]{};:,<>'´`^",
+    "EMAIL.ACC.MIN" : [ {
+      "EMAIL.DOM.MIN" : "2",
+      "EMAIL.ACC.MIN" : "1",
+      "EMAIL.MAX.DOT" : "3"
+    } ],
+    "NUM.MENSAJE" : "999",
+    "PHONE.1" : "01 800 2888 222",
+    "VAL.GEN.DOM" : [ {
+      "VAL.GEN.DOM" : ".com"
+    }, {
+      "VAL.GEN.DOM" : ".net"
+    }, {
+      "VAL.GEN.DOM" : ".gob"
+    }, {
+      "VAL.GEN.DOM" : ".name"
+    }, {
+      "VAL.GEN.DOM" : ".org"
+    }, {
+      "VAL.GEN.DOM" : ".info"
+    }, {
+      "VAL.GEN.DOM" : ".biz"
+    }, {
+      "VAL.GEN.DOM" : ".aero"
+    }, {
+      "VAL.GEN.DOM" : ".edu"
+    }, {
+      "VAL.GEN.DOM" : ".mx"
+    } ],
+    "OFS.SOURCE" : "OFS.SMSEMAIL",
+    "EMAIL.OPERACION" : "autorizaciones.operacion@abccapital.com.mx",
+    "TRAN.TYPE" : [ {
+      "SUBJECT" : "Aviso Transaccion en Cajero",
+      "TRANSACTION" : [ {
+        "TRANSACTION" : "ACAT"
+      }, {
+        "TRANSACTION" : "ACRD"
+      } ],
+      "TRAN.TYPE" : "ATM"
+    }, {
+      "SUBJECT" : "Aviso Compra TPV",
+      "TRAN.TYPE" : "POS"
+    }, {
+      "SUBJECT" : "Aviso Transferencia Efectuada",
+      "TRANSACTION" : [ {
+        "TRANSACTION" : "ACSE"
+      }, {
+        "TRANSACTION" : "ACSR"
+      } ],
+      "TRAN.TYPE" : "SPEI"
+    }, {
+      "SUBJECT" : "Aviso Transferencia Efectuada",
+      "TRANSACTION" : [ {
+        "TRANSACTION" : "AC"
+      } ],
+      "TRAN.TYPE" : "AC"
+    }, {
+      "SUBJECT" : "Actualizacion Datos de Contacto",
+      "TRAN.TYPE" : "CUEM"
+    }, {
+      "SUBJECT" : "Actualizacion Datos de Contacto",
+      "TRAN.TYPE" : "CUMO"
+    }, {
+      "SUBJECT" : "Alta Cuentas de Terceros",
+      "TRAN.TYPE" : "BIAT"
+    }, {
+      "SUBJECT" : "Modificacion Cuentas de Terceros",
+      "TRAN.TYPE" : "BIMT"
+    }, {
+      "SUBJECT" : "Alta Cuentas Interbancarias",
+      "TRAN.TYPE" : "BIAI"
+    }, {
+      "SUBJECT" : "Modificacion Cuentas Interbancarias",
+      "TRAN.TYPE" : "BIMI"
+    }, {
+      "SUBJECT" : "Alta Tarjeta de Credito",
+      "TRAN.TYPE" : "BIAC"
+    }, {
+      "SUBJECT" : "Modificacion Tarjeta de Credito",
+      "TRAN.TYPE" : "BIMC"
+    }, {
+      "SUBJECT" : "Alta Tarjeta de Debito",
+      "TRAN.TYPE" : "BIAD"
+    }, {
+      "SUBJECT" : "Modificacion Tarjeta de Debito",
+      "TRAN.TYPE" : "BIMD"
+    }, {
+      "SUBJECT" : "Baja Tarjeta de Debito",
+      "TRAN.TYPE" : "BIBD"
+    }, {
+      "SUBJECT" : "Alta de Celular",
+      "TRAN.TYPE" : "BACE"
+    }, {
+      "SUBJECT" : "Modificacion de Celular",
+      "TRAN.TYPE" : "BMCE"
+    }, {
+      "SUBJECT" : "Baja de Celular",
+      "TRAN.TYPE" : "BBCE"
+    } ],
+    "TRAN.TYPE.2" : [ {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIAI"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIMI"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIBI"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIAT"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIMT"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIBT"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIAC"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIMC"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIBC"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIAD"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIMD"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BIBD"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BACE"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BMCE"
+    }, {
+      "ENV.CAMBIO.EST" : "N",
+      "TRAN.TYPE.2" : "BBCE"
+    } ]
+  }
+}

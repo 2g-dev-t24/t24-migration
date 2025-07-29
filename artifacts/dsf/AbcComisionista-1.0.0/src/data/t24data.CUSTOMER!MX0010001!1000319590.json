@@ -1,0 +1,73 @@
+{
+  "header" : {
+    "id" : "1000319590",
+    "dsfApiType" : "CUSTOMER",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "TARGET" : "1",
+    "NATIONALITY" : "MX",
+    "BIRTH.INCORP.DATE" : "20220711",
+    "MNEMONIC" : "A1000319590",
+    "CLS.CPARTY" : "NO",
+    "OFF.PHONE" : [ {
+      "OFF.PHONE" : "5575899911"
+    } ],
+    "GROUP.CLASSIFIC" : "4",
+    "CUSTOMER.STATUS" : "1",
+    "SHORT.NAME" : [ { }, {
+      "SHORT.NAME" : "OPTIMIZACION DE RECURSOS REGALII S"
+    } ],
+    "RESIDENCE" : "MX",
+    "COUNTRY" : [ { }, {
+      "COUNTRY" : "MX"
+    } ],
+    "REVIEW.FREQUENCY" : "20240417M0101",
+    "MOBILE.BANKING.SERVICE" : "NULL",
+    "NAME.1" : [ { }, {
+      "NAME.1" : "OPTIMIZACION DE RECURSOS REGALII S"
+    } ],
+    "TOWN.COUNTRY" : [ { }, {
+      "TOWN.COUNTRY" : "0906"
+    } ],
+    "LANGUAGE" : "2",
+    "ACCOUNT.OFFICER" : "90250",
+    "INDUSTRY" : "8120",
+    "SECTOR" : "8100",
+    "L.NOM.ACCIONIST" : [ {
+      "L.NAC.ACCIONIST" : "ESTADOUNIDENSE",
+      "L.ACC.PORCENTAJ" : "99.00",
+      "L.NOM.ACCIONIST" : "ARCUS FINANCIAL INTELLIGENCE INC",
+      "L.RES.ACCIONIST" : "1209 ORANGE STREET WILMINGTON CONDADO DE NEW CASTLE DELAWARE 1980"
+    }, {
+      "L.NAC.ACCIONIST" : "ESTADOUNIDENSE",
+      "L.ACC.PORCENTAJ" : "1.00",
+      "L.NOM.ACCIONIST" : "MASTERCARD LATIN AMERICA HOLDINGS INC",
+      "L.RES.ACCIONIST" : "2000 PURCHASE STREET PURCHASE NY,10577"
+    } ],
+    "STREET" : [ { }, {
+      "STREET" : "RIO LERMA"
+    } ],
+    "L.SECTOR.ECO" : "52239",
+    "ADDRESS" : [ {
+      "ADDRESS" : [ {
+        "ADDRESS" : "4"
+      }, {
+        "ADDRESS" : "4"
+      } ]
+    } ],
+    "POST.CODE" : [ { }, {
+      "POST.CODE" : "06500"
+    } ],
+    "L.CONTACT.NAMES" : [ {
+      "L.CONTACT.POS" : "DIRECTOR DE COMERCIALIZACION DE PROD",
+      "L.CONTACT.NAMES" : "RODRIGO TREVIÑO ABEDROP"
+    } ],
+    "COMPANY.BOOK" : "MX0010001"
+  }
+}

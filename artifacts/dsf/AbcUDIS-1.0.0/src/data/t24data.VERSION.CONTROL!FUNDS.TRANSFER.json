@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "id" : "FUNDS.TRANSFER",
+    "dsfApiType" : "VERSION.CONTROL",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "INPUT.RTN" : [ {
+      "INPUT.RTN" : "ABC.I.UDIS.CTRL"
+    } ]
+  }
+}

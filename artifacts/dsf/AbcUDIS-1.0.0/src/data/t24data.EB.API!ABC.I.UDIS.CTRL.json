@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.I.UDIS.CTRL",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SOURCE.TYPE" : "BASIC",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.I.UDIS.CTRL"
+    } ],
+    "PROTECTION.LEVEL" : "FULL"
+  }
+}

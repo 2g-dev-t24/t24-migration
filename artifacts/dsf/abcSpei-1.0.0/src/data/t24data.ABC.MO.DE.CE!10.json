@@ -1,0 +1,15 @@
+{
+  "header" : {
+    "id" : "10",
+    "dsfApiType" : "ABC.MO.DE.CE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPCION" : "No hay continuidad en los endosos"
+  }
+}

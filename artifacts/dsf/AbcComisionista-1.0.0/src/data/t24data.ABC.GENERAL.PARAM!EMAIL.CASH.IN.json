@@ -1,0 +1,76 @@
+{
+  "header" : {
+    "id" : "EMAIL.CASH.IN",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "HTML.FILE",
+      "COMENTARIO" : "HTMLFILE",
+      "DATO.PARAMETRO" : "MX_Producto_T24_CashInRecibido.html"
+    }, {
+      "NOMB.PARAMETRO" : "PARAM",
+      "COMENTARIO" : "PARAM",
+      "DATO.PARAMETRO" : "Y.BEN.NAME*ABC.SMS.EMAIL.ENVIAR*NOMBRE.BEN"
+    }, {
+      "NOMB.PARAMETRO" : "PARAM",
+      "COMENTARIO" : "PARAM",
+      "DATO.PARAMETRO" : "nombreCliente*ABC.SMS.EMAIL.ENVIAR*NOMBRE"
+    }, {
+      "NOMB.PARAMETRO" : "PARAM",
+      "COMENTARIO" : "PARAM",
+      "DATO.PARAMETRO" : "cuentaCliente*ABC.SMS.EMAIL.ENVIAR*CUENTA"
+    }, {
+      "NOMB.PARAMETRO" : "PARAM",
+      "COMENTARIO" : "PARAM",
+      "DATO.PARAMETRO" : "Y.BANCO*ABC.SMS.EMAIL.ENVIAR*BANCO"
+    }, {
+      "NOMB.PARAMETRO" : "PARAM",
+      "COMENTARIO" : "PARAM",
+      "DATO.PARAMETRO" : "montoOpe*ABC.SMS.EMAIL.ENVIAR*MONTO"
+    }, {
+      "NOMB.PARAMETRO" : "PARAM",
+      "COMENTARIO" : "PARAM",
+      "DATO.PARAMETRO" : "horaOpe*ABC.SMS.EMAIL.ENVIAR*HORA"
+    }, {
+      "NOMB.PARAMETRO" : "PARAM",
+      "COMENTARIO" : "PARAM",
+      "DATO.PARAMETRO" : "fechaOpe*ABC.SMS.EMAIL.ENVIAR*FECHA"
+    }, {
+      "NOMB.PARAMETRO" : "PARAM",
+      "COMENTARIO" : "PARAM",
+      "DATO.PARAMETRO" : "folioRefe*ABC.SMS.EMAIL.ENVIAR*REFERENCIA"
+    }, {
+      "NOMB.PARAMETRO" : "RUTA.LOG",
+      "COMENTARIO" : "RUTA.LOG",
+      "DATO.PARAMETRO" : "../interfaces/LOGS"
+    }, {
+      "NOMB.PARAMETRO" : "NOMBRE.LOG",
+      "COMENTARIO" : "NOMBRE.LOG",
+      "DATO.PARAMETRO" : "NOTIFICACION.EMAIL.CASH.IN"
+    }, {
+      "NOMB.PARAMETRO" : "RUTA.LOG.ALTERNA",
+      "COMENTARIO" : "RUTA.LOG.ALTERNA",
+      "DATO.PARAMETRO" : "../interfaces/LOGS"
+    }, {
+      "NOMB.PARAMETRO" : "NOMBRE.LOG.ALTERNA",
+      "COMENTARIO" : "NOMBRE.LOG.ALTERNA",
+      "DATO.PARAMETRO" : "NOTIFICACION.ALTERNA.CASH.IN"
+    }, {
+      "NOMB.PARAMETRO" : "Y.CANAL.EMAIL",
+      "COMENTARIO" : "Se parametrizan los canales que no emiten email",
+      "DATO.PARAMETRO" : "|"
+    }, {
+      "NOMB.PARAMETRO" : "Y.CANAL.ALTERNA",
+      "COMENTARIO" : "Se parametrizan los canales que emiten notificación alterna",
+      "DATO.PARAMETRO" : "|"
+    } ],
+    "MODULO" : "=?UTF-8?Q?=C2=A1Recibiste un dep=C3=B3sito!?="
+  }
+}

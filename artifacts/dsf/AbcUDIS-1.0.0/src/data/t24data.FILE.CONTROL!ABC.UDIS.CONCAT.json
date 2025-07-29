@@ -1,0 +1,23 @@
+{
+  "header" : {
+    "id" : "ABC.UDIS.CONCAT",
+    "dsfApiType" : "FILE.CONTROL",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "FILE.MODULO" : "11",
+    "CUS.CLEAR.FILES" : "N",
+    "SYS.CLEAR.FILES" : "Y",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "ABC.UDIS.CONCAT"
+    } ],
+    "PRODUCT" : "EB",
+    "CLASSIFICATION" : "INT",
+    "FILE.TYPE" : "3"
+  }
+}

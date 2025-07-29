@@ -1,0 +1,15 @@
+{
+  "header" : {
+    "id" : "55",
+    "dsfApiType" : "ABC.MO.DE.CE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "DESCRIPCION" : "Cheque con sellos en anverso cubriendo datos"
+  }
+}

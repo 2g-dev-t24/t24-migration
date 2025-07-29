@@ -1,0 +1,187 @@
+{
+  "header" : {
+    "id" : "FUNDS.TRANSFER,ABC.COMISIONISTA.CASH.IN.AUT",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "INPUT.ROUTINE" : [ {
+      "INPUT.ROUTINE" : "ABC.FILL.INF.CASHIN"
+    }, {
+      "INPUT.ROUTINE" : "ABC.CALL.RTNS.GEN.FT"
+    }, {
+      "INPUT.ROUTINE" : "ABC.VAL.LIMIT.AC.CASHIN"
+    } ],
+    "AUTH.ROUTINE" : [ {
+      "AUTH.ROUTINE" : "ABC.SEND.EMAIL.CASHIN"
+    }, {
+      "AUTH.ROUTINE" : "ABC.REGISTRA.OPER.CASHIN"
+    } ],
+    "NO.OF.AUTH" : "1",
+    "RECORDS.PER.PAGE" : "1",
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "TRANSACTION.TYPE",
+      "AUT.NEW.CONTENT" : "ACCI"
+    }, {
+      "AUTOM.FIELD.NO" : "DEBIT.CURRENCY",
+      "AUT.NEW.CONTENT" : "MXN"
+    }, {
+      "AUTOM.FIELD.NO" : "CREDIT.CURRENCY",
+      "AUT.NEW.CONTENT" : "MXN"
+    }, {
+      "AUTOM.FIELD.NO" : "MT103.TYPE",
+      "AUT.NEW.CONTENT" : "Mt103extended"
+    }, {
+      "AUTOM.FIELD.NO" : "ORDERING.BANK-1",
+      "AUT.NEW.CONTENT" : "MX0010001"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "DEBIT.ACCT.NO",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Cuenta cargo"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-69-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "CREDIT.ACCT.NO",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Cuenta Abono"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-69-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "DEBIT.AMOUNT",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Monto"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-51-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "FIELD.NO" : "EXTEND.INFO-1",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Concepto"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-98-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "EXT.TRANS.ID",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Id transaccion externa"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-68-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "ID.ADMIN",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Administrador Comisionista"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-68-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "FIELD.NO" : "ID.COMI",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Comisionista"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-68-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "ID.ESTAB",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Establecimiento"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-68-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "HOT.FIELD"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "FIELD.NO" : "CANAL.ENTIDAD",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Canal"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-68-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "GEOLOCALIZACION",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Geolocalizacion"
+      } ],
+      "TEXT.CHAR.MAX" : "30",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "9"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "MULTI.POSSIBLE" : "Y",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Cash In"
+    } ],
+    "MANDATORY.FIELD" : [ {
+      "MANDATORY.FIELD" : "DEBIT.ACCT.NO"
+    }, {
+      "MANDATORY.FIELD" : "CREDIT.ACCT.NO"
+    }, {
+      "MANDATORY.FIELD" : "DEBIT.AMOUNT"
+    }, {
+      "MANDATORY.FIELD" : "ID.COMI"
+    }, {
+      "MANDATORY.FIELD" : "ID.ESTAB"
+    }, {
+      "MANDATORY.FIELD" : "CANAL.ENTIDAD"
+    }, {
+      "MANDATORY.FIELD" : "GEOLOCALIZACION"
+    } ],
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.FILL.DEBIT.ACCT.CASHIN",
+      "VALIDATION.FLD" : "ID.ESTAB"
+    } ]
+  }
+}

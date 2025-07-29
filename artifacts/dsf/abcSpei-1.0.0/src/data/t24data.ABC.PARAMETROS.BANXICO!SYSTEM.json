@@ -1,0 +1,47 @@
+{
+  "header" : {
+    "id" : "SYSTEM",
+    "dsfApiType" : "ABC.PARAMETROS.BANXICO",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "IMAGES.PATH" : "../../ArchivosT24/CECOBAN/ImagenesSuc/",
+    "AMT.IMG.USD" : "1000",
+    "BANXICO.NOMBRE.BANCO" : "ABC CAPITAL.",
+    "CECOBAN.REC.DEV" : "../../ArchivosT24/CECOBAN/ChequesDev",
+    "IMAGE.REC.PATH" : "../../ArchivosT24/CECOBAN/CamaraRecImg/",
+    "AMT.IMG.MXN" : "9000",
+    "CECOBAN.REC" : "../../ArchivosT24/CECOBAN/CamaraRec",
+    "IMAGE.POST.MAINT" : "30",
+    "BANXICO.PLAZA" : "580",
+    "FILES.PATH" : "../../ArchivosT24/CECOBAN/CamaraGen/",
+    "IMAGE.TYPE" : "3",
+    "TT.TXN.DEP.USD" : "99",
+    "ACCT.REST" : [ {
+      "REJ.CODE" : "02",
+      "ACCT.REST" : "80"
+    }, {
+      "REJ.CODE" : "02",
+      "ACCT.REST" : "95"
+    }, {
+      "REJ.CODE" : "09",
+      "ACCT.REST" : "1"
+    }, {
+      "REJ.CODE" : "09",
+      "ACCT.REST" : "2"
+    }, {
+      "REJ.CODE" : "07",
+      "ACCT.REST" : "84"
+    }, {
+      "REJ.CODE" : "07",
+      "ACCT.REST" : "5"
+    } ],
+    "BANXICO.NUM.BANCO" : "138",
+    "TT.TXN.DEP.MXN" : "11"
+  }
+}

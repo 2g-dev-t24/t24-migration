@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "CUENTAS.ABONO.SERVICIOS.CASHIN",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "401382610001",
+      "COMENTARIO" : "ADMINISTRADOR",
+      "DATO.PARAMETRO" : "00000909734"
+    }, {
+      "NOMB.PARAMETRO" : "856",
+      "COMENTARIO" : "COMISIONISTA",
+      "DATO.PARAMETRO" : "00000909734"
+    }, {
+      "NOMB.PARAMETRO" : "863",
+      "COMENTARIO" : "COMISIONISTA",
+      "DATO.PARAMETRO" : "00000909734"
+    } ],
+    "MODULO" : "CUENTAS DE ABONO PARA SERVICIOS CASH IN"
+  }
+}

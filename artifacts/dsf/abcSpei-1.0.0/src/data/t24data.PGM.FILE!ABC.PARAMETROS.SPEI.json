@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "ABC.PARAMETROS.SPEI",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "ABC.PARAMETROS.SPEI"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "H"
+  }
+}

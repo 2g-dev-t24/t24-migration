@@ -1,0 +1,56 @@
+{
+  "header" : {
+    "id" : "AA.ARRANGEMENT.ACTIVITY,ABC.CHANGE.PRODUCT.1.0.0",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "FIELDS.PER.LINE" : "1",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "ACTIVITY",
+      "AUT.NEW.CONTENT" : "ACCOUNTS-CHANGE.PRODUCT-ARRANGEMENT"
+    }, {
+      "AUTOM.FIELD.NO" : "PROPERTY-1",
+      "AUT.NEW.CONTENT" : "BALANCE"
+    }, {
+      "AUTOM.FIELD.NO" : "FIELD.NAME-1.1",
+      "AUT.NEW.CONTENT" : "GEOLOCALIZACION"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "ARRANGEMENT"
+    }, {
+      "FIELD.NO" : "ACTIVITY"
+    }, {
+      "FIELD.NO" : "PRODUCT"
+    }, {
+      "FIELD.NO" : "PROPERTY"
+    }, {
+      "FIELD.NO" : "FIELD.NAME"
+    }, {
+      "FIELD.NO" : "FIELD.VALUE"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "ACTIVITY"
+    }, {
+      "NOINPUT.FIELD" : "FIELD.NAME"
+    }, {
+      "NOINPUT.FIELD" : "PROPERTY"
+    }, {
+      "NOINPUT.FIELD" : "PRODUCT"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "MULTI.POSSIBLE" : "Y",
+    "RECORDS.PER.PAGE" : "1",
+    "VALIDATION.FLD" : [ {
+      "VALIDATION.RTN" : "ABC.CAMB.CAT.REMUNERA",
+      "VALIDATION.FLD" : "ARRANGEMENT"
+    } ]
+  }
+}
