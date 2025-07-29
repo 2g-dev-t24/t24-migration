@@ -3,6 +3,7 @@ package com.uala.client.service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.uala.client.config.OfsProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -18,15 +19,18 @@ import java.util.Map;
 public class OFSClientService {
 
     private final RestTemplate restTemplate;
+    private final OfsProperties ofsProperties;
 
     @Autowired
-    public OFSClientService(RestTemplate restTemplate) {
+    public OFSClientService(RestTemplate restTemplate, OfsProperties ofsProperties) {
         this.restTemplate = restTemplate;
+        this.ofsProperties = ofsProperties;
     }
 
     public String callOFSService(String ofsRequest) {
         // URL del servicio OFS
-        String url = "https://transact-dev.dev.corebanking.uala.mx/TAFJRestServices/resources/ofs";
+        String url = ofsProperties.getUrl() + "/TAFJRestServices/resources/ofs";
+
 
         // Configurar el cuerpo de la solicitud
         HttpHeaders headers = new HttpHeaders();
