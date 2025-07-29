@@ -2,7 +2,7 @@
 * <Rating>-29</Rating>
 *-----------------------------------------------------------------------------
 $PACKAGE AbcTeller
-    SUBROUTINE VPM.2BR.V.CCY.TELLER.SBC
+    SUBROUTINE ABC.2BR.V.CCY.TELLER.SBC
 
 *-----------------------------------------------------------------------
 
