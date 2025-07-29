@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABc2brInhibeLector (
+)
+{
+    jBC: ABC.2BR.INHIBE.LECTOR
+}
+
 public method ABc2brVCcyTellerSbc (
 )
 {
