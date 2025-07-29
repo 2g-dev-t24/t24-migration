@@ -1,5 +1,5 @@
-* @ValidationCode : MjoyMTI0NTk5Nzk1OkNwMTI1MjoxNzUzNTgzMTY0MzY4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 26 Jul 2025 23:26:04
+* @ValidationCode : MjotNzk0OTM2MjYyOkNwMTI1MjoxNzUzNzUyMDczMTQwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 28 Jul 2025 22:21:13
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -85,7 +85,7 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddfielddefinition('XX-BEN.PAIS'           ,'9'     , 'A', '')
     EB.Template.FieldSetcheckfile      ("COUNTRY")
     EB.Template.TableAddfielddefinition('XX-BEN.TEL.CEL'        ,'13'    , 'A', '')
-    EB.Template.TableAddfielddefinition('BEN.EMAIL'             ,'65'    , 'A', '')
+    EB.Template.TableAddfielddefinition('XX-BEN.EMAIL'             ,'65'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.NOM.EMP'        ,'65'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX-BEN.PROF.PUES'      ,'65'    , 'A', '')
     EB.Template.TableAddfielddefinition('XX>BEN.OCUP.ACT'       ,'8'     , 'A', '')
