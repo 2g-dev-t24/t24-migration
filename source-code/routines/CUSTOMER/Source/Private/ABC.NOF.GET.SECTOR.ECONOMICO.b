@@ -14,7 +14,7 @@ $PACKAGE ABC.BP
 ***********************************************************
 SUBROUTINE ABC.NOF.GET.SECTOR.ECONOMICO(R.DATA)
 ***********************************************************
-* Ticket #128 fix codigos con id comenzado en 0
+* Ticket #128 fix codigos con id comenzado en 0 para ver cambios ir al git
 
     $USING EB.DataAccess
     $USING EB.SystemTables
@@ -82,36 +82,23 @@ PROCESS:
         Y.FILTRO = FMT(Y.INDUSTRY, "R%4")
     END
 
-*    Y.FILTRO = Y.INDUSTRY[1,3]
     Y.FILTRO = Y.INDUSTRY[1,2]
 
     R.DATA = ""
     Y.CADENA.SALIDA = ""
-** Ticket #128- I
-*    SEL.CMD = "SELECT " : FN.ABC.ACTIVIDAD.ECONOMICA : " WITH @ID LIKE ":Y.FILTRO:"..."
 
     Y.FILTRO.ID = "BANXICO.ECO.ACTIVITY*":Y.FILTRO:"..."
     SEL.CMD = "SELECT " : FN.MXBASE.REGULATORY.CODES : " WITH @ID LIKE ":Y.FILTRO.ID
-** Ticket #128- F
 
     EB.DataAccess.Readlist(SEL.CMD,Y.LIST.REG,'',Y.NO.REGISTROS,Y.SELECT.CMD.ERR)
 
     FOR Y.I = 1 TO Y.NO.REGISTROS
         Y.ID.ACT.ECONOMICA = Y.LIST.REG<Y.I>
-** Ticket #128- I
-*        EB.DataAccess.FRead(FN.INDUSTRY, Y.ID.ACT.ECONOMICA, R.ABC.ACTIVIDAD.ECONOMICA, F.ABC.ACTIVIDAD.ECONOMICA, ERR.IND)
+
         EB.DataAccess.FRead(FN.MXBASE.REGULATORY.CODES, Y.ID.ACT.ECONOMICA, R.MXBASE.REGULATORY.CODES, F.MXBASE.REGULATORY.CODES, ERR.IND)
         
         R.DATA<-1> = Y.ID.ACT.ECONOMICA
         
-*        Y.ACT.ECON.DESC = R.ABC.ACTIVIDAD.ECONOMICA<AbcTable.AbcActividadEconomica.Descripcion>
-*        IF Y.ID.ACT.ECONOMICA[1,1] EQ 0 THEN
-*            Y.LEN.ACT.E = LEN(Y.ID.ACT.ECONOMICA)
-*            Y.ID.ACT.ECONOMICA = Y.ID.ACT.ECONOMICA[2,6]
-*        END
-*        Y.CADENA.SALIDA = "BANXICO.ECO.ACTIVITY*": Y.ID.ACT.ECONOMICA : Y.SEP : Y.ACT.ECON.DESC : Y.SEP
-*        R.DATA<-1> = Y.CADENA.SALIDA
-** Ticket #128- F
     NEXT Y.I
 
 RETURN
