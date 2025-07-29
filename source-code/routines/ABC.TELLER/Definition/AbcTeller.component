@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABc2brVCcyTellerSbc (
+)
+{
+    jBC: ABC.2BR.V.CCY.TELLER.SBC
+}
+
 public method ABc2brChkLimamt (
 )
 {

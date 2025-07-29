@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTYzNTE5MjczNTpDcDEyNTI6MTc1MzgwMTU4NDQzNjp0cmFiYWpvOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 29 Jul 2025 12:06:24
+* @ValidationCode : MjoyMDYwNTg4NDk6Q3AxMjUyOjE3NTM4MDQ5NjI0NjU6dHJhYmFqbzotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 29 Jul 2025 13:02:42
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : trabajo
 * @ValidationInfo : Nb tests success  : N/A
@@ -30,6 +30,7 @@ SUBROUTINE ABC.EMAIL.DEPOSITO.EFECTIVO
     $USING AbcSpei
     $USING LI.Config
    
+    
 *-----------------------------------------------------------------------------
     GOSUB INITIALISE
     GOSUB OPEN.FILES
