@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABc2BrTtTillToTill1 (
+)
+{
+    jBC: ABC.2BR.TT.TILL.TO.TILL.1
+}
+
 public method ABcAccCusName (
 )
 {
