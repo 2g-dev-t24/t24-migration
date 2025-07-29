@@ -1,0 +1,58 @@
+{
+  "header" : {
+    "id" : "MXBASE.ADD.CUSTOMER.DETAILS,CLIENTE.RELACIONES",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "2"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "BORROWER.TYPE",
+      "AUT.NEW.CONTENT" : "NO RELACIONADO"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "BORROWER.TYPE",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Tipo de Cliente Relacionado"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-73-"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "CNBV.ECONOMIC.GROUP",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.CNBV.GRP.ECONOMICO",
+      "TEXT" : [ {
+        "TEXT" : "Grupo Económico CNBV"
+      } ],
+      "TEXT.CHAR.MAX" : "35",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-103-"
+      } ],
+      "TABLE.LINE" : "1"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "P Fisicas/Morales relacionadas"
+    }, {
+      "DESCRIPTION" : "P Fisicas/Morales relacionadas"
+    } ],
+    "NO.OF.AUTH" : "0",
+    "GTS.CONTROL" : "1",
+    "RECORDS.PER.PAGE" : "1",
+    "HDR.1.001..039" : [ {
+      "HDR.1.001..039" : "Cliente Relaciones"
+    } ]
+  }
+}
