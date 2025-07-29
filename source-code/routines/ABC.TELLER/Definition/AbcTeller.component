@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABcAccCusName (
+)
+{
+    jBC: ABC.ACC.CUS.NAME
+}
+
 public method ABcSumaTotalDenomSistema (
 )
 {
