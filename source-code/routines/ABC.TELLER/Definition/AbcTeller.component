@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABcSumaTotalDenomSistema (
+)
+{
+    jBC: ABC.SUMA.TOTAL.DENOM.SISTEMA
+}
+
 public method ABc2brInhibeLector (
 )
 {
