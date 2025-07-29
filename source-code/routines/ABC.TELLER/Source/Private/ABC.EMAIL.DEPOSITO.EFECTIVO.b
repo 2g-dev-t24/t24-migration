@@ -1,7 +1,7 @@
-* @ValidationCode : MjotMTAyMTM3NTk2MDpDcDEyNTI6MTc1MTkzODU2MjM4MDpMdWNhc0ZlcnJhcmk6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 07 Jul 2025 22:36:02
+* @ValidationCode : MjotMTYzNTE5MjczNTpDcDEyNTI6MTc1MzgwMTU4NDQzNjp0cmFiYWpvOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 29 Jul 2025 12:06:24
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : LucasFerrari
+* @ValidationInfo : User Name         : trabajo
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -24,10 +24,12 @@ SUBROUTINE ABC.EMAIL.DEPOSITO.EFECTIVO
     
     $USING AC.AccountOpening
     $USING ST.Customer
-
+    
     $USING TT.Contract
     $USING AbcTable
     $USING AbcSpei
+    $USING LI.Config
+   
 *-----------------------------------------------------------------------------
     GOSUB INITIALISE
     GOSUB OPEN.FILES
