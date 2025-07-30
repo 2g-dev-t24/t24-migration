@@ -18,3 +18,11 @@ private method AbcSetTransactionType (
    jBC: ABC.SET.TRANSACTION.TYPE
 }
 
+
+
+private method AbcBUdisCleanup (
+)
+{
+   jBC: ABC.B.UDIS.CLEANUP
+}
+
