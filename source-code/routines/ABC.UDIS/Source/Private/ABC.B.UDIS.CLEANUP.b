@@ -87,8 +87,8 @@ PROCESS:
     REPEAT
     
 
-    Y.SALIDA.LOG        = "Total de registros leídos y escritos en HIS " : Y.TOTAL.LEIDOS
-    Y.SALIDA.LOG<-1>    = "Total de registros no leídos " : Y.TOTAL.NO.LEIDOS
+    Y.SALIDA.LOG        = "Total de registros leidos y escritos en HIS " : Y.TOTAL.LEIDOS
+    Y.SALIDA.LOG<-1>    = "Total de registros no leidos " : Y.TOTAL.NO.LEIDOS
     AbcSpei.PbsInslog(yArchivoGuardar, Y.SALIDA.LOG, yIniciando)
     
     SEL.CMD.UDIS  = 'DELETE ':FN.ABC.UDIS.CONCAT:' WITH @ID LIKE ':DQUOTE('...':SQUOTE(Y.PERIODO))
