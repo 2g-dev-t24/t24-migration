@@ -951,10 +951,25 @@ private method Abc2brBovedas (
 }
 
 
-
 private method Abc2brBovedasFields (
 )
 {
     jBC: ABC.2BR.BOVEDAS.FIELDS
+
+}
+
+
+
+private method Abc2brLimitesCaja (
+)
+{
+    jBC: ABC.2BR.LIMITES.CAJA
+}
+
+
+private method Abc2brLimitesCajaFields (
+)
+{
+    jBC: ABC.2BR.LIMITES.CAJA.FIELDS
 
 }
