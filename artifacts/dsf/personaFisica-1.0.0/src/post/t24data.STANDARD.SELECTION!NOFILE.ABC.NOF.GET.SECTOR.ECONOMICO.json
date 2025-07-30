@@ -3,7 +3,7 @@
     "id" : "NOFILE.ABC.NOF.GET.SECTOR.ECONOMICO",
     "dsfApiType" : "STANDARD.SELECTION",
     "dsfApiComponent" : "t24data",
-    "dsfApiPhase" : "main",
+    "dsfApiPhase" : "post",
     "metadata" : {
       "installed" : "NO",
       "release" : "R24"
