@@ -1,5 +1,5 @@
-* @ValidationCode : MjotOTE0NjA2Mjg4OkNwMTI1MjoxNzUzOTI3MTAwNzgwOm1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 30 Jul 2025 22:58:20
+* @ValidationCode : MjoxOTk4MDkzMTAwOkNwMTI1MjoxNzUzOTMwODkwMDUxOm1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 31 Jul 2025 00:01:30
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -104,11 +104,11 @@ INICIALIZA:
 
     YSEP = '|'
 
-    FECHA.FILE = FMT(OCONV(DATE(), "DD"),"2'0'R"):".":FMT(OCONV(DATE(), "DM"),"2'0'R"):".":OCONV(DATE(), "DY4")
+    AbcNotif.setFechaFile(FMT(OCONV(DATE(), "DD"),"2'0'R"):".":FMT(OCONV(DATE(), "DM"),"2'0'R"):".":OCONV(DATE(), "DY4"))
 
     Y.DATE = TODAY[3,6]
 
-    Y.SALTO = CHAR(10)
+    AbcNotif.setYSalto(CHAR(10))
 
     Y.CANALES = ''
 

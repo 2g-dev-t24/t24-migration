@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo5OTk4MzgzMDI6Q3AxMjUyOjE3NTM5Mjk5NzQyMTM6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 30 Jul 2025 23:46:14
+* @ValidationCode : MjoyNjgzNjIxNDI6Q3AxMjUyOjE3NTM5MzA5MzA4OTU6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 31 Jul 2025 00:02:10
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -55,6 +55,7 @@ SUBROUTINE ABC.ENVIA.NOTIF.ALTERNA(ID.SMS.EMAIL)
     $USING EB.SystemTables
     $USING EB.Foundation
     $USING EB.Interface
+    $USING EB.Service
 
     GOSUB INICIALIZA
     GOSUB PROCESO
@@ -226,7 +227,7 @@ ENVIO.ALTERNA:
 **************
 
     str_path = @PATH
-    str_filename = "ABC.ENVIA.NOT.ALT.":RND(2000000):TIME():".":AGENT.NUMBER:".sh"
+    str_filename = "ABC.ENVIA.NOT.ALT.":RND(2000000):TIME():".":EB.Service.getAgentNumber():".sh"
     TEMP.FILE = str_path : "/" : str_filename
 
     OPENSEQ TEMP.FILE TO FILE.VAR1 ELSE
@@ -239,9 +240,9 @@ ENVIO.ALTERNA:
     GOSUB BITACORA.ALT
 
 * Armo Archivo
-    Y.SHELL  = "#!/bin/ksh" : Y.SALTO
-    Y.SHELL := Y.CADENA : Y.SALTO
-    Y.SHELL := "exit" : Y.SALTO
+    Y.SHELL  = "#!/bin/ksh" : AbcNotif.getYSalto()
+    Y.SHELL := Y.CADENA : AbcNotif.getYSalto()
+    Y.SHELL := "exit" : AbcNotif.getYSalto()
     Y.SHELL := "EOT"
 
     WRITESEQ Y.SHELL APPEND TO FILE.VAR1 ELSE
@@ -404,7 +405,7 @@ RETURN
 CREA.ARCHIVO.LOG:
 *********************
 
-    str_filename.ALT = Y.NOMBRE.LOG.ALT:"." : FECHA.FILE : "." : AGENT.NUMBER : ".log"
+    str_filename.ALT = Y.NOMBRE.LOG.ALT:"." : AbcNotif.getFechaFile() : "." : EB.Service.getAgentNumber() : ".log"
     SEQ.FILE.NAME.ALT = Y.RUTA.LOG.ALT : "/"
 
     OPENSEQ SEQ.FILE.NAME.ALT,str_filename.ALT TO FILE.VAR.ALT ELSE
@@ -538,7 +539,7 @@ RETURN
 GENERA.BITACORA.ERRORES:
 *----------------------------------------------------------------------
 *CAST20241028.I
-    str_filename.ALT.ERROR = Y.NOMBRE.LOG.ALT:".ERROR." : FECHA.FILE : "." : AGENT.NUMBER : ".log"
+    str_filename.ALT.ERROR = Y.NOMBRE.LOG.ALT:".ERROR." : AbcNotif.getFechaFile() : "." : EB.Service.getAgentNumber() : ".log"
     SEQ.FILE.NAME.ALT.ERROR = Y.RUTA.LOG.ALT : "/"
 
     OPENSEQ SEQ.FILE.NAME.ALT.ERROR,str_filename.ALT.ERROR TO FILE.VAR.ALT.ERROR ELSE
