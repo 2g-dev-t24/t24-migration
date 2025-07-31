@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTQxNzk2Nzk2NDpDcDEyNTI6MTc1MzkyNDc5MDUzMDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 30 Jul 2025 22:19:50
+* @ValidationCode : Mjo3NzA1MzAxNjg6Q3AxMjUyOjE3NTM5MjUwMDEwMzc6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 30 Jul 2025 22:23:21
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -51,15 +51,15 @@ INICIALIZA:
     FN.SS           = AbcEnvioEmail.getFnSs()
     F.SS            = AbcEnvioEmail.getFSs()
     FECHA.FILE      = AbcEnvioEmail.getFechaFile()
-    Y.RUTA.HTML     = AbcEnvioEmail.setYRutaHtml()
-    AGENT.NUMBER = EB.Service.getAgentNumber()
+    Y.RUTA.HTML     = AbcEnvioEmail.getYRutaHtml()
+    AGENT.NUMBER    = EB.Service.getAgentNumber()
 RETURN
 
 ************
 PROCESO:
 ************
 
-    EB.DataAccess.FRead(FN.SMS.EMAIL,ID.SMS.EMAIL,R.INFO.SMS.EMAIL,F.SMS.EMAIL,ERROR.SMS.EMAIL,'')
+    EB.DataAccess.FRead(FN.SMS.EMAIL,ID.SMS.EMAIL,R.INFO.SMS.EMAIL,F.SMS.EMAIL,ERROR.SMS.EMAIL)
     IF ERROR.SMS.EMAIL EQ '' THEN
         ID.CLIENTE = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.Customer>
         Y.ID.PARAM = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.TipoEmail>
