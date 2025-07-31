@@ -1,18 +1,31 @@
+* @ValidationCode : Mjo5OTk4MzgzMDI6Q3AxMjUyOjE3NTM5Mjk5NzQyMTM6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 30 Jul 2025 23:46:14
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : mauricio.lopez
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R24_SP1.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2025. All rights reserved.
+$PACKAGE AbcNotif
 *------------------------------------------------------------------------------------
 * <Rating>188</Rating>
 *------------------------------------------------------------------------------------
-    SUBROUTINE ABC.ENVIA.NOTIF.ALTERNA(ID.SMS.EMAIL)
+SUBROUTINE ABC.ENVIA.NOTIF.ALTERNA(ID.SMS.EMAIL)
 *------------------------------------------------------------------------------------
 *===============================================================================
-* Desarrollador:        César Alejandro Miranda Bravo - FyG Solutions   (CAMB)
+* Desarrollador:        Cesar Alejandro Miranda Bravo - FyG Solutions   (CAMB)
 * Compania:             ABC Capital
 * Fecha:                2021-04-22
-* Descripción:          Rutina que envia la notificacion alterna.
+* Descripcion:          Rutina que envia la notificacion alterna.
 *===============================================================================
 * Desarrollador:        CAST - FyG Solutions  CAST20220907
 * Compania:             ABC Capital
 * Fecha:                2022-09-07
-* Descripción:          Se crea nuevo flujo para tipo EMAIL.SPEI.DEV
+* Descripcion:          Se crea nuevo flujo para tipo EMAIL.SPEI.DEV
 * Si Respuesta de galileo es exitosa
 * Cambia estatus en ABC.SMS.EMAIL.ENVIAR a OK
 * Autoriza FT
@@ -27,32 +40,26 @@
 * Desarrollador:        CAST - FyG Solutions  CAST20240202
 * Compania:             ABC Capital
 * Fecha:                2024-02-02
-* Descripción:          CORE-2233 Traspaso de intereses. Se agrega respuesta para la notificacion
-* EMAIL.NOTIFICA.TASA, de la versión GROUP.CREDIT.INT,VPM
+* Descripcion:          CORE-2233 Traspaso de intereses. Se agrega respuesta para la notificacion
+* EMAIL.NOTIFICA.TASA, de la version GROUP.CREDIT.INT,VPM
 *===============================================================================
 * Desarrollador:        CAST - FyG Solutions  CAST20241028
 * Compania:             ABC Capital
 * Fecha:                2024-10-28
-* Descripción:          ABCCORE-3098 Modificación al servicio de notificaciones
+* Descripcion:          ABCCORE-3098 Modificacion al servicio de notificaciones
 *===============================================================================
 
-
-    $INCLUDE ../T24_BP I_COMMON
-    $INCLUDE ../T24_BP I_EQUATE
-    $INCLUDE ../T24_BP I_TSA.COMMON
-    $INCLUDE ../T24_BP I_ENQUIRY.COMMON
-    $INCLUDE ../T24_BP I_GTS.COMMON
-
-    $INCLUDE ../T24_BP I_F.STANDARD.SELECTION
-
-    $INCLUDE ABC.BP I_F.ABC.SMS.EMAIL.ENVIAR
-
-    $INCLUDE ABC.BP I_ABC.ENVIA.NOTIF.ALTERNA.COMMON
+    $USING EB.DataAccess
+    $USING AbcTable
+    $USING AbcGetGeneralParam
+    $USING EB.SystemTables
+    $USING EB.Foundation
+    $USING EB.Interface
 
     GOSUB INICIALIZA
     GOSUB PROCESO
 
-    RETURN
+RETURN
 
 ***********
 INICIALIZA:
@@ -69,21 +76,19 @@ INICIALIZA:
 *CAST20220907.I
     ID.SMS.EMAIL.ORI = ''
 **CAST20220907.F
-    RETURN
+RETURN
 
 ************
 PROCESO:
 ************
-
-    CALL F.READU(FN.SMS.EMAIL,ID.SMS.EMAIL,R.INFO.SMS.EMAIL,F.SMS.EMAIL,ERROR.SMS.EMAIL,'')
+    EB.DataAccess.FReadu(AbcNotif.getFnSmsEmail(), ID.SMS.EMAIL, R.INFO.SMS.EMAIL, AbcNotif.getFSmsEmail(), ERROR.SMS.EMAIL, '')
     IF ERROR.SMS.EMAIL EQ '' THEN
-        Y.CANAL = R.INFO.SMS.EMAIL<ABC.EMA.CANAL>
-        Y.NOTI.ALTERNO = R.INFO.SMS.EMAIL<ABC.EMA.NOTIFICA.ALTERNA>
-        Y.STATUS.ALTERNO = R.INFO.SMS.EMAIL<ABC.EMA.STATUS.ALTERNA>
-        Y.NOTI.GALILEO = R.INFO.SMS.EMAIL<ABC.EMA.NOTIFICA.GALILEO>
-        Y.STATUS.GALILEO = R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO>
-        Y.PRN = R.INFO.SMS.EMAIL<ABC.EMA.PRN>
-
+        Y.CANAL = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.Canal>
+        Y.NOTI.ALTERNO = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.NotificaAlterna>
+        Y.STATUS.ALTERNO = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusAlterna>
+        Y.NOTI.GALILEO = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.NotificaGalileo>
+        Y.STATUS.GALILEO = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo>
+        Y.PRN = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.Prn>
         IF Y.NOTI.ALTERNO EQ 'SI' AND Y.STATUS.ALTERNO NE 'OK' THEN
             GOSUB LEE.NOTIFICACION
             GOSUB CREA.ARCHIVO.LOG
@@ -92,29 +97,25 @@ PROCESO:
             Y.RESPUESTA = FIELD(returnVal,'<TzuneServiceRequestResult>',2)
             Y.RESPUESTA = FIELD(Y.RESPUESTA,'</TzuneServiceRequestResult>',1)
             IF Y.RESPUESTA EQ '{"Status":"Received"}' THEN
-                R.INFO.SMS.EMAIL<ABC.EMA.STATUS.ALTERNA> = 'OK'
-                R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+                R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusAlterna> = 'OK'
+                R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
                 MENSAJE = ID.SMS.EMAIL:", RESPUESTA OK: ":returnVal
                 GOSUB BITACORA.ALT
             END ELSE
                 IF Y.RESPUESTA EQ '{"Status":"AlreadyUsedCode"}' THEN
-                    R.INFO.SMS.EMAIL<ABC.EMA.STATUS.ALTERNA> = 'OKAU'
-                    R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+                    R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusAlterna> = 'OKAU'
+                    R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
                 END
-*CAST20240202.I
                 IF Y.RESPUESTA EQ '{"status":"success","message":"done"}' THEN
-                    R.INFO.SMS.EMAIL<ABC.EMA.STATUS.ALTERNA> = 'OK'
-                    R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = LEFT(Y.DATE:Y.TIME,10)
+                    R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusAlterna> = 'OK'
+                    R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = LEFT(Y.DATE:Y.TIME,10)
                 END
-**CAST20240202.F
                 MENSAJE = ID.SMS.EMAIL:", RESPUESTA: ":returnVal
                 GOSUB BITACORA.ALT
             END
 
             IF Y.NOTI.GALILEO NE 'SI' OR Y.STATUS.GALILEO EQ 'OK' THEN
-
-                CALL F.WRITE(FN.SMS.EMAIL,ID.SMS.EMAIL,R.INFO.SMS.EMAIL)
-*       WRITE R.INFO.SMS.EMAIL TO F.SMS.EMAIL,ID.SMS.EMAIL
+                EB.DataAccess.FWrite(AbcNotif.getFnSmsEmail(),ID.SMS.EMAIL,R.INFO.SMS.EMAIL)
             END
         END
         IF Y.NOTI.GALILEO EQ 'SI' AND Y.STATUS.GALILEO NE 'OK' THEN
@@ -122,7 +123,7 @@ PROCESO:
         END
     END
 
-    RETURN
+RETURN
 
 **************
 GENERA.GALILEO:
@@ -131,8 +132,7 @@ GENERA.GALILEO:
     Y.FLAG.GALILEO = 1
     Y.ID.NOT.ALT.PARAM = "NOTIFICACION.ALTERNA.GALILEO"
     Y.LIST.PARAMS = ''; Y.LIST.VALUES = '';
-    CALL ABC.GET.GENERAL.PARAM(Y.ID.NOT.ALT.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
-
+    AbcGetGeneralParam.AbcGetGeneralParam(Y.ID.NOT.ALT.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
     LOCATE Y.CANAL IN Y.LIST.PARAMS SETTING Y.POS THEN
         Y.CANAL.GALILEO = Y.LIST.VALUES<Y.POS>
     END
@@ -151,18 +151,18 @@ GENERA.GALILEO:
         Y.RESPUESTA = FIELD(Y.RESPUESTA,'</TzuneServiceRequestResult>',1)
 *CAST20241028.I
 *         IF Y.RESPUESTA EQ '{"status":"success","message":"done"}' THEN
-*             R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> = 'OK'
-*             R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+*             R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> = 'OK'
+*             R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
 *             MENSAJE = ID.SMS.EMAIL:", RESPUESTA OK: ":returnVal
 *             GOSUB BITACORA.ALT
 *         END ELSE
 *             IF Y.RESPUESTA EQ '{"status":"exception","message":"Duplicate transaction"}' THEN
-*                 R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> = 'OKDT'
-*                 R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+*                 R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> = 'OKDT'
+*                 R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
 *             END ELSE
 *                 IF Y.RESPUESTA EQ '{"status":"exception","message":"Invalid customer account"}' THEN
-*                     R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> = 'E'
-*                     R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+*                     R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> = 'E'
+*                     R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
 *                 END
 *             END
 *             MENSAJE = ID.SMS.EMAIL:", RESPUESTA: ":returnVal
@@ -173,48 +173,45 @@ GENERA.GALILEO:
         Y.MSG.RESPUESTA = FIELD(Y.RESPUESTA,',',2)
         Y.MSG.RESPUESTA = FIELD(Y.MSG.RESPUESTA,':',2)
         Y.MSG.RESPUESTA = FIELD(Y.MSG.RESPUESTA,'"',2)
-        Y.NO.MSG.PARAM = DCOUNT(Y.PARAM.MENSAJE.RESPUESTA,FM)
+        Y.NO.MSG.PARAM = DCOUNT(AbcNotif.getYParamMensajeRespuesta(),FM)
         FOR Y.AA =1 TO Y.NO.MSG.PARAM
-            Y.MSG.PARAM = Y.PARAM.MENSAJE.RESPUESTA<Y.AA>
+            Y.MSG.PARAM = AbcNotif.getYParamMensajeRespuesta()<Y.AA>
             FINDSTR Y.MSG.PARAM IN Y.MSG.RESPUESTA SETTING Y.FM THEN
-                Y.STATUS.RESPUESTA = Y.PARAM.STATUS.RESPUESTA<Y.AA>
-                R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> = Y.STATUS.RESPUESTA
-                R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+                Y.STATUS.RESPUESTA = AbcNotif.getYParamStatusRespuesta()<Y.AA>
+                R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> = Y.STATUS.RESPUESTA
+                R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
                 MENSAJE = ID.SMS.EMAIL:', RESPUESTA ':Y.STATUS.RESPUESTA: '= ':returnVal
                 GOSUB BITACORA.ALT
-                FIND Y.STATUS.RESPUESTA IN Y.STATUS.GENERAN.LOG SETTING Y.FM.2 THEN
+                FIND Y.STATUS.RESPUESTA IN AbcNotif.getYStatusGeneranLog() SETTING Y.FM.2 THEN
                     MENSAJE = ID.SMS.EMAIL:', RESPUESTA ':Y.STATUS.RESPUESTA: '= ':returnVal
                     GOSUB GENERA.BITACORA.ERRORES
                 END
             END
         NEXT Y.AA
-*CAST20241028.F
 
-*CAST20220907.I
         GOSUB VALIDA.AUTORIZACION.FT
-*CAST20220907.F
     END ELSE
-        R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> = 'NA'
-        R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+        R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> = 'NA'
+        R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
         MENSAJE = ID.SMS.EMAIL:", NO TIENE PRN."
         GOSUB BITACORA.ALT
     END
     DISPLAY ID.SMS.EMAIL:', ':R.INFO.SMS.EMAIL
-*    WRITE R.INFO.SMS.EMAIL TO F.SMS.EMAIL,ID.SMS.EMAIL
-    CALL F.WRITE(FN.SMS.EMAIL,ID.SMS.EMAIL,R.INFO.SMS.EMAIL)
+    EB.DataAccess.FWrite(AbcNotif.getFnSmsEmail(),ID.SMS.EMAIL,R.INFO.SMS.EMAIL)
 
-    RETURN
+RETURN
 
 **************
 OBTIENE.VALOR:
 **************
 
-    CALL F.READ(FN.SS,'ABC.SMS.EMAIL.ENVIAR',R.SS,F.SS,ERROR.SS)
+    EB.DataAccess.FRead(AbcNotif.getFnSs(),'ABC.SMS.EMAIL.ENVIAR',R.SS,AbcNotif.getFSs(),ERROR.SS)
     IF ERROR.SS EQ '' THEN
-        Y.LIST.CAMPOS = R.SS<SSL.SYS.FIELD.NAME>
-        CONVERT VM TO FM IN Y.LIST.CAMPOS
-        Y.LIST.NUM.CAMPOS = R.SS<SSL.SYS.FIELD.NO>
-        CONVERT VM TO FM IN Y.LIST.NUM.CAMPOS
+        Y.LIST.CAMPOS = R.SS<EB.SystemTables.StandardSelection.SslSysFieldName>
+        Y.LIST.CAMPOS = R.SS<EB.SystemTables.StandardSelection.SslSysFieldName>
+        CONVERT @VM TO @FM IN Y.LIST.CAMPOS
+        Y.LIST.NUM.CAMPOS = R.SS<EB.SystemTables.StandardSelection.SslSysFieldNo>
+        CONVERT @VM TO @FM IN Y.LIST.NUM.CAMPOS
         LOCATE Y.NOM.CAMPO IN Y.LIST.CAMPOS SETTING POSITION THEN
             Y.NUM.CAMPO = Y.LIST.NUM.CAMPOS<POSITION>
             Y.VALOR.CAMPO = TRIM(R.INFO.SMS.EMAIL<Y.NUM.CAMPO>)
@@ -222,7 +219,7 @@ OBTIENE.VALOR:
         END
     END
 
-    RETURN
+RETURN
 
 **************
 ENVIO.ALTERNA:
@@ -260,7 +257,7 @@ ENVIO.ALTERNA:
     EXECUTE "rm ./" : str_filename        CAPTURING Y.RESPONSE.RM
 
 
-    RETURN
+RETURN
 
 *****************
 LEE.NOTIFICACION:
@@ -271,17 +268,17 @@ LEE.NOTIFICACION:
     IF Y.FLAG.GALILEO EQ 0 THEN
         Y.ID.NOT.ALT.PARAM = "NOTIFICACION.ALTERNA.PARAM.CANAL.":Y.CANAL
         Y.LIST.PARAMS = ''; Y.LIST.VALUES = '';
-        CALL ABC.GET.GENERAL.PARAM(Y.ID.NOT.ALT.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
+        AbcGetGeneralParam.AbcGetGeneralParam(Y.ID.NOT.ALT.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
 
         IF Y.LIST.PARAMS EQ '' OR Y.LIST.VALUES EQ '' THEN
             Y.ID.NOT.ALT.PARAM = "NOTIFICACION.ALTERNA.PARAM"
             Y.LIST.PARAMS = ''; Y.LIST.VALUES = '';
-            CALL ABC.GET.GENERAL.PARAM(Y.ID.NOT.ALT.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
+            AbcGetGeneralParam.AbcGetGeneralParam(Y.ID.NOT.ALT.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
         END
     END ELSE
         Y.ID.NOT.ALT.PARAM = "NOTIFICACION.ALTERNA.GALILEO.PARAM"
         Y.LIST.PARAMS = ''; Y.LIST.VALUES = '';
-        CALL ABC.GET.GENERAL.PARAM(Y.ID.NOT.ALT.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
+        AbcGetGeneralParam.AbcGetGeneralParam(Y.ID.NOT.ALT.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
     END
 
     LOCATE 'JAR' IN Y.LIST.PARAMS SETTING Y.POS THEN
@@ -323,8 +320,9 @@ LEE.NOTIFICACION:
 *CAST20220907.I
     LOCATE 'ID.NOT.ALT.1.AUT' IN Y.LIST.PARAMS SETTING Y.POS THEN
         ID.NOT.ALT.1.AUT = Y.LIST.VALUES<Y.POS>
-        Y.LIST.PARAMS = ''; Y.LIST.VALUES = '';
-        CALL ABC.GET.GENERAL.PARAM(ID.NOT.ALT.1.AUT, Y.LIST.PARAMS, Y.LIST.VALUES)
+        Y.LIST.PARAMS = ''
+        Y.LIST.VALUES = ''
+        AbcGetGeneralParam.AbcGetGeneralParam(ID.NOT.ALT.1.AUT, Y.LIST.PARAMS, Y.LIST.VALUES)
         LOCATE 'ID.TIPO.EMAIL' IN Y.LIST.PARAMS SETTING Y.POS THEN
             Y.TIPO.EMAIL.1.AUT = Y.LIST.VALUES<Y.POS>
         END
@@ -340,7 +338,7 @@ LEE.NOTIFICACION:
     IF Y.RUTA.LOG.ALT EQ '' OR Y.NOMBRE.LOG.ALT EQ '' THEN
         Y.LIST.PARAMS.ER = ''
         Y.LIST.VALUES.ER = ''
-        CALL ABC.GET.GENERAL.PARAM('EMAIL.ERROR.LOG', Y.LIST.PARAMS.ER, Y.LIST.VALUES.ER)
+        AbcGetGeneralParam.AbcGetGeneralParam('EMAIL.ERROR.LOG', Y.LIST.PARAMS.ER, Y.LIST.VALUES.ER)
 
         IF Y.RUTA.LOG.ALT EQ '' THEN
             LOCATE "RUTA.LOG.ALTERNA" IN Y.LIST.PARAMS.ER SETTING POS THEN
@@ -356,18 +354,19 @@ LEE.NOTIFICACION:
     END
 
     Y.LIST.PARAMS = ''; Y.LIST.VALUES = '';
-    CALL ABC.GET.GENERAL.PARAM(Y.ID.NOT.ALT.FIJOS, Y.LIST.PARAMS, Y.LIST.VALUES)
+    AbcGetGeneralParam.AbcGetGeneralParam(Y.ID.NOT.ALT.FIJOS, Y.LIST.PARAMS, Y.LIST.VALUES)
 
-    Y.NO.FIJOS = DCOUNT(Y.LIST.PARAMS, FM)
+    Y.NO.FIJOS = DCOUNT(Y.LIST.PARAMS, @FM)
 
     FOR X = 1 TO Y.NO.FIJOS
         Y.DATOS := Y.LIST.PARAMS<X>:'=':Y.LIST.VALUES<X>:','
     NEXT X
 
-    Y.LIST.PARAMS = ''; Y.LIST.VALUES = '';
-    CALL ABC.GET.GENERAL.PARAM(Y.ID.NOT.ALT.CAMPOS, Y.LIST.PARAMS, Y.LIST.VALUES)
+    Y.LIST.PARAMS = ''
+    Y.LIST.VALUES = ''
+    AbcGetGeneralParam.AbcGetGeneralParam(Y.ID.NOT.ALT.CAMPOS, Y.LIST.PARAMS, Y.LIST.VALUES)
 
-    Y.NO.CAMPOS = DCOUNT(Y.LIST.PARAMS, FM)
+    Y.NO.CAMPOS = DCOUNT(Y.LIST.PARAMS, @FM)
 
     FOR X = 1 TO Y.NO.CAMPOS
         Y.NOM.CAMPO = Y.LIST.VALUES<X>
@@ -380,7 +379,7 @@ LEE.NOTIFICACION:
         IF X NE Y.NO.CAMPOS THEN Y.DATOS := ','
     NEXT X
 
-    RETURN
+RETURN
 
 *********************
 LIMPIA.VARIABLES:
@@ -399,7 +398,7 @@ LIMPIA.VARIABLES:
     Y.DATOS = ''
     Y.NO.CAMPOS = 0
 
-    RETURN
+RETURN
 
 *********************
 CREA.ARCHIVO.LOG:
@@ -413,7 +412,7 @@ CREA.ARCHIVO.LOG:
         END
     END
 
-    RETURN
+RETURN
 
 *************
 BITACORA.ALT:
@@ -423,48 +422,48 @@ BITACORA.ALT:
     END
     MENSAJE = ''
 
-    RETURN
+RETURN
 
 *CAST20220907.I
 *----------------------------------------------------------------------
 VALIDA.AUTORIZACION.FT:
 *----------------------------------------------------------------------
 
-*Validamos que el tipo de notificación esté configurado
-    Y.TIPO.EMAIL = R.INFO.SMS.EMAIL<ABC.EMA.TIPO.EMAIL>:'|'
+*Validamos que el tipo de notificaciï¿½n estï¿½ configurado
+    Y.TIPO.EMAIL = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.TipoEmail>:'|'
     Y.FM.POS=''; Y.VM.POS=''
     FINDSTR Y.TIPO.EMAIL IN Y.TIPO.EMAIL.1.AUT SETTING Y.FM.POS, Y.VM.POS THEN
         Y.TIPO.EMAIL.REV = FIELD(Y.TIPO.EMAIL.1.AUT<Y.FM.POS, Y.VM.POS>,'|',2)
 *Valida estatus GALILEO
-        IF  R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> EQ '' THEN
+        IF  R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> EQ '' THEN
             IF Y.RESPUESTA EQ '{"status":"exception","message":"Insufficient balance for cascading transaction"}' THEN
-                R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> = 'E'
-                R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+                R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> = 'E'
+                R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
             END
         END
 
-        IF R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> EQ 'E' THEN
+        IF R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> EQ 'E' THEN
 *Elimina FT
             Y.APL.OFSFUNCTION = 'D'
             GOSUB ENVIA.OFS.FT
         END
-        IF R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> EQ 'OK' OR R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> EQ 'OKDT' THEN
-            Y.ID.FT = R.INFO.SMS.EMAIL<ABC.EMA.REFERENCIA>
+        IF R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> EQ 'OK' OR R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> EQ 'OKDT' THEN
+            Y.ID.FT = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.Referencia>
             R.FT.NAU = ''
-            CALL F.READ(FN.FT.NAU,Y.ID.FT,R.FT.NAU,F.FT.NAU,Y.ERR.FT.NAU)
+            EB.DataAccess.FRead(AbcNotif.getFnFtNau(),Y.ID.FT,R.FT.NAU,AbcNotif.getFFtNau(),Y.ERR.FT.NAU)
             IF R.FT.NAU THEN
 *Autoriza FT
                 Y.APL.OFSFUNCTION = 'A'
                 GOSUB ENVIA.OFS.FT
             END ELSE
                 R.FT = ''
-                CALL F.READ(FN.FT,Y.ID.FT,R.FT,F.FT,Y.ERR.FT)
+                EB.DataAccess.FRead(AbcNotif.getFnFt(),Y.ID.FT,R.FT,AbcNotif.getFFt(),Y.ERR.FT)
                 IF R.FT THEN
                     MENSAJE = ID.SMS.EMAIL:", ERROR EN AUTORIZACION DE FT " : Y.ID.FT : " YA ESTABA AUTORIZADO"
                     GOSUB BITACORA.ALT
                 END ELSE
-                    R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> = 'ED'
-                    R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+                    R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> = 'ED'
+                    R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
                     MENSAJE = ID.SMS.EMAIL:", ERROR EN AUTORIZACION DE FT " : Y.ID.FT : " NO EXISTE EN INAU NI EN LIVE"
                     GOSUB BITACORA.ALT
                 END
@@ -473,7 +472,7 @@ VALIDA.AUTORIZACION.FT:
     END
 
 
-    RETURN
+RETURN
 *----------------------------------------------------------------------
 *----------------------------------------------------------------------
 ENVIA.OFS.FT:
@@ -488,14 +487,14 @@ ENVIA.OFS.FT:
     END
     Y.GTSMODE = ''
     Y.NO.OF.AUTH = 0
-    Y.ID.TRANSACTION = R.INFO.SMS.EMAIL<ABC.EMA.REFERENCIA>
+    Y.ID.TRANSACTION = R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.Referencia>
     R.FT = ''
     Y.OFS.REQUEST = ''
-    CALL OFS.BUILD.RECORD(Y.APLICACION.OFS,Y.APL.OFSFUNCTION,Y.PROCESS,Y.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.TRANSACTION,R.FT,Y.OFS.REQUEST)
+    EB.Foundation.OfsBuildRecord(Y.APLICACION.OFS,Y.APL.OFSFUNCTION,Y.PROCESS,Y.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.TRANSACTION,R.FT,Y.OFS.REQUEST)
     theResponse = ""
     txnCommitted = ""
     options<1> = Y.OFS.SOURCE
-    CALL OFS.CALL.BULK.MANAGER(options,Y.OFS.REQUEST,theResponse,txnCommitted)
+    EB.Interface.OfsCallBulkManager(options,Y.OFS.REQUEST,theResponse,txnCommitted)
 
     Y.ID.SEND.OFS     = ''
     Y.RESPONSE.OFS = ''
@@ -504,8 +503,8 @@ ENVIA.OFS.FT:
     Y.RESPONSE.OFS = TRIM(FIELD(Y.RESPONSE.OFS,",",1))
     IF Y.RESPONSE.OFS NE 1 THEN
         IF Y.APL.OFSFUNCTION EQ 'A' THEN
-            R.INFO.SMS.EMAIL<ABC.EMA.STATUS.GALILEO> = 'E'
-            R.INFO.SMS.EMAIL<ABC.EMA.DATE.TIME> = Y.DATE:Y.TIME
+            R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.StatusGalileo> = 'E'
+            R.INFO.SMS.EMAIL<AbcTable.AbcSmsEmailEnviar.DateTime> = Y.DATE:Y.TIME
             MENSAJE = ID.SMS.EMAIL:", ERROR EN AUTORIZACION DE FT " :theResponse
             GOSUB BITACORA.ALT
             GOSUB CREA.NOTIFICACION.REVERSO
@@ -517,7 +516,7 @@ ENVIA.OFS.FT:
         END
     END
 
-    RETURN
+RETURN
 *----------------------------------------------------------------------
 *----------------------------------------------------------------------
 CREA.NOTIFICACION.REVERSO:
@@ -525,11 +524,11 @@ CREA.NOTIFICACION.REVERSO:
     ID.SMS.EMAIL.ORI = ID.SMS.EMAIL
 
     BEGIN CASE
-    CASE Y.TIPO.EMAIL.REV EQ 'EMAIL.SPEI.DEV'
-        CALL ABC.ENV.EMAIL.SPEI.DEV
+        CASE Y.TIPO.EMAIL.REV EQ 'EMAIL.SPEI.DEV'
+*CALL ABC.ENV.EMAIL.SPEI.DEV
     END CASE
 
-    RETURN
+RETURN
 *----------------------------------------------------------------------
 *CAST20220907.F
 
@@ -554,7 +553,7 @@ GENERA.BITACORA.ERRORES:
 
 *CAST20241028.F
 
-    RETURN
+RETURN
 *----------------------------------------------------------------------
 
 END

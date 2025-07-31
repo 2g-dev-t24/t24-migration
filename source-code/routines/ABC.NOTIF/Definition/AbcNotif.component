@@ -1,3 +1,44 @@
 component AbcNotif
 # Component Isolation Definition
 metamodelVersion 1.6
+module property readwrite FnSs
+module property readwrite FSs
+module property readwrite FnSmsEmail
+module property readwrite FSmsEmail
+module property readwrite Ysep
+module property readwrite FechaFile
+module property readwrite YDate
+module property readwrite YSalto
+module property readwrite YCanales
+module property readwrite IdSmsEmailOri
+module property readwrite FnFt
+module property readwrite FFt
+module property readwrite FnFtNau
+module property readwrite FFtNau
+module property readwrite YParamMensajeRespuesta
+module property readwrite YParamStatusRespuesta
+module property readwrite YStatusGeneranLog
+
+private method AbcEnviaNotifAlternaLoad (
+)
+{
+    jBC: ABC.ENVIA.NOTIF.ALTERNA.LOAD
+}
+
+
+
+private method AbcEnviaNotifAlternaSelect (
+)
+{
+    jBC: ABC.ENVIA.NOTIF.ALTERNA.SELECT
+}
+
+
+
+private method AbcEnviaNotifAlterna (
+    INOUT idSmsEmail string
+)
+{
+    jBC: ABC.ENVIA.NOTIF.ALTERNA
+}
+
