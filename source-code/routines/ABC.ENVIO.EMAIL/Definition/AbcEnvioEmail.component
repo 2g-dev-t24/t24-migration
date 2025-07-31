@@ -1,0 +1,61 @@
+component AbcEnvioEmail
+# Component Isolation Definition
+metamodelVersion 1.6
+# -------------------------------------------------
+
+
+private method AbcEnviaNotificacionEmailLoad (
+)
+{
+   jBC: ABC.ENVIA.NOTIFICACION.EMAIL.LOAD
+}
+
+private method AbcEnviaNotificacionEmailSelect (
+)
+{
+   jBC: ABC.ENVIA.NOTIFICACION.EMAIL.SELECT
+}
+private method AbcEnviaNotificacionEmail (
+   INOUT idSmsEmail string
+)
+{
+   jBC: ABC.ENVIA.NOTIFICACION.EMAIL
+}
+
+public property readwrite FnCliente : string {
+}
+public property readwrite FCliente : string {
+}
+public property readwrite FnSs : string {
+}
+public property readwrite FSs : string {
+}
+public property readwrite FSmsEmail : string {
+}
+public property readwrite FnSmsEmail : string {
+}
+public property readwrite FnCuentasD : string {
+}
+public property readwrite FCuentasD : string {
+}
+public property readwrite YSep : string {
+}
+public property readwrite FechaFile : string {
+}
+public property readwrite YDate : string {
+}
+public property readwrite YSalto : string {
+}
+public property readwrite YRutaHtml : string {
+}
+public property readwrite YRazonSocial : string {
+}
+
+
+
+
+
+
+
+
+

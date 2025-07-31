@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo2Mjc3MjU2Mjg6Q3AxMjUyOjE3NTM4MDUxMTM2NjM6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 29 Jul 2025 13:05:13
+* @ValidationCode : MjotMTMwMjM2NzU3MzpDcDEyNTI6MTc1MzgwNTgwODgyNjpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 29 Jul 2025 13:16:48
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -92,7 +92,7 @@ PROCESA:
     END
 *    EB.DataAccess.FRead(FN.MXBASE.ADD.CUSTOMER.DETAILS, Y.REG.LIST, R.MXBASE.ADD.CUSTOMER.DETAILS, F.MXBASE.ADD.CUSTOMER.DETAILS, Y.MXBASE.ADD.CUSTOMER.DETAILS)
     
-    IF NOT(R.CUSTOMER) THEN
+    IF (R.CUSTOMER) THEN
         R.MXBASE.ADD.CUSTOMER.DETAILS = MXBASE.CustomerRegulatory.MXBASEAddCustomerDetails.Read(Y.ID.CUS,Y.ERROR)
 
         Y.SECTOR          = R.CUSTOMER<ST.Customer.Customer.EbCusSector>
