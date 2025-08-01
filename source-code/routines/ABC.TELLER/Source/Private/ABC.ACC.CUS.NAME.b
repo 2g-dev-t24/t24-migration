@@ -19,8 +19,8 @@ $PACKAGE AbcTeller
     $USING EB.LocalReferences
     $USING FT.Contract
     $USING EB.Updates
-    $USING EB.ErrorProcessing
-
+    $USING EB.Display
+  
 *------ Main Processing Section
 
     IF EB.SystemTables.getMessage() EQ 'VAL' THEN RETURN
@@ -42,7 +42,7 @@ INITIALISE:
     F.CUSTOMER = ""
     EB.DataAccess.Opf(FN.CUSTOMER, F.CUSTOMER)
 
-    YR.ACCOUNT = B.SystemTables.getComi()
+    YR.ACCOUNT = EB.SystemTables.getComi()
 
 *    CALL DBR('ACCOUNT':FM:AC.CUSTOMER,YR.ACCOUNT,Y.CUSTOMER)
 
@@ -55,7 +55,7 @@ PROCESS:
 *-------
 
     Y.ESPACIO = " "
-    Y.CUST.NO = Y.CUSTOMER
+    Y.CUST.NO = EB.SystemTables.getComi()
     Y.ORDEN = ''
 
     EB.Updates.MultiGetLocRef("CUSTOMER","NOM.PER.MORAL",NOM.PER.MORAL.POS)
@@ -63,10 +63,10 @@ PROCESS:
     EB.DataAccess.FRead(FN.CUSTOMER,Y.CUST.NO,R.CUSTOMER,F.CUSTOMER,ERROR.CUSTOMER)
     IF R.CUSTOMER THEN
         Y.APELLIDO.P = R.CUSTOMER<ST.Customer.Customer.EbCusShortName>
-        Y.APELLIDO.M = R.CUSTOMER<T.Customer.Customer.EbCusNameOne>
+        Y.APELLIDO.M = R.CUSTOMER<ST.Customer.Customer.EbCusNameOne>
         Y.NOMBRE.1 = R.CUSTOMER<ST.Customer.Customer.EbCusNameTwo>
         Y.SECTOR = EB.SystemTables.getRNew(ST.Customer.Customer.EbCusSector)
-        Y.NOM.PER.MORAL = R.CUSTOMER<R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef, NOM.PER.MORAL.POS>)
+        Y.NOM.PER.MORAL = R.CUSTOMER<ST.Customer.Customer.EbCusLocalRef, NOM.PER.MORAL.POS>
     END ELSE
         ETEXT = "EL CLIENTE NO EXISTE"
         EB.SystemTables.setEtext(ETEXT)

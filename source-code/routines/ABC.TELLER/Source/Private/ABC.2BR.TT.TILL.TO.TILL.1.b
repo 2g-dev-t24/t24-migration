@@ -60,15 +60,16 @@ INIT:
 PROCESS:
 *===============
     DENOM = EB.SystemTables.getComi()
+    Y.POS<1,EB.SystemTables.setAv(0)> = DENOM
     IF EB.SystemTables.getRNew(TT.Contract.Teller.TeDrCrMarker) EQ 'CREDIT' THEN
-        EB.SystemTables.getRNew(TT.Contract.Teller.TeUnit)<1,AV> = DENOM
-        EB.Display.RefreshField(TT.Contract.Teller.TeUnit:'.':AV,"")
+        EB.SystemTables.setRNew(TT.Contract.Teller.TeUnit, Y.POS)
+        EB.Display.RefreshField(TT.Contract.Teller.TeUnit:'.':EB.SystemTables.setAv(0),"")
     END ELSE
-        EB.SystemTables.getRNew(TT.Contract.Teller.TeDrUnit)<1,AV> = DENOM
-        EB.Display.RefreshField(TT.Contract.Teller.TeDrUnit:'.':AV,"")
+        EB.SystemTables.setRNew(TT.Contract.Teller.TeDrUnit, Y.POS)
+        EB.Display.RefreshField(TT.Contract.Teller.TeDrUnit:'.':EB.SystemTables.setAv(0),"")
     END
 
-    AbcTeller.ABc2brTeldenomTotUnit()
+    AbcTeller.Abc2brTeldenomTotUnit()
 
     RETURN
 END
