@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNzk5Mjg0NDc6Q3AxMjUyOjE3NTI1NDg5NjMyMTE6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 15 Jul 2025 00:09:23
+* @ValidationCode : MjotMTExODg1MjY2OkNwMTI1MjoxNzU0MDAzMDUzMTgyOm1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 31 Jul 2025 20:04:13
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -77,7 +77,6 @@ SUBROUTINE ABC.E.MOV.FT(Y.ARR)
     GOSUB OPEN.FILES
     GOSUB INITIALISE
     GOSUB PROCESA.ENCABEZADO
-
     IF CATEGORY GE 6601 AND CATEGORY LE 6609 THEN
     END ELSE
         GOSUB PROCESA.MOVIMIENTO
@@ -171,14 +170,13 @@ OPEN.FILES:
     FN.FT.TXN.TYPE='F.FT.TXN.TYPE.CONDITION'; F.FT.TXN.TYPE= ''; EB.DataAccess.Opf(FN.FT.TXN.TYPE,F.FT.TXN.TYPE)
     YSEP.1 = '*'
     YSEP.2 = '|'
-
+****************************** TODO ******************************
+********** SE DEBE IR A LEER A TABLA ABC.ACCT.LCL.FLDS
     EB.LocalReferences.GetLocRef("ACCOUNT","CLABE",Y.POS.CLABE)
-    EB.LocalReferences.GetLocRef('ACCOUNT','GPO.CLUB.AHORRO',YGPO.CLUB.AHORRO)
-    EB.LocalReferences.GetLocRef('ACCOUNT','EXENTO.IMPUESTO',YPOS.EXENTO.IMPUESTO)
+****************************** TODO ******************************
     EB.LocalReferences.GetLocRef('FUNDS.TRANSFER','RASTREO',YPOS.RASTREO)
     EB.LocalReferences.GetLocRef('FUNDS.TRANSFER','CTA.EXT.TRANSF',YPOS.CTA.EXT.TRANSF)
     EB.LocalReferences.GetLocRef('FUNDS.TRANSFER','REFERENCIA',YPOS.REFERENCIA)
-    EB.LocalReferences.GetLocRef('FUNDS.TRANSFER','EXT.TRANS.ID',YPOS.EXT.TRANS.ID)
 
 *CAST20220908.I
 *    FN.FUNDS.TRANSFER.DEL = 'F.FUNDS.TRANSFER$DEL'; F.FUNDS.TRANSFER.DEL = ''; EB.DataAccess.Opf(FN.FUNDS.TRANSFER.DEL,F.FUNDS.TRANSFER.DEL)
@@ -244,8 +242,12 @@ PROCESA.ENCABEZADO:
 
                 CUSTOMER = R.INFO.ACC<AC.AccountOpening.Account.Customer>
                 CURRENCY = R.INFO.ACC<AC.AccountOpening.Account.Currency>
-                CLABE = R.INFO.ACC<AC.AccountOpening.Account.LocalRef>
-                CLABE = CLABE<1,Y.POS.CLABE>
+****************************** TODO ******************************
+********** SE DEBE IR A LEER A TABLA ABC.ACCT.LCL.FLDS
+*                CLABE = R.INFO.ACC<AC.AccountOpening.Account.LocalRef>
+*                CLABE = CLABE<1,Y.POS.CLABE>
+                CLABE = R.INFO.ACC<AC.AccountOpening.Account.ArrangementId>
+****************************** TODO ******************************
                 LAST.UPDATE = R.INFO.ACC<AC.AccountOpening.Account.DateLastUpdate>
                 ID.POST.REST = R.INFO.ACC<AC.AccountOpening.Account.PostingRestrict>
                 CATEGORY = R.INFO.ACC<AC.AccountOpening.Account.Category>
@@ -271,7 +273,6 @@ RETURN
 *-----------------------------------------------------------------------------
 PROCESA.MOVIMIENTO:
 *-----------------------------------------------------------------------------
-
     IF R.INFO.ACC NE '' THEN
 
         Y.LISTA.STMTS = ''; TOTAL.STMT = ''; LINEA.STMT = '';
@@ -279,7 +280,6 @@ PROCESA.MOVIMIENTO:
         EB.Reports.setDRangeAndValue(ID.ACC:FM:DATE.FT)
         EB.Reports.setOperandList('1':FM:'1')
         AC.ModelBank.EStmtEnqByConcat(Y.LISTA.STMTS)
-
 
         TOTAL.STMT = DCOUNT(Y.LISTA.STMTS, FM)
         IDEN.FT = FIELD(ID.CUENTA.FT, ';', 1)
