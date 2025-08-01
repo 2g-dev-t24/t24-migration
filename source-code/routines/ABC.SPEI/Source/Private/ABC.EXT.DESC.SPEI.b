@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo0MDAxMTcwNzE6Q3AxMjUyOjE3NTQwMTkyNTUxOTU6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 01 Aug 2025 00:34:15
+* @ValidationCode : MjotMTM0NzIzNjY1MzpDcDEyNTI6MTc1NDAyMDUyODAwMDptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 01 Aug 2025 00:55:28
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -42,7 +42,7 @@ SUBROUTINE ABC.EXT.DESC.SPEI
 ***************************************************************ROHH_20180723*INICIO
     Y.CUENTA.CLIENTE ='' ;
     ID.PRD = ''
-    O.DATE = EB.Reports.getOData()
+    O.DATA = EB.Reports.getOData()
     Y.CUENTA.CLIENTE = FIELD(O.DATA,'*',1)
     ID.CUENTA.FT =  TRIM(FIELD(O.DATA,'*',5):';1')
     ID.PRD = TRIM(ID.CUENTA.FT[1,2])
