@@ -10,6 +10,7 @@
     <resource-root path="./L3lib/AbcEnqRoutines.jar" />
     <resource-root path="./L3lib/AbcGetAdress.jar" />
     <resource-root path="./L3lib/AbcGetGeneralParam.jar" />
+    <resource-root path="./L3lib/AbcNotif.jar" />
     <resource-root path="./L3lib/AbcSpei.jar" />
     <resource-root path="./L3lib/AbcTable.jar" />
     <resource-root path="./L3lib/AbcTaxes.jar" />
