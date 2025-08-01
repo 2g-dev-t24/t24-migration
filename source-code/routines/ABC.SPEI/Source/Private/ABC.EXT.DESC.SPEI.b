@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNjQyMjcwOTE5OkNwMTI1MjoxNzUyNTQ5MDczOTU4Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 15 Jul 2025 00:11:13
+* @ValidationCode : Mjo0MDAxMTcwNzE6Q3AxMjUyOjE3NTQwMTkyNTUxOTU6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 01 Aug 2025 00:34:15
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -20,10 +20,10 @@
 * Desarrollador      :
 * Fecha Creacion     : 2017-07-14
 * Fecha Modificacion : ROHH_20180723
-* Desarrollador      : Rodrigo Oscar Hern�ndez Hern�ndez - F&GSolutions
+* Desarrollador      : Rodrigo Oscar Hernandez Hernandez - F&GSolutions
 * Modificaciones     : Agregar narrativa de traspasos de tipo "AC" Traspasos entre cuentas
 * Fecha Modificacion : ROHH_20180823
-* Desarrollador      : Rodrigo Oscar Hern�ndez Hern�ndez - F&GSolutions
+* Desarrollador      : Rodrigo Oscar Hernandez Hernandez - F&GSolutions
 * Modificacion1     : Modificar narrativa de transferencia tipo "ACSE" (SPEI ENVIADO) para mostrar BANCO destino
 * Modificacion2     : Modificar narrativa de transferencia tipo "ACSR" (SPEI RECIBIDO) para mostrar correctamente BANCO origen
 *======================================================================================
@@ -37,11 +37,12 @@ SUBROUTINE ABC.EXT.DESC.SPEI
     $USING EB.Template
     $USING EB.SystemTables
     $USING ABC.BP
-
+    $USING EB.Reports
 
 ***************************************************************ROHH_20180723*INICIO
     Y.CUENTA.CLIENTE ='' ;
     ID.PRD = ''
+    O.DATE = EB.Reports.getOData()
     Y.CUENTA.CLIENTE = FIELD(O.DATA,'*',1)
     ID.CUENTA.FT =  TRIM(FIELD(O.DATA,'*',5):';1')
     ID.PRD = TRIM(ID.CUENTA.FT[1,2])
@@ -49,7 +50,7 @@ SUBROUTINE ABC.EXT.DESC.SPEI
 ***************************************************************ROHH_20180723*INICIO
 
     IF ID.PRD NE 'FT' THEN
-        O.DATA=''
+        EB.Reports.setOData('')
         RETURN
     END
     GOSUB INICIO
@@ -65,6 +66,7 @@ INICIO:
     FN.CUENTA = 'F.ACCOUNT'           ;    F.CUENTA      = '';   EB.DataAccess.Opf(FN.CUENTA,F.CUENTA)
     FN.ACCOUNT = 'F.ACCOUNT'          ;    F.ACCOUNT     = '';   EB.DataAccess.Opf(FN.ACCOUNT,F.ACCOUNT)
     FN.DESTINO = 'F.ABC.CUENTAS.DESTINO';  F.DESTINO     = '';  EB.DataAccess.Opf(FN.DESTINO,F.DESTINO)
+    FN.EB.LOOKUP = 'F.EB.LOOKUP';  F.DESTINO     = '';  EB.DataAccess.Opf(FN.DESTINO,F.DESTINO)
 
 
     EB.LocalReferences.GetLocRef('FUNDS.TRANSFER','RASTREO',YPOS.RASTREO)
@@ -98,21 +100,15 @@ PROCESA:
         CLAVE.RASTREO = ID.CUENTA.FT[3,17]
         CONCEPTO.PAGO = REC.FT<FT.Contract.FundsTransfer.ExtendInfo>
 
-
-******************************************************************************************ROHH_20180823
         Y.ID.CLIENTE = '';Y.ID.ABC.CUENTAS.DESTINO = '';Y.NOMBRE.BANCO=''
         Y.ID.CLIENTE = REC.CUENTA<AC.AccountOpening.Account.Customer>
         Y.ID.ABC.CUENTAS.DESTINO = Y.ID.CLIENTE:".":CTA.BENEF.ORDEN
 
-*ITSS-SINDHU-START
-*        CALL DBR("ABC.CUENTAS.DESTINO":FM:2,Y.ID.ABC.CUENTAS.DESTINO,Y.BANK.ID)
-*        CALL DBR("VPM.BANCOS":FM:1,Y.BANK.ID,Y.NOMBRE.BANCO)
         EB.DataAccess.FRead(FN.DESTINO, Y.ID.ABC.CUENTAS.DESTINO,REC.DESTINO,F.DESTINO, Y.DESTINO.ERR)
         Y.BANK.ID = REC.DESTINO<2>
-        EB.DataAccess.FRead(FN.BANCOS, Y.BANK.ID, REC.BANCOS, F.BANCOS, Y.BANCO.ERR)
-        Y.NOMBRE.BANCO = REC.BANCOS<1>
-*ITSS-SINDHU-END
-******************************************************************************************ROHH_20180823
+        Y.BANK.ID = "CLB.BANK.CODE*" : Y.BANK.ID
+        REC.BANCOS = EB.Template.Lookup.Read("CLB.BANK.CODE*" : Y.BANK.ID, Error)
+        Y.NOMBRE.BANCO = REC.BANCOS<EB.Template.Lookup.LuDescription>
 
         DETALLE.FT  = 'TRASFERENCIA SPEI ENVIADO ':YSEP
         DETALLE.FT := 'CUENTA DESTINO: ':CTA.BENEF.ORDEN:YSEP
@@ -133,12 +129,9 @@ PROCESA:
         YBANK.ID = ''; R.BANCOS = ''; NOMBRE.BANCO = '';
 
 
-        YBANK.ID = REC.FT<FT.Contract.FundsTransfer.CreditTheirRef>    ;****************** ****ROHH_20180823
-*ITSS-SINDHU-START
-*        CALL DBR("VPM.BANCOS":FM:1,YBANK.ID,NOMBRE.BANCO)   ;****************** ****ROHH_20180823
+        YBANK.ID = REC.FT<FT.Contract.FundsTransfer.CreditTheirRef>
         R.BANCOS = EB.Template.Lookup.Read(YBANK.ID, YF.ERROR)
         NOMBRE.BANCO = R.BANCOS<EB.Template.Lookup.LuDescription>
-*ITSS-SINDHU-END
 
         DETALLE.FT := 'TRASFERENCIA SPEI RECIBIDO ':YSEP
         DETALLE.FT := 'CUENTA ORIGEN: ':RECP.EMIS.PAGO:YSEP
@@ -211,7 +204,7 @@ PROCESA:
 
     END
 ***************************************************************ROHH_20180723*FIN
-    O.DATA = DETALLE.FT
+    EB.Reports.setOData(DETALLE.FT)
 RETURN
 ************
 END
