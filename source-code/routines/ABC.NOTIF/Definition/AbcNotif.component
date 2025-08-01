@@ -42,3 +42,11 @@ private method AbcEnviaNotifAlterna (
     jBC: ABC.ENVIA.NOTIF.ALTERNA
 }
 
+
+
+private method abcEnvEmailSpeiDev (
+)
+{
+   jBC: ABC.ENV.EMAIL.SPEI.DEV
+}
+
