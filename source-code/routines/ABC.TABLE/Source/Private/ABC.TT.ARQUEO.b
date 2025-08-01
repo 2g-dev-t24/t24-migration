@@ -28,7 +28,7 @@ $PACKAGE AbcTable
     EB.Template.setTableSubproduct('')               ;* Must be on EB.SUB.PRODUCT
     EB.Template.setTableClassification('FIN')        ;* As per FILE.CONTROL
     EB.Template.setTableSystemclearfile('Y')         ;* As per FILE.CONTROL
-    TEB.Template.setTableRelatedfiles('')            ;* As per FILE.CONTROL
+    EB.Template.setTableRelatedfiles('')            ;* As per FILE.CONTROL
     EB.Template.setTableIspostclosingfile('')        ;* As per FILE.CONTROL
     EB.Template.setTableEquateprefix('TT.ARQ')       ;* Use to create I_F.EB.LOG.PARAMETER
 *-----------------------------------------------------------------------------

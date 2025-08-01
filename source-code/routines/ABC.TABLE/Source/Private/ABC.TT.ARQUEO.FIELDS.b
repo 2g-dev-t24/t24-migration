@@ -25,7 +25,7 @@ $PACKAGE AbcTable
 *** </region>
 
 *-----------------------------------------------------------------------------
-    B.Template.TableDefineid("ABC.TT.ARQ.ID", EB.Template.T24String)        ;* Define Table id
+    EB.Template.TableDefineid("ABC.TT.ARQ.ID", EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
     EB.Template.TableAddfielddefinition('CAJERO', '4', 'ANY', '')
     EB.Template.FieldSetcheckfile('TELLER.ID' : FM : TT.TID.USER)
