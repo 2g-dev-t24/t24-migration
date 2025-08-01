@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTg0MDYzODgxNTpDcDEyNTI6MTc1NDAxMzMxNTEyNjptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 31 Jul 2025 22:55:15
+* @ValidationCode : MjoxNzY4OTA2Njk5OkNwMTI1MjoxNzU0MDI0MzEyOTU4Om1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 01 Aug 2025 01:58:32
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -171,7 +171,7 @@ OPEN.FILES:
     YSEP.1 = '*'
     YSEP.2 = '|'
 ****************************** TODO ******************************
-********** SE DEBE IR A LEER A TABLA ABC.ACCT.LCL.FLDS
+
     EB.LocalReferences.GetLocRef("ACCOUNT","CLABE",Y.POS.CLABE)
 ****************************** TODO ******************************
     EB.LocalReferences.GetLocRef('FUNDS.TRANSFER','RASTREO',YPOS.RASTREO)
@@ -242,12 +242,11 @@ PROCESA.ENCABEZADO:
 
                 CUSTOMER = R.INFO.ACC<AC.AccountOpening.Account.Customer>
                 CURRENCY = R.INFO.ACC<AC.AccountOpening.Account.Currency>
-****************************** TODO ******************************
-********** SE DEBE IR A LEER A TABLA ABC.ACCT.LCL.FLDS
-*                CLABE = R.INFO.ACC<AC.AccountOpening.Account.LocalRef>
-*                CLABE = CLABE<1,Y.POS.CLABE>
-                CLABE = R.INFO.ACC<AC.AccountOpening.Account.ArrangementId>
-****************************** TODO ******************************
+                Y.ALT.ID = R.INFO.ACC<AC.AccountOpening.Account.AltAcctType>
+                CLABE = ""
+                LOCATE "CLABE" IN Y.ALT.ID<1> SETTING Y.POS THEN
+                    CLABE = R.INFO.ACC<AC.AccountOpening.Account.AltAcctId, Y.POS>
+                END
                 LAST.UPDATE = R.INFO.ACC<AC.AccountOpening.Account.DateLastUpdate>
                 ID.POST.REST = R.INFO.ACC<AC.AccountOpening.Account.PostingRestrict>
                 CATEGORY = R.INFO.ACC<AC.AccountOpening.Account.Category>
