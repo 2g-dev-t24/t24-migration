@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTExODg1MjY2OkNwMTI1MjoxNzU0MDAzMDUzMTgyOm1hdXJpY2lvLmxvcGV6Oi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 31 Jul 2025 20:04:13
+* @ValidationCode : MjotMTg0MDYzODgxNTpDcDEyNTI6MTc1NDAxMzMxNTEyNjptYXVyaWNpby5sb3BlejotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 31 Jul 2025 22:55:15
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : mauricio.lopez
 * @ValidationInfo : Nb tests success  : N/A
@@ -276,12 +276,12 @@ PROCESA.MOVIMIENTO:
     IF R.INFO.ACC NE '' THEN
 
         Y.LISTA.STMTS = ''; TOTAL.STMT = ''; LINEA.STMT = '';
-        EB.Reports.setDFields('ACCOUNT':FM:'BOOKING.DATE')
-        EB.Reports.setDRangeAndValue(ID.ACC:FM:DATE.FT)
-        EB.Reports.setOperandList('1':FM:'1')
+        EB.Reports.setDFields('ACCOUNT':@FM:'BOOKING.DATE')
+        EB.Reports.setDRangeAndValue(ID.ACC:@FM:DATE.FT)
+        EB.Reports.setOperandList('1':@FM:'1')
         AC.ModelBank.EStmtEnqByConcat(Y.LISTA.STMTS)
 
-        TOTAL.STMT = DCOUNT(Y.LISTA.STMTS, FM)
+        TOTAL.STMT = DCOUNT(Y.LISTA.STMTS, @FM)
         IDEN.FT = FIELD(ID.CUENTA.FT, ';', 1)
         Y.STMT.FT = ''
         Y.STMT.SALDO = ''
