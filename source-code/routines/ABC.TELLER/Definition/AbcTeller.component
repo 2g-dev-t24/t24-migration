@@ -12,98 +12,104 @@ private method AbcEnvEmailLimCajaBow ()
 public method ABc2BrTtTillToTill1 (
 )
 {
+    jBC: ABC.UPDT.CONCAT.REP.CAJA
+}
+
+public method Abc2BrTtTillToTill1 (
+)
+{
     jBC: ABC.2BR.TT.TILL.TO.TILL.1
 }
 
-public method ABcAccCusName (
+public method AbcAccCusName (
 )
 {
     jBC: ABC.ACC.CUS.NAME
 }
 
-public method ABcSumaTotalDenomSistema (
+public method AbcSumaTotalDenomSistema (
 )
 {
     jBC: ABC.SUMA.TOTAL.DENOM.SISTEMA
 }
 
-public method ABc2brInhibeLector (
+public method Abc2brInhibeLector (
 )
 {
     jBC: ABC.2BR.INHIBE.LECTOR
 }
 
-public method ABc2brVCcyTellerSbc (
+public method Abc2brVCcyTellerSbc (
 )
 {
     jBC: ABC.2BR.V.CCY.TELLER.SBC
 }
 
-public method ABc2brChkLimamt (
+public method Abc2brChkLimamt (
 )
 {
     jBC: ABC.2BR.CHK.LIMAMT
 }
 
 
-public method ABc2brValidaDigitoTarjeta (
+public method Abc2brValidaDigitoTarjeta (
 )
 {
     jBC: ABC.2BR.VALIDA.DIGITO.TARJETA
 }
 
-public method ABcBr2TeldenomTot (
+public method AbcBr2TeldenomTot (
 )
 {
     jBC: ABC.BR2.TELDENOM.TOT
 }
 
 
-public method ABcValMntMnorUdiTell (
+public method AbcValMntMnorUdiTell (
 )
 {
     jBC: ABC.VAL.MNT.MNOR.UDI.TELL
 }
 
 
-public method ABc2brRtnNoCambioChqdep (
+public method Abc2brRtnNoCambioChqdep (
 )
 {
     jBC: ABC.2BR.RTN.NO.CAMBIO.CHQDEP
 }
 
 
-public method ABc2brTeldenomTotUnit (
+public method Abc2brTeldenomTotUnit (
 )
 {
     jBC: ABC.2BR.TELDENOM.TOT.UNIT
 }
 
-public method ABcV2ttGetTellerId2 (
+public method AbcV2ttGetTellerId2 (
 )
 {
     jBC: ABC.V.2TT.GET.TELLER.ID.2
 }
 
-public method ABcVFtToday (
+public method AbcVFtToday (
 )
 {
     jBC: ABC.V.FT.TODAY
 }
 
-public method ABcValidaTellerFolVal (
+public method AbcValidaTellerFolVal (
 )
 {
     jBC: ABC.VALIDA.TELLER.FOL.VAL
 }
 
-public method ABcValidaTransTypeAc (
+public method AbcValidaTransTypeAc (
 )
 {
     jBC: ABC.VALIDA.TRANS.TYPE.AC
 }
 
-public method ABc2brValidaDenomNoTc (
+public method Abc2brValidaDenomNoTc (
 )
 {
     jBC: ABC.2BR.VALIDA.DENOM.NO.TC
