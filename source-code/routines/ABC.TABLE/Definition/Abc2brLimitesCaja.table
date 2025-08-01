@@ -1,0 +1,34 @@
+public table Abc2brLimitesCaja {
+    t24: ABC.2BR.LIMITES.CAJA
+    fields:{
+        Currency(ABC.2BR.LIM.CAJ.CURRENCY) = 1
+        DallowAmt(ABC.2BR.LIM.CAJ.DALLOW.AMT) = 2
+        CallowAmt(ABC.2BR.LIM.CAJ.CALLOW.AMT) = 3
+        Transaction(ABC.2BR.LIM.CAJ.TRANSACTION) = 4
+        MinTransAmt(ABC.2BR.LIM.CAJ.MIN.TRANS.AMT) = 5
+        MaxTransAmt(ABC.2BR.LIM.CAJ.MAX.TRANS.AMT) = 6
+
+        Reserved10(ABC.2BR.LIM.CAJ.RESERVED.10) = 7
+        Reserved9(ABC.2BR.LIM.CAJ.RESERVED.9) = 8
+        Reserved8(ABC.2BR.LIM.CAJ.RESERVED.8) = 9
+        Reserved7(ABC.2BR.LIM.CAJ.RESERVED.7) = 10
+        Reserved6(ABC.2BR.LIM.CAJ.RESERVED.6) = 11
+        Reserved5(ABC.2BR.LIM.CAJ.RESERVED.5) = 12
+        Reserved4(ABC.2BR.LIM.CAJ.RESERVED.4) = 13
+        Reserved3(ABC.2BR.LIM.CAJ.RESERVED.3) = 14
+        Reserved2(ABC.2BR.LIM.CAJ.RESERVED.2) = 15
+        Reserved1(ABC.2BR.LIM.CAJ.RESERVED.1) = 16
+        
+        LocalRef(ABC.2BR.LIM.CAJ.LOCAL.REF) = 17
+
+        RecordStatus(ABC.2BR.LIM.CAJ.RECORD.STATUS) = 18
+        CurrNo(ABC.2BR.LIM.CAJ.CURR.NO) = 19
+        Inputter(ABC.2BR.LIM.CAJ.INPUTTER) = 20
+        DateTime(ABC.2BR.LIM.CAJ.DATE.TIME) = 21
+        Authoriser(ABC.2BR.LIM.CAJ.AUTHORISER) = 22
+        CoCode(ABC.2BR.LIM.CAJ.CO.CODE) = 23
+        DeptCode(ABC.2BR.LIM.CAJ.DEPT.CODE) = 24
+        AuditorCode(ABC.2BR.LIM.CAJ.AUDITOR.CODE) = 25
+        AuditDateTime(ABC.2BR.LIM.CAJ.AUDIT.DATE.TIME) = 26
+    }
+}
