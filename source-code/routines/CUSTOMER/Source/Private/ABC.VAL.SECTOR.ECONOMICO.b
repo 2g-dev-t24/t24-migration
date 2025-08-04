@@ -31,7 +31,7 @@ PROCESO:
 *---------------------------------------------------------------
 
 ** Ticket #128 - I
-*    Y.ID.ACT.ECONOMICA = FIELD(Y.ID.ACT.ECONOMICA, "~", 1)
+    Y.ID.ACT.ECONOMICA = FIELD(Y.ID.ACT.ECONOMICA, "~", 1)
 
     Y.ID.ACT.ECONOMICA = FIELD(Y.ID.ACT.ECONOMICA, "*", 2)
     IF LEN(Y.ID.ACT.ECONOMICA) < 7 THEN
