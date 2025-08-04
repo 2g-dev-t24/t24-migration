@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMTIyNTU4MjUzOkNwMTI1MjoxNzU0Mjc2NzcwNDEwOkx1Y2FzRmVycmFyaTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 04 Aug 2025 00:06:10
+* @ValidationCode : MjotNjEzNTYzNjUyOkNwMTI1MjoxNzU0MzE5ODc2NjI4Okx1Y2FzRmVycmFyaTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 04 Aug 2025 12:04:36
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : LucasFerrari
 * @ValidationInfo : Nb tests success  : N/A
@@ -25,10 +25,10 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
 *-----------------------------------------------------------------------------
     EB.Template.TableDefineid("ID", EB.Template.T24String)        ;* Define Table id
 *-----------------------------------------------------------------------------
-    EB.Template.TableAddfielddefinition('XX-OBSERVACIONES'    ,'65'   , 'A', '')
+    EB.Template.TableAddfielddefinition('XX.OBSERVACIONES'    ,'65'   , 'A', '')
     EB.Template.TableAddfielddefinition('CELULAR'             ,'10'   , 'A', '')
-    EB.Template.TableAddoptionsfield   ("XX-PARENTESCO"       ,'PADRE_MADRE_HIJO(A)_ABUELO(A)_NIETO(A)_HERMANO(A)_TIO(A)_PRIMO(A)_SOBRINO(A)_ESPOSO(A)_SUEGRO(A)_CU?ADO(A)_AMIGO(A)_COMPADRE/COMADRE_MISMO CLIENTE_EMPRESA RELACIONADA_SOC EMP RELACIONADA', '', '')
-    EB.Template.TableAddoptionsfield   ('XX-USO.PRETEND.CTA'  ,'Administracion de gastos e ingresos_Ahorro_Concentracion Fondos_Credito_Cuenta Inversion_Otros'   , 'A', '')
+    EB.Template.TableAddoptionsfield   ("XX.PARENTESCO"       ,'PADRE_MADRE_HIJO(A)_ABUELO(A)_NIETO(A)_HERMANO(A)_TIO(A)_PRIMO(A)_SOBRINO(A)_ESPOSO(A)_SUEGRO(A)_CU?ADO(A)_AMIGO(A)_COMPADRE/COMADRE_MISMO CLIENTE_EMPRESA RELACIONADA_SOC EMP RELACIONADA', '', '')
+    EB.Template.TableAddoptionsfield   ('XX.USO.PRETEND.CTA'  ,'Administracion de gastos e ingresos_Ahorro_Concentracion Fondos_Credito_Cuenta Inversion_Otros'   , 'A', '')
     EB.Template.TableAddfielddefinition('USO.PRETEND.OTR'     ,'60'   , 'A', '')
     EB.Template.TableAddoptionsfield   ('PROCEDEN.RECURS'     ,'Comisiones_Dividendos_Fideicomisos_Herencia_Honorarios_Inversion_Otro_Partidas Presupuestales_Premios_Regal?as_Rentas_Sueldos_Venta de Activos_Venta de Productos/Servicios'   , 'A', '')
     EB.Template.TableAddfielddefinition('PROCEDEN.OTR'        ,'60'   , 'A', '')
@@ -47,7 +47,7 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     
     EB.Template.TableAddoptionsfield   ('ACCESO.INTERNET'     ,'SI_NO'   , 'A', '')
     EB.Template.TableAddoptionsfield   ('INTERESES.TIT'       ,'SI_NO'   , 'A', '')
-    EB.Template.TableAddfielddefinition('XX-COMBINA.FIRMAS'   ,'35'   , 'A', '')
+    EB.Template.TableAddfielddefinition('XX.COMBINA.FIRMAS'   ,'35'   , 'A', '')
     EB.Template.TableAddoptionsfield   ('CON.SIN.INT'         ,'CUENTA CON INTERESES_CUENTA SIN INTERESES'   , 'A', '')
     EB.Template.TableAddoptionsfield   ('EXENTO.IMPUESTO'     ,'SI_NO'   , 'A', '')
     EB.Template.TableAddfielddefinition('BLOQ.EMBARGO'        ,'15'   , 'A', '')
@@ -278,32 +278,32 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddfielddefinition('PRODUCTO'        ,EB.Template.T24String      , '', '')
     EB.Template.FieldSetcheckfile      ("AA.PRODUCT")
     
-    EB.Template.TableAddfielddefinition('CURRENCY'        ,EB.Template.T24String      , '', '')
+    EB.Template.TableAddfielddefinition('CURRENCY','3', 'A', '')
     EB.Template.FieldSetcheckfile      ("CURRENCY")
     
-    EB.Template.TableAddfielddefinition('CATEGORY'        ,EB.Template.T24Numeric      , '', '')
+    EB.Template.TableAddfielddefinition('CATEGORY','6', '', '')
     EB.Template.FieldSetcheckfile      ("CATEGORY")
     
     EB.Template.TableAddoptionsfield   ('CLASSIFICATION'     ,'Persona Fisica_Fisica con Actividad Empresarial_Persona Moral_Fideicomiso_Mandato_Cotitular'   , 'A', '')
     
-    EB.Template.TableAddfielddefinition('ACCOUNT.OFFICER'        ,EB.Template.T24String      , '', '')
+    EB.Template.TableAddfielddefinition('ACCOUNT.OFFICER',EB.Template.T24String, '', '')
     EB.Template.FieldSetcheckfile      ("DEPT.ACCT.OFFICER")
     
-    EB.Template.TableAddfield          ('OPENING.DATE'    ,EB.Template.T24Date   , '','')
+    EB.Template.TableAddfield          ('OPENING.DATE',EB.Template.T24Date, '','')
     
-    EB.Template.TableAddfielddefinition('ACCOUNT.TITLE.1'         ,'35'      , 'A', '')
-    EB.Template.TableAddfielddefinition('ACCOUNT.TITLE.2'         ,'35'      , 'A', '')
+    EB.Template.TableAddfielddefinition('ACCOUNT.TITLE.1','35', 'A', '')
+    EB.Template.TableAddfielddefinition('ACCOUNT.TITLE.2','35', 'A', '')
     
-    EB.Template.TableAddfielddefinition('CLABE'         ,'18'      , 'A', '')
+    EB.Template.TableAddfielddefinition('CLABE','18'      , 'A', '')
 
-    EB.Template.TableAddfielddefinition('XX.POSTING.RESTRICT'        ,EB.Template.T24Numeric      , '', '')
+    EB.Template.TableAddfielddefinition('XX.POSTING.RESTRICT',EB.Template.T24Numeric, '', '')
     EB.Template.FieldSetcheckfile      ("POSTING.RESTRICT")
  
-    EB.Template.TableAddfield          ('VALUE.DATE'    ,EB.Template.T24Date   , '','')
+    EB.Template.TableAddfield          ('VALUE.DATE',EB.Template.T24Date, '','')
     
-    EB.Template.TableAddfielddefinition('INACTIV.MARKER'         ,'1'      , 'A', '')
+    EB.Template.TableAddfielddefinition('INACTIV.MARKER','1', 'A', '')
     
-    EB.Template.TableAddfielddefinition('NIVEL'        ,EB.Template.T24String      , '', '')
+    EB.Template.TableAddfielddefinition('NIVEL','35', 'A', '')
     EB.Template.FieldSetcheckfile      ("ABC.NIVEL.CUENTA")
 
     EB.Template.TableAddreservedfield('RESERVED.40')
