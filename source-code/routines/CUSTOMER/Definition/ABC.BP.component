@@ -542,13 +542,13 @@ private method AbcNofileAccountPrn (
 private method AbcCtaAltPrn (
 )
 {
-   jBC: ABC.CTA.ALT.PRN
+    jBC: ABC.CTA.ALT.PRN
 }
 
 private method AbcUpdCustStatus (
 )
 {
-   jBC: ABC.UPD.CUST.STATUS
+    jBC: ABC.UPD.CUST.STATUS
 }
 
 
@@ -560,17 +560,23 @@ public method AbcValidaVerificaFolio (INOUT YDatos string, INOUT YError string)
 private method AbcValidaFolioBiome (
 )
 {
-   jBC: ABC.VALIDA.FOLIO.BIOME
+    jBC: ABC.VALIDA.FOLIO.BIOME
 }
 
 private method AbcValMxbInpDist (
 )
 {
-   jBC: ABC.VAL.MXB.INP.DIST
+    jBC: ABC.VAL.MXB.INP.DIST
 }
 
 
 public method AbcValidaClienteEnrol (INOUT YIdCust string, INOUT YEstatus string)
 {
     jBC: ABC.VALIDA.CLIENTE.ENROL
+}
+
+private method AbcEExtractName (
+)
+{
+    jBC: ABC.E.EXTRACT.NAME
 }

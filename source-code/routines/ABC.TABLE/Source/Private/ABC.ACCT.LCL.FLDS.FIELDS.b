@@ -1,7 +1,7 @@
-* @ValidationCode : MjotNzk0OTM2MjYyOkNwMTI1MjoxNzUzNzUyMDczMTQwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOnRydWU6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 28 Jul 2025 22:21:13
+* @ValidationCode : MjotMTIyNTU4MjUzOkNwMTI1MjoxNzU0Mjc2NzcwNDEwOkx1Y2FzRmVycmFyaTotMTotMTowOjA6dHJ1ZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 04 Aug 2025 00:06:10
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : Luis Capra
+* @ValidationInfo : User Name         : LucasFerrari
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -161,7 +161,7 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddfielddefinition('XX-FACU.NRO.IDENTI'    ,'25'   , 'A', '')
     EB.Template.TableAddoptionsfield   ('XX-FACU.TIPO.FIRMA'    ,'A_B_C'   , 'A', '')
     EB.Template.TableAddfielddefinition('XX-FACU.TEL.CEL'       ,'25'   , 'A', '')
-    EB.Template.TableAddfielddefinition('XX>APE.PATERNO'       ,'65'   , 'A', '')
+    EB.Template.TableAddfielddefinition('XX>FACU.EMAIL'       ,'65'   , 'A', '')
   
 *****************************************************************************
 *  COT                                                             *
@@ -268,15 +268,43 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddoptionsfield   ('UPDATE.NIVEL'       ,'CAMBIO.N4', 'A', '')
     EB.Template.TableAddfielddefinition('FECHA.UPD.NVL'    ,'15'   , 'A', '')
 
-    EB.Template.TableAddfielddefinition('CUSTOMER'        ,T24_Customer      , '', '')
+    EB.Template.TableAddfielddefinition('CUSTOMER'        ,EB.Template.T24Customer      , '', '')
     EB.Template.FieldSetcheckfile      ("CUSTOMER")
-    EB.Template.TableAddfielddefinition('MONEDA'        ,T24_String      , '', '')
+    EB.Template.TableAddfielddefinition('MONEDA'        ,EB.Template.T24String      , '', '')
     EB.Template.FieldSetcheckfile      ("CURRENCY")
-    EB.Template.TableAddfielddefinition('ROL'        ,T24_String      , '', '')
+    EB.Template.TableAddfielddefinition('ROL'        ,EB.Template.T24String      , '', '')
     EB.Template.FieldSetcheckfile      ("AA.CUSTOMER.ROLE")
-    EB.Template.TableAddfielddefinition('CREATE.DATE'        ,'8'      , 'D', '')            
-    EB.Template.TableAddfielddefinition('PRODUCTO'        ,T24_String      , '', '')
+    EB.Template.TableAddfielddefinition('CREATE.DATE'        ,'8'      , 'D', '')
+    EB.Template.TableAddfielddefinition('PRODUCTO'        ,EB.Template.T24String      , '', '')
     EB.Template.FieldSetcheckfile      ("AA.PRODUCT")
+    
+    EB.Template.TableAddfielddefinition('CURRENCY'        ,EB.Template.T24String      , '', '')
+    EB.Template.FieldSetcheckfile      ("CURRENCY")
+    
+    EB.Template.TableAddfielddefinition('CATEGORY'        ,EB.Template.T24Numeric      , '', '')
+    EB.Template.FieldSetcheckfile      ("CATEGORY")
+    
+    EB.Template.TableAddoptionsfield   ('CLASSIFICATION'     ,'Persona Fisica_Fisica con Actividad Empresarial_Persona Moral_Fideicomiso_Mandato_Cotitular'   , 'A', '')
+    
+    EB.Template.TableAddfielddefinition('ACCOUNT.OFFICER'        ,EB.Template.T24String      , '', '')
+    EB.Template.FieldSetcheckfile      ("DEPT.ACCT.OFFICER")
+    
+    EB.Template.TableAddfield          ('OPENING.DATE'    ,EB.Template.T24Date   , '','')
+    
+    EB.Template.TableAddfielddefinition('ACCOUNT.TITLE.1'         ,'35'      , 'A', '')
+    EB.Template.TableAddfielddefinition('ACCOUNT.TITLE.2'         ,'35'      , 'A', '')
+    
+    EB.Template.TableAddfielddefinition('CLABE'         ,'18'      , 'A', '')
+
+    EB.Template.TableAddfielddefinition('XX.POSTING.RESTRICT'        ,EB.Template.T24Numeric      , '', '')
+    EB.Template.FieldSetcheckfile      ("POSTING.RESTRICT")
+ 
+    EB.Template.TableAddfield          ('VALUE.DATE'    ,EB.Template.T24Date   , '','')
+    
+    EB.Template.TableAddfielddefinition('INACTIV.MARKER'         ,'1'      , 'A', '')
+    
+    EB.Template.TableAddfielddefinition('NIVEL'        ,EB.Template.T24String      , '', '')
+    EB.Template.FieldSetcheckfile      ("ABC.NIVEL.CUENTA")
 
     EB.Template.TableAddreservedfield('RESERVED.40')
     EB.Template.TableAddreservedfield('RESERVED.39')
@@ -318,6 +346,8 @@ SUBROUTINE ABC.ACCT.LCL.FLDS.FIELDS
     EB.Template.TableAddreservedfield('RESERVED.3')
     EB.Template.TableAddreservedfield('RESERVED.2')
     EB.Template.TableAddreservedfield('RESERVED.1')
+
+    EB.Template.TableAddoverridefield()
 
     EB.Template.TableSetauditposition()
 
