@@ -46,7 +46,7 @@ PROCESS:
         END
     END
 
-    Y.CADENA = 'java -jar GenericSOAPClient.jar "' : Y.CADENA.ENVIO : '"' : Y.SALTO
+    Y.CADENA = 'java -jar generic-soap-client-1.0-SNAPSHOT-jar-with-dependencies.jar "' : Y.CADENA.ENVIO : '"' : Y.SALTO
 
     Y.MENSAJE = "ENVIANDO REQUEST ...  "
     AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
