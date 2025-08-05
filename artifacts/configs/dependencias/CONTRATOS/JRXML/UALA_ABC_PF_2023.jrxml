@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="UALA_ABC_PF_2023" pageWidth="612" pageHeight="885" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4ccd39f1-3ca1-4c75-9075-e9fd4e740e29">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="N2_ABC_PF_1006"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="xPath">
+		<![CDATA[/Datos]]>
+	</queryString>
+	<field name="TIPO_FORMATO" class="java.lang.String">
+		<fieldDescription><![CDATA[TIPO_FORMATO]]></fieldDescription>
+	</field>
+	<field name="NOM_EJECUTIVO" class="java.lang.String">
+		<fieldDescription><![CDATA[NOM_EJECUTIVO]]></fieldDescription>
+	</field>
+	<field name="NUM_EJECUTIVO" class="java.lang.String">
+		<fieldDescription><![CDATA[NUM_EJECUTIVO]]></fieldDescription>
+	</field>
+	<field name="NOM_SUCURSAL" class="java.lang.String">
+		<fieldDescription><![CDATA[NOM_SUCURSAL]]></fieldDescription>
+	</field>
+	<field name="NUM_SUCURSAL" class="java.lang.String">
+		<fieldDescription><![CDATA[NUM_SUCURSAL]]></fieldDescription>
+	</field>
+	<field name="ID_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[ID_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="ID_CUENTA" class="java.lang.String">
+		<fieldDescription><![CDATA[ID_CUENTA]]></fieldDescription>
+	</field>
+	<field name="CTA_CLABE" class="java.lang.String">
+		<fieldDescription><![CDATA[CTA_CLABE]]></fieldDescription>
+	</field>
+	<field name="CATEGORIA_CTA" class="java.lang.String">
+		<fieldDescription><![CDATA[CATEGORIA_CTA]]></fieldDescription>
+	</field>
+	<field name="NOM_COMERCIAL_PROD" class="java.lang.String">
+		<fieldDescription><![CDATA[NOM_COMERCIAL_PROD]]></fieldDescription>
+	</field>
+	<field name="NUMERO_RECA" class="java.lang.String">
+		<fieldDescription><![CDATA[NUMERO_RECA]]></fieldDescription>
+	</field>
+	<field name="SEL_SERVICIO" class="java.lang.String">
+		<fieldDescription><![CDATA[SEL_SERVICIO]]></fieldDescription>
+	</field>
+	<field name="MED_DISPOSICION" class="java.lang.String">
+		<fieldDescription><![CDATA[MED_DISPOSICION]]></fieldDescription>
+	</field>
+	<field name="CALLE_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[CALLE_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="NUM_EXT_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[NUM_EXT_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="NUM_INT_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[NUM_INT_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="COLONIA_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[COLONIA_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="MUNICIPIO_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[MUNICIPIO_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="ESTADO_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[ESTADO_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="CIUDAD_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[CIUDAD_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="CP_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[CP_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="PAIS_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[PAIS_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="FECHA_REG_PUB" class="java.lang.String">
+		<fieldDescription><![CDATA[FECHA_REG_PUB]]></fieldDescription>
+	</field>
+	<field name="TIENEFIR_ELEC" class="java.lang.String">
+		<fieldDescription><![CDATA[TIENEFIR_ELEC]]></fieldDescription>
+	</field>
+	<field name="FIRMA_ELECTRO" class="java.lang.String">
+		<fieldDescription><![CDATA[FIRMA_ELECTRO]]></fieldDescription>
+	</field>
+	<field name="TIPO_INDENT_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[TIPO_INDENT_CLI]]></fieldDescription>
+	</field>
+	<field name="NUME_INDENT_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[NUME_INDENT_CLI]]></fieldDescription>
+	</field>
+	<field name="VIGE_INDENT_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[VIGE_INDENT_CLI]]></fieldDescription>
+	</field>
+	<field name="COMPR_DOMI" class="java.lang.String">
+		<fieldDescription><![CDATA[COMPR_DOMI]]></fieldDescription>
+	</field>
+	<field name="TEL_DOMI_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_DOMI_CLI]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_1" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_1]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_2" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_2]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_3" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_3]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_4" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_4]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_5" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_5]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_6" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_6]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_7" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_7]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_8" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_8]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_9" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_9]]></fieldDescription>
+	</field>
+	<field name="TEL_CEL_CLI_NUM_10" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_CEL_CLI_NUM_10]]></fieldDescription>
+	</field>
+	<field name="CORREO_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[CORREO_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="PROFESION_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[PROFESION_CLI]]></fieldDescription>
+	</field>
+	<field name="NOM_EMPRESA" class="java.lang.String">
+		<fieldDescription><![CDATA[NOM_EMPRESA]]></fieldDescription>
+	</field>
+	<field name="CALLE_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[CALLE_EMP]]></fieldDescription>
+	</field>
+	<field name="NUM_EXT_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[NUM_EXT_EMP]]></fieldDescription>
+	</field>
+	<field name="NUM_INT_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[NUM_INT_EMP]]></fieldDescription>
+	</field>
+	<field name="COLONIA_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[COLONIA_EMP]]></fieldDescription>
+	</field>
+	<field name="DEL_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[DEL_EMP]]></fieldDescription>
+	</field>
+	<field name="ENTI_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[ENTI_EMP]]></fieldDescription>
+	</field>
+	<field name="CIUDAD_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[CIUDAD_EMP]]></fieldDescription>
+	</field>
+	<field name="COD_PO_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[COD_PO_EMP]]></fieldDescription>
+	</field>
+	<field name="PAIS_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[PAIS_EMP]]></fieldDescription>
+	</field>
+	<field name="TIPO_EMPLEO" class="java.lang.String">
+		<fieldDescription><![CDATA[TIPO_EMPLEO]]></fieldDescription>
+	</field>
+	<field name="GIRO_MERCANTIL" class="java.lang.String">
+		<fieldDescription><![CDATA[GIRO_MERCANTIL]]></fieldDescription>
+	</field>
+	<field name="PUESTO" class="java.lang.String">
+		<fieldDescription><![CDATA[PUESTO]]></fieldDescription>
+	</field>
+	<field name="INGR_MEN_BR" class="java.lang.String">
+		<fieldDescription><![CDATA[INGR_MEN_BR]]></fieldDescription>
+	</field>
+	<field name="TEL_EMPRESA" class="java.lang.String">
+		<fieldDescription><![CDATA[TEL_EMPRESA]]></fieldDescription>
+	</field>
+	<field name="ACT_ECONO_EMP" class="java.lang.String">
+		<fieldDescription><![CDATA[ACT_ECONO_EMP]]></fieldDescription>
+	</field>
+	<field name="ACT_VULNERABLE" class="java.lang.String">
+		<fieldDescription><![CDATA[ACT_VULNERABLE]]></fieldDescription>
+	</field>
+	<field name="PROCED_RECURSOS" class="java.lang.String">
+		<fieldDescription><![CDATA[PROCED_RECURSOS]]></fieldDescription>
+	</field>
+	<field name="USO_CUENTA" class="java.lang.String">
+		<fieldDescription><![CDATA[USO_CUENTA]]></fieldDescription>
+	</field>
+	<field name="OTRO_USO_CTA" class="java.lang.String">
+		<fieldDescription><![CDATA[OTRO_USO_CTA]]></fieldDescription>
+	</field>
+	<field name="REFERNCIAS_BANCARIAS" class="java.lang.String">
+		<fieldDescription><![CDATA[REFERNCIAS_BANCARIAS]]></fieldDescription>
+	</field>
+	<field name="DESTIN_RECURSOS" class="java.lang.String">
+		<fieldDescription><![CDATA[DESTIN_RECURSOS]]></fieldDescription>
+	</field>
+	<field name="OTRO_DESTIN_RECURSOS" class="java.lang.String">
+		<fieldDescription><![CDATA[OTRO_DESTIN_RECURSOS]]></fieldDescription>
+	</field>
+	<field name="PER_POL_EXP" class="java.lang.String">
+		<fieldDescription><![CDATA[PER_POL_EXP]]></fieldDescription>
+	</field>
+	<field name="PUESTO_ULT_ANIO" class="java.lang.String">
+		<fieldDescription><![CDATA[PUESTO_ULT_ANIO]]></fieldDescription>
+	</field>
+	<field name="NOM_PER_POL_EXP" class="java.lang.String">
+		<fieldDescription><![CDATA[NOM_PER_POL_EXP]]></fieldDescription>
+	</field>
+	<field name="TIPO_PER_POL_EX" class="java.lang.String">
+		<fieldDescription><![CDATA[TIPO_PER_POL_EX]]></fieldDescription>
+	</field>
+	<field name="COBERTURA_GEO" class="java.lang.String">
+		<fieldDescription><![CDATA[COBERTURA_GEO]]></fieldDescription>
+	</field>
+	<field name="NUM_EMPLEADOS" class="java.lang.String">
+		<fieldDescription><![CDATA[NUM_EMPLEADOS]]></fieldDescription>
+	</field>
+	<field name="NO_EDO_PRES" class="java.lang.String">
+		<fieldDescription><![CDATA[NO_EDO_PRES]]></fieldDescription>
+	</field>
+	<field name="MTO_IMPORTACION" class="java.lang.String">
+		<fieldDescription><![CDATA[MTO_IMPORTACION]]></fieldDescription>
+	</field>
+	<field name="MTO_EXPORTACION" class="java.lang.String">
+		<fieldDescription><![CDATA[MTO_EXPORTACION]]></fieldDescription>
+	</field>
+	<field name="PAIS_IMPORTACION" class="java.lang.String">
+		<fieldDescription><![CDATA[PAIS_IMPORTACION]]></fieldDescription>
+	</field>
+	<field name="PAIS_EXPORTACION" class="java.lang.String">
+		<fieldDescription><![CDATA[PAIS_EXPORTACION]]></fieldDescription>
+	</field>
+	<field name="TIENE_EXPORTACION" class="java.lang.String">
+		<fieldDescription><![CDATA[TIENE_EXPORTACION]]></fieldDescription>
+	</field>
+	<field name="TIENE_IMPORTACION" class="java.lang.String">
+		<fieldDescription><![CDATA[TIENE_IMPORTACION]]></fieldDescription>
+	</field>
+	<field name="VENTAS_TOT_ANUAL" class="java.lang.String">
+		<fieldDescription><![CDATA[VENTAS_TOT_ANUAL]]></fieldDescription>
+	</field>
+	<field name="CIUDAD_SUCURSALES" class="java.lang.String">
+		<fieldDescription><![CDATA[CIUDAD_SUCURSALES]]></fieldDescription>
+	</field>
+	<field name="TOTAL_ACTIVOS" class="java.lang.String">
+		<fieldDescription><![CDATA[TOTAL_ACTIVOS]]></fieldDescription>
+	</field>
+	<field name="TOTAL_PASIVOS" class="java.lang.String">
+		<fieldDescription><![CDATA[TOTAL_PASIVOS]]></fieldDescription>
+	</field>
+	<field name="CAPITAL_CONTABLE" class="java.lang.String">
+		<fieldDescription><![CDATA[CAPITAL_CONTABLE]]></fieldDescription>
+	</field>
+	<field name="DEPOS_TIPO" class="java.lang.String">
+		<fieldDescription><![CDATA[DEPOS_TIPO]]></fieldDescription>
+	</field>
+	<field name="DEPOS_APRX_MEN" class="java.lang.String">
+		<fieldDescription><![CDATA[DEPOS_APRX_MEN]]></fieldDescription>
+	</field>
+	<field name="DEPOS_NUM_MEN" class="java.lang.String">
+		<fieldDescription><![CDATA[DEPOS_NUM_MEN]]></fieldDescription>
+	</field>
+	<field name="RETIR_TIPO" class="java.lang.String">
+		<fieldDescription><![CDATA[RETIR_TIPO]]></fieldDescription>
+	</field>
+	<field name="RETIR_APRX_MEN" class="java.lang.String">
+		<fieldDescription><![CDATA[RETIR_APRX_MEN]]></fieldDescription>
+	</field>
+	<field name="RETIR_NUM_MEN" class="java.lang.String">
+		<fieldDescription><![CDATA[RETIR_NUM_MEN]]></fieldDescription>
+	</field>
+	<field name="FECHA_APERTURA" class="java.lang.String">
+		<fieldDescription><![CDATA[FECHA_APERTURA]]></fieldDescription>
+	</field>
+	<field name="FECHA_IMPRESION" class="java.lang.String">
+		<fieldDescription><![CDATA[FECHA_IMPRESION]]></fieldDescription>
+	</field>
+	<field name="NOMBRE_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[NOMBRE_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="FECHA_NAC_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[FECHA_NAC_CLI]]></fieldDescription>
+	</field>
+	<field name="LUG_NAC_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[LUG_NAC_CLI]]></fieldDescription>
+	</field>
+	<field name="RESIDENCIA_EU_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[RESIDENCIA_EU_CLI]]></fieldDescription>
+	</field>
+	<field name="RFC_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[RFC_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="CURP_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[CURP_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="SEXO_CLIENTE" class="java.lang.String">
+		<fieldDescription><![CDATA[SEXO_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="NACIONALIDAD_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[NACIONALIDAD_CLI]]></fieldDescription>
+	</field>
+	<field name="RESIDENCIA_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[RESIDENCIA_CLI]]></fieldDescription>
+	</field>
+	<field name="ESTADO_CIVIL_CLI" class="java.lang.String">
+		<fieldDescription><![CDATA[ESTADO_CIVIL_CLI]]></fieldDescription>
+	</field>
+	<field name="NOMBRE_CONYUGE" class="java.lang.String">
+		<fieldDescription><![CDATA[NOMBRE_CONYUGE]]></fieldDescription>
+	</field>
+	<field name="CIUDAD_SUC" class="java.lang.String">
+		<fieldDescription><![CDATA[CIUDAD_SUC]]></fieldDescription>
+	</field>
+	<field name="NIVEL" class="java.lang.String">
+		<fieldDescription><![CDATA[NIVEL]]></fieldDescription>
+	</field>
+	<field name="REGIMEN_CONYUGAL" class="java.lang.String">
+		<fieldDescription><![CDATA[REGIMEN_CONYUGAL]]></fieldDescription>
+	</field>
+	<field name="SALIDA_CONTITULAR" class="java.lang.String">
+		<fieldDescription><![CDATA[SALIDA_CONTITULAR]]></fieldDescription>
+	</field>
+	<field name="SALIDA_BENEFICIARIO" class="java.lang.String">
+		<fieldDescription><![CDATA[SALIDA_BENEFICIARIO]]></fieldDescription>
+	</field>
+	<field name="NUM_SUCURSALES" class="java.lang.String">
+		<fieldDescription><![CDATA[NUM_SUCURSALES]]></fieldDescription>
+	</field>
+	<field name="REFERENCIAS_PERSONALES" class="java.lang.String">
+		<fieldDescription><![CDATA[REFERENCIAS_PERSONALES]]></fieldDescription>
+	</field>
+	<field name="SALIDA_ANEXO_A" class="java.lang.String">
+		<fieldDescription><![CDATA[SALIDA_ANEXO_A]]></fieldDescription>
+	</field>
+	<field name="TERCERO_AUTORIZADO" class="java.lang.String">
+		<fieldDescription><![CDATA[TERCERO_AUTORIZADO]]></fieldDescription>
+	</field>
+	<field name="REGIMEN_CTA" class="java.lang.String">
+		<fieldDescription><![CDATA[REGIMEN_CTA]]></fieldDescription>
+	</field>
+	<field name="TIT_TIPO_FIRMA" class="java.lang.String">
+		<fieldDescription><![CDATA[TIT_TIPO_FIRMA]]></fieldDescription>
+	</field>
+	<field name="FIRMAS" class="java.lang.String">
+		<fieldDescription><![CDATA[FIRMAS]]></fieldDescription>
+	</field>
+	<field name="FACULTADOS" class="java.lang.String">
+		<fieldDescription><![CDATA[FACULTADOS]]></fieldDescription>
+	</field>
+	<field name="REPRESENTANTE" class="java.lang.String">
+		<fieldDescription><![CDATA[REPRESENTANTE]]></fieldDescription>
+	</field>
+	<field name="BANCA_INTERNET" class="java.lang.String">
+		<fieldDescription><![CDATA[BANCA_INTERNET]]></fieldDescription>
+	</field>
+	<field name="TIPO_CONTRATO_BANCA" class="java.lang.String">
+		<fieldDescription><![CDATA[TIPO_CONTRATO_BANCA]]></fieldDescription>
+	</field>
+	<field name="TIPO_BANCA_INTERNET" class="java.lang.String">
+		<fieldDescription><![CDATA[TIPO_BANCA_INTERNET]]></fieldDescription>
+	</field>
+	<field name="UNICO_APODERADO" class="java.lang.String">
+		<fieldDescription><![CDATA[UNICO_APODERADO]]></fieldDescription>
+	</field>
+	<field name="NOMBRE_COMPLETO_FIRMANTE_1" class="java.lang.String">
+		<fieldDescription><![CDATA[NOMBRE_COMPLETO_FIRMANTE_1]]></fieldDescription>
+	</field>
+	<field name="TIPO_FIR_1" class="java.lang.String">
+		<fieldDescription><![CDATA[TIPO_FIR_1]]></fieldDescription>
+	</field>
+	<field name="NOMBRE_COMPLETO_FIRMANTE_2" class="java.lang.String">
+		<fieldDescription><![CDATA[NOMBRE_COMPLETO_FIRMANTE_2]]></fieldDescription>
+	</field>
+	<field name="TIPO_FIR_2" class="java.lang.String">
+		<fieldDescription><![CDATA[TIPO_FIR_2]]></fieldDescription>
+	</field>
+	<field name="RAZON_SOCIAL" class="java.lang.String">
+		<fieldDescription><![CDATA[RAZON_SOCIAL]]></fieldDescription>
+	</field>
+	<field name="FUNCIONARIO_PUB" class="java.lang.String">
+		<fieldDescription><![CDATA[FUNCIONARIO_PUB]]></fieldDescription>
+	</field>
+	<field name="FUNCIONARIO_PUB_ESP" class="java.lang.String">
+		<fieldDescription><![CDATA[FUNCIONARIO_PUB_ESP]]></fieldDescription>
+	</field>
+	<field name="ACCIONISTA_ABC" class="java.lang.String">
+		<fieldDescription><![CDATA[ACCIONISTA_ABC]]></fieldDescription>
+	</field>
+	<field name="ACCIONISTA_ABC_ESP" class="java.lang.String">
+		<fieldDescription><![CDATA[ACCIONISTA_ABC_ESP]]></fieldDescription>
+	</field>
+	<field name="Y_OTRA_PROCED" class="java.lang.String">
+		<fieldDescription><![CDATA[Y_OTRA_PROCED]]></fieldDescription>
+	</field>
+	<field name="SALIDA_ACCIONISTAS" class="java.lang.String">
+		<fieldDescription><![CDATA[SALIDA_ACCIONISTAS]]></fieldDescription>
+	</field>
+	<field name="PREG_PROP_REAL" class="java.lang.String">
+		<fieldDescription><![CDATA[PREG_PROP_REAL]]></fieldDescription>
+	</field>
+	<field name="NOM_PROP_REAL" class="java.lang.String">
+		<fieldDescription><![CDATA[NOM_PROP_REAL]]></fieldDescription>
+	</field>
+	<field name="NOMBRE_FIRMANTE_1" class="java.lang.String">
+		<fieldDescription><![CDATA[NOMBRE_FIRMANTE_1]]></fieldDescription>
+	</field>
+	<field name="NOMBRE_FIRMANTE_2" class="java.lang.String">
+		<fieldDescription><![CDATA[NOMBRE_FIRMANTE_2]]></fieldDescription>
+	</field>
+	<field name="GARAN_IPAB" class="java.lang.String">
+		<fieldDescription><![CDATA[GARAN_IPAB]]></fieldDescription>
+	</field>
+	<field name="RUTA_IMAGEN_JR" class="java.lang.String">
+		<fieldDescription><![CDATA[RUTA_IMAGEN_JR]]></fieldDescription>
+	</field>
+	<field name="RUTA_SUBREPORTE_JR" class="java.lang.String">
+		<fieldDescription><![CDATA[RUTA_SUBREPORTE_JR]]></fieldDescription>
+	</field>
+	<field name="IVA_DATO" class="java.lang.String">
+		<fieldDescription><![CDATA[IVA_DATO]]></fieldDescription>
+	</field>
+	<field name="IVA_MONTO" class="java.lang.String">
+		<fieldDescription><![CDATA[IVA_MONTO]]></fieldDescription>
+	</field>
+	<field name="IVA_DIAS" class="java.lang.String">
+		<fieldDescription><![CDATA[IVA_DIAS]]></fieldDescription>
+	</field>
+	<field name="GAT_NOMINAL" class="java.lang.String">
+		<fieldDescription><![CDATA[GAT_NOMINAL]]></fieldDescription>
+	</field>
+	<field name="GAT_REAL" class="java.lang.String">
+		<fieldDescription><![CDATA[GAT_REAL]]></fieldDescription>
+	</field>
+	<field name="NOMB_CAT_CTA" class="java.lang.String">
+		<fieldDescription><![CDATA[NOMB_CAT_CTA]]></fieldDescription>
+	</field>
+	<field name="FLAG_CRS_FATCA" class="java.lang.String">
+		<fieldDescription><![CDATA[FLAG_CRS_FATCA]]></fieldDescription>
+	</field>
+	<field name="SALIDA_CARATULA_ADIC" class="java.lang.String">
+		<fieldDescription><![CDATA[SALIDA_CARATULA_ADIC]]></fieldDescription>
+	</field>
+	<field name="PRODUCTO_Y_ADICIONALES" class="java.lang.String">
+		<fieldDescription><![CDATA[PRODUCTO_Y_ADICIONALES]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="230" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="-1" y="4" width="612" height="216" uuid="9c66b9b1-cd3b-43cc-b976-e8ec85272dfa"/>
+				<subreportParameter name="XML_DATA_DOCUMENT">
+					<subreportParameterExpression><![CDATA[$P{XML_DATA_DOCUMENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//Datos")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$F{RUTA_SUBREPORTE_JR}+"UALA_Caratula_Contrato.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="230">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="-1" y="20" width="612" height="210" uuid="4b72ea2b-e215-41d2-ac02-1d3b0f1e925b"/>
+				<subreportParameter name="XML_DATA_DOCUMENT">
+					<subreportParameterExpression><![CDATA[$P{XML_DATA_DOCUMENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//Datos")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$F{RUTA_SUBREPORTE_JR}+"UALA_Solici_Alta.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="230">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="0" y="-1" width="612" height="231" uuid="061194e7-de2e-4a42-80d2-3d90ac3aa7ef"/>
+				<subreportParameter name="XML_DATA_DOCUMENT">
+					<subreportParameterExpression><![CDATA[$P{XML_DATA_DOCUMENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//Datos")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$F{RUTA_SUBREPORTE_JR}+"Garan_Contrato_Multiple.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="230">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="0" y="-1" width="612" height="231" uuid="d18e0101-fd6a-4f12-a090-d99e481367bd"/>
+				<subreportParameter name="XML_DATA_DOCUMENT">
+					<subreportParameterExpression><![CDATA[$P{XML_DATA_DOCUMENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//Datos")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$F{RUTA_SUBREPORTE_JR}+"UALA_Normatividad.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="230">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="0" y="-1" width="612" height="231" uuid="87d2f5f7-4506-4319-9002-f1db3f6c40e9"/>
+				<subreportParameter name="XML_DATA_DOCUMENT">
+					<subreportParameterExpression><![CDATA[$P{XML_DATA_DOCUMENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//Datos")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$F{RUTA_SUBREPORTE_JR}+"Garan_Anexo_Comis.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,5 +1,5 @@
-* @ValidationCode : Mjo3NzA1MzAxNjg6Q3AxMjUyOjE3NTM5MjUwMDEwMzc6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
-* @ValidationInfo : Timestamp         : 30 Jul 2025 22:23:21
+* @ValidationCode : MjoyMTI3Mzk5MzYwOkNwMTI1MjoxNzU0MzYwNTg5MDE0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 04 Aug 2025 23:23:09
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -30,8 +30,7 @@ SUBROUTINE ABC.ENVIA.NOTIFICACION.EMAIL(ID.SMS.EMAIL)
     $USING AbcGetGeneralParam
     $USING ABC.BP
     $USING EB.Service
-    
-    
+
     GOSUB INICIALIZA
     GOSUB PROCESO
 
@@ -92,7 +91,7 @@ LEE.CORREO:
         Y.EMAIL.HTML = ''     ;* LFCR_20231222_HTML S - E
 
         AbcGetGeneralParam.AbcGetGeneralParam(Y.ID.PARAM, Y.LIST.PARAMS, Y.LIST.VALUES)
-        NUM.LINEAS = DCOUNT(Y.LIST.PARAMS,FM)
+        NUM.LINEAS = DCOUNT(Y.LIST.PARAMS,@FM)
 
         LOCATE 'HTML.FILE' IN Y.LIST.PARAMS SETTING POSITION THEN     ;* LFCR_20231222_HTML S
             Y.EMAIL.HTML = 1
@@ -173,7 +172,8 @@ ENVIO.EMAIL:
 ************
 
     argumentoEntrada = Y.STR.EMAIL
-    str_path = @PATH
+*str_path = @PATH
+    str_path = '/shares/log'
     str_filename = "ABC.ENVIA.MAIL.":RND(2000000):TIME():".":AGENT.NUMBER:".sh"
     TEMP.FILE = str_path : "/" : str_filename
 

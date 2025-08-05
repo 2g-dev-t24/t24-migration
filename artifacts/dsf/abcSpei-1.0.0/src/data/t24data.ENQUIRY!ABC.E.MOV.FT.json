@@ -1,0 +1,205 @@
+{
+  "header" : {
+    "id" : "ABC.E.MOV.FT",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "APP.ID S TRANS.REFERENCE",
+      "LABEL.FIELD" : "FECHA 2",
+      "NXT.DESC" : [ {
+        "NXT.DESC" : "Transaction Detail[view.gif"
+      } ]
+    } ],
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "MOVIMIENTO"
+      } ],
+      "SELECTION.FLDS" : "ID.FT"
+    }, {
+      "REQUIRED.SEL" : "Y",
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "CUENTA"
+      } ],
+      "SELECTION.FLDS" : "ACCOUNT.ID"
+    }, {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "EXT TRANS ID"
+      } ],
+      "SELECTION.FLDS" : "EXT.TRANS.ID"
+    } ],
+    "PAGE.SIZE" : "6,99",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "500L",
+      "SINGLE.MULTI" : "S",
+      "TYPE" : "L"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,4,1"
+      } ],
+      "FIELD.NAME" : "FECHA",
+      "LENGTH.MASK" : "25L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "FECHA"
+      } ],
+      "TYPE" : "DATE"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,6,1"
+      } ],
+      "FIELD.NAME" : "DESCRIPCION",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "DESCRIPCION"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,5,1"
+      } ],
+      "FIELD.NAME" : "REFERENCIA",
+      "COLUMN" : "3",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "REFERENCIA"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,18,1"
+      } ],
+      "FIELD.NAME" : "POST",
+      "COLUMN" : "4",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "POST"
+      } ],
+      "TYPE" : "DATE"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F @ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "@ ABC.EXT.DESC.SPEI"
+      } ],
+      "FIELD.NAME" : "NARRATIVA.1",
+      "COLUMN" : "5",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "NARRATIVA.1"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,21,1"
+      } ],
+      "FIELD.NAME" : "NARRATIVA",
+      "COLUMN" : "6",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "NARRATIVA"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,7,1"
+      } ],
+      "FIELD.NAME" : "DEBIT",
+      "LENGTH.MASK" : "20R2",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "\"0\""
+      } ],
+      "FIELD.NAME" : "ZERO"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,8,1"
+      } ],
+      "FIELD.NAME" : "CREDIT",
+      "LENGTH.MASK" : "20R2",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IF DEBIT LE ZERO DEBIT ZERO"
+      } ],
+      "FIELD.NAME" : "PAMTDEBIT",
+      "LENGTH.MASK" : "20R2",
+      "COLUMN" : "7",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "CARGO"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "IF CREDIT GT ZERO CREDIT ZERO"
+      } ],
+      "FIELD.NAME" : "ABONO",
+      "LENGTH.MASK" : "20R2",
+      "COLUMN" : "8"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,22,1"
+      } ],
+      "FIELD.NAME" : "STATUS",
+      "COLUMN" : "9",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "STATUS"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,19,1"
+      } ],
+      "FIELD.NAME" : "APP.ID",
+      "LENGTH.MASK" : "500L",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,12,1"
+      } ],
+      "FIELD.NAME" : "TRANS.REFERENCE",
+      "LENGTH.MASK" : "500L",
+      "SINGLE.MULTI" : "S"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "R.DATA"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Detalles Movimiento"
+    } ],
+    "FILE.NAME" : "NOFILE.ABC.E.MOV.FT"
+  }
+}

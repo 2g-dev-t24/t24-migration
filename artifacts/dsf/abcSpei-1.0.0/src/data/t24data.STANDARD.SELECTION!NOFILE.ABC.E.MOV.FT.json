@@ -1,0 +1,58 @@
+{
+  "header" : {
+    "id" : "NOFILE.ABC.E.MOV.FT",
+    "dsfApiType" : "STANDARD.SELECTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "USR.FIELD.NAME" : [ {
+      "USR.TYPE" : "D",
+      "USR.DISPLAY.FMT" : "500L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "0"
+      } ],
+      "USR.FIELD.NAME" : "@ID"
+    }, {
+      "USR.TYPE" : "R",
+      "USR.DISPLAY.FMT" : "900L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "ABC.E.MOV.FT"
+      } ],
+      "USR.FIELD.NAME" : "R.DATA"
+    }, {
+      "USR.TYPE" : "D",
+      "USR.DISPLAY.FMT" : "10L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "1"
+      } ],
+      "USR.ALT.INDEX" : "N",
+      "USR.FIELD.NAME" : "ID.FT"
+    }, {
+      "USR.TYPE" : "D",
+      "USR.DISPLAY.FMT" : "10L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "2"
+      } ],
+      "USR.ALT.INDEX" : "N",
+      "USR.FIELD.NAME" : "ACCOUNT.ID"
+    }, {
+      "USR.TYPE" : "D",
+      "USR.DISPLAY.FMT" : "10L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "1"
+      } ],
+      "USR.ALT.INDEX" : "N",
+      "USR.FIELD.NAME" : "EXT.TRANS.ID"
+    } ]
+  }
+}

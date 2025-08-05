@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreporte1" pageWidth="599" pageHeight="100" whenNoDataType="AllSectionsNoDetail" columnWidth="599" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6cb9b489-d3d2-4833-84b1-786eaacec93b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MMORAL"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString language="xPath">
+		<![CDATA[/Datos/SALIDA_ACCIONISTAS/PERSONA_ACCIONISTAS]]>
+	</queryString>
+	<field name="NOMBRE_ACCION" class="java.lang.String">
+		<fieldDescription><![CDATA[NOMBRE_ACCION]]></fieldDescription>
+	</field>
+	<field name="PORCE_ACCION" class="java.lang.String">
+		<fieldDescription><![CDATA[PORCE_ACCION]]></fieldDescription>
+	</field>
+	<field name="PUESTO_ACCION" class="java.lang.String">
+		<fieldDescription><![CDATA[PUESTO_ACCION]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle radius="0">
+				<reportElement x="2" y="12" width="594" height="9" backcolor="#042AA1" uuid="b765ae21-9276-42af-8dfc-05fa777942fb">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.9" lineColor="#042AA1"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="6">
+				<reportElement x="2" y="3" width="594" height="18" backcolor="#042AA1" uuid="5310f286-4826-4942-8e9d-bab21bd2ea89">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#042AA1"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="467" y="21" width="129" height="19" forecolor="#6C6C6B" backcolor="#FFFFFF" uuid="05ca2263-3cd4-4daa-9662-e3459aeba3b1">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineColor="#042AA1"/>
+					<leftPen lineWidth="0.8" lineColor="#042AA1"/>
+					<bottomPen lineWidth="0.8" lineColor="#042AA1"/>
+					<rightPen lineWidth="0.8" lineColor="#042AA1"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Porcentaje]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="293" y="21" width="174" height="19" forecolor="#6C6C6B" backcolor="#FFFFFF" uuid="bfadaf72-15ac-4c41-bd19-3e88a1b31baa">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineColor="#042AA1"/>
+					<leftPen lineWidth="0.8" lineColor="#042AA1"/>
+					<bottomPen lineWidth="0.8" lineColor="#042AA1"/>
+					<rightPen lineWidth="0.8" lineColor="#042AA1"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Puesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="1" y="3" width="595" height="18" forecolor="#FFFFFF" backcolor="#0070C0" uuid="bdd695dd-0b6e-4865-a98d-de2fd0d15c22">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#042AA1"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#042AA1"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#042AA1"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#042AA1"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ACCIONISTAS Y/O SOCIOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="21" width="291" height="19" forecolor="#6C6C6B" backcolor="#FFFFFF" uuid="63031b6b-a2d0-4f5b-aa54-466225c599b1">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#042AA1"/>
+					<leftPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+					<bottomPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+					<rightPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="467" y="0" width="129" height="23" uuid="fd81bd59-35c9-421b-be74-a99975fe239b">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#042AA1"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="293" y="0" width="174" height="23" backcolor="#FFFFFF" uuid="23eefcb4-bbbd-4596-9c2a-964219e6d0e6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+					<leftPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+					<bottomPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+					<rightPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PUESTO_ACCION}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="2" y="0" width="291" height="23" backcolor="#FFFFFF" uuid="f09979c4-e4d1-476b-8b4e-77977b367af2">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+					<leftPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+					<bottomPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+					<rightPen lineWidth="0.8" lineStyle="Solid" lineColor="#042AA1"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE_ACCION}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="469" y="3" width="104" height="17" backcolor="#FFFFFF" uuid="fcffe92f-36da-4f3e-92e7-cb8e40c97f20">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineColor="#042AA1"/>
+					<leftPen lineColor="#042AA1"/>
+					<bottomPen lineColor="#042AA1"/>
+					<rightPen lineColor="#042AA1"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PORCE_ACCION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="573" y="0" width="22" height="23" uuid="356f236d-8a5f-4562-bff6-b12fedec8f72">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="19">
+			<staticText>
+				<reportElement positionType="Float" x="17" y="5" width="276" height="11" forecolor="#6C6C6B" uuid="256451e4-64fb-476e-bf0e-4cdd7d08104a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[En caso de tener un cargo directivo en la empresa]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
