@@ -50,7 +50,7 @@ INITIALIZE:
     
     Y.FECHA = OCONV(DATE(), "DY4"):"-":FMT(OCONV(DATE(), "DM"),"2'0'R"):"-":FMT(OCONV(DATE(), "DD"),"2'0'R")
     Y.HORA  = OCONV(TIME(), 'MTS')
-    Y.PATH = '/bnkv/temenos/bnk/interfaces/'
+    Y.PATH = '/shares/tafjud/bnk.data/interfaces'
     Y.ARCHIVO.LOG = 'TXT.UDIS.CLEANUP.LOG' : Y.FECHA
     yArchivoGuardar = Y.PATH : Y.ARCHIVO.LOG
     yIniciando = 1
