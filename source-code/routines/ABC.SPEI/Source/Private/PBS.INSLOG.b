@@ -7,6 +7,7 @@ SUBROUTINE PBS.INSLOG(Y.ARCHIVO.GUARDAR, Y.MENSAJE, Y.INICIANDO)
 *-----------------------------------------------------------------------------
 
     $USING EB.SystemTables
+    $USING EB.ErrorProcessing
     
     Y.HORA.LOG = OCONV(TIME(), "MTS")
     Y.HOY = EB.SystemTables.getToday()
@@ -29,15 +30,17 @@ SUBROUTINE PBS.INSLOG(Y.ARCHIVO.GUARDAR, Y.MENSAJE, Y.INICIANDO)
     OPENSEQ Y.PATH.ARCH.LOG TO F.ARCHIVO.LOG ELSE
         EXECUTE "mkdir -p " : Y.RUTA
         CREATE F.ARCHIVO.LOG ELSE
-            DISPLAY "Ruta o archivo inexistente" : Y.PATH.ARCH.LOG
-            ABORT
+            ETEXT = "Ruta o archivo inexistente" : Y.PATH.ARCH.LOG
+            EB.SystemTables.setEtext(ETEXT)
+            EB.ErrorProcessing.StoreEndError()
         END
     END
 
     Y.MENSAJE = Y.HOY : " - " : Y.HORA.LOG : " - " : Y.MENSAJE
     WRITESEQ Y.MENSAJE APPEND TO F.ARCHIVO.LOG ELSE
-        DISPLAY "No se logro crear el archivo"
-        ABORT
+        ETEXT = "No se logro crear el archivo"
+        EB.SystemTables.setEtext(ETEXT)
+        EB.ErrorProcessing.StoreEndError()
     END
     CLOSESEQ F.ARCHIVO.LOG
     RETURN
