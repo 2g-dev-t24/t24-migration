@@ -49,14 +49,13 @@ GENERABOVEDA:
     EB.SystemTables.setRNew(AbcTable.Abc2brBovedas.UsrSolicita, Y.OPERADOR)
     EB.DataAccess.FRead(FN.USER, Y.OPERADOR, R.USER, F.USER, ERR.USER)
     IF R.USER THEN
-        Y.SUCURSAL = Y.REG.USER<EB.USE.DEPARTMENT.CODE>[1,5]
+        Y.SUCURSAL = R.USER<EB.Security.User.UseDepartmentCode>[1,5]
          SELECT.CMD = "SELECT ":FN.TELLER.ID:" WITH DEPT.CODE LIKE ":DQUOTE(SQUOTE(Y.SUCURSAL):"...")  
         SELECT.CMD := " AND WITH USER EQ ''"
         EB.DataAccess.Readlist(SELECT.CMD,YLD.ID,'',YLD.NO,'')
         Y.NUM.BVD = YLD.NO
         Y.ID.BVD = YLD.ID
-        R.NEW(BVD.SOLICITANTE) = Y.ID.BVD<Y.NUM.BVD>
-        EB.SystemTables.setRNew(AbcTable.Abc2brBovedas.Solicitante, Y.FECHA)
+        EB.SystemTables.setRNew(AbcTable.Abc2brBovedas.Solicitante, Y.ID.BVD<Y.NUM.BVD>)
     END
 
     EB.Display.RebuildScreen()
