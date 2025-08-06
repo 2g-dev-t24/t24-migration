@@ -56,7 +56,7 @@ VALIDA.SUCURSAL:
     END
 
     EB.DataAccess.FRead(FN.USER,Y.USUARIO.DESTINO,R.USER,F.USER,ERR.DETAIL)
-    IF R.USER THE 
+    IF R.USER THEN
         Y.SUCURSAL.DESTINO = R.USER<EB.Security.User.UseDepartmentCode>[1,5]
     END
 
