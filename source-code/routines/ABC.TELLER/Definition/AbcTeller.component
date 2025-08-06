@@ -9,6 +9,13 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABc2BrValidaBovedaCajero (
+)
+{
+    jBC: ABC.2BR.VALIDA.BOVEDA.CAJERO
+}
+
+
 public method ABc2BrExtraeBoveda (
 )
 {
