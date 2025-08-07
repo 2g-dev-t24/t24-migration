@@ -45,6 +45,8 @@ INITIALIZE:
     FN.AA.ARRANGEMENT = 'F.AA.ARRANGEMENT'
     F.AA.ARRANGEMENT = ''
     EB.DataAccess.Opf(FN.AA.ARRANGEMENT, F.AA.ARRANGEMENT)
+    
+    Y.ERR.ACCOUNT = ''
 
 RETURN
 
@@ -59,7 +61,7 @@ PROCESS:
         
         EB.DataAccess.FRead(FN.ACCOUNT, Y.ID, R.ACCOUNT, F.ACCOUNT, Y.ERR.ACCOUNT)
         
-        IF (R.ACCOUNT EQ '') THEN
+        IF NOT(Y.ERR.ACCOUNT) THEN
             
             Y.ID.AA = R.ACCOUNT<AC.AccountOpening.Account.ArrangementId>
             
@@ -89,7 +91,7 @@ RETURN
 
 *-----------------------------------------------------------------------------
 OBTENER.ID.AA:
-*** <desc>Genera un nuevo id de customer para poder  guardarlo en la tabla como resultado </desc>
+*** <desc>Genera un nuevo id de AA.ARRANGEMENT para poder  guardarlo en la tabla como resultado </desc>
 *-----------------------------------------------------------------------------
 
 
