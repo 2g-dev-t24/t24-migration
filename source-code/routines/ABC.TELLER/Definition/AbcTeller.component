@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABcVCheckCuadreSbc (
+)
+{
+    jBC: ABC.V.CHECK.CUADRE.SBC
+}
+
 public method ABcVCloseTillSbc (
 )
 {
