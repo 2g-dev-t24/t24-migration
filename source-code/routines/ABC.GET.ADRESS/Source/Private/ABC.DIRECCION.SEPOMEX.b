@@ -62,7 +62,7 @@ PROCESS:
         Y.ID.MPIO = R.ADRESS<AbcTable.AbcCodigoPostal.Municipio>
         Y.ID.COL  = R.ADRESS<AbcTable.AbcCodigoPostal.Colonia>
 
-        Y.CANT.COL = DCOUNT(Y.ID.COL,VM)
+        Y.CANT.COL = DCOUNT(Y.ID.COL,@VM)
         IF Y.CANT.COL GT 1 THEN
             Y.ID.COL = ""
         END
