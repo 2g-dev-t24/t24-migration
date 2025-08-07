@@ -9,6 +9,12 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABcVGetTellerId (
+)
+{
+    jBC: ABC.V.GET.TELLER.ID
+}
+
 public method ABcVCheckCuadreSbc (
 )
 {
