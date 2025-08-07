@@ -973,3 +973,11 @@ private method Abc2brLimitesCajaFields (
     jBC: ABC.2BR.LIMITES.CAJA.FIELDS
 
 }
+
+
+private method AbcAcctLclFldsId (
+)
+{
+   jBC: ABC.ACCT.LCL.FLDS.ID
+}
+
