@@ -1,5 +1,5 @@
-* @ValidationCode : MjotMjE0MTU1ODIxNzpDcDEyNTI6MTc1NDQ5MDg4NjA4NzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
-* @ValidationInfo : Timestamp         : 06 Aug 2025 11:34:46
+* @ValidationCode : MjotMjA2OTIwNzg2OkNwMTI1MjoxNzU0NTM0OTc3NjI0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 06 Aug 2025 23:49:37
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -52,7 +52,7 @@ RETURN
 PROCESS:
 *-----------------------------------------------------------------------------
     
-    Y.ID = EB.SystemTables.getComi()
+    Y.ID = EB.SystemTables.getIdNew()
 *Si envia el numero de cuenta se busca el id de AA.
     
     IF (Y.ID NE '') THEN
