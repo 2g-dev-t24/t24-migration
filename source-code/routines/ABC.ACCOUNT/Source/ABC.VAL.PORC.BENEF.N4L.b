@@ -1,5 +1,5 @@
-* @ValidationCode : MjotNTQ5ODI2MDQ0OkNwMTI1MjoxNzUxNzQzMDEyNzQ1Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 05 Jul 2025 16:16:52
+* @ValidationCode : Mjo1MzQ2MjY4Nzg6Q3AxMjUyOjE3NTQ1MzE4OTY1MjE6THVpcyBDYXByYTotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNF9TUDEuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 06 Aug 2025 22:58:16
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -45,7 +45,7 @@ PROCESS:
 *-------------------------------------------------------------------------------
 
 
-    Y.PORCENTAJES = EB.SystemTables.getRNew(AbcTable.AbcAcctLclFlds.Porcentaje)
+    Y.PORCENTAJES = EB.SystemTables.getRNew(AbcTable.AbcAcctLclFlds.BenPorcentaje)
     
     CHANGE @SM TO @FM IN Y.PORCENTAJES
 
