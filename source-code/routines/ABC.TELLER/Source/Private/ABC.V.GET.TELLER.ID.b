@@ -53,7 +53,6 @@ PROCESS:
 
 
     EB.SystemTables.setComi(YTELLER.ID)
-    R.NEW(TT.TID.USER) = Y.OPERATOR
     EB.SystemTables.setRNew(TT.Contract.TellerId.TidUser, Y.OPERATOR)
     
     CALL REBUILD.SCREEN
