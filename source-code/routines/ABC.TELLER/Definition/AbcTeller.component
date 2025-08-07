@@ -9,6 +9,24 @@ private method AbcEnvEmailLimCajaBow ()
 
 # ------------------ METHOD END ------------------
 
+public method ABcEmailRetiroEfectivo (
+)
+{
+    jBC: ABC.EMAIL.RETIRO.EFECTIVO
+}
+
+public method ABcVGetTellerId (
+)
+{
+    jBC: ABC.V.GET.TELLER.ID
+}
+
+public method ABcVCheckCuadreSbc (
+)
+{
+    jBC: ABC.V.CHECK.CUADRE.SBC
+}
+
 public method ABcVCloseTillSbc (
 )
 {

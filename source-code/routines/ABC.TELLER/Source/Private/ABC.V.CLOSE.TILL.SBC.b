@@ -20,7 +20,6 @@ $PACKAGE AbcTeller
     $USING EB.Updates
     $USING TT.Contract
     $USING TT.Config
-    $USING EB.DataAccess
     $USING EB.Display
 
 *------ Main Processing Section
