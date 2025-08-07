@@ -72,8 +72,7 @@ PROCESS:
             END ELSE
             
                 ETEXT = 'Numero de cuenta o Arrangement id no existe'
-                EB.SystemTables.setEtext(ETEXT)
-                EB.ErrorProcessing.StoreEndError()
+                EB.SystemTables.setE(ETEXT)
                 RETURN
                 
             END
