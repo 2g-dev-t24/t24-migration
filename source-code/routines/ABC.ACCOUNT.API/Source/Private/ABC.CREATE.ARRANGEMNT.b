@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxNzY0Mjk3OTk5OkNwMTI1MjoxNzU0NTA5MzM1NDQwOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 06 Aug 2025 16:42:15
+* @ValidationCode : MjotMTY4ODI1NzM3NDpDcDEyNTI6MTc1NDYyMjc0OTE0MzpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 08 Aug 2025 00:12:29
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -43,16 +43,17 @@ MAP.ACCOUNT:
 *** <desc>Mapea los campos de AA ACTIVITY </desc>
 
     Y.ID.CUENTA = EB.SystemTables.getIdNew()
+    Y.V.FUNCTION    = EB.SystemTables.getVFunction()
+    IF (Y.V.FUNCTION EQ 'A') THEN
+        R.AA<AA.Framework.ArrangementActivity.ArrActArrangement> = Y.ID.CUENTA
+        GOSUB OBTENER.PRODUCTO
     
-    R.AA<AA.Framework.ArrangementActivity.ArrActArrangement> = Y.ID.CUENTA
     
-    GOSUB OBTENER.PRODUCTO
-    
-    R.AA<AA.Framework.ArrangementActivity.ArrActActivity>       = 'ACCOUNTS-NEW-ARRANGEMENT'
-    R.AA<AA.Framework.ArrangementActivity.ArrActCurrency>       = EB.SystemTables.getRNew(AbcTable.AbcAcctLclFlds.Currency)
-    R.AA<AA.Framework.ArrangementActivity.ArrActCustomer>       = EB.SystemTables.getRNew(AbcTable.AbcAcctLclFlds.Customer)
-    R.AA<AA.Framework.ArrangementActivity.ArrActCustomerRole>   = EB.SystemTables.getRNew(AbcTable.AbcAcctLclFlds.Rol)
-    
+        R.AA<AA.Framework.ArrangementActivity.ArrActActivity>       = 'ACCOUNTS-NEW-ARRANGEMENT'
+        R.AA<AA.Framework.ArrangementActivity.ArrActCurrency>       = EB.SystemTables.getRNew(AbcTable.AbcAcctLclFlds.Currency)
+        R.AA<AA.Framework.ArrangementActivity.ArrActCustomer>       = EB.SystemTables.getRNew(AbcTable.AbcAcctLclFlds.Customer)
+        R.AA<AA.Framework.ArrangementActivity.ArrActCustomerRole>   = EB.SystemTables.getRNew(AbcTable.AbcAcctLclFlds.Rol)
+    END
 RETURN
 
 *-----------------------------------------------------------------------------
@@ -85,7 +86,7 @@ OBTENER.PRODUCTO:
         EB.ErrorProcessing.StoreEndError()
         RETURN
     END
-    R.AA<AA.Framework.ArrangementActivity.ArrActArrangement> = Y.LIST.VALUES<Y.POS.CATEGORY>
+    R.AA<AA.Framework.ArrangementActivity.ArrActProduct> = Y.LIST.VALUES<Y.POS.CATEGORY>
        
 RETURN
 *-----------------------------------------------------------------------------
@@ -111,6 +112,3 @@ CREAR.OFS.ACCOUNT:
 RETURN
 
 END
-
-
-
