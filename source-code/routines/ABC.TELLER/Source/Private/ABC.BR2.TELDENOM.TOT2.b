@@ -8,13 +8,13 @@ $PACKAGE AbcTeller
     $USING EB.DataAccess
     $USING EB.Updates
     $USING TT.Contract
-    $USING EB.Updates
     $USING EB.Display
+    $USING EB.LocalReferences
     
     EB.LocalReferences.GetLocRef("TELLER","GRAN.TOTAL2",Y.POS.GRAN.TOTAL2)
 
     ABC.UNIT.VAL = EB.SystemTables.getComi()
-    POSN = AV
+    POSN = EB.SystemTables.setAv(0)
     DENOM.VAL = EB.SystemTables.getRNew(TT.Contract.Teller.TeDenomination)<1,POSN>
     DENOM.VAL = DENOM.VAL[4,6]
     IF NOT(NUM(DENOM.VAL)) THEN
