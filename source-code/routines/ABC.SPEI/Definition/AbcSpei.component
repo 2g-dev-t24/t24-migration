@@ -565,3 +565,10 @@ private method AbcGetProductosInteres (
     jBC: ABC.GET.PRODUCTOS.INTERES
 }
 
+public method AbcNofileMovilBancos (
+    INOUT rData string
+)
+{
+    jBC: ABC.NOFILE.MOVIL.BANCOS
+}
+
