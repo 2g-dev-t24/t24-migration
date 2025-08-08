@@ -8,6 +8,7 @@
     <resource-root path="./L3lib/AbcCusValLoc.jar" />
     <resource-root path="./L3lib/AbcCustomerApi.jar" />
     <resource-root path="./L3lib/AbcEnqRoutines.jar" />
+    <resource-root path="./L3lib/AbcEnvioEmail.jar" />
     <resource-root path="./L3lib/AbcGetAdress.jar" />
     <resource-root path="./L3lib/AbcGetGeneralParam.jar" />
     <resource-root path="./L3lib/AbcNotif.jar" />

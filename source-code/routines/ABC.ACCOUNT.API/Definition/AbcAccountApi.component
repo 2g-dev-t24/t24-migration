@@ -12,3 +12,11 @@ private method AbcCuentaL4ApiRtn (
     jBC: ABC.CUENTA.L4.API.RTN
 }
 
+
+
+private method AbcCreateArrangemnt (
+)
+{
+   jBC: ABC.CREATE.ARRANGEMNT
+}
+

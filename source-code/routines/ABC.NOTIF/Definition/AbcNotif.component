@@ -18,6 +18,7 @@ module property readwrite FFtNau
 module property readwrite YParamMensajeRespuesta
 module property readwrite YParamStatusRespuesta
 module property readwrite YStatusGeneranLog
+module property readwrite YPath
 
 private method AbcEnviaNotifAlternaLoad (
 )

@@ -1,5 +1,5 @@
-* @ValidationCode : MjoyMTI3Mzk5MzYwOkNwMTI1MjoxNzU0MzYwNTg5MDE0Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 04 Aug 2025 23:23:09
+* @ValidationCode : MjotMTYxMTM2MjI5OkNwMTI1MjoxNzU0NDA0NzgyNTQ2Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 05 Aug 2025 11:39:42
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -125,7 +125,8 @@ LEE.CORREO:
                 Y.STR.EMAIL = EREPLACE(Y.STR.EMAIL,Y.ETIQUETA,Y.VALOR)
             END
             IF Y.LIST.PARAMS<YNO> EQ 'RUTA.LOG' THEN
-                Y.RUTA.LOG = Y.LIST.VALUES<YNO>
+*                Y.RUTA.LOG = Y.LIST.VALUES<YNO>
+                Y.RUTA.LOG = '/shares/log/ABC.ENVIA.MAIL/log'
             END
             IF Y.LIST.PARAMS<YNO> EQ 'NOMBRE.LOG' THEN
                 Y.NOMBRE.LOG = Y.LIST.VALUES<YNO>
@@ -173,7 +174,7 @@ ENVIO.EMAIL:
 
     argumentoEntrada = Y.STR.EMAIL
 *str_path = @PATH
-    str_path = '/shares/log'
+    str_path = '/shares/log/ABC.ENVIA.MAIL/sh_files'
     str_filename = "ABC.ENVIA.MAIL.":RND(2000000):TIME():".":AGENT.NUMBER:".sh"
     TEMP.FILE = str_path : "/" : str_filename
 
@@ -184,7 +185,7 @@ ENVIO.EMAIL:
 
     Y.SALTO = CHAR(10)
 
-    Y.CADENA = 'java -jar T24EmailSender.jar "' : argumentoEntrada :'"'
+    Y.CADENA = 'java -jar t24-email-sender-1.0-SNAPSHOT-jar-with-dependencies.jar "' : argumentoEntrada :'"'
 
     Y.MENSAJE = Y.CADENA
 
