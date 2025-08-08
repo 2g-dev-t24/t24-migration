@@ -90,6 +90,9 @@ INICIALIZA:
                 Y.PARAM.MENSAJE.RESPUESTA<-1> = Y.DATOS.PARAMETROS<1,Y.AA,1>
                 Y.PARAM.STATUS.RESPUESTA<-1> = Y.DATOS.PARAMETROS<1,Y.AA,2>
             END
+            IF Y.PARAMETRO EQ 'PATH' THEN
+                AbcNotif.setYPath(Y.DATOS.PARAMETROS<1,Y.AA,2>)
+            END
         NEXT Y.AA
         AbcNotif.setYParamMensajeRespuesta(Y.PARAM.MENSAJE.RESPUESTA)
         AbcNotif.setYParamStatusRespuesta(Y.PARAM.STATUS.RESPUESTA)

@@ -226,7 +226,7 @@ RETURN
 ENVIO.ALTERNA:
 **************
 
-    str_path = @PATH
+    str_path = AbcNotif.getYPath()
     str_filename = "ABC.ENVIA.NOT.ALT.":RND(2000000):TIME():".":EB.Service.getAgentNumber():".sh"
     TEMP.FILE = str_path : "/" : str_filename
 
@@ -241,6 +241,7 @@ ENVIO.ALTERNA:
 
 * Armo Archivo
     Y.SHELL  = "#!/bin/ksh" : AbcNotif.getYSalto()
+    Y.SHELL  = "cd /shares/localJars/lib/" : AbcNotif.getYSalto()
     Y.SHELL := Y.CADENA : AbcNotif.getYSalto()
     Y.SHELL := "exit" : AbcNotif.getYSalto()
     Y.SHELL := "EOT"
