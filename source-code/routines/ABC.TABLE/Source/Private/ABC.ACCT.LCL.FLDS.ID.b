@@ -1,7 +1,7 @@
-* @ValidationCode : MjotMjE4ODg1NTg6Q3AxMjUyOjE3NTQ1ODc3MDY1MTc6bWF1cmljaW8ubG9wZXo6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 07 Aug 2025 14:28:26
+* @ValidationCode : MjotMTcxNjgxMTAzMDpDcDEyNTI6MTc1NDYxNzY4NTEzNDpMdWlzIENhcHJhOi0xOi0xOjA6MDpmYWxzZTpOL0E6UjI0X1NQMS4wOi0xOi0x
+* @ValidationInfo : Timestamp         : 07 Aug 2025 22:48:05
 * @ValidationInfo : Encoding          : Cp1252
-* @ValidationInfo : User Name         : mauricio.lopez
+* @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
 * @ValidationInfo : Nb tests failure  : N/A
 * @ValidationInfo : Rating            : N/A
@@ -57,30 +57,32 @@ PROCESS:
     Y.ID = EB.SystemTables.getComi()
 *Si envia el numero de cuenta se busca el id de AA.
     
-    IF (Y.ID NE '') THEN
+    Y.AA = LEFT(Y.ID,2)
+    IF (Y.AA NE 'AA') THEN
+        IF (Y.ID NE 'NEWAC') THEN
         
-        EB.DataAccess.FRead(FN.ACCOUNT, Y.ID, R.ACCOUNT, F.ACCOUNT, Y.ERR.ACCOUNT)
+            EB.DataAccess.FRead(FN.ACCOUNT, Y.ID, R.ACCOUNT, F.ACCOUNT, Y.ERR.ACCOUNT)
         
-        IF NOT(Y.ERR.ACCOUNT) THEN
+            IF NOT(Y.ERR.ACCOUNT) THEN
             
-            Y.ID.AA = R.ACCOUNT<AC.AccountOpening.Account.ArrangementId>
+                Y.ID.AA = R.ACCOUNT<AC.AccountOpening.Account.ArrangementId>
             
-            EB.DataAccess.FRead(FN.AA.ARRANGEMENT, Y.ID.AA, R.AA.ARRANGEMENT,F.AA.ARRANGEMENT, Y.ERR.AA.ARRANGEMENT)
+                EB.DataAccess.FRead(FN.AA.ARRANGEMENT, Y.ID.AA, R.AA.ARRANGEMENT,F.AA.ARRANGEMENT, Y.ERR.AA.ARRANGEMENT)
             
-            IF (R.AA.ARRANGEMENT) THEN   
-                EB.SystemTables.setIdNew(Y.ID.AA)               
+                IF (R.AA.ARRANGEMENT) THEN
+                    EB.SystemTables.setIdNew(Y.ID.AA)
+                END ELSE
+                    ETEXT = 'Numero de cuenta o Arrangement id no existe'
+                    EB.SystemTables.setE(ETEXT)
+                END
             END ELSE
                 ETEXT = 'Numero de cuenta o Arrangement id no existe'
                 EB.SystemTables.setE(ETEXT)
             END
         END ELSE
-            ETEXT = 'Numero de cuenta o Arrangement id no existe'
-            EB.SystemTables.setE(ETEXT)
+            GOSUB OBTENER.ID.AA
         END
-    END ELSE
-        GOSUB OBTENER.ID.AA
     END
-
 RETURN
 
 
@@ -107,11 +109,12 @@ OBTENER.ID.AA:
     EB.TransactionControl.GetNextId('','F')
 
     Y.ID.AA        = EB.SystemTables.getComi()
+    EB.SystemTables.setIdNew(Y.ID.AA)
     EB.SystemTables.setFullFname(Y.FULL.NAME)
     EB.SystemTables.setVFunction(Y.V.FUNCTION)
     EB.SystemTables.setPgmType(Y.PGM)
     EB.SystemTables.setIdConcatfile(Y.ID.CONCATFILE)
-    EB.SystemTables.setComi(Y.SAVE.COMI)
+*EB.SystemTables.setComi(Y.SAVE.COMI)
     EB.SystemTables.setApplication(Y.APPLICATION)
 
 RETURN

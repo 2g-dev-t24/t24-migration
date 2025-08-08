@@ -1,5 +1,5 @@
-* @ValidationCode : MjoxOTY0Nzc1MDgxOkNwMTI1MjoxNzUzNjQyNzI5NTc4Okx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
-* @ValidationInfo : Timestamp         : 27 Jul 2025 15:58:49
+* @ValidationCode : MjotNDg2MTc2ODU2OkNwMTI1MjoxNzU0NjE4MzgzOTYyOkx1aXMgQ2FwcmE6LTE6LTE6MDowOmZhbHNlOk4vQTpSMjRfU1AxLjA6LTE6LTE=
+* @ValidationInfo : Timestamp         : 07 Aug 2025 22:59:43
 * @ValidationInfo : Encoding          : Cp1252
 * @ValidationInfo : User Name         : Luis Capra
 * @ValidationInfo : Nb tests success  : N/A
@@ -34,68 +34,21 @@ SUBROUTINE ABC.CUENTA.L4.API.RTN
     
     
     GOSUB MAP.ACCOUNT ; *Mapea los campos de AA ACTIVITY
-    GOSUB MAP.BENEFICIARIO ; *Mapeo BENEFICIARIO
     GOSUB CREAR.OFS.ACCOUNT ; *Crea y ejecuta el OFS de AA ACTIVITY
-    GOSUB CREAR.OFS.BENEFICIARIO ; *Crea y ejecuta el OFS de BENEICIARIO
 
 *-----------------------------------------------------------------------------
 
 *** <region name= MAP.ACCOUNT>
 MAP.ACCOUNT:
 *** <desc>Mapea los campos de AA ACTIVITY </desc>
-
-    FN.ACCOUNT = 'F.ACCOUNT'
-    F.ACCOUNT = ''
-    EB.DataAccess.Opf(FN.ACCOUNT, F.ACCOUNT)
     
     Y.ID.CUENTA = EB.SystemTables.getIdNew()
-    
-    EB.DataAccess.FRead(FN.ACCOUNT, Y.ID.CUENTA, R.ACCOUNT, F.ACCOUNT, Y.ERR.ACCOUNT)
 
-
-    R.AA<AA.Framework.ArrangementActivity.ArrActArrangement> = R.ACCOUNT<AC.AccountOpening.Account.ArrangementId>
+    R.AA<AA.Framework.ArrangementActivity.ArrActArrangement> = Y.ID.CUENTA
     
 RETURN
 *** </region>
 
-
-*-----------------------------------------------------------------------------
-
-*** <region name= MAP.ACCOUNT>
-MAP.BENEFICIARIO:
-*** <desc>Mapea los campos de BENEFICIARIO </desc>
-
-
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenApePaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApePaterno)
-    
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenApeMaterno> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.ApeMaterno)
-    
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenNombres>    = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Nombres)
-    
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenFecNac>     = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.FecNac)
-    
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenPorcentaje> = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Porcentaje)
-    
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenEmail>      = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.Email)
-    
-    R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.PregFonTer>    = EB.SystemTables.getRNew(AbcTable.AbcCuentaL4Api.PregFonTer)
-    
-    Y.LIST.PORCENTAJE = R.BENEFICAIRIO<AbcTable.AbcAcctLclFlds.BenPorcentaje>
-    
-    TOTAL = 0
-    Y.NO.VALORES = DCOUNT(Y.LIST.PORCENTAJE,@VM)
-    FOR Y.AA=1 TO Y.NO.VALORES
-        TOTAL = TOTAL + Y.LIST.PORCENTAJE<1,Y.AA>
-    NEXT Y.AA
-    IF (TOTAL NE 100) THEN
-        EB.SystemTables.setEtext('El Porcentaje es diferente a 100 >> ':TOTAL)
-        EB.ErrorProcessing.StoreEndError()
-        RETURN
-    END
-    
-
-RETURN
-*** </region>
 
 
 *-----------------------------------------------------------------------------
@@ -119,32 +72,6 @@ CREAR.OFS.ACCOUNT:
         EB.ErrorProcessing.StoreEndError()
     END
 RETURN
-
-
-*-----------------------------------------------------------------------------
-CREAR.OFS.BENEFICIARIO:
-*** <desc>Crea y ejecuta el OFS de BENEICIARIO</desc>
-*-----------------------------------------------------------------------------
-    Y.OFS.REQUEST   = ''
-    Y.OFS.APP       = 'ABC.ACCT.LCL.FLDS'
-    Y.OFS.VERSION   = 'ABC.ACCT.LCL.FLDS,ABC.ACCOUNT.API'
-    Y.RECORD        = ''
-    Y.NO.OF.AUTH    = 0
-    Y.OFS.RECORD    = ''
-    Y.GTSMODE       = ''
-    Error           = ''
-
-    EB.Foundation.OfsBuildRecord(Y.OFS.APP,'I','PROCESS',Y.OFS.VERSION,Y.GTSMODE,Y.NO.OF.AUTH,Y.ID.CUENTA,R.BENEFICAIRIO,Y.OFS.REQUEST)
- 
-    EB.Interface.OfsAddlocalrequest(Y.OFS.REQUEST, 'APPEND', Error)
-
-    IF Error THEN
-        EB.SystemTables.setEtext(Error)
-        EB.ErrorProcessing.StoreEndError()
-    END
-RETURN
-
-
 
 
 END
