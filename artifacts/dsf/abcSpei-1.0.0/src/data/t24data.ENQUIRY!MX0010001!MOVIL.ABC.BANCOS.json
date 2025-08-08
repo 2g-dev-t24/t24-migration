@@ -1,0 +1,67 @@
+{
+  "header" : {
+    "id" : "MOVIL.ABC.BANCOS",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "ENQUIRY.NAME" : [ {
+      "ENQUIRY.NAME" : "QUIT SEE @ID",
+      "SEL.CRIT" : [ {
+        "SEL.CRIT" : "@ID 1"
+      } ]
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "0"
+      } ],
+      "FIELD.NAME" : "R.DATA"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,1,1"
+      } ],
+      "FIELD.NAME" : "BANCO",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,2,1"
+      } ],
+      "FIELD.NAME" : "TIPO",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "2"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "F R.DATA"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "F *,3,1"
+      } ],
+      "FIELD.NAME" : "STATUS",
+      "LENGTH.MASK" : "35L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "3"
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "R.DATA"
+    } ],
+    "SHORT.DESC" : [ {
+      "SHORT.DESC" : "Listado de Banco"
+    } ],
+    "FILE.NAME" : "NOFILE.MOVIL.BANCOS"
+  }
+}

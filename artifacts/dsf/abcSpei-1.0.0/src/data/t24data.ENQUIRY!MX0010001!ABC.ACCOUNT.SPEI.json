@@ -1,0 +1,63 @@
+{
+  "header" : {
+    "id" : "ABC.ACCOUNT.SPEI",
+    "dsfApiType" : "ENQUIRY",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "OPEN.BRACKET" : [ {
+      "SEL.LABEL" : [ {
+        "SEL.LABEL" : "CLIENTE"
+      } ],
+      "SELECTION.FLDS" : "CUSTOMER"
+    } ],
+    "PAGE.SIZE" : "4,19",
+    "FIELD.NAME" : [ {
+      "OPERATION" : [ {
+        "OPERATION" : "CUSTOMER"
+      } ],
+      "FIELD.NAME" : "CUSTOMER.ID",
+      "LENGTH.MASK" : "10R",
+      "SINGLE.MULTI" : "S"
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "@ID"
+      } ],
+      "FIELD.NAME" : "@ID",
+      "LENGTH.MASK" : "19L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "1",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "ID"
+      } ]
+    }, {
+      "OPERATION" : [ {
+        "OPERATION" : "FIELD CUSTOMER.ID"
+      } ],
+      "CONVERSION" : [ {
+        "CONVERSION" : "@ ABC.E.EXTRACT.NAME"
+      } ],
+      "FIELD.NAME" : "CUST.NAME",
+      "LENGTH.MASK" : "50L",
+      "SINGLE.MULTI" : "S",
+      "COLUMN" : "2",
+      "FIELD.LBL" : [ {
+        "FIELD.LBL" : "NOMBRE"
+      } ]
+    } ],
+    "FIXED.SELECTION" : [ {
+      "FIXED.SELECTION" : "CUSTOMER NE ''"
+    }, {
+      "FIXED.SELECTION" : "LIMIT.REF NE 'NOSTRO'"
+    } ],
+    "FILE.NAME" : "ACCOUNT",
+    "FIXED.SORT" : [ {
+      "FIXED.SORT" : "CUSTOMER"
+    } ]
+  }
+}

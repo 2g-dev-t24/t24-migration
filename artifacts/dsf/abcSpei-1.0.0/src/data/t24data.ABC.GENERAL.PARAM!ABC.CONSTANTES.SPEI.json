@@ -1,0 +1,208 @@
+{
+  "header" : {
+    "id" : "ABC.CONSTANTES.SPEI",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "ID.TIPO.CTA.ORDEN",
+      "COMENTARIO" : "ID.TIPO.CTA.ORDEN",
+      "DATO.PARAMETRO" : "40"
+    }, {
+      "NOMB.PARAMETRO" : "ID.TIPO.CTA.BENEF",
+      "COMENTARIO" : "ID.TIPO.CTA.BENEF",
+      "DATO.PARAMETRO" : "40,10,3"
+    }, {
+      "NOMB.PARAMETRO" : "ID.AREA.EMITE",
+      "COMENTARIO" : "ID.AREA.EMITE",
+      "DATO.PARAMETRO" : "1"
+    }, {
+      "NOMB.PARAMETRO" : "IVA.DEFAULT",
+      "COMENTARIO" : "IVA.DEFAULT",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "REFERENCIA.DEFAULT",
+      "COMENTARIO" : "REFERENCIA.DEFAULT",
+      "DATO.PARAMETRO" : "1"
+    }, {
+      "NOMB.PARAMETRO" : "TOPOLOGIA",
+      "COMENTARIO" : "TOPOLOGIA",
+      "DATO.PARAMETRO" : "V"
+    }, {
+      "NOMB.PARAMETRO" : "PRIORIDAD",
+      "COMENTARIO" : "PRIORIDAD",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "DEVOLUCION",
+      "COMENTARIO" : "DEVOLUCION",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "CANCELACION",
+      "COMENTARIO" : "CANCELACION",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "RESP.CANCELACION",
+      "COMENTARIO" : "RESP.CANCELACION",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "ENVIO",
+      "COMENTARIO" : "ENVIO",
+      "DATO.PARAMETRO" : "1"
+    }, {
+      "NOMB.PARAMETRO" : "RESP.ENVIO",
+      "COMENTARIO" : "RESP.ENVIO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "REENVIO",
+      "COMENTARIO" : "REENVIO",
+      "DATO.PARAMETRO" : "1"
+    }, {
+      "NOMB.PARAMETRO" : "RESP.REENVIO",
+      "COMENTARIO" : "RESP.REENVIO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "CERRADA",
+      "COMENTARIO" : "CERRADA",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "RESP.BANXICO",
+      "COMENTARIO" : "RESP.BANXICO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "ID.TIPO.OPER",
+      "COMENTARIO" : "ID.TIPO.OPER",
+      "DATO.PARAMETRO" : "4"
+    }, {
+      "NOMB.PARAMETRO" : "ID.TIPO.CTA.BENEF.2",
+      "COMENTARIO" : "ID.TIPO.CTA.BENEF.2",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "ID.DEVOLUCION",
+      "COMENTARIO" : "ID.DEVOLUCION",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "ID.INSTITUCION.ORD",
+      "COMENTARIO" : "ID.INSTITUCION.ORD",
+      "DATO.PARAMETRO" : "40138"
+    }, {
+      "NOMB.PARAMETRO" : "ID.TIPO.SIAC",
+      "COMENTARIO" : "ID.TIPO.SIAC",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "ENVIO.BANXICO",
+      "COMENTARIO" : "ENVIO.BANXICO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "VERIFICADO",
+      "COMENTARIO" : "VERIFICADO",
+      "DATO.PARAMETRO" : "1"
+    }, {
+      "NOMB.PARAMETRO" : "CANCELACION.BANXICO",
+      "COMENTARIO" : "CANCELACION.BANXICO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "RESP.CANCEL.BANXICO",
+      "COMENTARIO" : "RESP.CANCEL.BANXICO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "REENVIO.BANXICO",
+      "COMENTARIO" : "REENVIO.BANXICO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "RESP.REENVIO.BANXICO",
+      "COMENTARIO" : "RESP.REENVIO.BANXICO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "DETENIDO",
+      "COMENTARIO" : "DETENIDO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "USUARIO",
+      "COMENTARIO" : "USUARIO",
+      "DATO.PARAMETRO" : "WS"
+    }, {
+      "NOMB.PARAMETRO" : "REPARAR",
+      "COMENTARIO" : "REPARAR",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "FOLIO.PAQUETE",
+      "COMENTARIO" : "FOLIO.PAQUETE",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "STATUS",
+      "COMENTARIO" : "STATUS",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "ID.FOLIO.MONEX",
+      "COMENTARIO" : "ID.FOLIO.MONEX",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "BCONFIRMACION",
+      "COMENTARIO" : "BCONFIRMACION",
+      "DATO.PARAMETRO" : "N"
+    }, {
+      "NOMB.PARAMETRO" : "FOLIO.SERVIDOR",
+      "COMENTARIO" : "FOLIO.SERVIDOR",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "SALDO.SPEI",
+      "COMENTARIO" : "SALDO.SPEI",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "FOLIO.BANXICO",
+      "COMENTARIO" : "FOLIO.BANXICO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "FIRMA.CORE",
+      "COMENTARIO" : "FIRMA.CORE",
+      "DATO.PARAMETRO" : "FIRMACORE"
+    }, {
+      "NOMB.PARAMETRO" : "TOKEN.1",
+      "COMENTARIO" : "TOKEN.1",
+      "DATO.PARAMETRO" : "TOKEN1"
+    }, {
+      "NOMB.PARAMETRO" : "TOKEN.2",
+      "COMENTARIO" : "TOKEN.2",
+      "DATO.PARAMETRO" : "TOKEN2"
+    }, {
+      "NOMB.PARAMETRO" : "FOLIO.PAQDEVEXT",
+      "COMENTARIO" : "FOLIO.PAQDEVEXT",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "FOLIO.SOLICITUD",
+      "COMENTARIO" : "FOLIO.SOLICITUD",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "FOLIO",
+      "COMENTARIO" : "FOLIO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "PRIORIDAD.ENVIO",
+      "COMENTARIO" : "PRIORIDAD.ENVIO",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "ID.MULTIEMPRESA",
+      "COMENTARIO" : "ID.MULTIEMPRESA",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "MONTO.INTERES.DEV",
+      "COMENTARIO" : "MONTO.INTERES.DEV",
+      "DATO.PARAMETRO" : "0"
+    }, {
+      "NOMB.PARAMETRO" : "CVE.ENTIDAD",
+      "COMENTARIO" : "CVE.ENTIDAD",
+      "DATO.PARAMETRO" : "ABCCAPITAL"
+    }, {
+      "NOMB.PARAMETRO" : "ID.EMPRESA",
+      "COMENTARIO" : "ID.EMPRESA",
+      "DATO.PARAMETRO" : "1"
+    } ],
+    "MODULO" : "CONSTANTES PARA SPEI CODI"
+  }
+}

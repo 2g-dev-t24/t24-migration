@@ -66,6 +66,12 @@
     }, {
       "AUTOM.FIELD.NO" : "CHQ.ISSUE.ID",
       "AUT.NEW.CONTENT" : "@BMV.ID.CAJA"
+    }, {
+      "AUTOM.FIELD.NO" : "CREDIT.ACCT.NO",
+      "AUT.NEW.CONTENT" : "4013800001"
+    }, {
+      "AUTOM.FIELD.NO" : "CANAL.ENTIDAD",
+      "AUT.NEW.CONTENT" : "1"
     } ],
     "FIELD.NO" : [ {
       "FIELD.NO" : "*",
@@ -81,6 +87,7 @@
     }, {
       "FIELD.NO" : "DEBIT.ACCT.NO",
       "COLUMN" : "1",
+      "DROP.DOWN" : "ABC.ACCOUNT.SPEI",
       "TEXT" : [ {
         "TEXT" : "Cuenta de retiro"
       } ],
@@ -139,6 +146,7 @@
     }, {
       "FIELD.NO" : "CREDIT.THEIR.REF",
       "COLUMN" : "1",
+      "DROP.DOWN" : "MOVIL.ABC.BANCOS",
       "TEXT" : [ {
         "TEXT" : "Institucion Beneficiaria"
       } ],
@@ -194,6 +202,17 @@
         "TABLE.COLUMN" : "1-37-"
       } ],
       "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "AMT.IVA.SPEI",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Monto del Iva SPEI"
+      } ],
+      "TEXT.CHAR.MAX" : "20",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-38-"
+      } ],
+      "TABLE.LINE" : "11"
     }, {
       "FIELD.NO" : "EXTEND.INFO-1",
       "COLUMN" : "1",

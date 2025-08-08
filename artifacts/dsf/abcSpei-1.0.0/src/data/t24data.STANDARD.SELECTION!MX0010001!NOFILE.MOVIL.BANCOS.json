@@ -1,0 +1,38 @@
+{
+  "header" : {
+    "id" : "NOFILE.MOVIL.BANCOS",
+    "dsfApiType" : "STANDARD.SELECTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "USR.FIELD.NAME" : [ {
+      "USR.TYPE" : "R",
+      "USR.DISPLAY.FMT" : "150L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NO" : [ {
+        "USR.FIELD.NO" : "ABC.NOFILE.MOVIL.BANCOS"
+      } ],
+      "USR.FIELD.NAME" : "R.DATA"
+    }, {
+      "USR.TYPE" : "S",
+      "USR.DISPLAY.FMT" : "50L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NAME" : "LOOKUP.ID"
+    }, {
+      "USR.TYPE" : "S",
+      "USR.DISPLAY.FMT" : "50L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NAME" : "TIPO"
+    }, {
+      "USR.TYPE" : "S",
+      "USR.DISPLAY.FMT" : "2L",
+      "USR.SINGLE.MULT" : "S",
+      "USR.FIELD.NAME" : "BAN.ESTATUS"
+    } ]
+  }
+}

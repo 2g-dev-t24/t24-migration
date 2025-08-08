@@ -1,0 +1,128 @@
+{
+  "header" : {
+    "id" : "SPEI.OUTGOING",
+    "dsfApiType" : "ABC.GENERAL.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R24"
+    }
+  },
+  "body" : {
+    "NOMB.PARAMETRO" : [ {
+      "NOMB.PARAMETRO" : "CVEENTIDAD",
+      "COMENTARIO" : "CLAVE DE ENTIDAD",
+      "DATO.PARAMETRO" : "ABCCAPITAL"
+    }, {
+      "NOMB.PARAMETRO" : "IDEMPRESA",
+      "COMENTARIO" : "ID EMPRESA",
+      "DATO.PARAMETRO" : "1"
+    }, {
+      "NOMB.PARAMETRO" : "URL",
+      "COMENTARIO" : "URL DE SIES",
+      "DATO.PARAMETRO" : "https://desavappcodi02.abccapital.com.mx:9095/MCI/"
+    }, {
+      "NOMB.PARAMETRO" : "URL.IP",
+      "COMENTARIO" : "IP DE SIES",
+      "DATO.PARAMETRO" : "https://desavappcodi02.abccapital.com.mx:9095"
+    }, {
+      "NOMB.PARAMETRO" : "SERVERURI",
+      "COMENTARIO" : "SERVICIO",
+      "DATO.PARAMETRO" : "http://mci.2g-solutions.com/IOutgoingTzuneService/TzuneServiceRequest"
+    }, {
+      "NOMB.PARAMETRO" : "NOMBEURI",
+      "COMENTARIO" : "NOMBRE",
+      "DATO.PARAMETRO" : "mci"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.S",
+      "COMENTARIO" : "REQUEST",
+      "DATO.PARAMETRO" : "web:SpeiServiceRequest,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.1",
+      "COMENTARIO" : "BODY1",
+      "DATO.PARAMETRO" : "cveEntidad,idEmpresa,nombreOrdenante,idTipoCuentaOrdenante,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.2",
+      "COMENTARIO" : "BODY2",
+      "DATO.PARAMETRO" : "cuentaOrdenante,rfcOrdenante,nombreBeneficiario,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.3",
+      "COMENTARIO" : "BODY3",
+      "DATO.PARAMETRO" : "idTipoCuentaBeneficiario,cuentaBeneficiario,rfcBeneficiario,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.4",
+      "COMENTARIO" : "BODY4",
+      "DATO.PARAMETRO" : "idAreaEmite,conceptoPago,monto,iva,referenciaNumerica,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.5",
+      "COMENTARIO" : "BODY5",
+      "DATO.PARAMETRO" : "referenciaCobranza,idTipoPago,topologia,prioridad,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.6",
+      "COMENTARIO" : "BODY6",
+      "DATO.PARAMETRO" : "devolucion,cancelacion,respCancelacion,envio,respEnvio,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.7",
+      "COMENTARIO" : "BODY7",
+      "DATO.PARAMETRO" : "reenvio,respReenvio,cerrada,respBanxico,clavePago,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.8",
+      "COMENTARIO" : "BODY8",
+      "DATO.PARAMETRO" : "idTipoOperacion,nombreBeneficiario2,rfcBeneficiario2,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.9",
+      "COMENTARIO" : "BODY9",
+      "DATO.PARAMETRO" : "cuentaBeneficiario2,conceptoPago2,idTipoCuentaBeneficiario2,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.10",
+      "COMENTARIO" : "BODY10",
+      "DATO.PARAMETRO" : "cveRastreo,idDevolucion,idInstitucionOrd,idInstitucionBen,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.11",
+      "COMENTARIO" : "BODY11",
+      "DATO.PARAMETRO" : "idTipoSiac,cveRastreo2,infAdicional,nomArchivo,envioBanxico,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.12",
+      "COMENTARIO" : "BODY12",
+      "DATO.PARAMETRO" : "verificado,cancelacionBanxico,respCancelacionBanxico,reenvioBanxico,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.13",
+      "COMENTARIO" : "BODY13",
+      "DATO.PARAMETRO" : "respReenvioBanxico,detenido,usuario,reparar,folioPaquete,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.14",
+      "COMENTARIO" : "BODY14",
+      "DATO.PARAMETRO" : "firma,status,idFolioMonex,bConfirmacion,folioServidor,saldoSpei,folioBanxico,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.15",
+      "COMENTARIO" : "BODY15",
+      "DATO.PARAMETRO" : "folioPaqueteDevExt,folioSolicitud,fechaOperacionDevExt,montoOriginalDevExt,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.16",
+      "COMENTARIO" : "BODY16",
+      "DATO.PARAMETRO" : "folio,fechaCaptura,prioridadEnvio,fechaLiquidacion,idMultiempresa,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.17",
+      "COMENTARIO" : "BODY17",
+      "DATO.PARAMETRO" : "montoInteresDevExt,fechaOperacion,firmaCoreBancario,token1,token2,"
+    }, {
+      "NOMB.PARAMETRO" : "R.TAG.I.18",
+      "COMENTARIO" : "BODY18",
+      "DATO.PARAMETRO" : "ArchivoHibernate,sFechaCaptura,idFolioCoreBancario,"
+    }, {
+      "NOMB.PARAMETRO" : "CD.SHELL",
+      "COMENTARIO" : "UBICACION DEL JAR",
+      "DATO.PARAMETRO" : "/shares/localJars/lib"
+    }, {
+      "NOMB.PARAMETRO" : "RUTA.LOG",
+      "COMENTARIO" : "SPEIOUT",
+      "DATO.PARAMETRO" : "/shares/log"
+    }, {
+      "NOMB.PARAMETRO" : "PREF.ARCHIVO.LOG",
+      "COMENTARIO" : "LOG",
+      "DATO.PARAMETRO" : "XML.SPEI"
+    } ],
+    "MODULO" : "ENVIO DE TRANSACCIONES SPEI"
+  }
+}
