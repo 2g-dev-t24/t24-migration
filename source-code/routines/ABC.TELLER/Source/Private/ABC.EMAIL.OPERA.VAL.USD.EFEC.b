@@ -124,7 +124,7 @@ PROCESS:
         END
         R.DAO = EB.DataAccess.FRead(FN.DEPT.ACCT.OFFICER, Y.ID.DAO, R.DAO, F.DEPT.ACCT.OFFICER, Y.ERR.DAO)
         IF R.DAO NE '' THEN
-            Y.NOMBRE.SUCURSAL = R.DAO<AbcTable.AbcDeptAcctOfficer.DeliveryPoint>
+            Y.NOMBRE.SUCURSAL = R.DAO<ST.Config.DeptAcctOfficer.EbDaoDeliveryPoint>
         END
 
         Y.COMI = Y.ID.CUS:'*1'

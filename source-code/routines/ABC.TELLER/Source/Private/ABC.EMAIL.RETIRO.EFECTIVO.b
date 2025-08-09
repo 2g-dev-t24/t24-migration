@@ -24,10 +24,11 @@ $PACKAGE AbcTable
     $USING AC.AccountOpening
     $USING EB.Updates
     $USING AbcSpei
+    $USING EB.LocalReferences
 
-    $INCLUDE ABC.BP I_F.ABC.GENERAL.PARAM
-    $INCLUDE ABC.BP I_F.ABC.SMS.EMAIL.ENVIAR
-    $USING AbcTable
+*    $INCLUDE ABC.BP I_F.ABC.GENERAL.PARAM
+*    $INCLUDE ABC.BP I_F.ABC.SMS.EMAIL.ENVIAR
+
 
     GOSUB INITIALISE
     GOSUB OPEN.FILES
@@ -76,7 +77,7 @@ OPEN.FILES:
 
     Y.TIPO.EMAIL = "EMAIL.RETIRO"
 
-    Y.DATE.TIME        = B.SystemTables.getToday()
+    Y.DATE.TIME        = EB.SystemTables.getToday()
 
     EB.DataAccess.FRead(FN.ABC.GENERAL.PARAM,Y.TIPO.EMAIL,R.DATOS,F.ABC.GENERAL.PARAM,ERR.PARAM)
 
@@ -100,7 +101,7 @@ OPEN.FILES:
 
     LOCATE "Y.CANAL.GALILEO" IN Y.LIST.PARAMS SETTING POS THEN
         Y.CANAL.GALILEO.LISTA = Y.LIST.VALUES<POS>
-        CHANGE ',' TO FM IN Y.CANAL.GALILEO.LISTA
+        CHANGE ',' TO @FM IN Y.CANAL.GALILEO.LISTA
     END ELSE
         Y.CANAL.GALILEO.LISTA = 'VACIO'
     END
@@ -116,7 +117,7 @@ PROCESS:
     Y.MONTO      = EB.SystemTables.getRNew(TT.Contract.Teller.TeAmountLocalOne)
 
     EB.DataAccess.FRead(FN.CUENTA,Y.NO.CUENTA,R.CUENTA,F.CUENTA,ERR.CUENTA)
-    Y.ID.CUS = R.CUENTA<<AC.AccountOpening.Account.Customer>
+    Y.ID.CUS = R.CUENTA<AC.AccountOpening.Account.Customer>
     Y.WORKING.BALANCE = R.CUENTA<AC.AccountOpening.Account.WorkingBalance>
     Y.CANAL = R.CUENTA<AC.AccountOpening.Account.LocalRef, Y.POS.CANAL>
     Y.PRN = R.CUENTA<AC.AccountOpening.Account.LocalRef, Y.POS.PRN.ACC>
@@ -181,7 +182,7 @@ PROCESS:
 OBTIENE.ID:
 *----------
 
-	ID.ABC.SMS.EMAIL.ENVIAR = Y.ID.CUS:"-":B.SystemTables.getToday():".":TIMEDATE()[1,2]:TIMEDATE()[4,2]:TIMEDATE()[7,2]:Y.PROCESO.MILI
+	ID.ABC.SMS.EMAIL.ENVIAR =Y.ID.CUS:"-":EB.SystemTables.getToday():".":TIMEDATE()[1,2]:TIMEDATE()[4,2]:TIMEDATE()[7,2]:Y.PROCESO.MILI
 
 	RETURN
 

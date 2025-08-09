@@ -13,9 +13,9 @@ SUBROUTINE ABC.E.SEL.DEP(ENQ.PARAM)
     F.USER       = ''
     EB.DataAccess.Opf(FN.USER, F.USER)
 
-    Y.OPERADOR = EB.SystemTables.getRUser()
+    R.USER = EB.SystemTables.getRUser()
 
-    EB.DataAccess.FRead(FN.USER, Y.OPERADOR, R.USER, F.USER, ERR.USER)
+    *EB.DataAccess.FRead(FN.USER, Y.OPERADOR, R.USER, F.USER, ERR.USER)
 
     Y.DEPT = R.USER<EB.Security.User.UseDepartmentCode>
     Y.DEPT = Y.DEPT[1,9]
