@@ -54,8 +54,8 @@ PROCESS:
     Y.MENSAJE = Y.CADENA
     AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
-* Armo Archivo
-    Y.SHELL  = "#!/bin/ksh" : Y.SALTO
+* Armo Archivo, comentada primera linea no necesaria
+*    Y.SHELL  = "#!/bin/ksh" : Y.SALTO
     Y.SHELL := "cd " : Y.CD.SHELL : Y.SALTO
     Y.SHELL := Y.CADENA
     Y.SHELL := "exit" : Y.SALTO
@@ -68,14 +68,17 @@ PROCESS:
     END
     CLOSESEQ FILE.VAR1
 
-    EXECUTE "chmod 777 ./" : str_filename CAPTURING Y.RESPONSE.CHMOD
-    EXECUTE "./" : str_filename            CAPTURING Y.RETURNVAL
-    EXECUTE "rm ./" : str_filename        CAPTURING Y.RESPONSE.RM
+    Y.EXECUTE.CHMOD = "SH -c chmod 777 " : TEMP.FILE
+    EXECUTE Y.EXECUTE.CHMOD
+
+    Y.EXECUTE.SCRIPT = "SH -c " : TEMP.FILE
+    EXECUTE Y.EXECUTE.SCRIPT CAPTURING Y.RETURNVAL
+    EXECUTE "SH -c rm " : TEMP.FILE
 
     Y.MENSAJE = "RECIBIENDO RESPUESTA...... "
     AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
-    Y.MENSAJE = Y.RETURNVAL
+    Y.MENSAJE = "RESPUESTA : " : Y.RETURNVAL
     AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
     Y.MENSAJE = "PROCESAMIENTO TERMINADO.  TRANSACCION ...  " : Y.ID.FT
@@ -84,6 +87,5 @@ PROCESS:
     Y.MENSAJE = "--------------------------------------------------------------------------" : Y.SALTO
     AbcSpei.PbsInslog(Y.ARCHIVO.LOG, Y.MENSAJE, 0)
 
-* PRINT "RETURNVAL  ... " : Y.RETURNVAL
     RETURN
 END 
