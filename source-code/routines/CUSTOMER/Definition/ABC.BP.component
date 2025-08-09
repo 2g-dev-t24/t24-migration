@@ -258,6 +258,20 @@ private method abcNofileActCusAuthPf (
     jBC: ABC.NOFILE.ACT.CUS.AUTH.PF
 }
 
+private method abcNofileActCusAuthPm (
+    INOUT rData string
+)
+{
+    jBC: ABC.NOFILE.ACT.CUS.AUTH.PM
+}
+
+private method abcNofileActCusAuthPfae (
+    INOUT rData string
+)
+{
+    jBC: ABC.NOFILE.ACT.CUS.AUTH.PFAE
+}
+
 private method abcNofileBiometricosAlta (
     INOUT rData string
 )
